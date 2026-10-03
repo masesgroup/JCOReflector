@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.WeakEventManager;
 import system.componentmodel.ICollectionView;
 import system.componentmodel.ICollectionViewImplementation;
+import system.EventHandler_1;
 import system.windows.IWeakEventListener;
 import system.windows.IWeakEventListenerImplementation;
 
@@ -57,7 +58,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CurrentChangingEventManager extends WeakEventManager  {
+public class CurrentChangingEventManager extends system.windows.WeakEventManager  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -158,11 +159,31 @@ public class CurrentChangingEventManager extends WeakEventManager  {
     
     // Methods section
     
+    public static void AddHandler(ICollectionView source, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddHandler", source == null ? null : source.getJCOInstance(), handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void AddListener(ICollectionView source, IWeakEventListener listener) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddListener", source == null ? null : source.getJCOInstance(), listener == null ? null : listener.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveHandler(ICollectionView source, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveHandler", source == null ? null : source.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

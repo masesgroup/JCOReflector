@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.animation.Animatable;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.media.Drawing;
 import system.windows.media.DrawingCollection;
 import system.Array;
@@ -56,7 +58,7 @@ import system.Array;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DrawingCollection extends Animatable  {
+public class DrawingCollection extends system.windows.media.animation.Animatable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +166,16 @@ public class DrawingCollection extends Animatable  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(capacity));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DrawingCollection(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(collection == null ? null : collection.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

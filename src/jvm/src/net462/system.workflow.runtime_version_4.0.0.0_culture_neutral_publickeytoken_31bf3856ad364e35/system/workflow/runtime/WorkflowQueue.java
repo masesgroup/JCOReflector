@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.workflow.componentmodel.IActivityEventListener_1;
+import system.workflow.componentmodel.IActivityEventListener_1Implementation;
 import system.IComparable;
 import system.IComparableImplementation;
 import system.workflow.runtime.WorkflowQueuingService;
@@ -191,6 +193,56 @@ public class WorkflowQueue extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Enqueue", item == null ? null : item.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterForQueueItemArrived(IActivityEventListener_1 eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterForQueueItemArrived", eventListener == null ? null : eventListener.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterForQueueItemAvailable(IActivityEventListener_1 eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterForQueueItemAvailable", eventListener == null ? null : eventListener.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterForQueueItemAvailable(IActivityEventListener_1 eventListener, java.lang.String subscriberQualifiedName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterForQueueItemAvailable", eventListener == null ? null : eventListener.getJCOInstance(), subscriberQualifiedName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UnregisterForQueueItemArrived(IActivityEventListener_1 eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UnregisterForQueueItemArrived", eventListener == null ? null : eventListener.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UnregisterForQueueItemAvailable(IActivityEventListener_1 eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UnregisterForQueueItemAvailable", eventListener == null ? null : eventListener.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

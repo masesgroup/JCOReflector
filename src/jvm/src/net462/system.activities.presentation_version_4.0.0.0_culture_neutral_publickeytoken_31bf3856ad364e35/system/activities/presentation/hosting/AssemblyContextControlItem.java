@@ -39,10 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.ContextItem;
-import system.reflection.Assembly;
-import system.reflection.AssemblyName;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.presentation.hosting.IMultiTargetingSupportService;
 import system.activities.presentation.hosting.IMultiTargetingSupportServiceImplementation;
+import system.reflection.Assembly;
+import system.reflection.AssemblyName;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -57,7 +61,7 @@ import system.activities.presentation.hosting.IMultiTargetingSupportServiceImple
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssemblyContextControlItem extends ContextItem  {
+public class AssemblyContextControlItem extends system.activities.presentation.ContextItem  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +168,36 @@ public class AssemblyContextControlItem extends ContextItem  {
     
     // Methods section
     
+    public IEnumerable_1 GetEnvironmentAssemblies(IMultiTargetingSupportService multiTargetingService) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnvironmentAssemblies = null;
+        try {
+            retObjectGetEnvironmentAssemblies = classInstance.Invoke("GetEnvironmentAssemblies", multiTargetingService == null ? null : multiTargetingService.getJCOInstance());
+            JCObject objGetEnvironmentAssemblies = (JCObject)retObjectGetEnvironmentAssemblies;
+            return new IEnumerable_1Implementation(objGetEnvironmentAssemblies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnvironmentAssemblies != null ? retObjectGetEnvironmentAssemblies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetEnvironmentAssemblyNames() throws Throwable, system.NotImplementedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnvironmentAssemblyNames = null;
+        try {
+            retObjectGetEnvironmentAssemblyNames = classInstance.Invoke("GetEnvironmentAssemblyNames");
+            JCObject objGetEnvironmentAssemblyNames = (JCObject)retObjectGetEnvironmentAssemblyNames;
+            return new IEnumerable_1Implementation(objGetEnvironmentAssemblyNames);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnvironmentAssemblyNames != null ? retObjectGetEnvironmentAssemblyNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Assembly GetAssembly(AssemblyName assemblyName, IMultiTargetingSupportService multiTargetingService) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -183,6 +217,46 @@ public class AssemblyContextControlItem extends ContextItem  {
     
     // Properties section
     
+    public IEnumerable_1 getAllAssemblyNamesInContext() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllAssemblyNamesInContext = null;
+        try {
+            retObjectAllAssemblyNamesInContext = classInstance.Get("AllAssemblyNamesInContext");
+            JCObject val = (JCObject)retObjectAllAssemblyNamesInContext;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllAssemblyNamesInContext != null ? retObjectAllAssemblyNamesInContext.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getReferencedAssemblyNames() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferencedAssemblyNames = null;
+        try {
+            retObjectReferencedAssemblyNames = classInstance.Get("ReferencedAssemblyNames");
+            JCObject val = (JCObject)retObjectReferencedAssemblyNames;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferencedAssemblyNames != null ? retObjectReferencedAssemblyNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setReferencedAssemblyNames(IList_1 ReferencedAssemblyNames) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ReferencedAssemblyNames", ReferencedAssemblyNames == null ? null : ReferencedAssemblyNames.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AssemblyName getLocalAssemblyName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

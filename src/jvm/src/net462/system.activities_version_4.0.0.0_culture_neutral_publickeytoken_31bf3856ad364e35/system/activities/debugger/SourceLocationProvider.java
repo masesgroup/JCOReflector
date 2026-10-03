@@ -38,7 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.Dictionary_2;
 import system.activities.Activity;
+import system.activities.debugger.symbol.WorkflowSymbol;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -152,6 +156,46 @@ public class SourceLocationProvider extends NetObject  {
     
     // Methods section
     
+    public static Dictionary_2 GetSourceLocations(Activity rootActivity, WorkflowSymbol symbol) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSourceLocations = null;
+        try {
+            retObjectGetSourceLocations = classType.Invoke("GetSourceLocations", rootActivity == null ? null : rootActivity.getJCOInstance(), symbol == null ? null : symbol.getJCOInstance());
+            JCObject objGetSourceLocations = (JCObject)retObjectGetSourceLocations;
+            return new Dictionary_2(objGetSourceLocations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSourceLocations != null ? retObjectGetSourceLocations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ICollection_1 GetSymbols(Activity rootActivity, Dictionary_2 sourceLocations) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSymbols = null;
+        try {
+            retObjectGetSymbols = classType.Invoke("GetSymbols", rootActivity == null ? null : rootActivity.getJCOInstance(), sourceLocations == null ? null : sourceLocations.getJCOInstance());
+            JCObject objGetSymbols = (JCObject)retObjectGetSymbols;
+            return new ICollection_1Implementation(objGetSymbols);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSymbols != null ? retObjectGetSymbols.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void CollectMapping(Activity rootActivity1, Activity rootActivity2, Dictionary_2 mapping, java.lang.String path) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.ThreadAbortException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CollectMapping", rootActivity1 == null ? null : rootActivity1.getJCOInstance(), rootActivity2 == null ? null : rootActivity2.getJCOInstance(), mapping == null ? null : mapping.getJCOInstance(), path);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

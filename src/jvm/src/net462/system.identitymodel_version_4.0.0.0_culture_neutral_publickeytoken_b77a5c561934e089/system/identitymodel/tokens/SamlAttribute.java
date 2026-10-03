@@ -39,11 +39,16 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.claims.Claim;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlDictionaryWriter;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -171,10 +176,35 @@ public class SamlAttribute extends NetObject  {
         }
     }
 
+    public SamlAttribute(java.lang.String attributeNamespace, java.lang.String attributeName, IEnumerable_1 attributeValues) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(attributeNamespace, attributeName, attributeValues == null ? null : attributeValues.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
+    public ReadOnlyCollection_1 ExtractClaims() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractClaims = null;
+        try {
+            retObjectExtractClaims = classInstance.Invoke("ExtractClaims");
+            JCObject objExtractClaims = (JCObject)retObjectExtractClaims;
+            return new ReadOnlyCollection_1(objExtractClaims);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractClaims != null ? retObjectExtractClaims.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -218,6 +248,21 @@ public class SamlAttribute extends NetObject  {
             return (boolean)retObjectIsReadOnly;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getAttributeValues() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeValues = null;
+        try {
+            retObjectAttributeValues = classInstance.Get("AttributeValues");
+            JCObject val = (JCObject)retObjectAttributeValues;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeValues != null ? retObjectAttributeValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

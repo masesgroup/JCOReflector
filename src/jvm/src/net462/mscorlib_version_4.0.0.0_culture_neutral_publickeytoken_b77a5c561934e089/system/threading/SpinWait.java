@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.Func_1;
+import system.TimeSpan;
 
 
 /**
@@ -53,7 +55,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SpinWait extends ValueType  {
+public class SpinWait extends system.ValueType  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -154,6 +156,34 @@ public class SpinWait extends ValueType  {
     
     // Methods section
     
+    public static boolean SpinUntil(Func_1 condition, int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpinUntil = null;
+        try {
+            retObjectSpinUntil = classType.Invoke("SpinUntil", condition, millisecondsTimeout);
+            return (boolean)retObjectSpinUntil;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSpinUntil != null ? retObjectSpinUntil.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean SpinUntil(Func_1 condition, TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpinUntil = null;
+        try {
+            retObjectSpinUntil = classType.Invoke("SpinUntil", condition, timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectSpinUntil;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSpinUntil != null ? retObjectSpinUntil.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -169,6 +199,16 @@ public class SpinWait extends ValueType  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SpinOnce");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SpinUntil(Func_1 condition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SpinUntil", condition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

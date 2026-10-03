@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.EventHandler;
 
 
@@ -116,6 +118,12 @@ public interface IXamlNameResolver extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IEnumerable_1 GetAllNamesAndValuesInScope() throws Throwable;
+
+    public NetObject GetFixupToken(IEnumerable_1 names) throws Throwable;
+
+    public NetObject GetFixupToken(IEnumerable_1 names, boolean canAssignDirectly) throws Throwable;
+
     public NetObject Resolve(java.lang.String name) throws Throwable;
 
     public NetObject Resolve(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isFullyInitialized) throws Throwable;

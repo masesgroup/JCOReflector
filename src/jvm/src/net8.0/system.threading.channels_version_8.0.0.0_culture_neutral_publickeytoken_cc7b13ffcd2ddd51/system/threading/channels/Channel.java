@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.threading.channels.Channel_1;
+import system.threading.channels.BoundedChannelOptions;
+import system.Action_1;
+import system.threading.channels.UnboundedChannelOptions;
 
 
 /**
@@ -151,6 +155,81 @@ public class Channel extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> Channel_1 CreateBounded(int capacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBounded = null;
+        try {
+            retObjectCreateBounded = classType.Invoke("CreateBounded", capacity);
+            JCObject objCreateBounded = (JCObject)retObjectCreateBounded;
+            return new Channel_1(objCreateBounded);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBounded != null ? retObjectCreateBounded.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Channel_1 CreateBounded(BoundedChannelOptions options, Action_1 itemDropped) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBounded = null;
+        try {
+            retObjectCreateBounded = classType.Invoke("CreateBounded", options == null ? null : options.getJCOInstance(), itemDropped);
+            JCObject objCreateBounded = (JCObject)retObjectCreateBounded;
+            return new Channel_1(objCreateBounded);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBounded != null ? retObjectCreateBounded.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Channel_1 CreateBounded(BoundedChannelOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBounded = null;
+        try {
+            retObjectCreateBounded = classType.Invoke("CreateBounded", options == null ? null : options.getJCOInstance());
+            JCObject objCreateBounded = (JCObject)retObjectCreateBounded;
+            return new Channel_1(objCreateBounded);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBounded != null ? retObjectCreateBounded.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Channel_1 CreateUnbounded() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUnbounded = null;
+        try {
+            retObjectCreateUnbounded = classType.Invoke("CreateUnbounded");
+            JCObject objCreateUnbounded = (JCObject)retObjectCreateUnbounded;
+            return new Channel_1(objCreateUnbounded);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUnbounded != null ? retObjectCreateUnbounded.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Channel_1 CreateUnbounded(UnboundedChannelOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUnbounded = null;
+        try {
+            retObjectCreateUnbounded = classType.Invoke("CreateUnbounded", options == null ? null : options.getJCOInstance());
+            JCObject objCreateUnbounded = (JCObject)retObjectCreateUnbounded;
+            return new Channel_1(objCreateUnbounded);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUnbounded != null ? retObjectCreateUnbounded.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

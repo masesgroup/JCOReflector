@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.ArgumentException;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.Nullable_1;
 
 /**
  * The base .NET class managing System.Globalization.CultureNotFoundException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
@@ -54,7 +55,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CultureNotFoundException extends ArgumentException {
+public class CultureNotFoundException extends system.ArgumentException {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -234,6 +235,21 @@ public class CultureNotFoundException extends ArgumentException {
     
     // Properties section
     
+    public Nullable_1 getInvalidCultureId() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvalidCultureId = null;
+        try {
+            retObjectInvalidCultureId = classInstance.Get("InvalidCultureId");
+            JCObject val = (JCObject)retObjectInvalidCultureId;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvalidCultureId != null ? retObjectInvalidCultureId.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getInvalidCultureName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

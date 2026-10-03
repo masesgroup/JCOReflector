@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.Oid;
+import system.Nullable_1;
+import system.ReadOnlyMemory_1;
 import system.security.cryptography.pkcs.Pkcs8PrivateKeyInfo;
 import system.security.cryptography.AsymmetricAlgorithm;
 import system.security.cryptography.CryptographicAttributeObjectCollection;
@@ -152,6 +154,16 @@ public class Pkcs8PrivateKeyInfo extends NetObject  {
     public Pkcs8PrivateKeyInfo() throws Throwable {
     }
 
+    public Pkcs8PrivateKeyInfo(Oid algorithmId, Nullable_1 algorithmParameters, ReadOnlyMemory_1 privateKey, boolean skipCopies) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(algorithmId == null ? null : algorithmId.getJCOInstance(), algorithmParameters == null ? null : algorithmParameters.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance(), skipCopies));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -195,10 +207,55 @@ public class Pkcs8PrivateKeyInfo extends NetObject  {
         }
     }
 
+    public static Pkcs8PrivateKeyInfo Decode(ReadOnlyMemory_1 source, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesRead, boolean skipCopy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecode = null;
+        try {
+            retObjectDecode = classType.Invoke("Decode", source == null ? null : source.getJCOInstance(), bytesRead.getJCRefOut(), skipCopy);
+            JCObject objDecode = (JCObject)retObjectDecode;
+            return new Pkcs8PrivateKeyInfo(objDecode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecode != null ? retObjectDecode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public Nullable_1 getAlgorithmParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithmParameters = null;
+        try {
+            retObjectAlgorithmParameters = classInstance.Get("AlgorithmParameters");
+            JCObject val = (JCObject)retObjectAlgorithmParameters;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlgorithmParameters != null ? retObjectAlgorithmParameters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 getPrivateKeyBytes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivateKeyBytes = null;
+        try {
+            retObjectPrivateKeyBytes = classInstance.Get("PrivateKeyBytes");
+            JCObject val = (JCObject)retObjectPrivateKeyBytes;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrivateKeyBytes != null ? retObjectPrivateKeyBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CryptographicAttributeObjectCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

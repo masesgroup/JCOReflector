@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.web.modelbinding.IValueProvider;
+import system.web.modelbinding.IValueProviderImplementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.web.modelbinding.ValueProviderResult;
 
 
@@ -53,7 +58,7 @@ import system.web.modelbinding.ValueProviderResult;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ValueProviderCollection extends NetObjectEnumerable  {
+public class ValueProviderCollection extends system.collections.objectmodel.Collection_1<IValueProvider>  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -151,6 +156,16 @@ public class ValueProviderCollection extends NetObjectEnumerable  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(list == null ? null : list.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

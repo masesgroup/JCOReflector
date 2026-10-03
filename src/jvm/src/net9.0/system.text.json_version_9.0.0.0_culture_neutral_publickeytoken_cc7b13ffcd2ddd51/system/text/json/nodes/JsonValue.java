@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.text.json.nodes.JsonNode;
 import system.text.json.nodes.JsonValue;
+import system.Nullable_1;
 import system.SByte;
 import system.Single;
 import system.DateTime;
@@ -50,6 +51,7 @@ import system.text.json.JsonElement;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
+import system.text.json.serialization.metadata.JsonTypeInfo_1;
 
 
 /**
@@ -64,7 +66,7 @@ import system.UInt64;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JsonValue extends JsonNode  {
+public class JsonValue extends system.text.json.nodes.JsonNode  {
     /**
      * Fully assembly qualified name: System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -163,6 +165,335 @@ public class JsonValue extends JsonNode  {
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> boolean TryGetValue(JCORefOut<T> value) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetValue = null;
+        try {
+            retObjectTryGetValue = classInstance.Invoke("TryGetValue", value.getJCRefOut());
+            return (boolean)retObjectTryGetValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetValue != null ? retObjectTryGetValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(boolean value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(byte value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(char value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(double value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(short value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(int value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(long value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(SByte value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(Single value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(DateTime value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(DateTimeOffset value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(Decimal value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(Guid value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(Nullable_1 value, Nullable_1 options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(java.lang.String value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value, options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(JsonElement value, Nullable_1 options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(UInt16 value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(UInt32 value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonValue Create(UInt64 value, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonValue Create(T value, Nullable_1 options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonValue Create(T value, JsonTypeInfo_1 jsonTypeInfo, Nullable_1 options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonValue(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

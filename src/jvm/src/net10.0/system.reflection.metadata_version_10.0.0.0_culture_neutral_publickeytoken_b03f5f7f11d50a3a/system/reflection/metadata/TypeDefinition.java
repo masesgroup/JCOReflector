@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.CustomAttributeHandleCollection;
 import system.reflection.metadata.DeclarativeSecurityAttributeHandleCollection;
 import system.reflection.metadata.EventDefinitionHandleCollection;
@@ -68,7 +69,7 @@ import system.reflection.TypeAttributes;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TypeDefinition extends ValueType  {
+public class TypeDefinition extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -169,6 +170,21 @@ public class TypeDefinition extends ValueType  {
     
     // Methods section
     
+    public ImmutableArray_1 GetNestedTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNestedTypes = null;
+        try {
+            retObjectGetNestedTypes = classInstance.Invoke("GetNestedTypes");
+            JCObject objGetNestedTypes = (JCObject)retObjectGetNestedTypes;
+            return new ImmutableArray_1(objGetNestedTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNestedTypes != null ? retObjectGetNestedTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

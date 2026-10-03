@@ -54,7 +54,7 @@ import system.web.ui.design.TemplateDefinition;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TemplatedEditableDesignerRegion extends EditableDesignerRegion  {
+public class TemplatedEditableDesignerRegion extends system.web.ui.design.EditableDesignerRegion  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -38,6 +38,23 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Func_10;
+import system.linq.expressions.Expression_1;
+import system.Func_11;
+import system.Func_12;
+import system.Func_13;
+import system.Func_14;
+import system.Func_15;
+import system.Func_16;
+import system.Func_17;
+import system.Func_2;
+import system.Func_3;
+import system.Func_4;
+import system.Func_5;
+import system.Func_6;
+import system.Func_7;
+import system.Func_8;
+import system.Func_9;
 
 
 /**
@@ -153,6 +170,20 @@ public class CompiledQuery extends NetObject  {
     
     // Methods section
     
+    public static <TArg0 extends IJCOBridgeReflected, TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected, TArg4 extends IJCOBridgeReflected, TArg5 extends IJCOBridgeReflected, TArg6 extends IJCOBridgeReflected, TArg7 extends IJCOBridgeReflected, TArg8 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Func_10 Compile(Expression_1 query) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompile = null;
+        try {
+            retObjectCompile = classType.Invoke("Compile", query == null ? null : query.getJCOInstance());
+            return (Func_10)retObjectCompile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into Func_10", retObjectCompile != null ? retObjectCompile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

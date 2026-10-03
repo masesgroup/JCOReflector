@@ -49,6 +49,8 @@ import system.data.sqlclient.SqlDataReader;
 import system.data.CommandBehavior;
 import system.data.sqlclient.SqlParameter;
 import system.AsyncCallback;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 import system.xml.XmlReader;
 import system.data.CommandType;
 import system.data.sql.SqlNotificationRequest;
@@ -69,7 +71,7 @@ import system.data.StatementCompletedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlCommand extends DbCommand  {
+public class SqlCommand extends system.data.common.DbCommand  {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -501,6 +503,126 @@ public class SqlCommand extends DbCommand  {
             return new NetObject(objExecuteScalar);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteScalar != null ? retObjectExecuteScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ExecuteReaderAsyncNewSqlCommand() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.NotSupportedException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReaderAsync = null;
+        try {
+            retObjectExecuteReaderAsync = classInstance.Invoke("ExecuteReaderAsync");
+            JCObject objExecuteReaderAsync = (JCObject)retObjectExecuteReaderAsync;
+            return new Task_1(objExecuteReaderAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReaderAsync != null ? retObjectExecuteReaderAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ExecuteReaderAsyncNewSqlCommand(CommandBehavior behavior) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.NotSupportedException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReaderAsync = null;
+        try {
+            retObjectExecuteReaderAsync = classInstance.Invoke("ExecuteReaderAsync", behavior == null ? null : behavior.getJCOInstance());
+            JCObject objExecuteReaderAsync = (JCObject)retObjectExecuteReaderAsync;
+            return new Task_1(objExecuteReaderAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReaderAsync != null ? retObjectExecuteReaderAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ExecuteReaderAsyncNewSqlCommand(CommandBehavior behavior, CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.InvalidCastException, system.data.sqlclient.SqlException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.security.cryptography.CryptographicUnexpectedOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReaderAsync = null;
+        try {
+            retObjectExecuteReaderAsync = classInstance.Invoke("ExecuteReaderAsync", behavior == null ? null : behavior.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objExecuteReaderAsync = (JCObject)retObjectExecuteReaderAsync;
+            return new Task_1(objExecuteReaderAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReaderAsync != null ? retObjectExecuteReaderAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ExecuteReaderAsyncNewSqlCommand(CancellationToken cancellationToken) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.NotSupportedException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReaderAsync = null;
+        try {
+            retObjectExecuteReaderAsync = classInstance.Invoke("ExecuteReaderAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objExecuteReaderAsync = (JCObject)retObjectExecuteReaderAsync;
+            return new Task_1(objExecuteReaderAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReaderAsync != null ? retObjectExecuteReaderAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ExecuteNonQueryAsync(CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.InvalidCastException, system.data.sqlclient.SqlException, system.OverflowException, system.AggregateException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteNonQueryAsync = null;
+        try {
+            retObjectExecuteNonQueryAsync = classInstance.Invoke("ExecuteNonQueryAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objExecuteNonQueryAsync = (JCObject)retObjectExecuteNonQueryAsync;
+            return new Task_1(objExecuteNonQueryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteNonQueryAsync != null ? retObjectExecuteNonQueryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ExecuteScalarAsync(CancellationToken cancellationToken) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.data.sqlclient.SqlException, system.IndexOutOfRangeException, system.AggregateException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteScalarAsync = null;
+        try {
+            retObjectExecuteScalarAsync = classInstance.Invoke("ExecuteScalarAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objExecuteScalarAsync = (JCObject)retObjectExecuteScalarAsync;
+            return new Task_1(objExecuteScalarAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteScalarAsync != null ? retObjectExecuteScalarAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ExecuteXmlReaderAsync() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.NotSupportedException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteXmlReaderAsync = null;
+        try {
+            retObjectExecuteXmlReaderAsync = classInstance.Invoke("ExecuteXmlReaderAsync");
+            JCObject objExecuteXmlReaderAsync = (JCObject)retObjectExecuteXmlReaderAsync;
+            return new Task_1(objExecuteXmlReaderAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteXmlReaderAsync != null ? retObjectExecuteXmlReaderAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ExecuteXmlReaderAsync(CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.InvalidCastException, system.data.sqlclient.SqlException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.security.cryptography.CryptographicUnexpectedOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteXmlReaderAsync = null;
+        try {
+            retObjectExecuteXmlReaderAsync = classInstance.Invoke("ExecuteXmlReaderAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objExecuteXmlReaderAsync = (JCObject)retObjectExecuteXmlReaderAsync;
+            return new Task_1(objExecuteXmlReaderAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteXmlReaderAsync != null ? retObjectExecuteXmlReaderAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

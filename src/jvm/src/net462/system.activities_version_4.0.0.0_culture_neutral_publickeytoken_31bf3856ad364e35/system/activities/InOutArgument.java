@@ -54,7 +54,7 @@ import system.activities.InOutArgument;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InOutArgument extends Argument  {
+public class InOutArgument extends system.activities.Argument  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

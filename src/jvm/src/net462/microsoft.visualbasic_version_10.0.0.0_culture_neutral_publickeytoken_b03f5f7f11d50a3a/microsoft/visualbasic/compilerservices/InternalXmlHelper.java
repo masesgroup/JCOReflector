@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.linq.XNamespace;
+import system.collections.generic.List_1;
 import system.xml.linq.XAttribute;
 import system.xml.linq.XName;
 import system.xml.linq.XElement;
@@ -157,6 +158,66 @@ public class InternalXmlHelper extends NetObject  {
     
     // Methods section
     
+    public static IEnumerable RemoveNamespaceAttributes(java.lang.String[] inScopePrefixes, XNamespace[] inScopeNs, List_1 attributes, IEnumerable obj) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveNamespaceAttributes = null;
+        try {
+            retObjectRemoveNamespaceAttributes = classType.Invoke("RemoveNamespaceAttributes", inScopePrefixes, toObjectFromArray(inScopeNs), attributes == null ? null : attributes.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            JCObject objRemoveNamespaceAttributes = (JCObject)retObjectRemoveNamespaceAttributes;
+            return new IEnumerableImplementation(objRemoveNamespaceAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamespaceAttributes != null ? retObjectRemoveNamespaceAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable RemoveNamespaceAttributes(JCORefOut dupParam0, XNamespace[] dupParam1, List_1 dupParam2, IEnumerable dupParam3) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveNamespaceAttributes = null;
+        try {
+            retObjectRemoveNamespaceAttributes = classType.Invoke("RemoveNamespaceAttributes", dupParam0.getJCRefOut(), toObjectFromArray(dupParam1), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objRemoveNamespaceAttributes = (JCObject)retObjectRemoveNamespaceAttributes;
+            return new IEnumerableImplementation(objRemoveNamespaceAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamespaceAttributes != null ? retObjectRemoveNamespaceAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject RemoveNamespaceAttributes(java.lang.String[] inScopePrefixes, XNamespace[] inScopeNs, List_1 attributes, NetObject obj) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveNamespaceAttributes = null;
+        try {
+            retObjectRemoveNamespaceAttributes = classType.Invoke("RemoveNamespaceAttributes", inScopePrefixes, toObjectFromArray(inScopeNs), attributes == null ? null : attributes.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            JCObject objRemoveNamespaceAttributes = (JCObject)retObjectRemoveNamespaceAttributes;
+            return new NetObject(objRemoveNamespaceAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamespaceAttributes != null ? retObjectRemoveNamespaceAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject RemoveNamespaceAttributes(JCORefOut dupParam0, XNamespace[] dupParam1, List_1 dupParam2, NetObject dupParam3) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveNamespaceAttributes = null;
+        try {
+            retObjectRemoveNamespaceAttributes = classType.Invoke("RemoveNamespaceAttributes", dupParam0.getJCRefOut(), toObjectFromArray(dupParam1), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objRemoveNamespaceAttributes = (JCObject)retObjectRemoveNamespaceAttributes;
+            return new NetObject(objRemoveNamespaceAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamespaceAttributes != null ? retObjectRemoveNamespaceAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static XAttribute CreateAttribute(XName name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -182,6 +243,36 @@ public class InternalXmlHelper extends NetObject  {
             return new XAttribute(objCreateNamespaceAttribute);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNamespaceAttribute != null ? retObjectCreateNamespaceAttribute.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XElement RemoveNamespaceAttributes(java.lang.String[] inScopePrefixes, XNamespace[] inScopeNs, List_1 attributes, XElement e) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveNamespaceAttributes = null;
+        try {
+            retObjectRemoveNamespaceAttributes = classType.Invoke("RemoveNamespaceAttributes", inScopePrefixes, toObjectFromArray(inScopeNs), attributes == null ? null : attributes.getJCOInstance(), e == null ? null : e.getJCOInstance());
+            JCObject objRemoveNamespaceAttributes = (JCObject)retObjectRemoveNamespaceAttributes;
+            return new XElement(objRemoveNamespaceAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamespaceAttributes != null ? retObjectRemoveNamespaceAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XElement RemoveNamespaceAttributes(JCORefOut dupParam0, XNamespace[] dupParam1, List_1 dupParam2, XElement dupParam3) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveNamespaceAttributes = null;
+        try {
+            retObjectRemoveNamespaceAttributes = classType.Invoke("RemoveNamespaceAttributes", dupParam0.getJCRefOut(), toObjectFromArray(dupParam1), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objRemoveNamespaceAttributes = (JCObject)retObjectRemoveNamespaceAttributes;
+            return new XElement(objRemoveNamespaceAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamespaceAttributes != null ? retObjectRemoveNamespaceAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

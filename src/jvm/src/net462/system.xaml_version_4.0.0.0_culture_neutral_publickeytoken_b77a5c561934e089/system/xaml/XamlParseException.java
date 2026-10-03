@@ -52,7 +52,7 @@ import system.xaml.XamlException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XamlParseException extends XamlException {
+public class XamlParseException extends system.xaml.XamlException {
     /**
      * Fully assembly qualified name: System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

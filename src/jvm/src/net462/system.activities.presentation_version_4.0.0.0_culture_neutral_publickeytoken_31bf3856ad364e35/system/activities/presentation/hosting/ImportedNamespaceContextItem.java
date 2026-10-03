@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.presentation.ContextItem;
 import system.activities.presentation.EditingContext;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.activities.presentation.EditingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ImportedNamespaceContextItem extends ContextItem  {
+public class ImportedNamespaceContextItem extends system.activities.presentation.ContextItem  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -175,6 +176,21 @@ public class ImportedNamespaceContextItem extends ContextItem  {
     
     // Properties section
     
+    public Collection_1 getImportedNamespaces() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportedNamespaces = null;
+        try {
+            retObjectImportedNamespaces = classInstance.Get("ImportedNamespaces");
+            JCObject val = (JCObject)retObjectImportedNamespaces;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportedNamespaces != null ? retObjectImportedNamespaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

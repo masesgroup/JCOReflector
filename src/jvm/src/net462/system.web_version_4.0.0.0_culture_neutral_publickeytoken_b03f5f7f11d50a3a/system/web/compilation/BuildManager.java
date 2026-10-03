@@ -48,6 +48,7 @@ import system.web.util.IWebObjectFactory;
 import system.web.util.IWebObjectFactoryImplementation;
 import system.collections.IList;
 import system.collections.IListImplementation;
+import system.Nullable_1;
 import system.runtime.versioning.FrameworkName;
 
 
@@ -435,6 +436,31 @@ public class BuildManager extends NetObject  {
             return new IListImplementation(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeAssemblies != null ? retObjectCodeAssemblies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 getBatchCompilationEnabled() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBatchCompilationEnabled = null;
+        try {
+            retObjectBatchCompilationEnabled = classType.Get("BatchCompilationEnabled");
+            JCObject val = (JCObject)retObjectBatchCompilationEnabled;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBatchCompilationEnabled != null ? retObjectBatchCompilationEnabled.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setBatchCompilationEnabled(Nullable_1 BatchCompilationEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("BatchCompilationEnabled", BatchCompilationEnabled == null ? null : BatchCompilationEnabled.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

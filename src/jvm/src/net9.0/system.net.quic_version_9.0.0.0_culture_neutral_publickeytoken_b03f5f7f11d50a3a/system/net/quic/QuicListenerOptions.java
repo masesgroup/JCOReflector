@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.List_1;
+import system.Func_4;
 import system.net.IPEndPoint;
 
 
@@ -209,6 +211,55 @@ public class QuicListenerOptions extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenBacklog", ListenBacklog);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getApplicationProtocols() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationProtocols = null;
+        try {
+            retObjectApplicationProtocols = classInstance.Get("ApplicationProtocols");
+            JCObject val = (JCObject)retObjectApplicationProtocols;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationProtocols != null ? retObjectApplicationProtocols.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setApplicationProtocols(List_1 ApplicationProtocols) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ApplicationProtocols", ApplicationProtocols == null ? null : ApplicationProtocols.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_4 getConnectionOptionsCallback() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionOptionsCallback = null;
+        try {
+            retObjectConnectionOptionsCallback = classInstance.Get("ConnectionOptionsCallback");
+            return (Func_4)retObjectConnectionOptionsCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_4", retObjectConnectionOptionsCallback != null ? retObjectConnectionOptionsCallback.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setConnectionOptionsCallback(Func_4 ConnectionOptionsCallback) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ConnectionOptionsCallback", ConnectionOptionsCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

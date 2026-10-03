@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.UpdateException;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 /**
  * The base .NET class managing System.Data.OptimisticConcurrencyException, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
@@ -52,7 +54,7 @@ import system.data.UpdateException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class OptimisticConcurrencyException extends UpdateException {
+public class OptimisticConcurrencyException extends system.data.UpdateException {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -164,6 +166,16 @@ public class OptimisticConcurrencyException extends UpdateException {
 
     // Constructors section
     
+    public OptimisticConcurrencyException(java.lang.String message, NetException innerException, IEnumerable_1 stateEntries) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, innerException == null ? null : innerException.getJCOInstance(), stateEntries == null ? null : stateEntries.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section

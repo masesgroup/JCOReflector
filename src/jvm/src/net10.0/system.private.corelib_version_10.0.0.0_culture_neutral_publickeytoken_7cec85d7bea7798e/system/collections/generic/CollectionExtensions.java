@@ -38,6 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.collections.objectmodel.ReadOnlyDictionary_2;
+import system.collections.objectmodel.ReadOnlySet_1;
+import system.collections.generic.ISet_1;
+import system.collections.generic.ISet_1Implementation;
+import system.collections.generic.List_1;
 
 
 /**
@@ -151,6 +161,79 @@ public class CollectionExtensions extends NetObject  {
     
     // Methods section
     
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean Remove(IDictionary_2 dictionary, TKey key, JCORefOut<TValue> value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemove = null;
+        try {
+            retObjectRemove = classType.Invoke("Remove", dictionary == null ? null : dictionary.getJCOInstance(), key == null ? null : ((IJCOBridgeReflected)key).getJCOInstance(), value.getJCRefOut());
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean TryAdd(IDictionary_2 dictionary, TKey key, TValue value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryAdd = null;
+        try {
+            retObjectTryAdd = classType.Invoke("TryAdd", dictionary == null ? null : dictionary.getJCOInstance(), key == null ? null : ((IJCOBridgeReflected)key).getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (boolean)retObjectTryAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAdd != null ? retObjectTryAdd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ReadOnlyCollection_1 AsReadOnly(IList_1 list) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsReadOnly = null;
+        try {
+            retObjectAsReadOnly = classType.Invoke("AsReadOnly", list == null ? null : list.getJCOInstance());
+            JCObject objAsReadOnly = (JCObject)retObjectAsReadOnly;
+            return new ReadOnlyCollection_1(objAsReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsReadOnly != null ? retObjectAsReadOnly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ReadOnlyDictionary_2 AsReadOnly(IDictionary_2 dictionary) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsReadOnly = null;
+        try {
+            retObjectAsReadOnly = classType.Invoke("AsReadOnly", dictionary == null ? null : dictionary.getJCOInstance());
+            JCObject objAsReadOnly = (JCObject)retObjectAsReadOnly;
+            return new ReadOnlyDictionary_2(objAsReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsReadOnly != null ? retObjectAsReadOnly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ReadOnlySet_1 AsReadOnly(ISet_1 set) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsReadOnly = null;
+        try {
+            retObjectAsReadOnly = classType.Invoke("AsReadOnly", set == null ? null : set.getJCOInstance());
+            JCObject objAsReadOnly = (JCObject)retObjectAsReadOnly;
+            return new ReadOnlySet_1(objAsReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsReadOnly != null ? retObjectAsReadOnly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

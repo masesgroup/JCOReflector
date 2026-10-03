@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.EndpointAddress;
 import system.xml.XmlDictionaryReader;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.EndpointIdentity;
 import system.Uri;
 
@@ -242,6 +243,21 @@ public class EndpointAddressBuilder extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getHeaders() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaders = null;
+        try {
+            retObjectHeaders = classInstance.Get("Headers");
+            JCObject val = (JCObject)retObjectHeaders;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaders != null ? retObjectHeaders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EndpointIdentity getIdentity() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

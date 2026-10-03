@@ -38,8 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
+import system.Func_2;
 
 
 /**
@@ -150,6 +153,26 @@ public class ValidationContext extends NetObject  {
     public ValidationContext() throws Throwable {
     }
 
+    public ValidationContext(NetObject instance, IDictionary_2 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(instance == null ? null : instance.getJCOInstance(), items == null ? null : items.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValidationContext(NetObject instance, IServiceProvider serviceProvider, IDictionary_2 items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(instance == null ? null : instance.getJCOInstance(), serviceProvider == null ? null : serviceProvider.getJCOInstance(), items == null ? null : items.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ValidationContext(NetObject instance) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
@@ -180,10 +203,35 @@ public class ValidationContext extends NetObject  {
         }
     }
 
+    public void InitializeServiceProvider(Func_2 serviceProvider) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InitializeServiceProvider", serviceProvider);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public IDictionary_2 getItems() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
+        try {
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getObjectInstance() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

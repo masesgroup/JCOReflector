@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.description.ServiceEndpoint;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.servicemodel.description.ServiceEndpoint;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowHostingEndpoint extends ServiceEndpoint  {
+public class WorkflowHostingEndpoint extends system.servicemodel.description.ServiceEndpoint  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -156,6 +157,21 @@ public class WorkflowHostingEndpoint extends ServiceEndpoint  {
     
     // Properties section
     
+    public Collection_1 getCorrelationQueries() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationQueries = null;
+        try {
+            retObjectCorrelationQueries = classInstance.Get("CorrelationQueries");
+            JCObject val = (JCObject)retObjectCorrelationQueries;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationQueries != null ? retObjectCorrelationQueries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

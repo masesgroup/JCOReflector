@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.documents.TextElementCollection_1;
 import system.windows.documents.Block;
 
 
@@ -53,7 +54,7 @@ import system.windows.documents.Block;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BlockCollection extends NetObjectEnumerable  {
+public class BlockCollection extends system.windows.documents.TextElementCollection_1<Block>  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

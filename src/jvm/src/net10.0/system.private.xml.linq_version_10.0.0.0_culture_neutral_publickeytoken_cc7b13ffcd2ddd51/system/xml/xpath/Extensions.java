@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xml.linq.XNode;
 import system.xml.IXmlNamespaceResolver;
 import system.xml.IXmlNamespaceResolverImplementation;
@@ -157,6 +159,36 @@ public class Extensions extends NetObject  {
     
     // Methods section
     
+    public static IEnumerable_1 XPathSelectElements(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.xpath.XPathException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXPathSelectElements = null;
+        try {
+            retObjectXPathSelectElements = classType.Invoke("XPathSelectElements", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
+            JCObject objXPathSelectElements = (JCObject)retObjectXPathSelectElements;
+            return new IEnumerable_1Implementation(objXPathSelectElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXPathSelectElements != null ? retObjectXPathSelectElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 XPathSelectElements(XNode node, java.lang.String expression) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.xpath.XPathException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXPathSelectElements = null;
+        try {
+            retObjectXPathSelectElements = classType.Invoke("XPathSelectElements", node == null ? null : node.getJCOInstance(), expression);
+            JCObject objXPathSelectElements = (JCObject)retObjectXPathSelectElements;
+            return new IEnumerable_1Implementation(objXPathSelectElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXPathSelectElements != null ? retObjectXPathSelectElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject XPathEvaluate(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

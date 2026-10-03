@@ -38,8 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.input.StylusPointDescription;
 import system.windows.input.StylusPointProperty;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.input.StylusPointPropertyInfo;
 
 
@@ -158,6 +161,16 @@ public class StylusPointDescription extends NetObject  {
         }
     }
 
+    public StylusPointDescription(IEnumerable_1 stylusPointPropertyInfos) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(stylusPointPropertyInfos == null ? null : stylusPointPropertyInfos.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -199,6 +212,21 @@ public class StylusPointDescription extends NetObject  {
             return (boolean)retObjectIsSubsetOf;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSubsetOf != null ? retObjectIsSubsetOf.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetStylusPointProperties() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStylusPointProperties = null;
+        try {
+            retObjectGetStylusPointProperties = classInstance.Invoke("GetStylusPointProperties");
+            JCObject objGetStylusPointProperties = (JCObject)retObjectGetStylusPointProperties;
+            return new ReadOnlyCollection_1(objGetStylusPointProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStylusPointProperties != null ? retObjectGetStylusPointProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

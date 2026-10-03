@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.Uri;
 import system.windows.media.GlyphRun;
 
 
@@ -160,6 +163,21 @@ public class FontEmbeddingManager extends NetObject  {
     
     // Methods section
     
+    public ICollection_1 GetUsedGlyphs(Uri glyphTypeface) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUsedGlyphs = null;
+        try {
+            retObjectGetUsedGlyphs = classInstance.Invoke("GetUsedGlyphs", glyphTypeface == null ? null : glyphTypeface.getJCOInstance());
+            JCObject objGetUsedGlyphs = (JCObject)retObjectGetUsedGlyphs;
+            return new ICollection_1Implementation(objGetUsedGlyphs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUsedGlyphs != null ? retObjectGetUsedGlyphs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void RecordUsage(GlyphRun glyphRun) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +192,21 @@ public class FontEmbeddingManager extends NetObject  {
     
     // Properties section
     
+    public ICollection_1 getGlyphTypefaceUris() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlyphTypefaceUris = null;
+        try {
+            retObjectGlyphTypefaceUris = classInstance.Get("GlyphTypefaceUris");
+            JCObject val = (JCObject)retObjectGlyphTypefaceUris;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlyphTypefaceUris != null ? retObjectGlyphTypefaceUris.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

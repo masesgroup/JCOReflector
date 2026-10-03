@@ -38,6 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IAsyncEnumerable_1;
+import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.net.http.HttpClient;
+import system.text.json.JsonSerializerOptions;
+import system.threading.CancellationToken;
+import system.text.json.serialization.metadata.JsonTypeInfo_1;
+import system.Uri;
+import system.threading.tasks.Task_1;
+import system.text.json.serialization.JsonSerializerContext;
 
 
 /**
@@ -151,6 +160,726 @@ public class HttpClientJsonExtensions extends NetObject  {
     
     // Methods section
     
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, java.lang.String requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectGetFromJsonAsAsyncEnumerable = classType.Invoke("GetFromJsonAsAsyncEnumerable", client == null ? null : client.getJCOInstance(), requestUri, options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsAsyncEnumerable = (JCObject)retObjectGetFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objGetFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsAsyncEnumerable != null ? retObjectGetFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, java.lang.String requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectGetFromJsonAsAsyncEnumerable = classType.Invoke("GetFromJsonAsAsyncEnumerable", client == null ? null : client.getJCOInstance(), requestUri, jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsAsyncEnumerable = (JCObject)retObjectGetFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objGetFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsAsyncEnumerable != null ? retObjectGetFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectGetFromJsonAsAsyncEnumerable = classType.Invoke("GetFromJsonAsAsyncEnumerable", client == null ? null : client.getJCOInstance(), requestUri, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsAsyncEnumerable = (JCObject)retObjectGetFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objGetFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsAsyncEnumerable != null ? retObjectGetFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, Uri requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectGetFromJsonAsAsyncEnumerable = classType.Invoke("GetFromJsonAsAsyncEnumerable", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsAsyncEnumerable = (JCObject)retObjectGetFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objGetFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsAsyncEnumerable != null ? retObjectGetFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, Uri requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectGetFromJsonAsAsyncEnumerable = classType.Invoke("GetFromJsonAsAsyncEnumerable", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsAsyncEnumerable = (JCObject)retObjectGetFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objGetFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsAsyncEnumerable != null ? retObjectGetFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 GetFromJsonAsAsyncEnumerable(HttpClient client, Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectGetFromJsonAsAsyncEnumerable = classType.Invoke("GetFromJsonAsAsyncEnumerable", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsAsyncEnumerable = (JCObject)retObjectGetFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objGetFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsAsyncEnumerable != null ? retObjectGetFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPatchAsJsonAsync = null;
+        try {
+            retObjectPatchAsJsonAsync = classType.Invoke("PatchAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPatchAsJsonAsync = (JCObject)retObjectPatchAsJsonAsync;
+            return new Task_1(objPatchAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsJsonAsync != null ? retObjectPatchAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPatchAsJsonAsync = null;
+        try {
+            retObjectPatchAsJsonAsync = classType.Invoke("PatchAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPatchAsJsonAsync = (JCObject)retObjectPatchAsJsonAsync;
+            return new Task_1(objPatchAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsJsonAsync != null ? retObjectPatchAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPatchAsJsonAsync = null;
+        try {
+            retObjectPatchAsJsonAsync = classType.Invoke("PatchAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPatchAsJsonAsync = (JCObject)retObjectPatchAsJsonAsync;
+            return new Task_1(objPatchAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsJsonAsync != null ? retObjectPatchAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPatchAsJsonAsync = null;
+        try {
+            retObjectPatchAsJsonAsync = classType.Invoke("PatchAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPatchAsJsonAsync = (JCObject)retObjectPatchAsJsonAsync;
+            return new Task_1(objPatchAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsJsonAsync != null ? retObjectPatchAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPatchAsJsonAsync = null;
+        try {
+            retObjectPatchAsJsonAsync = classType.Invoke("PatchAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPatchAsJsonAsync = (JCObject)retObjectPatchAsJsonAsync;
+            return new Task_1(objPatchAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsJsonAsync != null ? retObjectPatchAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPatchAsJsonAsync = null;
+        try {
+            retObjectPatchAsJsonAsync = classType.Invoke("PatchAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPatchAsJsonAsync = (JCObject)retObjectPatchAsJsonAsync;
+            return new Task_1(objPatchAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsJsonAsync != null ? retObjectPatchAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostAsJsonAsync = null;
+        try {
+            retObjectPostAsJsonAsync = classType.Invoke("PostAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPostAsJsonAsync = (JCObject)retObjectPostAsJsonAsync;
+            return new Task_1(objPostAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsJsonAsync != null ? retObjectPostAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostAsJsonAsync = null;
+        try {
+            retObjectPostAsJsonAsync = classType.Invoke("PostAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPostAsJsonAsync = (JCObject)retObjectPostAsJsonAsync;
+            return new Task_1(objPostAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsJsonAsync != null ? retObjectPostAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostAsJsonAsync = null;
+        try {
+            retObjectPostAsJsonAsync = classType.Invoke("PostAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPostAsJsonAsync = (JCObject)retObjectPostAsJsonAsync;
+            return new Task_1(objPostAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsJsonAsync != null ? retObjectPostAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostAsJsonAsync = null;
+        try {
+            retObjectPostAsJsonAsync = classType.Invoke("PostAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPostAsJsonAsync = (JCObject)retObjectPostAsJsonAsync;
+            return new Task_1(objPostAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsJsonAsync != null ? retObjectPostAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostAsJsonAsync = null;
+        try {
+            retObjectPostAsJsonAsync = classType.Invoke("PostAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPostAsJsonAsync = (JCObject)retObjectPostAsJsonAsync;
+            return new Task_1(objPostAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsJsonAsync != null ? retObjectPostAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostAsJsonAsync = null;
+        try {
+            retObjectPostAsJsonAsync = classType.Invoke("PostAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPostAsJsonAsync = (JCObject)retObjectPostAsJsonAsync;
+            return new Task_1(objPostAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsJsonAsync != null ? retObjectPostAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPutAsJsonAsync = null;
+        try {
+            retObjectPutAsJsonAsync = classType.Invoke("PutAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPutAsJsonAsync = (JCObject)retObjectPutAsJsonAsync;
+            return new Task_1(objPutAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsJsonAsync != null ? retObjectPutAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPutAsJsonAsync = null;
+        try {
+            retObjectPutAsJsonAsync = classType.Invoke("PutAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPutAsJsonAsync = (JCObject)retObjectPutAsJsonAsync;
+            return new Task_1(objPutAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsJsonAsync != null ? retObjectPutAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPutAsJsonAsync = null;
+        try {
+            retObjectPutAsJsonAsync = classType.Invoke("PutAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPutAsJsonAsync = (JCObject)retObjectPutAsJsonAsync;
+            return new Task_1(objPutAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsJsonAsync != null ? retObjectPutAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPutAsJsonAsync = null;
+        try {
+            retObjectPutAsJsonAsync = classType.Invoke("PutAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPutAsJsonAsync = (JCObject)retObjectPutAsJsonAsync;
+            return new Task_1(objPutAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsJsonAsync != null ? retObjectPutAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPutAsJsonAsync = null;
+        try {
+            retObjectPutAsJsonAsync = classType.Invoke("PutAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPutAsJsonAsync = (JCObject)retObjectPutAsJsonAsync;
+            return new Task_1(objPutAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsJsonAsync != null ? retObjectPutAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPutAsJsonAsync = null;
+        try {
+            retObjectPutAsJsonAsync = classType.Invoke("PutAsJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPutAsJsonAsync = (JCObject)retObjectPutAsJsonAsync;
+            return new Task_1(objPutAsJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsJsonAsync != null ? retObjectPutAsJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, type == null ? null : type.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotSupportedException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, type == null ? null : type.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), type == null ? null : type.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), type == null ? null : type.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, type == null ? null : type.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, type == null ? null : type.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), type == null ? null : type.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), type == null ? null : type.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteFromJsonAsync = null;
+        try {
+            retObjectDeleteFromJsonAsync = classType.Invoke("DeleteFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteFromJsonAsync = (JCObject)retObjectDeleteFromJsonAsync;
+            return new Task_1(objDeleteFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteFromJsonAsync != null ? retObjectDeleteFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFromJsonAsync = null;
+        try {
+            retObjectGetFromJsonAsync = classType.Invoke("GetFromJsonAsync", client == null ? null : client.getJCOInstance(), requestUri == null ? null : requestUri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFromJsonAsync = (JCObject)retObjectGetFromJsonAsync;
+            return new Task_1(objGetFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFromJsonAsync != null ? retObjectGetFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

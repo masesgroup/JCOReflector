@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.build.utilities.ToolTask;
+import system.Tuple_3;
+import system.Tuple_2;
 import microsoft.build.tasks.xaml.CommandLineToolSwitch;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -54,7 +57,7 @@ import microsoft.build.tasks.xaml.CommandLineToolSwitch;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XamlDataDrivenToolTask extends ToolTask  {
+public class XamlDataDrivenToolTask extends microsoft.build.utilities.ToolTask  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -195,6 +198,60 @@ public class XamlDataDrivenToolTask extends ToolTask  {
         }
     }
 
+    public int ReadSwitchMap2(java.lang.String propertyName, Tuple_3[] switchMap, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSwitchMap2 = null;
+        try {
+            retObjectReadSwitchMap2 = classInstance.Invoke("ReadSwitchMap2", propertyName, toObjectFromArray(switchMap), value);
+            return (int)retObjectReadSwitchMap2;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportReadSwitchMap2Error = true;
+            java.lang.String retObjectReadSwitchMap2_ToString = retObjectReadSwitchMap2 == null ? "null" : retObjectReadSwitchMap2.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReadSwitchMap2 != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReadSwitchMap2Class = retObjectReadSwitchMap2.getClass();
+                    // java.lang.reflect.Method retObjectReadSwitchMap2Method = retObjectReadSwitchMap2Class.getMethod("intValue");
+                    // return (int)retObjectReadSwitchMap2Method.invoke(retObjectReadSwitchMap2);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReadSwitchMap2Number = java.text.NumberFormat.getInstance().parse(retObjectReadSwitchMap2_ToString);
+                    return retObjectReadSwitchMap2Number.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReadSwitchMap2Error = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReadSwitchMap2 != null ? retObjectReadSwitchMap2.getClass() : "null", retObjectReadSwitchMap2_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReadSwitchMap2Error) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String CreateSwitchValue(java.lang.String propertyName, java.lang.String baseSwitch, java.lang.String separator, Tuple_2[] arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSwitchValue = null;
+        try {
+            retObjectCreateSwitchValue = classInstance.Invoke("CreateSwitchValue", propertyName, baseSwitch, separator, toObjectFromArray(arguments));
+            return (java.lang.String)retObjectCreateSwitchValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCreateSwitchValue != null ? retObjectCreateSwitchValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddActiveSwitchToolValue(CommandLineToolSwitch switchToAdd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +276,31 @@ public class XamlDataDrivenToolTask extends ToolTask  {
     
     // Properties section
     
+    public Dictionary_2 getActiveToolSwitchesValues() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveToolSwitchesValues = null;
+        try {
+            retObjectActiveToolSwitchesValues = classInstance.Get("ActiveToolSwitchesValues");
+            JCObject val = (JCObject)retObjectActiveToolSwitchesValues;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveToolSwitchesValues != null ? retObjectActiveToolSwitchesValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setActiveToolSwitchesValues(Dictionary_2 ActiveToolSwitchesValues) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ActiveToolSwitchesValues", ActiveToolSwitchesValues == null ? null : ActiveToolSwitchesValues.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getAdditionalOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

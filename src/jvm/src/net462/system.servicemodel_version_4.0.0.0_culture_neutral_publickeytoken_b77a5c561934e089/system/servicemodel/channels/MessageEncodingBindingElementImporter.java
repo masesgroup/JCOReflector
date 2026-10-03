@@ -40,13 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.servicemodel.description.WsdlImporter;
 import system.servicemodel.description.WsdlContractConversionContext;
 import system.servicemodel.description.WsdlEndpointConversionContext;
 import system.servicemodel.description.MetadataImporter;
 import system.servicemodel.description.PolicyConversionContext;
-import system.servicemodel.description.IPolicyImportExtension;
-import system.servicemodel.description.IPolicyImportExtensionImplementation;
 
 
 /**
@@ -61,7 +61,7 @@ import system.servicemodel.description.IPolicyImportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MessageEncodingBindingElementImporter extends NetObject implements IPolicyImportExtension {
+public class MessageEncodingBindingElementImporter extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -168,6 +168,15 @@ public class MessageEncodingBindingElementImporter extends NetObject implements 
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlImportExtension method available in IWsdlImportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection_1 policy) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWsdlImportExtension method available in IWsdlImportExtension to obtain an object with an invocable method

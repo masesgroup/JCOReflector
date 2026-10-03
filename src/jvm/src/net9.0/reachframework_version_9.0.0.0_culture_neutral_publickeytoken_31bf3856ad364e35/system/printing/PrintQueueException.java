@@ -54,7 +54,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PrintQueueException extends PrintSystemException {
+public class PrintQueueException extends system.printing.PrintSystemException {
     /**
      * Fully assembly qualified name: ReachFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

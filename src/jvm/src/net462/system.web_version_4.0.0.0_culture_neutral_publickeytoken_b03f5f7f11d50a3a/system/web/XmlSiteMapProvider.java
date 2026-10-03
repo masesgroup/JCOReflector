@@ -56,7 +56,7 @@ import system.collections.specialized.NameValueCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoCloseable {
+public class XmlSiteMapProvider extends system.web.StaticSiteMapProvider implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

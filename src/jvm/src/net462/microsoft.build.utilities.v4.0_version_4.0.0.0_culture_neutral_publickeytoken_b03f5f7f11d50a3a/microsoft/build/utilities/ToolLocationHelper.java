@@ -38,11 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.Version;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.reflection.ProcessorArchitecture;
 import system.runtime.versioning.FrameworkName;
 import microsoft.build.utilities.TargetDotNetFrameworkVersion;
 import microsoft.build.utilities.VisualStudioVersion;
 import microsoft.build.utilities.DotNetFrameworkArchitecture;
-import system.Version;
 
 
 /**
@@ -156,6 +161,261 @@ public class ToolLocationHelper extends NetObject  {
     
     // Methods section
     
+    public static IDictionary_2 GetPlatformExtensionSDKLocations(java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPlatformExtensionSDKLocations = null;
+        try {
+            retObjectGetPlatformExtensionSDKLocations = classType.Invoke("GetPlatformExtensionSDKLocations", targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance());
+            JCObject objGetPlatformExtensionSDKLocations = (JCObject)retObjectGetPlatformExtensionSDKLocations;
+            return new IDictionary_2Implementation(objGetPlatformExtensionSDKLocations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPlatformExtensionSDKLocations != null ? retObjectGetPlatformExtensionSDKLocations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 GetPlatformExtensionSDKLocations(java.lang.String[] diskRoots, java.lang.String registryRoot, java.lang.String targetPlatformIdentifier, Version targetPlatformVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPlatformExtensionSDKLocations = null;
+        try {
+            retObjectGetPlatformExtensionSDKLocations = classType.Invoke("GetPlatformExtensionSDKLocations", diskRoots, registryRoot, targetPlatformIdentifier, targetPlatformVersion == null ? null : targetPlatformVersion.getJCOInstance());
+            JCObject objGetPlatformExtensionSDKLocations = (JCObject)retObjectGetPlatformExtensionSDKLocations;
+            return new IDictionary_2Implementation(objGetPlatformExtensionSDKLocations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPlatformExtensionSDKLocations != null ? retObjectGetPlatformExtensionSDKLocations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 GetPlatformExtensionSDKLocations(JCORefOut dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, Version dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPlatformExtensionSDKLocations = null;
+        try {
+            retObjectGetPlatformExtensionSDKLocations = classType.Invoke("GetPlatformExtensionSDKLocations", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objGetPlatformExtensionSDKLocations = (JCObject)retObjectGetPlatformExtensionSDKLocations;
+            return new IDictionary_2Implementation(objGetPlatformExtensionSDKLocations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPlatformExtensionSDKLocations != null ? retObjectGetPlatformExtensionSDKLocations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetAssemblyFoldersExInfo(java.lang.String registryRoot, java.lang.String targetFrameworkVersion, java.lang.String registryKeySuffix, java.lang.String osVersion, java.lang.String platform, ProcessorArchitecture targetProcessorArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAssemblyFoldersExInfo = null;
+        try {
+            retObjectGetAssemblyFoldersExInfo = classType.Invoke("GetAssemblyFoldersExInfo", registryRoot, targetFrameworkVersion, registryKeySuffix, osVersion, platform, targetProcessorArchitecture == null ? null : targetProcessorArchitecture.getJCOInstance());
+            JCObject objGetAssemblyFoldersExInfo = (JCObject)retObjectGetAssemblyFoldersExInfo;
+            return new IList_1Implementation(objGetAssemblyFoldersExInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssemblyFoldersExInfo != null ? retObjectGetAssemblyFoldersExInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetTargetPlatformSdks() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTargetPlatformSdks = null;
+        try {
+            retObjectGetTargetPlatformSdks = classType.Invoke("GetTargetPlatformSdks");
+            JCObject objGetTargetPlatformSdks = (JCObject)retObjectGetTargetPlatformSdks;
+            return new IList_1Implementation(objGetTargetPlatformSdks);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTargetPlatformSdks != null ? retObjectGetTargetPlatformSdks.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetTargetPlatformSdks(java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTargetPlatformSdks = null;
+        try {
+            retObjectGetTargetPlatformSdks = classType.Invoke("GetTargetPlatformSdks", diskRoots, registryRoot);
+            JCObject objGetTargetPlatformSdks = (JCObject)retObjectGetTargetPlatformSdks;
+            return new IList_1Implementation(objGetTargetPlatformSdks);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTargetPlatformSdks != null ? retObjectGetTargetPlatformSdks.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetTargetPlatformSdks(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTargetPlatformSdks = null;
+        try {
+            retObjectGetTargetPlatformSdks = classType.Invoke("GetTargetPlatformSdks", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGetTargetPlatformSdks = (JCObject)retObjectGetTargetPlatformSdks;
+            return new IList_1Implementation(objGetTargetPlatformSdks);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTargetPlatformSdks != null ? retObjectGetTargetPlatformSdks.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetPathToReferenceAssemblies(FrameworkName frameworkName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPathToReferenceAssemblies = null;
+        try {
+            retObjectGetPathToReferenceAssemblies = classType.Invoke("GetPathToReferenceAssemblies", frameworkName == null ? null : frameworkName.getJCOInstance());
+            JCObject objGetPathToReferenceAssemblies = (JCObject)retObjectGetPathToReferenceAssemblies;
+            return new IList_1Implementation(objGetPathToReferenceAssemblies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPathToReferenceAssemblies != null ? retObjectGetPathToReferenceAssemblies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetPathToReferenceAssemblies(java.lang.String targetFrameworkRootPath, FrameworkName frameworkName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPathToReferenceAssemblies = null;
+        try {
+            retObjectGetPathToReferenceAssemblies = classType.Invoke("GetPathToReferenceAssemblies", targetFrameworkRootPath, frameworkName == null ? null : frameworkName.getJCOInstance());
+            JCObject objGetPathToReferenceAssemblies = (JCObject)retObjectGetPathToReferenceAssemblies;
+            return new IList_1Implementation(objGetPathToReferenceAssemblies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPathToReferenceAssemblies != null ? retObjectGetPathToReferenceAssemblies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetPathToReferenceAssemblies(java.lang.String targetFrameworkIdentifier, java.lang.String targetFrameworkVersion, java.lang.String targetFrameworkProfile) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPathToReferenceAssemblies = null;
+        try {
+            retObjectGetPathToReferenceAssemblies = classType.Invoke("GetPathToReferenceAssemblies", targetFrameworkIdentifier, targetFrameworkVersion, targetFrameworkProfile);
+            JCObject objGetPathToReferenceAssemblies = (JCObject)retObjectGetPathToReferenceAssemblies;
+            return new IList_1Implementation(objGetPathToReferenceAssemblies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPathToReferenceAssemblies != null ? retObjectGetPathToReferenceAssemblies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetSDKDesignTimeFolders(java.lang.String sdkRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.PathTooLongException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSDKDesignTimeFolders = null;
+        try {
+            retObjectGetSDKDesignTimeFolders = classType.Invoke("GetSDKDesignTimeFolders", sdkRoot);
+            JCObject objGetSDKDesignTimeFolders = (JCObject)retObjectGetSDKDesignTimeFolders;
+            return new IList_1Implementation(objGetSDKDesignTimeFolders);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSDKDesignTimeFolders != null ? retObjectGetSDKDesignTimeFolders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetSDKDesignTimeFolders(java.lang.String sdkRoot, java.lang.String targetConfiguration, java.lang.String targetArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.PathTooLongException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSDKDesignTimeFolders = null;
+        try {
+            retObjectGetSDKDesignTimeFolders = classType.Invoke("GetSDKDesignTimeFolders", sdkRoot, targetConfiguration, targetArchitecture);
+            JCObject objGetSDKDesignTimeFolders = (JCObject)retObjectGetSDKDesignTimeFolders;
+            return new IList_1Implementation(objGetSDKDesignTimeFolders);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSDKDesignTimeFolders != null ? retObjectGetSDKDesignTimeFolders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetSDKRedistFolders(java.lang.String sdkRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.io.PathTooLongException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSDKRedistFolders = null;
+        try {
+            retObjectGetSDKRedistFolders = classType.Invoke("GetSDKRedistFolders", sdkRoot);
+            JCObject objGetSDKRedistFolders = (JCObject)retObjectGetSDKRedistFolders;
+            return new IList_1Implementation(objGetSDKRedistFolders);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSDKRedistFolders != null ? retObjectGetSDKRedistFolders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetSDKRedistFolders(java.lang.String sdkRoot, java.lang.String targetConfiguration, java.lang.String targetArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.PathTooLongException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSDKRedistFolders = null;
+        try {
+            retObjectGetSDKRedistFolders = classType.Invoke("GetSDKRedistFolders", sdkRoot, targetConfiguration, targetArchitecture);
+            JCObject objGetSDKRedistFolders = (JCObject)retObjectGetSDKRedistFolders;
+            return new IList_1Implementation(objGetSDKRedistFolders);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSDKRedistFolders != null ? retObjectGetSDKRedistFolders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetSDKReferenceFolders(java.lang.String sdkRoot) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSDKReferenceFolders = null;
+        try {
+            retObjectGetSDKReferenceFolders = classType.Invoke("GetSDKReferenceFolders", sdkRoot);
+            JCObject objGetSDKReferenceFolders = (JCObject)retObjectGetSDKReferenceFolders;
+            return new IList_1Implementation(objGetSDKReferenceFolders);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSDKReferenceFolders != null ? retObjectGetSDKReferenceFolders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetSDKReferenceFolders(java.lang.String sdkRoot, java.lang.String targetConfiguration, java.lang.String targetArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSDKReferenceFolders = null;
+        try {
+            retObjectGetSDKReferenceFolders = classType.Invoke("GetSDKReferenceFolders", sdkRoot, targetConfiguration, targetArchitecture);
+            JCObject objGetSDKReferenceFolders = (JCObject)retObjectGetSDKReferenceFolders;
+            return new IList_1Implementation(objGetSDKReferenceFolders);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSDKReferenceFolders != null ? retObjectGetSDKReferenceFolders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetSupportedTargetFrameworks() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.NotImplementedException, system.FormatException, system.OverflowException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSupportedTargetFrameworks = null;
+        try {
+            retObjectGetSupportedTargetFrameworks = classType.Invoke("GetSupportedTargetFrameworks");
+            JCObject objGetSupportedTargetFrameworks = (JCObject)retObjectGetSupportedTargetFrameworks;
+            return new IList_1Implementation(objGetSupportedTargetFrameworks);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSupportedTargetFrameworks != null ? retObjectGetSupportedTargetFrameworks.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static FrameworkName HighestVersionOfTargetFrameworkIdentifier(java.lang.String targetFrameworkRootDirectory, java.lang.String frameworkIdentifier) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

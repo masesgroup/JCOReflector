@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.xml.XmlReader;
 import system.xml.XmlNode;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.xml.XmlNamespaceScope;
 import system.xml.ReadState;
 import system.xml.schema.IXmlSchemaInfo;
 import system.xml.schema.IXmlSchemaInfoImplementation;
@@ -60,7 +63,7 @@ import system.xml.XmlSpace;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlNodeReader extends XmlReader  {
+public class XmlNodeReader extends system.xml.XmlReader  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -697,6 +700,15 @@ public class XmlNodeReader extends XmlReader  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlNamespaceResolver method available in IXmlNamespaceResolver to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IDictionary_2 GetNamespacesInScope(XmlNamespaceScope scope) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlNamespaceResolver to obtain the full interface.");
     }
 
     /**

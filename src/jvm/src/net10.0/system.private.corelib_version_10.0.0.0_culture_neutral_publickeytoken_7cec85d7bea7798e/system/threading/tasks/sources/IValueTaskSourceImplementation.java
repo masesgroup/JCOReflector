@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.tasks.sources.ValueTaskSourceStatus;
+import system.Action_1;
+import system.threading.tasks.sources.ValueTaskSourceOnCompletedFlags;
 
 
 /**
@@ -161,6 +163,16 @@ public class IValueTaskSourceImplementation extends NetObject implements IValueT
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetResult", token);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void OnCompleted(Action_1 continuation, NetObject state, short token, ValueTaskSourceOnCompletedFlags flags) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnCompleted", continuation, state == null ? null : state.getJCOInstance(), token, flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

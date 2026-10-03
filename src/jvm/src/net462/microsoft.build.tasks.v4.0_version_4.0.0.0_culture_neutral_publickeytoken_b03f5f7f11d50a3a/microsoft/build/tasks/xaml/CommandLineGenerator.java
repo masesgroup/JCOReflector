@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.build.framework.xamltypes.Rule;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -147,6 +148,16 @@ public class CommandLineGenerator extends NetObject  {
     // Constructors section
     
     public CommandLineGenerator() throws Throwable {
+    }
+
+    public CommandLineGenerator(Rule rule, Dictionary_2 parameterValues) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.FormatException, system.OverflowException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(rule == null ? null : rule.getJCOInstance(), parameterValues == null ? null : parameterValues.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

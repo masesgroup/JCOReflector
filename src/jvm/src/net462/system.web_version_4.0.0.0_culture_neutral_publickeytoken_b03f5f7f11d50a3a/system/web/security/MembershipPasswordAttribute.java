@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.dataannotations.ValidationAttribute;
+import system.Nullable_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.componentmodel.dataannotations.ValidationAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MembershipPasswordAttribute extends ValidationAttribute  {
+public class MembershipPasswordAttribute extends system.componentmodel.dataannotations.ValidationAttribute  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -273,6 +274,31 @@ public class MembershipPasswordAttribute extends ValidationAttribute  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinRequiredPasswordLength", MinRequiredPasswordLength);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getPasswordStrengthRegexTimeout() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordStrengthRegexTimeout = null;
+        try {
+            retObjectPasswordStrengthRegexTimeout = classInstance.Get("PasswordStrengthRegexTimeout");
+            JCObject val = (JCObject)retObjectPasswordStrengthRegexTimeout;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPasswordStrengthRegexTimeout != null ? retObjectPasswordStrengthRegexTimeout.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPasswordStrengthRegexTimeout(Nullable_1 PasswordStrengthRegexTimeout) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PasswordStrengthRegexTimeout", PasswordStrengthRegexTimeout == null ? null : PasswordStrengthRegexTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

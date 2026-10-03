@@ -46,6 +46,8 @@ import system.windows.xps.packaging.XpsImage;
 import system.windows.xps.packaging.XpsResource;
 import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsStructure;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.printing.PrintTicket;
 import system.windows.xps.packaging.XpsThumbnail;
 import system.xml.XmlReader;
@@ -63,7 +65,7 @@ import system.xml.XmlReader;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IXpsFixedPageReader extends IJCOBridgeReflected, IStoryFragmentProvider {
+public interface IXpsFixedPageReader extends IJCOBridgeReflected, system.windows.xps.packaging.IStoryFragmentProvider {
     /**
      * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -143,6 +145,14 @@ public interface IXpsFixedPageReader extends IJCOBridgeReflected, IStoryFragment
     // Properties section
     
     public int getPageNumber() throws Throwable;
+
+    public ICollection_1 getColorContexts() throws Throwable;
+
+    public ICollection_1 getFonts() throws Throwable;
+
+    public ICollection_1 getImages() throws Throwable;
+
+    public ICollection_1 getResourceDictionaries() throws Throwable;
 
     public PrintTicket getPrintTicket() throws Throwable;
 

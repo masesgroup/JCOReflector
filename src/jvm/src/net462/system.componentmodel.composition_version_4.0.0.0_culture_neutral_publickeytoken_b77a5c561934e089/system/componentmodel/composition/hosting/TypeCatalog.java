@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.primitives.ICompositionElement;
+import system.componentmodel.composition.primitives.ICompositionElementImplementation;
+import system.reflection.ReflectionContext;
 
 
 /**
@@ -53,7 +58,7 @@ import system.componentmodel.composition.primitives.ComposablePartCatalog;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TypeCatalog extends ComposablePartCatalog  {
+public class TypeCatalog extends system.componentmodel.composition.primitives.ComposablePartCatalog  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -147,6 +152,46 @@ public class TypeCatalog extends ComposablePartCatalog  {
     // Constructors section
     
     public TypeCatalog() throws Throwable {
+    }
+
+    public TypeCatalog(IEnumerable_1 types) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(types == null ? null : types.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeCatalog(IEnumerable_1 types, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(types == null ? null : types.getJCOInstance(), definitionOrigin == null ? null : definitionOrigin.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeCatalog(IEnumerable_1 types, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(types == null ? null : types.getJCOInstance(), reflectionContext == null ? null : reflectionContext.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeCatalog(IEnumerable_1 types, ReflectionContext reflectionContext, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(types == null ? null : types.getJCOInstance(), reflectionContext == null ? null : reflectionContext.getJCOInstance(), definitionOrigin == null ? null : definitionOrigin.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
     public TypeCatalog(NetType... types) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException {

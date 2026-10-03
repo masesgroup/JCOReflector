@@ -47,6 +47,7 @@ import system.xml.linq.SaveOptions;
 import system.threading.CancellationToken;
 import system.io.TextWriter;
 import system.xml.XmlWriter;
+import system.threading.tasks.Task_1;
 import system.xml.linq.LoadOptions;
 import system.io.TextReader;
 import system.xml.XmlReader;
@@ -67,7 +68,7 @@ import system.xml.XmlNodeType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XDocument extends XContainer  {
+public class XDocument extends system.xml.linq.XContainer  {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -259,6 +260,51 @@ public class XDocument extends XContainer  {
             return new Task(objWriteToAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteToAsync != null ? retObjectWriteToAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 LoadAsync(Stream stream, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadAsync = null;
+        try {
+            retObjectLoadAsync = classType.Invoke("LoadAsync", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLoadAsync = (JCObject)retObjectLoadAsync;
+            return new Task_1(objLoadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAsync != null ? retObjectLoadAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 LoadAsync(TextReader textReader, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadAsync = null;
+        try {
+            retObjectLoadAsync = classType.Invoke("LoadAsync", textReader == null ? null : textReader.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLoadAsync = (JCObject)retObjectLoadAsync;
+            return new Task_1(objLoadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAsync != null ? retObjectLoadAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 LoadAsync(XmlReader reader, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadAsync = null;
+        try {
+            retObjectLoadAsync = classType.Invoke("LoadAsync", reader == null ? null : reader.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLoadAsync = (JCObject)retObjectLoadAsync;
+            return new Task_1(objLoadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAsync != null ? retObjectLoadAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

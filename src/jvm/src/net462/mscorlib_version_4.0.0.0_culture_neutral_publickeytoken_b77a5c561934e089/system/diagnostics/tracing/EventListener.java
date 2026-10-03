@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.diagnostics.tracing.EventSource;
 import system.diagnostics.tracing.EventLevel;
 import system.diagnostics.tracing.EventKeywords;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -237,6 +239,16 @@ public class EventListener extends NetObject implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnableEvents", eventSource == null ? null : eventSource.getJCOInstance(), level == null ? null : level.getJCOInstance(), matchAnyKeyword == null ? null : matchAnyKeyword.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EnableEvents(EventSource eventSource, EventLevel level, EventKeywords matchAnyKeyword, IDictionary_2 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.NullReferenceException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EnableEvents", eventSource == null ? null : eventSource.getJCOInstance(), level == null ? null : level.getJCOInstance(), matchAnyKeyword == null ? null : matchAnyKeyword.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

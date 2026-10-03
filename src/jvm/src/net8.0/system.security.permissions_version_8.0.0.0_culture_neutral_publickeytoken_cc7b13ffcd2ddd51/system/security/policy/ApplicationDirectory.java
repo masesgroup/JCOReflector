@@ -53,7 +53,7 @@ import system.security.policy.EvidenceBase;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ApplicationDirectory extends EvidenceBase  {
+public class ApplicationDirectory extends system.security.policy.EvidenceBase  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

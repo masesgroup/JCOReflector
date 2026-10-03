@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Action_2;
+import system.Func_2;
 
 
 /**
@@ -163,6 +165,54 @@ public class ArgumentAccessor extends NetObject  {
     
     // Properties section
     
+    public Action_2 getSetter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetter = null;
+        try {
+            retObjectSetter = classInstance.Get("Setter");
+            return (Action_2)retObjectSetter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectSetter != null ? retObjectSetter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSetter(Action_2 Setter) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Setter", Setter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getGetter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetter = null;
+        try {
+            retObjectGetter = classInstance.Get("Getter");
+            return (Func_2)retObjectGetter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectGetter != null ? retObjectGetter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setGetter(Func_2 Getter) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Getter", Getter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

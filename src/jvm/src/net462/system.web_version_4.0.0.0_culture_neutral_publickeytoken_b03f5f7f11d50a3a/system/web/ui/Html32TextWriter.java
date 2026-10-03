@@ -55,7 +55,7 @@ import system.web.ui.HtmlTextWriterTag;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Html32TextWriter extends HtmlTextWriter  {
+public class Html32TextWriter extends system.web.ui.HtmlTextWriter  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

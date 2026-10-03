@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.text.Encoding;
+import system.buffers.ReadOnlySequence_1;
+import system.buffers.IBufferWriter_1;
+import system.buffers.IBufferWriter_1Implementation;
 import system.text.Decoder;
 import system.text.Encoder;
 
@@ -154,6 +157,143 @@ public class EncodingExtensions extends NetObject  {
     
     // Methods section
     
+    public static byte[] GetBytes(Encoding encoding, JCORefOut<ReadOnlySequence_1> chars) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBytes = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectGetBytes = classType.Invoke("GetBytes", encoding == null ? null : encoding.getJCOInstance(), chars.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectGetBytes;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetBytes = 0; indexGetBytes < resultingArrayList.size(); indexGetBytes++ ) {
+				resultingArray[indexGetBytes] = (byte)resultingArrayList.get(indexGetBytes);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long GetBytes(Encoding encoding, JCORefOut<ReadOnlySequence_1> chars, IBufferWriter_1 writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBytes = null;
+        try {
+            retObjectGetBytes = classType.Invoke("GetBytes", encoding == null ? null : encoding.getJCOInstance(), chars.getJCRefOut(), writer == null ? null : writer.getJCOInstance());
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportGetBytesError = true;
+            java.lang.String retObjectGetBytes_ToString = retObjectGetBytes == null ? "null" : retObjectGetBytes.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetBytes != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetBytesClass = retObjectGetBytes.getClass();
+                    // java.lang.reflect.Method retObjectGetBytesMethod = retObjectGetBytesClass.getMethod("longValue");
+                    // return (long)retObjectGetBytesMethod.invoke(retObjectGetBytes);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetBytesNumber = java.text.NumberFormat.getInstance().parse(retObjectGetBytes_ToString);
+                    return retObjectGetBytesNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetBytesError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null", retObjectGetBytes_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetBytesError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long GetChars(Encoding encoding, JCORefOut<ReadOnlySequence_1> bytes, IBufferWriter_1 writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetChars = null;
+        try {
+            retObjectGetChars = classType.Invoke("GetChars", encoding == null ? null : encoding.getJCOInstance(), bytes.getJCRefOut(), writer == null ? null : writer.getJCOInstance());
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportGetCharsError = true;
+            java.lang.String retObjectGetChars_ToString = retObjectGetChars == null ? "null" : retObjectGetChars.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectGetChars != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectGetCharsClass = retObjectGetChars.getClass();
+                    // java.lang.reflect.Method retObjectGetCharsMethod = retObjectGetCharsClass.getMethod("longValue");
+                    // return (long)retObjectGetCharsMethod.invoke(retObjectGetChars);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectGetCharsNumber = java.text.NumberFormat.getInstance().parse(retObjectGetChars_ToString);
+                    return retObjectGetCharsNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportGetCharsError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectGetChars != null ? retObjectGetChars.getClass() : "null", retObjectGetChars_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportGetCharsError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetString(Encoding encoding, JCORefOut<ReadOnlySequence_1> bytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetString = null;
+        try {
+            retObjectGetString = classType.Invoke("GetString", encoding == null ? null : encoding.getJCOInstance(), bytes.getJCRefOut());
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Convert(Decoder decoder, JCORefOut<ReadOnlySequence_1> bytes, IBufferWriter_1 writer, boolean flush, JCORefOut<java.util.concurrent.atomic.AtomicLong> charsUsed, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> completed) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Convert", decoder == null ? null : decoder.getJCOInstance(), bytes.getJCRefOut(), writer == null ? null : writer.getJCOInstance(), flush, charsUsed.getJCRefOut(), completed.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Convert(Encoder encoder, JCORefOut<ReadOnlySequence_1> chars, IBufferWriter_1 writer, boolean flush, JCORefOut<java.util.concurrent.atomic.AtomicLong> bytesUsed, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> completed) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Convert", encoder == null ? null : encoder.getJCOInstance(), chars.getJCRefOut(), writer == null ? null : writer.getJCOInstance(), flush, bytesUsed.getJCRefOut(), completed.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

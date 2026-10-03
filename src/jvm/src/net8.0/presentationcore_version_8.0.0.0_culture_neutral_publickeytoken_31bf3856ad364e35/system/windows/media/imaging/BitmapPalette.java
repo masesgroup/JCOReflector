@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.threading.DispatcherObject;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.windows.media.imaging.BitmapSource;
 
 
@@ -54,7 +56,7 @@ import system.windows.media.imaging.BitmapSource;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BitmapPalette extends DispatcherObject  {
+public class BitmapPalette extends system.windows.threading.DispatcherObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -150,6 +152,16 @@ public class BitmapPalette extends DispatcherObject  {
     public BitmapPalette() throws Throwable {
     }
 
+    public BitmapPalette(IList_1 colors) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(colors == null ? null : colors.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BitmapPalette(BitmapSource bitmapSource, int maxColorCount) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -169,6 +181,21 @@ public class BitmapPalette extends DispatcherObject  {
     
     // Properties section
     
+    public IList_1 getColors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColors = null;
+        try {
+            retObjectColors = classInstance.Get("Colors");
+            JCObject val = (JCObject)retObjectColors;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColors != null ? retObjectColors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

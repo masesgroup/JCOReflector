@@ -38,8 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.Location_1;
+import system.activities.LocationReference;
 import system.activities.Argument;
 import system.activities.RuntimeArgument;
+import system.activities.InArgument_1;
+import system.activities.InOutArgument_1;
+import system.activities.OutArgument_1;
 import system.activities.WorkflowDataContext;
 import system.Guid;
 
@@ -157,6 +162,21 @@ public class ActivityContext extends NetObject  {
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> Location_1 GetLocation(LocationReference locationReference) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocation = null;
+        try {
+            retObjectGetLocation = classInstance.Invoke("GetLocation", locationReference == null ? null : locationReference.getJCOInstance());
+            JCObject objGetLocation = (JCObject)retObjectGetLocation;
+            return new Location_1(objGetLocation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocation != null ? retObjectGetLocation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetValue(Argument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +212,46 @@ public class ActivityContext extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", argument == null ? null : argument.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void SetValue(InArgument_1 argument, T value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetValue", argument == null ? null : argument.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void SetValue(InOutArgument_1 argument, T value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetValue", argument == null ? null : argument.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void SetValue(LocationReference locationReference, T value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetValue", locationReference == null ? null : locationReference.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void SetValue(OutArgument_1 argument, T value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetValue", argument == null ? null : argument.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

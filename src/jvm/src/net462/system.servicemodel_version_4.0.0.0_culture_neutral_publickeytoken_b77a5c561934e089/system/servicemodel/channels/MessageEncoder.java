@@ -38,9 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ArraySegment_1;
+import system.servicemodel.channels.Message;
+import system.servicemodel.channels.BufferManager;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
-import system.servicemodel.channels.Message;
 import system.io.Stream;
 import system.AsyncCallback;
 import system.servicemodel.channels.MessageVersion;
@@ -171,6 +173,36 @@ public class MessageEncoder extends NetObject  {
         }
     }
 
+    public ArraySegment_1 WriteMessage(Message message, int maxMessageSize, BufferManager bufferManager) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteMessage = null;
+        try {
+            retObjectWriteMessage = classInstance.Invoke("WriteMessage", message == null ? null : message.getJCOInstance(), maxMessageSize, bufferManager == null ? null : bufferManager.getJCOInstance());
+            JCObject objWriteMessage = (JCObject)retObjectWriteMessage;
+            return new ArraySegment_1(objWriteMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteMessage != null ? retObjectWriteMessage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ArraySegment_1 WriteMessage(Message message, int maxMessageSize, BufferManager bufferManager, int messageOffset) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteMessage = null;
+        try {
+            retObjectWriteMessage = classInstance.Invoke("WriteMessage", message == null ? null : message.getJCOInstance(), maxMessageSize, bufferManager == null ? null : bufferManager.getJCOInstance(), messageOffset);
+            JCObject objWriteMessage = (JCObject)retObjectWriteMessage;
+            return new ArraySegment_1(objWriteMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteMessage != null ? retObjectWriteMessage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginWriteMessage(Message message, Stream stream, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +213,36 @@ public class MessageEncoder extends NetObject  {
             return new IAsyncResultImplementation(objBeginWriteMessage);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWriteMessage != null ? retObjectBeginWriteMessage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message ReadMessage(ArraySegment_1 buffer, BufferManager bufferManager) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadMessage = null;
+        try {
+            retObjectReadMessage = classInstance.Invoke("ReadMessage", buffer == null ? null : buffer.getJCOInstance(), bufferManager == null ? null : bufferManager.getJCOInstance());
+            JCObject objReadMessage = (JCObject)retObjectReadMessage;
+            return new Message(objReadMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadMessage != null ? retObjectReadMessage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Message ReadMessage(ArraySegment_1 buffer, BufferManager bufferManager, java.lang.String contentType) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadMessage = null;
+        try {
+            retObjectReadMessage = classInstance.Invoke("ReadMessage", buffer == null ? null : buffer.getJCOInstance(), bufferManager == null ? null : bufferManager.getJCOInstance(), contentType);
+            JCObject objReadMessage = (JCObject)retObjectReadMessage;
+            return new Message(objReadMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadMessage != null ? retObjectReadMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

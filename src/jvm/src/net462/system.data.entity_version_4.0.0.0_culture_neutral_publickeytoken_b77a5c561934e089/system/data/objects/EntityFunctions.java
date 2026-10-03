@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Nullable_1;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -151,6 +154,426 @@ public class EntityFunctions extends NetObject  {
     
     // Methods section
     
+    public static Nullable_1 AddDays(Nullable_1 dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddDays = null;
+        try {
+            retObjectAddDays = classType.Invoke("AddDays", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddDays = (JCObject)retObjectAddDays;
+            return new Nullable_1(objAddDays);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDays != null ? retObjectAddDays.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 AddHours(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddHours = null;
+        try {
+            retObjectAddHours = classType.Invoke("AddHours", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddHours = (JCObject)retObjectAddHours;
+            return new Nullable_1(objAddHours);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddHours != null ? retObjectAddHours.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 AddMicroseconds(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddMicroseconds = null;
+        try {
+            retObjectAddMicroseconds = classType.Invoke("AddMicroseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddMicroseconds = (JCObject)retObjectAddMicroseconds;
+            return new Nullable_1(objAddMicroseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMicroseconds != null ? retObjectAddMicroseconds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 AddMilliseconds(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddMilliseconds = null;
+        try {
+            retObjectAddMilliseconds = classType.Invoke("AddMilliseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddMilliseconds = (JCObject)retObjectAddMilliseconds;
+            return new Nullable_1(objAddMilliseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMilliseconds != null ? retObjectAddMilliseconds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 AddMinutes(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddMinutes = null;
+        try {
+            retObjectAddMinutes = classType.Invoke("AddMinutes", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddMinutes = (JCObject)retObjectAddMinutes;
+            return new Nullable_1(objAddMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMinutes != null ? retObjectAddMinutes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 AddMonths(Nullable_1 dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddMonths = null;
+        try {
+            retObjectAddMonths = classType.Invoke("AddMonths", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddMonths = (JCObject)retObjectAddMonths;
+            return new Nullable_1(objAddMonths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMonths != null ? retObjectAddMonths.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 AddNanoseconds(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddNanoseconds = null;
+        try {
+            retObjectAddNanoseconds = classType.Invoke("AddNanoseconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddNanoseconds = (JCObject)retObjectAddNanoseconds;
+            return new Nullable_1(objAddNanoseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNanoseconds != null ? retObjectAddNanoseconds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 AddSeconds(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddSeconds = null;
+        try {
+            retObjectAddSeconds = classType.Invoke("AddSeconds", timeValue == null ? null : timeValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddSeconds = (JCObject)retObjectAddSeconds;
+            return new Nullable_1(objAddSeconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddSeconds != null ? retObjectAddSeconds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 AddYears(Nullable_1 dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddYears = null;
+        try {
+            retObjectAddYears = classType.Invoke("AddYears", dateValue == null ? null : dateValue.getJCOInstance(), addValue == null ? null : addValue.getJCOInstance());
+            JCObject objAddYears = (JCObject)retObjectAddYears;
+            return new Nullable_1(objAddYears);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddYears != null ? retObjectAddYears.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 CreateDateTime(Nullable_1 year, Nullable_1 month, Nullable_1 day, Nullable_1 hour, Nullable_1 minute, Nullable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDateTime = null;
+        try {
+            retObjectCreateDateTime = classType.Invoke("CreateDateTime", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objCreateDateTime = (JCObject)retObjectCreateDateTime;
+            return new Nullable_1(objCreateDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDateTime != null ? retObjectCreateDateTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 TruncateTime(Nullable_1 dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTruncateTime = null;
+        try {
+            retObjectTruncateTime = classType.Invoke("TruncateTime", dateValue == null ? null : dateValue.getJCOInstance());
+            JCObject objTruncateTime = (JCObject)retObjectTruncateTime;
+            return new Nullable_1(objTruncateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncateTime != null ? retObjectTruncateTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 CreateDateTimeOffset(Nullable_1 year, Nullable_1 month, Nullable_1 day, Nullable_1 hour, Nullable_1 minute, Nullable_1 second, Nullable_1 timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDateTimeOffset = null;
+        try {
+            retObjectCreateDateTimeOffset = classType.Invoke("CreateDateTimeOffset", year == null ? null : year.getJCOInstance(), month == null ? null : month.getJCOInstance(), day == null ? null : day.getJCOInstance(), hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance(), timeZoneOffset == null ? null : timeZoneOffset.getJCOInstance());
+            JCObject objCreateDateTimeOffset = (JCObject)retObjectCreateDateTimeOffset;
+            return new Nullable_1(objCreateDateTimeOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDateTimeOffset != null ? retObjectCreateDateTimeOffset.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 Truncate(Nullable_1 value, Nullable_1 digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTruncate = null;
+        try {
+            retObjectTruncate = classType.Invoke("Truncate", value == null ? null : value.getJCOInstance(), digits == null ? null : digits.getJCOInstance());
+            JCObject objTruncate = (JCObject)retObjectTruncate;
+            return new Nullable_1(objTruncate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncate != null ? retObjectTruncate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 StandardDeviation(IEnumerable_1 collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStandardDeviation = null;
+        try {
+            retObjectStandardDeviation = classType.Invoke("StandardDeviation", collection == null ? null : collection.getJCOInstance());
+            JCObject objStandardDeviation = (JCObject)retObjectStandardDeviation;
+            return new Nullable_1(objStandardDeviation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandardDeviation != null ? retObjectStandardDeviation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 StandardDeviationP(IEnumerable_1 collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStandardDeviationP = null;
+        try {
+            retObjectStandardDeviationP = classType.Invoke("StandardDeviationP", collection == null ? null : collection.getJCOInstance());
+            JCObject objStandardDeviationP = (JCObject)retObjectStandardDeviationP;
+            return new Nullable_1(objStandardDeviationP);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandardDeviationP != null ? retObjectStandardDeviationP.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 Var(IEnumerable_1 collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVar = null;
+        try {
+            retObjectVar = classType.Invoke("Var", collection == null ? null : collection.getJCOInstance());
+            JCObject objVar = (JCObject)retObjectVar;
+            return new Nullable_1(objVar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVar != null ? retObjectVar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 VarP(IEnumerable_1 collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVarP = null;
+        try {
+            retObjectVarP = classType.Invoke("VarP", collection == null ? null : collection.getJCOInstance());
+            JCObject objVarP = (JCObject)retObjectVarP;
+            return new Nullable_1(objVarP);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVarP != null ? retObjectVarP.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffDays(Nullable_1 dateValue1, Nullable_1 dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffDays = null;
+        try {
+            retObjectDiffDays = classType.Invoke("DiffDays", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            JCObject objDiffDays = (JCObject)retObjectDiffDays;
+            return new Nullable_1(objDiffDays);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffDays != null ? retObjectDiffDays.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffHours(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffHours = null;
+        try {
+            retObjectDiffHours = classType.Invoke("DiffHours", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffHours = (JCObject)retObjectDiffHours;
+            return new Nullable_1(objDiffHours);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffHours != null ? retObjectDiffHours.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffMicroseconds(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffMicroseconds = null;
+        try {
+            retObjectDiffMicroseconds = classType.Invoke("DiffMicroseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffMicroseconds = (JCObject)retObjectDiffMicroseconds;
+            return new Nullable_1(objDiffMicroseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffMicroseconds != null ? retObjectDiffMicroseconds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffMilliseconds(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffMilliseconds = null;
+        try {
+            retObjectDiffMilliseconds = classType.Invoke("DiffMilliseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffMilliseconds = (JCObject)retObjectDiffMilliseconds;
+            return new Nullable_1(objDiffMilliseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffMilliseconds != null ? retObjectDiffMilliseconds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffMinutes(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffMinutes = null;
+        try {
+            retObjectDiffMinutes = classType.Invoke("DiffMinutes", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffMinutes = (JCObject)retObjectDiffMinutes;
+            return new Nullable_1(objDiffMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffMinutes != null ? retObjectDiffMinutes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffMonths(Nullable_1 dateValue1, Nullable_1 dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffMonths = null;
+        try {
+            retObjectDiffMonths = classType.Invoke("DiffMonths", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            JCObject objDiffMonths = (JCObject)retObjectDiffMonths;
+            return new Nullable_1(objDiffMonths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffMonths != null ? retObjectDiffMonths.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffNanoseconds(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffNanoseconds = null;
+        try {
+            retObjectDiffNanoseconds = classType.Invoke("DiffNanoseconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffNanoseconds = (JCObject)retObjectDiffNanoseconds;
+            return new Nullable_1(objDiffNanoseconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffNanoseconds != null ? retObjectDiffNanoseconds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffSeconds(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffSeconds = null;
+        try {
+            retObjectDiffSeconds = classType.Invoke("DiffSeconds", timeValue1 == null ? null : timeValue1.getJCOInstance(), timeValue2 == null ? null : timeValue2.getJCOInstance());
+            JCObject objDiffSeconds = (JCObject)retObjectDiffSeconds;
+            return new Nullable_1(objDiffSeconds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffSeconds != null ? retObjectDiffSeconds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 DiffYears(Nullable_1 dateValue1, Nullable_1 dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiffYears = null;
+        try {
+            retObjectDiffYears = classType.Invoke("DiffYears", dateValue1 == null ? null : dateValue1.getJCOInstance(), dateValue2 == null ? null : dateValue2.getJCOInstance());
+            JCObject objDiffYears = (JCObject)retObjectDiffYears;
+            return new Nullable_1(objDiffYears);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiffYears != null ? retObjectDiffYears.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 GetTotalOffsetMinutes(Nullable_1 dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTotalOffsetMinutes = null;
+        try {
+            retObjectGetTotalOffsetMinutes = classType.Invoke("GetTotalOffsetMinutes", dateTimeOffsetArgument == null ? null : dateTimeOffsetArgument.getJCOInstance());
+            JCObject objGetTotalOffsetMinutes = (JCObject)retObjectGetTotalOffsetMinutes;
+            return new Nullable_1(objGetTotalOffsetMinutes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTotalOffsetMinutes != null ? retObjectGetTotalOffsetMinutes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 CreateTime(Nullable_1 hour, Nullable_1 minute, Nullable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTime = null;
+        try {
+            retObjectCreateTime = classType.Invoke("CreateTime", hour == null ? null : hour.getJCOInstance(), minute == null ? null : minute.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objCreateTime = (JCObject)retObjectCreateTime;
+            return new Nullable_1(objCreateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTime != null ? retObjectCreateTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String AsNonUnicode(java.lang.String value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +602,20 @@ public class EntityFunctions extends NetObject  {
         }
     }
 
+    public static java.lang.String Left(java.lang.String stringArgument, Nullable_1 length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeft = null;
+        try {
+            retObjectLeft = classType.Invoke("Left", stringArgument, length == null ? null : length.getJCOInstance());
+            return (java.lang.String)retObjectLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String Reverse(java.lang.String stringArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -188,6 +625,20 @@ public class EntityFunctions extends NetObject  {
             return (java.lang.String)retObjectReverse;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReverse != null ? retObjectReverse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String Right(java.lang.String stringArgument, Nullable_1 length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRight = null;
+        try {
+            retObjectRight = classType.Invoke("Right", stringArgument, length == null ? null : length.getJCOInstance());
+            return (java.lang.String)retObjectRight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,15 +40,17 @@ import java.util.ArrayList;
 // Import section
 import system.Uri;
 import system.windows.media.StyleSimulations;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.io.Stream;
 import system.windows.media.Geometry;
 import system.UInt16;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.windows.FontStretch;
 import system.windows.FontStyle;
 import system.windows.FontWeight;
 import system.windows.media.FontEmbeddingRight;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -63,7 +65,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GlyphTypeface extends NetObject implements ISupportInitialize {
+public class GlyphTypeface extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -190,6 +192,29 @@ public class GlyphTypeface extends NetObject implements ISupportInitialize {
     
     // Methods section
     
+    public byte[] ComputeSubset(ICollection_1 glyphs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotSupportedException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.IOException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.FormatException, system.OverflowException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComputeSubset = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectComputeSubset = classInstance.Invoke("ComputeSubset", glyphs == null ? null : glyphs.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectComputeSubset;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexComputeSubset = 0; indexComputeSubset < resultingArrayList.size(); indexComputeSubset++ ) {
+				resultingArray[indexComputeSubset] = (byte)resultingArrayList.get(indexComputeSubset);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectComputeSubset != null ? retObjectComputeSubset.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Stream GetFontStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException, system.NotSupportedException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.IOException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException, system.net.WebException, system.componentmodel.Win32Exception, system.net.CookieException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -651,6 +676,336 @@ public class GlyphTypeface extends NetObject implements ISupportInitialize {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getCopyrights() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyrights = null;
+        try {
+            retObjectCopyrights = classInstance.Get("Copyrights");
+            JCObject val = (JCObject)retObjectCopyrights;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyrights != null ? retObjectCopyrights.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getDescriptions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescriptions = null;
+        try {
+            retObjectDescriptions = classInstance.Get("Descriptions");
+            JCObject val = (JCObject)retObjectDescriptions;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescriptions != null ? retObjectDescriptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getDesignerNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerNames = null;
+        try {
+            retObjectDesignerNames = classInstance.Get("DesignerNames");
+            JCObject val = (JCObject)retObjectDesignerNames;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerNames != null ? retObjectDesignerNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getDesignerUrls() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignerUrls = null;
+        try {
+            retObjectDesignerUrls = classInstance.Get("DesignerUrls");
+            JCObject val = (JCObject)retObjectDesignerUrls;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerUrls != null ? retObjectDesignerUrls.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getFaceNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaceNames = null;
+        try {
+            retObjectFaceNames = classInstance.Get("FaceNames");
+            JCObject val = (JCObject)retObjectFaceNames;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaceNames != null ? retObjectFaceNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getFamilyNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFamilyNames = null;
+        try {
+            retObjectFamilyNames = classInstance.Get("FamilyNames");
+            JCObject val = (JCObject)retObjectFamilyNames;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFamilyNames != null ? retObjectFamilyNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getLicenseDescriptions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLicenseDescriptions = null;
+        try {
+            retObjectLicenseDescriptions = classInstance.Get("LicenseDescriptions");
+            JCObject val = (JCObject)retObjectLicenseDescriptions;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLicenseDescriptions != null ? retObjectLicenseDescriptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getManufacturerNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManufacturerNames = null;
+        try {
+            retObjectManufacturerNames = classInstance.Get("ManufacturerNames");
+            JCObject val = (JCObject)retObjectManufacturerNames;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManufacturerNames != null ? retObjectManufacturerNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getSampleTexts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSampleTexts = null;
+        try {
+            retObjectSampleTexts = classInstance.Get("SampleTexts");
+            JCObject val = (JCObject)retObjectSampleTexts;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSampleTexts != null ? retObjectSampleTexts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getTrademarks() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrademarks = null;
+        try {
+            retObjectTrademarks = classInstance.Get("Trademarks");
+            JCObject val = (JCObject)retObjectTrademarks;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrademarks != null ? retObjectTrademarks.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getVendorUrls() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVendorUrls = null;
+        try {
+            retObjectVendorUrls = classInstance.Get("VendorUrls");
+            JCObject val = (JCObject)retObjectVendorUrls;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVendorUrls != null ? retObjectVendorUrls.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getVersionStrings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersionStrings = null;
+        try {
+            retObjectVersionStrings = classInstance.Get("VersionStrings");
+            JCObject val = (JCObject)retObjectVersionStrings;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersionStrings != null ? retObjectVersionStrings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getWin32FaceNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWin32FaceNames = null;
+        try {
+            retObjectWin32FaceNames = classInstance.Get("Win32FaceNames");
+            JCObject val = (JCObject)retObjectWin32FaceNames;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWin32FaceNames != null ? retObjectWin32FaceNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getWin32FamilyNames() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWin32FamilyNames = null;
+        try {
+            retObjectWin32FamilyNames = classInstance.Get("Win32FamilyNames");
+            JCObject val = (JCObject)retObjectWin32FamilyNames;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWin32FamilyNames != null ? retObjectWin32FamilyNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getCharacterToGlyphMap() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharacterToGlyphMap = null;
+        try {
+            retObjectCharacterToGlyphMap = classInstance.Get("CharacterToGlyphMap");
+            JCObject val = (JCObject)retObjectCharacterToGlyphMap;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharacterToGlyphMap != null ? retObjectCharacterToGlyphMap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getAdvanceHeights() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdvanceHeights = null;
+        try {
+            retObjectAdvanceHeights = classInstance.Get("AdvanceHeights");
+            JCObject val = (JCObject)retObjectAdvanceHeights;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdvanceHeights != null ? retObjectAdvanceHeights.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getAdvanceWidths() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdvanceWidths = null;
+        try {
+            retObjectAdvanceWidths = classInstance.Get("AdvanceWidths");
+            JCObject val = (JCObject)retObjectAdvanceWidths;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdvanceWidths != null ? retObjectAdvanceWidths.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getBottomSideBearings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottomSideBearings = null;
+        try {
+            retObjectBottomSideBearings = classInstance.Get("BottomSideBearings");
+            JCObject val = (JCObject)retObjectBottomSideBearings;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBottomSideBearings != null ? retObjectBottomSideBearings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getDistancesFromHorizontalBaselineToBlackBoxBottom() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDistancesFromHorizontalBaselineToBlackBoxBottom = null;
+        try {
+            retObjectDistancesFromHorizontalBaselineToBlackBoxBottom = classInstance.Get("DistancesFromHorizontalBaselineToBlackBoxBottom");
+            JCObject val = (JCObject)retObjectDistancesFromHorizontalBaselineToBlackBoxBottom;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistancesFromHorizontalBaselineToBlackBoxBottom != null ? retObjectDistancesFromHorizontalBaselineToBlackBoxBottom.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getLeftSideBearings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeftSideBearings = null;
+        try {
+            retObjectLeftSideBearings = classInstance.Get("LeftSideBearings");
+            JCObject val = (JCObject)retObjectLeftSideBearings;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftSideBearings != null ? retObjectLeftSideBearings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getRightSideBearings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightSideBearings = null;
+        try {
+            retObjectRightSideBearings = classInstance.Get("RightSideBearings");
+            JCObject val = (JCObject)retObjectRightSideBearings;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightSideBearings != null ? retObjectRightSideBearings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getTopSideBearings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopSideBearings = null;
+        try {
+            retObjectTopSideBearings = classInstance.Get("TopSideBearings");
+            JCObject val = (JCObject)retObjectTopSideBearings;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopSideBearings != null ? retObjectTopSideBearings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.DateTime;
 import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.WorkflowChanges;
@@ -171,6 +172,21 @@ public class WorkflowInstance extends NetObject  {
             return (boolean)retObjectTryUnload;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryUnload != null ? retObjectTryUnload.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetWorkflowQueueData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWorkflowQueueData = null;
+        try {
+            retObjectGetWorkflowQueueData = classInstance.Invoke("GetWorkflowQueueData");
+            JCObject objGetWorkflowQueueData = (JCObject)retObjectGetWorkflowQueueData;
+            return new ReadOnlyCollection_1(objGetWorkflowQueueData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWorkflowQueueData != null ? retObjectGetWorkflowQueueData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

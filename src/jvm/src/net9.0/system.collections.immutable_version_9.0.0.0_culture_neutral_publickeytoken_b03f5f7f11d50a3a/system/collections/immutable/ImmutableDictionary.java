@@ -38,6 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.IImmutableDictionary_2;
+import system.collections.immutable.IImmutableDictionary_2Implementation;
+import system.collections.immutable.ImmutableDictionary_2;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.Func_2;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
 
 
 /**
@@ -151,6 +159,230 @@ public class ImmutableDictionary extends NetObject  {
     
     // Methods section
     
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean Contains(IImmutableDictionary_2 map, TKey key, TValue value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContains = null;
+        try {
+            retObjectContains = classType.Invoke("Contains", map == null ? null : map.getJCOInstance(), key == null ? null : ((IJCOBridgeReflected)key).getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ImmutableDictionary_2 ToImmutableDictionary(IEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableDictionary = null;
+        try {
+            retObjectToImmutableDictionary = classType.Invoke("ToImmutableDictionary", source == null ? null : source.getJCOInstance(), keySelector, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objToImmutableDictionary = (JCObject)retObjectToImmutableDictionary;
+            return new ImmutableDictionary_2(objToImmutableDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableDictionary != null ? retObjectToImmutableDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ImmutableDictionary_2 ToImmutableDictionary(IEnumerable_1 source, Func_2 keySelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableDictionary = null;
+        try {
+            retObjectToImmutableDictionary = classType.Invoke("ToImmutableDictionary", source == null ? null : source.getJCOInstance(), keySelector);
+            JCObject objToImmutableDictionary = (JCObject)retObjectToImmutableDictionary;
+            return new ImmutableDictionary_2(objToImmutableDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableDictionary != null ? retObjectToImmutableDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 Create() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableDictionary_2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 Create(IEqualityComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", keyComparer == null ? null : keyComparer.getJCOInstance(), valueComparer == null ? null : valueComparer.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableDictionary_2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 Create(IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableDictionary_2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 CreateRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", items == null ? null : items.getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableDictionary_2(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 CreateRange(IEqualityComparer_1 keyComparer, IEnumerable_1 items) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", keyComparer == null ? null : keyComparer.getJCOInstance(), items == null ? null : items.getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableDictionary_2(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 CreateRange(IEqualityComparer_1 keyComparer, IEqualityComparer_1 valueComparer, IEnumerable_1 items) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", keyComparer == null ? null : keyComparer.getJCOInstance(), valueComparer == null ? null : valueComparer.getJCOInstance(), items == null ? null : items.getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableDictionary_2(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 ToImmutableDictionary(IEnumerable_1 source, IEqualityComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableDictionary = null;
+        try {
+            retObjectToImmutableDictionary = classType.Invoke("ToImmutableDictionary", source == null ? null : source.getJCOInstance(), keyComparer == null ? null : keyComparer.getJCOInstance(), valueComparer == null ? null : valueComparer.getJCOInstance());
+            JCObject objToImmutableDictionary = (JCObject)retObjectToImmutableDictionary;
+            return new ImmutableDictionary_2(objToImmutableDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableDictionary != null ? retObjectToImmutableDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 ToImmutableDictionary(IEnumerable_1 source, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableDictionary = null;
+        try {
+            retObjectToImmutableDictionary = classType.Invoke("ToImmutableDictionary", source == null ? null : source.getJCOInstance(), keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objToImmutableDictionary = (JCObject)retObjectToImmutableDictionary;
+            return new ImmutableDictionary_2(objToImmutableDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableDictionary != null ? retObjectToImmutableDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 ToImmutableDictionary(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableDictionary = null;
+        try {
+            retObjectToImmutableDictionary = classType.Invoke("ToImmutableDictionary", source == null ? null : source.getJCOInstance());
+            JCObject objToImmutableDictionary = (JCObject)retObjectToImmutableDictionary;
+            return new ImmutableDictionary_2(objToImmutableDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableDictionary != null ? retObjectToImmutableDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 ToImmutableDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableDictionary = null;
+        try {
+            retObjectToImmutableDictionary = classType.Invoke("ToImmutableDictionary", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, keyComparer == null ? null : keyComparer.getJCOInstance(), valueComparer == null ? null : valueComparer.getJCOInstance());
+            JCObject objToImmutableDictionary = (JCObject)retObjectToImmutableDictionary;
+            return new ImmutableDictionary_2(objToImmutableDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableDictionary != null ? retObjectToImmutableDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 ToImmutableDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableDictionary = null;
+        try {
+            retObjectToImmutableDictionary = classType.Invoke("ToImmutableDictionary", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objToImmutableDictionary = (JCObject)retObjectToImmutableDictionary;
+            return new ImmutableDictionary_2(objToImmutableDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableDictionary != null ? retObjectToImmutableDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableDictionary_2 ToImmutableDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableDictionary = null;
+        try {
+            retObjectToImmutableDictionary = classType.Invoke("ToImmutableDictionary", source == null ? null : source.getJCOInstance(), keySelector, elementSelector);
+            JCObject objToImmutableDictionary = (JCObject)retObjectToImmutableDictionary;
+            return new ImmutableDictionary_2(objToImmutableDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableDictionary != null ? retObjectToImmutableDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

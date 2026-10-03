@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.CancelEventArgs;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.componentmodel.CancelEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StartupEventArgs extends CancelEventArgs  {
+public class StartupEventArgs extends system.componentmodel.CancelEventArgs  {
     /**
      * Fully assembly qualified name: Microsoft.VisualBasic.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -149,6 +150,16 @@ public class StartupEventArgs extends CancelEventArgs  {
     public StartupEventArgs() throws Throwable {
     }
 
+    public StartupEventArgs(ReadOnlyCollection_1 args) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(args == null ? null : args.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +169,21 @@ public class StartupEventArgs extends CancelEventArgs  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getCommandLine() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLine = null;
+        try {
+            retObjectCommandLine = classInstance.Get("CommandLine");
+            JCObject val = (JCObject)retObjectCommandLine;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandLine != null ? retObjectCommandLine.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

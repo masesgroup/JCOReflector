@@ -37,6 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.reflection.Assembly;
 import system.EventHandler;
 
@@ -127,6 +131,10 @@ public interface ITypeProvider extends IJCOBridgeReflected {
     
     // Properties section
     
+    public ICollection_1 getReferencedAssemblies() throws Throwable;
+
+    public IDictionary_2 getTypeLoadErrors() throws Throwable;
+
     public Assembly getLocalAssembly() throws Throwable;
 
 

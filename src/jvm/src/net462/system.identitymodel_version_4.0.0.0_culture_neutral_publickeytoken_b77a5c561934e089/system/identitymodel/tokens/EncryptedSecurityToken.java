@@ -42,6 +42,7 @@ import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.EncryptingCredentials;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.identitymodel.tokens.SecurityKey;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.DateTime;
 
 
@@ -57,7 +58,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EncryptedSecurityToken extends SecurityToken  {
+public class EncryptedSecurityToken extends system.identitymodel.tokens.SecurityToken  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -168,6 +169,20 @@ public class EncryptedSecurityToken extends SecurityToken  {
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateKeyIdentifierClause = null;
+        try {
+            retObjectCanCreateKeyIdentifierClause = classInstance.Invoke("CanCreateKeyIdentifierClause");
+            return (boolean)retObjectCanCreateKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCreateKeyIdentifierClause != null ? retObjectCanCreateKeyIdentifierClause.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

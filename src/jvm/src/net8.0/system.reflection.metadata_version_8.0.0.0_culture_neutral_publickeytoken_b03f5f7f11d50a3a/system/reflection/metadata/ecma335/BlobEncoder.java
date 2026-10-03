@@ -48,6 +48,7 @@ import system.reflection.metadata.SignatureCallingConvention;
 import system.reflection.metadata.ecma335.NamedArgumentsEncoder;
 import system.reflection.metadata.ecma335.PermissionSetEncoder;
 import system.reflection.metadata.ecma335.SignatureTypeEncoder;
+import system.Action_1;
 import system.reflection.metadata.ecma335.FixedArgumentsEncoder;
 import system.reflection.metadata.ecma335.CustomAttributeNamedArgumentsEncoder;
 
@@ -64,7 +65,7 @@ import system.reflection.metadata.ecma335.CustomAttributeNamedArgumentsEncoder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BlobEncoder extends ValueType  {
+public class BlobEncoder extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -305,6 +306,16 @@ public class BlobEncoder extends ValueType  {
             return new SignatureTypeEncoder(objTypeSpecificationSignature);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeSpecificationSignature != null ? retObjectTypeSpecificationSignature.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CustomAttributeSignature(Action_1 fixedArguments, Action_1 namedArguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CustomAttributeSignature", fixedArguments, namedArguments);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

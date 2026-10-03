@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.pkcs.Pkcs12Info;
+import system.ReadOnlyMemory_1;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.security.cryptography.pkcs.Pkcs12IntegrityMode;
 
 
@@ -169,10 +171,50 @@ public class Pkcs12Info extends NetObject  {
         }
     }
 
+    public static Pkcs12Info Decode(ReadOnlyMemory_1 encodedBytes, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed, boolean skipCopy) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArrayTypeMismatchException, system.RankException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecode = null;
+        try {
+            retObjectDecode = classType.Invoke("Decode", encodedBytes == null ? null : encodedBytes.getJCOInstance(), bytesConsumed.getJCRefOut(), skipCopy);
+            JCObject objDecode = (JCObject)retObjectDecode;
+            return new Pkcs12Info(objDecode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecode != null ? retObjectDecode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public ReadOnlyCollection_1 getAuthenticatedSafe() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticatedSafe = null;
+        try {
+            retObjectAuthenticatedSafe = classInstance.Get("AuthenticatedSafe");
+            JCObject val = (JCObject)retObjectAuthenticatedSafe;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticatedSafe != null ? retObjectAuthenticatedSafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAuthenticatedSafe(ReadOnlyCollection_1 AuthenticatedSafe) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AuthenticatedSafe", AuthenticatedSafe == null ? null : AuthenticatedSafe.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Pkcs12IntegrityMode getIntegrityMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

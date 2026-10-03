@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -151,6 +152,21 @@ public class SecurityTokenVersion extends NetObject  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 GetSecuritySpecifications() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSecuritySpecifications = null;
+        try {
+            retObjectGetSecuritySpecifications = classInstance.Invoke("GetSecuritySpecifications");
+            JCObject objGetSecuritySpecifications = (JCObject)retObjectGetSecuritySpecifications;
+            return new ReadOnlyCollection_1(objGetSecuritySpecifications);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSecuritySpecifications != null ? retObjectGetSecuritySpecifications.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

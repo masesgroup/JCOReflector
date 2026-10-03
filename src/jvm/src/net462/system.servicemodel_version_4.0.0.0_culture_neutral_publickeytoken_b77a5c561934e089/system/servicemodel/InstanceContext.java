@@ -41,6 +41,10 @@ import java.util.ArrayList;
 import system.servicemodel.channels.CommunicationObject;
 import system.servicemodel.ServiceHostBase;
 import system.servicemodel.channels.Message;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.servicemodel.IExtensionCollection_1;
+import system.servicemodel.IExtensionCollection_1Implementation;
 import system.threading.SynchronizationContext;
 
 
@@ -56,7 +60,7 @@ import system.threading.SynchronizationContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InstanceContext extends CommunicationObject  {
+public class InstanceContext extends system.servicemodel.channels.CommunicationObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -316,6 +320,51 @@ public class InstanceContext extends CommunicationObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManualFlowControlLimit", ManualFlowControlLimit);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getIncomingChannels() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingChannels = null;
+        try {
+            retObjectIncomingChannels = classInstance.Get("IncomingChannels");
+            JCObject val = (JCObject)retObjectIncomingChannels;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncomingChannels != null ? retObjectIncomingChannels.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getOutgoingChannels() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutgoingChannels = null;
+        try {
+            retObjectOutgoingChannels = classInstance.Get("OutgoingChannels");
+            JCObject val = (JCObject)retObjectOutgoingChannels;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutgoingChannels != null ? retObjectOutgoingChannels.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IExtensionCollection_1 getExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtensions = null;
+        try {
+            retObjectExtensions = classInstance.Get("Extensions");
+            JCObject val = (JCObject)retObjectExtensions;
+            return new IExtensionCollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensions != null ? retObjectExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

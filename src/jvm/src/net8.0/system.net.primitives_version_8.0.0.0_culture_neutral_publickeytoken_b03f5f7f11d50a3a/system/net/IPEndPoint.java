@@ -57,7 +57,7 @@ import system.net.sockets.AddressFamily;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IPEndPoint extends EndPoint  {
+public class IPEndPoint extends system.net.EndPoint  {
     /**
      * Fully assembly qualified name: System.Net.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

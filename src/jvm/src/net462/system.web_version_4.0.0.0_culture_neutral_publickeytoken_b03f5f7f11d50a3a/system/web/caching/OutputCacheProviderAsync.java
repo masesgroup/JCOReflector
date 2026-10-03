@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.web.caching.OutputCacheProvider;
 import system.threading.tasks.Task;
 import system.DateTime;
+import system.threading.tasks.Task_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class OutputCacheProviderAsync extends OutputCacheProvider  {
+public class OutputCacheProviderAsync extends system.web.caching.OutputCacheProvider  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -179,6 +180,36 @@ public class OutputCacheProviderAsync extends OutputCacheProvider  {
             return new Task(objSetAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetAsync != null ? retObjectSetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AddAsync(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddAsync = null;
+        try {
+            retObjectAddAsync = classInstance.Invoke("AddAsync", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+            JCObject objAddAsync = (JCObject)retObjectAddAsync;
+            return new Task_1(objAddAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAsync != null ? retObjectAddAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(java.lang.String key) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", key);
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -58,7 +58,7 @@ import system.windows.media.DoubleCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Slider extends RangeBase  {
+public class Slider extends system.windows.controls.primitives.RangeBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

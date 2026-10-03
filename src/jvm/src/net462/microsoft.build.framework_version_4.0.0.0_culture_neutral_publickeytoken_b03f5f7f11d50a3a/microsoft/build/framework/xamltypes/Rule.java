@@ -40,9 +40,15 @@ import java.util.ArrayList;
 // Import section
 import microsoft.build.framework.xamltypes.RuleSchema;
 import microsoft.build.framework.xamltypes.BaseProperty;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.collections.specialized.OrderedDictionary;
 import microsoft.build.framework.xamltypes.DataSource;
 import microsoft.build.framework.xamltypes.RuleOverrideMode;
+import system.collections.generic.Dictionary_2;
+import system.collections.generic.List_1;
 
 
 /**
@@ -57,7 +63,7 @@ import microsoft.build.framework.xamltypes.RuleOverrideMode;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Rule extends RuleSchema  {
+public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -174,6 +180,51 @@ public class Rule extends RuleSchema  {
             return new BaseProperty(objGetProperty);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetSchemaObjects(NetType type) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaObjects = null;
+        try {
+            retObjectGetSchemaObjects = classInstance.Invoke("GetSchemaObjects", type == null ? null : type.getJCOInstance());
+            JCObject objGetSchemaObjects = (JCObject)retObjectGetSchemaObjects;
+            return new IEnumerable_1Implementation(objGetSchemaObjects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaObjects != null ? retObjectGetSchemaObjects.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetSchemaObjectTypes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaObjectTypes = null;
+        try {
+            retObjectGetSchemaObjectTypes = classInstance.Invoke("GetSchemaObjectTypes");
+            JCObject objGetSchemaObjectTypes = (JCObject)retObjectGetSchemaObjectTypes;
+            return new IEnumerable_1Implementation(objGetSchemaObjectTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaObjectTypes != null ? retObjectGetSchemaObjectTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetPropertiesInCategory(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertiesInCategory = null;
+        try {
+            retObjectGetPropertiesInCategory = classInstance.Invoke("GetPropertiesInCategory", categoryName);
+            JCObject objGetPropertiesInCategory = (JCObject)retObjectGetPropertiesInCategory;
+            return new IList_1Implementation(objGetPropertiesInCategory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertiesInCategory != null ? retObjectGetPropertiesInCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,6 +436,96 @@ public class Rule extends RuleSchema  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverrideMode", OverrideMode == null ? null : OverrideMode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 getMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadata = null;
+        try {
+            retObjectMetadata = classInstance.Get("Metadata");
+            JCObject val = (JCObject)retObjectMetadata;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadata != null ? retObjectMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMetadata(Dictionary_2 Metadata) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Metadata", Metadata == null ? null : Metadata.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setProperties(List_1 Properties) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Properties", Properties == null ? null : Properties.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getCategories() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategories = null;
+        try {
+            retObjectCategories = classInstance.Get("Categories");
+            JCObject val = (JCObject)retObjectCategories;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategories != null ? retObjectCategories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCategories(List_1 Categories) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Categories", Categories == null ? null : Categories.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getEvaluatedCategories() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluatedCategories = null;
+        try {
+            retObjectEvaluatedCategories = classInstance.Get("EvaluatedCategories");
+            JCObject val = (JCObject)retObjectEvaluatedCategories;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluatedCategories != null ? retObjectEvaluatedCategories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.servicemodel.activities.SendMessageContent;
 import system.activities.InArgument;
 import system.servicemodel.activities.SendParametersContent;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -177,6 +179,21 @@ public class SendContent extends NetObject  {
             retObjectCreate = classType.Invoke("Create", message == null ? null : message.getJCOInstance(), declaredMessageType == null ? null : declaredMessageType.getJCOInstance());
             JCObject objCreate = (JCObject)retObjectCreate;
             return new SendMessageContent(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SendParametersContent Create(IDictionary_2 parameters) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", parameters == null ? null : parameters.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new SendParametersContent(objCreate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {

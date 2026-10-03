@@ -55,7 +55,7 @@ import system.windows.controls.DataGridCell;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridCellInfo extends ValueType  {
+public class DataGridCellInfo extends system.ValueType  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

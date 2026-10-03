@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -177,6 +178,21 @@ public class PropertyPath extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getPathParameters() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathParameters = null;
+        try {
+            retObjectPathParameters = classInstance.Get("PathParameters");
+            JCObject val = (JCObject)retObjectPathParameters;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPathParameters != null ? retObjectPathParameters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

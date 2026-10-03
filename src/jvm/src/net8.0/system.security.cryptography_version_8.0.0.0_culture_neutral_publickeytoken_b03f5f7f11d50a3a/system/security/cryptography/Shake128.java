@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.io.Stream;
 import system.threading.tasks.ValueTask;
+import system.Memory_1;
+import system.threading.CancellationToken;
+import system.threading.tasks.ValueTask_1;
 
 
 /**
@@ -271,6 +274,36 @@ public class Shake128 extends NetObject implements AutoCloseable {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectHashData != null ? retObjectHashData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask HashDataAsync(Stream source, Memory_1 destination, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHashDataAsync = null;
+        try {
+            retObjectHashDataAsync = classType.Invoke("HashDataAsync", source == null ? null : source.getJCOInstance(), destination == null ? null : destination.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objHashDataAsync = (JCObject)retObjectHashDataAsync;
+            return new ValueTask(objHashDataAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashDataAsync != null ? retObjectHashDataAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 HashDataAsync(Stream source, int outputLength, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHashDataAsync = null;
+        try {
+            retObjectHashDataAsync = classType.Invoke("HashDataAsync", source == null ? null : source.getJCOInstance(), outputLength, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objHashDataAsync = (JCObject)retObjectHashDataAsync;
+            return new ValueTask_1(objHashDataAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashDataAsync != null ? retObjectHashDataAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

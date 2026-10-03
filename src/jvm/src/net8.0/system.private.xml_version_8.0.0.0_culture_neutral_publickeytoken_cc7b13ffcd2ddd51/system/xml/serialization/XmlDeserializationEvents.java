@@ -57,7 +57,7 @@ import system.xml.serialization.XmlNodeEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlDeserializationEvents extends ValueType  {
+public class XmlDeserializationEvents extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

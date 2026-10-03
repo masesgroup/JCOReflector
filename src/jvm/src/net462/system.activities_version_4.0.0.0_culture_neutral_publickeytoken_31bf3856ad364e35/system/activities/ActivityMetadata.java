@@ -39,7 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.objectmodel.Collection_1;
 import system.activities.RuntimeArgument;
+import system.Func_1;
 import system.activities.Activity;
 import system.activities.ActivityDelegate;
 import system.activities.validation.ValidationError;
@@ -60,7 +62,7 @@ import system.activities.LocationReferenceEnvironment;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityMetadata extends ValueType  {
+public class ActivityMetadata extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -161,11 +163,81 @@ public class ActivityMetadata extends ValueType  {
     
     // Methods section
     
+    public Collection_1 GetImportedChildrenWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImportedChildrenWithReflection = null;
+        try {
+            retObjectGetImportedChildrenWithReflection = classInstance.Invoke("GetImportedChildrenWithReflection");
+            JCObject objGetImportedChildrenWithReflection = (JCObject)retObjectGetImportedChildrenWithReflection;
+            return new Collection_1(objGetImportedChildrenWithReflection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImportedChildrenWithReflection != null ? retObjectGetImportedChildrenWithReflection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 GetImportedDelegatesWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImportedDelegatesWithReflection = null;
+        try {
+            retObjectGetImportedDelegatesWithReflection = classInstance.Invoke("GetImportedDelegatesWithReflection");
+            JCObject objGetImportedDelegatesWithReflection = (JCObject)retObjectGetImportedDelegatesWithReflection;
+            return new Collection_1(objGetImportedDelegatesWithReflection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImportedDelegatesWithReflection != null ? retObjectGetImportedDelegatesWithReflection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 GetArgumentsWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArgumentsWithReflection = null;
+        try {
+            retObjectGetArgumentsWithReflection = classInstance.Invoke("GetArgumentsWithReflection");
+            JCObject objGetArgumentsWithReflection = (JCObject)retObjectGetArgumentsWithReflection;
+            return new Collection_1(objGetArgumentsWithReflection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArgumentsWithReflection != null ? retObjectGetArgumentsWithReflection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 GetVariablesWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVariablesWithReflection = null;
+        try {
+            retObjectGetVariablesWithReflection = classInstance.Invoke("GetVariablesWithReflection");
+            JCObject objGetVariablesWithReflection = (JCObject)retObjectGetVariablesWithReflection;
+            return new Collection_1(objGetVariablesWithReflection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVariablesWithReflection != null ? retObjectGetVariablesWithReflection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddArgument(RuntimeArgument argument) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArgument", argument == null ? null : argument.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void AddDefaultExtensionProvider(Func_1 extensionProvider) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddDefaultExtensionProvider", extensionProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,6 +338,66 @@ public class ActivityMetadata extends ValueType  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RequireExtension", extensionType == null ? null : extensionType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void RequireExtension() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RequireExtension");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetArgumentsCollection(Collection_1 arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetArgumentsCollection", arguments == null ? null : arguments.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetImportedChildrenCollection(Collection_1 importedChildren) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetImportedChildrenCollection", importedChildren == null ? null : importedChildren.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetImportedDelegatesCollection(Collection_1 importedDelegates) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetImportedDelegatesCollection", importedDelegates == null ? null : importedDelegates.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetValidationErrorsCollection(Collection_1 validationErrors) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetValidationErrorsCollection", validationErrors == null ? null : validationErrors.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetVariablesCollection(Collection_1 variables) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetVariablesCollection", variables == null ? null : variables.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Nullable_1;
+import system.buffers.ReadOnlySequence_1;
+import system.buffers.IBufferWriter_1;
+import system.buffers.IBufferWriter_1Implementation;
 
 
 /**
@@ -151,6 +155,21 @@ public class BuffersExtensions extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> Nullable_1 PositionOf(JCORefOut<ReadOnlySequence_1> source, T value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPositionOf = null;
+        try {
+            retObjectPositionOf = classType.Invoke("PositionOf", source.getJCRefOut(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objPositionOf = (JCObject)retObjectPositionOf;
+            return new Nullable_1(objPositionOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPositionOf != null ? retObjectPositionOf.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

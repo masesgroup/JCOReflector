@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.controls.Control;
 import system.DateTime;
 import system.DayOfWeek;
+import system.Nullable_1;
 import system.windows.controls.CalendarBlackoutDatesCollection;
 import system.windows.controls.CalendarMode;
 import system.windows.controls.CalendarSelectionMode;
@@ -60,7 +61,7 @@ import system.windows.Style;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Calendar extends Control  {
+public class Calendar extends system.windows.controls.Control  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -250,6 +251,81 @@ public class Calendar extends Control  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstDayOfWeek", FirstDayOfWeek == null ? null : FirstDayOfWeek.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getDisplayDateEnd() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayDateEnd = null;
+        try {
+            retObjectDisplayDateEnd = classInstance.Get("DisplayDateEnd");
+            JCObject val = (JCObject)retObjectDisplayDateEnd;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayDateEnd != null ? retObjectDisplayDateEnd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDisplayDateEnd(Nullable_1 DisplayDateEnd) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DisplayDateEnd", DisplayDateEnd == null ? null : DisplayDateEnd.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getDisplayDateStart() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayDateStart = null;
+        try {
+            retObjectDisplayDateStart = classInstance.Get("DisplayDateStart");
+            JCObject val = (JCObject)retObjectDisplayDateStart;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayDateStart != null ? retObjectDisplayDateStart.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDisplayDateStart(Nullable_1 DisplayDateStart) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DisplayDateStart", DisplayDateStart == null ? null : DisplayDateStart.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getSelectedDate() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedDate = null;
+        try {
+            retObjectSelectedDate = classInstance.Get("SelectedDate");
+            JCObject val = (JCObject)retObjectSelectedDate;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedDate != null ? retObjectSelectedDate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSelectedDate(Nullable_1 SelectedDate) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SelectedDate", SelectedDate == null ? null : SelectedDate.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

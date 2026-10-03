@@ -46,6 +46,7 @@ import system.IDisposableImplementation;
 import system.componentmodel.design.ViewTechnology;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.componentmodel.design.DesignerVerbCollection;
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
 
@@ -62,7 +63,7 @@ import system.workflow.componentmodel.design.CompositeActivityDesigner;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IWorkflowRootDesigner extends IJCOBridgeReflected, IRootDesigner, IDesigner, IDisposable {
+public interface IWorkflowRootDesigner extends IJCOBridgeReflected, system.componentmodel.design.IRootDesigner, system.componentmodel.design.IDesigner, system.IDisposable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -137,6 +138,8 @@ public interface IWorkflowRootDesigner extends IJCOBridgeReflected, IRootDesigne
     // Properties section
     
     public boolean getSupportsLayoutPersistence() throws Throwable;
+
+    public ReadOnlyCollection_1 getMessageFilters() throws Throwable;
 
     public CompositeActivityDesigner getInvokingDesigner() throws Throwable;
 

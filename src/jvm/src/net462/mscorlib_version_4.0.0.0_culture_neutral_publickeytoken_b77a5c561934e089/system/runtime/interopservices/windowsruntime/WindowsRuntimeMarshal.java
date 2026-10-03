@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.interopservices.windowsruntime.IActivationFactory;
 import system.runtime.interopservices.windowsruntime.IActivationFactoryImplementation;
+import system.Func_2;
+import system.Action_1;
 
 
 /**
@@ -163,6 +165,36 @@ public class WindowsRuntimeMarshal extends NetObject  {
             return new IActivationFactoryImplementation(objGetActivationFactory);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetActivationFactory != null ? retObjectGetActivationFactory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void AddEventHandler(Func_2 addMethod, Action_1 removeMethod, T handler) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddEventHandler", addMethod, removeMethod, handler == null ? null : ((IJCOBridgeReflected)handler).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveAllEventHandlers(Action_1 removeMethod) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveAllEventHandlers", removeMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void RemoveEventHandler(Action_1 removeMethod, T handler) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveEventHandler", removeMethod, handler == null ? null : ((IJCOBridgeReflected)handler).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

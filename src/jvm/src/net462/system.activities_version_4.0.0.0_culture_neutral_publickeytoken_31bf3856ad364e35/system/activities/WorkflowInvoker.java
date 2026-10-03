@@ -39,10 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.Activity;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
-import system.AsyncCallback;
 import system.TimeSpan;
+import system.AsyncCallback;
 import system.activities.hosting.WorkflowInstanceExtensionManager;
 
 
@@ -169,12 +171,177 @@ public class WorkflowInvoker extends NetObject  {
     
     // Methods section
     
+    public IDictionary_2 EndInvoke(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndInvoke = null;
+        try {
+            retObjectEndInvoke = classInstance.Invoke("EndInvoke", result == null ? null : result.getJCOInstance());
+            JCObject objEndInvoke = (JCObject)retObjectEndInvoke;
+            return new IDictionary_2Implementation(objEndInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndInvoke != null ? retObjectEndInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 Invoke() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.activities.ValidationException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classInstance.Invoke("Invoke");
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new IDictionary_2Implementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 Invoke(Activity workflow) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.activities.ValidationException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classType.Invoke("Invoke", workflow == null ? null : workflow.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new IDictionary_2Implementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 Invoke(Activity workflow, IDictionary_2 inputs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.activities.ValidationException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classType.Invoke("Invoke", workflow == null ? null : workflow.getJCOInstance(), inputs == null ? null : inputs.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new IDictionary_2Implementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 Invoke(Activity workflow, IDictionary_2 inputs, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.activities.ValidationException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classType.Invoke("Invoke", workflow == null ? null : workflow.getJCOInstance(), inputs == null ? null : inputs.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new IDictionary_2Implementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 Invoke(Activity workflow, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.activities.ValidationException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classType.Invoke("Invoke", workflow == null ? null : workflow.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new IDictionary_2Implementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 Invoke(IDictionary_2 inputs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.activities.ValidationException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classInstance.Invoke("Invoke", inputs == null ? null : inputs.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new IDictionary_2Implementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 Invoke(IDictionary_2 inputs, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.activities.ValidationException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classInstance.Invoke("Invoke", inputs == null ? null : inputs.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new IDictionary_2Implementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 Invoke(TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.activities.ValidationException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classInstance.Invoke("Invoke", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new IDictionary_2Implementation(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginInvoke(AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.activities.ValidationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBeginInvoke = null;
         try {
             retObjectBeginInvoke = classInstance.Invoke("BeginInvoke", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginInvoke = (JCObject)retObjectBeginInvoke;
+            return new IAsyncResultImplementation(objBeginInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginInvoke != null ? retObjectBeginInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginInvoke(IDictionary_2 inputs, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.activities.ValidationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginInvoke = null;
+        try {
+            retObjectBeginInvoke = classInstance.Invoke("BeginInvoke", inputs == null ? null : inputs.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginInvoke = (JCObject)retObjectBeginInvoke;
+            return new IAsyncResultImplementation(objBeginInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginInvoke != null ? retObjectBeginInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginInvoke(IDictionary_2 inputs, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.activities.ValidationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginInvoke = null;
+        try {
+            retObjectBeginInvoke = classInstance.Invoke("BeginInvoke", inputs == null ? null : inputs.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
             JCObject objBeginInvoke = (JCObject)retObjectBeginInvoke;
             return new IAsyncResultImplementation(objBeginInvoke);
         } catch (java.lang.ClassCastException cce) {
@@ -214,6 +381,46 @@ public class WorkflowInvoker extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InvokeAsync");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InvokeAsync(IDictionary_2 inputs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InvokeAsync", inputs == null ? null : inputs.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InvokeAsync(IDictionary_2 inputs, NetObject userState) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InvokeAsync", inputs == null ? null : inputs.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InvokeAsync(IDictionary_2 inputs, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InvokeAsync", inputs == null ? null : inputs.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InvokeAsync(IDictionary_2 inputs, TimeSpan timeout, NetObject userState) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.activities.ValidationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InvokeAsync", inputs == null ? null : inputs.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

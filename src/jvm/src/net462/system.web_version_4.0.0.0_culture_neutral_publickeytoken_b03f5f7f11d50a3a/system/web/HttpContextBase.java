@@ -41,11 +41,16 @@ import java.util.ArrayList;
 import system.globalization.CultureInfo;
 import system.web.ISubscriptionToken;
 import system.web.ISubscriptionTokenImplementation;
+import system.Action_1;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.Func_2;
+import system.web.websockets.AspNetWebSocketOptions;
 import system.web.IHttpHandler;
 import system.web.IHttpHandlerImplementation;
 import system.web.sessionstate.SessionStateBehavior;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.DateTime;
@@ -266,6 +271,21 @@ public class HttpContextBase extends NetObject  {
         }
     }
 
+    public ISubscriptionToken AddOnRequestCompleted(Action_1 callback) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddOnRequestCompleted = null;
+        try {
+            retObjectAddOnRequestCompleted = classInstance.Invoke("AddOnRequestCompleted", callback);
+            JCObject objAddOnRequestCompleted = (JCObject)retObjectAddOnRequestCompleted;
+            return new ISubscriptionTokenImplementation(objAddOnRequestCompleted);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddOnRequestCompleted != null ? retObjectAddOnRequestCompleted.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ISubscriptionToken DisposeOnPipelineCompleted(IDisposable target) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -276,6 +296,26 @@ public class HttpContextBase extends NetObject  {
             return new ISubscriptionTokenImplementation(objDisposeOnPipelineCompleted);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeOnPipelineCompleted != null ? retObjectDisposeOnPipelineCompleted.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AcceptWebSocketRequest(Func_2 userFunc) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AcceptWebSocketRequest", userFunc);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AcceptWebSocketRequest(Func_2 userFunc, AspNetWebSocketOptions options) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AcceptWebSocketRequest", userFunc, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,6 +542,21 @@ public class HttpContextBase extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThreadAbortOnTimeout", ThreadAbortOnTimeout);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getWebSocketRequestedProtocols() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebSocketRequestedProtocols = null;
+        try {
+            retObjectWebSocketRequestedProtocols = classInstance.Get("WebSocketRequestedProtocols");
+            JCObject val = (JCObject)retObjectWebSocketRequestedProtocols;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebSocketRequestedProtocols != null ? retObjectWebSocketRequestedProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

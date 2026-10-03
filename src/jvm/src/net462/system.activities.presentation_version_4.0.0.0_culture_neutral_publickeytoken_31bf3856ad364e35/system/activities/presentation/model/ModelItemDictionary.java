@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.model.ModelItem;
+import system.collections.generic.KeyValuePair_2;
 import system.Array;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.collections.specialized.NotifyCollectionChangedEventHandler;
 
 
@@ -55,7 +58,7 @@ import system.collections.specialized.NotifyCollectionChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModelItemDictionary extends ModelItem  {
+public class ModelItemDictionary extends system.activities.presentation.model.ModelItem  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -275,6 +278,42 @@ public class ModelItemDictionary extends ModelItem  {
 
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Remove(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Add(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(KeyValuePair_2[] array, int arrayIndex) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDictionary method available in IDictionary to obtain an object with an invocable method
      */
     @Deprecated 
@@ -344,6 +383,36 @@ public class ModelItemDictionary extends ModelItem  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getKeys() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeys = null;
+        try {
+            retObjectKeys = classInstance.Get("Keys");
+            JCObject val = (JCObject)retObjectKeys;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeys != null ? retObjectKeys.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getValues() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValues = null;
+        try {
+            retObjectValues = classInstance.Get("Values");
+            JCObject val = (JCObject)retObjectValues;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ArraySegment_1;
 import system.net.CookieContainer;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
@@ -175,6 +176,16 @@ public class ClientWebSocketOptions extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBuffer", receiveBufferSize, sendBufferSize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetBuffer(int receiveBufferSize, int sendBufferSize, ArraySegment_1 buffer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetBuffer", receiveBufferSize, sendBufferSize, buffer == null ? null : buffer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

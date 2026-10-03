@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.net.mail.MailAddress;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MailAddressCollection extends NetObjectEnumerable  {
+public class MailAddressCollection extends system.collections.objectmodel.Collection_1<MailAddress>  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

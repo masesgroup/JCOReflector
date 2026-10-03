@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.security.tokens.SupportingTokenParameters;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -189,6 +190,66 @@ public class SupportingTokenParameters extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getEndorsing() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndorsing = null;
+        try {
+            retObjectEndorsing = classInstance.Get("Endorsing");
+            JCObject val = (JCObject)retObjectEndorsing;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndorsing != null ? retObjectEndorsing.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getSigned() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigned = null;
+        try {
+            retObjectSigned = classInstance.Get("Signed");
+            JCObject val = (JCObject)retObjectSigned;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigned != null ? retObjectSigned.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getSignedEncrypted() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignedEncrypted = null;
+        try {
+            retObjectSignedEncrypted = classInstance.Get("SignedEncrypted");
+            JCObject val = (JCObject)retObjectSignedEncrypted;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignedEncrypted != null ? retObjectSignedEncrypted.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getSignedEndorsing() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignedEndorsing = null;
+        try {
+            retObjectSignedEndorsing = classInstance.Get("SignedEndorsing");
+            JCObject val = (JCObject)retObjectSignedEndorsing;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignedEndorsing != null ? retObjectSignedEndorsing.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

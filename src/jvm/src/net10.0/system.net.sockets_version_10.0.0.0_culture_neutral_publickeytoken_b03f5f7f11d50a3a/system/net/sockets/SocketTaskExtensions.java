@@ -42,8 +42,16 @@ import system.threading.tasks.Task;
 import system.net.sockets.Socket;
 import system.net.EndPoint;
 import system.net.IPAddress;
+import system.threading.tasks.Task_1;
+import system.ArraySegment_1;
+import system.net.sockets.SocketFlags;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.threading.tasks.ValueTask;
 import system.threading.CancellationToken;
+import system.threading.tasks.ValueTask_1;
+import system.Memory_1;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -217,6 +225,141 @@ public class SocketTaskExtensions extends NetObject  {
         }
     }
 
+    public static Task_1 ReceiveAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classType.Invoke("ReceiveAsync", socket == null ? null : socket.getJCOInstance(), buffer == null ? null : buffer.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new Task_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReceiveAsync(Socket socket, IList_1 buffers, SocketFlags socketFlags) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classType.Invoke("ReceiveAsync", socket == null ? null : socket.getJCOInstance(), buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new Task_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 SendAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classType.Invoke("SendAsync", socket == null ? null : socket.getJCOInstance(), buffer == null ? null : buffer.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 SendAsync(Socket socket, IList_1 buffers, SocketFlags socketFlags) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classType.Invoke("SendAsync", socket == null ? null : socket.getJCOInstance(), buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 SendToAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSendToAsync = null;
+        try {
+            retObjectSendToAsync = classType.Invoke("SendToAsync", socket == null ? null : socket.getJCOInstance(), buffer == null ? null : buffer.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+            JCObject objSendToAsync = (JCObject)retObjectSendToAsync;
+            return new Task_1(objSendToAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendToAsync != null ? retObjectSendToAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 AcceptAsync(Socket socket, Socket acceptSocket) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAcceptAsync = null;
+        try {
+            retObjectAcceptAsync = classType.Invoke("AcceptAsync", socket == null ? null : socket.getJCOInstance(), acceptSocket == null ? null : acceptSocket.getJCOInstance());
+            JCObject objAcceptAsync = (JCObject)retObjectAcceptAsync;
+            return new Task_1(objAcceptAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptAsync != null ? retObjectAcceptAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 AcceptAsync(Socket socket) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAcceptAsync = null;
+        try {
+            retObjectAcceptAsync = classType.Invoke("AcceptAsync", socket == null ? null : socket.getJCOInstance());
+            JCObject objAcceptAsync = (JCObject)retObjectAcceptAsync;
+            return new Task_1(objAcceptAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptAsync != null ? retObjectAcceptAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReceiveFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveFromAsync = null;
+        try {
+            retObjectReceiveFromAsync = classType.Invoke("ReceiveFromAsync", socket == null ? null : socket.getJCOInstance(), buffer == null ? null : buffer.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEndPoint == null ? null : remoteEndPoint.getJCOInstance());
+            JCObject objReceiveFromAsync = (JCObject)retObjectReceiveFromAsync;
+            return new Task_1(objReceiveFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveFromAsync != null ? retObjectReceiveFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReceiveMessageFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.OutOfMemoryException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveMessageFromAsync = null;
+        try {
+            retObjectReceiveMessageFromAsync = classType.Invoke("ReceiveMessageFromAsync", socket == null ? null : socket.getJCOInstance(), buffer == null ? null : buffer.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEndPoint == null ? null : remoteEndPoint.getJCOInstance());
+            JCObject objReceiveMessageFromAsync = (JCObject)retObjectReceiveMessageFromAsync;
+            return new Task_1(objReceiveMessageFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveMessageFromAsync != null ? retObjectReceiveMessageFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ValueTask ConnectAsync(Socket socket, EndPoint remoteEP, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.net.sockets.SocketException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -272,6 +415,36 @@ public class SocketTaskExtensions extends NetObject  {
             return new ValueTask(objConnectAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 ReceiveAsync(Socket socket, Memory_1 buffer, SocketFlags socketFlags, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classType.Invoke("ReceiveAsync", socket == null ? null : socket.getJCOInstance(), buffer == null ? null : buffer.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new ValueTask_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 SendAsync(Socket socket, ReadOnlyMemory_1 buffer, SocketFlags socketFlags, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classType.Invoke("SendAsync", socket == null ? null : socket.getJCOInstance(), buffer == null ? null : buffer.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new ValueTask_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

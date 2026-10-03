@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.configuration.StandardEndpointCollectionElement_2;
+import system.servicemodel.description.ServiceMetadataEndpoint;
+import system.servicemodel.configuration.ServiceMetadataEndpointElement;
 
 
 /**
@@ -52,7 +55,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ServiceMetadataEndpointCollectionElement extends NetObject  {
+public class ServiceMetadataEndpointCollectionElement extends system.servicemodel.configuration.StandardEndpointCollectionElement_2<ServiceMetadataEndpoint, ServiceMetadataEndpointElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

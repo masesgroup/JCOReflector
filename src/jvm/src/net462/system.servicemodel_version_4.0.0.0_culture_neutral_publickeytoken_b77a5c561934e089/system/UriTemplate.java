@@ -38,10 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.UriTemplate;
 import system.Uri;
 import system.collections.specialized.NameValueCollection;
 import system.UriTemplateMatch;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -172,6 +175,26 @@ public class UriTemplate extends NetObject  {
         }
     }
 
+    public UriTemplate(java.lang.String template, boolean ignoreTrailingSlash, IDictionary_2 additionalDefaults) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(template, ignoreTrailingSlash, additionalDefaults == null ? null : additionalDefaults.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UriTemplate(java.lang.String template, IDictionary_2 additionalDefaults) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(template, additionalDefaults == null ? null : additionalDefaults.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -186,6 +209,36 @@ public class UriTemplate extends NetObject  {
             return (boolean)retObjectIsEquivalentTo;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEquivalentTo != null ? retObjectIsEquivalentTo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri BindByName(Uri baseAddress, IDictionary_2 parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindByName = null;
+        try {
+            retObjectBindByName = classInstance.Invoke("BindByName", baseAddress == null ? null : baseAddress.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance());
+            JCObject objBindByName = (JCObject)retObjectBindByName;
+            return new Uri(objBindByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindByName != null ? retObjectBindByName.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Uri BindByName(Uri baseAddress, IDictionary_2 parameters, boolean omitDefaults) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindByName = null;
+        try {
+            retObjectBindByName = classInstance.Invoke("BindByName", baseAddress == null ? null : baseAddress.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance(), omitDefaults);
+            JCObject objBindByName = (JCObject)retObjectBindByName;
+            return new Uri(objBindByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindByName != null ? retObjectBindByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,6 +332,51 @@ public class UriTemplate extends NetObject  {
             return (boolean)retObjectIgnoreTrailingSlash;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreTrailingSlash != null ? retObjectIgnoreTrailingSlash.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getDefaults() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaults = null;
+        try {
+            retObjectDefaults = classInstance.Get("Defaults");
+            JCObject val = (JCObject)retObjectDefaults;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaults != null ? retObjectDefaults.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPathSegmentVariableNames() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathSegmentVariableNames = null;
+        try {
+            retObjectPathSegmentVariableNames = classInstance.Get("PathSegmentVariableNames");
+            JCObject val = (JCObject)retObjectPathSegmentVariableNames;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPathSegmentVariableNames != null ? retObjectPathSegmentVariableNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getQueryValueVariableNames() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueryValueVariableNames = null;
+        try {
+            retObjectQueryValueVariableNames = classInstance.Get("QueryValueVariableNames");
+            JCObject val = (JCObject)retObjectQueryValueVariableNames;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueryValueVariableNames != null ? retObjectQueryValueVariableNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

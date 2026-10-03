@@ -65,7 +65,7 @@ import system.windows.forms.KeyPressEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Label extends Control  {
+public class Label extends system.windows.forms.Control  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

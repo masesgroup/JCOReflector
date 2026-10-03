@@ -39,7 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.DependencyObject;
+import system.collections.objectmodel.ReadOnlyObservableCollection_1;
 import system.windows.controls.ControlTemplate;
+import system.EventHandler_1;
 import system.windows.data.BindingExpressionBase;
 import system.windows.controls.ValidationError;
 
@@ -169,6 +171,21 @@ public class Validation extends NetObject  {
         }
     }
 
+    public static ReadOnlyObservableCollection_1 GetErrors(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetErrors = null;
+        try {
+            retObjectGetErrors = classType.Invoke("GetErrors", element == null ? null : element.getJCOInstance());
+            JCObject objGetErrors = (JCObject)retObjectGetErrors;
+            return new ReadOnlyObservableCollection_1(objGetErrors);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetErrors != null ? retObjectGetErrors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ControlTemplate GetErrorTemplate(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -214,6 +231,16 @@ public class Validation extends NetObject  {
         }
     }
 
+    public static void AddErrorHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddErrorHandler", element == null ? null : element.getJCOInstance(), handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void ClearInvalid(BindingExpressionBase bindingExpression) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +256,16 @@ public class Validation extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MarkInvalid", bindingExpression == null ? null : bindingExpression.getJCOInstance(), validationError == null ? null : validationError.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveErrorHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveErrorHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

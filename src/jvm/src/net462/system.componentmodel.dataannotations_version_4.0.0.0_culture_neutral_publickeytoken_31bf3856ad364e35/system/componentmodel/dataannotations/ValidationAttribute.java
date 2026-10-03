@@ -55,7 +55,7 @@ import system.componentmodel.dataannotations.ValidationContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ValidationAttribute extends Attribute  {
+public class ValidationAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

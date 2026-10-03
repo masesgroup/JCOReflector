@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.selectors.SecurityTokenResolver;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -53,7 +56,7 @@ import system.identitymodel.selectors.SecurityTokenResolver;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AggregateTokenResolver extends SecurityTokenResolver  {
+public class AggregateTokenResolver extends system.identitymodel.selectors.SecurityTokenResolver  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -149,6 +152,16 @@ public class AggregateTokenResolver extends SecurityTokenResolver  {
     public AggregateTokenResolver() throws Throwable {
     }
 
+    public AggregateTokenResolver(IEnumerable_1 tokenResolvers) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(tokenResolvers == null ? null : tokenResolvers.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +171,21 @@ public class AggregateTokenResolver extends SecurityTokenResolver  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getTokenResolvers() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenResolvers = null;
+        try {
+            retObjectTokenResolvers = classInstance.Get("TokenResolvers");
+            JCObject val = (JCObject)retObjectTokenResolvers;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenResolvers != null ? retObjectTokenResolvers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

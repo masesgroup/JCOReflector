@@ -38,9 +38,19 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.intrinsics.Vector128_1;
+import system.numerics.Vector_1;
 import system.numerics.Vector2;
 import system.numerics.Vector3;
 import system.numerics.Vector4;
+import system.runtime.intrinsics.Vector64_1;
+import system.SByte;
+import system.Single;
+import system.UInt16;
+import system.UInt32;
+import system.UInt64;
+import system.runtime.intrinsics.Vector256_1;
+import system.ValueTuple_2;
 
 
 /**
@@ -154,6 +164,1901 @@ public class Vector128 extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> boolean EqualsAll(Vector128_1 left, Vector128_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEqualsAll = null;
+        try {
+            retObjectEqualsAll = classType.Invoke("EqualsAll", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectEqualsAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEqualsAll != null ? retObjectEqualsAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean EqualsAny(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEqualsAny = null;
+        try {
+            retObjectEqualsAny = classType.Invoke("EqualsAny", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectEqualsAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEqualsAny != null ? retObjectEqualsAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean GreaterThanAll(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanAll = null;
+        try {
+            retObjectGreaterThanAll = classType.Invoke("GreaterThanAll", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectGreaterThanAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGreaterThanAll != null ? retObjectGreaterThanAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean GreaterThanAny(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanAny = null;
+        try {
+            retObjectGreaterThanAny = classType.Invoke("GreaterThanAny", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectGreaterThanAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGreaterThanAny != null ? retObjectGreaterThanAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean GreaterThanOrEqualAll(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqualAll = null;
+        try {
+            retObjectGreaterThanOrEqualAll = classType.Invoke("GreaterThanOrEqualAll", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectGreaterThanOrEqualAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGreaterThanOrEqualAll != null ? retObjectGreaterThanOrEqualAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean GreaterThanOrEqualAny(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqualAny = null;
+        try {
+            retObjectGreaterThanOrEqualAny = classType.Invoke("GreaterThanOrEqualAny", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectGreaterThanOrEqualAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGreaterThanOrEqualAny != null ? retObjectGreaterThanOrEqualAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean LessThanAll(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanAll = null;
+        try {
+            retObjectLessThanAll = classType.Invoke("LessThanAll", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectLessThanAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLessThanAll != null ? retObjectLessThanAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean LessThanAny(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanAny = null;
+        try {
+            retObjectLessThanAny = classType.Invoke("LessThanAny", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectLessThanAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLessThanAny != null ? retObjectLessThanAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean LessThanOrEqualAll(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqualAll = null;
+        try {
+            retObjectLessThanOrEqualAll = classType.Invoke("LessThanOrEqualAll", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectLessThanOrEqualAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLessThanOrEqualAll != null ? retObjectLessThanOrEqualAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean LessThanOrEqualAny(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqualAny = null;
+        try {
+            retObjectLessThanOrEqualAny = classType.Invoke("LessThanOrEqualAny", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectLessThanOrEqualAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLessThanOrEqualAny != null ? retObjectLessThanOrEqualAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector_1 AsVector(Vector128_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector = null;
+        try {
+            retObjectAsVector = classType.Invoke("AsVector", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector = (JCObject)retObjectAsVector;
+            return new Vector_1(objAsVector);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector != null ? retObjectAsVector.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector2 AsVector2(Vector128_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector2 = null;
+        try {
+            retObjectAsVector2 = classType.Invoke("AsVector2", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector2 = (JCObject)retObjectAsVector2;
+            return new Vector2(objAsVector2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector2 != null ? retObjectAsVector2.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector3 AsVector3(Vector128_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector3 = null;
+        try {
+            retObjectAsVector3 = classType.Invoke("AsVector3", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector3 = (JCObject)retObjectAsVector3;
+            return new Vector3(objAsVector3);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector3 != null ? retObjectAsVector3.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector4 AsVector4(Vector128_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector4 = null;
+        try {
+            retObjectAsVector4 = classType.Invoke("AsVector4", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector4 = (JCObject)retObjectAsVector4;
+            return new Vector4(objAsVector4);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector4 != null ? retObjectAsVector4.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsByte(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsByte = null;
+        try {
+            retObjectAsByte = classType.Invoke("AsByte", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsByte = (JCObject)retObjectAsByte;
+            return new Vector128_1(objAsByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsByte != null ? retObjectAsByte.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(byte e0, byte e1, byte e2, byte e3, byte e4, byte e5, byte e6, byte e7, byte e8, byte e9, byte e10, byte e11, byte e12, byte e13, byte e14, byte e15) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(byte value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(Vector64_1 lower, Vector64_1 upper) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", lower == null ? null : lower.getJCOInstance(), upper == null ? null : upper.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(byte value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value);
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(byte value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value);
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Narrow(Vector128_1 lower, Vector128_1 upper) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNarrow = null;
+        try {
+            retObjectNarrow = classType.Invoke("Narrow", lower == null ? null : lower.getJCOInstance(), upper == null ? null : upper.getJCOInstance());
+            JCObject objNarrow = (JCObject)retObjectNarrow;
+            return new Vector128_1(objNarrow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNarrow != null ? retObjectNarrow.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ShiftLeft(Vector128_1 vector, int shiftCount) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShiftLeft = null;
+        try {
+            retObjectShiftLeft = classType.Invoke("ShiftLeft", vector == null ? null : vector.getJCOInstance(), shiftCount);
+            JCObject objShiftLeft = (JCObject)retObjectShiftLeft;
+            return new Vector128_1(objShiftLeft);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShiftLeft != null ? retObjectShiftLeft.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ShiftRightLogical(Vector128_1 vector, int shiftCount) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShiftRightLogical = null;
+        try {
+            retObjectShiftRightLogical = classType.Invoke("ShiftRightLogical", vector == null ? null : vector.getJCOInstance(), shiftCount);
+            JCObject objShiftRightLogical = (JCObject)retObjectShiftRightLogical;
+            return new Vector128_1(objShiftRightLogical);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShiftRightLogical != null ? retObjectShiftRightLogical.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Shuffle(Vector128_1 vector, Vector128_1 indices) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShuffle = null;
+        try {
+            retObjectShuffle = classType.Invoke("Shuffle", vector == null ? null : vector.getJCOInstance(), indices == null ? null : indices.getJCOInstance());
+            JCObject objShuffle = (JCObject)retObjectShuffle;
+            return new Vector128_1(objShuffle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShuffle != null ? retObjectShuffle.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsDouble(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsDouble = null;
+        try {
+            retObjectAsDouble = classType.Invoke("AsDouble", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsDouble = (JCObject)retObjectAsDouble;
+            return new Vector128_1(objAsDouble);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsDouble != null ? retObjectAsDouble.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Ceiling(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCeiling = null;
+        try {
+            retObjectCeiling = classType.Invoke("Ceiling", vector == null ? null : vector.getJCOInstance());
+            JCObject objCeiling = (JCObject)retObjectCeiling;
+            return new Vector128_1(objCeiling);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCeiling != null ? retObjectCeiling.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ConvertToDouble(Vector128_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToDouble = null;
+        try {
+            retObjectConvertToDouble = classType.Invoke("ConvertToDouble", vector == null ? null : vector.getJCOInstance());
+            JCObject objConvertToDouble = (JCObject)retObjectConvertToDouble;
+            return new Vector128_1(objConvertToDouble);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToDouble != null ? retObjectConvertToDouble.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(double e0, double e1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0, e1);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value);
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(double value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value);
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Floor(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFloor = null;
+        try {
+            retObjectFloor = classType.Invoke("Floor", vector == null ? null : vector.getJCOInstance());
+            JCObject objFloor = (JCObject)retObjectFloor;
+            return new Vector128_1(objFloor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFloor != null ? retObjectFloor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 WidenLower(Vector128_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWidenLower = null;
+        try {
+            retObjectWidenLower = classType.Invoke("WidenLower", source == null ? null : source.getJCOInstance());
+            JCObject objWidenLower = (JCObject)retObjectWidenLower;
+            return new Vector128_1(objWidenLower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWidenLower != null ? retObjectWidenLower.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 WidenUpper(Vector128_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWidenUpper = null;
+        try {
+            retObjectWidenUpper = classType.Invoke("WidenUpper", source == null ? null : source.getJCOInstance());
+            JCObject objWidenUpper = (JCObject)retObjectWidenUpper;
+            return new Vector128_1(objWidenUpper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWidenUpper != null ? retObjectWidenUpper.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsInt16(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsInt16 = null;
+        try {
+            retObjectAsInt16 = classType.Invoke("AsInt16", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsInt16 = (JCObject)retObjectAsInt16;
+            return new Vector128_1(objAsInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsInt16 != null ? retObjectAsInt16.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(short e0, short e1, short e2, short e3, short e4, short e5, short e6, short e7) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0, e1, e2, e3, e4, e5, e6, e7);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(short value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(short value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value);
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(short value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value);
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ShiftRightArithmetic(Vector128_1 vector, int shiftCount) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShiftRightArithmetic = null;
+        try {
+            retObjectShiftRightArithmetic = classType.Invoke("ShiftRightArithmetic", vector == null ? null : vector.getJCOInstance(), shiftCount);
+            JCObject objShiftRightArithmetic = (JCObject)retObjectShiftRightArithmetic;
+            return new Vector128_1(objShiftRightArithmetic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShiftRightArithmetic != null ? retObjectShiftRightArithmetic.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsInt32(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsInt32 = null;
+        try {
+            retObjectAsInt32 = classType.Invoke("AsInt32", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsInt32 = (JCObject)retObjectAsInt32;
+            return new Vector128_1(objAsInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsInt32 != null ? retObjectAsInt32.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ConvertToInt32(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToInt32 = null;
+        try {
+            retObjectConvertToInt32 = classType.Invoke("ConvertToInt32", vector == null ? null : vector.getJCOInstance());
+            JCObject objConvertToInt32 = (JCObject)retObjectConvertToInt32;
+            return new Vector128_1(objConvertToInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToInt32 != null ? retObjectConvertToInt32.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(int e0, int e1, int e2, int e3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0, e1, e2, e3);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(int value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value);
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(int value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value);
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsInt64(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsInt64 = null;
+        try {
+            retObjectAsInt64 = classType.Invoke("AsInt64", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsInt64 = (JCObject)retObjectAsInt64;
+            return new Vector128_1(objAsInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsInt64 != null ? retObjectAsInt64.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ConvertToInt64(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToInt64 = null;
+        try {
+            retObjectConvertToInt64 = classType.Invoke("ConvertToInt64", vector == null ? null : vector.getJCOInstance());
+            JCObject objConvertToInt64 = (JCObject)retObjectConvertToInt64;
+            return new Vector128_1(objConvertToInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToInt64 != null ? retObjectConvertToInt64.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(long e0, long e1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0, e1);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(long value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(long value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value);
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(long value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value);
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsNInt(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsNInt = null;
+        try {
+            retObjectAsNInt = classType.Invoke("AsNInt", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsNInt = (JCObject)retObjectAsNInt;
+            return new Vector128_1(objAsNInt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsNInt != null ? retObjectAsNInt.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsSByte(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsSByte = null;
+        try {
+            retObjectAsSByte = classType.Invoke("AsSByte", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsSByte = (JCObject)retObjectAsSByte;
+            return new Vector128_1(objAsSByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsSByte != null ? retObjectAsSByte.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(SByte e0, SByte e1, SByte e2, SByte e3, SByte e4, SByte e5, SByte e6, SByte e7, SByte e8, SByte e9, SByte e10, SByte e11, SByte e12, SByte e13, SByte e14, SByte e15) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0 == null ? null : e0.getJCOInstance(), e1 == null ? null : e1.getJCOInstance(), e2 == null ? null : e2.getJCOInstance(), e3 == null ? null : e3.getJCOInstance(), e4 == null ? null : e4.getJCOInstance(), e5 == null ? null : e5.getJCOInstance(), e6 == null ? null : e6.getJCOInstance(), e7 == null ? null : e7.getJCOInstance(), e8 == null ? null : e8.getJCOInstance(), e9 == null ? null : e9.getJCOInstance(), e10 == null ? null : e10.getJCOInstance(), e11 == null ? null : e11.getJCOInstance(), e12 == null ? null : e12.getJCOInstance(), e13 == null ? null : e13.getJCOInstance(), e14 == null ? null : e14.getJCOInstance(), e15 == null ? null : e15.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(SByte value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(SByte value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(SByte value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsSingle(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsSingle = null;
+        try {
+            retObjectAsSingle = classType.Invoke("AsSingle", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsSingle = (JCObject)retObjectAsSingle;
+            return new Vector128_1(objAsSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsSingle != null ? retObjectAsSingle.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 AsVector128(Vector2 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector128 = null;
+        try {
+            retObjectAsVector128 = classType.Invoke("AsVector128", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector128 = (JCObject)retObjectAsVector128;
+            return new Vector128_1(objAsVector128);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector128 != null ? retObjectAsVector128.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 AsVector128(Vector3 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector128 = null;
+        try {
+            retObjectAsVector128 = classType.Invoke("AsVector128", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector128 = (JCObject)retObjectAsVector128;
+            return new Vector128_1(objAsVector128);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector128 != null ? retObjectAsVector128.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 AsVector128(Vector4 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector128 = null;
+        try {
+            retObjectAsVector128 = classType.Invoke("AsVector128", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector128 = (JCObject)retObjectAsVector128;
+            return new Vector128_1(objAsVector128);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector128 != null ? retObjectAsVector128.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ConvertToSingle(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToSingle = null;
+        try {
+            retObjectConvertToSingle = classType.Invoke("ConvertToSingle", vector == null ? null : vector.getJCOInstance());
+            JCObject objConvertToSingle = (JCObject)retObjectConvertToSingle;
+            return new Vector128_1(objConvertToSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToSingle != null ? retObjectConvertToSingle.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(Single e0, Single e1, Single e2, Single e3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0 == null ? null : e0.getJCOInstance(), e1 == null ? null : e1.getJCOInstance(), e2 == null ? null : e2.getJCOInstance(), e3 == null ? null : e3.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(Single value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(Single value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsUInt16(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsUInt16 = null;
+        try {
+            retObjectAsUInt16 = classType.Invoke("AsUInt16", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsUInt16 = (JCObject)retObjectAsUInt16;
+            return new Vector128_1(objAsUInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsUInt16 != null ? retObjectAsUInt16.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(UInt16 e0, UInt16 e1, UInt16 e2, UInt16 e3, UInt16 e4, UInt16 e5, UInt16 e6, UInt16 e7) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0 == null ? null : e0.getJCOInstance(), e1 == null ? null : e1.getJCOInstance(), e2 == null ? null : e2.getJCOInstance(), e3 == null ? null : e3.getJCOInstance(), e4 == null ? null : e4.getJCOInstance(), e5 == null ? null : e5.getJCOInstance(), e6 == null ? null : e6.getJCOInstance(), e7 == null ? null : e7.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(UInt16 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(UInt16 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(UInt16 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsUInt32(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsUInt32 = null;
+        try {
+            retObjectAsUInt32 = classType.Invoke("AsUInt32", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsUInt32 = (JCObject)retObjectAsUInt32;
+            return new Vector128_1(objAsUInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsUInt32 != null ? retObjectAsUInt32.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ConvertToUInt32(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToUInt32 = null;
+        try {
+            retObjectConvertToUInt32 = classType.Invoke("ConvertToUInt32", vector == null ? null : vector.getJCOInstance());
+            JCObject objConvertToUInt32 = (JCObject)retObjectConvertToUInt32;
+            return new Vector128_1(objConvertToUInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToUInt32 != null ? retObjectConvertToUInt32.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(UInt32 e0, UInt32 e1, UInt32 e2, UInt32 e3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0 == null ? null : e0.getJCOInstance(), e1 == null ? null : e1.getJCOInstance(), e2 == null ? null : e2.getJCOInstance(), e3 == null ? null : e3.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(UInt32 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(UInt32 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsUInt64(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsUInt64 = null;
+        try {
+            retObjectAsUInt64 = classType.Invoke("AsUInt64", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsUInt64 = (JCObject)retObjectAsUInt64;
+            return new Vector128_1(objAsUInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsUInt64 != null ? retObjectAsUInt64.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 ConvertToUInt64(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToUInt64 = null;
+        try {
+            retObjectConvertToUInt64 = classType.Invoke("ConvertToUInt64", vector == null ? null : vector.getJCOInstance());
+            JCObject objConvertToUInt64 = (JCObject)retObjectConvertToUInt64;
+            return new Vector128_1(objConvertToUInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToUInt64 != null ? retObjectConvertToUInt64.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(UInt64 e0, UInt64 e1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", e0 == null ? null : e0.getJCOInstance(), e1 == null ? null : e1.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 Create(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : value.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalar(UInt64 value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Vector128_1 CreateScalarUnsafe(UInt64 value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value == null ? null : value.getJCOInstance());
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsNUInt(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsNUInt = null;
+        try {
+            retObjectAsNUInt = classType.Invoke("AsNUInt", vector == null ? null : vector.getJCOInstance());
+            JCObject objAsNUInt = (JCObject)retObjectAsNUInt;
+            return new Vector128_1(objAsNUInt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsNUInt != null ? retObjectAsNUInt.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Abs(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAbs = null;
+        try {
+            retObjectAbs = classType.Invoke("Abs", vector == null ? null : vector.getJCOInstance());
+            JCObject objAbs = (JCObject)retObjectAbs;
+            return new Vector128_1(objAbs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbs != null ? retObjectAbs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Add(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
+        try {
+            retObjectAdd = classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
+            return new Vector128_1(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AndNot(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAndNot = null;
+        try {
+            retObjectAndNot = classType.Invoke("AndNot", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAndNot = (JCObject)retObjectAndNot;
+            return new Vector128_1(objAndNot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAndNot != null ? retObjectAndNot.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 AsVector128(Vector_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsVector128 = null;
+        try {
+            retObjectAsVector128 = classType.Invoke("AsVector128", value == null ? null : value.getJCOInstance());
+            JCObject objAsVector128 = (JCObject)retObjectAsVector128;
+            return new Vector128_1(objAsVector128);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsVector128 != null ? retObjectAsVector128.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 BitwiseAnd(Vector128_1 left, Vector128_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBitwiseAnd = null;
+        try {
+            retObjectBitwiseAnd = classType.Invoke("BitwiseAnd", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objBitwiseAnd = (JCObject)retObjectBitwiseAnd;
+            return new Vector128_1(objBitwiseAnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitwiseAnd != null ? retObjectBitwiseAnd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 BitwiseOr(Vector128_1 left, Vector128_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBitwiseOr = null;
+        try {
+            retObjectBitwiseOr = classType.Invoke("BitwiseOr", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objBitwiseOr = (JCObject)retObjectBitwiseOr;
+            return new Vector128_1(objBitwiseOr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitwiseOr != null ? retObjectBitwiseOr.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 ConditionalSelect(Vector128_1 condition, Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConditionalSelect = null;
+        try {
+            retObjectConditionalSelect = classType.Invoke("ConditionalSelect", condition == null ? null : condition.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objConditionalSelect = (JCObject)retObjectConditionalSelect;
+            return new Vector128_1(objConditionalSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConditionalSelect != null ? retObjectConditionalSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Create(T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Create(T[] values, int index) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", values == null ? null : toObjectFromArray(values), index);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Create(T[] values) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", values == null ? null : toObjectFromArray(values));
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Vector128_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 CreateScalar(T value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalar = null;
+        try {
+            retObjectCreateScalar = classType.Invoke("CreateScalar", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreateScalar = (JCObject)retObjectCreateScalar;
+            return new Vector128_1(objCreateScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalar != null ? retObjectCreateScalar.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 CreateScalarUnsafe(T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateScalarUnsafe = null;
+        try {
+            retObjectCreateScalarUnsafe = classType.Invoke("CreateScalarUnsafe", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreateScalarUnsafe = (JCObject)retObjectCreateScalarUnsafe;
+            return new Vector128_1(objCreateScalarUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateScalarUnsafe != null ? retObjectCreateScalarUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Divide(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
+        try {
+            retObjectDivide = classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivide = (JCObject)retObjectDivide;
+            return new Vector128_1(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Divide(Vector128_1 left, T right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
+        try {
+            retObjectDivide = classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : ((IJCOBridgeReflected)right).getJCOInstance());
+            JCObject objDivide = (JCObject)retObjectDivide;
+            return new Vector128_1(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Equals(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
+        try {
+            retObjectEquals = classType.Invoke("Equals", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objEquals = (JCObject)retObjectEquals;
+            return new Vector128_1(objEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 GreaterThan(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThan = null;
+        try {
+            retObjectGreaterThan = classType.Invoke("GreaterThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objGreaterThan = (JCObject)retObjectGreaterThan;
+            return new Vector128_1(objGreaterThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThan != null ? retObjectGreaterThan.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 GreaterThanOrEqual(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqual = null;
+        try {
+            retObjectGreaterThanOrEqual = classType.Invoke("GreaterThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objGreaterThanOrEqual = (JCObject)retObjectGreaterThanOrEqual;
+            return new Vector128_1(objGreaterThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThanOrEqual != null ? retObjectGreaterThanOrEqual.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 LessThan(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThan = null;
+        try {
+            retObjectLessThan = classType.Invoke("LessThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objLessThan = (JCObject)retObjectLessThan;
+            return new Vector128_1(objLessThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThan != null ? retObjectLessThan.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 LessThanOrEqual(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqual = null;
+        try {
+            retObjectLessThanOrEqual = classType.Invoke("LessThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objLessThanOrEqual = (JCObject)retObjectLessThanOrEqual;
+            return new Vector128_1(objLessThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThanOrEqual != null ? retObjectLessThanOrEqual.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 LoadUnsafe(JCORefOut<T> source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadUnsafe = null;
+        try {
+            retObjectLoadUnsafe = classType.Invoke("LoadUnsafe", source.getJCRefOut());
+            JCObject objLoadUnsafe = (JCObject)retObjectLoadUnsafe;
+            return new Vector128_1(objLoadUnsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadUnsafe != null ? retObjectLoadUnsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Max(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
+        try {
+            retObjectMax = classType.Invoke("Max", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMax = (JCObject)retObjectMax;
+            return new Vector128_1(objMax);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMax != null ? retObjectMax.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Min(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMin = null;
+        try {
+            retObjectMin = classType.Invoke("Min", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMin = (JCObject)retObjectMin;
+            return new Vector128_1(objMin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMin != null ? retObjectMin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Multiply(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
+        try {
+            retObjectMultiply = classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
+            return new Vector128_1(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Multiply(Vector128_1 left, T right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
+        try {
+            retObjectMultiply = classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : ((IJCOBridgeReflected)right).getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
+            return new Vector128_1(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Multiply(T left, Vector128_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
+        try {
+            retObjectMultiply = classType.Invoke("Multiply", left == null ? null : ((IJCOBridgeReflected)left).getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
+            return new Vector128_1(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Negate(Vector128_1 vector) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegate = null;
+        try {
+            retObjectNegate = classType.Invoke("Negate", vector == null ? null : vector.getJCOInstance());
+            JCObject objNegate = (JCObject)retObjectNegate;
+            return new Vector128_1(objNegate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegate != null ? retObjectNegate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 OnesComplement(Vector128_1 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOnesComplement = null;
+        try {
+            retObjectOnesComplement = classType.Invoke("OnesComplement", vector == null ? null : vector.getJCOInstance());
+            JCObject objOnesComplement = (JCObject)retObjectOnesComplement;
+            return new Vector128_1(objOnesComplement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnesComplement != null ? retObjectOnesComplement.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Sqrt(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSqrt = null;
+        try {
+            retObjectSqrt = classType.Invoke("Sqrt", vector == null ? null : vector.getJCOInstance());
+            JCObject objSqrt = (JCObject)retObjectSqrt;
+            return new Vector128_1(objSqrt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqrt != null ? retObjectSqrt.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Subtract(Vector128_1 left, Vector128_1 right) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
+        try {
+            retObjectSubtract = classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
+            return new Vector128_1(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 WithElement(Vector128_1 vector, int index, T value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithElement = null;
+        try {
+            retObjectWithElement = classType.Invoke("WithElement", vector == null ? null : vector.getJCOInstance(), index, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objWithElement = (JCObject)retObjectWithElement;
+            return new Vector128_1(objWithElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithElement != null ? retObjectWithElement.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 WithLower(Vector128_1 vector, Vector64_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithLower = null;
+        try {
+            retObjectWithLower = classType.Invoke("WithLower", vector == null ? null : vector.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objWithLower = (JCObject)retObjectWithLower;
+            return new Vector128_1(objWithLower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithLower != null ? retObjectWithLower.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 WithUpper(Vector128_1 vector, Vector64_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithUpper = null;
+        try {
+            retObjectWithUpper = classType.Invoke("WithUpper", vector == null ? null : vector.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objWithUpper = (JCObject)retObjectWithUpper;
+            return new Vector128_1(objWithUpper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithUpper != null ? retObjectWithUpper.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector128_1 Xor(Vector128_1 left, Vector128_1 right) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXor = null;
+        try {
+            retObjectXor = classType.Invoke("Xor", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objXor = (JCObject)retObjectXor;
+            return new Vector128_1(objXor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXor != null ? retObjectXor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFrom extends IJCOBridgeReflected, TTo extends IJCOBridgeReflected> Vector128_1 As(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAs = null;
+        try {
+            retObjectAs = classType.Invoke("As", vector == null ? null : vector.getJCOInstance());
+            JCObject objAs = (JCObject)retObjectAs;
+            return new Vector128_1(objAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAs != null ? retObjectAs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector256_1 ToVector256(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToVector256 = null;
+        try {
+            retObjectToVector256 = classType.Invoke("ToVector256", vector == null ? null : vector.getJCOInstance());
+            JCObject objToVector256 = (JCObject)retObjectToVector256;
+            return new Vector256_1(objToVector256);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToVector256 != null ? retObjectToVector256.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector256_1 ToVector256Unsafe(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToVector256Unsafe = null;
+        try {
+            retObjectToVector256Unsafe = classType.Invoke("ToVector256Unsafe", vector == null ? null : vector.getJCOInstance());
+            JCObject objToVector256Unsafe = (JCObject)retObjectToVector256Unsafe;
+            return new Vector256_1(objToVector256Unsafe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToVector256Unsafe != null ? retObjectToVector256Unsafe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector64_1 GetLower(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLower = null;
+        try {
+            retObjectGetLower = classType.Invoke("GetLower", vector == null ? null : vector.getJCOInstance());
+            JCObject objGetLower = (JCObject)retObjectGetLower;
+            return new Vector64_1(objGetLower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLower != null ? retObjectGetLower.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Vector64_1 GetUpper(Vector128_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUpper = null;
+        try {
+            retObjectGetUpper = classType.Invoke("GetUpper", vector == null ? null : vector.getJCOInstance());
+            JCObject objGetUpper = (JCObject)retObjectGetUpper;
+            return new Vector64_1(objGetUpper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpper != null ? retObjectGetUpper.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 Widen(Vector128_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWiden = null;
+        try {
+            retObjectWiden = classType.Invoke("Widen", source == null ? null : source.getJCOInstance());
+            JCObject objWiden = (JCObject)retObjectWiden;
+            return new ValueTuple_2(objWiden);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWiden != null ? retObjectWiden.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> UInt32 ExtractMostSignificantBits(Vector128_1 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtractMostSignificantBits = null;
+        try {
+            retObjectExtractMostSignificantBits = classType.Invoke("ExtractMostSignificantBits", vector == null ? null : vector.getJCOInstance());
+            JCObject objExtractMostSignificantBits = (JCObject)retObjectExtractMostSignificantBits;
+            return new UInt32(objExtractMostSignificantBits);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractMostSignificantBits != null ? retObjectExtractMostSignificantBits.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void CopyTo(Vector128_1 vector, T[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CopyTo", vector == null ? null : vector.getJCOInstance(), destination == null ? null : toObjectFromArray(destination), startIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void CopyTo(Vector128_1 vector, T[] destination) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CopyTo", vector == null ? null : vector.getJCOInstance(), destination == null ? null : toObjectFromArray(destination));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void StoreUnsafe(Vector128_1 source, JCORefOut<T> destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("StoreUnsafe", source == null ? null : source.getJCOInstance(), destination.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.KeyedCollection_2;
+import system.xml.XmlQualifiedName;
+import system.servicemodel.description.MessagePartDescription;
 
 
 /**
@@ -52,7 +55,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MessagePartDescriptionCollection extends NetObjectEnumerable  {
+public class MessagePartDescriptionCollection extends system.collections.objectmodel.KeyedCollection_2<XmlQualifiedName, MessagePartDescription>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

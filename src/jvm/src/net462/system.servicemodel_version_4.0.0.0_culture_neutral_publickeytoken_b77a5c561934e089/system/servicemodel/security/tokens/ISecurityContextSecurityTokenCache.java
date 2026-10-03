@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.servicemodel.security.tokens.SecurityContextSecurityToken;
+import system.collections.objectmodel.Collection_1;
 import system.xml.UniqueId;
 import system.DateTime;
 
@@ -119,6 +120,8 @@ public interface ISecurityContextSecurityTokenCache extends IJCOBridgeReflected 
     // Methods section
     
     public boolean TryAddContext(SecurityContextSecurityToken token) throws Throwable;
+
+    public Collection_1 GetAllContexts(UniqueId contextId) throws Throwable;
 
     public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable;
 

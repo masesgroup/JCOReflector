@@ -46,13 +46,11 @@ import system.security.principal.TokenAccessLevels;
 import system.security.principal.WindowsImpersonationContext;
 import microsoft.win32.safehandles.SafeAccessTokenHandle;
 import system.Action;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.security.principal.IdentityReferenceCollection;
 import system.security.principal.SecurityIdentifier;
 import system.security.principal.TokenImpersonationLevel;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -67,7 +65,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WindowsIdentity extends ClaimsIdentity implements ISerializable, IDeserializationCallback, AutoCloseable {
+public class WindowsIdentity extends system.security.claims.ClaimsIdentity implements AutoCloseable {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -395,6 +393,36 @@ public class WindowsIdentity extends ClaimsIdentity implements ISerializable, ID
             return new SafeAccessTokenHandle(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessToken != null ? retObjectAccessToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getDeviceClaims() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceClaims = null;
+        try {
+            retObjectDeviceClaims = classInstance.Get("DeviceClaims");
+            JCObject val = (JCObject)retObjectDeviceClaims;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeviceClaims != null ? retObjectDeviceClaims.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getUserClaims() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserClaims = null;
+        try {
+            retObjectUserClaims = classInstance.Get("UserClaims");
+            JCObject val = (JCObject)retObjectUserClaims;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserClaims != null ? retObjectUserClaims.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

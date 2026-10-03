@@ -58,7 +58,7 @@ import system.windows.data.IValueConverterImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TemplateBindingExtension extends MarkupExtension  {
+public class TemplateBindingExtension extends system.windows.markup.MarkupExtension  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

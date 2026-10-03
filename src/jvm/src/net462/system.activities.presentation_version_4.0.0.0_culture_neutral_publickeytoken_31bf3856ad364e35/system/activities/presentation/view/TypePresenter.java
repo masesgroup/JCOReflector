@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.windows.controls.ContentControl;
 import system.activities.presentation.EditingContext;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ObservableCollection_1;
+import system.Func_2;
 import system.componentmodel.PropertyChangedEventHandler;
 import system.windows.RoutedEventHandler;
 
@@ -56,7 +60,7 @@ import system.windows.RoutedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TypePresenter extends ContentControl  {
+public class TypePresenter extends system.windows.controls.ContentControl  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -312,6 +316,85 @@ public class TypePresenter extends ContentControl  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Context", Context == null ? null : Context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getItems() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
+        try {
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ObservableCollection_1 getDefaultMostRecentlyUsedTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultMostRecentlyUsedTypes = null;
+        try {
+            retObjectDefaultMostRecentlyUsedTypes = classType.Get("DefaultMostRecentlyUsedTypes");
+            JCObject val = (JCObject)retObjectDefaultMostRecentlyUsedTypes;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultMostRecentlyUsedTypes != null ? retObjectDefaultMostRecentlyUsedTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObservableCollection_1 getMostRecentlyUsedTypes() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMostRecentlyUsedTypes = null;
+        try {
+            retObjectMostRecentlyUsedTypes = classInstance.Get("MostRecentlyUsedTypes");
+            JCObject val = (JCObject)retObjectMostRecentlyUsedTypes;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMostRecentlyUsedTypes != null ? retObjectMostRecentlyUsedTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMostRecentlyUsedTypes(ObservableCollection_1 MostRecentlyUsedTypes) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MostRecentlyUsedTypes", MostRecentlyUsedTypes == null ? null : MostRecentlyUsedTypes.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getFilter() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
+        try {
+            retObjectFilter = classInstance.Get("Filter");
+            return (Func_2)retObjectFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setFilter(Func_2 Filter) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Filter", Filter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

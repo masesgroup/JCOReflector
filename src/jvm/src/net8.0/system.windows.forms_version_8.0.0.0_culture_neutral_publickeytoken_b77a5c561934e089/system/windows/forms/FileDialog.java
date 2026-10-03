@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.CommonDialog;
+import system.Nullable_1;
 import system.windows.forms.FileDialogCustomPlacesCollection;
 import system.componentmodel.CancelEventHandler;
 
@@ -55,7 +56,7 @@ import system.componentmodel.CancelEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FileDialog extends CommonDialog  {
+public class FileDialog extends system.windows.forms.CommonDialog  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -525,6 +526,31 @@ public class FileDialog extends CommonDialog  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterIndex", FilterIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getClientGuid() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientGuid = null;
+        try {
+            retObjectClientGuid = classInstance.Get("ClientGuid");
+            JCObject val = (JCObject)retObjectClientGuid;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientGuid != null ? retObjectClientGuid.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setClientGuid(Nullable_1 ClientGuid) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ClientGuid", ClientGuid == null ? null : ClientGuid.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

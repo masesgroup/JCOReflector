@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.EndpointAddress;
+import system.collections.generic.KeyedByTypeCollection_1;
+import system.collections.objectmodel.KeyedCollection_2;
 import system.servicemodel.description.ListenUriMode;
 import system.Uri;
 
@@ -200,6 +202,36 @@ public class ServiceEndpoint extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSystemEndpoint", IsSystemEndpoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedByTypeCollection_1 getBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBehaviors = null;
+        try {
+            retObjectBehaviors = classInstance.Get("Behaviors");
+            JCObject val = (JCObject)retObjectBehaviors;
+            return new KeyedByTypeCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBehaviors != null ? retObjectBehaviors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedCollection_2 getEndpointBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointBehaviors = null;
+        try {
+            retObjectEndpointBehaviors = classInstance.Get("EndpointBehaviors");
+            JCObject val = (JCObject)retObjectEndpointBehaviors;
+            return new KeyedCollection_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpointBehaviors != null ? retObjectEndpointBehaviors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

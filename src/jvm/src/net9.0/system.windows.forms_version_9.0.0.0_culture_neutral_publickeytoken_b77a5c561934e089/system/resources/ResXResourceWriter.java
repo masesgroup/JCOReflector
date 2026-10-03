@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.Stream;
+import system.Func_2;
 import system.io.TextWriter;
 import system.reflection.AssemblyName;
 import system.resources.ResXDataNode;
@@ -152,6 +153,16 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
     public ResXResourceWriter() throws Throwable {
     }
 
+    public ResXResourceWriter(Stream stream, Func_2 typeNameConverter) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), typeNameConverter));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ResXResourceWriter(Stream stream) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -162,11 +173,31 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
         }
     }
 
+    public ResXResourceWriter(TextWriter textWriter, Func_2 typeNameConverter) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(textWriter == null ? null : textWriter.getJCOInstance(), typeNameConverter));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ResXResourceWriter(TextWriter textWriter) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(textWriter == null ? null : textWriter.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ResXResourceWriter(java.lang.String fileName, Func_2 typeNameConverter) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(fileName, typeNameConverter));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

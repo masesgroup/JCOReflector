@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.identitymodel.metadata.LocalizedEntryCollection_1;
 
 
 /**
@@ -155,6 +156,16 @@ public class Organization extends NetObject  {
         }
     }
 
+    public Organization(LocalizedEntryCollection_1 names, LocalizedEntryCollection_1 displayNames, LocalizedEntryCollection_1 urls) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(names == null ? null : names.getJCOInstance(), displayNames == null ? null : displayNames.getJCOInstance(), urls == null ? null : urls.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -163,6 +174,51 @@ public class Organization extends NetObject  {
     
     // Properties section
     
+    public LocalizedEntryCollection_1 getDisplayNames() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayNames = null;
+        try {
+            retObjectDisplayNames = classInstance.Get("DisplayNames");
+            JCObject val = (JCObject)retObjectDisplayNames;
+            return new LocalizedEntryCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayNames != null ? retObjectDisplayNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalizedEntryCollection_1 getNames() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNames = null;
+        try {
+            retObjectNames = classInstance.Get("Names");
+            JCObject val = (JCObject)retObjectNames;
+            return new LocalizedEntryCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNames != null ? retObjectNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LocalizedEntryCollection_1 getUrls() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrls = null;
+        try {
+            retObjectUrls = classInstance.Get("Urls");
+            JCObject val = (JCObject)retObjectUrls;
+            return new LocalizedEntryCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUrls != null ? retObjectUrls.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

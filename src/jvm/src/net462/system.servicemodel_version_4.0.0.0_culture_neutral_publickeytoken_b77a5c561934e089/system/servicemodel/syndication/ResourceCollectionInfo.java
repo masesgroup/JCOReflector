@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.syndication.TextSyndicationContent;
 import system.Uri;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.Dictionary_2;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
 
 
@@ -168,6 +172,26 @@ public class ResourceCollectionInfo extends NetObject  {
         }
     }
 
+    public ResourceCollectionInfo(TextSyndicationContent title, Uri link, IEnumerable_1 categories, boolean allowsNewEntries) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(title == null ? null : title.getJCOInstance(), link == null ? null : link.getJCOInstance(), categories == null ? null : categories.getJCOInstance(), allowsNewEntries));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ResourceCollectionInfo(TextSyndicationContent title, Uri link, IEnumerable_1 categories, IEnumerable_1 accepts) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(title == null ? null : title.getJCOInstance(), link == null ? null : link.getJCOInstance(), categories == null ? null : categories.getJCOInstance(), accepts == null ? null : accepts.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ResourceCollectionInfo(java.lang.String title, Uri link) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -186,6 +210,51 @@ public class ResourceCollectionInfo extends NetObject  {
     
     // Properties section
     
+    public Dictionary_2 getAttributeExtensions() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeExtensions = null;
+        try {
+            retObjectAttributeExtensions = classInstance.Get("AttributeExtensions");
+            JCObject val = (JCObject)retObjectAttributeExtensions;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeExtensions != null ? retObjectAttributeExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getCategories() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategories = null;
+        try {
+            retObjectCategories = classInstance.Get("Categories");
+            JCObject val = (JCObject)retObjectCategories;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategories != null ? retObjectCategories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getAccepts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccepts = null;
+        try {
+            retObjectAccepts = classInstance.Get("Accepts");
+            JCObject val = (JCObject)retObjectAccepts;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccepts != null ? retObjectAccepts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

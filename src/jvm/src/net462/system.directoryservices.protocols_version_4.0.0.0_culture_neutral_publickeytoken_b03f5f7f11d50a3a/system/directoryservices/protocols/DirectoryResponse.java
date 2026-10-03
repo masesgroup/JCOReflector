@@ -56,7 +56,7 @@ import system.Uri;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DirectoryResponse extends DirectoryOperation  {
+public class DirectoryResponse extends system.directoryservices.protocols.DirectoryOperation  {
     /**
      * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

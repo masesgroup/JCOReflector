@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.security.cryptography.pkcs.Pkcs12SafeBag;
 import system.security.cryptography.Oid;
+import system.ReadOnlyMemory_1;
 import system.security.cryptography.x509certificates.X509Certificate2;
 
 
@@ -55,7 +56,7 @@ import system.security.cryptography.x509certificates.X509Certificate2;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Pkcs12CertBag extends Pkcs12SafeBag  {
+public class Pkcs12CertBag extends system.security.cryptography.pkcs.Pkcs12SafeBag  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -151,6 +152,16 @@ public class Pkcs12CertBag extends Pkcs12SafeBag  {
     public Pkcs12CertBag() throws Throwable {
     }
 
+    public Pkcs12CertBag(Oid certificateType, ReadOnlyMemory_1 encodedCertificate) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OverflowException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(certificateType == null ? null : certificateType.getJCOInstance(), encodedCertificate == null ? null : encodedCertificate.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -199,6 +210,21 @@ public class Pkcs12CertBag extends Pkcs12SafeBag  {
             return (boolean)retObjectIsX509Certificate;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsX509Certificate != null ? retObjectIsX509Certificate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 getEncodedCertificate() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedCertificate = null;
+        try {
+            retObjectEncodedCertificate = classInstance.Get("EncodedCertificate");
+            JCObject val = (JCObject)retObjectEncodedCertificate;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncodedCertificate != null ? retObjectEncodedCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

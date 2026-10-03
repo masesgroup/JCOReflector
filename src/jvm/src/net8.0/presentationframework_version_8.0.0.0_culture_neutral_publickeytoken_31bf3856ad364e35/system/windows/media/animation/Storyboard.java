@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.media.animation.ParallelTimeline;
 import system.windows.FrameworkContentElement;
 import system.windows.FrameworkElement;
+import system.Nullable_1;
 import system.windows.DependencyObject;
 import system.TimeSpan;
 import system.windows.media.animation.ClockState;
@@ -63,7 +64,7 @@ import system.windows.media.animation.TimeSeekOrigin;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Storyboard extends ParallelTimeline  {
+public class Storyboard extends system.windows.media.animation.ParallelTimeline  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -327,6 +328,126 @@ public class Storyboard extends ParallelTimeline  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetCurrentGlobalSpeed(FrameworkContentElement containingObject) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentGlobalSpeed = null;
+        try {
+            retObjectGetCurrentGlobalSpeed = classInstance.Invoke("GetCurrentGlobalSpeed", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentGlobalSpeed = (JCObject)retObjectGetCurrentGlobalSpeed;
+            return new Nullable_1(objGetCurrentGlobalSpeed);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentGlobalSpeed != null ? retObjectGetCurrentGlobalSpeed.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetCurrentGlobalSpeed(FrameworkElement containingObject) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentGlobalSpeed = null;
+        try {
+            retObjectGetCurrentGlobalSpeed = classInstance.Invoke("GetCurrentGlobalSpeed", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentGlobalSpeed = (JCObject)retObjectGetCurrentGlobalSpeed;
+            return new Nullable_1(objGetCurrentGlobalSpeed);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentGlobalSpeed != null ? retObjectGetCurrentGlobalSpeed.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetCurrentProgress(FrameworkContentElement containingObject) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentProgress = null;
+        try {
+            retObjectGetCurrentProgress = classInstance.Invoke("GetCurrentProgress", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentProgress = (JCObject)retObjectGetCurrentProgress;
+            return new Nullable_1(objGetCurrentProgress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentProgress != null ? retObjectGetCurrentProgress.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetCurrentProgress(FrameworkElement containingObject) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentProgress = null;
+        try {
+            retObjectGetCurrentProgress = classInstance.Invoke("GetCurrentProgress", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentProgress = (JCObject)retObjectGetCurrentProgress;
+            return new Nullable_1(objGetCurrentProgress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentProgress != null ? retObjectGetCurrentProgress.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetCurrentIteration(FrameworkContentElement containingObject) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentIteration = null;
+        try {
+            retObjectGetCurrentIteration = classInstance.Invoke("GetCurrentIteration", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentIteration = (JCObject)retObjectGetCurrentIteration;
+            return new Nullable_1(objGetCurrentIteration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentIteration != null ? retObjectGetCurrentIteration.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetCurrentIteration(FrameworkElement containingObject) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentIteration = null;
+        try {
+            retObjectGetCurrentIteration = classInstance.Invoke("GetCurrentIteration", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentIteration = (JCObject)retObjectGetCurrentIteration;
+            return new Nullable_1(objGetCurrentIteration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentIteration != null ? retObjectGetCurrentIteration.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetCurrentTime(FrameworkContentElement containingObject) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentTime = null;
+        try {
+            retObjectGetCurrentTime = classInstance.Invoke("GetCurrentTime", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentTime = (JCObject)retObjectGetCurrentTime;
+            return new Nullable_1(objGetCurrentTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentTime != null ? retObjectGetCurrentTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetCurrentTime(FrameworkElement containingObject) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentTime = null;
+        try {
+            retObjectGetCurrentTime = classInstance.Invoke("GetCurrentTime", containingObject == null ? null : containingObject.getJCOInstance());
+            JCObject objGetCurrentTime = (JCObject)retObjectGetCurrentTime;
+            return new Nullable_1(objGetCurrentTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentTime != null ? retObjectGetCurrentTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

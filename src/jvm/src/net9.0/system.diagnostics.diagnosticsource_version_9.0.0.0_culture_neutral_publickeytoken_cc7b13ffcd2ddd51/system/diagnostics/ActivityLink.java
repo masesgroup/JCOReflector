@@ -42,6 +42,8 @@ import system.ValueType;
 import system.diagnostics.ActivityContext;
 import system.diagnostics.ActivityTagsCollection;
 import system.diagnostics.ActivityLink;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -56,7 +58,7 @@ import system.diagnostics.ActivityLink;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityLink extends ValueType  {
+public class ActivityLink extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -185,6 +187,21 @@ public class ActivityLink extends ValueType  {
     
     // Properties section
     
+    public IEnumerable_1 getTags() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTags = null;
+        try {
+            retObjectTags = classInstance.Get("Tags");
+            JCObject val = (JCObject)retObjectTags;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTags != null ? retObjectTags.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ActivityContext getContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

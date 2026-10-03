@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.NativeActivity;
 import system.activities.Activity;
+import system.activities.InArgument_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.activities.Activity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CorrelationScope extends NativeActivity  {
+public class CorrelationScope extends system.activities.NativeActivity  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -199,6 +200,31 @@ public class CorrelationScope extends NativeActivity  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InArgument_1 getCorrelatesWith() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelatesWith = null;
+        try {
+            retObjectCorrelatesWith = classInstance.Get("CorrelatesWith");
+            JCObject val = (JCObject)retObjectCorrelatesWith;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelatesWith != null ? retObjectCorrelatesWith.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCorrelatesWith(InArgument_1 CorrelatesWith) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CorrelatesWith", CorrelatesWith == null ? null : CorrelatesWith.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

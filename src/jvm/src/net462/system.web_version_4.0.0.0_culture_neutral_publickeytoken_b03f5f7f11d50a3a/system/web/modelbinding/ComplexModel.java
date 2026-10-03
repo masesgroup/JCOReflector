@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.modelbinding.ModelMetadata;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -149,6 +154,16 @@ public class ComplexModel extends NetObject  {
     public ComplexModel() throws Throwable {
     }
 
+    public ComplexModel(ModelMetadata modelMetadata, IEnumerable_1 propertyMetadata) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(modelMetadata == null ? null : modelMetadata.getJCOInstance(), propertyMetadata == null ? null : propertyMetadata.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +173,56 @@ public class ComplexModel extends NetObject  {
     
     // Properties section
     
+    public IDictionary_2 getResults() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResults = null;
+        try {
+            retObjectResults = classInstance.Get("Results");
+            JCObject val = (JCObject)retObjectResults;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResults != null ? retObjectResults.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setResults(IDictionary_2 Results) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Results", Results == null ? null : Results.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPropertyMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyMetadata = null;
+        try {
+            retObjectPropertyMetadata = classInstance.Get("PropertyMetadata");
+            JCObject val = (JCObject)retObjectPropertyMetadata;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyMetadata != null ? retObjectPropertyMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPropertyMetadata(ReadOnlyCollection_1 PropertyMetadata) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PropertyMetadata", PropertyMetadata == null ? null : PropertyMetadata.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ModelMetadata getModelMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

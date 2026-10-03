@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.xaml.XamlType;
 import system.reflection.MethodInfo;
+import system.EventHandler_1;
 import system.xaml.schema.XamlTypeInvoker;
 
 
@@ -250,6 +251,34 @@ public class XamlTypeInvoker extends NetObject  {
     
     // Properties section
     
+    public EventHandler_1 getSetMarkupExtensionHandler() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.OutOfMemoryException, system.xaml.XamlSchemaException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetMarkupExtensionHandler = null;
+        try {
+            retObjectSetMarkupExtensionHandler = classInstance.Get("SetMarkupExtensionHandler");
+            return (EventHandler_1)retObjectSetMarkupExtensionHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectSetMarkupExtensionHandler != null ? retObjectSetMarkupExtensionHandler.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventHandler_1 getSetTypeConverterHandler() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.OutOfMemoryException, system.xaml.XamlSchemaException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetTypeConverterHandler = null;
+        try {
+            retObjectSetTypeConverterHandler = classInstance.Get("SetTypeConverterHandler");
+            return (EventHandler_1)retObjectSetTypeConverterHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectSetTypeConverterHandler != null ? retObjectSetTypeConverterHandler.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static XamlTypeInvoker getUnknownInvoker() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

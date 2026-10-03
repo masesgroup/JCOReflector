@@ -43,6 +43,7 @@ import system.net.http.json.JsonContent;
 import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.net.http.headers.MediaTypeHeaderValue;
 import system.text.json.JsonSerializerOptions;
+import system.text.json.serialization.metadata.JsonTypeInfo_1;
 
 
 /**
@@ -57,7 +58,7 @@ import system.text.json.JsonSerializerOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JsonContent extends HttpContent  {
+public class JsonContent extends system.net.http.HttpContent  {
     /**
      * Fully assembly qualified name: System.Net.Http.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -179,6 +180,36 @@ public class JsonContent extends HttpContent  {
         java.lang.Object retObjectCreate = null;
         try {
             retObjectCreate = classType.Invoke("Create", inputValue == null ? null : inputValue.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), mediaType == null ? null : mediaType.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonContent(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonContent Create(T inputValue, MediaTypeHeaderValue mediaType, JsonSerializerOptions options) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", inputValue == null ? null : ((IJCOBridgeReflected)inputValue).getJCOInstance(), mediaType == null ? null : mediaType.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new JsonContent(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonContent Create(T inputValue, JsonTypeInfo_1 jsonTypeInfo, MediaTypeHeaderValue mediaType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", inputValue == null ? null : ((IJCOBridgeReflected)inputValue).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), mediaType == null ? null : mediaType.getJCOInstance());
             JCObject objCreate = (JCObject)retObjectCreate;
             return new JsonContent(objCreate);
         } catch (java.lang.ClassCastException cce) {

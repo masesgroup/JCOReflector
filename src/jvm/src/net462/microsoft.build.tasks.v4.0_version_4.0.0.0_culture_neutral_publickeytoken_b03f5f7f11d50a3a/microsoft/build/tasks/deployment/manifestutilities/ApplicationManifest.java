@@ -58,7 +58,7 @@ import microsoft.build.tasks.deployment.manifestutilities.TrustInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ApplicationManifest extends AssemblyManifest  {
+public class ApplicationManifest extends microsoft.build.tasks.deployment.manifestutilities.AssemblyManifest  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

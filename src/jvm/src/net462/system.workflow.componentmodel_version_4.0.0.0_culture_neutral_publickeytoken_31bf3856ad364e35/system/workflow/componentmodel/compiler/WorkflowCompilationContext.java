@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.IServiceProvider;
@@ -158,6 +160,21 @@ public class WorkflowCompilationContext extends NetObject  {
     
     // Methods section
     
+    public IList_1 GetAuthorizedTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAuthorizedTypes = null;
+        try {
+            retObjectGetAuthorizedTypes = classInstance.Invoke("GetAuthorizedTypes");
+            JCObject objGetAuthorizedTypes = (JCObject)retObjectGetAuthorizedTypes;
+            return new IList_1Implementation(objGetAuthorizedTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAuthorizedTypes != null ? retObjectGetAuthorizedTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static IDisposable CreateScope(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.objectmodel.ObservableCollection_1;
+import system.Nullable_1;
 
 
 /**
@@ -124,6 +126,24 @@ public interface ICollectionViewLiveShaping extends IJCOBridgeReflected {
     public boolean getCanChangeLiveGrouping() throws Throwable;
 
     public boolean getCanChangeLiveSorting() throws Throwable;
+
+    public ObservableCollection_1 getLiveFilteringProperties() throws Throwable;
+
+    public ObservableCollection_1 getLiveGroupingProperties() throws Throwable;
+
+    public ObservableCollection_1 getLiveSortingProperties() throws Throwable;
+
+    public Nullable_1 getIsLiveFiltering() throws Throwable;
+
+    public void setIsLiveFiltering(Nullable_1 IsLiveFiltering) throws Throwable;
+
+    public Nullable_1 getIsLiveGrouping() throws Throwable;
+
+    public void setIsLiveGrouping(Nullable_1 IsLiveGrouping) throws Throwable;
+
+    public Nullable_1 getIsLiveSorting() throws Throwable;
+
+    public void setIsLiveSorting(Nullable_1 IsLiveSorting) throws Throwable;
 
 
 

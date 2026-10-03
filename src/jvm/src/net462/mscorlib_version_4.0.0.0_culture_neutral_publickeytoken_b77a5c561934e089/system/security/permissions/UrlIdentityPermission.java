@@ -57,7 +57,7 @@ import system.security.SecurityElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UrlIdentityPermission extends CodeAccessPermission  {
+public class UrlIdentityPermission extends system.security.CodeAccessPermission  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.activities.tracking.configuration.TrackingConfigurationCollection_1;
+import system.servicemodel.activities.tracking.configuration.AnnotationElement;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AnnotationElementCollection extends NetObjectEnumerable  {
+public class AnnotationElementCollection extends system.servicemodel.activities.tracking.configuration.TrackingConfigurationCollection_1<AnnotationElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

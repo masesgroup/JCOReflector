@@ -38,7 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.identitymodel.tokens.Saml2Id;
+import system.Nullable_1;
 import system.Uri;
 
 
@@ -165,6 +167,21 @@ public class Saml2SubjectConfirmationData extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getKeyIdentifiers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyIdentifiers = null;
+        try {
+            retObjectKeyIdentifiers = classInstance.Get("KeyIdentifiers");
+            JCObject val = (JCObject)retObjectKeyIdentifiers;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyIdentifiers != null ? retObjectKeyIdentifiers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Saml2Id getInResponseTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +202,56 @@ public class Saml2SubjectConfirmationData extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InResponseTo", InResponseTo == null ? null : InResponseTo.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getNotBefore() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotBefore = null;
+        try {
+            retObjectNotBefore = classInstance.Get("NotBefore");
+            JCObject val = (JCObject)retObjectNotBefore;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotBefore != null ? retObjectNotBefore.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNotBefore(Nullable_1 NotBefore) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NotBefore", NotBefore == null ? null : NotBefore.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getNotOnOrAfter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotOnOrAfter = null;
+        try {
+            retObjectNotOnOrAfter = classInstance.Get("NotOnOrAfter");
+            JCObject val = (JCObject)retObjectNotOnOrAfter;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotOnOrAfter != null ? retObjectNotOnOrAfter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNotOnOrAfter(Nullable_1 NotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NotOnOrAfter", NotOnOrAfter == null ? null : NotOnOrAfter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

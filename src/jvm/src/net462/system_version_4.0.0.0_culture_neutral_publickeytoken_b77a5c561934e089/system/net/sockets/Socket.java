@@ -53,6 +53,8 @@ import system.net.EndPoint;
 import system.net.sockets.SocketFlags;
 import system.net.sockets.IPPacketInformation;
 import system.net.sockets.IOControlCode;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.AsyncCallback;
 import system.net.sockets.Socket;
 import system.net.IPAddress;
@@ -1184,6 +1186,126 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
+    public int Receive(IList_1 buffers) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
+        try {
+            retObjectReceive = classInstance.Invoke("Receive", buffers == null ? null : buffers.getJCOInstance());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Receive(IList_1 buffers, SocketFlags socketFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.SynchronizationLockException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
+        try {
+            retObjectReceive = classInstance.Invoke("Receive", buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Receive(IList_1 buffers, SocketFlags socketFlags, JCORefOut<SocketError> errorCode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceive = null;
+        try {
+            retObjectReceive = classInstance.Invoke("Receive", buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
+            return (int)retObjectReceive;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportReceiveError = true;
+            java.lang.String retObjectReceive_ToString = retObjectReceive == null ? "null" : retObjectReceive.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectReceive != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectReceiveClass = retObjectReceive.getClass();
+                    // java.lang.reflect.Method retObjectReceiveMethod = retObjectReceiveClass.getMethod("intValue");
+                    // return (int)retObjectReceiveMethod.invoke(retObjectReceive);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectReceiveNumber = java.text.NumberFormat.getInstance().parse(retObjectReceive_ToString);
+                    return retObjectReceiveNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportReceiveError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectReceive != null ? retObjectReceive.getClass() : "null", retObjectReceive_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportReceiveError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int ReceiveFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<EndPoint> remoteEP) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.net.sockets.SocketException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1744,6 +1866,126 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
+    public int Send(IList_1 buffers) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
+        try {
+            retObjectSend = classInstance.Invoke("Send", buffers == null ? null : buffers.getJCOInstance());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Send(IList_1 buffers, SocketFlags socketFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.SynchronizationLockException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
+        try {
+            retObjectSend = classInstance.Invoke("Send", buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Send(IList_1 buffers, SocketFlags socketFlags, JCORefOut<SocketError> errorCode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
+        try {
+            retObjectSend = classInstance.Invoke("Send", buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
+            return (int)retObjectSend;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSendError = true;
+            java.lang.String retObjectSend_ToString = retObjectSend == null ? "null" : retObjectSend.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSend != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSendClass = retObjectSend.getClass();
+                    // java.lang.reflect.Method retObjectSendMethod = retObjectSendClass.getMethod("intValue");
+                    // return (int)retObjectSendMethod.invoke(retObjectSend);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSendNumber = java.text.NumberFormat.getInstance().parse(retObjectSend_ToString);
+                    return retObjectSendNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSendError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSend != null ? retObjectSend.getClass() : "null", retObjectSend_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSendError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int SendTo(byte[] buffer, int offset, int size, SocketFlags socketFlags, EndPoint remoteEP) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.net.sockets.SocketException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2229,6 +2471,36 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
+    public IAsyncResult BeginReceive(IList_1 buffers, SocketFlags socketFlags, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
+        try {
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
+            return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginReceive(IList_1 buffers, SocketFlags socketFlags, JCORefOut<SocketError> errorCode, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginReceive = null;
+        try {
+            retObjectBeginReceive = classInstance.Invoke("BeginReceive", buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)retObjectBeginReceive;
+            return new IAsyncResultImplementation(objBeginReceive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginReceive != null ? retObjectBeginReceive.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginReceiveFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<EndPoint> remoteEP, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -2295,6 +2567,36 @@ public class Socket extends NetObject implements AutoCloseable {
         java.lang.Object retObjectBeginSend = null;
         try {
             retObjectBeginSend = classInstance.Invoke("BeginSend", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSend = (JCObject)retObjectBeginSend;
+            return new IAsyncResultImplementation(objBeginSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSend != null ? retObjectBeginSend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginSend(IList_1 buffers, SocketFlags socketFlags, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSend = null;
+        try {
+            retObjectBeginSend = classInstance.Invoke("BeginSend", buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSend = (JCObject)retObjectBeginSend;
+            return new IAsyncResultImplementation(objBeginSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSend != null ? retObjectBeginSend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginSend(IList_1 buffers, SocketFlags socketFlags, JCORefOut<SocketError> errorCode, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSend = null;
+        try {
+            retObjectBeginSend = classInstance.Invoke("BeginSend", buffers == null ? null : buffers.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
             JCObject objBeginSend = (JCObject)retObjectBeginSend;
             return new IAsyncResultImplementation(objBeginSend);
         } catch (java.lang.ClassCastException cce) {

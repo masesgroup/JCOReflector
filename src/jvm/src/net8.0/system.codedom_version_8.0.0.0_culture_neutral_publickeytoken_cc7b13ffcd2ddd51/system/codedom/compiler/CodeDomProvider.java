@@ -43,6 +43,8 @@ import system.codedom.compiler.GeneratorSupport;
 import system.codedom.CodeCompileUnit;
 import system.io.TextReader;
 import system.codedom.compiler.CodeDomProvider;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.codedom.compiler.CompilerInfo;
 import system.codedom.compiler.CompilerResults;
 import system.codedom.compiler.CompilerParameters;
@@ -76,7 +78,7 @@ import system.codedom.compiler.LanguageOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeDomProvider extends Component  {
+public class CodeDomProvider extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -241,6 +243,21 @@ public class CodeDomProvider extends Component  {
             return new CodeCompileUnit(objParse);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CodeDomProvider CreateProvider(java.lang.String language, IDictionary_2 providerOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.TypeLoadException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateProvider = null;
+        try {
+            retObjectCreateProvider = classType.Invoke("CreateProvider", language, providerOptions == null ? null : providerOptions.getJCOInstance());
+            JCObject objCreateProvider = (JCObject)retObjectCreateProvider;
+            return new CodeDomProvider(objCreateProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateProvider != null ? retObjectCreateProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

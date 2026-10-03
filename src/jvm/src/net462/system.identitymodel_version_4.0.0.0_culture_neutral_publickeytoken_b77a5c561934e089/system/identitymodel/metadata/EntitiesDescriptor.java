@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.metadata.MetadataBase;
+import system.collections.objectmodel.Collection_1;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -53,7 +56,7 @@ import system.identitymodel.metadata.MetadataBase;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EntitiesDescriptor extends MetadataBase  {
+public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBase  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +159,26 @@ public class EntitiesDescriptor extends MetadataBase  {
         }
     }
 
+    public EntitiesDescriptor(Collection_1 entityGroupList) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(entityGroupList == null ? null : entityGroupList.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntitiesDescriptor(Collection_1 entityList, Collection_1 entityGroupList) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(entityList == null ? null : entityList.getJCOInstance(), entityGroupList == null ? null : entityGroupList.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -164,6 +187,36 @@ public class EntitiesDescriptor extends MetadataBase  {
     
     // Properties section
     
+    public ICollection_1 getChildEntityGroups() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildEntityGroups = null;
+        try {
+            retObjectChildEntityGroups = classInstance.Get("ChildEntityGroups");
+            JCObject val = (JCObject)retObjectChildEntityGroups;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildEntityGroups != null ? retObjectChildEntityGroups.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getChildEntities() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildEntities = null;
+        try {
+            retObjectChildEntities = classInstance.Get("ChildEntities");
+            JCObject val = (JCObject)retObjectChildEntities;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildEntities != null ? retObjectChildEntities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

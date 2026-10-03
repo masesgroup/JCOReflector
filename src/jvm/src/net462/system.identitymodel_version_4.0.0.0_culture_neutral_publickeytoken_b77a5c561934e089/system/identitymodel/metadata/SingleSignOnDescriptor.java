@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.metadata.RoleDescriptor;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.objectmodel.Collection_1;
 import system.identitymodel.metadata.IndexedProtocolEndpointDictionary;
 
 
@@ -54,7 +57,7 @@ import system.identitymodel.metadata.IndexedProtocolEndpointDictionary;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SingleSignOnDescriptor extends RoleDescriptor  {
+public class SingleSignOnDescriptor extends system.identitymodel.metadata.RoleDescriptor  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -165,6 +168,36 @@ public class SingleSignOnDescriptor extends RoleDescriptor  {
     
     // Properties section
     
+    public ICollection_1 getNameIdentifierFormats() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameIdentifierFormats = null;
+        try {
+            retObjectNameIdentifierFormats = classInstance.Get("NameIdentifierFormats");
+            JCObject val = (JCObject)retObjectNameIdentifierFormats;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameIdentifierFormats != null ? retObjectNameIdentifierFormats.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getSingleLogoutServices() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSingleLogoutServices = null;
+        try {
+            retObjectSingleLogoutServices = classInstance.Get("SingleLogoutServices");
+            JCObject val = (JCObject)retObjectSingleLogoutServices;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleLogoutServices != null ? retObjectSingleLogoutServices.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IndexedProtocolEndpointDictionary getArtifactResolutionServices() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

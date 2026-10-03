@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.linq.expressions.SwitchCase;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.linq.expressions.Expression;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -155,10 +158,40 @@ public class SwitchCase extends NetObject  {
     
     // Methods section
     
+    public SwitchCase Update(IEnumerable_1 testValues, Expression body) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
+        try {
+            retObjectUpdate = classInstance.Invoke("Update", testValues == null ? null : testValues.getJCOInstance(), body == null ? null : body.getJCOInstance());
+            JCObject objUpdate = (JCObject)retObjectUpdate;
+            return new SwitchCase(objUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public ReadOnlyCollection_1 getTestValues() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTestValues = null;
+        try {
+            retObjectTestValues = classInstance.Get("TestValues");
+            JCObject val = (JCObject)retObjectTestValues;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTestValues != null ? retObjectTestValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Expression getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

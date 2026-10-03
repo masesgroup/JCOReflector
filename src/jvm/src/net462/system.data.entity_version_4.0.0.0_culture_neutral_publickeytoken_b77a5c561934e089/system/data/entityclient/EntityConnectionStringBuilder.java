@@ -55,7 +55,7 @@ import system.collections.ICollectionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EntityConnectionStringBuilder extends DbConnectionStringBuilder  {
+public class EntityConnectionStringBuilder extends system.data.common.DbConnectionStringBuilder  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

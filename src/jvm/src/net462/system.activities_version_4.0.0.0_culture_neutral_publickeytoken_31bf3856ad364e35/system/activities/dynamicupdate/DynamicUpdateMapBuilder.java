@@ -39,8 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.dynamicupdate.DynamicUpdateMap;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.activities.Activity;
 import system.activities.LocationReferenceEnvironment;
+import system.collections.generic.ISet_1;
+import system.collections.generic.ISet_1Implementation;
+import system.Func_2;
 
 
 /**
@@ -177,6 +182,21 @@ public class DynamicUpdateMapBuilder extends NetObject  {
         }
     }
 
+    public DynamicUpdateMap CreateMap(JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMap = null;
+        try {
+            retObjectCreateMap = classInstance.Invoke("CreateMap", activitiesBlockingUpdate.getJCRefOut());
+            JCObject objCreateMap = (JCObject)retObjectCreateMap;
+            return new DynamicUpdateMap(objCreateMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMap != null ? retObjectCreateMap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -300,6 +320,69 @@ public class DynamicUpdateMapBuilder extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdatedEnvironment", UpdatedEnvironment == null ? null : UpdatedEnvironment.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISet_1 getDisallowUpdateInside() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisallowUpdateInside = null;
+        try {
+            retObjectDisallowUpdateInside = classInstance.Get("DisallowUpdateInside");
+            JCObject val = (JCObject)retObjectDisallowUpdateInside;
+            return new ISet_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisallowUpdateInside != null ? retObjectDisallowUpdateInside.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getLookupImplementationMap() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupImplementationMap = null;
+        try {
+            retObjectLookupImplementationMap = classInstance.Get("LookupImplementationMap");
+            return (Func_2)retObjectLookupImplementationMap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectLookupImplementationMap != null ? retObjectLookupImplementationMap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLookupImplementationMap(Func_2 LookupImplementationMap) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LookupImplementationMap", LookupImplementationMap);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getLookupMapItem() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupMapItem = null;
+        try {
+            retObjectLookupMapItem = classInstance.Get("LookupMapItem");
+            return (Func_2)retObjectLookupMapItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectLookupMapItem != null ? retObjectLookupMapItem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLookupMapItem(Func_2 LookupMapItem) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LookupMapItem", LookupMapItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

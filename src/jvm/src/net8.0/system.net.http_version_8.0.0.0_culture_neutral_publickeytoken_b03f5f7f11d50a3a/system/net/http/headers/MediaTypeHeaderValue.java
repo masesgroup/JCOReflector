@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.headers.MediaTypeHeaderValue;
-import system.ICloneable;
-import system.ICloneableImplementation;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -55,7 +55,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MediaTypeHeaderValue extends NetObject implements ICloneable {
+public class MediaTypeHeaderValue extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -218,6 +218,21 @@ public class MediaTypeHeaderValue extends NetObject implements ICloneable {
     
     // Properties section
     
+    public ICollection_1 getParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
+        try {
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getCharSet() throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -43,6 +43,8 @@ import system.servicemodel.channels.IChannelListener;
 import system.servicemodel.channels.IChannelListenerImplementation;
 import system.servicemodel.IDefaultCommunicationTimeouts;
 import system.servicemodel.IDefaultCommunicationTimeoutsImplementation;
+import system.collections.generic.SynchronizedCollection_1;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.channels.MessageVersion;
 import system.servicemodel.dispatcher.ServiceThrottle;
 import system.servicemodel.ServiceHostBase;
@@ -62,7 +64,7 @@ import system.transactions.IsolationLevel;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ChannelDispatcher extends ChannelDispatcherBase  {
+public class ChannelDispatcher extends system.servicemodel.dispatcher.ChannelDispatcherBase  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -484,6 +486,51 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxTransactedBatchSize", MaxTransactedBatchSize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getEndpoints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpoints = null;
+        try {
+            retObjectEndpoints = classInstance.Get("Endpoints");
+            JCObject val = (JCObject)retObjectEndpoints;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpoints != null ? retObjectEndpoints.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getChannelInitializers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelInitializers = null;
+        try {
+            retObjectChannelInitializers = classInstance.Get("ChannelInitializers");
+            JCObject val = (JCObject)retObjectChannelInitializers;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelInitializers != null ? retObjectChannelInitializers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getErrorHandlers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorHandlers = null;
+        try {
+            retObjectErrorHandlers = classInstance.Get("ErrorHandlers");
+            JCObject val = (JCObject)retObjectErrorHandlers;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorHandlers != null ? retObjectErrorHandlers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

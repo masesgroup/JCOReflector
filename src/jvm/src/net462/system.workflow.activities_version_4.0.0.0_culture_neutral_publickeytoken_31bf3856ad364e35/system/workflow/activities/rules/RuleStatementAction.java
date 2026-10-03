@@ -42,6 +42,8 @@ import system.workflow.activities.rules.RuleAction;
 import system.codedom.CodeExpression;
 import system.codedom.CodeStatement;
 import system.workflow.activities.rules.RuleValidation;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.workflow.activities.rules.RuleExecution;
 
 
@@ -57,7 +59,7 @@ import system.workflow.activities.rules.RuleExecution;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RuleStatementAction extends RuleAction  {
+public class RuleStatementAction extends system.workflow.activities.rules.RuleAction  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -193,6 +195,21 @@ public class RuleStatementAction extends RuleAction  {
             return (boolean)retObjectValidate;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 GetSideEffects(RuleValidation validation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSideEffects = null;
+        try {
+            retObjectGetSideEffects = classInstance.Invoke("GetSideEffects", validation == null ? null : validation.getJCOInstance());
+            JCObject objGetSideEffects = (JCObject)retObjectGetSideEffects;
+            return new ICollection_1Implementation(objGetSideEffects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSideEffects != null ? retObjectGetSideEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

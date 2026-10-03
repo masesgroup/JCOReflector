@@ -47,6 +47,8 @@ import microsoft.build.framework.IBuildEngineImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import microsoft.build.framework.BuildEngineResult;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import microsoft.build.framework.RegisteredTaskObjectLifetime;
 import microsoft.build.framework.CustomBuildEventArgs;
 import microsoft.build.framework.BuildErrorEventArgs;
@@ -233,6 +235,36 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
             return (boolean)retObjectBuildProjectFilesInParallel;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBuildProjectFilesInParallel != null ? retObjectBuildProjectFilesInParallel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BuildEngineResult BuildProjectFilesInParallel(java.lang.String[] projectFileNames, java.lang.String[] targetNames, IDictionary[] globalProperties, IList_1[] removeGlobalProperties, java.lang.String[] toolsVersion, boolean returnTargetOutputs) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProjectFilesInParallel = null;
+        try {
+            retObjectBuildProjectFilesInParallel = classInstance.Invoke("BuildProjectFilesInParallel", projectFileNames, targetNames, toObjectFromArray(globalProperties), toObjectFromArray(removeGlobalProperties), toolsVersion, returnTargetOutputs);
+            JCObject objBuildProjectFilesInParallel = (JCObject)retObjectBuildProjectFilesInParallel;
+            return new BuildEngineResult(objBuildProjectFilesInParallel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildProjectFilesInParallel != null ? retObjectBuildProjectFilesInParallel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BuildEngineResult BuildProjectFilesInParallel(JCORefOut dupParam0, JCORefOut dupParam1, IDictionary[] dupParam2, IList_1[] dupParam3, JCORefOut dupParam4, boolean dupParam5) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProjectFilesInParallel = null;
+        try {
+            retObjectBuildProjectFilesInParallel = classInstance.Invoke("BuildProjectFilesInParallel", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), toObjectFromArray(dupParam2), toObjectFromArray(dupParam3), dupParam4.getJCRefOut(), dupParam5);
+            JCObject objBuildProjectFilesInParallel = (JCObject)retObjectBuildProjectFilesInParallel;
+            return new BuildEngineResult(objBuildProjectFilesInParallel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildProjectFilesInParallel != null ? retObjectBuildProjectFilesInParallel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.SystemException;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 /**
  * The base .NET class managing System.Workflow.Runtime.Tracking.TrackingProfileDeserializationException, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
@@ -54,7 +56,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TrackingProfileDeserializationException extends SystemException {
+public class TrackingProfileDeserializationException extends system.SystemException {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -184,5 +186,20 @@ public class TrackingProfileDeserializationException extends SystemException {
     
     // Properties section
     
+    public IList_1 getValidationEventArgs() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationEventArgs = null;
+        try {
+            retObjectValidationEventArgs = classInstance.Get("ValidationEventArgs");
+            JCObject val = (JCObject)retObjectValidationEventArgs;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationEventArgs != null ? retObjectValidationEventArgs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 }

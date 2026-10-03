@@ -39,15 +39,18 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.serialization.XmlObjectSerializer;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.runtime.serialization.IDataContractSurrogate;
+import system.runtime.serialization.IDataContractSurrogateImplementation;
+import system.runtime.serialization.DataContractResolver;
 import system.runtime.serialization.DataContractSerializerSettings;
 import system.xml.XmlDictionaryString;
 import system.xml.XmlDictionaryReader;
 import system.xml.XmlReader;
-import system.runtime.serialization.DataContractResolver;
 import system.xml.XmlDictionaryWriter;
 import system.xml.XmlWriter;
-import system.runtime.serialization.IDataContractSurrogate;
-import system.runtime.serialization.IDataContractSurrogateImplementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -62,7 +65,7 @@ import system.runtime.serialization.IDataContractSurrogateImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataContractSerializer extends XmlObjectSerializer  {
+public class DataContractSerializer extends system.runtime.serialization.XmlObjectSerializer  {
     /**
      * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -168,6 +171,36 @@ public class DataContractSerializer extends XmlObjectSerializer  {
         }
     }
 
+    public DataContractSerializer(NetType type, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractSerializer(NetType type, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, boolean preserveObjectReferences, IDataContractSurrogate dataContractSurrogate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, preserveObjectReferences, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractSerializer(NetType type, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, boolean preserveObjectReferences, IDataContractSurrogate dataContractSurrogate, DataContractResolver dataContractResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, preserveObjectReferences, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance(), dataContractResolver == null ? null : dataContractResolver.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataContractSerializer(NetType type, DataContractSerializerSettings settings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -188,11 +221,71 @@ public class DataContractSerializer extends XmlObjectSerializer  {
         }
     }
 
+    public DataContractSerializer(NetType type, java.lang.String rootName, java.lang.String rootNamespace, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName, rootNamespace, knownTypes == null ? null : knownTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractSerializer(NetType type, java.lang.String rootName, java.lang.String rootNamespace, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, boolean preserveObjectReferences, IDataContractSurrogate dataContractSurrogate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName, rootNamespace, knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, preserveObjectReferences, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractSerializer(NetType type, java.lang.String rootName, java.lang.String rootNamespace, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, boolean preserveObjectReferences, IDataContractSurrogate dataContractSurrogate, DataContractResolver dataContractResolver) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName, rootNamespace, knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, preserveObjectReferences, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance(), dataContractResolver == null ? null : dataContractResolver.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataContractSerializer(NetType type, XmlDictionaryString rootName, XmlDictionaryString rootNamespace) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName == null ? null : rootName.getJCOInstance(), rootNamespace == null ? null : rootNamespace.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractSerializer(NetType type, XmlDictionaryString rootName, XmlDictionaryString rootNamespace, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName == null ? null : rootName.getJCOInstance(), rootNamespace == null ? null : rootNamespace.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractSerializer(NetType type, XmlDictionaryString rootName, XmlDictionaryString rootNamespace, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, boolean preserveObjectReferences, IDataContractSurrogate dataContractSurrogate) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName == null ? null : rootName.getJCOInstance(), rootNamespace == null ? null : rootNamespace.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, preserveObjectReferences, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractSerializer(NetType type, XmlDictionaryString rootName, XmlDictionaryString rootNamespace, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, boolean preserveObjectReferences, IDataContractSurrogate dataContractSurrogate, DataContractResolver dataContractResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName == null ? null : rootName.getJCOInstance(), rootNamespace == null ? null : rootNamespace.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, preserveObjectReferences, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance(), dataContractResolver == null ? null : dataContractResolver.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,6 +545,21 @@ public class DataContractSerializer extends XmlObjectSerializer  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getKnownTypes() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKnownTypes = null;
+        try {
+            retObjectKnownTypes = classInstance.Get("KnownTypes");
+            JCObject val = (JCObject)retObjectKnownTypes;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKnownTypes != null ? retObjectKnownTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

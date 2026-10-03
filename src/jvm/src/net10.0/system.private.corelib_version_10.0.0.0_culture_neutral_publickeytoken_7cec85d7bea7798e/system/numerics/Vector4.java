@@ -48,6 +48,7 @@ import system.numerics.Matrix4x4;
 import system.numerics.Quaternion;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
+import system.ValueTuple_2;
 
 
 /**
@@ -62,7 +63,7 @@ import system.IFormatProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Vector4 extends ValueType  {
+public class Vector4 extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -1964,6 +1965,21 @@ public class Vector4 extends ValueType  {
             return (java.lang.String)retObjectToString;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 SinCos(Vector4 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSinCos = null;
+        try {
+            retObjectSinCos = classType.Invoke("SinCos", vector == null ? null : vector.getJCOInstance());
+            JCObject objSinCos = (JCObject)retObjectSinCos;
+            return new ValueTuple_2(objSinCos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSinCos != null ? retObjectSinCos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

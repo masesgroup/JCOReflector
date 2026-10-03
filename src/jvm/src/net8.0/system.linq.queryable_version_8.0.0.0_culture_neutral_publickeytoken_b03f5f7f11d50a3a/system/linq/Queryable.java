@@ -38,10 +38,23 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.IQueryable_1;
+import system.linq.IQueryable_1Implementation;
+import system.linq.expressions.Expression_1;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.Single;
 import system.Decimal;
+import system.linq.IOrderedQueryable_1;
+import system.linq.IOrderedQueryable_1Implementation;
+import system.collections.generic.IComparer_1;
+import system.collections.generic.IComparer_1Implementation;
 import system.linq.IQueryable;
 import system.linq.IQueryableImplementation;
+import system.Range;
+import system.Nullable_1;
 
 
 /**
@@ -155,6 +168,604 @@ public class Queryable extends NetObject  {
     
     // Methods section
     
+    public static <TSource extends IJCOBridgeReflected> boolean All(IQueryable_1 source, Expression_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAll = null;
+        try {
+            retObjectAll = classType.Invoke("All", source == null ? null : source.getJCOInstance(), predicate == null ? null : predicate.getJCOInstance());
+            return (boolean)retObjectAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean Any(IQueryable_1 source, Expression_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAny = null;
+        try {
+            retObjectAny = classType.Invoke("Any", source == null ? null : source.getJCOInstance(), predicate == null ? null : predicate.getJCOInstance());
+            return (boolean)retObjectAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAny != null ? retObjectAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean Any(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAny = null;
+        try {
+            retObjectAny = classType.Invoke("Any", source == null ? null : source.getJCOInstance());
+            return (boolean)retObjectAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAny != null ? retObjectAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean Contains(IQueryable_1 source, TSource item, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContains = null;
+        try {
+            retObjectContains = classType.Invoke("Contains", source == null ? null : source.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean Contains(IQueryable_1 source, TSource item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContains = null;
+        try {
+            retObjectContains = classType.Invoke("Contains", source == null ? null : source.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(IQueryable_1 source1, IEnumerable_1 source2, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSequenceEqual = null;
+        try {
+            retObjectSequenceEqual = classType.Invoke("SequenceEqual", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (boolean)retObjectSequenceEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSequenceEqual != null ? retObjectSequenceEqual.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(IQueryable_1 source1, IEnumerable_1 source2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSequenceEqual = null;
+        try {
+            retObjectSequenceEqual = classType.Invoke("SequenceEqual", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance());
+            return (boolean)retObjectSequenceEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSequenceEqual != null ? retObjectSequenceEqual.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Average(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAverage = null;
+        try {
+            retObjectAverage = classType.Invoke("Average", source == null ? null : source.getJCOInstance());
+            return (double)retObjectAverage;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportAverageError = true;
+            java.lang.String retObjectAverage_ToString = retObjectAverage == null ? "null" : retObjectAverage.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAverage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAverageClass = retObjectAverage.getClass();
+                    // java.lang.reflect.Method retObjectAverageMethod = retObjectAverageClass.getMethod("doubleValue");
+                    // return (double)retObjectAverageMethod.invoke(retObjectAverage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAverageNumber = java.text.NumberFormat.getInstance().parse(retObjectAverage_ToString);
+                    return retObjectAverageNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAverageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAverage != null ? retObjectAverage.getClass() : "null", retObjectAverage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAverageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> double Average(IQueryable_1 source, Expression_1 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAverage = null;
+        try {
+            retObjectAverage = classType.Invoke("Average", source == null ? null : source.getJCOInstance(), selector == null ? null : selector.getJCOInstance());
+            return (double)retObjectAverage;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportAverageError = true;
+            java.lang.String retObjectAverage_ToString = retObjectAverage == null ? "null" : retObjectAverage.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAverage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAverageClass = retObjectAverage.getClass();
+                    // java.lang.reflect.Method retObjectAverageMethod = retObjectAverageClass.getMethod("doubleValue");
+                    // return (double)retObjectAverageMethod.invoke(retObjectAverage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAverageNumber = java.text.NumberFormat.getInstance().parse(retObjectAverage_ToString);
+                    return retObjectAverageNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAverageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAverage != null ? retObjectAverage.getClass() : "null", retObjectAverage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAverageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Sum(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSum = null;
+        try {
+            retObjectSum = classType.Invoke("Sum", source == null ? null : source.getJCOInstance());
+            return (double)retObjectSum;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSumError = true;
+            java.lang.String retObjectSum_ToString = retObjectSum == null ? "null" : retObjectSum.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSumClass = retObjectSum.getClass();
+                    // java.lang.reflect.Method retObjectSumMethod = retObjectSumClass.getMethod("doubleValue");
+                    // return (double)retObjectSumMethod.invoke(retObjectSum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSumNumber = java.text.NumberFormat.getInstance().parse(retObjectSum_ToString);
+                    return retObjectSumNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSum != null ? retObjectSum.getClass() : "null", retObjectSum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> double Sum(IQueryable_1 source, Expression_1 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSum = null;
+        try {
+            retObjectSum = classType.Invoke("Sum", source == null ? null : source.getJCOInstance(), selector == null ? null : selector.getJCOInstance());
+            return (double)retObjectSum;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSumError = true;
+            java.lang.String retObjectSum_ToString = retObjectSum == null ? "null" : retObjectSum.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSumClass = retObjectSum.getClass();
+                    // java.lang.reflect.Method retObjectSumMethod = retObjectSumClass.getMethod("doubleValue");
+                    // return (double)retObjectSumMethod.invoke(retObjectSum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSumNumber = java.text.NumberFormat.getInstance().parse(retObjectSum_ToString);
+                    return retObjectSumNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSum != null ? retObjectSum.getClass() : "null", retObjectSum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> int Count(IQueryable_1 source, Expression_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCount = null;
+        try {
+            retObjectCount = classType.Invoke("Count", source == null ? null : source.getJCOInstance(), predicate == null ? null : predicate.getJCOInstance());
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCountError = true;
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCountClass = retObjectCount.getClass();
+                    // java.lang.reflect.Method retObjectCountMethod = retObjectCountClass.getMethod("intValue");
+                    // return (int)retObjectCountMethod.invoke(retObjectCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCountNumber = java.text.NumberFormat.getInstance().parse(retObjectCount_ToString);
+                    return retObjectCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> int Count(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCount = null;
+        try {
+            retObjectCount = classType.Invoke("Count", source == null ? null : source.getJCOInstance());
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCountError = true;
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCountClass = retObjectCount.getClass();
+                    // java.lang.reflect.Method retObjectCountMethod = retObjectCountClass.getMethod("intValue");
+                    // return (int)retObjectCountMethod.invoke(retObjectCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCountNumber = java.text.NumberFormat.getInstance().parse(retObjectCount_ToString);
+                    return retObjectCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> long LongCount(IQueryable_1 source, Expression_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongCount = null;
+        try {
+            retObjectLongCount = classType.Invoke("LongCount", source == null ? null : source.getJCOInstance(), predicate == null ? null : predicate.getJCOInstance());
+            return (long)retObjectLongCount;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportLongCountError = true;
+            java.lang.String retObjectLongCount_ToString = retObjectLongCount == null ? "null" : retObjectLongCount.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLongCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLongCountClass = retObjectLongCount.getClass();
+                    // java.lang.reflect.Method retObjectLongCountMethod = retObjectLongCountClass.getMethod("longValue");
+                    // return (long)retObjectLongCountMethod.invoke(retObjectLongCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLongCountNumber = java.text.NumberFormat.getInstance().parse(retObjectLongCount_ToString);
+                    return retObjectLongCountNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLongCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLongCount != null ? retObjectLongCount.getClass() : "null", retObjectLongCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLongCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> long LongCount(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongCount = null;
+        try {
+            retObjectLongCount = classType.Invoke("LongCount", source == null ? null : source.getJCOInstance());
+            return (long)retObjectLongCount;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportLongCountError = true;
+            java.lang.String retObjectLongCount_ToString = retObjectLongCount == null ? "null" : retObjectLongCount.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLongCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLongCountClass = retObjectLongCount.getClass();
+                    // java.lang.reflect.Method retObjectLongCountMethod = retObjectLongCountClass.getMethod("longValue");
+                    // return (long)retObjectLongCountMethod.invoke(retObjectLongCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLongCountNumber = java.text.NumberFormat.getInstance().parse(retObjectLongCount_ToString);
+                    return retObjectLongCountNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLongCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLongCount != null ? retObjectLongCount.getClass() : "null", retObjectLongCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLongCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IOrderedQueryable_1 Order(IQueryable_1 source, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrder = null;
+        try {
+            retObjectOrder = classType.Invoke("Order", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrder = (JCObject)retObjectOrder;
+            return new IOrderedQueryable_1Implementation(objOrder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrder != null ? retObjectOrder.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IOrderedQueryable_1 Order(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrder = null;
+        try {
+            retObjectOrder = classType.Invoke("Order", source == null ? null : source.getJCOInstance());
+            JCObject objOrder = (JCObject)retObjectOrder;
+            return new IOrderedQueryable_1Implementation(objOrder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrder != null ? retObjectOrder.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IOrderedQueryable_1 OrderDescending(IQueryable_1 source, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderDescending = null;
+        try {
+            retObjectOrderDescending = classType.Invoke("OrderDescending", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderDescending = (JCObject)retObjectOrderDescending;
+            return new IOrderedQueryable_1Implementation(objOrderDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderDescending != null ? retObjectOrderDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IOrderedQueryable_1 OrderDescending(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderDescending = null;
+        try {
+            retObjectOrderDescending = classType.Invoke("OrderDescending", source == null ? null : source.getJCOInstance());
+            JCObject objOrderDescending = (JCObject)retObjectOrderDescending;
+            return new IOrderedQueryable_1Implementation(objOrderDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderDescending != null ? retObjectOrderDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedQueryable_1 OrderBy(IQueryable_1 source, Expression_1 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderBy = null;
+        try {
+            retObjectOrderBy = classType.Invoke("OrderBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderBy = (JCObject)retObjectOrderBy;
+            return new IOrderedQueryable_1Implementation(objOrderBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderBy != null ? retObjectOrderBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedQueryable_1 OrderBy(IQueryable_1 source, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderBy = null;
+        try {
+            retObjectOrderBy = classType.Invoke("OrderBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objOrderBy = (JCObject)retObjectOrderBy;
+            return new IOrderedQueryable_1Implementation(objOrderBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderBy != null ? retObjectOrderBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedQueryable_1 OrderByDescending(IQueryable_1 source, Expression_1 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderByDescending = null;
+        try {
+            retObjectOrderByDescending = classType.Invoke("OrderByDescending", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderByDescending = (JCObject)retObjectOrderByDescending;
+            return new IOrderedQueryable_1Implementation(objOrderByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderByDescending != null ? retObjectOrderByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedQueryable_1 OrderByDescending(IQueryable_1 source, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderByDescending = null;
+        try {
+            retObjectOrderByDescending = classType.Invoke("OrderByDescending", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objOrderByDescending = (JCObject)retObjectOrderByDescending;
+            return new IOrderedQueryable_1Implementation(objOrderByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderByDescending != null ? retObjectOrderByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedQueryable_1 ThenBy(IOrderedQueryable_1 source, Expression_1 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenBy = null;
+        try {
+            retObjectThenBy = classType.Invoke("ThenBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objThenBy = (JCObject)retObjectThenBy;
+            return new IOrderedQueryable_1Implementation(objThenBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenBy != null ? retObjectThenBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedQueryable_1 ThenBy(IOrderedQueryable_1 source, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenBy = null;
+        try {
+            retObjectThenBy = classType.Invoke("ThenBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objThenBy = (JCObject)retObjectThenBy;
+            return new IOrderedQueryable_1Implementation(objThenBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenBy != null ? retObjectThenBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedQueryable_1 ThenByDescending(IOrderedQueryable_1 source, Expression_1 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenByDescending = null;
+        try {
+            retObjectThenByDescending = classType.Invoke("ThenByDescending", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objThenByDescending = (JCObject)retObjectThenByDescending;
+            return new IOrderedQueryable_1Implementation(objThenByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenByDescending != null ? retObjectThenByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedQueryable_1 ThenByDescending(IOrderedQueryable_1 source, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenByDescending = null;
+        try {
+            retObjectThenByDescending = classType.Invoke("ThenByDescending", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objThenByDescending = (JCObject)retObjectThenByDescending;
+            return new IOrderedQueryable_1Implementation(objThenByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenByDescending != null ? retObjectThenByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static IQueryable AsQueryable(IEnumerable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -165,6 +776,756 @@ public class Queryable extends NetObject  {
             return new IQueryableImplementation(objAsQueryable);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsQueryable != null ? retObjectAsQueryable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> IQueryable_1 GroupBy(IQueryable_1 source, Expression_1 keySelector, Expression_1 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), elementSelector == null ? null : elementSelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IQueryable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> IQueryable_1 GroupBy(IQueryable_1 source, Expression_1 keySelector, Expression_1 elementSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), elementSelector == null ? null : elementSelector.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IQueryable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 GroupBy(IQueryable_1 source, Expression_1 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IQueryable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 GroupBy(IQueryable_1 source, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IQueryable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected> IQueryable_1 Zip(IQueryable_1 source1, IEnumerable_1 source2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance());
+            JCObject objZip = (JCObject)retObjectZip;
+            return new IQueryable_1Implementation(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TThird extends IJCOBridgeReflected> IQueryable_1 Zip(IQueryable_1 source1, IEnumerable_1 source2, IEnumerable_1 source3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), source3 == null ? null : source3.getJCOInstance());
+            JCObject objZip = (JCObject)retObjectZip;
+            return new IQueryable_1Implementation(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TElement extends IJCOBridgeReflected> IQueryable_1 AsQueryable(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsQueryable = null;
+        try {
+            retObjectAsQueryable = classType.Invoke("AsQueryable", source == null ? null : source.getJCOInstance());
+            JCObject objAsQueryable = (JCObject)retObjectAsQueryable;
+            return new IQueryable_1Implementation(objAsQueryable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsQueryable != null ? retObjectAsQueryable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> IQueryable_1 Cast(IQueryable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCast = null;
+        try {
+            retObjectCast = classType.Invoke("Cast", source == null ? null : source.getJCOInstance());
+            JCObject objCast = (JCObject)retObjectCast;
+            return new IQueryable_1Implementation(objCast);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCast != null ? retObjectCast.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 GroupBy(IQueryable_1 source, Expression_1 keySelector, Expression_1 elementSelector, Expression_1 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), elementSelector == null ? null : elementSelector.getJCOInstance(), resultSelector == null ? null : resultSelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IQueryable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 GroupBy(IQueryable_1 source, Expression_1 keySelector, Expression_1 elementSelector, Expression_1 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), elementSelector == null ? null : elementSelector.getJCOInstance(), resultSelector == null ? null : resultSelector.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IQueryable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 GroupJoin(IQueryable_1 outer, IEnumerable_1 inner, Expression_1 outerKeySelector, Expression_1 innerKeySelector, Expression_1 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupJoin = null;
+        try {
+            retObjectGroupJoin = classType.Invoke("GroupJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector == null ? null : outerKeySelector.getJCOInstance(), innerKeySelector == null ? null : innerKeySelector.getJCOInstance(), resultSelector == null ? null : resultSelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupJoin = (JCObject)retObjectGroupJoin;
+            return new IQueryable_1Implementation(objGroupJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupJoin != null ? retObjectGroupJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 GroupJoin(IQueryable_1 outer, IEnumerable_1 inner, Expression_1 outerKeySelector, Expression_1 innerKeySelector, Expression_1 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupJoin = null;
+        try {
+            retObjectGroupJoin = classType.Invoke("GroupJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector == null ? null : outerKeySelector.getJCOInstance(), innerKeySelector == null ? null : innerKeySelector.getJCOInstance(), resultSelector == null ? null : resultSelector.getJCOInstance());
+            JCObject objGroupJoin = (JCObject)retObjectGroupJoin;
+            return new IQueryable_1Implementation(objGroupJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupJoin != null ? retObjectGroupJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 Join(IQueryable_1 outer, IEnumerable_1 inner, Expression_1 outerKeySelector, Expression_1 innerKeySelector, Expression_1 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector == null ? null : outerKeySelector.getJCOInstance(), innerKeySelector == null ? null : innerKeySelector.getJCOInstance(), resultSelector == null ? null : resultSelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new IQueryable_1Implementation(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 Join(IQueryable_1 outer, IEnumerable_1 inner, Expression_1 outerKeySelector, Expression_1 innerKeySelector, Expression_1 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector == null ? null : outerKeySelector.getJCOInstance(), innerKeySelector == null ? null : innerKeySelector.getJCOInstance(), resultSelector == null ? null : resultSelector.getJCOInstance());
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new IQueryable_1Implementation(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> IQueryable_1 OfType(IQueryable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOfType = null;
+        try {
+            retObjectOfType = classType.Invoke("OfType", source == null ? null : source.getJCOInstance());
+            JCObject objOfType = (JCObject)retObjectOfType;
+            return new IQueryable_1Implementation(objOfType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOfType != null ? retObjectOfType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 Select(IQueryable_1 source, Expression_1 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
+        try {
+            retObjectSelect = classType.Invoke("Select", source == null ? null : source.getJCOInstance(), selector == null ? null : selector.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
+            return new IQueryable_1Implementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 SelectMany(IQueryable_1 source, Expression_1 collectionSelector, Expression_1 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), collectionSelector == null ? null : collectionSelector.getJCOInstance(), resultSelector == null ? null : resultSelector.getJCOInstance());
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IQueryable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 SelectMany(IQueryable_1 source, Expression_1 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), selector == null ? null : selector.getJCOInstance());
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IQueryable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IQueryable_1 Zip(IQueryable_1 source1, IEnumerable_1 source2, Expression_1 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), resultSelector == null ? null : resultSelector.getJCOInstance());
+            JCObject objZip = (JCObject)retObjectZip;
+            return new IQueryable_1Implementation(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Chunk(IQueryable_1 source, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChunk = null;
+        try {
+            retObjectChunk = classType.Invoke("Chunk", source == null ? null : source.getJCOInstance(), size);
+            JCObject objChunk = (JCObject)retObjectChunk;
+            return new IQueryable_1Implementation(objChunk);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChunk != null ? retObjectChunk.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Append(IQueryable_1 source, TSource element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppend = null;
+        try {
+            retObjectAppend = classType.Invoke("Append", source == null ? null : source.getJCOInstance(), element == null ? null : ((IJCOBridgeReflected)element).getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
+            return new IQueryable_1Implementation(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Concat(IQueryable_1 source1, IEnumerable_1 source2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConcat = null;
+        try {
+            retObjectConcat = classType.Invoke("Concat", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance());
+            JCObject objConcat = (JCObject)retObjectConcat;
+            return new IQueryable_1Implementation(objConcat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcat != null ? retObjectConcat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 DefaultIfEmpty(IQueryable_1 source, TSource defaultValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIfEmpty = null;
+        try {
+            retObjectDefaultIfEmpty = classType.Invoke("DefaultIfEmpty", source == null ? null : source.getJCOInstance(), defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance());
+            JCObject objDefaultIfEmpty = (JCObject)retObjectDefaultIfEmpty;
+            return new IQueryable_1Implementation(objDefaultIfEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIfEmpty != null ? retObjectDefaultIfEmpty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 DefaultIfEmpty(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIfEmpty = null;
+        try {
+            retObjectDefaultIfEmpty = classType.Invoke("DefaultIfEmpty", source == null ? null : source.getJCOInstance());
+            JCObject objDefaultIfEmpty = (JCObject)retObjectDefaultIfEmpty;
+            return new IQueryable_1Implementation(objDefaultIfEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIfEmpty != null ? retObjectDefaultIfEmpty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Distinct(IQueryable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinct = null;
+        try {
+            retObjectDistinct = classType.Invoke("Distinct", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objDistinct = (JCObject)retObjectDistinct;
+            return new IQueryable_1Implementation(objDistinct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinct != null ? retObjectDistinct.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Distinct(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinct = null;
+        try {
+            retObjectDistinct = classType.Invoke("Distinct", source == null ? null : source.getJCOInstance());
+            JCObject objDistinct = (JCObject)retObjectDistinct;
+            return new IQueryable_1Implementation(objDistinct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinct != null ? retObjectDistinct.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 DistinctBy(IQueryable_1 source, Expression_1 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinctBy = null;
+        try {
+            retObjectDistinctBy = classType.Invoke("DistinctBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objDistinctBy = (JCObject)retObjectDistinctBy;
+            return new IQueryable_1Implementation(objDistinctBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinctBy != null ? retObjectDistinctBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 DistinctBy(IQueryable_1 source, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinctBy = null;
+        try {
+            retObjectDistinctBy = classType.Invoke("DistinctBy", source == null ? null : source.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objDistinctBy = (JCObject)retObjectDistinctBy;
+            return new IQueryable_1Implementation(objDistinctBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinctBy != null ? retObjectDistinctBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Except(IQueryable_1 source1, IEnumerable_1 source2, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExcept = null;
+        try {
+            retObjectExcept = classType.Invoke("Except", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objExcept = (JCObject)retObjectExcept;
+            return new IQueryable_1Implementation(objExcept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcept != null ? retObjectExcept.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Except(IQueryable_1 source1, IEnumerable_1 source2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExcept = null;
+        try {
+            retObjectExcept = classType.Invoke("Except", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance());
+            JCObject objExcept = (JCObject)retObjectExcept;
+            return new IQueryable_1Implementation(objExcept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcept != null ? retObjectExcept.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 ExceptBy(IQueryable_1 source1, IEnumerable_1 source2, Expression_1 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExceptBy = null;
+        try {
+            retObjectExceptBy = classType.Invoke("ExceptBy", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objExceptBy = (JCObject)retObjectExceptBy;
+            return new IQueryable_1Implementation(objExceptBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptBy != null ? retObjectExceptBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 ExceptBy(IQueryable_1 source1, IEnumerable_1 source2, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExceptBy = null;
+        try {
+            retObjectExceptBy = classType.Invoke("ExceptBy", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objExceptBy = (JCObject)retObjectExceptBy;
+            return new IQueryable_1Implementation(objExceptBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptBy != null ? retObjectExceptBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Intersect(IQueryable_1 source1, IEnumerable_1 source2, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersect = null;
+        try {
+            retObjectIntersect = classType.Invoke("Intersect", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
+            return new IQueryable_1Implementation(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Intersect(IQueryable_1 source1, IEnumerable_1 source2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersect = null;
+        try {
+            retObjectIntersect = classType.Invoke("Intersect", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
+            return new IQueryable_1Implementation(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 IntersectBy(IQueryable_1 source1, IEnumerable_1 source2, Expression_1 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersectBy = null;
+        try {
+            retObjectIntersectBy = classType.Invoke("IntersectBy", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objIntersectBy = (JCObject)retObjectIntersectBy;
+            return new IQueryable_1Implementation(objIntersectBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersectBy != null ? retObjectIntersectBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 IntersectBy(IQueryable_1 source1, IEnumerable_1 source2, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersectBy = null;
+        try {
+            retObjectIntersectBy = classType.Invoke("IntersectBy", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objIntersectBy = (JCObject)retObjectIntersectBy;
+            return new IQueryable_1Implementation(objIntersectBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersectBy != null ? retObjectIntersectBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Prepend(IQueryable_1 source, TSource element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrepend = null;
+        try {
+            retObjectPrepend = classType.Invoke("Prepend", source == null ? null : source.getJCOInstance(), element == null ? null : ((IJCOBridgeReflected)element).getJCOInstance());
+            JCObject objPrepend = (JCObject)retObjectPrepend;
+            return new IQueryable_1Implementation(objPrepend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrepend != null ? retObjectPrepend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Reverse(IQueryable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverse = null;
+        try {
+            retObjectReverse = classType.Invoke("Reverse", source == null ? null : source.getJCOInstance());
+            JCObject objReverse = (JCObject)retObjectReverse;
+            return new IQueryable_1Implementation(objReverse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverse != null ? retObjectReverse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Skip(IQueryable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkip = null;
+        try {
+            retObjectSkip = classType.Invoke("Skip", source == null ? null : source.getJCOInstance(), count);
+            JCObject objSkip = (JCObject)retObjectSkip;
+            return new IQueryable_1Implementation(objSkip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkip != null ? retObjectSkip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 SkipLast(IQueryable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkipLast = null;
+        try {
+            retObjectSkipLast = classType.Invoke("SkipLast", source == null ? null : source.getJCOInstance(), count);
+            JCObject objSkipLast = (JCObject)retObjectSkipLast;
+            return new IQueryable_1Implementation(objSkipLast);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipLast != null ? retObjectSkipLast.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 SkipWhile(IQueryable_1 source, Expression_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkipWhile = null;
+        try {
+            retObjectSkipWhile = classType.Invoke("SkipWhile", source == null ? null : source.getJCOInstance(), predicate == null ? null : predicate.getJCOInstance());
+            JCObject objSkipWhile = (JCObject)retObjectSkipWhile;
+            return new IQueryable_1Implementation(objSkipWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipWhile != null ? retObjectSkipWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Take(IQueryable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTake = null;
+        try {
+            retObjectTake = classType.Invoke("Take", source == null ? null : source.getJCOInstance(), count);
+            JCObject objTake = (JCObject)retObjectTake;
+            return new IQueryable_1Implementation(objTake);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTake != null ? retObjectTake.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Take(IQueryable_1 source, Range range) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTake = null;
+        try {
+            retObjectTake = classType.Invoke("Take", source == null ? null : source.getJCOInstance(), range == null ? null : range.getJCOInstance());
+            JCObject objTake = (JCObject)retObjectTake;
+            return new IQueryable_1Implementation(objTake);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTake != null ? retObjectTake.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 TakeLast(IQueryable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakeLast = null;
+        try {
+            retObjectTakeLast = classType.Invoke("TakeLast", source == null ? null : source.getJCOInstance(), count);
+            JCObject objTakeLast = (JCObject)retObjectTakeLast;
+            return new IQueryable_1Implementation(objTakeLast);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTakeLast != null ? retObjectTakeLast.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 TakeWhile(IQueryable_1 source, Expression_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakeWhile = null;
+        try {
+            retObjectTakeWhile = classType.Invoke("TakeWhile", source == null ? null : source.getJCOInstance(), predicate == null ? null : predicate.getJCOInstance());
+            JCObject objTakeWhile = (JCObject)retObjectTakeWhile;
+            return new IQueryable_1Implementation(objTakeWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTakeWhile != null ? retObjectTakeWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Union(IQueryable_1 source1, IEnumerable_1 source2, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
+        try {
+            retObjectUnion = classType.Invoke("Union", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
+            return new IQueryable_1Implementation(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Union(IQueryable_1 source1, IEnumerable_1 source2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
+        try {
+            retObjectUnion = classType.Invoke("Union", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
+            return new IQueryable_1Implementation(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 UnionBy(IQueryable_1 source1, IEnumerable_1 source2, Expression_1 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnionBy = null;
+        try {
+            retObjectUnionBy = classType.Invoke("UnionBy", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objUnionBy = (JCObject)retObjectUnionBy;
+            return new IQueryable_1Implementation(objUnionBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnionBy != null ? retObjectUnionBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IQueryable_1 UnionBy(IQueryable_1 source1, IEnumerable_1 source2, Expression_1 keySelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnionBy = null;
+        try {
+            retObjectUnionBy = classType.Invoke("UnionBy", source1 == null ? null : source1.getJCOInstance(), source2 == null ? null : source2.getJCOInstance(), keySelector == null ? null : keySelector.getJCOInstance());
+            JCObject objUnionBy = (JCObject)retObjectUnionBy;
+            return new IQueryable_1Implementation(objUnionBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnionBy != null ? retObjectUnionBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IQueryable_1 Where(IQueryable_1 source, Expression_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhere = null;
+        try {
+            retObjectWhere = classType.Invoke("Where", source == null ? null : source.getJCOInstance(), predicate == null ? null : predicate.getJCOInstance());
+            JCObject objWhere = (JCObject)retObjectWhere;
+            return new IQueryable_1Implementation(objWhere);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhere != null ? retObjectWhere.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

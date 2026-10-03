@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.XmlElement;
+import system.collections.objectmodel.Collection_1;
 import system.Uri;
 
 
@@ -150,6 +151,16 @@ public class CardSpacePolicyElement extends NetObject  {
     public CardSpacePolicyElement() throws Throwable {
     }
 
+    public CardSpacePolicyElement(XmlElement target, XmlElement issuer, Collection_1 parameters, Uri privacyNoticeLink, int privacyNoticeVersion, boolean isManagedIssuer) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.security.SecurityException, system.OutOfMemoryException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(target == null ? null : target.getJCOInstance(), issuer == null ? null : issuer.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance(), privacyNoticeLink == null ? null : privacyNoticeLink.getJCOInstance(), privacyNoticeVersion, isManagedIssuer));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -228,6 +239,21 @@ public class CardSpacePolicyElement extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PolicyNoticeVersion", PolicyNoticeVersion);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
+        try {
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

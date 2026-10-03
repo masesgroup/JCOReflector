@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.Guid;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -116,6 +117,8 @@ public interface IStartWorkflow extends IJCOBridgeReflected {
 
     // Methods section
     
+    public Guid StartWorkflow(NetType workflowType, Dictionary_2 namedArgumentValues) throws Throwable;
+
 
     
     // Properties section

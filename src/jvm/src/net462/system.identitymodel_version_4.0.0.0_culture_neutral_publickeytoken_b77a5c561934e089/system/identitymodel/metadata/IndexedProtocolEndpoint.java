@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.metadata.ProtocolEndpoint;
 import system.Uri;
+import system.Nullable_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.Uri;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IndexedProtocolEndpoint extends ProtocolEndpoint  {
+public class IndexedProtocolEndpoint extends system.identitymodel.metadata.ProtocolEndpoint  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -220,6 +221,31 @@ public class IndexedProtocolEndpoint extends ProtocolEndpoint  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Index", Index);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIsDefault() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefault = null;
+        try {
+            retObjectIsDefault = classInstance.Get("IsDefault");
+            JCObject val = (JCObject)retObjectIsDefault;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsDefault != null ? retObjectIsDefault.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsDefault(Nullable_1 IsDefault) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsDefault", IsDefault == null ? null : IsDefault.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.diagnostics.tracing.DiagnosticCounter;
 import system.diagnostics.tracing.EventSource;
+import system.Func_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.diagnostics.tracing.EventSource;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PollingCounter extends DiagnosticCounter  {
+public class PollingCounter extends system.diagnostics.tracing.DiagnosticCounter  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -148,6 +149,16 @@ public class PollingCounter extends DiagnosticCounter  {
     // Constructors section
     
     public PollingCounter() throws Throwable {
+    }
+
+    public PollingCounter(java.lang.String name, EventSource eventSource, Func_1 metricProvider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, eventSource == null ? null : eventSource.getJCOInstance(), metricProvider));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

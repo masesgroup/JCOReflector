@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.windows.FlowDirection;
 import system.windows.media.textformatting.TextMarkerProperties;
 import system.windows.media.textformatting.TextRunProperties;
@@ -344,6 +346,21 @@ public class TextParagraphProperties extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getTabs() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabs = null;
+        try {
+            retObjectTabs = classInstance.Get("Tabs");
+            JCObject val = (JCObject)retObjectTabs;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTabs != null ? retObjectTabs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -44,6 +44,7 @@ import system.security.cryptography.x509certificates.X500DistinguishedName;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.x509certificates.X509SubjectKeyIdentifierExtension;
 import system.security.cryptography.AsnEncodedData;
+import system.Nullable_1;
 
 
 /**
@@ -58,7 +59,7 @@ import system.security.cryptography.AsnEncodedData;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
+public class X509AuthorityKeyIdentifierExtension extends system.security.cryptography.x509certificates.X509Extension  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -309,6 +310,51 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
     
     // Properties section
     
+    public Nullable_1 getKeyIdentifier() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyIdentifier = null;
+        try {
+            retObjectKeyIdentifier = classInstance.Get("KeyIdentifier");
+            JCObject val = (JCObject)retObjectKeyIdentifier;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyIdentifier != null ? retObjectKeyIdentifier.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getRawIssuer() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawIssuer = null;
+        try {
+            retObjectRawIssuer = classInstance.Get("RawIssuer");
+            JCObject val = (JCObject)retObjectRawIssuer;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRawIssuer != null ? retObjectRawIssuer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getSerialNumber() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialNumber = null;
+        try {
+            retObjectSerialNumber = classInstance.Get("SerialNumber");
+            JCObject val = (JCObject)retObjectSerialNumber;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerialNumber != null ? retObjectSerialNumber.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public X500DistinguishedName getNamedIssuer() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

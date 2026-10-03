@@ -40,6 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 import system.windows.xps.packaging.IXpsFixedDocumentReader;
 import system.windows.xps.packaging.IXpsFixedDocumentReaderImplementation;
 import system.Uri;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.printing.PrintTicket;
 import system.windows.xps.packaging.XpsThumbnail;
 
@@ -126,6 +127,8 @@ public interface IXpsFixedDocumentSequenceReader extends IJCOBridgeReflected {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getFixedDocuments() throws Throwable;
+
     public PrintTicket getPrintTicket() throws Throwable;
 
     public Uri getUri() throws Throwable;

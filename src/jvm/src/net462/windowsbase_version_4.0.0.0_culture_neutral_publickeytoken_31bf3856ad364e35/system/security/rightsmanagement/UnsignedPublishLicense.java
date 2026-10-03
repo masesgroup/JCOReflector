@@ -41,6 +41,10 @@ import java.util.ArrayList;
 import system.security.rightsmanagement.PublishLicense;
 import system.security.rightsmanagement.SecureEnvironment;
 import system.security.rightsmanagement.UseLicense;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.Guid;
 import system.security.rightsmanagement.ContentUser;
 import system.Uri;
@@ -194,6 +198,36 @@ public class UnsignedPublishLicense extends NetObject  {
     
     // Properties section
     
+    public ICollection_1 getGrants() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGrants = null;
+        try {
+            retObjectGrants = classInstance.Get("Grants");
+            JCObject val = (JCObject)retObjectGrants;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGrants != null ? retObjectGrants.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getLocalizedNameDescriptionDictionary() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalizedNameDescriptionDictionary = null;
+        try {
+            retObjectLocalizedNameDescriptionDictionary = classInstance.Get("LocalizedNameDescriptionDictionary");
+            JCObject val = (JCObject)retObjectLocalizedNameDescriptionDictionary;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalizedNameDescriptionDictionary != null ? retObjectLocalizedNameDescriptionDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getContentId() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

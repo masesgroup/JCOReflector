@@ -247,11 +247,31 @@ public class Evidence extends NetObjectEnumerable  {
         }
     }
 
+    public <T extends IJCOBridgeReflected> void AddAssemblyEvidence(T evidence) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddAssemblyEvidence", evidence == null ? null : ((IJCOBridgeReflected)evidence).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddHost(NetObject id) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddHost", id == null ? null : id.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void AddHostEvidence(T evidence) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddHostEvidence", evidence == null ? null : ((IJCOBridgeReflected)evidence).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

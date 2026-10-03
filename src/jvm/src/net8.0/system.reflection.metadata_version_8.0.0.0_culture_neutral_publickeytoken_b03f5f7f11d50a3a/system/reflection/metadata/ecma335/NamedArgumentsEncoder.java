@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
+import system.Action_1;
 import system.reflection.metadata.ecma335.NamedArgumentTypeEncoder;
 import system.reflection.metadata.ecma335.NameEncoder;
 import system.reflection.metadata.ecma335.LiteralEncoder;
@@ -57,7 +58,7 @@ import system.reflection.metadata.ecma335.LiteralEncoder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NamedArgumentsEncoder extends ValueType  {
+public class NamedArgumentsEncoder extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -168,6 +169,16 @@ public class NamedArgumentsEncoder extends ValueType  {
     
     // Methods section
     
+    public void AddArgument(boolean isField, Action_1 type, Action_1 name, Action_1 literal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddArgument", isField, type, name, literal);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddArgument(boolean isField, JCORefOut<NamedArgumentTypeEncoder> type, JCORefOut<NameEncoder> name, JCORefOut<LiteralEncoder> literal) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

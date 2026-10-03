@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.controls.primitives.ButtonBase;
+import system.Nullable_1;
 import system.windows.RoutedEventHandler;
 
 
@@ -54,7 +55,7 @@ import system.windows.RoutedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToggleButton extends ButtonBase  {
+public class ToggleButton extends system.windows.controls.primitives.ButtonBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -184,6 +185,31 @@ public class ToggleButton extends ButtonBase  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsThreeState", IsThreeState);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIsChecked() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsChecked = null;
+        try {
+            retObjectIsChecked = classInstance.Get("IsChecked");
+            JCObject val = (JCObject)retObjectIsChecked;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsChecked != null ? retObjectIsChecked.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsChecked(Nullable_1 IsChecked) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsChecked", IsChecked == null ? null : IsChecked.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

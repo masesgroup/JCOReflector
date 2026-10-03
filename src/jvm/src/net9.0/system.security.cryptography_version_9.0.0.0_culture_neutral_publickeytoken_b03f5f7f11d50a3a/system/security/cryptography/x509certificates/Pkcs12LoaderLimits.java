@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.x509certificates.Pkcs12LoaderLimits;
+import system.Nullable_1;
 
 
 /**
@@ -337,6 +338,131 @@ public class Pkcs12LoaderLimits extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveUnknownAttributes", PreserveUnknownAttributes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIndividualKdfIterationLimit() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndividualKdfIterationLimit = null;
+        try {
+            retObjectIndividualKdfIterationLimit = classInstance.Get("IndividualKdfIterationLimit");
+            JCObject val = (JCObject)retObjectIndividualKdfIterationLimit;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndividualKdfIterationLimit != null ? retObjectIndividualKdfIterationLimit.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIndividualKdfIterationLimit(Nullable_1 IndividualKdfIterationLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IndividualKdfIterationLimit", IndividualKdfIterationLimit == null ? null : IndividualKdfIterationLimit.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMacIterationLimit() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMacIterationLimit = null;
+        try {
+            retObjectMacIterationLimit = classInstance.Get("MacIterationLimit");
+            JCObject val = (JCObject)retObjectMacIterationLimit;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMacIterationLimit != null ? retObjectMacIterationLimit.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMacIterationLimit(Nullable_1 MacIterationLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MacIterationLimit", MacIterationLimit == null ? null : MacIterationLimit.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMaxCertificates() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCertificates = null;
+        try {
+            retObjectMaxCertificates = classInstance.Get("MaxCertificates");
+            JCObject val = (JCObject)retObjectMaxCertificates;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxCertificates != null ? retObjectMaxCertificates.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMaxCertificates(Nullable_1 MaxCertificates) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MaxCertificates", MaxCertificates == null ? null : MaxCertificates.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMaxKeys() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxKeys = null;
+        try {
+            retObjectMaxKeys = classInstance.Get("MaxKeys");
+            JCObject val = (JCObject)retObjectMaxKeys;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxKeys != null ? retObjectMaxKeys.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMaxKeys(Nullable_1 MaxKeys) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MaxKeys", MaxKeys == null ? null : MaxKeys.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getTotalKdfIterationLimit() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalKdfIterationLimit = null;
+        try {
+            retObjectTotalKdfIterationLimit = classInstance.Get("TotalKdfIterationLimit");
+            JCObject val = (JCObject)retObjectTotalKdfIterationLimit;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTotalKdfIterationLimit != null ? retObjectTotalKdfIterationLimit.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTotalKdfIterationLimit(Nullable_1 TotalKdfIterationLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TotalKdfIterationLimit", TotalKdfIterationLimit == null ? null : TotalKdfIterationLimit.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.Oid;
+import system.ReadOnlyMemory_1;
 import system.security.cryptography.CryptographicAttributeObjectCollection;
 
 
@@ -195,6 +196,21 @@ public class Pkcs12SafeBag extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyMemory_1 getEncodedBagValue() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedBagValue = null;
+        try {
+            retObjectEncodedBagValue = classInstance.Get("EncodedBagValue");
+            JCObject val = (JCObject)retObjectEncodedBagValue;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncodedBagValue != null ? retObjectEncodedBagValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CryptographicAttributeObjectCollection getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.Assembly;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.Version;
 
 
@@ -204,6 +205,21 @@ public class AssemblyInfo extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getLoadedAssemblies() throws Throwable, system.NotSupportedException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadedAssemblies = null;
+        try {
+            retObjectLoadedAssemblies = classInstance.Get("LoadedAssemblies");
+            JCObject val = (JCObject)retObjectLoadedAssemblies;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadedAssemblies != null ? retObjectLoadedAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

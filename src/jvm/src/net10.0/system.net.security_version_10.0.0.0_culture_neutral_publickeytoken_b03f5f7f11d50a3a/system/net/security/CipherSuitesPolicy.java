@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -148,6 +150,16 @@ public class CipherSuitesPolicy extends NetObject  {
     public CipherSuitesPolicy() throws Throwable {
     }
 
+    public CipherSuitesPolicy(IEnumerable_1 allowedCipherSuites) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(allowedCipherSuites == null ? null : allowedCipherSuites.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -157,6 +169,21 @@ public class CipherSuitesPolicy extends NetObject  {
     
     // Properties section
     
+    public IEnumerable_1 getAllowedCipherSuites() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedCipherSuites = null;
+        try {
+            retObjectAllowedCipherSuites = classInstance.Get("AllowedCipherSuites");
+            JCObject val = (JCObject)retObjectAllowedCipherSuites;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowedCipherSuites != null ? retObjectAllowedCipherSuites.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

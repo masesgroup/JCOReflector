@@ -39,9 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.Geometry;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.media.FillRule;
+import system.windows.media.Transform;
 import system.windows.media.PathGeometry;
 import system.windows.Point;
-import system.windows.media.FillRule;
 import system.windows.media.PathFigureCollection;
 import system.windows.Rect;
 
@@ -58,7 +61,7 @@ import system.windows.Rect;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PathGeometry extends Geometry  {
+public class PathGeometry extends system.windows.media.Geometry  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -156,6 +159,26 @@ public class PathGeometry extends Geometry  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PathGeometry(IEnumerable_1 figures, FillRule fillRule, Transform transform) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(figures == null ? null : figures.getJCOInstance(), fillRule == null ? null : fillRule.getJCOInstance(), transform == null ? null : transform.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PathGeometry(IEnumerable_1 figures) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(figures == null ? null : figures.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

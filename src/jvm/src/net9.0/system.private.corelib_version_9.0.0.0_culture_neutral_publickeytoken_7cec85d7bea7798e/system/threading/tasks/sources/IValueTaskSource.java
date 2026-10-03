@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.threading.tasks.sources.ValueTaskSourceStatus;
+import system.Action_1;
+import system.threading.tasks.sources.ValueTaskSourceOnCompletedFlags;
 
 
 /**
@@ -119,6 +121,8 @@ public interface IValueTaskSource extends IJCOBridgeReflected {
     public ValueTaskSourceStatus GetStatus(short token) throws Throwable;
 
     public void GetResult(short token) throws Throwable;
+
+    public void OnCompleted(Action_1 continuation, NetObject state, short token, ValueTaskSourceOnCompletedFlags flags) throws Throwable;
 
 
     

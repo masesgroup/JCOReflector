@@ -38,6 +38,23 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IAsyncEnumerable_1;
+import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.Func_2;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
+import system.Func_3;
+import system.Func_4;
+import system.Range;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.IOrderedAsyncEnumerable_1;
+import system.linq.IOrderedAsyncEnumerable_1Implementation;
+import system.collections.generic.IComparer_1;
+import system.collections.generic.IComparer_1Implementation;
+import system.threading.tasks.ValueTask_1;
+import system.threading.CancellationToken;
+import system.Index;
 
 
 /**
@@ -151,6 +168,2406 @@ public class AsyncEnumerable extends NetObject  {
     
     // Methods section
     
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 CountBy(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCountBy = null;
+        try {
+            retObjectCountBy = classType.Invoke("CountBy", source == null ? null : source.getJCOInstance(), keySelector, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objCountBy = (JCObject)retObjectCountBy;
+            return new IAsyncEnumerable_1Implementation(objCountBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCountBy != null ? retObjectCountBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 CountBy(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCountBy = null;
+        try {
+            retObjectCountBy = classType.Invoke("CountBy", source == null ? null : source.getJCOInstance(), keySelector, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objCountBy = (JCObject)retObjectCountBy;
+            return new IAsyncEnumerable_1Implementation(objCountBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCountBy != null ? retObjectCountBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> IAsyncEnumerable_1 AggregateBy(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 seedSelector, Func_3 func, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateBy = null;
+        try {
+            retObjectAggregateBy = classType.Invoke("AggregateBy", source == null ? null : source.getJCOInstance(), keySelector, seedSelector, func, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objAggregateBy = (JCObject)retObjectAggregateBy;
+            return new IAsyncEnumerable_1Implementation(objAggregateBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateBy != null ? retObjectAggregateBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> IAsyncEnumerable_1 AggregateBy(IAsyncEnumerable_1 source, Func_2 keySelector, TAccumulate seed, Func_3 func, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateBy = null;
+        try {
+            retObjectAggregateBy = classType.Invoke("AggregateBy", source == null ? null : source.getJCOInstance(), keySelector, seed == null ? null : ((IJCOBridgeReflected)seed).getJCOInstance(), func, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objAggregateBy = (JCObject)retObjectAggregateBy;
+            return new IAsyncEnumerable_1Implementation(objAggregateBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateBy != null ? retObjectAggregateBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> IAsyncEnumerable_1 AggregateBy(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 seedSelector, Func_4 func, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateBy = null;
+        try {
+            retObjectAggregateBy = classType.Invoke("AggregateBy", source == null ? null : source.getJCOInstance(), keySelector, seedSelector, func, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objAggregateBy = (JCObject)retObjectAggregateBy;
+            return new IAsyncEnumerable_1Implementation(objAggregateBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateBy != null ? retObjectAggregateBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> IAsyncEnumerable_1 AggregateBy(IAsyncEnumerable_1 source, Func_3 keySelector, TAccumulate seed, Func_4 func, IEqualityComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateBy = null;
+        try {
+            retObjectAggregateBy = classType.Invoke("AggregateBy", source == null ? null : source.getJCOInstance(), keySelector, seed == null ? null : ((IJCOBridgeReflected)seed).getJCOInstance(), func, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objAggregateBy = (JCObject)retObjectAggregateBy;
+            return new IAsyncEnumerable_1Implementation(objAggregateBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateBy != null ? retObjectAggregateBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IAsyncEnumerable_1 Range(int start, int count) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRange = null;
+        try {
+            retObjectRange = classType.Invoke("Range", start, count);
+            JCObject objRange = (JCObject)retObjectRange;
+            return new IAsyncEnumerable_1Implementation(objRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRange != null ? retObjectRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IAsyncEnumerable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IAsyncEnumerable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IAsyncEnumerable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IAsyncEnumerable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Index(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndex = null;
+        try {
+            retObjectIndex = classType.Invoke("Index", source == null ? null : source.getJCOInstance());
+            JCObject objIndex = (JCObject)retObjectIndex;
+            return new IAsyncEnumerable_1Implementation(objIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndex != null ? retObjectIndex.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected> IAsyncEnumerable_1 Zip(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objZip = (JCObject)retObjectZip;
+            return new IAsyncEnumerable_1Implementation(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TThird extends IJCOBridgeReflected> IAsyncEnumerable_1 Zip(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IAsyncEnumerable_1 third) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), third == null ? null : third.getJCOInstance());
+            JCObject objZip = (JCObject)retObjectZip;
+            return new IAsyncEnumerable_1Implementation(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IAsyncEnumerable_1 InfiniteSequence(T start, T step) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInfiniteSequence = null;
+        try {
+            retObjectInfiniteSequence = classType.Invoke("InfiniteSequence", start == null ? null : ((IJCOBridgeReflected)start).getJCOInstance(), step == null ? null : ((IJCOBridgeReflected)step).getJCOInstance());
+            JCObject objInfiniteSequence = (JCObject)retObjectInfiniteSequence;
+            return new IAsyncEnumerable_1Implementation(objInfiniteSequence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInfiniteSequence != null ? retObjectInfiniteSequence.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IAsyncEnumerable_1 Sequence(T start, T endInclusive, T step) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSequence = null;
+        try {
+            retObjectSequence = classType.Invoke("Sequence", start == null ? null : ((IJCOBridgeReflected)start).getJCOInstance(), endInclusive == null ? null : ((IJCOBridgeReflected)endInclusive).getJCOInstance(), step == null ? null : ((IJCOBridgeReflected)step).getJCOInstance());
+            JCObject objSequence = (JCObject)retObjectSequence;
+            return new IAsyncEnumerable_1Implementation(objSequence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSequence != null ? retObjectSequence.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Cast(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCast = null;
+        try {
+            retObjectCast = classType.Invoke("Cast", source == null ? null : source.getJCOInstance());
+            JCObject objCast = (JCObject)retObjectCast;
+            return new IAsyncEnumerable_1Implementation(objCast);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCast != null ? retObjectCast.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Empty() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmpty = null;
+        try {
+            retObjectEmpty = classType.Invoke("Empty");
+            JCObject objEmpty = (JCObject)retObjectEmpty;
+            return new IAsyncEnumerable_1Implementation(objEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmpty != null ? retObjectEmpty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IAsyncEnumerable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 elementSelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IAsyncEnumerable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_2 keySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IAsyncEnumerable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupBy(IAsyncEnumerable_1 source, Func_3 keySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new IAsyncEnumerable_1Implementation(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupJoin = null;
+        try {
+            retObjectGroupJoin = classType.Invoke("GroupJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupJoin = (JCObject)retObjectGroupJoin;
+            return new IAsyncEnumerable_1Implementation(objGroupJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupJoin != null ? retObjectGroupJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 GroupJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_3 outerKeySelector, Func_3 innerKeySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupJoin = null;
+        try {
+            retObjectGroupJoin = classType.Invoke("GroupJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupJoin = (JCObject)retObjectGroupJoin;
+            return new IAsyncEnumerable_1Implementation(objGroupJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupJoin != null ? retObjectGroupJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Join(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new IAsyncEnumerable_1Implementation(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Join(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_3 outerKeySelector, Func_3 innerKeySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new IAsyncEnumerable_1Implementation(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 LeftJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftJoin = null;
+        try {
+            retObjectLeftJoin = classType.Invoke("LeftJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objLeftJoin = (JCObject)retObjectLeftJoin;
+            return new IAsyncEnumerable_1Implementation(objLeftJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftJoin != null ? retObjectLeftJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 LeftJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_3 outerKeySelector, Func_3 innerKeySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftJoin = null;
+        try {
+            retObjectLeftJoin = classType.Invoke("LeftJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objLeftJoin = (JCObject)retObjectLeftJoin;
+            return new IAsyncEnumerable_1Implementation(objLeftJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftJoin != null ? retObjectLeftJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 OfType(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOfType = null;
+        try {
+            retObjectOfType = classType.Invoke("OfType", source == null ? null : source.getJCOInstance());
+            JCObject objOfType = (JCObject)retObjectOfType;
+            return new IAsyncEnumerable_1Implementation(objOfType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOfType != null ? retObjectOfType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Repeat(TResult element, int count) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRepeat = null;
+        try {
+            retObjectRepeat = classType.Invoke("Repeat", element == null ? null : ((IJCOBridgeReflected)element).getJCOInstance(), count);
+            JCObject objRepeat = (JCObject)retObjectRepeat;
+            return new IAsyncEnumerable_1Implementation(objRepeat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeat != null ? retObjectRepeat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 RightJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightJoin = null;
+        try {
+            retObjectRightJoin = classType.Invoke("RightJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objRightJoin = (JCObject)retObjectRightJoin;
+            return new IAsyncEnumerable_1Implementation(objRightJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightJoin != null ? retObjectRightJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 RightJoin(IAsyncEnumerable_1 outer, IAsyncEnumerable_1 inner, Func_3 outerKeySelector, Func_3 innerKeySelector, Func_4 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightJoin = null;
+        try {
+            retObjectRightJoin = classType.Invoke("RightJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objRightJoin = (JCObject)retObjectRightJoin;
+            return new IAsyncEnumerable_1Implementation(objRightJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightJoin != null ? retObjectRightJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Select(IAsyncEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
+        try {
+            retObjectSelect = classType.Invoke("Select", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelect = (JCObject)retObjectSelect;
+            return new IAsyncEnumerable_1Implementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Select(IAsyncEnumerable_1 source, Func_3 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
+        try {
+            retObjectSelect = classType.Invoke("Select", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelect = (JCObject)retObjectSelect;
+            return new IAsyncEnumerable_1Implementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Select(IAsyncEnumerable_1 source, Func_4 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
+        try {
+            retObjectSelect = classType.Invoke("Select", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelect = (JCObject)retObjectSelect;
+            return new IAsyncEnumerable_1Implementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_2 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), collectionSelector, resultSelector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IAsyncEnumerable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_2 collectionSelector, Func_4 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), collectionSelector, resultSelector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IAsyncEnumerable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_3 collectionSelector, Func_4 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), collectionSelector, resultSelector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IAsyncEnumerable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_3 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), collectionSelector, resultSelector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IAsyncEnumerable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_4 collectionSelector, Func_4 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), collectionSelector, resultSelector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IAsyncEnumerable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IAsyncEnumerable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_3 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IAsyncEnumerable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 SelectMany(IAsyncEnumerable_1 source, Func_4 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new IAsyncEnumerable_1Implementation(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Zip(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_3 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), resultSelector);
+            JCObject objZip = (JCObject)retObjectZip;
+            return new IAsyncEnumerable_1Implementation(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Zip(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_4 resultSelector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), resultSelector);
+            JCObject objZip = (JCObject)retObjectZip;
+            return new IAsyncEnumerable_1Implementation(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Chunk(IAsyncEnumerable_1 source, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChunk = null;
+        try {
+            retObjectChunk = classType.Invoke("Chunk", source == null ? null : source.getJCOInstance(), size);
+            JCObject objChunk = (JCObject)retObjectChunk;
+            return new IAsyncEnumerable_1Implementation(objChunk);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChunk != null ? retObjectChunk.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Append(IAsyncEnumerable_1 source, TSource element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppend = null;
+        try {
+            retObjectAppend = classType.Invoke("Append", source == null ? null : source.getJCOInstance(), element == null ? null : ((IJCOBridgeReflected)element).getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
+            return new IAsyncEnumerable_1Implementation(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Concat(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConcat = null;
+        try {
+            retObjectConcat = classType.Invoke("Concat", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objConcat = (JCObject)retObjectConcat;
+            return new IAsyncEnumerable_1Implementation(objConcat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcat != null ? retObjectConcat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 DefaultIfEmpty(IAsyncEnumerable_1 source, TSource defaultValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIfEmpty = null;
+        try {
+            retObjectDefaultIfEmpty = classType.Invoke("DefaultIfEmpty", source == null ? null : source.getJCOInstance(), defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance());
+            JCObject objDefaultIfEmpty = (JCObject)retObjectDefaultIfEmpty;
+            return new IAsyncEnumerable_1Implementation(objDefaultIfEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIfEmpty != null ? retObjectDefaultIfEmpty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 DefaultIfEmpty(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIfEmpty = null;
+        try {
+            retObjectDefaultIfEmpty = classType.Invoke("DefaultIfEmpty", source == null ? null : source.getJCOInstance());
+            JCObject objDefaultIfEmpty = (JCObject)retObjectDefaultIfEmpty;
+            return new IAsyncEnumerable_1Implementation(objDefaultIfEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIfEmpty != null ? retObjectDefaultIfEmpty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Distinct(IAsyncEnumerable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinct = null;
+        try {
+            retObjectDistinct = classType.Invoke("Distinct", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objDistinct = (JCObject)retObjectDistinct;
+            return new IAsyncEnumerable_1Implementation(objDistinct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinct != null ? retObjectDistinct.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 DistinctBy(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinctBy = null;
+        try {
+            retObjectDistinctBy = classType.Invoke("DistinctBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objDistinctBy = (JCObject)retObjectDistinctBy;
+            return new IAsyncEnumerable_1Implementation(objDistinctBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinctBy != null ? retObjectDistinctBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 DistinctBy(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinctBy = null;
+        try {
+            retObjectDistinctBy = classType.Invoke("DistinctBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objDistinctBy = (JCObject)retObjectDistinctBy;
+            return new IAsyncEnumerable_1Implementation(objDistinctBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinctBy != null ? retObjectDistinctBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Except(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExcept = null;
+        try {
+            retObjectExcept = classType.Invoke("Except", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objExcept = (JCObject)retObjectExcept;
+            return new IAsyncEnumerable_1Implementation(objExcept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcept != null ? retObjectExcept.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 ExceptBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExceptBy = null;
+        try {
+            retObjectExceptBy = classType.Invoke("ExceptBy", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objExceptBy = (JCObject)retObjectExceptBy;
+            return new IAsyncEnumerable_1Implementation(objExceptBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptBy != null ? retObjectExceptBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 ExceptBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExceptBy = null;
+        try {
+            retObjectExceptBy = classType.Invoke("ExceptBy", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objExceptBy = (JCObject)retObjectExceptBy;
+            return new IAsyncEnumerable_1Implementation(objExceptBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptBy != null ? retObjectExceptBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Intersect(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersect = null;
+        try {
+            retObjectIntersect = classType.Invoke("Intersect", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
+            return new IAsyncEnumerable_1Implementation(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 IntersectBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersectBy = null;
+        try {
+            retObjectIntersectBy = classType.Invoke("IntersectBy", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objIntersectBy = (JCObject)retObjectIntersectBy;
+            return new IAsyncEnumerable_1Implementation(objIntersectBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersectBy != null ? retObjectIntersectBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 IntersectBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersectBy = null;
+        try {
+            retObjectIntersectBy = classType.Invoke("IntersectBy", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objIntersectBy = (JCObject)retObjectIntersectBy;
+            return new IAsyncEnumerable_1Implementation(objIntersectBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersectBy != null ? retObjectIntersectBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Prepend(IAsyncEnumerable_1 source, TSource element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrepend = null;
+        try {
+            retObjectPrepend = classType.Invoke("Prepend", source == null ? null : source.getJCOInstance(), element == null ? null : ((IJCOBridgeReflected)element).getJCOInstance());
+            JCObject objPrepend = (JCObject)retObjectPrepend;
+            return new IAsyncEnumerable_1Implementation(objPrepend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrepend != null ? retObjectPrepend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Reverse(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverse = null;
+        try {
+            retObjectReverse = classType.Invoke("Reverse", source == null ? null : source.getJCOInstance());
+            JCObject objReverse = (JCObject)retObjectReverse;
+            return new IAsyncEnumerable_1Implementation(objReverse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverse != null ? retObjectReverse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Shuffle(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShuffle = null;
+        try {
+            retObjectShuffle = classType.Invoke("Shuffle", source == null ? null : source.getJCOInstance());
+            JCObject objShuffle = (JCObject)retObjectShuffle;
+            return new IAsyncEnumerable_1Implementation(objShuffle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShuffle != null ? retObjectShuffle.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Skip(IAsyncEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkip = null;
+        try {
+            retObjectSkip = classType.Invoke("Skip", source == null ? null : source.getJCOInstance(), count);
+            JCObject objSkip = (JCObject)retObjectSkip;
+            return new IAsyncEnumerable_1Implementation(objSkip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkip != null ? retObjectSkip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 SkipLast(IAsyncEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkipLast = null;
+        try {
+            retObjectSkipLast = classType.Invoke("SkipLast", source == null ? null : source.getJCOInstance(), count);
+            JCObject objSkipLast = (JCObject)retObjectSkipLast;
+            return new IAsyncEnumerable_1Implementation(objSkipLast);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipLast != null ? retObjectSkipLast.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 SkipWhile(IAsyncEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkipWhile = null;
+        try {
+            retObjectSkipWhile = classType.Invoke("SkipWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objSkipWhile = (JCObject)retObjectSkipWhile;
+            return new IAsyncEnumerable_1Implementation(objSkipWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipWhile != null ? retObjectSkipWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 SkipWhile(IAsyncEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkipWhile = null;
+        try {
+            retObjectSkipWhile = classType.Invoke("SkipWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objSkipWhile = (JCObject)retObjectSkipWhile;
+            return new IAsyncEnumerable_1Implementation(objSkipWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipWhile != null ? retObjectSkipWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 SkipWhile(IAsyncEnumerable_1 source, Func_4 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkipWhile = null;
+        try {
+            retObjectSkipWhile = classType.Invoke("SkipWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objSkipWhile = (JCObject)retObjectSkipWhile;
+            return new IAsyncEnumerable_1Implementation(objSkipWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipWhile != null ? retObjectSkipWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Take(IAsyncEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTake = null;
+        try {
+            retObjectTake = classType.Invoke("Take", source == null ? null : source.getJCOInstance(), count);
+            JCObject objTake = (JCObject)retObjectTake;
+            return new IAsyncEnumerable_1Implementation(objTake);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTake != null ? retObjectTake.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Take(IAsyncEnumerable_1 source, Range range) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTake = null;
+        try {
+            retObjectTake = classType.Invoke("Take", source == null ? null : source.getJCOInstance(), range == null ? null : range.getJCOInstance());
+            JCObject objTake = (JCObject)retObjectTake;
+            return new IAsyncEnumerable_1Implementation(objTake);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTake != null ? retObjectTake.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 TakeLast(IAsyncEnumerable_1 source, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakeLast = null;
+        try {
+            retObjectTakeLast = classType.Invoke("TakeLast", source == null ? null : source.getJCOInstance(), count);
+            JCObject objTakeLast = (JCObject)retObjectTakeLast;
+            return new IAsyncEnumerable_1Implementation(objTakeLast);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTakeLast != null ? retObjectTakeLast.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 TakeWhile(IAsyncEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakeWhile = null;
+        try {
+            retObjectTakeWhile = classType.Invoke("TakeWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objTakeWhile = (JCObject)retObjectTakeWhile;
+            return new IAsyncEnumerable_1Implementation(objTakeWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTakeWhile != null ? retObjectTakeWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 TakeWhile(IAsyncEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakeWhile = null;
+        try {
+            retObjectTakeWhile = classType.Invoke("TakeWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objTakeWhile = (JCObject)retObjectTakeWhile;
+            return new IAsyncEnumerable_1Implementation(objTakeWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTakeWhile != null ? retObjectTakeWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 TakeWhile(IAsyncEnumerable_1 source, Func_4 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakeWhile = null;
+        try {
+            retObjectTakeWhile = classType.Invoke("TakeWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objTakeWhile = (JCObject)retObjectTakeWhile;
+            return new IAsyncEnumerable_1Implementation(objTakeWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTakeWhile != null ? retObjectTakeWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 ToAsyncEnumerable(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToAsyncEnumerable = null;
+        try {
+            retObjectToAsyncEnumerable = classType.Invoke("ToAsyncEnumerable", source == null ? null : source.getJCOInstance());
+            JCObject objToAsyncEnumerable = (JCObject)retObjectToAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objToAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToAsyncEnumerable != null ? retObjectToAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Union(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
+        try {
+            retObjectUnion = classType.Invoke("Union", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
+            return new IAsyncEnumerable_1Implementation(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 UnionBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnionBy = null;
+        try {
+            retObjectUnionBy = classType.Invoke("UnionBy", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objUnionBy = (JCObject)retObjectUnionBy;
+            return new IAsyncEnumerable_1Implementation(objUnionBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnionBy != null ? retObjectUnionBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IAsyncEnumerable_1 UnionBy(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, Func_3 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnionBy = null;
+        try {
+            retObjectUnionBy = classType.Invoke("UnionBy", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objUnionBy = (JCObject)retObjectUnionBy;
+            return new IAsyncEnumerable_1Implementation(objUnionBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnionBy != null ? retObjectUnionBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Where(IAsyncEnumerable_1 source, Func_2 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhere = null;
+        try {
+            retObjectWhere = classType.Invoke("Where", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objWhere = (JCObject)retObjectWhere;
+            return new IAsyncEnumerable_1Implementation(objWhere);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhere != null ? retObjectWhere.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Where(IAsyncEnumerable_1 source, Func_3 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhere = null;
+        try {
+            retObjectWhere = classType.Invoke("Where", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objWhere = (JCObject)retObjectWhere;
+            return new IAsyncEnumerable_1Implementation(objWhere);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhere != null ? retObjectWhere.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IAsyncEnumerable_1 Where(IAsyncEnumerable_1 source, Func_4 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhere = null;
+        try {
+            retObjectWhere = classType.Invoke("Where", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objWhere = (JCObject)retObjectWhere;
+            return new IAsyncEnumerable_1Implementation(objWhere);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhere != null ? retObjectWhere.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 Order(IAsyncEnumerable_1 source, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrder = null;
+        try {
+            retObjectOrder = classType.Invoke("Order", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrder = (JCObject)retObjectOrder;
+            return new IOrderedAsyncEnumerable_1Implementation(objOrder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrder != null ? retObjectOrder.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderDescending(IAsyncEnumerable_1 source, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderDescending = null;
+        try {
+            retObjectOrderDescending = classType.Invoke("OrderDescending", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderDescending = (JCObject)retObjectOrderDescending;
+            return new IOrderedAsyncEnumerable_1Implementation(objOrderDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderDescending != null ? retObjectOrderDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderBy(IAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderBy = null;
+        try {
+            retObjectOrderBy = classType.Invoke("OrderBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderBy = (JCObject)retObjectOrderBy;
+            return new IOrderedAsyncEnumerable_1Implementation(objOrderBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderBy != null ? retObjectOrderBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderBy(IAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderBy = null;
+        try {
+            retObjectOrderBy = classType.Invoke("OrderBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderBy = (JCObject)retObjectOrderBy;
+            return new IOrderedAsyncEnumerable_1Implementation(objOrderBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderBy != null ? retObjectOrderBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderByDescending(IAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderByDescending = null;
+        try {
+            retObjectOrderByDescending = classType.Invoke("OrderByDescending", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderByDescending = (JCObject)retObjectOrderByDescending;
+            return new IOrderedAsyncEnumerable_1Implementation(objOrderByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderByDescending != null ? retObjectOrderByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 OrderByDescending(IAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderByDescending = null;
+        try {
+            retObjectOrderByDescending = classType.Invoke("OrderByDescending", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderByDescending = (JCObject)retObjectOrderByDescending;
+            return new IOrderedAsyncEnumerable_1Implementation(objOrderByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderByDescending != null ? retObjectOrderByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 ThenBy(IOrderedAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenBy = null;
+        try {
+            retObjectThenBy = classType.Invoke("ThenBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objThenBy = (JCObject)retObjectThenBy;
+            return new IOrderedAsyncEnumerable_1Implementation(objThenBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenBy != null ? retObjectThenBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 ThenBy(IOrderedAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenBy = null;
+        try {
+            retObjectThenBy = classType.Invoke("ThenBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objThenBy = (JCObject)retObjectThenBy;
+            return new IOrderedAsyncEnumerable_1Implementation(objThenBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenBy != null ? retObjectThenBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 ThenByDescending(IOrderedAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenByDescending = null;
+        try {
+            retObjectThenByDescending = classType.Invoke("ThenByDescending", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objThenByDescending = (JCObject)retObjectThenByDescending;
+            return new IOrderedAsyncEnumerable_1Implementation(objThenByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenByDescending != null ? retObjectThenByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 ThenByDescending(IOrderedAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenByDescending = null;
+        try {
+            retObjectThenByDescending = classType.Invoke("ThenByDescending", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objThenByDescending = (JCObject)retObjectThenByDescending;
+            return new IOrderedAsyncEnumerable_1Implementation(objThenByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenByDescending != null ? retObjectThenByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 AllAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllAsync = null;
+        try {
+            retObjectAllAsync = classType.Invoke("AllAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAllAsync = (JCObject)retObjectAllAsync;
+            return new ValueTask_1(objAllAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllAsync != null ? retObjectAllAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 AllAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllAsync = null;
+        try {
+            retObjectAllAsync = classType.Invoke("AllAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAllAsync = (JCObject)retObjectAllAsync;
+            return new ValueTask_1(objAllAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllAsync != null ? retObjectAllAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 AnyAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnyAsync = null;
+        try {
+            retObjectAnyAsync = classType.Invoke("AnyAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAnyAsync = (JCObject)retObjectAnyAsync;
+            return new ValueTask_1(objAnyAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnyAsync != null ? retObjectAnyAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 AnyAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnyAsync = null;
+        try {
+            retObjectAnyAsync = classType.Invoke("AnyAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAnyAsync = (JCObject)retObjectAnyAsync;
+            return new ValueTask_1(objAnyAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnyAsync != null ? retObjectAnyAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 AnyAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnyAsync = null;
+        try {
+            retObjectAnyAsync = classType.Invoke("AnyAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAnyAsync = (JCObject)retObjectAnyAsync;
+            return new ValueTask_1(objAnyAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnyAsync != null ? retObjectAnyAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 ContainsAsync(IAsyncEnumerable_1 source, TSource value, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContainsAsync = null;
+        try {
+            retObjectContainsAsync = classType.Invoke("ContainsAsync", source == null ? null : source.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContainsAsync = (JCObject)retObjectContainsAsync;
+            return new ValueTask_1(objContainsAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainsAsync != null ? retObjectContainsAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SequenceEqualAsync(IAsyncEnumerable_1 first, IAsyncEnumerable_1 second, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSequenceEqualAsync = null;
+        try {
+            retObjectSequenceEqualAsync = classType.Invoke("SequenceEqualAsync", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSequenceEqualAsync = (JCObject)retObjectSequenceEqualAsync;
+            return new ValueTask_1(objSequenceEqualAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSequenceEqualAsync != null ? retObjectSequenceEqualAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionaryAsync = null;
+        try {
+            retObjectToDictionaryAsync = classType.Invoke("ToDictionaryAsync", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToDictionaryAsync = (JCObject)retObjectToDictionaryAsync;
+            return new ValueTask_1(objToDictionaryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionaryAsync != null ? retObjectToDictionaryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 elementSelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionaryAsync = null;
+        try {
+            retObjectToDictionaryAsync = classType.Invoke("ToDictionaryAsync", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToDictionaryAsync = (JCObject)retObjectToDictionaryAsync;
+            return new ValueTask_1(objToDictionaryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionaryAsync != null ? retObjectToDictionaryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionaryAsync = null;
+        try {
+            retObjectToDictionaryAsync = classType.Invoke("ToDictionaryAsync", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToDictionaryAsync = (JCObject)retObjectToDictionaryAsync;
+            return new ValueTask_1(objToDictionaryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionaryAsync != null ? retObjectToDictionaryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionaryAsync = null;
+        try {
+            retObjectToDictionaryAsync = classType.Invoke("ToDictionaryAsync", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToDictionaryAsync = (JCObject)retObjectToDictionaryAsync;
+            return new ValueTask_1(objToDictionaryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionaryAsync != null ? retObjectToDictionaryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ValueTask_1 ToDictionaryAsync(IAsyncEnumerable_1 source, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionaryAsync = null;
+        try {
+            retObjectToDictionaryAsync = classType.Invoke("ToDictionaryAsync", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToDictionaryAsync = (JCObject)retObjectToDictionaryAsync;
+            return new ValueTask_1(objToDictionaryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionaryAsync != null ? retObjectToDictionaryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 ToHashSetAsync(IAsyncEnumerable_1 source, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToHashSetAsync = null;
+        try {
+            retObjectToHashSetAsync = classType.Invoke("ToHashSetAsync", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToHashSetAsync = (JCObject)retObjectToHashSetAsync;
+            return new ValueTask_1(objToHashSetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToHashSetAsync != null ? retObjectToHashSetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 ToListAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToListAsync = null;
+        try {
+            retObjectToListAsync = classType.Invoke("ToListAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToListAsync = (JCObject)retObjectToListAsync;
+            return new ValueTask_1(objToListAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToListAsync != null ? retObjectToListAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 AverageAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAverageAsync = null;
+        try {
+            retObjectAverageAsync = classType.Invoke("AverageAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAverageAsync = (JCObject)retObjectAverageAsync;
+            return new ValueTask_1(objAverageAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAverageAsync != null ? retObjectAverageAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 SumAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSumAsync = null;
+        try {
+            retObjectSumAsync = classType.Invoke("SumAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSumAsync = (JCObject)retObjectSumAsync;
+            return new ValueTask_1(objSumAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSumAsync != null ? retObjectSumAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 CountAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCountAsync = null;
+        try {
+            retObjectCountAsync = classType.Invoke("CountAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCountAsync = (JCObject)retObjectCountAsync;
+            return new ValueTask_1(objCountAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCountAsync != null ? retObjectCountAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 CountAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCountAsync = null;
+        try {
+            retObjectCountAsync = classType.Invoke("CountAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCountAsync = (JCObject)retObjectCountAsync;
+            return new ValueTask_1(objCountAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCountAsync != null ? retObjectCountAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 CountAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCountAsync = null;
+        try {
+            retObjectCountAsync = classType.Invoke("CountAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCountAsync = (JCObject)retObjectCountAsync;
+            return new ValueTask_1(objCountAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCountAsync != null ? retObjectCountAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LongCountAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongCountAsync = null;
+        try {
+            retObjectLongCountAsync = classType.Invoke("LongCountAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLongCountAsync = (JCObject)retObjectLongCountAsync;
+            return new ValueTask_1(objLongCountAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLongCountAsync != null ? retObjectLongCountAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LongCountAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongCountAsync = null;
+        try {
+            retObjectLongCountAsync = classType.Invoke("LongCountAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLongCountAsync = (JCObject)retObjectLongCountAsync;
+            return new ValueTask_1(objLongCountAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLongCountAsync != null ? retObjectLongCountAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LongCountAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongCountAsync = null;
+        try {
+            retObjectLongCountAsync = classType.Invoke("LongCountAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLongCountAsync = (JCObject)retObjectLongCountAsync;
+            return new ValueTask_1(objLongCountAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLongCountAsync != null ? retObjectLongCountAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ValueTask_1 ToLookupAsync(IAsyncEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLookupAsync = null;
+        try {
+            retObjectToLookupAsync = classType.Invoke("ToLookupAsync", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToLookupAsync = (JCObject)retObjectToLookupAsync;
+            return new ValueTask_1(objToLookupAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLookupAsync != null ? retObjectToLookupAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ValueTask_1 ToLookupAsync(IAsyncEnumerable_1 source, Func_3 keySelector, Func_3 elementSelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLookupAsync = null;
+        try {
+            retObjectToLookupAsync = classType.Invoke("ToLookupAsync", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToLookupAsync = (JCObject)retObjectToLookupAsync;
+            return new ValueTask_1(objToLookupAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLookupAsync != null ? retObjectToLookupAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 ToLookupAsync(IAsyncEnumerable_1 source, Func_2 keySelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLookupAsync = null;
+        try {
+            retObjectToLookupAsync = classType.Invoke("ToLookupAsync", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToLookupAsync = (JCObject)retObjectToLookupAsync;
+            return new ValueTask_1(objToLookupAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLookupAsync != null ? retObjectToLookupAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 ToLookupAsync(IAsyncEnumerable_1 source, Func_3 keySelector, IEqualityComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLookupAsync = null;
+        try {
+            retObjectToLookupAsync = classType.Invoke("ToLookupAsync", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToLookupAsync = (JCObject)retObjectToLookupAsync;
+            return new ValueTask_1(objToLookupAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLookupAsync != null ? retObjectToLookupAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, TAccumulate seed, Func_3 func, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateAsync = null;
+        try {
+            retObjectAggregateAsync = classType.Invoke("AggregateAsync", source == null ? null : source.getJCOInstance(), seed == null ? null : ((IJCOBridgeReflected)seed).getJCOInstance(), func, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAggregateAsync = (JCObject)retObjectAggregateAsync;
+            return new ValueTask_1(objAggregateAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateAsync != null ? retObjectAggregateAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, TAccumulate seed, Func_4 func, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateAsync = null;
+        try {
+            retObjectAggregateAsync = classType.Invoke("AggregateAsync", source == null ? null : source.getJCOInstance(), seed == null ? null : ((IJCOBridgeReflected)seed).getJCOInstance(), func, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAggregateAsync = (JCObject)retObjectAggregateAsync;
+            return new ValueTask_1(objAggregateAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateAsync != null ? retObjectAggregateAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, TAccumulate seed, Func_3 func, Func_2 resultSelector, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateAsync = null;
+        try {
+            retObjectAggregateAsync = classType.Invoke("AggregateAsync", source == null ? null : source.getJCOInstance(), seed == null ? null : ((IJCOBridgeReflected)seed).getJCOInstance(), func, resultSelector, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAggregateAsync = (JCObject)retObjectAggregateAsync;
+            return new ValueTask_1(objAggregateAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateAsync != null ? retObjectAggregateAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TAccumulate extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, TAccumulate seed, Func_4 func, Func_3 resultSelector, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateAsync = null;
+        try {
+            retObjectAggregateAsync = classType.Invoke("AggregateAsync", source == null ? null : source.getJCOInstance(), seed == null ? null : ((IJCOBridgeReflected)seed).getJCOInstance(), func, resultSelector, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAggregateAsync = (JCObject)retObjectAggregateAsync;
+            return new ValueTask_1(objAggregateAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateAsync != null ? retObjectAggregateAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 ToArrayAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToArrayAsync = null;
+        try {
+            retObjectToArrayAsync = classType.Invoke("ToArrayAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToArrayAsync = (JCObject)retObjectToArrayAsync;
+            return new ValueTask_1(objToArrayAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToArrayAsync != null ? retObjectToArrayAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, Func_3 func, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateAsync = null;
+        try {
+            retObjectAggregateAsync = classType.Invoke("AggregateAsync", source == null ? null : source.getJCOInstance(), func, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAggregateAsync = (JCObject)retObjectAggregateAsync;
+            return new ValueTask_1(objAggregateAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateAsync != null ? retObjectAggregateAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 AggregateAsync(IAsyncEnumerable_1 source, Func_4 func, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAggregateAsync = null;
+        try {
+            retObjectAggregateAsync = classType.Invoke("AggregateAsync", source == null ? null : source.getJCOInstance(), func, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAggregateAsync = (JCObject)retObjectAggregateAsync;
+            return new ValueTask_1(objAggregateAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregateAsync != null ? retObjectAggregateAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 ElementAtAsync(IAsyncEnumerable_1 source, int index, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectElementAtAsync = null;
+        try {
+            retObjectElementAtAsync = classType.Invoke("ElementAtAsync", source == null ? null : source.getJCOInstance(), index, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objElementAtAsync = (JCObject)retObjectElementAtAsync;
+            return new ValueTask_1(objElementAtAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementAtAsync != null ? retObjectElementAtAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 ElementAtAsync(IAsyncEnumerable_1 source, Index index, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectElementAtAsync = null;
+        try {
+            retObjectElementAtAsync = classType.Invoke("ElementAtAsync", source == null ? null : source.getJCOInstance(), index == null ? null : index.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objElementAtAsync = (JCObject)retObjectElementAtAsync;
+            return new ValueTask_1(objElementAtAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementAtAsync != null ? retObjectElementAtAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 ElementAtOrDefaultAsync(IAsyncEnumerable_1 source, int index, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectElementAtOrDefaultAsync = null;
+        try {
+            retObjectElementAtOrDefaultAsync = classType.Invoke("ElementAtOrDefaultAsync", source == null ? null : source.getJCOInstance(), index, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objElementAtOrDefaultAsync = (JCObject)retObjectElementAtOrDefaultAsync;
+            return new ValueTask_1(objElementAtOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementAtOrDefaultAsync != null ? retObjectElementAtOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 ElementAtOrDefaultAsync(IAsyncEnumerable_1 source, Index index, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectElementAtOrDefaultAsync = null;
+        try {
+            retObjectElementAtOrDefaultAsync = classType.Invoke("ElementAtOrDefaultAsync", source == null ? null : source.getJCOInstance(), index == null ? null : index.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objElementAtOrDefaultAsync = (JCObject)retObjectElementAtOrDefaultAsync;
+            return new ValueTask_1(objElementAtOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementAtOrDefaultAsync != null ? retObjectElementAtOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstAsync = null;
+        try {
+            retObjectFirstAsync = classType.Invoke("FirstAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstAsync = (JCObject)retObjectFirstAsync;
+            return new ValueTask_1(objFirstAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstAsync != null ? retObjectFirstAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstAsync = null;
+        try {
+            retObjectFirstAsync = classType.Invoke("FirstAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstAsync = (JCObject)retObjectFirstAsync;
+            return new ValueTask_1(objFirstAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstAsync != null ? retObjectFirstAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstAsync = null;
+        try {
+            retObjectFirstAsync = classType.Invoke("FirstAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstAsync = (JCObject)retObjectFirstAsync;
+            return new ValueTask_1(objFirstAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstAsync != null ? retObjectFirstAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstOrDefaultAsync = null;
+        try {
+            retObjectFirstOrDefaultAsync = classType.Invoke("FirstOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstOrDefaultAsync = (JCObject)retObjectFirstOrDefaultAsync;
+            return new ValueTask_1(objFirstOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstOrDefaultAsync != null ? retObjectFirstOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstOrDefaultAsync = null;
+        try {
+            retObjectFirstOrDefaultAsync = classType.Invoke("FirstOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstOrDefaultAsync = (JCObject)retObjectFirstOrDefaultAsync;
+            return new ValueTask_1(objFirstOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstOrDefaultAsync != null ? retObjectFirstOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstOrDefaultAsync = null;
+        try {
+            retObjectFirstOrDefaultAsync = classType.Invoke("FirstOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstOrDefaultAsync = (JCObject)retObjectFirstOrDefaultAsync;
+            return new ValueTask_1(objFirstOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstOrDefaultAsync != null ? retObjectFirstOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstOrDefaultAsync = null;
+        try {
+            retObjectFirstOrDefaultAsync = classType.Invoke("FirstOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstOrDefaultAsync = (JCObject)retObjectFirstOrDefaultAsync;
+            return new ValueTask_1(objFirstOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstOrDefaultAsync != null ? retObjectFirstOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstOrDefaultAsync = null;
+        try {
+            retObjectFirstOrDefaultAsync = classType.Invoke("FirstOrDefaultAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstOrDefaultAsync = (JCObject)retObjectFirstOrDefaultAsync;
+            return new ValueTask_1(objFirstOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstOrDefaultAsync != null ? retObjectFirstOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 FirstOrDefaultAsync(IAsyncEnumerable_1 source, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFirstOrDefaultAsync = null;
+        try {
+            retObjectFirstOrDefaultAsync = classType.Invoke("FirstOrDefaultAsync", source == null ? null : source.getJCOInstance(), defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objFirstOrDefaultAsync = (JCObject)retObjectFirstOrDefaultAsync;
+            return new ValueTask_1(objFirstOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstOrDefaultAsync != null ? retObjectFirstOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastAsync = null;
+        try {
+            retObjectLastAsync = classType.Invoke("LastAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastAsync = (JCObject)retObjectLastAsync;
+            return new ValueTask_1(objLastAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastAsync != null ? retObjectLastAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastAsync = null;
+        try {
+            retObjectLastAsync = classType.Invoke("LastAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastAsync = (JCObject)retObjectLastAsync;
+            return new ValueTask_1(objLastAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastAsync != null ? retObjectLastAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastAsync = null;
+        try {
+            retObjectLastAsync = classType.Invoke("LastAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastAsync = (JCObject)retObjectLastAsync;
+            return new ValueTask_1(objLastAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastAsync != null ? retObjectLastAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastOrDefaultAsync = null;
+        try {
+            retObjectLastOrDefaultAsync = classType.Invoke("LastOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastOrDefaultAsync = (JCObject)retObjectLastOrDefaultAsync;
+            return new ValueTask_1(objLastOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOrDefaultAsync != null ? retObjectLastOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastOrDefaultAsync = null;
+        try {
+            retObjectLastOrDefaultAsync = classType.Invoke("LastOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastOrDefaultAsync = (JCObject)retObjectLastOrDefaultAsync;
+            return new ValueTask_1(objLastOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOrDefaultAsync != null ? retObjectLastOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastOrDefaultAsync = null;
+        try {
+            retObjectLastOrDefaultAsync = classType.Invoke("LastOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastOrDefaultAsync = (JCObject)retObjectLastOrDefaultAsync;
+            return new ValueTask_1(objLastOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOrDefaultAsync != null ? retObjectLastOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastOrDefaultAsync = null;
+        try {
+            retObjectLastOrDefaultAsync = classType.Invoke("LastOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastOrDefaultAsync = (JCObject)retObjectLastOrDefaultAsync;
+            return new ValueTask_1(objLastOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOrDefaultAsync != null ? retObjectLastOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastOrDefaultAsync = null;
+        try {
+            retObjectLastOrDefaultAsync = classType.Invoke("LastOrDefaultAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastOrDefaultAsync = (JCObject)retObjectLastOrDefaultAsync;
+            return new ValueTask_1(objLastOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOrDefaultAsync != null ? retObjectLastOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 LastOrDefaultAsync(IAsyncEnumerable_1 source, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastOrDefaultAsync = null;
+        try {
+            retObjectLastOrDefaultAsync = classType.Invoke("LastOrDefaultAsync", source == null ? null : source.getJCOInstance(), defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objLastOrDefaultAsync = (JCObject)retObjectLastOrDefaultAsync;
+            return new ValueTask_1(objLastOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOrDefaultAsync != null ? retObjectLastOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 MaxAsync(IAsyncEnumerable_1 source, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxAsync = null;
+        try {
+            retObjectMaxAsync = classType.Invoke("MaxAsync", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objMaxAsync = (JCObject)retObjectMaxAsync;
+            return new ValueTask_1(objMaxAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxAsync != null ? retObjectMaxAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 MaxByAsync(IAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxByAsync = null;
+        try {
+            retObjectMaxByAsync = classType.Invoke("MaxByAsync", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objMaxByAsync = (JCObject)retObjectMaxByAsync;
+            return new ValueTask_1(objMaxByAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxByAsync != null ? retObjectMaxByAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 MaxByAsync(IAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxByAsync = null;
+        try {
+            retObjectMaxByAsync = classType.Invoke("MaxByAsync", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objMaxByAsync = (JCObject)retObjectMaxByAsync;
+            return new ValueTask_1(objMaxByAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxByAsync != null ? retObjectMaxByAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 MinAsync(IAsyncEnumerable_1 source, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinAsync = null;
+        try {
+            retObjectMinAsync = classType.Invoke("MinAsync", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objMinAsync = (JCObject)retObjectMinAsync;
+            return new ValueTask_1(objMinAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinAsync != null ? retObjectMinAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 MinByAsync(IAsyncEnumerable_1 source, Func_2 keySelector, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinByAsync = null;
+        try {
+            retObjectMinByAsync = classType.Invoke("MinByAsync", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objMinByAsync = (JCObject)retObjectMinByAsync;
+            return new ValueTask_1(objMinByAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinByAsync != null ? retObjectMinByAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ValueTask_1 MinByAsync(IAsyncEnumerable_1 source, Func_3 keySelector, IComparer_1 comparer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinByAsync = null;
+        try {
+            retObjectMinByAsync = classType.Invoke("MinByAsync", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objMinByAsync = (JCObject)retObjectMinByAsync;
+            return new ValueTask_1(objMinByAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinByAsync != null ? retObjectMinByAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleAsync = null;
+        try {
+            retObjectSingleAsync = classType.Invoke("SingleAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleAsync = (JCObject)retObjectSingleAsync;
+            return new ValueTask_1(objSingleAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleAsync != null ? retObjectSingleAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleAsync = null;
+        try {
+            retObjectSingleAsync = classType.Invoke("SingleAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleAsync = (JCObject)retObjectSingleAsync;
+            return new ValueTask_1(objSingleAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleAsync != null ? retObjectSingleAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleAsync = null;
+        try {
+            retObjectSingleAsync = classType.Invoke("SingleAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleAsync = (JCObject)retObjectSingleAsync;
+            return new ValueTask_1(objSingleAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleAsync != null ? retObjectSingleAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleOrDefaultAsync = null;
+        try {
+            retObjectSingleOrDefaultAsync = classType.Invoke("SingleOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleOrDefaultAsync = (JCObject)retObjectSingleOrDefaultAsync;
+            return new ValueTask_1(objSingleOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleOrDefaultAsync != null ? retObjectSingleOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, Func_2 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleOrDefaultAsync = null;
+        try {
+            retObjectSingleOrDefaultAsync = classType.Invoke("SingleOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleOrDefaultAsync = (JCObject)retObjectSingleOrDefaultAsync;
+            return new ValueTask_1(objSingleOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleOrDefaultAsync != null ? retObjectSingleOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleOrDefaultAsync = null;
+        try {
+            retObjectSingleOrDefaultAsync = classType.Invoke("SingleOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleOrDefaultAsync = (JCObject)retObjectSingleOrDefaultAsync;
+            return new ValueTask_1(objSingleOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleOrDefaultAsync != null ? retObjectSingleOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, Func_3 predicate, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleOrDefaultAsync = null;
+        try {
+            retObjectSingleOrDefaultAsync = classType.Invoke("SingleOrDefaultAsync", source == null ? null : source.getJCOInstance(), predicate, defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleOrDefaultAsync = (JCObject)retObjectSingleOrDefaultAsync;
+            return new ValueTask_1(objSingleOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleOrDefaultAsync != null ? retObjectSingleOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleOrDefaultAsync = null;
+        try {
+            retObjectSingleOrDefaultAsync = classType.Invoke("SingleOrDefaultAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleOrDefaultAsync = (JCObject)retObjectSingleOrDefaultAsync;
+            return new ValueTask_1(objSingleOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleOrDefaultAsync != null ? retObjectSingleOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ValueTask_1 SingleOrDefaultAsync(IAsyncEnumerable_1 source, TSource defaultValue, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleOrDefaultAsync = null;
+        try {
+            retObjectSingleOrDefaultAsync = classType.Invoke("SingleOrDefaultAsync", source == null ? null : source.getJCOInstance(), defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSingleOrDefaultAsync = (JCObject)retObjectSingleOrDefaultAsync;
+            return new ValueTask_1(objSingleOrDefaultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleOrDefaultAsync != null ? retObjectSingleOrDefaultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

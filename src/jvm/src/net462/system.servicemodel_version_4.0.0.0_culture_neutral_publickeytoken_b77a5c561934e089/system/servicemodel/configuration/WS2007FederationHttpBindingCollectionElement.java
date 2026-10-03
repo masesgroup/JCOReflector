@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.configuration.StandardBindingCollectionElement_2;
+import system.servicemodel.WS2007FederationHttpBinding;
+import system.servicemodel.configuration.WS2007FederationHttpBindingElement;
 
 
 /**
@@ -52,7 +55,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WS2007FederationHttpBindingCollectionElement extends NetObject  {
+public class WS2007FederationHttpBindingCollectionElement extends system.servicemodel.configuration.StandardBindingCollectionElement_2<WS2007FederationHttpBinding, WS2007FederationHttpBindingElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

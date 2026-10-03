@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.immutable.ImmutableArray_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ArrayShape extends ValueType  {
+public class ArrayShape extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -149,6 +150,16 @@ public class ArrayShape extends ValueType  {
     public ArrayShape() throws Throwable {
     }
 
+    public ArrayShape(int rank, ImmutableArray_1 sizes, ImmutableArray_1 lowerBounds) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(rank, sizes == null ? null : sizes.getJCOInstance(), lowerBounds == null ? null : lowerBounds.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -193,6 +204,36 @@ public class ArrayShape extends ValueType  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 getLowerBounds() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLowerBounds = null;
+        try {
+            retObjectLowerBounds = classInstance.Get("LowerBounds");
+            JCObject val = (JCObject)retObjectLowerBounds;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLowerBounds != null ? retObjectLowerBounds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 getSizes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizes = null;
+        try {
+            retObjectSizes = classInstance.Get("Sizes");
+            JCObject val = (JCObject)retObjectSizes;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizes != null ? retObjectSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

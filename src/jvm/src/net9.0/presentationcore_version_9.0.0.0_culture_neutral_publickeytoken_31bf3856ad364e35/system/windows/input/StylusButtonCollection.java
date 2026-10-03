@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.input.StylusButton;
 import system.Guid;
 
@@ -54,7 +55,7 @@ import system.Guid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StylusButtonCollection extends NetObjectEnumerable  {
+public class StylusButtonCollection extends system.collections.objectmodel.ReadOnlyCollection_1<StylusButton>  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

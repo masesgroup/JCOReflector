@@ -38,9 +38,29 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.ParallelQuery_1;
+import system.Func_2;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.Single;
+import system.collections.generic.Dictionary_2;
+import system.collections.generic.List_1;
 import system.Decimal;
+import system.linq.ILookup_2;
+import system.linq.ILookup_2Implementation;
+import system.linq.OrderedParallelQuery_1;
+import system.collections.generic.IComparer_1;
+import system.collections.generic.IComparer_1Implementation;
 import system.linq.ParallelQuery;
+import system.Func_3;
+import system.collections.concurrent.Partitioner_1;
+import system.threading.CancellationToken;
+import system.linq.ParallelExecutionMode;
+import system.linq.ParallelMergeOptions;
+import system.Nullable_1;
+import system.Action_1;
 
 
 /**
@@ -154,6 +174,897 @@ public class ParallelEnumerable extends NetObject  {
     
     // Methods section
     
+    public static <TSource extends IJCOBridgeReflected> boolean All(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAll = null;
+        try {
+            retObjectAll = classType.Invoke("All", source == null ? null : source.getJCOInstance(), predicate);
+            return (boolean)retObjectAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean Any(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAny = null;
+        try {
+            retObjectAny = classType.Invoke("Any", source == null ? null : source.getJCOInstance());
+            return (boolean)retObjectAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAny != null ? retObjectAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean Any(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAny = null;
+        try {
+            retObjectAny = classType.Invoke("Any", source == null ? null : source.getJCOInstance(), predicate);
+            return (boolean)retObjectAny;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAny != null ? retObjectAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean Contains(ParallelQuery_1 source, TSource value) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContains = null;
+        try {
+            retObjectContains = classType.Invoke("Contains", source == null ? null : source.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean Contains(ParallelQuery_1 source, TSource value, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContains = null;
+        try {
+            retObjectContains = classType.Invoke("Contains", source == null ? null : source.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSequenceEqual = null;
+        try {
+            retObjectSequenceEqual = classType.Invoke("SequenceEqual", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            return (boolean)retObjectSequenceEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSequenceEqual != null ? retObjectSequenceEqual.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(ParallelQuery_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSequenceEqual = null;
+        try {
+            retObjectSequenceEqual = classType.Invoke("SequenceEqual", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (boolean)retObjectSequenceEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSequenceEqual != null ? retObjectSequenceEqual.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.OperationCanceledException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSequenceEqual = null;
+        try {
+            retObjectSequenceEqual = classType.Invoke("SequenceEqual", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            return (boolean)retObjectSequenceEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSequenceEqual != null ? retObjectSequenceEqual.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> boolean SequenceEqual(ParallelQuery_1 first, ParallelQuery_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.OperationCanceledException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSequenceEqual = null;
+        try {
+            retObjectSequenceEqual = classType.Invoke("SequenceEqual", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (boolean)retObjectSequenceEqual;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSequenceEqual != null ? retObjectSequenceEqual.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Average(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAverage = null;
+        try {
+            retObjectAverage = classType.Invoke("Average", source == null ? null : source.getJCOInstance());
+            return (double)retObjectAverage;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportAverageError = true;
+            java.lang.String retObjectAverage_ToString = retObjectAverage == null ? "null" : retObjectAverage.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAverage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAverageClass = retObjectAverage.getClass();
+                    // java.lang.reflect.Method retObjectAverageMethod = retObjectAverageClass.getMethod("doubleValue");
+                    // return (double)retObjectAverageMethod.invoke(retObjectAverage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAverageNumber = java.text.NumberFormat.getInstance().parse(retObjectAverage_ToString);
+                    return retObjectAverageNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAverageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAverage != null ? retObjectAverage.getClass() : "null", retObjectAverage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAverageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> double Average(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAverage = null;
+        try {
+            retObjectAverage = classType.Invoke("Average", source == null ? null : source.getJCOInstance(), selector);
+            return (double)retObjectAverage;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportAverageError = true;
+            java.lang.String retObjectAverage_ToString = retObjectAverage == null ? "null" : retObjectAverage.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectAverage != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectAverageClass = retObjectAverage.getClass();
+                    // java.lang.reflect.Method retObjectAverageMethod = retObjectAverageClass.getMethod("doubleValue");
+                    // return (double)retObjectAverageMethod.invoke(retObjectAverage);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectAverageNumber = java.text.NumberFormat.getInstance().parse(retObjectAverage_ToString);
+                    return retObjectAverageNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportAverageError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectAverage != null ? retObjectAverage.getClass() : "null", retObjectAverage_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportAverageError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Max(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
+        try {
+            retObjectMax = classType.Invoke("Max", source == null ? null : source.getJCOInstance());
+            return (double)retObjectMax;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxError = true;
+            java.lang.String retObjectMax_ToString = retObjectMax == null ? "null" : retObjectMax.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMax != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxClass = retObjectMax.getClass();
+                    // java.lang.reflect.Method retObjectMaxMethod = retObjectMaxClass.getMethod("doubleValue");
+                    // return (double)retObjectMaxMethod.invoke(retObjectMax);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxNumber = java.text.NumberFormat.getInstance().parse(retObjectMax_ToString);
+                    return retObjectMaxNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMax != null ? retObjectMax.getClass() : "null", retObjectMax_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> double Max(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
+        try {
+            retObjectMax = classType.Invoke("Max", source == null ? null : source.getJCOInstance(), selector);
+            return (double)retObjectMax;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportMaxError = true;
+            java.lang.String retObjectMax_ToString = retObjectMax == null ? "null" : retObjectMax.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMax != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMaxClass = retObjectMax.getClass();
+                    // java.lang.reflect.Method retObjectMaxMethod = retObjectMaxClass.getMethod("doubleValue");
+                    // return (double)retObjectMaxMethod.invoke(retObjectMax);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMaxNumber = java.text.NumberFormat.getInstance().parse(retObjectMax_ToString);
+                    return retObjectMaxNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMaxError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMax != null ? retObjectMax.getClass() : "null", retObjectMax_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMaxError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Min(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMin = null;
+        try {
+            retObjectMin = classType.Invoke("Min", source == null ? null : source.getJCOInstance());
+            return (double)retObjectMin;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportMinError = true;
+            java.lang.String retObjectMin_ToString = retObjectMin == null ? "null" : retObjectMin.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMin != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinClass = retObjectMin.getClass();
+                    // java.lang.reflect.Method retObjectMinMethod = retObjectMinClass.getMethod("doubleValue");
+                    // return (double)retObjectMinMethod.invoke(retObjectMin);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinNumber = java.text.NumberFormat.getInstance().parse(retObjectMin_ToString);
+                    return retObjectMinNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMin != null ? retObjectMin.getClass() : "null", retObjectMin_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> double Min(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMin = null;
+        try {
+            retObjectMin = classType.Invoke("Min", source == null ? null : source.getJCOInstance(), selector);
+            return (double)retObjectMin;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportMinError = true;
+            java.lang.String retObjectMin_ToString = retObjectMin == null ? "null" : retObjectMin.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMin != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMinClass = retObjectMin.getClass();
+                    // java.lang.reflect.Method retObjectMinMethod = retObjectMinClass.getMethod("doubleValue");
+                    // return (double)retObjectMinMethod.invoke(retObjectMin);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMinNumber = java.text.NumberFormat.getInstance().parse(retObjectMin_ToString);
+                    return retObjectMinNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMinError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMin != null ? retObjectMin.getClass() : "null", retObjectMin_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMinError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Sum(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSum = null;
+        try {
+            retObjectSum = classType.Invoke("Sum", source == null ? null : source.getJCOInstance());
+            return (double)retObjectSum;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSumError = true;
+            java.lang.String retObjectSum_ToString = retObjectSum == null ? "null" : retObjectSum.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSumClass = retObjectSum.getClass();
+                    // java.lang.reflect.Method retObjectSumMethod = retObjectSumClass.getMethod("doubleValue");
+                    // return (double)retObjectSumMethod.invoke(retObjectSum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSumNumber = java.text.NumberFormat.getInstance().parse(retObjectSum_ToString);
+                    return retObjectSumNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSum != null ? retObjectSum.getClass() : "null", retObjectSum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> double Sum(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSum = null;
+        try {
+            retObjectSum = classType.Invoke("Sum", source == null ? null : source.getJCOInstance(), selector);
+            return (double)retObjectSum;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSumError = true;
+            java.lang.String retObjectSum_ToString = retObjectSum == null ? "null" : retObjectSum.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSum != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSumClass = retObjectSum.getClass();
+                    // java.lang.reflect.Method retObjectSumMethod = retObjectSumClass.getMethod("doubleValue");
+                    // return (double)retObjectSumMethod.invoke(retObjectSum);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSumNumber = java.text.NumberFormat.getInstance().parse(retObjectSum_ToString);
+                    return retObjectSumNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSumError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSum != null ? retObjectSum.getClass() : "null", retObjectSum_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSumError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> int Count(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCount = null;
+        try {
+            retObjectCount = classType.Invoke("Count", source == null ? null : source.getJCOInstance());
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCountError = true;
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCountClass = retObjectCount.getClass();
+                    // java.lang.reflect.Method retObjectCountMethod = retObjectCountClass.getMethod("intValue");
+                    // return (int)retObjectCountMethod.invoke(retObjectCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCountNumber = java.text.NumberFormat.getInstance().parse(retObjectCount_ToString);
+                    return retObjectCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> int Count(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCount = null;
+        try {
+            retObjectCount = classType.Invoke("Count", source == null ? null : source.getJCOInstance(), predicate);
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCountError = true;
+            java.lang.String retObjectCount_ToString = retObjectCount == null ? "null" : retObjectCount.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCountClass = retObjectCount.getClass();
+                    // java.lang.reflect.Method retObjectCountMethod = retObjectCountClass.getMethod("intValue");
+                    // return (int)retObjectCountMethod.invoke(retObjectCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCountNumber = java.text.NumberFormat.getInstance().parse(retObjectCount_ToString);
+                    return retObjectCountNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCount != null ? retObjectCount.getClass() : "null", retObjectCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> long LongCount(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongCount = null;
+        try {
+            retObjectLongCount = classType.Invoke("LongCount", source == null ? null : source.getJCOInstance());
+            return (long)retObjectLongCount;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportLongCountError = true;
+            java.lang.String retObjectLongCount_ToString = retObjectLongCount == null ? "null" : retObjectLongCount.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLongCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLongCountClass = retObjectLongCount.getClass();
+                    // java.lang.reflect.Method retObjectLongCountMethod = retObjectLongCountClass.getMethod("longValue");
+                    // return (long)retObjectLongCountMethod.invoke(retObjectLongCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLongCountNumber = java.text.NumberFormat.getInstance().parse(retObjectLongCount_ToString);
+                    return retObjectLongCountNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLongCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLongCount != null ? retObjectLongCount.getClass() : "null", retObjectLongCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLongCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> long LongCount(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLongCount = null;
+        try {
+            retObjectLongCount = classType.Invoke("LongCount", source == null ? null : source.getJCOInstance(), predicate);
+            return (long)retObjectLongCount;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportLongCountError = true;
+            java.lang.String retObjectLongCount_ToString = retObjectLongCount == null ? "null" : retObjectLongCount.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLongCount != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLongCountClass = retObjectLongCount.getClass();
+                    // java.lang.reflect.Method retObjectLongCountMethod = retObjectLongCountClass.getMethod("longValue");
+                    // return (long)retObjectLongCountMethod.invoke(retObjectLongCount);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLongCountNumber = java.text.NumberFormat.getInstance().parse(retObjectLongCount_ToString);
+                    return retObjectLongCountNumber.longValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLongCountError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into long and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLongCount != null ? retObjectLongCount.getClass() : "null", retObjectLongCount_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLongCountError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionary = null;
+        try {
+            retObjectToDictionary = classType.Invoke("ToDictionary", source == null ? null : source.getJCOInstance(), keySelector, elementSelector);
+            JCObject objToDictionary = (JCObject)retObjectToDictionary;
+            return new Dictionary_2(objToDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionary != null ? retObjectToDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionary = null;
+        try {
+            retObjectToDictionary = classType.Invoke("ToDictionary", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objToDictionary = (JCObject)retObjectToDictionary;
+            return new Dictionary_2(objToDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionary != null ? retObjectToDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionary = null;
+        try {
+            retObjectToDictionary = classType.Invoke("ToDictionary", source == null ? null : source.getJCOInstance(), keySelector);
+            JCObject objToDictionary = (JCObject)retObjectToDictionary;
+            return new Dictionary_2(objToDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionary != null ? retObjectToDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> Dictionary_2 ToDictionary(ParallelQuery_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDictionary = null;
+        try {
+            retObjectToDictionary = classType.Invoke("ToDictionary", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objToDictionary = (JCObject)retObjectToDictionary;
+            return new Dictionary_2(objToDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDictionary != null ? retObjectToDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IEnumerable_1 AsEnumerable(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsEnumerable = null;
+        try {
+            retObjectAsEnumerable = classType.Invoke("AsEnumerable", source == null ? null : source.getJCOInstance());
+            JCObject objAsEnumerable = (JCObject)retObjectAsEnumerable;
+            return new IEnumerable_1Implementation(objAsEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsEnumerable != null ? retObjectAsEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> IEnumerable_1 AsSequential(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsSequential = null;
+        try {
+            retObjectAsSequential = classType.Invoke("AsSequential", source == null ? null : source.getJCOInstance());
+            JCObject objAsSequential = (JCObject)retObjectAsSequential;
+            return new IEnumerable_1Implementation(objAsSequential);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsSequential != null ? retObjectAsSequential.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> List_1 ToList(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.OperationCanceledException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToList = null;
+        try {
+            retObjectToList = classType.Invoke("ToList", source == null ? null : source.getJCOInstance());
+            JCObject objToList = (JCObject)retObjectToList;
+            return new List_1(objToList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToList != null ? retObjectToList.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ILookup_2 ToLookup(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLookup = null;
+        try {
+            retObjectToLookup = classType.Invoke("ToLookup", source == null ? null : source.getJCOInstance(), keySelector, elementSelector);
+            JCObject objToLookup = (JCObject)retObjectToLookup;
+            return new ILookup_2Implementation(objToLookup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLookup != null ? retObjectToLookup.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ILookup_2 ToLookup(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLookup = null;
+        try {
+            retObjectToLookup = classType.Invoke("ToLookup", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objToLookup = (JCObject)retObjectToLookup;
+            return new ILookup_2Implementation(objToLookup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLookup != null ? retObjectToLookup.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ILookup_2 ToLookup(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLookup = null;
+        try {
+            retObjectToLookup = classType.Invoke("ToLookup", source == null ? null : source.getJCOInstance(), keySelector);
+            JCObject objToLookup = (JCObject)retObjectToLookup;
+            return new ILookup_2Implementation(objToLookup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLookup != null ? retObjectToLookup.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ILookup_2 ToLookup(ParallelQuery_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLookup = null;
+        try {
+            retObjectToLookup = classType.Invoke("ToLookup", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objToLookup = (JCObject)retObjectToLookup;
+            return new ILookup_2Implementation(objToLookup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLookup != null ? retObjectToLookup.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 OrderBy(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderBy = null;
+        try {
+            retObjectOrderBy = classType.Invoke("OrderBy", source == null ? null : source.getJCOInstance(), keySelector);
+            JCObject objOrderBy = (JCObject)retObjectOrderBy;
+            return new OrderedParallelQuery_1(objOrderBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderBy != null ? retObjectOrderBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 OrderBy(ParallelQuery_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderBy = null;
+        try {
+            retObjectOrderBy = classType.Invoke("OrderBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderBy = (JCObject)retObjectOrderBy;
+            return new OrderedParallelQuery_1(objOrderBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderBy != null ? retObjectOrderBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 OrderByDescending(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderByDescending = null;
+        try {
+            retObjectOrderByDescending = classType.Invoke("OrderByDescending", source == null ? null : source.getJCOInstance(), keySelector);
+            JCObject objOrderByDescending = (JCObject)retObjectOrderByDescending;
+            return new OrderedParallelQuery_1(objOrderByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderByDescending != null ? retObjectOrderByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 OrderByDescending(ParallelQuery_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderByDescending = null;
+        try {
+            retObjectOrderByDescending = classType.Invoke("OrderByDescending", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objOrderByDescending = (JCObject)retObjectOrderByDescending;
+            return new OrderedParallelQuery_1(objOrderByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderByDescending != null ? retObjectOrderByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 ThenBy(OrderedParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenBy = null;
+        try {
+            retObjectThenBy = classType.Invoke("ThenBy", source == null ? null : source.getJCOInstance(), keySelector);
+            JCObject objThenBy = (JCObject)retObjectThenBy;
+            return new OrderedParallelQuery_1(objThenBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenBy != null ? retObjectThenBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 ThenBy(OrderedParallelQuery_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenBy = null;
+        try {
+            retObjectThenBy = classType.Invoke("ThenBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objThenBy = (JCObject)retObjectThenBy;
+            return new OrderedParallelQuery_1(objThenBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenBy != null ? retObjectThenBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 ThenByDescending(OrderedParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenByDescending = null;
+        try {
+            retObjectThenByDescending = classType.Invoke("ThenByDescending", source == null ? null : source.getJCOInstance(), keySelector);
+            JCObject objThenByDescending = (JCObject)retObjectThenByDescending;
+            return new OrderedParallelQuery_1(objThenByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenByDescending != null ? retObjectThenByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> OrderedParallelQuery_1 ThenByDescending(OrderedParallelQuery_1 source, Func_2 keySelector, IComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenByDescending = null;
+        try {
+            retObjectThenByDescending = classType.Invoke("ThenByDescending", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objThenByDescending = (JCObject)retObjectThenByDescending;
+            return new OrderedParallelQuery_1(objThenByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenByDescending != null ? retObjectThenByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ParallelQuery AsOrdered(ParallelQuery source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +1090,976 @@ public class ParallelEnumerable extends NetObject  {
             return new ParallelQuery(objAsParallel);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsParallel != null ? retObjectAsParallel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParallelQuery_1 Range(int start, int count) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRange = null;
+        try {
+            retObjectRange = classType.Invoke("Range", start, count);
+            JCObject objRange = (JCObject)retObjectRange;
+            return new ParallelQuery_1(objRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRange != null ? retObjectRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, elementSelector);
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new ParallelQuery_1(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new ParallelQuery_1(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector);
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new ParallelQuery_1(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new ParallelQuery_1(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> ParallelQuery_1 Cast(ParallelQuery source) throws Throwable, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCast = null;
+        try {
+            retObjectCast = classType.Invoke("Cast", source == null ? null : source.getJCOInstance());
+            JCObject objCast = (JCObject)retObjectCast;
+            return new ParallelQuery_1(objCast);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCast != null ? retObjectCast.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> ParallelQuery_1 Empty() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmpty = null;
+        try {
+            retObjectEmpty = classType.Invoke("Empty");
+            JCObject objEmpty = (JCObject)retObjectEmpty;
+            return new ParallelQuery_1(objEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmpty != null ? retObjectEmpty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, resultSelector);
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new ParallelQuery_1(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_2 elementSelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new ParallelQuery_1(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, resultSelector);
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new ParallelQuery_1(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupBy(ParallelQuery_1 source, Func_2 keySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", source == null ? null : source.getJCOInstance(), keySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new ParallelQuery_1(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupJoin(ParallelQuery_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupJoin = null;
+        try {
+            retObjectGroupJoin = classType.Invoke("GroupJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector);
+            JCObject objGroupJoin = (JCObject)retObjectGroupJoin;
+            return new ParallelQuery_1(objGroupJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupJoin != null ? retObjectGroupJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupJoin(ParallelQuery_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupJoin = null;
+        try {
+            retObjectGroupJoin = classType.Invoke("GroupJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupJoin = (JCObject)retObjectGroupJoin;
+            return new ParallelQuery_1(objGroupJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupJoin != null ? retObjectGroupJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupJoin(ParallelQuery_1 outer, ParallelQuery_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupJoin = null;
+        try {
+            retObjectGroupJoin = classType.Invoke("GroupJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector);
+            JCObject objGroupJoin = (JCObject)retObjectGroupJoin;
+            return new ParallelQuery_1(objGroupJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupJoin != null ? retObjectGroupJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 GroupJoin(ParallelQuery_1 outer, ParallelQuery_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupJoin = null;
+        try {
+            retObjectGroupJoin = classType.Invoke("GroupJoin", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGroupJoin = (JCObject)retObjectGroupJoin;
+            return new ParallelQuery_1(objGroupJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupJoin != null ? retObjectGroupJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Join(ParallelQuery_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector);
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new ParallelQuery_1(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Join(ParallelQuery_1 outer, IEnumerable_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new ParallelQuery_1(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Join(ParallelQuery_1 outer, ParallelQuery_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector);
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new ParallelQuery_1(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOuter extends IJCOBridgeReflected, TInner extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Join(ParallelQuery_1 outer, ParallelQuery_1 inner, Func_2 outerKeySelector, Func_2 innerKeySelector, Func_3 resultSelector, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKeySelector, innerKeySelector, resultSelector, comparer == null ? null : comparer.getJCOInstance());
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new ParallelQuery_1(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> ParallelQuery_1 OfType(ParallelQuery source) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOfType = null;
+        try {
+            retObjectOfType = classType.Invoke("OfType", source == null ? null : source.getJCOInstance());
+            JCObject objOfType = (JCObject)retObjectOfType;
+            return new ParallelQuery_1(objOfType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOfType != null ? retObjectOfType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> ParallelQuery_1 Repeat(TResult element, int count) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRepeat = null;
+        try {
+            retObjectRepeat = classType.Invoke("Repeat", element == null ? null : ((IJCOBridgeReflected)element).getJCOInstance(), count);
+            JCObject objRepeat = (JCObject)retObjectRepeat;
+            return new ParallelQuery_1(objRepeat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeat != null ? retObjectRepeat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Select(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
+        try {
+            retObjectSelect = classType.Invoke("Select", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelect = (JCObject)retObjectSelect;
+            return new ParallelQuery_1(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Select(ParallelQuery_1 source, Func_3 selector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
+        try {
+            retObjectSelect = classType.Invoke("Select", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelect = (JCObject)retObjectSelect;
+            return new ParallelQuery_1(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 SelectMany(ParallelQuery_1 source, Func_2 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), collectionSelector, resultSelector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new ParallelQuery_1(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TCollection extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 SelectMany(ParallelQuery_1 source, Func_3 collectionSelector, Func_3 resultSelector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), collectionSelector, resultSelector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new ParallelQuery_1(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 SelectMany(ParallelQuery_1 source, Func_2 selector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new ParallelQuery_1(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 SelectMany(ParallelQuery_1 source, Func_3 selector) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), selector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new ParallelQuery_1(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Zip(ParallelQuery_1 first, IEnumerable_1 second, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), resultSelector);
+            JCObject objZip = (JCObject)retObjectZip;
+            return new ParallelQuery_1(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TFirst extends IJCOBridgeReflected, TSecond extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ParallelQuery_1 Zip(ParallelQuery_1 first, ParallelQuery_1 second, Func_3 resultSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectZip = null;
+        try {
+            retObjectZip = classType.Invoke("Zip", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), resultSelector);
+            JCObject objZip = (JCObject)retObjectZip;
+            return new ParallelQuery_1(objZip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZip != null ? retObjectZip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 AsOrdered(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsOrdered = null;
+        try {
+            retObjectAsOrdered = classType.Invoke("AsOrdered", source == null ? null : source.getJCOInstance());
+            JCObject objAsOrdered = (JCObject)retObjectAsOrdered;
+            return new ParallelQuery_1(objAsOrdered);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsOrdered != null ? retObjectAsOrdered.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 AsParallel(Partitioner_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsParallel = null;
+        try {
+            retObjectAsParallel = classType.Invoke("AsParallel", source == null ? null : source.getJCOInstance());
+            JCObject objAsParallel = (JCObject)retObjectAsParallel;
+            return new ParallelQuery_1(objAsParallel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsParallel != null ? retObjectAsParallel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 AsParallel(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsParallel = null;
+        try {
+            retObjectAsParallel = classType.Invoke("AsParallel", source == null ? null : source.getJCOInstance());
+            JCObject objAsParallel = (JCObject)retObjectAsParallel;
+            return new ParallelQuery_1(objAsParallel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsParallel != null ? retObjectAsParallel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 AsUnordered(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsUnordered = null;
+        try {
+            retObjectAsUnordered = classType.Invoke("AsUnordered", source == null ? null : source.getJCOInstance());
+            JCObject objAsUnordered = (JCObject)retObjectAsUnordered;
+            return new ParallelQuery_1(objAsUnordered);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsUnordered != null ? retObjectAsUnordered.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Concat(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConcat = null;
+        try {
+            retObjectConcat = classType.Invoke("Concat", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objConcat = (JCObject)retObjectConcat;
+            return new ParallelQuery_1(objConcat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcat != null ? retObjectConcat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Concat(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConcat = null;
+        try {
+            retObjectConcat = classType.Invoke("Concat", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objConcat = (JCObject)retObjectConcat;
+            return new ParallelQuery_1(objConcat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcat != null ? retObjectConcat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 DefaultIfEmpty(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIfEmpty = null;
+        try {
+            retObjectDefaultIfEmpty = classType.Invoke("DefaultIfEmpty", source == null ? null : source.getJCOInstance());
+            JCObject objDefaultIfEmpty = (JCObject)retObjectDefaultIfEmpty;
+            return new ParallelQuery_1(objDefaultIfEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIfEmpty != null ? retObjectDefaultIfEmpty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 DefaultIfEmpty(ParallelQuery_1 source, TSource defaultValue) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIfEmpty = null;
+        try {
+            retObjectDefaultIfEmpty = classType.Invoke("DefaultIfEmpty", source == null ? null : source.getJCOInstance(), defaultValue == null ? null : ((IJCOBridgeReflected)defaultValue).getJCOInstance());
+            JCObject objDefaultIfEmpty = (JCObject)retObjectDefaultIfEmpty;
+            return new ParallelQuery_1(objDefaultIfEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIfEmpty != null ? retObjectDefaultIfEmpty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Distinct(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinct = null;
+        try {
+            retObjectDistinct = classType.Invoke("Distinct", source == null ? null : source.getJCOInstance());
+            JCObject objDistinct = (JCObject)retObjectDistinct;
+            return new ParallelQuery_1(objDistinct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinct != null ? retObjectDistinct.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Distinct(ParallelQuery_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDistinct = null;
+        try {
+            retObjectDistinct = classType.Invoke("Distinct", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objDistinct = (JCObject)retObjectDistinct;
+            return new ParallelQuery_1(objDistinct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistinct != null ? retObjectDistinct.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Except(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExcept = null;
+        try {
+            retObjectExcept = classType.Invoke("Except", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objExcept = (JCObject)retObjectExcept;
+            return new ParallelQuery_1(objExcept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcept != null ? retObjectExcept.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Except(ParallelQuery_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExcept = null;
+        try {
+            retObjectExcept = classType.Invoke("Except", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objExcept = (JCObject)retObjectExcept;
+            return new ParallelQuery_1(objExcept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcept != null ? retObjectExcept.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Except(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExcept = null;
+        try {
+            retObjectExcept = classType.Invoke("Except", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objExcept = (JCObject)retObjectExcept;
+            return new ParallelQuery_1(objExcept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcept != null ? retObjectExcept.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Except(ParallelQuery_1 first, ParallelQuery_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExcept = null;
+        try {
+            retObjectExcept = classType.Invoke("Except", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objExcept = (JCObject)retObjectExcept;
+            return new ParallelQuery_1(objExcept);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcept != null ? retObjectExcept.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Intersect(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersect = null;
+        try {
+            retObjectIntersect = classType.Invoke("Intersect", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
+            return new ParallelQuery_1(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Intersect(ParallelQuery_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersect = null;
+        try {
+            retObjectIntersect = classType.Invoke("Intersect", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
+            return new ParallelQuery_1(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Intersect(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersect = null;
+        try {
+            retObjectIntersect = classType.Invoke("Intersect", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
+            return new ParallelQuery_1(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Intersect(ParallelQuery_1 first, ParallelQuery_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersect = null;
+        try {
+            retObjectIntersect = classType.Invoke("Intersect", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
+            return new ParallelQuery_1(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Reverse(ParallelQuery_1 source) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverse = null;
+        try {
+            retObjectReverse = classType.Invoke("Reverse", source == null ? null : source.getJCOInstance());
+            JCObject objReverse = (JCObject)retObjectReverse;
+            return new ParallelQuery_1(objReverse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverse != null ? retObjectReverse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Skip(ParallelQuery_1 source, int count) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkip = null;
+        try {
+            retObjectSkip = classType.Invoke("Skip", source == null ? null : source.getJCOInstance(), count);
+            JCObject objSkip = (JCObject)retObjectSkip;
+            return new ParallelQuery_1(objSkip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkip != null ? retObjectSkip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 SkipWhile(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkipWhile = null;
+        try {
+            retObjectSkipWhile = classType.Invoke("SkipWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objSkipWhile = (JCObject)retObjectSkipWhile;
+            return new ParallelQuery_1(objSkipWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipWhile != null ? retObjectSkipWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 SkipWhile(ParallelQuery_1 source, Func_3 predicate) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkipWhile = null;
+        try {
+            retObjectSkipWhile = classType.Invoke("SkipWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objSkipWhile = (JCObject)retObjectSkipWhile;
+            return new ParallelQuery_1(objSkipWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkipWhile != null ? retObjectSkipWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Take(ParallelQuery_1 source, int count) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTake = null;
+        try {
+            retObjectTake = classType.Invoke("Take", source == null ? null : source.getJCOInstance(), count);
+            JCObject objTake = (JCObject)retObjectTake;
+            return new ParallelQuery_1(objTake);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTake != null ? retObjectTake.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 TakeWhile(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakeWhile = null;
+        try {
+            retObjectTakeWhile = classType.Invoke("TakeWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objTakeWhile = (JCObject)retObjectTakeWhile;
+            return new ParallelQuery_1(objTakeWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTakeWhile != null ? retObjectTakeWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 TakeWhile(ParallelQuery_1 source, Func_3 predicate) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakeWhile = null;
+        try {
+            retObjectTakeWhile = classType.Invoke("TakeWhile", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objTakeWhile = (JCObject)retObjectTakeWhile;
+            return new ParallelQuery_1(objTakeWhile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTakeWhile != null ? retObjectTakeWhile.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Union(ParallelQuery_1 first, IEnumerable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
+        try {
+            retObjectUnion = classType.Invoke("Union", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
+            return new ParallelQuery_1(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Union(ParallelQuery_1 first, IEnumerable_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
+        try {
+            retObjectUnion = classType.Invoke("Union", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
+            return new ParallelQuery_1(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Union(ParallelQuery_1 first, ParallelQuery_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
+        try {
+            retObjectUnion = classType.Invoke("Union", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
+            return new ParallelQuery_1(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Union(ParallelQuery_1 first, ParallelQuery_1 second, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
+        try {
+            retObjectUnion = classType.Invoke("Union", first == null ? null : first.getJCOInstance(), second == null ? null : second.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
+            return new ParallelQuery_1(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Where(ParallelQuery_1 source, Func_2 predicate) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhere = null;
+        try {
+            retObjectWhere = classType.Invoke("Where", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objWhere = (JCObject)retObjectWhere;
+            return new ParallelQuery_1(objWhere);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhere != null ? retObjectWhere.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 Where(ParallelQuery_1 source, Func_3 predicate) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhere = null;
+        try {
+            retObjectWhere = classType.Invoke("Where", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objWhere = (JCObject)retObjectWhere;
+            return new ParallelQuery_1(objWhere);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhere != null ? retObjectWhere.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 WithCancellation(ParallelQuery_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithCancellation = null;
+        try {
+            retObjectWithCancellation = classType.Invoke("WithCancellation", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWithCancellation = (JCObject)retObjectWithCancellation;
+            return new ParallelQuery_1(objWithCancellation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithCancellation != null ? retObjectWithCancellation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 WithDegreeOfParallelism(ParallelQuery_1 source, int degreeOfParallelism) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithDegreeOfParallelism = null;
+        try {
+            retObjectWithDegreeOfParallelism = classType.Invoke("WithDegreeOfParallelism", source == null ? null : source.getJCOInstance(), degreeOfParallelism);
+            JCObject objWithDegreeOfParallelism = (JCObject)retObjectWithDegreeOfParallelism;
+            return new ParallelQuery_1(objWithDegreeOfParallelism);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithDegreeOfParallelism != null ? retObjectWithDegreeOfParallelism.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 WithExecutionMode(ParallelQuery_1 source, ParallelExecutionMode executionMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithExecutionMode = null;
+        try {
+            retObjectWithExecutionMode = classType.Invoke("WithExecutionMode", source == null ? null : source.getJCOInstance(), executionMode == null ? null : executionMode.getJCOInstance());
+            JCObject objWithExecutionMode = (JCObject)retObjectWithExecutionMode;
+            return new ParallelQuery_1(objWithExecutionMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithExecutionMode != null ? retObjectWithExecutionMode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelQuery_1 WithMergeOptions(ParallelQuery_1 source, ParallelMergeOptions mergeOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithMergeOptions = null;
+        try {
+            retObjectWithMergeOptions = classType.Invoke("WithMergeOptions", source == null ? null : source.getJCOInstance(), mergeOptions == null ? null : mergeOptions.getJCOInstance());
+            JCObject objWithMergeOptions = (JCObject)retObjectWithMergeOptions;
+            return new ParallelQuery_1(objWithMergeOptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithMergeOptions != null ? retObjectWithMergeOptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> void ForAll(ParallelQuery_1 source, Action_1 action) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.NullReferenceException, system.InvalidOperationException, system.threading.ThreadAbortException, system.OperationCanceledException, system.ArgumentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ForAll", source == null ? null : source.getJCOInstance(), action);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

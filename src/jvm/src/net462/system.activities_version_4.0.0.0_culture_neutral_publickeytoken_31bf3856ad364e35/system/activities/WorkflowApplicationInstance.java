@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.dynamicupdate.DynamicUpdateMap;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
@@ -161,6 +163,20 @@ public class WorkflowApplicationInstance extends NetObject  {
     
     // Methods section
     
+    public boolean CanApplyUpdate(DynamicUpdateMap updateMap, JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanApplyUpdate = null;
+        try {
+            retObjectCanApplyUpdate = classInstance.Invoke("CanApplyUpdate", updateMap == null ? null : updateMap.getJCOInstance(), activitiesBlockingUpdate.getJCRefOut());
+            return (boolean)retObjectCanApplyUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanApplyUpdate != null ? retObjectCanApplyUpdate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginAbandon(AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.transactions.TransactionException, system.PlatformNotSupportedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

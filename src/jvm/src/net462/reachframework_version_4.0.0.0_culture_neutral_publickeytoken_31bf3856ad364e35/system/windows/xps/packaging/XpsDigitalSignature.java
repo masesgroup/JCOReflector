@@ -44,6 +44,7 @@ import system.io.packaging.VerifyResult;
 import system.security.cryptography.x509certificates.X509Certificate;
 import system.security.cryptography.x509certificates.X509ChainStatusFlags;
 import system.DateTime;
+import system.Nullable_1;
 import system.windows.xps.packaging.IXpsFixedDocumentSequenceReader;
 import system.windows.xps.packaging.IXpsFixedDocumentSequenceReaderImplementation;
 
@@ -310,6 +311,21 @@ public class XpsDigitalSignature extends NetObject  {
             return new DateTime(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningTime != null ? retObjectSigningTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getId() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
+        try {
+            retObjectId = classInstance.Get("Id");
+            JCObject val = (JCObject)retObjectId;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

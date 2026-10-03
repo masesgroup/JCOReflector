@@ -53,7 +53,7 @@ import microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SafeNCryptHandle extends SafeHandleZeroOrMinusOneIsInvalid  {
+public class SafeNCryptHandle extends microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -41,7 +41,14 @@ import java.util.ArrayList;
 import system.diagnostics.DiagnosticSource;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.IObserver_1;
+import system.IObserver_1Implementation;
+import system.Func_4;
+import system.Action_2;
+import system.Predicate_1;
 import system.diagnostics.Activity;
+import system.IObservable_1;
+import system.IObservable_1Implementation;
 
 
 /**
@@ -56,7 +63,7 @@ import system.diagnostics.Activity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DiagnosticListener extends DiagnosticSource implements AutoCloseable {
+public class DiagnosticListener extends system.diagnostics.DiagnosticSource implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -209,6 +216,66 @@ public class DiagnosticListener extends DiagnosticSource implements AutoCloseabl
         }
     }
 
+    public IDisposable Subscribe(IObserver_1 observer, Func_4 isEnabled, Action_2 onActivityImport, Action_2 onActivityExport) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubscribe = null;
+        try {
+            retObjectSubscribe = classInstance.Invoke("Subscribe", observer == null ? null : observer.getJCOInstance(), isEnabled, onActivityImport, onActivityExport);
+            JCObject objSubscribe = (JCObject)retObjectSubscribe;
+            return new IDisposableImplementation(objSubscribe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubscribe != null ? retObjectSubscribe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDisposable Subscribe(IObserver_1 observer, Func_4 isEnabled) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubscribe = null;
+        try {
+            retObjectSubscribe = classInstance.Invoke("Subscribe", observer == null ? null : observer.getJCOInstance(), isEnabled);
+            JCObject objSubscribe = (JCObject)retObjectSubscribe;
+            return new IDisposableImplementation(objSubscribe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubscribe != null ? retObjectSubscribe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDisposable Subscribe(IObserver_1 observer, Predicate_1 isEnabled) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubscribe = null;
+        try {
+            retObjectSubscribe = classInstance.Invoke("Subscribe", observer == null ? null : observer.getJCOInstance(), isEnabled);
+            JCObject objSubscribe = (JCObject)retObjectSubscribe;
+            return new IDisposableImplementation(objSubscribe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubscribe != null ? retObjectSubscribe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDisposable Subscribe(IObserver_1 observer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubscribe = null;
+        try {
+            retObjectSubscribe = classInstance.Invoke("Subscribe", observer == null ? null : observer.getJCOInstance());
+            JCObject objSubscribe = (JCObject)retObjectSubscribe;
+            return new IDisposableImplementation(objSubscribe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubscribe != null ? retObjectSubscribe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -266,6 +333,21 @@ public class DiagnosticListener extends DiagnosticSource implements AutoCloseabl
     
     // Properties section
     
+    public static IObservable_1 getAllListeners() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllListeners = null;
+        try {
+            retObjectAllListeners = classType.Get("AllListeners");
+            JCObject val = (JCObject)retObjectAllListeners;
+            return new IObservable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllListeners != null ? retObjectAllListeners.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

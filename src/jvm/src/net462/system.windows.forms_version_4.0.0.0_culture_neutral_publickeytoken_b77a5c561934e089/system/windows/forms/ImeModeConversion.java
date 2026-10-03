@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -53,7 +54,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ImeModeConversion extends ValueType  {
+public class ImeModeConversion extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -167,6 +168,21 @@ public class ImeModeConversion extends ValueType  {
             return (boolean)retObjectIsCurrentConversionTableSupported;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCurrentConversionTableSupported != null ? retObjectIsCurrentConversionTableSupported.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Dictionary_2 getImeModeConversionBits() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImeModeConversionBits = null;
+        try {
+            retObjectImeModeConversionBits = classType.Get("ImeModeConversionBits");
+            JCObject val = (JCObject)retObjectImeModeConversionBits;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeModeConversionBits != null ? retObjectImeModeConversionBits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

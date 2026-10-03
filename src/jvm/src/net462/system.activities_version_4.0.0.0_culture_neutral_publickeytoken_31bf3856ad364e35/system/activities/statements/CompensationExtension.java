@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.persistence.PersistenceParticipant;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.hosting.WorkflowInstanceProxy;
 
 
@@ -54,7 +56,7 @@ import system.activities.hosting.WorkflowInstanceProxy;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompensationExtension extends PersistenceParticipant  {
+public class CompensationExtension extends system.activities.persistence.PersistenceParticipant  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -161,6 +163,15 @@ public class CompensationExtension extends PersistenceParticipant  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWorkflowInstanceExtension method available in IWorkflowInstanceExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IEnumerable_1 GetAdditionalExtensions() throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWorkflowInstanceExtension to obtain the full interface.");
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIWorkflowInstanceExtension method available in IWorkflowInstanceExtension to obtain an object with an invocable method

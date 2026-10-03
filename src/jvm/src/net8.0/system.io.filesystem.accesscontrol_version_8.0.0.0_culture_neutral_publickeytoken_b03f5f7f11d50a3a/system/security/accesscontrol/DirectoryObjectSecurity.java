@@ -62,7 +62,7 @@ import system.security.accesscontrol.AuthorizationRuleCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DirectoryObjectSecurity extends ObjectSecurity  {
+public class DirectoryObjectSecurity extends system.security.accesscontrol.ObjectSecurity  {
     /**
      * Fully assembly qualified name: System.IO.FileSystem.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

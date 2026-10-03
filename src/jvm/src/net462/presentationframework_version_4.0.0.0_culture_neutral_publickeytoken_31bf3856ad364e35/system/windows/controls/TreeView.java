@@ -53,7 +53,7 @@ import system.windows.controls.ItemsControl;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TreeView extends ItemsControl  {
+public class TreeView extends system.windows.controls.ItemsControl  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

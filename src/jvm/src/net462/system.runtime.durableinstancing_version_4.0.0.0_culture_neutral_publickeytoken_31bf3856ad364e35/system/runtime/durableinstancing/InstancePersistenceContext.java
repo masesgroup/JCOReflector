@@ -46,7 +46,10 @@ import system.runtime.durableinstancing.InstancePersistenceCommand;
 import system.Guid;
 import system.runtime.durableinstancing.InstancePersistenceEvent;
 import system.runtime.durableinstancing.InstanceState;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.runtime.durableinstancing.InstanceStoreQueryResult;
+import system.Action_1;
 import system.xml.linq.XName;
 import system.runtime.durableinstancing.InstanceValue;
 import system.runtime.durableinstancing.InstanceHandle;
@@ -321,11 +324,71 @@ public class InstancePersistenceContext extends NetObject  {
         }
     }
 
+    public void LoadedInstance(InstanceState state, IDictionary_2 instanceData, IDictionary_2 instanceMetadata, IDictionary_2 associatedInstanceKeyMetadata, IDictionary_2 completedInstanceKeyMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadedInstance", state == null ? null : state.getJCOInstance(), instanceData == null ? null : instanceData.getJCOInstance(), instanceMetadata == null ? null : instanceMetadata.getJCOInstance(), associatedInstanceKeyMetadata == null ? null : associatedInstanceKeyMetadata.getJCOInstance(), completedInstanceKeyMetadata == null ? null : completedInstanceKeyMetadata.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PersistedInstance(IDictionary_2 data) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PersistedInstance", data == null ? null : data.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void QueriedInstanceStore(InstanceStoreQueryResult queryResult) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("QueriedInstanceStore", queryResult == null ? null : queryResult.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReadInstanceKeyMetadata(Guid key, IDictionary_2 metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReadInstanceKeyMetadata", key == null ? null : key.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance(), complete);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReadInstanceMetadata(IDictionary_2 metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReadInstanceMetadata", metadata == null ? null : metadata.getJCOInstance(), complete);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReadInstanceOwnerMetadata(IDictionary_2 metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReadInstanceOwnerMetadata", metadata == null ? null : metadata.getJCOInstance(), complete);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetCancellationHandler(Action_1 cancellationHandler) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetCancellationHandler", cancellationHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

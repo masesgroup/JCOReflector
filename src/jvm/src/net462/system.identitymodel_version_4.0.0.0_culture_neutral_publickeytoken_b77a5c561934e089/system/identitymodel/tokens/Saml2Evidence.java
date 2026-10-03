@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.Saml2Assertion;
 import system.identitymodel.tokens.Saml2Id;
 import system.Uri;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -196,6 +197,51 @@ public class Saml2Evidence extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getAssertions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssertions = null;
+        try {
+            retObjectAssertions = classInstance.Get("Assertions");
+            JCObject val = (JCObject)retObjectAssertions;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssertions != null ? retObjectAssertions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getAssertionIdReferences() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssertionIdReferences = null;
+        try {
+            retObjectAssertionIdReferences = classInstance.Get("AssertionIdReferences");
+            JCObject val = (JCObject)retObjectAssertionIdReferences;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssertionIdReferences != null ? retObjectAssertionIdReferences.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getAssertionUriReferences() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssertionUriReferences = null;
+        try {
+            retObjectAssertionUriReferences = classInstance.Get("AssertionUriReferences");
+            JCObject val = (JCObject)retObjectAssertionUriReferences;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssertionUriReferences != null ? retObjectAssertionUriReferences.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.Version;
 
 
 /**
@@ -151,6 +153,21 @@ public class DirectiveRegistry extends NetObject  {
     
     // Methods section
     
+    public static ReadOnlyCollection_1 GetDirectives(Version frameworkVersion, java.lang.String extension) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectives = null;
+        try {
+            retObjectGetDirectives = classType.Invoke("GetDirectives", frameworkVersion == null ? null : frameworkVersion.getJCOInstance(), extension);
+            JCObject objGetDirectives = (JCObject)retObjectGetDirectives;
+            return new ReadOnlyCollection_1(objGetDirectives);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectives != null ? retObjectGetDirectives.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

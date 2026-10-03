@@ -39,10 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.ActivityPropertyReference;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.activities.Activity;
+import system.collections.objectmodel.Collection_1;
+import system.collections.objectmodel.KeyedCollection_2;
 import system.Version;
-import system.activities.debugger.IDebuggableWorkflowTree;
-import system.activities.debugger.IDebuggableWorkflowTreeImplementation;
 
 
 /**
@@ -57,7 +59,7 @@ import system.activities.debugger.IDebuggableWorkflowTreeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityBuilder extends NetObject implements IDebuggableWorkflowTree {
+public class ActivityBuilder extends NetObject  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -207,6 +209,21 @@ public class ActivityBuilder extends NetObject implements IDebuggableWorkflowTre
         }
     }
 
+    public static IList_1 GetPropertyReferences(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPropertyReferences = null;
+        try {
+            retObjectGetPropertyReferences = classType.Invoke("GetPropertyReferences", target == null ? null : target.getJCOInstance());
+            JCObject objGetPropertyReferences = (JCObject)retObjectGetPropertyReferences;
+            return new IList_1Implementation(objGetPropertyReferences);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyReferences != null ? retObjectGetPropertyReferences.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void SetPropertyReference(NetObject target, ActivityPropertyReference value) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +267,51 @@ public class ActivityBuilder extends NetObject implements IDebuggableWorkflowTre
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Implementation", Implementation == null ? null : Implementation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getConstraints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstraints = null;
+        try {
+            retObjectConstraints = classInstance.Get("Constraints");
+            JCObject val = (JCObject)retObjectConstraints;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstraints != null ? retObjectConstraints.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
+        try {
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedCollection_2 getProperties() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new KeyedCollection_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

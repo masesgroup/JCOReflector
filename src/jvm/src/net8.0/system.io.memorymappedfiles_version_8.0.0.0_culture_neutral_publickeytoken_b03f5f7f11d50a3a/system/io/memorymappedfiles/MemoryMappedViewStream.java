@@ -54,7 +54,7 @@ import microsoft.win32.safehandles.SafeMemoryMappedViewHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MemoryMappedViewStream extends UnmanagedMemoryStream  {
+public class MemoryMappedViewStream extends system.io.UnmanagedMemoryStream  {
     /**
      * Fully assembly qualified name: System.IO.MemoryMappedFiles, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

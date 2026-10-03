@@ -43,6 +43,12 @@ import system.io.FileMode;
 import system.io.FileAccess;
 import system.io.FileShare;
 import system.io.FileOptions;
+import system.collections.generic.IAsyncEnumerable_1;
+import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.text.Encoding;
+import system.threading.CancellationToken;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.DateTime;
 import system.io.FileAttributes;
 import system.io.FileStream;
@@ -51,9 +57,9 @@ import system.io.FileSystemInfo;
 import system.io.StreamReader;
 import system.io.StreamWriter;
 import system.io.UnixFileMode;
-import system.text.Encoding;
 import system.threading.tasks.Task;
-import system.threading.CancellationToken;
+import system.ReadOnlyMemory_1;
+import system.threading.tasks.Task_1;
 
 
 /**
@@ -214,6 +220,66 @@ public class File extends NetObject  {
             return new SafeFileHandle(objOpenHandle);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenHandle != null ? retObjectOpenHandle.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IAsyncEnumerable_1 ReadLinesAsync(java.lang.String path, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadLinesAsync = null;
+        try {
+            retObjectReadLinesAsync = classType.Invoke("ReadLinesAsync", path, encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadLinesAsync = (JCObject)retObjectReadLinesAsync;
+            return new IAsyncEnumerable_1Implementation(objReadLinesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadLinesAsync != null ? retObjectReadLinesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IAsyncEnumerable_1 ReadLinesAsync(java.lang.String path, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadLinesAsync = null;
+        try {
+            retObjectReadLinesAsync = classType.Invoke("ReadLinesAsync", path, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadLinesAsync = (JCObject)retObjectReadLinesAsync;
+            return new IAsyncEnumerable_1Implementation(objReadLinesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadLinesAsync != null ? retObjectReadLinesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 ReadLines(java.lang.String path, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadLines = null;
+        try {
+            retObjectReadLines = classType.Invoke("ReadLines", path, encoding == null ? null : encoding.getJCOInstance());
+            JCObject objReadLines = (JCObject)retObjectReadLines;
+            return new IEnumerable_1Implementation(objReadLines);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadLines != null ? retObjectReadLines.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 ReadLines(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadLines = null;
+        try {
+            retObjectReadLines = classType.Invoke("ReadLines", path);
+            JCObject objReadLines = (JCObject)retObjectReadLines;
+            return new IEnumerable_1Implementation(objReadLines);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadLines != null ? retObjectReadLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -773,6 +839,81 @@ public class File extends NetObject  {
         }
     }
 
+    public static Task AppendAllBytesAsync(java.lang.String path, ReadOnlyMemory_1 bytes, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendAllBytesAsync = null;
+        try {
+            retObjectAppendAllBytesAsync = classType.Invoke("AppendAllBytesAsync", path, bytes == null ? null : bytes.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAppendAllBytesAsync = (JCObject)retObjectAppendAllBytesAsync;
+            return new Task(objAppendAllBytesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendAllBytesAsync != null ? retObjectAppendAllBytesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task AppendAllLinesAsync(java.lang.String path, IEnumerable_1 contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendAllLinesAsync = null;
+        try {
+            retObjectAppendAllLinesAsync = classType.Invoke("AppendAllLinesAsync", path, contents == null ? null : contents.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAppendAllLinesAsync = (JCObject)retObjectAppendAllLinesAsync;
+            return new Task(objAppendAllLinesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendAllLinesAsync != null ? retObjectAppendAllLinesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task AppendAllLinesAsync(java.lang.String path, IEnumerable_1 contents, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendAllLinesAsync = null;
+        try {
+            retObjectAppendAllLinesAsync = classType.Invoke("AppendAllLinesAsync", path, contents == null ? null : contents.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAppendAllLinesAsync = (JCObject)retObjectAppendAllLinesAsync;
+            return new Task(objAppendAllLinesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendAllLinesAsync != null ? retObjectAppendAllLinesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task AppendAllTextAsync(java.lang.String path, ReadOnlyMemory_1 contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendAllTextAsync = null;
+        try {
+            retObjectAppendAllTextAsync = classType.Invoke("AppendAllTextAsync", path, contents == null ? null : contents.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAppendAllTextAsync = (JCObject)retObjectAppendAllTextAsync;
+            return new Task(objAppendAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendAllTextAsync != null ? retObjectAppendAllTextAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task AppendAllTextAsync(java.lang.String path, ReadOnlyMemory_1 contents, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendAllTextAsync = null;
+        try {
+            retObjectAppendAllTextAsync = classType.Invoke("AppendAllTextAsync", path, contents == null ? null : contents.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAppendAllTextAsync = (JCObject)retObjectAppendAllTextAsync;
+            return new Task(objAppendAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendAllTextAsync != null ? retObjectAppendAllTextAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Task AppendAllTextAsync(java.lang.String path, java.lang.String contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -833,6 +974,81 @@ public class File extends NetObject  {
         }
     }
 
+    public static Task WriteAllBytesAsync(java.lang.String path, ReadOnlyMemory_1 bytes, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllBytesAsync = null;
+        try {
+            retObjectWriteAllBytesAsync = classType.Invoke("WriteAllBytesAsync", path, bytes == null ? null : bytes.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAllBytesAsync = (JCObject)retObjectWriteAllBytesAsync;
+            return new Task(objWriteAllBytesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllBytesAsync != null ? retObjectWriteAllBytesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task WriteAllLinesAsync(java.lang.String path, IEnumerable_1 contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllLinesAsync = null;
+        try {
+            retObjectWriteAllLinesAsync = classType.Invoke("WriteAllLinesAsync", path, contents == null ? null : contents.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAllLinesAsync = (JCObject)retObjectWriteAllLinesAsync;
+            return new Task(objWriteAllLinesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllLinesAsync != null ? retObjectWriteAllLinesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task WriteAllLinesAsync(java.lang.String path, IEnumerable_1 contents, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllLinesAsync = null;
+        try {
+            retObjectWriteAllLinesAsync = classType.Invoke("WriteAllLinesAsync", path, contents == null ? null : contents.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAllLinesAsync = (JCObject)retObjectWriteAllLinesAsync;
+            return new Task(objWriteAllLinesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllLinesAsync != null ? retObjectWriteAllLinesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task WriteAllTextAsync(java.lang.String path, ReadOnlyMemory_1 contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllTextAsync = null;
+        try {
+            retObjectWriteAllTextAsync = classType.Invoke("WriteAllTextAsync", path, contents == null ? null : contents.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAllTextAsync = (JCObject)retObjectWriteAllTextAsync;
+            return new Task(objWriteAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllTextAsync != null ? retObjectWriteAllTextAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task WriteAllTextAsync(java.lang.String path, ReadOnlyMemory_1 contents, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWriteAllTextAsync = null;
+        try {
+            retObjectWriteAllTextAsync = classType.Invoke("WriteAllTextAsync", path, contents == null ? null : contents.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAllTextAsync = (JCObject)retObjectWriteAllTextAsync;
+            return new Task(objWriteAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAllTextAsync != null ? retObjectWriteAllTextAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Task WriteAllTextAsync(java.lang.String path, java.lang.String contents, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -863,6 +1079,81 @@ public class File extends NetObject  {
         }
     }
 
+    public static Task_1 ReadAllBytesAsync(java.lang.String path, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllBytesAsync = null;
+        try {
+            retObjectReadAllBytesAsync = classType.Invoke("ReadAllBytesAsync", path, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadAllBytesAsync = (JCObject)retObjectReadAllBytesAsync;
+            return new Task_1(objReadAllBytesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAllBytesAsync != null ? retObjectReadAllBytesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReadAllLinesAsync(java.lang.String path, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllLinesAsync = null;
+        try {
+            retObjectReadAllLinesAsync = classType.Invoke("ReadAllLinesAsync", path, encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadAllLinesAsync = (JCObject)retObjectReadAllLinesAsync;
+            return new Task_1(objReadAllLinesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAllLinesAsync != null ? retObjectReadAllLinesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReadAllLinesAsync(java.lang.String path, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllLinesAsync = null;
+        try {
+            retObjectReadAllLinesAsync = classType.Invoke("ReadAllLinesAsync", path, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadAllLinesAsync = (JCObject)retObjectReadAllLinesAsync;
+            return new Task_1(objReadAllLinesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAllLinesAsync != null ? retObjectReadAllLinesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReadAllTextAsync(java.lang.String path, Encoding encoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllTextAsync = null;
+        try {
+            retObjectReadAllTextAsync = classType.Invoke("ReadAllTextAsync", path, encoding == null ? null : encoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadAllTextAsync = (JCObject)retObjectReadAllTextAsync;
+            return new Task_1(objReadAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAllTextAsync != null ? retObjectReadAllTextAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReadAllTextAsync(java.lang.String path, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadAllTextAsync = null;
+        try {
+            retObjectReadAllTextAsync = classType.Invoke("ReadAllTextAsync", path, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadAllTextAsync = (JCObject)retObjectReadAllTextAsync;
+            return new Task_1(objReadAllTextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAllTextAsync != null ? retObjectReadAllTextAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void AppendAllBytes(java.lang.String path, byte[] bytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.threading.ThreadStateException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -878,6 +1169,26 @@ public class File extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AppendAllBytes", dupParam0, dupParam1.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AppendAllLines(java.lang.String path, IEnumerable_1 contents, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AppendAllLines", path, contents == null ? null : contents.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AppendAllLines(java.lang.String path, IEnumerable_1 contents) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AppendAllLines", path, contents == null ? null : contents.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1168,6 +1479,26 @@ public class File extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteAllBytes", dupParam0, dupParam1.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteAllLines(java.lang.String path, IEnumerable_1 contents, Encoding encoding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteAllLines", path, contents == null ? null : contents.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteAllLines(java.lang.String path, IEnumerable_1 contents) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteAllLines", path, contents == null ? null : contents.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

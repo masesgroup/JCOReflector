@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.ServiceHostBase;
 import system.servicemodel.description.MetadataSet;
 import system.web.services.description.ServiceDescription;
 
@@ -161,6 +162,24 @@ public class ServiceMetadataExtension extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExtension_1 method available in IExtension_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Attach(ServiceHostBase owner) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtension_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExtension_1 method available in IExtension_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Detach(ServiceHostBase owner) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtension_1 to obtain the full interface.");
+    }
+
 
     
     // Properties section

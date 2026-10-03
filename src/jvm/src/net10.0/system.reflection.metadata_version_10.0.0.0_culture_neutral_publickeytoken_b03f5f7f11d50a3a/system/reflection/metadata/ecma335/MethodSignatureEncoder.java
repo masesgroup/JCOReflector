@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
+import system.Action_1;
 import system.reflection.metadata.ecma335.ReturnTypeEncoder;
 import system.reflection.metadata.ecma335.ParametersEncoder;
 
@@ -56,7 +57,7 @@ import system.reflection.metadata.ecma335.ParametersEncoder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MethodSignatureEncoder extends ValueType  {
+public class MethodSignatureEncoder extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -167,6 +168,16 @@ public class MethodSignatureEncoder extends ValueType  {
     
     // Methods section
     
+    public void Parameters(int parameterCount, Action_1 returnType, Action_1 parameters) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Parameters", parameterCount, returnType, parameters);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Parameters(int parameterCount, JCORefOut<ReturnTypeEncoder> returnType, JCORefOut<ParametersEncoder> parameters) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

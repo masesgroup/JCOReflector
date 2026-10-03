@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.collections.objectmodel.ReadOnlySet_1;
 
 
 /**

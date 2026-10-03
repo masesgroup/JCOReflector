@@ -42,8 +42,6 @@ import system.xml.linq.XName;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 import system.xml.linq.XNamespace;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -58,7 +56,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XName extends NetObject implements ISerializable {
+public class XName extends NetObject  {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -187,6 +185,15 @@ public class XName extends NetObject implements ISerializable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEquatable_1 method available in IEquatable_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Equals(XName other) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEquatable_1 to obtain the full interface.");
     }
 
     /**

@@ -42,6 +42,8 @@ import system.workflow.activities.rules.RuleCondition;
 import system.codedom.CodeExpression;
 import system.workflow.activities.rules.RuleExecution;
 import system.workflow.activities.rules.RuleValidation;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -56,7 +58,7 @@ import system.workflow.activities.rules.RuleValidation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RuleExpressionCondition extends RuleCondition  {
+public class RuleExpressionCondition extends system.workflow.activities.rules.RuleCondition  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -216,6 +218,21 @@ public class RuleExpressionCondition extends RuleCondition  {
             return (boolean)retObjectValidate;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 GetDependencies(RuleValidation validation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDependencies = null;
+        try {
+            retObjectGetDependencies = classInstance.Invoke("GetDependencies", validation == null ? null : validation.getJCOInstance());
+            JCObject objGetDependencies = (JCObject)retObjectGetDependencies;
+            return new ICollection_1Implementation(objGetDependencies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDependencies != null ? retObjectGetDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

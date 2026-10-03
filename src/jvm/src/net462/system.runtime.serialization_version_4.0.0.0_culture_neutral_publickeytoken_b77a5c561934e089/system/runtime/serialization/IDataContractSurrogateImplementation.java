@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.codedom.CodeTypeDeclaration;
 import system.codedom.CodeCompileUnit;
 import system.reflection.MemberInfo;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -243,6 +244,16 @@ public class IDataContractSurrogateImplementation extends NetObject implements I
             return new NetType(objGetReferencedTypeOnImport);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReferencedTypeOnImport != null ? retObjectGetReferencedTypeOnImport.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetKnownCustomDataTypes(Collection_1 customDataTypes) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetKnownCustomDataTypes", customDataTypes == null ? null : customDataTypes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

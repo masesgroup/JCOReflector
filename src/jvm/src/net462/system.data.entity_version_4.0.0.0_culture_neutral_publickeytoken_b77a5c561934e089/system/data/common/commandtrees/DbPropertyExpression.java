@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.commandtrees.DbExpression;
+import system.collections.generic.KeyValuePair_2;
 import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.metadata.edm.EdmMember;
 
@@ -55,7 +56,7 @@ import system.data.metadata.edm.EdmMember;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbPropertyExpression extends DbExpression  {
+public class DbPropertyExpression extends system.data.common.commandtrees.DbExpression  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +157,21 @@ public class DbPropertyExpression extends DbExpression  {
     
     // Methods section
     
+    public KeyValuePair_2 ToKeyValuePair() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToKeyValuePair = null;
+        try {
+            retObjectToKeyValuePair = classInstance.Invoke("ToKeyValuePair");
+            JCObject objToKeyValuePair = (JCObject)retObjectToKeyValuePair;
+            return new KeyValuePair_2(objToKeyValuePair);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToKeyValuePair != null ? retObjectToKeyValuePair.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

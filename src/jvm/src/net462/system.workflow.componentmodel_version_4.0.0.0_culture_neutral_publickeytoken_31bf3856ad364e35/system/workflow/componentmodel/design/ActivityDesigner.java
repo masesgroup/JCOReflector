@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
 import system.workflow.componentmodel.Activity;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.workflow.componentmodel.design.DesignerEdges;
 import system.drawing.Image;
 import system.drawing.Graphics;
 import system.workflow.componentmodel.design.ActivityDesigner;
@@ -59,12 +61,6 @@ import system.componentmodel.design.ViewTechnology;
 import system.drawing.Size;
 import system.windows.forms.AccessibleObject;
 import system.workflow.componentmodel.design.ActivityDesignerTheme;
-import system.componentmodel.design.IDesignerFilter;
-import system.componentmodel.design.IDesignerFilterImplementation;
-import system.drawing.design.IToolboxUser;
-import system.drawing.design.IToolboxUserImplementation;
-import system.workflow.componentmodel.design.IPersistUIState;
-import system.workflow.componentmodel.design.IPersistUIStateImplementation;
 
 
 /**
@@ -79,7 +75,7 @@ import system.workflow.componentmodel.design.IPersistUIStateImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityDesigner extends NetObject implements IDesignerFilter, IToolboxUser, IPersistUIState, AutoCloseable {
+public class ActivityDesigner extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -209,6 +205,21 @@ public class ActivityDesigner extends NetObject implements IDesignerFilter, IToo
             return (boolean)retObjectIsCommentedActivity;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsCommentedActivity != null ? retObjectIsCommentedActivity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetConnectionPoints(DesignerEdges edges) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConnectionPoints = null;
+        try {
+            retObjectGetConnectionPoints = classInstance.Invoke("GetConnectionPoints", edges == null ? null : edges.getJCOInstance());
+            JCObject objGetConnectionPoints = (JCObject)retObjectGetConnectionPoints;
+            return new ReadOnlyCollection_1(objGetConnectionPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConnectionPoints != null ? retObjectGetConnectionPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

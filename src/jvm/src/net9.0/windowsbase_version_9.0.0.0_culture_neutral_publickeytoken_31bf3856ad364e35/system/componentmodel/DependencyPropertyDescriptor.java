@@ -62,7 +62,7 @@ import system.windows.PropertyMetadata;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DependencyPropertyDescriptor extends PropertyDescriptor  {
+public class DependencyPropertyDescriptor extends system.componentmodel.PropertyDescriptor  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

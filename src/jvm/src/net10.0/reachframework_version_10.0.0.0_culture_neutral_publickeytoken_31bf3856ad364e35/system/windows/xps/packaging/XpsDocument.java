@@ -53,11 +53,10 @@ import system.windows.xps.packaging.XpsThumbnail;
 import system.windows.xps.packaging.XpsImageType;
 import system.windows.xps.XpsDocumentWriter;
 import system.windows.xps.packaging.XpsDocument;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.io.packaging.PackageProperties;
 import system.windows.xps.packaging.IXpsFixedDocumentSequenceReader;
 import system.windows.xps.packaging.IXpsFixedDocumentSequenceReaderImplementation;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -72,7 +71,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XpsDocument extends XpsPartBase implements IDisposable, AutoCloseable {
+public class XpsDocument extends system.windows.xps.packaging.XpsPartBase implements AutoCloseable {
     /**
      * Fully assembly qualified name: ReachFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -411,6 +410,21 @@ public class XpsDocument extends XpsPartBase implements IDisposable, AutoCloseab
             return (boolean)retObjectIsWriter;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWriter != null ? retObjectIsWriter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getSignatures() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.io.IOException, system.io.FileFormatException, system.OutOfMemoryException, system.io.InvalidDataException, system.windows.xps.XpsPackagingException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatures = null;
+        try {
+            retObjectSignatures = classInstance.Get("Signatures");
+            JCObject val = (JCObject)retObjectSignatures;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignatures != null ? retObjectSignatures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

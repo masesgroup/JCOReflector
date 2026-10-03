@@ -54,7 +54,7 @@ import system.Guid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InstanceNotReadyException extends InstancePersistenceCommandException {
+public class InstanceNotReadyException extends system.runtime.durableinstancing.InstancePersistenceCommandException {
     /**
      * Fully assembly qualified name: System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

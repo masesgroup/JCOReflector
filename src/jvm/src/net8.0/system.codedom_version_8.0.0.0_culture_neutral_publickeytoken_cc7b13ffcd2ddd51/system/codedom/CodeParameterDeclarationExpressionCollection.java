@@ -55,7 +55,7 @@ import system.codedom.CodeParameterDeclarationExpressionCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeParameterDeclarationExpressionCollection extends CollectionBase  {
+public class CodeParameterDeclarationExpressionCollection extends system.collections.CollectionBase  {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

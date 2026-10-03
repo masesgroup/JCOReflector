@@ -38,8 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.ICloneable;
-import system.ICloneableImplementation;
+import system.Nullable_1;
 
 
 /**
@@ -54,7 +53,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RangeItemHeaderValue extends NetObject implements ICloneable {
+public class RangeItemHeaderValue extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -150,6 +149,16 @@ public class RangeItemHeaderValue extends NetObject implements ICloneable {
     public RangeItemHeaderValue() throws Throwable {
     }
 
+    public RangeItemHeaderValue(Nullable_1 from, Nullable_1 to) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -168,6 +177,36 @@ public class RangeItemHeaderValue extends NetObject implements ICloneable {
     
     // Properties section
     
+    public Nullable_1 getFrom() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrom = null;
+        try {
+            retObjectFrom = classInstance.Get("From");
+            JCObject val = (JCObject)retObjectFrom;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFrom != null ? retObjectFrom.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getTo() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTo = null;
+        try {
+            retObjectTo = classInstance.Get("To");
+            JCObject val = (JCObject)retObjectTo;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTo != null ? retObjectTo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

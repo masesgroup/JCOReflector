@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.data.metadata.edm.StructuralType;
 import system.data.metadata.edm.BuiltInTypeKind;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.data.metadata.edm.BuiltInTypeKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RowType extends StructuralType  {
+public class RowType extends system.data.metadata.edm.StructuralType  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -159,6 +160,21 @@ public class RowType extends StructuralType  {
     
     // Properties section
     
+    public ReadOnlyMetadataCollection_1 getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

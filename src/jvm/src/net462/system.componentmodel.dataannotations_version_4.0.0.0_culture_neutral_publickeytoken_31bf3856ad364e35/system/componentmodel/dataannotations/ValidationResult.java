@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -158,6 +160,16 @@ public class ValidationResult extends NetObject  {
         }
     }
 
+    public ValidationResult(java.lang.String errorMessage, IEnumerable_1 memberNames) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(errorMessage, memberNames == null ? null : memberNames.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -167,6 +179,21 @@ public class ValidationResult extends NetObject  {
     
     // Properties section
     
+    public IEnumerable_1 getMemberNames() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberNames = null;
+        try {
+            retObjectMemberNames = classInstance.Get("MemberNames");
+            JCObject val = (JCObject)retObjectMemberNames;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberNames != null ? retObjectMemberNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getErrorMessage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

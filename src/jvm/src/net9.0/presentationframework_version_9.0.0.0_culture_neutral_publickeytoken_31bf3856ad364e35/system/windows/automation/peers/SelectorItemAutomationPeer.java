@@ -54,7 +54,7 @@ import system.windows.automation.peers.PatternInterface;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SelectorItemAutomationPeer extends ItemAutomationPeer  {
+public class SelectorItemAutomationPeer extends system.windows.automation.peers.ItemAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

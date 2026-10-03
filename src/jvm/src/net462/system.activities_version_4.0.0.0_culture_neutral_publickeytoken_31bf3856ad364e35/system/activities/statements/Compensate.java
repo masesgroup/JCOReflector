@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.NativeActivity;
+import system.activities.InArgument_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.activities.NativeActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Compensate extends NativeActivity  {
+public class Compensate extends system.activities.NativeActivity  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +165,31 @@ public class Compensate extends NativeActivity  {
     
     // Properties section
     
+    public InArgument_1 getTarget() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
+        try {
+            retObjectTarget = classInstance.Get("Target");
+            JCObject val = (JCObject)retObjectTarget;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTarget(InArgument_1 Target) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

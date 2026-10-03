@@ -54,7 +54,7 @@ import system.configuration.ProviderSettings;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ProviderSettingsCollection extends ConfigurationElementCollection  {
+public class ProviderSettingsCollection extends system.configuration.ConfigurationElementCollection  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

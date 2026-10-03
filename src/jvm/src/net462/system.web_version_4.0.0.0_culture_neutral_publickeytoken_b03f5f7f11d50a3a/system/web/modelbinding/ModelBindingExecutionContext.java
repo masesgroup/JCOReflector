@@ -165,6 +165,16 @@ public class ModelBindingExecutionContext extends NetObject  {
     
     // Methods section
     
+    public <TService extends IJCOBridgeReflected> void PublishService(TService service) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PublishService", service == null ? null : ((IJCOBridgeReflected)service).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

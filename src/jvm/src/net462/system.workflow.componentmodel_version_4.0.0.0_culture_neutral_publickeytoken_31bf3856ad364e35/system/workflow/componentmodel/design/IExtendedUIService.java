@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.Dictionary_2;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
 import system.Uri;
@@ -122,6 +123,8 @@ public interface IExtendedUIService extends IJCOBridgeReflected {
     // Methods section
     
     public boolean NavigateToProperty(java.lang.String propName) throws Throwable;
+
+    public Dictionary_2 GetXsdProjectItemsInfo() throws Throwable;
 
     public ITypeDescriptorContext GetSelectedPropertyContext() throws Throwable;
 

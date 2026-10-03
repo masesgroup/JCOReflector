@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.tasks.ValueTask;
+import system.threading.tasks.ValueTask_1;
+import system.threading.CancellationToken;
+import system.net.quic.QuicListenerOptions;
 import system.net.IPEndPoint;
 
 
@@ -165,6 +168,36 @@ public class QuicListener extends NetObject  {
             return new ValueTask(objDisposeAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 AcceptConnectionAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptConnectionAsync = null;
+        try {
+            retObjectAcceptConnectionAsync = classInstance.Invoke("AcceptConnectionAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAcceptConnectionAsync = (JCObject)retObjectAcceptConnectionAsync;
+            return new ValueTask_1(objAcceptConnectionAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptConnectionAsync != null ? retObjectAcceptConnectionAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 ListenAsync(QuicListenerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListenAsync = null;
+        try {
+            retObjectListenAsync = classType.Invoke("ListenAsync", options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objListenAsync = (JCObject)retObjectListenAsync;
+            return new ValueTask_1(objListenAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenAsync != null ? retObjectListenAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

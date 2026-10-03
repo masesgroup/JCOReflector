@@ -42,6 +42,7 @@ import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.security.cryptography.x509certificates.X509Certificate2;
+import system.threading.tasks.Task_1;
 import system.collections.specialized.NameValueCollection;
 import system.Guid;
 import system.io.Stream;
@@ -206,6 +207,21 @@ public class HttpListenerRequest extends NetObject  {
             return new X509Certificate2(objGetClientCertificate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClientCertificate != null ? retObjectGetClientCertificate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetClientCertificateAsync() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.net.HttpListenerException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.RankException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientCertificateAsync = null;
+        try {
+            retObjectGetClientCertificateAsync = classInstance.Invoke("GetClientCertificateAsync");
+            JCObject objGetClientCertificateAsync = (JCObject)retObjectGetClientCertificateAsync;
+            return new Task_1(objGetClientCertificateAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClientCertificateAsync != null ? retObjectGetClientCertificateAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.workflow.activities.rules.RuleConditionCollection;
 import system.workflow.activities.rules.RuleSetCollection;
 
@@ -161,6 +163,21 @@ public class RuleDefinitions extends NetObject  {
     
     // Methods section
     
+    public IList_1 Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiff = null;
+        try {
+            retObjectDiff = classInstance.Invoke("Diff", originalDefinition == null ? null : originalDefinition.getJCOInstance(), changedDefinition == null ? null : changedDefinition.getJCOInstance());
+            JCObject objDiff = (JCObject)retObjectDiff;
+            return new IList_1Implementation(objDiff);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiff != null ? retObjectDiff.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

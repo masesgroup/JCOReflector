@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.security.tokens.SecurityContextSecurityToken;
+import system.collections.objectmodel.Collection_1;
 import system.xml.UniqueId;
 import system.DateTime;
 
@@ -152,6 +153,21 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
             return (boolean)retObjectTryAddContext;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAddContext != null ? retObjectTryAddContext.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 GetAllContexts(UniqueId contextId) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllContexts = null;
+        try {
+            retObjectGetAllContexts = classInstance.Invoke("GetAllContexts", contextId == null ? null : contextId.getJCOInstance());
+            JCObject objGetAllContexts = (JCObject)retObjectGetAllContexts;
+            return new Collection_1(objGetAllContexts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllContexts != null ? retObjectGetAllContexts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

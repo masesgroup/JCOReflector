@@ -60,6 +60,7 @@ import system.data.MissingSchemaAction;
 import system.data.XmlWriteMode;
 import system.io.TextWriter;
 import system.xml.XmlWriter;
+import system.Converter_2;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.xml.schema.XmlSchema;
@@ -88,7 +89,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataSet extends MarshalByValueComponent  {
+public class DataSet extends system.componentmodel.MarshalByValueComponent  {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -876,11 +877,31 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
+    public void WriteXmlSchema(Stream stream, Converter_2 multipleTargetConverter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.NullReferenceException, system.xml.XmlException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.io.IOException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteXmlSchema", stream == null ? null : stream.getJCOInstance(), multipleTargetConverter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void WriteXmlSchema(TextWriter writer) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.xml.XmlException, system.OutOfMemoryException, system.data.DataException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlSchema", writer == null ? null : writer.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteXmlSchema(TextWriter writer, Converter_2 multipleTargetConverter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.xml.XmlException, system.OutOfMemoryException, system.data.DataException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.io.IOException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteXmlSchema", writer == null ? null : writer.getJCOInstance(), multipleTargetConverter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -896,11 +917,31 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
+    public void WriteXmlSchema(java.lang.String fileName, Converter_2 multipleTargetConverter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteXmlSchema", fileName, multipleTargetConverter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void WriteXmlSchema(XmlWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.InvalidOperationException, system.OutOfMemoryException, system.data.DataException, system.NotImplementedException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlSchema", writer == null ? null : writer.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteXmlSchema(XmlWriter writer, Converter_2 multipleTargetConverter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.InvalidOperationException, system.OutOfMemoryException, system.data.DataException, system.NotImplementedException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.InvalidCastException, system.RankException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteXmlSchema", writer == null ? null : writer.getJCOInstance(), multipleTargetConverter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

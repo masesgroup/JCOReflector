@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.metadata.RoleDescriptor;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.identitymodel.metadata.RoleDescriptor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebServiceDescriptor extends RoleDescriptor  {
+public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDescriptor  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +158,66 @@ public class WebServiceDescriptor extends RoleDescriptor  {
     
     // Properties section
     
+    public ICollection_1 getClaimTypesOffered() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimTypesOffered = null;
+        try {
+            retObjectClaimTypesOffered = classInstance.Get("ClaimTypesOffered");
+            JCObject val = (JCObject)retObjectClaimTypesOffered;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimTypesOffered != null ? retObjectClaimTypesOffered.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getClaimTypesRequested() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimTypesRequested = null;
+        try {
+            retObjectClaimTypesRequested = classInstance.Get("ClaimTypesRequested");
+            JCObject val = (JCObject)retObjectClaimTypesRequested;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimTypesRequested != null ? retObjectClaimTypesRequested.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getTargetScopes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetScopes = null;
+        try {
+            retObjectTargetScopes = classInstance.Get("TargetScopes");
+            JCObject val = (JCObject)retObjectTargetScopes;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetScopes != null ? retObjectTargetScopes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getTokenTypesOffered() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenTypesOffered = null;
+        try {
+            retObjectTokenTypesOffered = classInstance.Get("TokenTypesOffered");
+            JCObject val = (JCObject)retObjectTokenTypesOffered;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenTypesOffered != null ? retObjectTokenTypesOffered.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getServiceDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

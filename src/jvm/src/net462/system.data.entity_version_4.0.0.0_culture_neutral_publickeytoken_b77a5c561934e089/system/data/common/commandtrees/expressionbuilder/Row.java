@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.KeyValuePair_2;
 import system.data.common.commandtrees.DbNewInstanceExpression;
 
 
@@ -147,6 +148,16 @@ public class Row extends NetObject  {
     // Constructors section
     
     public Row() throws Throwable {
+    }
+
+    public Row(KeyValuePair_2 columnValue, KeyValuePair_2... columnValues) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(columnValue == null ? null : columnValue.getJCOInstance(), toObjectFromArray(columnValues)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

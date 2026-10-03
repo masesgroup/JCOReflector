@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.EntityKey;
 import system.data.metadata.edm.EntitySet;
 import system.data.metadata.edm.MetadataWorkspace;
@@ -155,6 +157,16 @@ public class EntityKey extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EntityKey(java.lang.String qualifiedEntitySetName, IEnumerable_1 entityKeyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException, system.collections.generic.KeyNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(qualifiedEntitySetName, entityKeyValues == null ? null : entityKeyValues.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

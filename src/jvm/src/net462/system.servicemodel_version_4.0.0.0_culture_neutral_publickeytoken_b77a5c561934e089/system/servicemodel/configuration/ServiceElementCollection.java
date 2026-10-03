@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.configuration.ServiceModelEnhancedConfigurationElementCollection_1;
+import system.servicemodel.configuration.ServiceElement;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ServiceElementCollection extends NetObjectEnumerable  {
+public class ServiceElementCollection extends system.servicemodel.configuration.ServiceModelEnhancedConfigurationElementCollection_1<ServiceElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

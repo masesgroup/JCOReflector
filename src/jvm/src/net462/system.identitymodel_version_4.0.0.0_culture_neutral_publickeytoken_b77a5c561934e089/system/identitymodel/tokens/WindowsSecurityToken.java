@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.SecurityToken;
 import system.security.principal.WindowsIdentity;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.DateTime;
 
 
@@ -55,7 +56,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WindowsSecurityToken extends SecurityToken implements AutoCloseable {
+public class WindowsSecurityToken extends system.identitymodel.tokens.SecurityToken implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

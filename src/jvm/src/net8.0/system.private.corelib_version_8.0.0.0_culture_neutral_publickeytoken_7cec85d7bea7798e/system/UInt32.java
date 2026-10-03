@@ -44,6 +44,7 @@ import system.globalization.NumberStyles;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.TypeCode;
+import system.ValueTuple_2;
 import system.SByte;
 import system.Single;
 import system.DateTime;
@@ -64,7 +65,7 @@ import system.UInt64;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UInt32 extends ValueType  {
+public class UInt32 extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -440,6 +441,21 @@ public class UInt32 extends ValueType  {
         }
     }
 
+    public static ValueTuple_2 DivRem(UInt32 left, UInt32 right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static UInt32 Clamp(UInt32 value, UInt32 min, UInt32 max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -450,6 +466,51 @@ public class UInt32 extends ValueType  {
             return new UInt32(objClamp);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClamp != null ? retObjectClamp.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOther extends IJCOBridgeReflected> UInt32 CreateChecked(TOther value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateChecked = null;
+        try {
+            retObjectCreateChecked = classType.Invoke("CreateChecked", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreateChecked = (JCObject)retObjectCreateChecked;
+            return new UInt32(objCreateChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateChecked != null ? retObjectCreateChecked.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOther extends IJCOBridgeReflected> UInt32 CreateSaturating(TOther value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSaturating = null;
+        try {
+            retObjectCreateSaturating = classType.Invoke("CreateSaturating", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreateSaturating = (JCObject)retObjectCreateSaturating;
+            return new UInt32(objCreateSaturating);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSaturating != null ? retObjectCreateSaturating.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOther extends IJCOBridgeReflected> UInt32 CreateTruncating(TOther value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTruncating = null;
+        try {
+            retObjectCreateTruncating = classType.Invoke("CreateTruncating", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreateTruncating = (JCObject)retObjectCreateTruncating;
+            return new UInt32(objCreateTruncating);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTruncating != null ? retObjectCreateTruncating.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -768,6 +829,375 @@ public class UInt32 extends ValueType  {
     @Deprecated 
     public UInt64 ToUInt64(IFormatProvider provider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int GetByteCount() throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int GetShortestBitLength() throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int WriteBigEndian(byte[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int WriteBigEndian(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int WriteBigEndian(byte[] destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int WriteBigEndian(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int WriteLittleEndian(byte[] destination, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int WriteLittleEndian(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int WriteLittleEndian(byte[] destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int WriteLittleEndian(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 ReadBigEndian(byte[] source, boolean isUnsigned) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 ReadBigEndian(JCORefOut dupParam0, boolean dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 ReadBigEndian(byte[] source, int startIndex, boolean isUnsigned) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 ReadBigEndian(JCORefOut dupParam0, int dupParam1, boolean dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 ReadLittleEndian(byte[] source, boolean isUnsigned) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 ReadLittleEndian(JCORefOut dupParam0, boolean dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBinaryInteger_1 method available in IBinaryInteger_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 ReadLittleEndian(byte[] source, int startIndex, boolean isUnsigned) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBinaryInteger_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 ReadLittleEndian(JCORefOut dupParam0, int dupParam1, boolean dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumber_1 method available in INumber_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 CopySign(UInt32 value, UInt32 sign) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumber_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumber_1 method available in INumber_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 MaxNumber(UInt32 x, UInt32 y) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumber_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumber_1 method available in INumber_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 MinNumber(UInt32 x, UInt32 y) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumber_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsCanonical(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsComplexNumber(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsFinite(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsImaginaryNumber(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsInfinity(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsInteger(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsNaN(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsNegative(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsNegativeInfinity(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsNormal(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsPositive(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsPositiveInfinity(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsRealNumber(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsSubnormal(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsZero(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 Abs(UInt32 value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 MaxMagnitude(UInt32 x, UInt32 y) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 MaxMagnitudeNumber(UInt32 x, UInt32 y) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 MinMagnitude(UInt32 x, UInt32 y) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static UInt32 MinMagnitudeNumber(UInt32 x, UInt32 y) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
 
 

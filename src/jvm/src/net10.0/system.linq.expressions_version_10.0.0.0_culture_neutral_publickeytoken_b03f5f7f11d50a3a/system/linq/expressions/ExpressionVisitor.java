@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.Func_2;
 import system.linq.expressions.Expression;
 
 
@@ -152,6 +154,51 @@ public class ExpressionVisitor extends NetObject  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 Visit(ReadOnlyCollection_1 nodes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisit = null;
+        try {
+            retObjectVisit = classInstance.Invoke("Visit", nodes == null ? null : nodes.getJCOInstance());
+            JCObject objVisit = (JCObject)retObjectVisit;
+            return new ReadOnlyCollection_1(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ReadOnlyCollection_1 Visit(ReadOnlyCollection_1 nodes, Func_2 elementVisitor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVisit = null;
+        try {
+            retObjectVisit = classType.Invoke("Visit", nodes == null ? null : nodes.getJCOInstance(), elementVisitor);
+            JCObject objVisit = (JCObject)retObjectVisit;
+            return new ReadOnlyCollection_1(objVisit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisit != null ? retObjectVisit.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ReadOnlyCollection_1 VisitAndConvert(ReadOnlyCollection_1 nodes, java.lang.String callerName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisitAndConvert = null;
+        try {
+            retObjectVisitAndConvert = classInstance.Invoke("VisitAndConvert", nodes == null ? null : nodes.getJCOInstance(), callerName);
+            JCObject objVisitAndConvert = (JCObject)retObjectVisitAndConvert;
+            return new ReadOnlyCollection_1(objVisitAndConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisitAndConvert != null ? retObjectVisitAndConvert.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Expression Visit(Expression node) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

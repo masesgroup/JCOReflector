@@ -39,7 +39,10 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.activities.presentation.ICompositeView;
 import system.activities.presentation.ICompositeViewImplementation;
+import system.collections.generic.List_1;
 import system.activities.presentation.model.ModelItem;
+import system.windows.Point;
+import system.activities.presentation.WorkflowViewElement;
 import system.activities.presentation.view.TypeResolvingOptions;
 
 
@@ -55,7 +58,7 @@ import system.activities.presentation.view.TypeResolvingOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IMultipleDragEnabledCompositeView extends IJCOBridgeReflected, ICompositeView {
+public interface IMultipleDragEnabledCompositeView extends IJCOBridgeReflected, system.activities.presentation.ICompositeView {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -119,6 +122,15 @@ public interface IMultipleDragEnabledCompositeView extends IJCOBridgeReflected, 
 
     // Methods section
     
+
+    public List_1 SortSelectedItems(List_1 selectedItems) throws Throwable;
+
+
+
+
+
+    public void OnItemsMoved(List_1 movedItems) throws Throwable;
+
 
 
     

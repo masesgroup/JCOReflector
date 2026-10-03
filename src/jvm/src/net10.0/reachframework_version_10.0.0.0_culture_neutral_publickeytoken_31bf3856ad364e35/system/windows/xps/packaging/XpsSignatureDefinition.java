@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.globalization.CultureInfo;
+import system.Nullable_1;
 import system.windows.xps.packaging.SpotLocation;
 
 
@@ -209,6 +210,56 @@ public class XpsSignatureDefinition extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture == null ? null : Culture.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getSignBy() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignBy = null;
+        try {
+            retObjectSignBy = classInstance.Get("SignBy");
+            JCObject val = (JCObject)retObjectSignBy;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignBy != null ? retObjectSignBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSignBy(Nullable_1 SignBy) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SignBy", SignBy == null ? null : SignBy.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getSpotId() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpotId = null;
+        try {
+            retObjectSpotId = classInstance.Get("SpotId");
+            JCObject val = (JCObject)retObjectSpotId;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpotId != null ? retObjectSpotId.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSpotId(Nullable_1 SpotId) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SpotId", SpotId == null ? null : SpotId.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

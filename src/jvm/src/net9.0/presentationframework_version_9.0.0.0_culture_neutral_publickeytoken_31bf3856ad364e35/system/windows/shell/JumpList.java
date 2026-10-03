@@ -38,10 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.shell.JumpList;
 import system.windows.Application;
 import system.windows.shell.JumpPath;
 import system.windows.shell.JumpTask;
+import system.collections.generic.List_1;
 
 
 /**
@@ -154,6 +157,16 @@ public class JumpList extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public JumpList(IEnumerable_1 items, boolean showFrequent, boolean showRecent) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(items == null ? null : items.getJCOInstance(), showFrequent, showRecent));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,6 +308,21 @@ public class JumpList extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowRecentCategory", ShowRecentCategory);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getJumpItems() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectJumpItems = null;
+        try {
+            retObjectJumpItems = classInstance.Get("JumpItems");
+            JCObject val = (JCObject)retObjectJumpItems;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJumpItems != null ? retObjectJumpItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

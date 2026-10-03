@@ -59,7 +59,7 @@ import system.numerics.Plane;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Matrix4x4 extends ValueType  {
+public class Matrix4x4 extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.design.StructuredCompositeActivityDesigner;
 import system.workflow.componentmodel.design.HitTestInfo;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.workflow.componentmodel.design.DesignerNavigationDirection;
 
 
@@ -55,7 +56,7 @@ import system.workflow.componentmodel.design.DesignerNavigationDirection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ParallelActivityDesigner extends StructuredCompositeActivityDesigner  {
+public class ParallelActivityDesigner extends system.workflow.componentmodel.design.StructuredCompositeActivityDesigner  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -162,6 +163,34 @@ public class ParallelActivityDesigner extends StructuredCompositeActivityDesigne
     
     // Methods section
     
+    public boolean CanMoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1 activitiesToMove) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanMoveActivities = null;
+        try {
+            retObjectCanMoveActivities = classInstance.Invoke("CanMoveActivities", moveLocation == null ? null : moveLocation.getJCOInstance(), activitiesToMove == null ? null : activitiesToMove.getJCOInstance());
+            return (boolean)retObjectCanMoveActivities;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanMoveActivities != null ? retObjectCanMoveActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean CanRemoveActivities(ReadOnlyCollection_1 activitiesToRemove) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRemoveActivities = null;
+        try {
+            retObjectCanRemoveActivities = classInstance.Invoke("CanRemoveActivities", activitiesToRemove == null ? null : activitiesToRemove.getJCOInstance());
+            return (boolean)retObjectCanRemoveActivities;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRemoveActivities != null ? retObjectCanRemoveActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetNextSelectableObject(NetObject obj, DesignerNavigationDirection direction) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

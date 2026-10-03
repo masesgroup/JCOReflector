@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.threading.CancellationToken;
 import system.TimeSpan;
 import system.threading.tasks.Task;
+import system.threading.tasks.Task_1;
 import system.threading.WaitHandle;
 
 
@@ -336,6 +337,66 @@ public class SemaphoreSlim extends NetObject implements AutoCloseable {
             retObjectWaitAsync = classInstance.Invoke("WaitAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
             JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
             return new Task(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 WaitAsync(int millisecondsTimeout) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
+        try {
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", millisecondsTimeout);
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
+            return new Task_1(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 WaitAsync(int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OutOfMemoryException, system.OperationCanceledException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
+        try {
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", millisecondsTimeout, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
+            return new Task_1(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 WaitAsync(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
+        try {
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
+            return new Task_1(objWaitAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 WaitAsync(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitAsync = null;
+        try {
+            retObjectWaitAsync = classInstance.Invoke("WaitAsync", timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWaitAsync = (JCObject)retObjectWaitAsync;
+            return new Task_1(objWaitAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitAsync != null ? retObjectWaitAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {

@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.KeyedCollection_2;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.workflow.activities.rules.RuleSet;
 
 
@@ -53,7 +56,7 @@ import system.workflow.activities.rules.RuleSet;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RuleSetCollection extends NetObjectEnumerable  {
+public class RuleSetCollection extends system.collections.objectmodel.KeyedCollection_2  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -160,6 +163,21 @@ public class RuleSetCollection extends NetObjectEnumerable  {
     
     // Methods section
     
+    public IList_1 Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiff = null;
+        try {
+            retObjectDiff = classInstance.Invoke("Diff", originalDefinition == null ? null : originalDefinition.getJCOInstance(), changedDefinition == null ? null : changedDefinition.getJCOInstance());
+            JCObject objDiff = (JCObject)retObjectDiff;
+            return new IList_1Implementation(objDiff);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiff != null ? retObjectDiff.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddNewRuleSetCollection(RuleSet item) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -39,9 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.durableinstancing.InstanceKey;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.servicemodel.channels.Message;
 import system.servicemodel.channels.CorrelationMessageProperty;
 import system.servicemodel.channels.MessageProperties;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -152,6 +155,26 @@ public class CorrelationMessageProperty extends NetObject  {
     public CorrelationMessageProperty() throws Throwable {
     }
 
+    public CorrelationMessageProperty(InstanceKey correlationKey, IEnumerable_1 additionalKeys) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(correlationKey == null ? null : correlationKey.getJCOInstance(), additionalKeys == null ? null : additionalKeys.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CorrelationMessageProperty(InstanceKey correlationKey, IEnumerable_1 additionalKeys, IEnumerable_1 transientCorrelations) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(correlationKey == null ? null : correlationKey.getJCOInstance(), additionalKeys == null ? null : additionalKeys.getJCOInstance(), transientCorrelations == null ? null : transientCorrelations.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -189,6 +212,36 @@ public class CorrelationMessageProperty extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getAdditionalKeys() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalKeys = null;
+        try {
+            retObjectAdditionalKeys = classInstance.Get("AdditionalKeys");
+            JCObject val = (JCObject)retObjectAdditionalKeys;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdditionalKeys != null ? retObjectAdditionalKeys.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getTransientCorrelations() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransientCorrelations = null;
+        try {
+            retObjectTransientCorrelations = classInstance.Get("TransientCorrelations");
+            JCObject val = (JCObject)retObjectTransientCorrelations;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransientCorrelations != null ? retObjectTransientCorrelations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public InstanceKey getCorrelationKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

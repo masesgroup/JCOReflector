@@ -38,10 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.servicemodel.syndication.ServiceDocument;
 import system.xml.XmlReader;
 import system.servicemodel.syndication.ServiceDocumentFormatter;
 import system.xml.XmlWriter;
+import system.collections.generic.Dictionary_2;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
 import system.Uri;
 
@@ -161,6 +165,16 @@ public class ServiceDocument extends NetObject  {
         }
     }
 
+    public ServiceDocument(IEnumerable_1 workspaces) throws Throwable, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(workspaces == null ? null : workspaces.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -209,6 +223,36 @@ public class ServiceDocument extends NetObject  {
     
     // Properties section
     
+    public Dictionary_2 getAttributeExtensions() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeExtensions = null;
+        try {
+            retObjectAttributeExtensions = classInstance.Get("AttributeExtensions");
+            JCObject val = (JCObject)retObjectAttributeExtensions;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeExtensions != null ? retObjectAttributeExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getWorkspaces() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkspaces = null;
+        try {
+            retObjectWorkspaces = classInstance.Get("Workspaces");
+            JCObject val = (JCObject)retObjectWorkspaces;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkspaces != null ? retObjectWorkspaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

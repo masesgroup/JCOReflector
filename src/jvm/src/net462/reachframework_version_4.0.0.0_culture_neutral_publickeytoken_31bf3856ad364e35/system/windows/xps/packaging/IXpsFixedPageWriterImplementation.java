@@ -49,6 +49,8 @@ import system.Uri;
 import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsStructure;
 import system.windows.xps.packaging.XpsThumbnail;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.printing.PrintTicket;
 import system.xml.XmlWriter;
 
@@ -352,6 +354,21 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getLinkTargetStream() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkTargetStream = null;
+        try {
+            retObjectLinkTargetStream = classInstance.Get("LinkTargetStream");
+            JCObject val = (JCObject)retObjectLinkTargetStream;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkTargetStream != null ? retObjectLinkTargetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

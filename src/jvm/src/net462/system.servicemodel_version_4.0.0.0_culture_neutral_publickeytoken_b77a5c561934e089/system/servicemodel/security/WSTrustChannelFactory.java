@@ -38,10 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.EndpointAddress;
-import system.servicemodel.description.ServiceEndpoint;
+import system.servicemodel.ChannelFactory_1;
 import system.servicemodel.security.IWSTrustChannelContract;
 import system.servicemodel.security.IWSTrustChannelContractImplementation;
+import system.servicemodel.EndpointAddress;
+import system.servicemodel.description.ServiceEndpoint;
 import system.Uri;
 import system.identitymodel.protocols.wstrust.WSTrustRequestSerializer;
 import system.identitymodel.protocols.wstrust.WSTrustResponseSerializer;
@@ -62,7 +63,7 @@ import system.servicemodel.security.TrustVersion;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WSTrustChannelFactory extends NetObject  {
+public class WSTrustChannelFactory extends system.servicemodel.ChannelFactory_1<IWSTrustChannelContract>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

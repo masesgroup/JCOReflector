@@ -40,16 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.OperationDescription;
 import system.servicemodel.XmlSerializerFormatAttribute;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.channels.BindingParameterCollection;
 import system.servicemodel.dispatcher.ClientOperation;
 import system.servicemodel.dispatcher.DispatchOperation;
 import system.servicemodel.description.WsdlExporter;
 import system.servicemodel.description.WsdlContractConversionContext;
 import system.servicemodel.description.WsdlEndpointConversionContext;
-import system.servicemodel.description.IOperationBehavior;
-import system.servicemodel.description.IOperationBehaviorImplementation;
-import system.servicemodel.description.IWsdlExportExtension;
-import system.servicemodel.description.IWsdlExportExtensionImplementation;
 
 
 /**
@@ -64,7 +61,7 @@ import system.servicemodel.description.IWsdlExportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSerializerOperationBehavior extends NetObject implements IOperationBehavior, IWsdlExportExtension {
+public class XmlSerializerOperationBehavior extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -185,6 +182,21 @@ public class XmlSerializerOperationBehavior extends NetObject implements IOperat
     
     // Methods section
     
+    public Collection_1 GetXmlMappings() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXmlMappings = null;
+        try {
+            retObjectGetXmlMappings = classInstance.Invoke("GetXmlMappings");
+            JCObject objGetXmlMappings = (JCObject)retObjectGetXmlMappings;
+            return new Collection_1(objGetXmlMappings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXmlMappings != null ? retObjectGetXmlMappings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method

@@ -54,7 +54,7 @@ import system.text.json.serialization.JsonIgnoreCondition;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JsonIgnoreAttribute extends JsonAttribute  {
+public class JsonIgnoreAttribute extends system.text.json.serialization.JsonAttribute  {
     /**
      * Fully assembly qualified name: System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

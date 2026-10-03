@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.RoutedEventArgs;
+import system.Nullable_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.windows.RoutedEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CalendarDateChangedEventArgs extends RoutedEventArgs  {
+public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -158,6 +159,56 @@ public class CalendarDateChangedEventArgs extends RoutedEventArgs  {
     
     // Properties section
     
+    public Nullable_1 getAddedDate() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddedDate = null;
+        try {
+            retObjectAddedDate = classInstance.Get("AddedDate");
+            JCObject val = (JCObject)retObjectAddedDate;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddedDate != null ? retObjectAddedDate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAddedDate(Nullable_1 AddedDate) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AddedDate", AddedDate == null ? null : AddedDate.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getRemovedDate() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedDate = null;
+        try {
+            retObjectRemovedDate = classInstance.Get("RemovedDate");
+            JCObject val = (JCObject)retObjectRemovedDate;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemovedDate != null ? retObjectRemovedDate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRemovedDate(Nullable_1 RemovedDate) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RemovedDate", RemovedDate == null ? null : RemovedDate.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

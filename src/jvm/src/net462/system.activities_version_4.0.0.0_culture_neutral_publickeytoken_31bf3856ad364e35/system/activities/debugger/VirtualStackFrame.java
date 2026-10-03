@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.debugger.State;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -159,6 +161,16 @@ public class VirtualStackFrame extends NetObject  {
         }
     }
 
+    public VirtualStackFrame(State state, IDictionary_2 locals) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(state == null ? null : state.getJCOInstance(), locals == null ? null : locals.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -178,6 +190,21 @@ public class VirtualStackFrame extends NetObject  {
             return new State(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getLocals() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocals = null;
+        try {
+            retObjectLocals = classInstance.Get("Locals");
+            JCObject val = (JCObject)retObjectLocals;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocals != null ? retObjectLocals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

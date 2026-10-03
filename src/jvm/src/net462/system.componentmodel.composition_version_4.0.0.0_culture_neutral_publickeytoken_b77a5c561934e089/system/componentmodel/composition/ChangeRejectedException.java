@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.composition.CompositionException;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 /**
  * The base .NET class managing System.ComponentModel.Composition.ChangeRejectedException, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
@@ -52,7 +54,7 @@ import system.componentmodel.composition.CompositionException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ChangeRejectedException extends CompositionException {
+public class ChangeRejectedException extends system.componentmodel.composition.CompositionException {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -164,6 +166,16 @@ public class ChangeRejectedException extends CompositionException {
 
     // Constructors section
     
+    public ChangeRejectedException(IEnumerable_1 errors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(errors == null ? null : errors.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section

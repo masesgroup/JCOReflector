@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.primitives.ImportDefinition;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -53,7 +58,7 @@ import system.componentmodel.composition.primitives.ComposablePartCatalog;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AggregateCatalog extends ComposablePartCatalog  {
+public class AggregateCatalog extends system.componentmodel.composition.primitives.ComposablePartCatalog  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +161,16 @@ public class AggregateCatalog extends ComposablePartCatalog  {
         }
     }
 
+    public AggregateCatalog(IEnumerable_1 catalogs) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(catalogs == null ? null : catalogs.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AggregateCatalog(ComposablePartCatalog... catalogs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -170,10 +185,40 @@ public class AggregateCatalog extends ComposablePartCatalog  {
     
     // Methods section
     
+    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExports = null;
+        try {
+            retObjectGetExports = classInstance.Invoke("GetExports", definition == null ? null : definition.getJCOInstance());
+            JCObject objGetExports = (JCObject)retObjectGetExports;
+            return new IEnumerable_1Implementation(objGetExports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExports != null ? retObjectGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public ICollection_1 getCatalogs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatalogs = null;
+        try {
+            retObjectCatalogs = classInstance.Get("Catalogs");
+            JCObject val = (JCObject)retObjectCatalogs;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatalogs != null ? retObjectCatalogs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

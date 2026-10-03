@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.frozen.FrozenSet_1;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
 
 
 /**
@@ -151,6 +156,21 @@ public class FrozenSet extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> FrozenSet_1 ToFrozenSet(IEnumerable_1 source, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToFrozenSet = null;
+        try {
+            retObjectToFrozenSet = classType.Invoke("ToFrozenSet", source == null ? null : source.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            JCObject objToFrozenSet = (JCObject)retObjectToFrozenSet;
+            return new FrozenSet_1(objToFrozenSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToFrozenSet != null ? retObjectToFrozenSet.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

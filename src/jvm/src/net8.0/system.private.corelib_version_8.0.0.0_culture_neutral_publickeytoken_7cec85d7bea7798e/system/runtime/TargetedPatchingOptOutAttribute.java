@@ -53,7 +53,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TargetedPatchingOptOutAttribute extends Attribute  {
+public class TargetedPatchingOptOutAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

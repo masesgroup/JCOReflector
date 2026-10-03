@@ -70,7 +70,7 @@ import system.collections.IDictionaryImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IClientFormatterSink extends IJCOBridgeReflected, IMessageSink, IClientChannelSink, IChannelSinkBase {
+public interface IClientFormatterSink extends IJCOBridgeReflected, system.runtime.remoting.messaging.IMessageSink, system.runtime.remoting.channels.IClientChannelSink, system.runtime.remoting.channels.IChannelSinkBase {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

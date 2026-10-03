@@ -42,6 +42,7 @@ import system.data.metadata.edm.GlobalItem;
 import system.data.metadata.edm.EntitySet;
 import system.data.metadata.edm.RelationshipSet;
 import system.data.metadata.edm.BuiltInTypeKind;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -56,7 +57,7 @@ import system.data.metadata.edm.BuiltInTypeKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EntityContainer extends GlobalItem  {
+public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -219,6 +220,36 @@ public class EntityContainer extends GlobalItem  {
     
     // Properties section
     
+    public ReadOnlyMetadataCollection_1 getFunctionImports() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFunctionImports = null;
+        try {
+            retObjectFunctionImports = classInstance.Get("FunctionImports");
+            JCObject val = (JCObject)retObjectFunctionImports;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunctionImports != null ? retObjectFunctionImports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getBaseEntitySets() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseEntitySets = null;
+        try {
+            retObjectBaseEntitySets = classInstance.Get("BaseEntitySets");
+            JCObject val = (JCObject)retObjectBaseEntitySets;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseEntitySets != null ? retObjectBaseEntitySets.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

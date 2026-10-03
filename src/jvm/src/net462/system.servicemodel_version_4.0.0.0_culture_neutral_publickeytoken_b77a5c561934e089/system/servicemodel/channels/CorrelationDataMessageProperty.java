@@ -43,6 +43,7 @@ import system.servicemodel.channels.CorrelationDataMessageProperty;
 import system.servicemodel.channels.MessageProperties;
 import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
+import system.Func_1;
 
 
 /**
@@ -230,6 +231,26 @@ public class CorrelationDataMessageProperty extends NetObject  {
             return new IMessagePropertyImplementation(objCreateCopy);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCopy != null ? retObjectCreateCopy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Add(java.lang.String name, Func_1 dataProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", name, dataProvider);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AddData(Message message, java.lang.String name, Func_1 dataProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddData", message == null ? null : message.getJCOInstance(), name, dataProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

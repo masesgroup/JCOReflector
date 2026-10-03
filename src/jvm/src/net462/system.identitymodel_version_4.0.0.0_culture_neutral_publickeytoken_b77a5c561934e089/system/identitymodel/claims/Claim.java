@@ -44,6 +44,8 @@ import system.net.mail.MailAddress;
 import system.security.cryptography.RSA;
 import system.Uri;
 import system.security.cryptography.x509certificates.X500DistinguishedName;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
 
 
 /**
@@ -383,6 +385,21 @@ public class Claim extends NetObject  {
     
     // Properties section
     
+    public static IEqualityComparer_1 getDefaultComparer() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultComparer = null;
+        try {
+            retObjectDefaultComparer = classType.Get("DefaultComparer");
+            JCObject val = (JCObject)retObjectDefaultComparer;
+            return new IEqualityComparer_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultComparer != null ? retObjectDefaultComparer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Claim getSystem() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

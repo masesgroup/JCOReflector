@@ -40,6 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 import system.codedom.CodeTypeDeclaration;
 import system.codedom.CodeCompileUnit;
 import system.reflection.MemberInfo;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -131,6 +132,8 @@ public interface IDataContractSurrogate extends IJCOBridgeReflected {
     public NetType GetDataContractType(NetType type) throws Throwable;
 
     public NetType GetReferencedTypeOnImport(java.lang.String typeName, java.lang.String typeNamespace, NetObject customData) throws Throwable;
+
+    public void GetKnownCustomDataTypes(Collection_1 customDataTypes) throws Throwable;
 
 
     

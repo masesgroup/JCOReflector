@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.Nullable_1;
 
 
 /**
@@ -163,6 +165,46 @@ public class AuthenticationInformation extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getAuthorizationContexts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorizationContexts = null;
+        try {
+            retObjectAuthorizationContexts = classInstance.Get("AuthorizationContexts");
+            JCObject val = (JCObject)retObjectAuthorizationContexts;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthorizationContexts != null ? retObjectAuthorizationContexts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getNotOnOrAfter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotOnOrAfter = null;
+        try {
+            retObjectNotOnOrAfter = classInstance.Get("NotOnOrAfter");
+            JCObject val = (JCObject)retObjectNotOnOrAfter;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotOnOrAfter != null ? retObjectNotOnOrAfter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNotOnOrAfter(Nullable_1 NotOnOrAfter) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NotOnOrAfter", NotOnOrAfter == null ? null : NotOnOrAfter.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -59,7 +59,7 @@ import system.web.compilation.CompilerType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ServiceBuildProvider extends BuildProvider  {
+public class ServiceBuildProvider extends system.web.compilation.BuildProvider  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

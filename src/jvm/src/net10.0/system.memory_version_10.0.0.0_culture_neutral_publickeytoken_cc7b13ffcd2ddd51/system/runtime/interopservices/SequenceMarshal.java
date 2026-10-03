@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.buffers.ReadOnlySequence_1;
+import system.ArraySegment_1;
+import system.ReadOnlyMemory_1;
+import system.buffers.ReadOnlySequenceSegment_1;
 
 
 /**
@@ -151,6 +155,48 @@ public class SequenceMarshal extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> boolean TryGetArray(ReadOnlySequence_1 sequence, JCORefOut<ArraySegment_1> segment) throws Throwable, system.NotSupportedException, system.ArgumentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetArray = null;
+        try {
+            retObjectTryGetArray = classType.Invoke("TryGetArray", sequence == null ? null : sequence.getJCOInstance(), segment.getJCRefOut());
+            return (boolean)retObjectTryGetArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetArray != null ? retObjectTryGetArray.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean TryGetReadOnlyMemory(ReadOnlySequence_1 sequence, JCORefOut<ReadOnlyMemory_1> memory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetReadOnlyMemory = null;
+        try {
+            retObjectTryGetReadOnlyMemory = classType.Invoke("TryGetReadOnlyMemory", sequence == null ? null : sequence.getJCOInstance(), memory.getJCRefOut());
+            return (boolean)retObjectTryGetReadOnlyMemory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetReadOnlyMemory != null ? retObjectTryGetReadOnlyMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean TryGetReadOnlySequenceSegment(ReadOnlySequence_1 sequence, JCORefOut<ReadOnlySequenceSegment_1> startSegment, JCORefOut<java.util.concurrent.atomic.AtomicInteger> startIndex, JCORefOut<ReadOnlySequenceSegment_1> endSegment, JCORefOut<java.util.concurrent.atomic.AtomicInteger> endIndex) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetReadOnlySequenceSegment = null;
+        try {
+            retObjectTryGetReadOnlySequenceSegment = classType.Invoke("TryGetReadOnlySequenceSegment", sequence == null ? null : sequence.getJCOInstance(), startSegment.getJCRefOut(), startIndex.getJCRefOut(), endSegment.getJCRefOut(), endIndex.getJCRefOut());
+            return (boolean)retObjectTryGetReadOnlySequenceSegment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetReadOnlySequenceSegment != null ? retObjectTryGetReadOnlySequenceSegment.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

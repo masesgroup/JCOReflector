@@ -44,6 +44,10 @@ import system.servicemodel.channels.IChannel;
 import system.servicemodel.channels.IChannelImplementation;
 import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
+import system.servicemodel.channels.ISessionChannel_1;
+import system.servicemodel.channels.ISessionChannel_1Implementation;
+import system.servicemodel.channels.IInputSession;
+import system.servicemodel.channels.IInputSessionImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.servicemodel.channels.RequestContext;
@@ -449,6 +453,21 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
     
     // Properties section
     
+    public IInputSession getSession() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
+        try {
+            retObjectSession = classInstance.Get("Session");
+            JCObject val = (JCObject)retObjectSession;
+            return new IInputSessionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

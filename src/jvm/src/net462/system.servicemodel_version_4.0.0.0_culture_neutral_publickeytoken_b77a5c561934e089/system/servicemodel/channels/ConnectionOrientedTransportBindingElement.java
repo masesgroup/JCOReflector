@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.channels.TransportBindingElement;
+import system.servicemodel.channels.BindingContext;
 import system.servicemodel.description.WsdlExporter;
 import system.servicemodel.description.WsdlContractConversionContext;
 import system.servicemodel.description.WsdlEndpointConversionContext;
@@ -47,10 +48,6 @@ import system.servicemodel.description.PolicyConversionContext;
 import system.servicemodel.HostNameComparisonMode;
 import system.servicemodel.TransferMode;
 import system.TimeSpan;
-import system.servicemodel.description.IWsdlExportExtension;
-import system.servicemodel.description.IWsdlExportExtensionImplementation;
-import system.servicemodel.description.IPolicyExportExtension;
-import system.servicemodel.description.IPolicyExportExtensionImplementation;
 
 
 /**
@@ -65,7 +62,7 @@ import system.servicemodel.description.IPolicyExportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConnectionOrientedTransportBindingElement extends TransportBindingElement implements IWsdlExportExtension, IPolicyExportExtension {
+public class ConnectionOrientedTransportBindingElement extends system.servicemodel.channels.TransportBindingElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -164,6 +161,34 @@ public class ConnectionOrientedTransportBindingElement extends TransportBindingE
     
     // Methods section
     
+    public <TChannel extends IJCOBridgeReflected> boolean CanBuildChannelFactory(BindingContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBuildChannelFactory = null;
+        try {
+            retObjectCanBuildChannelFactory = classInstance.Invoke("CanBuildChannelFactory", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanBuildChannelFactory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanBuildChannelFactory != null ? retObjectCanBuildChannelFactory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> boolean CanBuildChannelListener(BindingContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBuildChannelListener = null;
+        try {
+            retObjectCanBuildChannelListener = classInstance.Invoke("CanBuildChannelListener", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectCanBuildChannelListener;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanBuildChannelListener != null ? retObjectCanBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean ShouldSerializeMaxPendingAccepts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

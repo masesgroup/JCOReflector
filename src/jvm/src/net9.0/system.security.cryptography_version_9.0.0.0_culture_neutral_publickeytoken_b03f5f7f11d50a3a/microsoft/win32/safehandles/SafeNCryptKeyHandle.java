@@ -53,7 +53,7 @@ import microsoft.win32.safehandles.SafeNCryptHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SafeNCryptKeyHandle extends SafeNCryptHandle  {
+public class SafeNCryptKeyHandle extends microsoft.win32.safehandles.SafeNCryptHandle  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

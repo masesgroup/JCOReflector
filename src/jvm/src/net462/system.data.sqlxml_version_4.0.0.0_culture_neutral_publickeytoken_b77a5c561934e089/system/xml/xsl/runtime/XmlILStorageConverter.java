@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xml.schema.XmlAtomicValue;
 import system.xml.xsl.runtime.XmlQueryRuntime;
 import system.DateTime;
@@ -158,6 +160,36 @@ public class XmlILStorageConverter extends NetObject  {
     
     // Methods section
     
+    public static IList_1 NavigatorsToItems(IList_1 listNavigators) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNavigatorsToItems = null;
+        try {
+            retObjectNavigatorsToItems = classType.Invoke("NavigatorsToItems", listNavigators == null ? null : listNavigators.getJCOInstance());
+            JCObject objNavigatorsToItems = (JCObject)retObjectNavigatorsToItems;
+            return new IList_1Implementation(objNavigatorsToItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigatorsToItems != null ? retObjectNavigatorsToItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 ItemsToNavigators(IList_1 listItems) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectItemsToNavigators = null;
+        try {
+            retObjectItemsToNavigators = classType.Invoke("ItemsToNavigators", listItems == null ? null : listItems.getJCOInstance());
+            JCObject objItemsToNavigators = (JCObject)retObjectItemsToNavigators;
+            return new IList_1Implementation(objItemsToNavigators);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsToNavigators != null ? retObjectItemsToNavigators.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static XmlAtomicValue BooleanToAtomicValue(boolean value, int index, XmlQueryRuntime runtime) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

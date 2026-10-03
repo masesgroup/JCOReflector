@@ -40,13 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.windows.controls.Control;
 import system.windows.DependencyObject;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.documents.IDocumentPaginatorSource;
 import system.windows.documents.IDocumentPaginatorSourceImplementation;
 import system.EventHandler;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 
 
 /**
@@ -61,7 +58,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DocumentViewerBase extends Control implements IAddChild, IServiceProvider {
+public class DocumentViewerBase extends system.windows.controls.Control  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -412,6 +409,21 @@ public class DocumentViewerBase extends Control implements IAddChild, IServicePr
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPageViews() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageViews = null;
+        try {
+            retObjectPageViews = classInstance.Get("PageViews");
+            JCObject val = (JCObject)retObjectPageViews;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageViews != null ? retObjectPageViews.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

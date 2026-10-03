@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.NativeActivity;
+import system.activities.InArgument_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.activities.NativeActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AddValidationError extends NativeActivity  {
+public class AddValidationError extends system.activities.NativeActivity  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +165,81 @@ public class AddValidationError extends NativeActivity  {
     
     // Properties section
     
+    public InArgument_1 getIsWarning() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWarning = null;
+        try {
+            retObjectIsWarning = classInstance.Get("IsWarning");
+            JCObject val = (JCObject)retObjectIsWarning;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsWarning != null ? retObjectIsWarning.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsWarning(InArgument_1 IsWarning) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsWarning", IsWarning == null ? null : IsWarning.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InArgument_1 getMessage() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
+        try {
+            retObjectMessage = classInstance.Get("Message");
+            JCObject val = (JCObject)retObjectMessage;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMessage(InArgument_1 Message) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Message", Message == null ? null : Message.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InArgument_1 getPropertyName() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
+        try {
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            JCObject val = (JCObject)retObjectPropertyName;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPropertyName(InArgument_1 PropertyName) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PropertyName", PropertyName == null ? null : PropertyName.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

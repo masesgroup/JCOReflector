@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.debugger.SourceLocation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.activities.presentation.debug.BreakpointTypes;
 
 
@@ -152,6 +154,21 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
             return new SourceLocation(objGetExactLocation);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExactLocation != null ? retObjectGetExactLocation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 GetBreakpointLocations() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBreakpointLocations = null;
+        try {
+            retObjectGetBreakpointLocations = classInstance.Invoke("GetBreakpointLocations");
+            JCObject objGetBreakpointLocations = (JCObject)retObjectGetBreakpointLocations;
+            return new IDictionary_2Implementation(objGetBreakpointLocations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBreakpointLocations != null ? retObjectGetBreakpointLocations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

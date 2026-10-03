@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.io.Stream;
 import system.formats.tar.TarEntry;
 import system.threading.tasks.ValueTask;
+import system.threading.tasks.ValueTask_1;
+import system.threading.CancellationToken;
 
 
 /**
@@ -191,6 +193,21 @@ public class TarReader extends NetObject implements AutoCloseable {
             return new ValueTask(objDisposeAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 GetNextEntryAsync(boolean copyData, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextEntryAsync = null;
+        try {
+            retObjectGetNextEntryAsync = classInstance.Invoke("GetNextEntryAsync", copyData, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetNextEntryAsync = (JCObject)retObjectGetNextEntryAsync;
+            return new ValueTask_1(objGetNextEntryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextEntryAsync != null ? retObjectGetNextEntryAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.presentation.view.ViewStateService;
 import system.activities.presentation.EditingContext;
 import system.activities.presentation.model.ModelItem;
+import system.collections.generic.Dictionary_2;
 import system.activities.presentation.view.ViewStateChangedEventHandler;
 
 
@@ -56,7 +57,7 @@ import system.activities.presentation.view.ViewStateChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowViewStateService extends ViewStateService  {
+public class WorkflowViewStateService extends system.activities.presentation.view.ViewStateService  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -181,6 +182,36 @@ public class WorkflowViewStateService extends ViewStateService  {
         }
     }
 
+    public static Dictionary_2 GetViewState(NetObject instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetViewState = null;
+        try {
+            retObjectGetViewState = classType.Invoke("GetViewState", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetViewState = (JCObject)retObjectGetViewState;
+            return new Dictionary_2(objGetViewState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewState != null ? retObjectGetViewState.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 RetrieveAllViewState(ModelItem modelItem) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetrieveAllViewState = null;
+        try {
+            retObjectRetrieveAllViewState = classInstance.Invoke("RetrieveAllViewState", modelItem == null ? null : modelItem.getJCOInstance());
+            JCObject objRetrieveAllViewState = (JCObject)retObjectRetrieveAllViewState;
+            return new Dictionary_2(objRetrieveAllViewState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRetrieveAllViewState != null ? retObjectRetrieveAllViewState.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject RetrieveViewState(ModelItem modelItem, java.lang.String key) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +222,16 @@ public class WorkflowViewStateService extends ViewStateService  {
             return new NetObject(objRetrieveViewState);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRetrieveViewState != null ? retObjectRetrieveViewState.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetViewState(NetObject instance, Dictionary_2 value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetViewState", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

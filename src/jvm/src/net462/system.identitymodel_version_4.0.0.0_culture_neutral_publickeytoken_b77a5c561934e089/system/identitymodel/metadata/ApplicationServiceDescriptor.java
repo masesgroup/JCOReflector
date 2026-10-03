@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.metadata.WebServiceDescriptor;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.identitymodel.metadata.WebServiceDescriptor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ApplicationServiceDescriptor extends WebServiceDescriptor  {
+public class ApplicationServiceDescriptor extends system.identitymodel.metadata.WebServiceDescriptor  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -164,6 +166,36 @@ public class ApplicationServiceDescriptor extends WebServiceDescriptor  {
     
     // Properties section
     
+    public ICollection_1 getEndpoints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpoints = null;
+        try {
+            retObjectEndpoints = classInstance.Get("Endpoints");
+            JCObject val = (JCObject)retObjectEndpoints;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpoints != null ? retObjectEndpoints.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getPassiveRequestorEndpoints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassiveRequestorEndpoints = null;
+        try {
+            retObjectPassiveRequestorEndpoints = classInstance.Get("PassiveRequestorEndpoints");
+            JCObject val = (JCObject)retObjectPassiveRequestorEndpoints;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPassiveRequestorEndpoints != null ? retObjectPassiveRequestorEndpoints.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

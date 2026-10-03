@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.webcontrols.BaseValidator;
+import system.Nullable_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.web.ui.webcontrols.BaseValidator;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RegularExpressionValidator extends BaseValidator  {
+public class RegularExpressionValidator extends system.web.ui.webcontrols.BaseValidator  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -164,6 +165,31 @@ public class RegularExpressionValidator extends BaseValidator  {
     
     // Properties section
     
+    public Nullable_1 getMatchTimeout() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchTimeout = null;
+        try {
+            retObjectMatchTimeout = classInstance.Get("MatchTimeout");
+            JCObject val = (JCObject)retObjectMatchTimeout;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatchTimeout != null ? retObjectMatchTimeout.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMatchTimeout(Nullable_1 MatchTimeout) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MatchTimeout", MatchTimeout == null ? null : MatchTimeout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getValidationExpression() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

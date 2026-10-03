@@ -38,7 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.DateTime;
+import system.Nullable_1;
 
 
 /**
@@ -174,6 +177,21 @@ public class SqlTrackingQueryOptions extends NetObject  {
     
     // Properties section
     
+    public IList_1 getTrackingDataItems() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackingDataItems = null;
+        try {
+            retObjectTrackingDataItems = classInstance.Get("TrackingDataItems");
+            JCObject val = (JCObject)retObjectTrackingDataItems;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrackingDataItems != null ? retObjectTrackingDataItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DateTime getStatusMaxDateTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -219,6 +237,31 @@ public class SqlTrackingQueryOptions extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StatusMinDateTime", StatusMinDateTime == null ? null : StatusMinDateTime.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getWorkflowStatus() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowStatus = null;
+        try {
+            retObjectWorkflowStatus = classInstance.Get("WorkflowStatus");
+            JCObject val = (JCObject)retObjectWorkflowStatus;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowStatus != null ? retObjectWorkflowStatus.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setWorkflowStatus(Nullable_1 WorkflowStatus) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("WorkflowStatus", WorkflowStatus == null ? null : WorkflowStatus.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

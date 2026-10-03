@@ -42,6 +42,9 @@ import system.servicemodel.description.MetadataExporter;
 import system.servicemodel.description.MetadataSet;
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.description.ServiceEndpoint;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.XmlQualifiedName;
 import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
 
@@ -58,7 +61,7 @@ import system.xml.schema.XmlSchemaSet;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WsdlExporter extends MetadataExporter  {
+public class WsdlExporter extends system.servicemodel.description.MetadataExporter  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -195,6 +198,16 @@ public class WsdlExporter extends MetadataExporter  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportEndpoint", endpoint == null ? null : endpoint.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ExportEndpoints(IEnumerable_1 endpoints, XmlQualifiedName wsdlServiceQName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.FormatException, system.UriFormatException, system.NotSupportedException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ExportEndpoints", endpoints == null ? null : endpoints.getJCOInstance(), wsdlServiceQName == null ? null : wsdlServiceQName.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

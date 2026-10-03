@@ -43,6 +43,10 @@ import system.servicemodel.channels.IChannel;
 import system.servicemodel.channels.IChannelImplementation;
 import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
+import system.servicemodel.channels.ISessionChannel_1;
+import system.servicemodel.channels.ISessionChannel_1Implementation;
+import system.servicemodel.channels.IInputSession;
+import system.servicemodel.channels.IInputSessionImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.servicemodel.channels.Message;
@@ -65,7 +69,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IInputSessionChannel extends IJCOBridgeReflected, IInputChannel, IChannel, ICommunicationObject {
+public interface IInputSessionChannel extends IJCOBridgeReflected, system.servicemodel.channels.IInputChannel, system.servicemodel.channels.IChannel, system.servicemodel.ICommunicationObject, system.servicemodel.channels.ISessionChannel_1<IInputSession> {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

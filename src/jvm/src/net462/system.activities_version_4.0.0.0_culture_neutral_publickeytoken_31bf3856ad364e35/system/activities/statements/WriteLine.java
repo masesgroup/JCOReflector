@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.CodeActivity;
+import system.activities.InArgument_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.activities.CodeActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WriteLine extends CodeActivity  {
+public class WriteLine extends system.activities.CodeActivity  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +165,56 @@ public class WriteLine extends CodeActivity  {
     
     // Properties section
     
+    public InArgument_1 getTextWriter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextWriter = null;
+        try {
+            retObjectTextWriter = classInstance.Get("TextWriter");
+            JCObject val = (JCObject)retObjectTextWriter;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextWriter != null ? retObjectTextWriter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTextWriter(InArgument_1 TextWriter) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TextWriter", TextWriter == null ? null : TextWriter.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InArgument_1 getText() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
+        try {
+            retObjectText = classInstance.Get("Text");
+            JCObject val = (JCObject)retObjectText;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectText != null ? retObjectText.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setText(InArgument_1 Text) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Text", Text == null ? null : Text.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

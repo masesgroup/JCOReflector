@@ -38,6 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.json.serialization.JsonConverter_1;
+import system.text.json.JsonSerializerOptions;
+import system.text.json.serialization.metadata.JsonTypeInfo_1;
+import system.text.json.serialization.metadata.JsonPropertyInfo;
+import system.text.json.serialization.metadata.JsonPropertyInfoValues_1;
+import system.text.json.serialization.metadata.JsonCollectionInfoValues_1;
+import system.text.json.serialization.metadata.JsonObjectInfoValues_1;
+import system.text.json.serialization.JsonConverter;
+import system.Func_2;
+import system.Action_2;
 
 
 /**
@@ -151,10 +161,940 @@ public class JsonMetadataServices extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> JsonConverter_1 GetNullableConverter(JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNullableConverter = null;
+        try {
+            retObjectGetNullableConverter = classType.Invoke("GetNullableConverter", options == null ? null : options.getJCOInstance());
+            JCObject objGetNullableConverter = (JCObject)retObjectGetNullableConverter;
+            return new JsonConverter_1(objGetNullableConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNullableConverter != null ? retObjectGetNullableConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonConverter_1 GetNullableConverter(JsonTypeInfo_1 underlyingTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNullableConverter = null;
+        try {
+            retObjectGetNullableConverter = classType.Invoke("GetNullableConverter", underlyingTypeInfo == null ? null : underlyingTypeInfo.getJCOInstance());
+            JCObject objGetNullableConverter = (JCObject)retObjectGetNullableConverter;
+            return new JsonConverter_1(objGetNullableConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNullableConverter != null ? retObjectGetNullableConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonConverter_1 GetEnumConverter(JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEnumConverter = null;
+        try {
+            retObjectGetEnumConverter = classType.Invoke("GetEnumConverter", options == null ? null : options.getJCOInstance());
+            JCObject objGetEnumConverter = (JCObject)retObjectGetEnumConverter;
+            return new JsonConverter_1(objGetEnumConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnumConverter != null ? retObjectGetEnumConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonConverter_1 GetUnsupportedTypeConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUnsupportedTypeConverter = null;
+        try {
+            retObjectGetUnsupportedTypeConverter = classType.Invoke("GetUnsupportedTypeConverter");
+            JCObject objGetUnsupportedTypeConverter = (JCObject)retObjectGetUnsupportedTypeConverter;
+            return new JsonConverter_1(objGetUnsupportedTypeConverter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnsupportedTypeConverter != null ? retObjectGetUnsupportedTypeConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonPropertyInfo CreatePropertyInfo(JsonSerializerOptions options, JsonPropertyInfoValues_1 propertyInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePropertyInfo = null;
+        try {
+            retObjectCreatePropertyInfo = classType.Invoke("CreatePropertyInfo", options == null ? null : options.getJCOInstance(), propertyInfo == null ? null : propertyInfo.getJCOInstance());
+            JCObject objCreatePropertyInfo = (JCObject)retObjectCreatePropertyInfo;
+            return new JsonPropertyInfo(objCreatePropertyInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePropertyInfo != null ? retObjectCreatePropertyInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateMemoryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMemoryInfo = null;
+        try {
+            retObjectCreateMemoryInfo = classType.Invoke("CreateMemoryInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateMemoryInfo = (JCObject)retObjectCreateMemoryInfo;
+            return new JsonTypeInfo_1(objCreateMemoryInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMemoryInfo != null ? retObjectCreateMemoryInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateReadOnlyMemoryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateReadOnlyMemoryInfo = null;
+        try {
+            retObjectCreateReadOnlyMemoryInfo = classType.Invoke("CreateReadOnlyMemoryInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateReadOnlyMemoryInfo = (JCObject)retObjectCreateReadOnlyMemoryInfo;
+            return new JsonTypeInfo_1(objCreateReadOnlyMemoryInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReadOnlyMemoryInfo != null ? retObjectCreateReadOnlyMemoryInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonTypeInfo_1 CreateObjectInfo(JsonSerializerOptions options, JsonObjectInfoValues_1 objectInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateObjectInfo = null;
+        try {
+            retObjectCreateObjectInfo = classType.Invoke("CreateObjectInfo", options == null ? null : options.getJCOInstance(), objectInfo == null ? null : objectInfo.getJCOInstance());
+            JCObject objCreateObjectInfo = (JCObject)retObjectCreateObjectInfo;
+            return new JsonTypeInfo_1(objCreateObjectInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObjectInfo != null ? retObjectCreateObjectInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> JsonTypeInfo_1 CreateValueInfo(JsonSerializerOptions options, JsonConverter converter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateValueInfo = null;
+        try {
+            retObjectCreateValueInfo = classType.Invoke("CreateValueInfo", options == null ? null : options.getJCOInstance(), converter == null ? null : converter.getJCOInstance());
+            JCObject objCreateValueInfo = (JCObject)retObjectCreateValueInfo;
+            return new JsonTypeInfo_1(objCreateValueInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateValueInfo != null ? retObjectCreateValueInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateConcurrentQueueInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateConcurrentQueueInfo = null;
+        try {
+            retObjectCreateConcurrentQueueInfo = classType.Invoke("CreateConcurrentQueueInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateConcurrentQueueInfo = (JCObject)retObjectCreateConcurrentQueueInfo;
+            return new JsonTypeInfo_1(objCreateConcurrentQueueInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConcurrentQueueInfo != null ? retObjectCreateConcurrentQueueInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateConcurrentStackInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateConcurrentStackInfo = null;
+        try {
+            retObjectCreateConcurrentStackInfo = classType.Invoke("CreateConcurrentStackInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateConcurrentStackInfo = (JCObject)retObjectCreateConcurrentStackInfo;
+            return new JsonTypeInfo_1(objCreateConcurrentStackInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConcurrentStackInfo != null ? retObjectCreateConcurrentStackInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> JsonTypeInfo_1 CreateDictionaryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDictionaryInfo = null;
+        try {
+            retObjectCreateDictionaryInfo = classType.Invoke("CreateDictionaryInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateDictionaryInfo = (JCObject)retObjectCreateDictionaryInfo;
+            return new JsonTypeInfo_1(objCreateDictionaryInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDictionaryInfo != null ? retObjectCreateDictionaryInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIAsyncEnumerableInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIAsyncEnumerableInfo = null;
+        try {
+            retObjectCreateIAsyncEnumerableInfo = classType.Invoke("CreateIAsyncEnumerableInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateIAsyncEnumerableInfo = (JCObject)retObjectCreateIAsyncEnumerableInfo;
+            return new JsonTypeInfo_1(objCreateIAsyncEnumerableInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIAsyncEnumerableInfo != null ? retObjectCreateIAsyncEnumerableInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateICollectionInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateICollectionInfo = null;
+        try {
+            retObjectCreateICollectionInfo = classType.Invoke("CreateICollectionInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateICollectionInfo = (JCObject)retObjectCreateICollectionInfo;
+            return new JsonTypeInfo_1(objCreateICollectionInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateICollectionInfo != null ? retObjectCreateICollectionInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIDictionaryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIDictionaryInfo = null;
+        try {
+            retObjectCreateIDictionaryInfo = classType.Invoke("CreateIDictionaryInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateIDictionaryInfo = (JCObject)retObjectCreateIDictionaryInfo;
+            return new JsonTypeInfo_1(objCreateIDictionaryInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIDictionaryInfo != null ? retObjectCreateIDictionaryInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIEnumerableInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIEnumerableInfo = null;
+        try {
+            retObjectCreateIEnumerableInfo = classType.Invoke("CreateIEnumerableInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateIEnumerableInfo = (JCObject)retObjectCreateIEnumerableInfo;
+            return new JsonTypeInfo_1(objCreateIEnumerableInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIEnumerableInfo != null ? retObjectCreateIEnumerableInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIListInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIListInfo = null;
+        try {
+            retObjectCreateIListInfo = classType.Invoke("CreateIListInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateIListInfo = (JCObject)retObjectCreateIListInfo;
+            return new JsonTypeInfo_1(objCreateIListInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIListInfo != null ? retObjectCreateIListInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> JsonTypeInfo_1 CreateImmutableDictionaryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo, Func_2 createRangeFunc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateImmutableDictionaryInfo = null;
+        try {
+            retObjectCreateImmutableDictionaryInfo = classType.Invoke("CreateImmutableDictionaryInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance(), createRangeFunc);
+            JCObject objCreateImmutableDictionaryInfo = (JCObject)retObjectCreateImmutableDictionaryInfo;
+            return new JsonTypeInfo_1(objCreateImmutableDictionaryInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateImmutableDictionaryInfo != null ? retObjectCreateImmutableDictionaryInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateImmutableEnumerableInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo, Func_2 createRangeFunc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateImmutableEnumerableInfo = null;
+        try {
+            retObjectCreateImmutableEnumerableInfo = classType.Invoke("CreateImmutableEnumerableInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance(), createRangeFunc);
+            JCObject objCreateImmutableEnumerableInfo = (JCObject)retObjectCreateImmutableEnumerableInfo;
+            return new JsonTypeInfo_1(objCreateImmutableEnumerableInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateImmutableEnumerableInfo != null ? retObjectCreateImmutableEnumerableInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> JsonTypeInfo_1 CreateIReadOnlyDictionaryInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateIReadOnlyDictionaryInfo = null;
+        try {
+            retObjectCreateIReadOnlyDictionaryInfo = classType.Invoke("CreateIReadOnlyDictionaryInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateIReadOnlyDictionaryInfo = (JCObject)retObjectCreateIReadOnlyDictionaryInfo;
+            return new JsonTypeInfo_1(objCreateIReadOnlyDictionaryInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateIReadOnlyDictionaryInfo != null ? retObjectCreateIReadOnlyDictionaryInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateISetInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateISetInfo = null;
+        try {
+            retObjectCreateISetInfo = classType.Invoke("CreateISetInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateISetInfo = (JCObject)retObjectCreateISetInfo;
+            return new JsonTypeInfo_1(objCreateISetInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateISetInfo != null ? retObjectCreateISetInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateListInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateListInfo = null;
+        try {
+            retObjectCreateListInfo = classType.Invoke("CreateListInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateListInfo = (JCObject)retObjectCreateListInfo;
+            return new JsonTypeInfo_1(objCreateListInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateListInfo != null ? retObjectCreateListInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateQueueInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateQueueInfo = null;
+        try {
+            retObjectCreateQueueInfo = classType.Invoke("CreateQueueInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateQueueInfo = (JCObject)retObjectCreateQueueInfo;
+            return new JsonTypeInfo_1(objCreateQueueInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateQueueInfo != null ? retObjectCreateQueueInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected> JsonTypeInfo_1 CreateQueueInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo, Action_2 addFunc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateQueueInfo = null;
+        try {
+            retObjectCreateQueueInfo = classType.Invoke("CreateQueueInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance(), addFunc);
+            JCObject objCreateQueueInfo = (JCObject)retObjectCreateQueueInfo;
+            return new JsonTypeInfo_1(objCreateQueueInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateQueueInfo != null ? retObjectCreateQueueInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected, TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateStackInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateStackInfo = null;
+        try {
+            retObjectCreateStackInfo = classType.Invoke("CreateStackInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateStackInfo = (JCObject)retObjectCreateStackInfo;
+            return new JsonTypeInfo_1(objCreateStackInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateStackInfo != null ? retObjectCreateStackInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TCollection extends IJCOBridgeReflected> JsonTypeInfo_1 CreateStackInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo, Action_2 addFunc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateStackInfo = null;
+        try {
+            retObjectCreateStackInfo = classType.Invoke("CreateStackInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance(), addFunc);
+            JCObject objCreateStackInfo = (JCObject)retObjectCreateStackInfo;
+            return new JsonTypeInfo_1(objCreateStackInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateStackInfo != null ? retObjectCreateStackInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TElement extends IJCOBridgeReflected> JsonTypeInfo_1 CreateArrayInfo(JsonSerializerOptions options, JsonCollectionInfoValues_1 collectionInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateArrayInfo = null;
+        try {
+            retObjectCreateArrayInfo = classType.Invoke("CreateArrayInfo", options == null ? null : options.getJCOInstance(), collectionInfo == null ? null : collectionInfo.getJCOInstance());
+            JCObject objCreateArrayInfo = (JCObject)retObjectCreateArrayInfo;
+            return new JsonTypeInfo_1(objCreateArrayInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateArrayInfo != null ? retObjectCreateArrayInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public static JsonConverter_1 getBooleanConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBooleanConverter = null;
+        try {
+            retObjectBooleanConverter = classType.Get("BooleanConverter");
+            JCObject val = (JCObject)retObjectBooleanConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBooleanConverter != null ? retObjectBooleanConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getByteArrayConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectByteArrayConverter = null;
+        try {
+            retObjectByteArrayConverter = classType.Get("ByteArrayConverter");
+            JCObject val = (JCObject)retObjectByteArrayConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectByteArrayConverter != null ? retObjectByteArrayConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getByteConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectByteConverter = null;
+        try {
+            retObjectByteConverter = classType.Get("ByteConverter");
+            JCObject val = (JCObject)retObjectByteConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectByteConverter != null ? retObjectByteConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getCharConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCharConverter = null;
+        try {
+            retObjectCharConverter = classType.Get("CharConverter");
+            JCObject val = (JCObject)retObjectCharConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharConverter != null ? retObjectCharConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getDateOnlyConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateOnlyConverter = null;
+        try {
+            retObjectDateOnlyConverter = classType.Get("DateOnlyConverter");
+            JCObject val = (JCObject)retObjectDateOnlyConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateOnlyConverter != null ? retObjectDateOnlyConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getDateTimeConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateTimeConverter = null;
+        try {
+            retObjectDateTimeConverter = classType.Get("DateTimeConverter");
+            JCObject val = (JCObject)retObjectDateTimeConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeConverter != null ? retObjectDateTimeConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getDateTimeOffsetConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateTimeOffsetConverter = null;
+        try {
+            retObjectDateTimeOffsetConverter = classType.Get("DateTimeOffsetConverter");
+            JCObject val = (JCObject)retObjectDateTimeOffsetConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeOffsetConverter != null ? retObjectDateTimeOffsetConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getDecimalConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecimalConverter = null;
+        try {
+            retObjectDecimalConverter = classType.Get("DecimalConverter");
+            JCObject val = (JCObject)retObjectDecimalConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecimalConverter != null ? retObjectDecimalConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getDoubleConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDoubleConverter = null;
+        try {
+            retObjectDoubleConverter = classType.Get("DoubleConverter");
+            JCObject val = (JCObject)retObjectDoubleConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoubleConverter != null ? retObjectDoubleConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getGuidConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGuidConverter = null;
+        try {
+            retObjectGuidConverter = classType.Get("GuidConverter");
+            JCObject val = (JCObject)retObjectGuidConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGuidConverter != null ? retObjectGuidConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getHalfConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalfConverter = null;
+        try {
+            retObjectHalfConverter = classType.Get("HalfConverter");
+            JCObject val = (JCObject)retObjectHalfConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalfConverter != null ? retObjectHalfConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getInt128Converter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt128Converter = null;
+        try {
+            retObjectInt128Converter = classType.Get("Int128Converter");
+            JCObject val = (JCObject)retObjectInt128Converter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt128Converter != null ? retObjectInt128Converter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getInt16Converter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt16Converter = null;
+        try {
+            retObjectInt16Converter = classType.Get("Int16Converter");
+            JCObject val = (JCObject)retObjectInt16Converter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt16Converter != null ? retObjectInt16Converter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getInt32Converter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt32Converter = null;
+        try {
+            retObjectInt32Converter = classType.Get("Int32Converter");
+            JCObject val = (JCObject)retObjectInt32Converter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt32Converter != null ? retObjectInt32Converter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getInt64Converter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt64Converter = null;
+        try {
+            retObjectInt64Converter = classType.Get("Int64Converter");
+            JCObject val = (JCObject)retObjectInt64Converter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt64Converter != null ? retObjectInt64Converter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getMemoryByteConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMemoryByteConverter = null;
+        try {
+            retObjectMemoryByteConverter = classType.Get("MemoryByteConverter");
+            JCObject val = (JCObject)retObjectMemoryByteConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemoryByteConverter != null ? retObjectMemoryByteConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getObjectConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectObjectConverter = null;
+        try {
+            retObjectObjectConverter = classType.Get("ObjectConverter");
+            JCObject val = (JCObject)retObjectObjectConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectConverter != null ? retObjectObjectConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getReadOnlyMemoryByteConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadOnlyMemoryByteConverter = null;
+        try {
+            retObjectReadOnlyMemoryByteConverter = classType.Get("ReadOnlyMemoryByteConverter");
+            JCObject val = (JCObject)retObjectReadOnlyMemoryByteConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadOnlyMemoryByteConverter != null ? retObjectReadOnlyMemoryByteConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getSByteConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSByteConverter = null;
+        try {
+            retObjectSByteConverter = classType.Get("SByteConverter");
+            JCObject val = (JCObject)retObjectSByteConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSByteConverter != null ? retObjectSByteConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getSingleConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingleConverter = null;
+        try {
+            retObjectSingleConverter = classType.Get("SingleConverter");
+            JCObject val = (JCObject)retObjectSingleConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleConverter != null ? retObjectSingleConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getStringConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStringConverter = null;
+        try {
+            retObjectStringConverter = classType.Get("StringConverter");
+            JCObject val = (JCObject)retObjectStringConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStringConverter != null ? retObjectStringConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getJsonDocumentConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJsonDocumentConverter = null;
+        try {
+            retObjectJsonDocumentConverter = classType.Get("JsonDocumentConverter");
+            JCObject val = (JCObject)retObjectJsonDocumentConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJsonDocumentConverter != null ? retObjectJsonDocumentConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getJsonElementConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJsonElementConverter = null;
+        try {
+            retObjectJsonElementConverter = classType.Get("JsonElementConverter");
+            JCObject val = (JCObject)retObjectJsonElementConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJsonElementConverter != null ? retObjectJsonElementConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getJsonArrayConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJsonArrayConverter = null;
+        try {
+            retObjectJsonArrayConverter = classType.Get("JsonArrayConverter");
+            JCObject val = (JCObject)retObjectJsonArrayConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJsonArrayConverter != null ? retObjectJsonArrayConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getJsonNodeConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJsonNodeConverter = null;
+        try {
+            retObjectJsonNodeConverter = classType.Get("JsonNodeConverter");
+            JCObject val = (JCObject)retObjectJsonNodeConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJsonNodeConverter != null ? retObjectJsonNodeConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getJsonObjectConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJsonObjectConverter = null;
+        try {
+            retObjectJsonObjectConverter = classType.Get("JsonObjectConverter");
+            JCObject val = (JCObject)retObjectJsonObjectConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJsonObjectConverter != null ? retObjectJsonObjectConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getJsonValueConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJsonValueConverter = null;
+        try {
+            retObjectJsonValueConverter = classType.Get("JsonValueConverter");
+            JCObject val = (JCObject)retObjectJsonValueConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJsonValueConverter != null ? retObjectJsonValueConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getTimeOnlyConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimeOnlyConverter = null;
+        try {
+            retObjectTimeOnlyConverter = classType.Get("TimeOnlyConverter");
+            JCObject val = (JCObject)retObjectTimeOnlyConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeOnlyConverter != null ? retObjectTimeOnlyConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getTimeSpanConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTimeSpanConverter = null;
+        try {
+            retObjectTimeSpanConverter = classType.Get("TimeSpanConverter");
+            JCObject val = (JCObject)retObjectTimeSpanConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeSpanConverter != null ? retObjectTimeSpanConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getUInt128Converter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUInt128Converter = null;
+        try {
+            retObjectUInt128Converter = classType.Get("UInt128Converter");
+            JCObject val = (JCObject)retObjectUInt128Converter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUInt128Converter != null ? retObjectUInt128Converter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getUInt16Converter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUInt16Converter = null;
+        try {
+            retObjectUInt16Converter = classType.Get("UInt16Converter");
+            JCObject val = (JCObject)retObjectUInt16Converter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUInt16Converter != null ? retObjectUInt16Converter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getUInt32Converter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUInt32Converter = null;
+        try {
+            retObjectUInt32Converter = classType.Get("UInt32Converter");
+            JCObject val = (JCObject)retObjectUInt32Converter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUInt32Converter != null ? retObjectUInt32Converter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getUInt64Converter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUInt64Converter = null;
+        try {
+            retObjectUInt64Converter = classType.Get("UInt64Converter");
+            JCObject val = (JCObject)retObjectUInt64Converter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUInt64Converter != null ? retObjectUInt64Converter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getUriConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUriConverter = null;
+        try {
+            retObjectUriConverter = classType.Get("UriConverter");
+            JCObject val = (JCObject)retObjectUriConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUriConverter != null ? retObjectUriConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonConverter_1 getVersionConverter() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVersionConverter = null;
+        try {
+            retObjectVersionConverter = classType.Get("VersionConverter");
+            JCObject val = (JCObject)retObjectVersionConverter;
+            return new JsonConverter_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersionConverter != null ? retObjectVersionConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

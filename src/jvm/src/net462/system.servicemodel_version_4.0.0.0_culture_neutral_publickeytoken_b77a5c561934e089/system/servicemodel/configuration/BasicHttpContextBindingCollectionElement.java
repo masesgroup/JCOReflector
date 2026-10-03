@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.configuration.StandardBindingCollectionElement_2;
+import system.servicemodel.BasicHttpContextBinding;
+import system.servicemodel.configuration.BasicHttpContextBindingElement;
 
 
 /**
@@ -52,7 +55,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BasicHttpContextBindingCollectionElement extends NetObject  {
+public class BasicHttpContextBindingCollectionElement extends system.servicemodel.configuration.StandardBindingCollectionElement_2<BasicHttpContextBinding, BasicHttpContextBindingElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

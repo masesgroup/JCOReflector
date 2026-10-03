@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.formats.tar.PosixTarEntry;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.IReadOnlyDictionary_2;
+import system.collections.generic.IReadOnlyDictionary_2Implementation;
 
 
 /**
@@ -53,7 +57,7 @@ import system.formats.tar.PosixTarEntry;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PaxGlobalExtendedAttributesTarEntry extends PosixTarEntry  {
+public class PaxGlobalExtendedAttributesTarEntry extends system.formats.tar.PosixTarEntry  {
     /**
      * Fully assembly qualified name: System.Formats.Tar, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -149,6 +153,16 @@ public class PaxGlobalExtendedAttributesTarEntry extends PosixTarEntry  {
     public PaxGlobalExtendedAttributesTarEntry() throws Throwable {
     }
 
+    public PaxGlobalExtendedAttributesTarEntry(IEnumerable_1 globalExtendedAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.io.InvalidDataException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(globalExtendedAttributes == null ? null : globalExtendedAttributes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +172,21 @@ public class PaxGlobalExtendedAttributesTarEntry extends PosixTarEntry  {
     
     // Properties section
     
+    public IReadOnlyDictionary_2 getGlobalExtendedAttributes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalExtendedAttributes = null;
+        try {
+            retObjectGlobalExtendedAttributes = classInstance.Get("GlobalExtendedAttributes");
+            JCObject val = (JCObject)retObjectGlobalExtendedAttributes;
+            return new IReadOnlyDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobalExtendedAttributes != null ? retObjectGlobalExtendedAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

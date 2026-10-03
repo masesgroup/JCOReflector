@@ -58,7 +58,7 @@ import system.collections.IDictionaryImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConstructionResponse extends MethodResponse  {
+public class ConstructionResponse extends system.runtime.remoting.messaging.MethodResponse  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

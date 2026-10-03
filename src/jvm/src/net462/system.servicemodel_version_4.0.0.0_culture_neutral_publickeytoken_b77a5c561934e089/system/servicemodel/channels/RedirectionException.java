@@ -45,6 +45,8 @@ import system.servicemodel.channels.RedirectionScope;
 import system.servicemodel.channels.RedirectionLocation;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 /**
  * The base .NET class managing System.ServiceModel.Channels.RedirectionException, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
@@ -58,7 +60,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RedirectionException extends CommunicationException {
+public class RedirectionException extends system.servicemodel.CommunicationException {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -228,6 +230,31 @@ public class RedirectionException extends CommunicationException {
     
     // Properties section
     
+    public IEnumerable_1 getLocations() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocations = null;
+        try {
+            retObjectLocations = classInstance.Get("Locations");
+            JCObject val = (JCObject)retObjectLocations;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocations != null ? retObjectLocations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLocations(IEnumerable_1 Locations) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Locations", Locations == null ? null : Locations.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RedirectionDuration getDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

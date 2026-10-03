@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.List_1;
 import system.web.compilation.PrecompilationFlags;
 
 
@@ -164,6 +165,21 @@ public class ClientBuildManagerParameter extends NetObject  {
     
     // Properties section
     
+    public List_1 getExcludedVirtualPaths() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExcludedVirtualPaths = null;
+        try {
+            retObjectExcludedVirtualPaths = classInstance.Get("ExcludedVirtualPaths");
+            JCObject val = (JCObject)retObjectExcludedVirtualPaths;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExcludedVirtualPaths != null ? retObjectExcludedVirtualPaths.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getStrongNameKeyContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

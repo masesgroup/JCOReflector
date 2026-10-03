@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.NativeActivity;
+import system.activities.Activity_1;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -53,7 +55,7 @@ import system.activities.NativeActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Parallel extends NativeActivity  {
+public class Parallel extends system.activities.NativeActivity  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +166,61 @@ public class Parallel extends NativeActivity  {
     
     // Properties section
     
+    public Activity_1 getCompletionCondition() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompletionCondition = null;
+        try {
+            retObjectCompletionCondition = classInstance.Get("CompletionCondition");
+            JCObject val = (JCObject)retObjectCompletionCondition;
+            return new Activity_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompletionCondition != null ? retObjectCompletionCondition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCompletionCondition(Activity_1 CompletionCondition) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CompletionCondition", CompletionCondition == null ? null : CompletionCondition.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getBranches() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBranches = null;
+        try {
+            retObjectBranches = classInstance.Get("Branches");
+            JCObject val = (JCObject)retObjectBranches;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBranches != null ? retObjectBranches.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariables = null;
+        try {
+            retObjectVariables = classInstance.Get("Variables");
+            JCObject val = (JCObject)retObjectVariables;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariables != null ? retObjectVariables.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

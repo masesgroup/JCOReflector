@@ -51,6 +51,9 @@ import system.IAsyncResultImplementation;
 import system.Action;
 import system.threading.tasks.Task;
 import system.threading.CancellationToken;
+import system.Func_2;
+import system.threading.tasks.Task_1;
+import system.Func_1;
 import system.windows.forms.GetChildAtPointSkip;
 import system.windows.forms.DragDropEffects;
 import system.drawing.Bitmap;
@@ -101,8 +104,6 @@ import system.windows.forms.PreviewKeyDownEventHandler;
 import system.windows.forms.QueryAccessibilityHelpEventHandler;
 import system.windows.forms.QueryContinueDragEventHandler;
 import system.windows.forms.UICuesEventHandler;
-import system.windows.forms.IDropTarget;
-import system.windows.forms.IDropTargetImplementation;
 
 
 /**
@@ -117,7 +118,7 @@ import system.windows.forms.IDropTargetImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Control extends Component implements IDropTarget {
+public class Control extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -531,6 +532,36 @@ public class Control extends Component implements IDropTarget {
             retObjectInvokeAsync = classInstance.Invoke("InvokeAsync", callback, cancellationToken == null ? null : cancellationToken.getJCOInstance());
             JCObject objInvokeAsync = (JCObject)retObjectInvokeAsync;
             return new Task(objInvokeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAsync != null ? retObjectInvokeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task InvokeAsync(Func_2 callback, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeAsync = null;
+        try {
+            retObjectInvokeAsync = classInstance.Invoke("InvokeAsync", callback, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objInvokeAsync = (JCObject)retObjectInvokeAsync;
+            return new Task(objInvokeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAsync != null ? retObjectInvokeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Task_1 InvokeAsync(Func_1 callback, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeAsync = null;
+        try {
+            retObjectInvokeAsync = classInstance.Invoke("InvokeAsync", callback, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objInvokeAsync = (JCObject)retObjectInvokeAsync;
+            return new Task_1(objInvokeAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAsync != null ? retObjectInvokeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {

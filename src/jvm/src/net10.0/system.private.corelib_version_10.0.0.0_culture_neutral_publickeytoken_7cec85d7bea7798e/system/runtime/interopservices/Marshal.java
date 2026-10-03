@@ -813,6 +813,86 @@ public class Marshal extends NetObject  {
         }
     }
 
+    public static <T extends IJCOBridgeReflected> int SizeOf() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSizeOf = null;
+        try {
+            retObjectSizeOf = classType.Invoke("SizeOf");
+            return (int)retObjectSizeOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSizeOfError = true;
+            java.lang.String retObjectSizeOf_ToString = retObjectSizeOf == null ? "null" : retObjectSizeOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSizeOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSizeOfClass = retObjectSizeOf.getClass();
+                    // java.lang.reflect.Method retObjectSizeOfMethod = retObjectSizeOfClass.getMethod("intValue");
+                    // return (int)retObjectSizeOfMethod.invoke(retObjectSizeOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSizeOfNumber = java.text.NumberFormat.getInstance().parse(retObjectSizeOf_ToString);
+                    return retObjectSizeOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSizeOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSizeOf != null ? retObjectSizeOf.getClass() : "null", retObjectSizeOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSizeOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int SizeOf(T structure) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSizeOf = null;
+        try {
+            retObjectSizeOf = classType.Invoke("SizeOf", structure == null ? null : ((IJCOBridgeReflected)structure).getJCOInstance());
+            return (int)retObjectSizeOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSizeOfError = true;
+            java.lang.String retObjectSizeOf_ToString = retObjectSizeOf == null ? "null" : retObjectSizeOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSizeOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSizeOfClass = retObjectSizeOf.getClass();
+                    // java.lang.reflect.Method retObjectSizeOfMethod = retObjectSizeOfClass.getMethod("intValue");
+                    // return (int)retObjectSizeOfMethod.invoke(retObjectSizeOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSizeOfNumber = java.text.NumberFormat.getInstance().parse(retObjectSizeOf_ToString);
+                    return retObjectSizeOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSizeOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSizeOf != null ? retObjectSizeOf.getClass() : "null", retObjectSizeOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSizeOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static long ReadInt64(NetObject ptr, int ofs) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.runtime.interopservices.MarshalDirectiveException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

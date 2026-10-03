@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.io.IOException;
 import system.net.quic.QuicError;
+import system.Nullable_1;
 
 /**
  * The base .NET class managing System.Net.Quic.QuicException, System.Net.Quic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
@@ -53,7 +54,7 @@ import system.net.quic.QuicError;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class QuicException extends IOException {
+public class QuicException extends system.io.IOException {
     /**
      * Fully assembly qualified name: System.Net.Quic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -165,6 +166,16 @@ public class QuicException extends IOException {
 
     // Constructors section
     
+    public QuicException(QuicError error, Nullable_1 applicationErrorCode, java.lang.String message) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance(), applicationErrorCode == null ? null : applicationErrorCode.getJCOInstance(), message));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -183,6 +194,36 @@ public class QuicException extends IOException {
             return new QuicError(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuicError != null ? retObjectQuicError.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getApplicationErrorCode() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationErrorCode = null;
+        try {
+            retObjectApplicationErrorCode = classInstance.Get("ApplicationErrorCode");
+            JCObject val = (JCObject)retObjectApplicationErrorCode;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationErrorCode != null ? retObjectApplicationErrorCode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getTransportErrorCode() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransportErrorCode = null;
+        try {
+            retObjectTransportErrorCode = classInstance.Get("TransportErrorCode");
+            JCObject val = (JCObject)retObjectTransportErrorCode;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransportErrorCode != null ? retObjectTransportErrorCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

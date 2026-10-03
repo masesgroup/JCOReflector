@@ -38,9 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ObservableCollection_1;
+import system.windows.controls.CalendarDateRange;
 import system.windows.controls.Calendar;
 import system.DateTime;
-import system.windows.controls.CalendarDateRange;
 
 
 /**
@@ -55,7 +56,7 @@ import system.windows.controls.CalendarDateRange;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CalendarBlackoutDatesCollection extends NetObjectEnumerable  {
+public class CalendarBlackoutDatesCollection extends system.collections.objectmodel.ObservableCollection_1<CalendarDateRange>  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.generic.List_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.EventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridRowClipboardEventArgs extends EventArgs  {
+public class DataGridRowClipboardEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -271,6 +272,21 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getClipboardRowContent() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipboardRowContent = null;
+        try {
+            retObjectClipboardRowContent = classInstance.Get("ClipboardRowContent");
+            JCObject val = (JCObject)retObjectClipboardRowContent;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipboardRowContent != null ? retObjectClipboardRowContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

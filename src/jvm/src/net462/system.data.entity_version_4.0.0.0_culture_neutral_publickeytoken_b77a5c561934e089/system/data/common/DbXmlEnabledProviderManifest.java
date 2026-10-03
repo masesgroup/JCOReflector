@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.DbProviderManifest;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.EdmType;
 
 
 /**
@@ -53,7 +55,7 @@ import system.data.common.DbProviderManifest;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbXmlEnabledProviderManifest extends DbProviderManifest  {
+public class DbXmlEnabledProviderManifest extends system.data.common.DbProviderManifest  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -152,6 +154,51 @@ public class DbXmlEnabledProviderManifest extends DbProviderManifest  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 GetStoreFunctions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStoreFunctions = null;
+        try {
+            retObjectGetStoreFunctions = classInstance.Invoke("GetStoreFunctions");
+            JCObject objGetStoreFunctions = (JCObject)retObjectGetStoreFunctions;
+            return new ReadOnlyCollection_1(objGetStoreFunctions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStoreFunctions != null ? retObjectGetStoreFunctions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetFacetDescriptions(EdmType type) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFacetDescriptions = null;
+        try {
+            retObjectGetFacetDescriptions = classInstance.Invoke("GetFacetDescriptions", type == null ? null : type.getJCOInstance());
+            JCObject objGetFacetDescriptions = (JCObject)retObjectGetFacetDescriptions;
+            return new ReadOnlyCollection_1(objGetFacetDescriptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFacetDescriptions != null ? retObjectGetFacetDescriptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetStoreTypes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStoreTypes = null;
+        try {
+            retObjectGetStoreTypes = classInstance.Invoke("GetStoreTypes");
+            JCObject objGetStoreTypes = (JCObject)retObjectGetStoreTypes;
+            return new ReadOnlyCollection_1(objGetStoreTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStoreTypes != null ? retObjectGetStoreTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

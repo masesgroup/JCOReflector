@@ -52,7 +52,7 @@ import system.io.IOException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ZLibException extends IOException {
+public class ZLibException extends system.io.IOException {
     /**
      * Fully assembly qualified name: System.IO.Compression, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

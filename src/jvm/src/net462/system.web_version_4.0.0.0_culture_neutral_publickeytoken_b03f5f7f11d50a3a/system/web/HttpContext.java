@@ -44,11 +44,16 @@ import system.web.HttpWorkerRequest;
 import system.globalization.CultureInfo;
 import system.web.ISubscriptionToken;
 import system.web.ISubscriptionTokenImplementation;
+import system.Action_1;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.Func_2;
+import system.web.websockets.AspNetWebSocketOptions;
 import system.web.IHttpHandler;
 import system.web.IHttpHandlerImplementation;
 import system.web.sessionstate.SessionStateBehavior;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.DateTime;
@@ -65,8 +70,6 @@ import system.web.profile.ProfileBase;
 import system.web.RequestNotification;
 import system.web.sessionstate.HttpSessionState;
 import system.web.TraceContext;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 
 
 /**
@@ -81,7 +84,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpContext extends NetObject implements IServiceProvider {
+public class HttpContext extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -307,6 +310,21 @@ public class HttpContext extends NetObject implements IServiceProvider {
         }
     }
 
+    public ISubscriptionToken AddOnRequestCompleted(Action_1 callback) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddOnRequestCompleted = null;
+        try {
+            retObjectAddOnRequestCompleted = classInstance.Invoke("AddOnRequestCompleted", callback);
+            JCObject objAddOnRequestCompleted = (JCObject)retObjectAddOnRequestCompleted;
+            return new ISubscriptionTokenImplementation(objAddOnRequestCompleted);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddOnRequestCompleted != null ? retObjectAddOnRequestCompleted.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ISubscriptionToken DisposeOnPipelineCompleted(IDisposable target) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -317,6 +335,26 @@ public class HttpContext extends NetObject implements IServiceProvider {
             return new ISubscriptionTokenImplementation(objDisposeOnPipelineCompleted);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeOnPipelineCompleted != null ? retObjectDisposeOnPipelineCompleted.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AcceptWebSocketRequest(Func_2 userFunc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.web.HttpException, system.security.SecurityException, system.UriFormatException, system.threading.ThreadAbortException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AcceptWebSocketRequest", userFunc);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AcceptWebSocketRequest(Func_2 userFunc, AspNetWebSocketOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.security.SecurityException, system.MemberAccessException, system.UriFormatException, system.threading.ThreadAbortException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AcceptWebSocketRequest", userFunc, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,6 +600,21 @@ public class HttpContext extends NetObject implements IServiceProvider {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThreadAbortOnTimeout", ThreadAbortOnTimeout);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getWebSocketRequestedProtocols() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebSocketRequestedProtocols = null;
+        try {
+            retObjectWebSocketRequestedProtocols = classInstance.Get("WebSocketRequestedProtocols");
+            JCObject val = (JCObject)retObjectWebSocketRequestedProtocols;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebSocketRequestedProtocols != null ? retObjectWebSocketRequestedProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

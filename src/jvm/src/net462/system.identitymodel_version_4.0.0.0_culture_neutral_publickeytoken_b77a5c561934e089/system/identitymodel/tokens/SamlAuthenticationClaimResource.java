@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.DateTime;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -159,6 +162,26 @@ public class SamlAuthenticationClaimResource extends NetObject  {
         }
     }
 
+    public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress, IEnumerable_1 authorityBindings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(authenticationInstant == null ? null : authenticationInstant.getJCOInstance(), authenticationMethod, dnsAddress, ipAddress, authorityBindings == null ? null : authorityBindings.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress, ReadOnlyCollection_1 authorityBindings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(authenticationInstant == null ? null : authenticationInstant.getJCOInstance(), authenticationMethod, dnsAddress, ipAddress, authorityBindings == null ? null : authorityBindings.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -168,6 +191,21 @@ public class SamlAuthenticationClaimResource extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getAuthorityBindings() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorityBindings = null;
+        try {
+            retObjectAuthorityBindings = classInstance.Get("AuthorityBindings");
+            JCObject val = (JCObject)retObjectAuthorityBindings;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthorityBindings != null ? retObjectAuthorityBindings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DateTime getAuthenticationInstant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.activities.debugger.SourceLocation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.activities.presentation.debug.BreakpointTypes;
 
 
@@ -118,6 +120,8 @@ public interface IDesignerDebugView extends IJCOBridgeReflected {
     // Methods section
     
     public SourceLocation GetExactLocation(SourceLocation approximateLocation) throws Throwable;
+
+    public IDictionary_2 GetBreakpointLocations() throws Throwable;
 
     public void DeleteBreakpoint(SourceLocation sourceLocation) throws Throwable;
 

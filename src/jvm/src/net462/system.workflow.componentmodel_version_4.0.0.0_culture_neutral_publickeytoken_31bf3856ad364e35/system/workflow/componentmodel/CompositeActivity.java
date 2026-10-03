@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.Activity;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.workflow.componentmodel.ActivityCollection;
 
 
@@ -54,7 +57,7 @@ import system.workflow.componentmodel.ActivityCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompositeActivity extends Activity  {
+public class CompositeActivity extends system.workflow.componentmodel.Activity  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -157,6 +160,16 @@ public class CompositeActivity extends Activity  {
         }
     }
 
+    public CompositeActivity(IEnumerable_1 children) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.RankException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(children == null ? null : children.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CompositeActivity(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.MissingMethodException, system.RankException {
         try {
             // add reference to assemblyName.dll file
@@ -175,6 +188,21 @@ public class CompositeActivity extends Activity  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getEnabledActivities() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabledActivities = null;
+        try {
+            retObjectEnabledActivities = classInstance.Get("EnabledActivities");
+            JCObject val = (JCObject)retObjectEnabledActivities;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnabledActivities != null ? retObjectEnabledActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ActivityCollection getActivities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

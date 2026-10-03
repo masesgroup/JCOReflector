@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -144,6 +146,21 @@ public class IPartialSessionStateImplementation extends NetObject implements IPa
     
     // Properties section
     
+    public IList_1 getPartialSessionStateKeys() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartialSessionStateKeys = null;
+        try {
+            retObjectPartialSessionStateKeys = classInstance.Get("PartialSessionStateKeys");
+            JCObject val = (JCObject)retObjectPartialSessionStateKeys;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartialSessionStateKeys != null ? retObjectPartialSessionStateKeys.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

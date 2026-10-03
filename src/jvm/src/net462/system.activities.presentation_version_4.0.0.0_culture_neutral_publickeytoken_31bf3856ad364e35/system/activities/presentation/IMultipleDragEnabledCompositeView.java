@@ -55,7 +55,7 @@ import system.activities.presentation.view.TypeResolvingOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IMultipleDragEnabledCompositeView extends IJCOBridgeReflected, ICompositeView {
+public interface IMultipleDragEnabledCompositeView extends IJCOBridgeReflected, system.activities.presentation.ICompositeView {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

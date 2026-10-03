@@ -59,7 +59,7 @@ import system.componentmodel.ListChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IBindingList extends IJCOBridgeReflected, IList, ICollection, IEnumerable {
+public interface IBindingList extends IJCOBridgeReflected, system.collections.IList, system.collections.ICollection, org.mases.jcobridge.netreflection.IEnumerable {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

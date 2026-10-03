@@ -61,7 +61,7 @@ public class RemoveByKeyRenameOnKeyedCollection {
 	static void testRemoveByKeyRenameOnKeyedCollection() throws Exception {
 		ClassLoader cl = RemoveByKeyRenameOnKeyedCollection.class.getClassLoader();
 		Class<?> keyed = Class.forName("system.collections.objectmodel.KeyedCollection_2", false, cl);
-		Class<?> collection = Class.forName("system.collections.objectmodel.Collection_1", false, cl);
+        Class<?> collection = Class.forName("system.collections.objectmodel.Collection_1", false, cl);
 
         keyed.getMethod("RemoveByKey", IJCOBridgeReflected.class);
         keyed.getMethod("ContainsByKey", IJCOBridgeReflected.class);

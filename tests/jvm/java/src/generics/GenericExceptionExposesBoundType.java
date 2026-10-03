@@ -59,19 +59,19 @@ public class GenericExceptionExposesBoundType {
      * extend Throwable), so its class-level type parameter is always exposed as its bound,
      * IJCOBridgeReflected, rather than as a real type variable.
      */
-	static void testGenericExceptionExposesBoundType() throws Throwable {
-		Class<?> ex;
-		try {
-			ex = Class.forName("system.servicemodel.FaultException_1", false,
-							   GenericExceptionExposesBoundType.class.getClassLoader());
-		} catch (ClassNotFoundException notAvailable) {
-			Console.WriteLine("FaultException_1 not available in this framework, skipping");
-			return;
-		}
-		// A generic Java class can't extend Throwable, so it must be plain, non-generic...
-		if (ex.getTypeParameters().length != 0) throw new AssertionError("FaultException_1 must not be generic");
-		// ...and its class-level type parameter is exposed as the bound.
-		if (ex.getMethod("getDetail").getReturnType() != IJCOBridgeReflected.class)
-			throw new AssertionError("getDetail() must return IJCOBridgeReflected");
-	}
+    static void testGenericExceptionExposesBoundType() throws Throwable {
+        Class<?> ex;
+        try {
+            ex = Class.forName("system.servicemodel.FaultException_1", false,
+                    GenericExceptionExposesBoundType.class.getClassLoader());
+        } catch (ClassNotFoundException notAvailable) {
+            Console.WriteLine("FaultException_1 not available in this framework, skipping");
+            return;
+        }
+        // A generic Java class can't extend Throwable, so it must be plain, non-generic...
+        if (ex.getTypeParameters().length != 0) throw new AssertionError("FaultException_1 must not be generic");
+        // ...and its class-level type parameter is exposed as the bound.
+        if (ex.getMethod("getDetail").getReturnType() != IJCOBridgeReflected.class)
+            throw new AssertionError("getDetail() must return IJCOBridgeReflected");
+    }
 }

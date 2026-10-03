@@ -58,21 +58,22 @@ public class EqualsGenericRenameOnEqualityComparer {
      * erase to the same signature as NetObject.Equals(IJCOBridgeReflected[,IJCOBridgeReflected])
      * is exposed under a different name so both remain callable.
      */
-	static void testEqualsGenericRenameOnEqualityComparer() throws Exception {
-		ClassLoader cl = EqualsGenericRenameOnEqualityComparer.class.getClassLoader();
-		Class<?> comparer = Class.forName("system.collections.generic.IEqualityComparer_1", false, cl);
-		comparer.getMethod("EqualsGeneric", IJCOBridgeReflected.class, IJCOBridgeReflected.class);
-		assertMissing(comparer, "Equals", IJCOBridgeReflected.class, IJCOBridgeReflected.class);
+    static void testEqualsGenericRenameOnEqualityComparer() throws Exception {
+        ClassLoader cl = EqualsGenericRenameOnEqualityComparer.class.getClassLoader();
+        Class<?> comparer = Class.forName("system.collections.generic.IEqualityComparer_1", false, cl);
+        comparer.getMethod("EqualsGeneric", IJCOBridgeReflected.class, IJCOBridgeReflected.class);
+        assertMissing(comparer, "Equals", IJCOBridgeReflected.class, IJCOBridgeReflected.class);
 
-		Class<?> equatable = Class.forName("system.IEquatable_1", false, cl);
-		equatable.getMethod("EqualsGeneric", IJCOBridgeReflected.class);
-		assertMissing(equatable, "Equals", IJCOBridgeReflected.class);
-	}
+        Class<?> equatable = Class.forName("system.IEquatable_1", false, cl);
+        equatable.getMethod("EqualsGeneric", IJCOBridgeReflected.class);
+        assertMissing(equatable, "Equals", IJCOBridgeReflected.class);
+    }
 
-	static void assertMissing(Class<?> c, String name, Class<?>... params) {
-		try {
-			c.getMethod(name, params);
-			throw new AssertionError(c.getSimpleName() + "." + name + " should have been renamed");
-		} catch (NoSuchMethodException expected) { }
-	}
+    static void assertMissing(Class<?> c, String name, Class<?>... params) {
+        try {
+            c.getMethod(name, params);
+            throw new AssertionError(c.getSimpleName() + "." + name + " should have been renamed");
+        } catch (NoSuchMethodException expected) {
+        }
+    }
 }

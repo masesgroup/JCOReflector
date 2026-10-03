@@ -13,7 +13,7 @@ on:
 env:
     SCALARELEASE: 2.13.18
     JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:

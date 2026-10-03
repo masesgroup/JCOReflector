@@ -45,9 +45,8 @@ public class HelloHierarchy {
             Stream str;
 
             //emulate the using directive (.net) with a try...finally  
-            try(FileStream sourceStream = File.Open(fileinputname, FileMode.Open) ; 
-            FileStream destinationStream = File.Create(fileoutputname);)
-            {
+            try (FileStream sourceStream = File.Open(fileinputname, FileMode.Open);
+                 FileStream destinationStream = File.Create(fileoutputname);) {
                 //Cast the destination stream to stream base class
                 str = (Stream) destinationStream;
                 //Copy the Source content to the destination stream using the casted object
@@ -56,7 +55,7 @@ public class HelloHierarchy {
                 FileStream destinationStreamInstance = (FileStream) str;
                 //Write using the casted stream
                 byte[] toWrite = Encoding.getASCII().GetBytes(fileText);
-                destinationStreamInstance.Write(toWrite,0,toWrite.length);
+                destinationStreamInstance.Write(toWrite, 0, toWrite.length);
 
                 //Verify that the stream used where correct reading from the original destination stream
                 byte[] bytes = new byte[1024];
@@ -64,14 +63,11 @@ public class HelloHierarchy {
                 JCORefOut<byte[]> data = JCORefOut.Create(bytes);
                 destinationStream.Seek(0, SeekOrigin.Begin);
                 destinationStream.Read(data, 0, 1024);
-                String expectedText= fileText + fileText;
+                String expectedText = fileText + fileText;
                 //do the check
-                if(Encoding.getASCII().GetString(data).trim().equalsIgnoreCase(expectedText.trim()))
-                {
+                if (Encoding.getASCII().GetString(data).trim().equalsIgnoreCase(expectedText.trim())) {
                     result = "Hierarchy OK";
-                }
-                else
-                {
+                } else {
                     result = "Something goes wrong!";
                     Console.WriteLine("File Content:");
                     Console.WriteLine(Encoding.getASCII().GetString(data));
@@ -79,11 +75,11 @@ public class HelloHierarchy {
                     Console.WriteLine(expectedText);
                 }
             }
-            
+
             //check if the dispose affected the casted class
-            if(str.getCanRead()) result += " Hierarchy dispose NOT OK";
-            if(str.getCanWrite()) result += " Hierarchy dispose NOT OK";
-            
+            if (str.getCanRead()) result += " Hierarchy dispose NOT OK";
+            if (str.getCanWrite()) result += " Hierarchy dispose NOT OK";
+
             Console.WriteLine(result);
             Console.WriteLine("Exiting with success");
             Environment.Exit(0);

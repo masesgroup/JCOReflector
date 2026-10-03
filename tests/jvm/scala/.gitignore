@@ -1,3 +1,6 @@
-target/
+.bsp/
+.idea/
+null/
 output/
+target/
 *.log

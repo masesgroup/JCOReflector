@@ -42,7 +42,7 @@ public class HelloInterfaces {
             // Get the IList interface 
             IList keyList = sr.GetKeyList();
             IList valueList = sr.GetValueList();
-            
+
             //operate on interface
             for (NetObject netObject : keyList) {
                 Console.WriteLine(netObject.ToString());
@@ -52,13 +52,12 @@ public class HelloInterfaces {
             }
             IDictionary ev = Environment.GetEnvironmentVariables();
             for (NetObject netObject : ev.getKeys()) {
-                Console.WriteLine(netObject.ToString()); 
+                Console.WriteLine(netObject.ToString());
                 //System.out.println(netObject.ToString()); viable Alternative
             }
             Console.WriteLine("Exiting with success");
             Environment.Exit(0);
-        }
-        catch (Throwable tre) {
+        } catch (Throwable tre) {
             tre.printStackTrace();
             System.exit(-1);
         }

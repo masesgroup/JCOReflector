@@ -35,9 +35,9 @@ import system.timers.Timer;
 public class HelloNETEvent {
     public static void main(String[] args) {
         JCOReflector.setCommandLineArgs(args);
-        try (Timer timer = new Timer();){
+        try (Timer timer = new Timer();) {
             TimerElapsed elapsed = new TimerElapsed();
-            
+
             timer.addElapsed(elapsed);
             timer.setInterval(1000);
 

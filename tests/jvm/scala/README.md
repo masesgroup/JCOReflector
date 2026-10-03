@@ -25,10 +25,10 @@ The program iterates across the array of logical drives returned from `Environme
 
 To compile examples execute the following command (or use the _command.bat_ batch script available in this folder):
 
-> scalac -toolcp "../../bin/net5.0/*" -d output ./mscorlib/*
+> scalac -toolcp "../../bin/net8.0/*" -d output ./mscorlib/*
 
 To execute the compiled code execute the following command (or use the _execute.bat_ batch script available in this folder):
 
-> scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNet
+> scala -toolcp "../../bin/net8.0/*;./output" mscorlib.HelloNet
 
-> **NOTE**: above command line, and batch scripts, uses **net5.0**. Change it to **net461** or **netcoreapp3.1** to use another framework.
+> **NOTE**: above command line, and batch scripts, uses **net8.0**. Change it to **net462**, **net9.0** or **net10.0** to use another framework.

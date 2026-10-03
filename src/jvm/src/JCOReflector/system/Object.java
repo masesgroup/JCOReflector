@@ -81,6 +81,14 @@ public class Object extends NetObject {
         }
     }
 
+    public Object(java.lang.Object instance) throws Throwable {
+        super(instance);
+        if (instance instanceof JCObject) {
+            classInstance = (JCObject) instance;
+        } else
+            throw new Exception("Cannot manage object, it is not a JCObject");
+    }
+
     public Object() throws Throwable {
         try {
             // add reference to assemblyName.dll file

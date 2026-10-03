@@ -55,7 +55,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextInfo extends NetObject implements IDeserializationCallback {
+public class TextInfo extends NetObject  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

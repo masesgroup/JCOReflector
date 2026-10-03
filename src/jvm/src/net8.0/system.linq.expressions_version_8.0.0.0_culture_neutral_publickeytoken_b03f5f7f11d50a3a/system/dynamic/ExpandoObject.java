@@ -56,7 +56,7 @@ import system.dynamic.IDynamicMetaObjectProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ExpandoObject extends NetObjectEnumerable implements IDynamicMetaObjectProvider {
+public class ExpandoObject extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Linq.Expressions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

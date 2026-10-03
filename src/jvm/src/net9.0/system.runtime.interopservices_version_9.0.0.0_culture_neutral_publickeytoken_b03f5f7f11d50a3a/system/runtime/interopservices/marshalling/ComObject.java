@@ -58,7 +58,7 @@ import system.runtime.interopservices.marshalling.IUnmanagedVirtualMethodTablePr
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ComObject extends NetObject implements IDynamicInterfaceCastable, IUnmanagedVirtualMethodTableProvider {
+public class ComObject extends NetObject  {
     /**
      * Fully assembly qualified name: System.Runtime.InteropServices, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

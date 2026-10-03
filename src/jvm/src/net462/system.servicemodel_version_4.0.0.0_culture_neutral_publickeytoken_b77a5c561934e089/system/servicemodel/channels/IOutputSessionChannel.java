@@ -66,7 +66,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IOutputSessionChannel extends IJCOBridgeReflected, IOutputChannel, IChannel, ICommunicationObject {
+public interface IOutputSessionChannel extends IJCOBridgeReflected, system.servicemodel.channels.IOutputChannel, system.servicemodel.channels.IChannel, system.servicemodel.ICommunicationObject {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

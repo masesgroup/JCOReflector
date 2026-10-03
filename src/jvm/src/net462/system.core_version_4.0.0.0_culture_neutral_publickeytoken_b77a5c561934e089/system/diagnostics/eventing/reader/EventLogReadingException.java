@@ -52,7 +52,7 @@ import system.diagnostics.eventing.reader.EventLogException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventLogReadingException extends EventLogException {
+public class EventLogReadingException extends system.diagnostics.eventing.reader.EventLogException {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

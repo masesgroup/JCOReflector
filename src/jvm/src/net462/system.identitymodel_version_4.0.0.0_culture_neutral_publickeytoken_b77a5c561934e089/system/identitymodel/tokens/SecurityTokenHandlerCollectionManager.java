@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.tokens.SecurityTokenHandlerCollectionManager;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.identitymodel.tokens.SecurityTokenHandlerCollection;
 
 
@@ -248,6 +250,21 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getSecurityTokenHandlerCollections() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenHandlerCollections = null;
+        try {
+            retObjectSecurityTokenHandlerCollections = classInstance.Get("SecurityTokenHandlerCollections");
+            JCObject val = (JCObject)retObjectSecurityTokenHandlerCollections;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenHandlerCollections != null ? retObjectSecurityTokenHandlerCollections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

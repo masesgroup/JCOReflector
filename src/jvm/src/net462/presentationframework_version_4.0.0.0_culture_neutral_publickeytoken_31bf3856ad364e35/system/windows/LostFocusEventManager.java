@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.WeakEventManager;
 import system.windows.DependencyObject;
+import system.EventHandler_1;
 import system.windows.IWeakEventListener;
 import system.windows.IWeakEventListenerImplementation;
 
@@ -56,7 +57,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class LostFocusEventManager extends WeakEventManager  {
+public class LostFocusEventManager extends system.windows.WeakEventManager  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -157,11 +158,31 @@ public class LostFocusEventManager extends WeakEventManager  {
     
     // Methods section
     
+    public static void AddHandler(DependencyObject source, EventHandler_1 handler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddHandler", source == null ? null : source.getJCOInstance(), handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void AddListener(DependencyObject source, IWeakEventListener listener) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddListener", source == null ? null : source.getJCOInstance(), listener == null ? null : listener.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveHandler(DependencyObject source, EventHandler_1 handler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveHandler", source == null ? null : source.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

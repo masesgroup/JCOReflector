@@ -42,14 +42,13 @@ import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.net.HttpListenerContext;
+import system.threading.tasks.Task_1;
 import system.net.AuthenticationSchemes;
 import system.net.AuthenticationSchemeSelector;
 import system.net.HttpListenerPrefixCollection;
 import system.net.HttpListenerTimeoutManager;
 import system.security.authentication.extendedprotection.ExtendedProtectionPolicy;
 import system.security.authentication.extendedprotection.ServiceNameCollection;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -64,7 +63,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpListener extends NetObject implements IDisposable, AutoCloseable {
+public class HttpListener extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.HttpListener, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -211,6 +210,21 @@ public class HttpListener extends NetObject implements IDisposable, AutoCloseabl
             return new HttpListenerContext(objGetContext);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContext != null ? retObjectGetContext.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetContextAsync() throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.HttpListenerException, system.threading.ThreadStateException, system.NotSupportedException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContextAsync = null;
+        try {
+            retObjectGetContextAsync = classInstance.Invoke("GetContextAsync");
+            JCObject objGetContextAsync = (JCObject)retObjectGetContextAsync;
+            return new Task_1(objGetContextAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContextAsync != null ? retObjectGetContextAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

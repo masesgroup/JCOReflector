@@ -66,7 +66,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolStripTextBox extends ToolStripControlHost  {
+public class ToolStripTextBox extends system.windows.forms.ToolStripControlHost  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

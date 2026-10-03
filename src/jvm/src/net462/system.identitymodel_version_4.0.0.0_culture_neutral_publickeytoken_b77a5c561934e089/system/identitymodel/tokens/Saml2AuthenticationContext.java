@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Uri;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -184,6 +185,21 @@ public class Saml2AuthenticationContext extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getAuthenticatingAuthorities() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticatingAuthorities = null;
+        try {
+            retObjectAuthenticatingAuthorities = classInstance.Get("AuthenticatingAuthorities");
+            JCObject val = (JCObject)retObjectAuthenticatingAuthorities;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticatingAuthorities != null ? retObjectAuthenticatingAuthorities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Uri getClassReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.Version;
 import system.reflection.AssemblyNameFlags;
+import system.collections.immutable.ImmutableArray_1;
 import system.reflection.AssemblyName;
 import system.reflection.metadata.AssemblyNameInfo;
 
@@ -152,6 +153,16 @@ public class AssemblyNameInfo extends NetObject  {
     public AssemblyNameInfo() throws Throwable {
     }
 
+    public AssemblyNameInfo(java.lang.String name, Version version, java.lang.String cultureName, AssemblyNameFlags flags, ImmutableArray_1 publicKeyOrToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, version == null ? null : version.getJCOInstance(), cultureName, flags == null ? null : flags.getJCOInstance(), publicKeyOrToken == null ? null : publicKeyOrToken.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -176,6 +187,21 @@ public class AssemblyNameInfo extends NetObject  {
     
     // Properties section
     
+    public ImmutableArray_1 getPublicKeyOrToken() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicKeyOrToken = null;
+        try {
+            retObjectPublicKeyOrToken = classInstance.Get("PublicKeyOrToken");
+            JCObject val = (JCObject)retObjectPublicKeyOrToken;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPublicKeyOrToken != null ? retObjectPublicKeyOrToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AssemblyNameFlags getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -48,6 +48,8 @@ import system.Uri;
 import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsStructure;
 import system.windows.xps.packaging.XpsThumbnail;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.printing.PrintTicket;
 import system.xml.XmlWriter;
 
@@ -64,7 +66,7 @@ import system.xml.XmlWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IXpsFixedPageWriter extends IJCOBridgeReflected, IStoryFragmentProvider {
+public interface IXpsFixedPageWriter extends IJCOBridgeReflected, system.windows.xps.packaging.IStoryFragmentProvider {
     /**
      * Fully assembly qualified name: ReachFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -154,6 +156,8 @@ public interface IXpsFixedPageWriter extends IJCOBridgeReflected, IStoryFragment
     // Properties section
     
     public int getPageNumber() throws Throwable;
+
+    public IList_1 getLinkTargetStream() throws Throwable;
 
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable;
 

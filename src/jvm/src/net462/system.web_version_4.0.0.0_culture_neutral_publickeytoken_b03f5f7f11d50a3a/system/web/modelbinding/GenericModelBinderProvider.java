@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.modelbinding.ModelBinderProvider;
+import system.Func_2;
 import system.web.modelbinding.IModelBinder;
 import system.web.modelbinding.IModelBinderImplementation;
 import system.web.modelbinding.ModelBindingExecutionContext;
@@ -57,7 +58,7 @@ import system.web.modelbinding.ModelBindingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GenericModelBinderProvider extends ModelBinderProvider  {
+public class GenericModelBinderProvider extends system.web.modelbinding.ModelBinderProvider  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -151,6 +152,16 @@ public class GenericModelBinderProvider extends ModelBinderProvider  {
     // Constructors section
     
     public GenericModelBinderProvider() throws Throwable {
+    }
+
+    public GenericModelBinderProvider(NetType modelType, Func_2 modelBinderFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(modelType == null ? null : modelType.getJCOInstance(), modelBinderFactory));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
     public GenericModelBinderProvider(NetType modelType, NetType modelBinderType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {

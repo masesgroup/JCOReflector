@@ -38,6 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.web.modelbinding.ModelValidatorProvider;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelMetadata;
+import system.web.modelbinding.ModelBindingExecutionContext;
 
 
 /**
@@ -52,7 +60,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModelValidatorProviderCollection extends NetObjectEnumerable  {
+public class ModelValidatorProviderCollection extends system.collections.objectmodel.Collection_1<ModelValidatorProvider>  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -155,10 +163,35 @@ public class ModelValidatorProviderCollection extends NetObjectEnumerable  {
         }
     }
 
+    public ModelValidatorProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(list == null ? null : list.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
+    public IEnumerable_1 GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValidators = null;
+        try {
+            retObjectGetValidators = classInstance.Invoke("GetValidators", metadata == null ? null : metadata.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetValidators = (JCObject)retObjectGetValidators;
+            return new IEnumerable_1Implementation(objGetValidators);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValidators != null ? retObjectGetValidators.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.DependencyObject;
 import system.windows.DependencyProperty;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.data.BindingBase;
 import system.windows.data.BindingExpression;
 import system.windows.data.BindingExpressionBase;
@@ -171,6 +172,36 @@ public class BindingOperations extends NetObject  {
             return (boolean)retObjectIsDataBound;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDataBound != null ? retObjectIsDataBound.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetSourceUpdatingBindings(DependencyObject root) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSourceUpdatingBindings = null;
+        try {
+            retObjectGetSourceUpdatingBindings = classType.Invoke("GetSourceUpdatingBindings", root == null ? null : root.getJCOInstance());
+            JCObject objGetSourceUpdatingBindings = (JCObject)retObjectGetSourceUpdatingBindings;
+            return new ReadOnlyCollection_1(objGetSourceUpdatingBindings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSourceUpdatingBindings != null ? retObjectGetSourceUpdatingBindings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetSourceUpdatingBindingGroups(DependencyObject root) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSourceUpdatingBindingGroups = null;
+        try {
+            retObjectGetSourceUpdatingBindingGroups = classType.Invoke("GetSourceUpdatingBindingGroups", root == null ? null : root.getJCOInstance());
+            JCObject objGetSourceUpdatingBindingGroups = (JCObject)retObjectGetSourceUpdatingBindingGroups;
+            return new ReadOnlyCollection_1(objGetSourceUpdatingBindingGroups);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSourceUpdatingBindingGroups != null ? retObjectGetSourceUpdatingBindingGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -46,6 +46,7 @@ import system.threading.tasks.ValueTask;
 import system.runtime.compilerservices.ConfiguredValueTaskAwaitable;
 import system.runtime.compilerservices.ValueTaskAwaiter;
 import system.threading.CancellationToken;
+import system.threading.tasks.ValueTask_1;
 
 
 /**
@@ -60,7 +61,7 @@ import system.threading.CancellationToken;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ValueTask extends ValueType  {
+public class ValueTask extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -280,6 +281,21 @@ public class ValueTask extends ValueType  {
             return new ValueTask(objPreserve);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreserve != null ? retObjectPreserve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> ValueTask_1 FromResult(TResult result) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromResult = null;
+        try {
+            retObjectFromResult = classType.Invoke("FromResult", result == null ? null : ((IJCOBridgeReflected)result).getJCOInstance());
+            JCObject objFromResult = (JCObject)retObjectFromResult;
+            return new ValueTask_1(objFromResult);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromResult != null ? retObjectFromResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.compilerservices.CallSite;
+import system.runtime.compilerservices.CallSite_1;
+import system.runtime.compilerservices.RuleCache_1;
 
 
 /**
@@ -180,11 +182,71 @@ public class CallSiteOps extends NetObject  {
         }
     }
 
+    public static <T extends IJCOBridgeReflected> CallSite_1 CreateMatchmaker(CallSite_1 site) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMatchmaker = null;
+        try {
+            retObjectCreateMatchmaker = classType.Invoke("CreateMatchmaker", site == null ? null : site.getJCOInstance());
+            JCObject objCreateMatchmaker = (JCObject)retObjectCreateMatchmaker;
+            return new CallSite_1(objCreateMatchmaker);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMatchmaker != null ? retObjectCreateMatchmaker.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> RuleCache_1 GetRuleCache(CallSite_1 site) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuleCache = null;
+        try {
+            retObjectGetRuleCache = classType.Invoke("GetRuleCache", site == null ? null : site.getJCOInstance());
+            JCObject objGetRuleCache = (JCObject)retObjectGetRuleCache;
+            return new RuleCache_1(objGetRuleCache);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuleCache != null ? retObjectGetRuleCache.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void AddRule(CallSite_1 site, T rule) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddRule", site == null ? null : site.getJCOInstance(), rule == null ? null : ((IJCOBridgeReflected)rule).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void ClearMatch(CallSite site) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ClearMatch", site == null ? null : site.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void MoveRule(RuleCache_1 cache, T rule, int i) throws Throwable, system.ArgumentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("MoveRule", cache == null ? null : cache.getJCOInstance(), rule == null ? null : ((IJCOBridgeReflected)rule).getJCOInstance(), i);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void UpdateRules(CallSite_1 _this, int matched) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("UpdateRules", _this == null ? null : _this.getJCOInstance(), matched);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

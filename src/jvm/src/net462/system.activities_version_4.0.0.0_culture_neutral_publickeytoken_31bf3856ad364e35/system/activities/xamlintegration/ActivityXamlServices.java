@@ -43,6 +43,7 @@ import system.io.Stream;
 import system.activities.xamlintegration.ActivityXamlServicesSettings;
 import system.io.TextReader;
 import system.xml.XmlReader;
+import system.Func_1;
 import system.xaml.XamlWriter;
 
 

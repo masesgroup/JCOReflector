@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.activities.Activity;
 import system.servicemodel.activities.SendReply;
 import system.servicemodel.description.OperationDescription;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.activities.Receive;
 import system.servicemodel.activities.SendContent;
 
@@ -57,7 +60,7 @@ import system.servicemodel.activities.SendContent;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SendReply extends Activity  {
+public class SendReply extends system.activities.Activity  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +167,21 @@ public class SendReply extends Activity  {
     
     // Methods section
     
+    public static SendReply FromOperationDescription(OperationDescription operation, JCORefOut<IEnumerable_1> faultReplies) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromOperationDescription = null;
+        try {
+            retObjectFromOperationDescription = classType.Invoke("FromOperationDescription", operation == null ? null : operation.getJCOInstance(), faultReplies.getJCRefOut());
+            JCObject objFromOperationDescription = (JCObject)retObjectFromOperationDescription;
+            return new SendReply(objFromOperationDescription);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromOperationDescription != null ? retObjectFromOperationDescription.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -187,6 +205,21 @@ public class SendReply extends Activity  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PersistBeforeSend", PersistBeforeSend);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getCorrelationInitializers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationInitializers = null;
+        try {
+            retObjectCorrelationInitializers = classInstance.Get("CorrelationInitializers");
+            JCObject val = (JCObject)retObjectCorrelationInitializers;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationInitializers != null ? retObjectCorrelationInitializers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

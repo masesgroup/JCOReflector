@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.Location_1;
+import system.Func_1;
+import system.Action_1;
+import system.activities.Activity;
+import system.activities.ActivityContext;
 
 
 /**
@@ -151,6 +156,36 @@ public class CompiledDataContext extends NetObject  {
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> Location_1 GetLocation(Func_1 getMethod, Action_1 setMethod) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocation = null;
+        try {
+            retObjectGetLocation = classInstance.Invoke("GetLocation", getMethod, setMethod);
+            JCObject objGetLocation = (JCObject)retObjectGetLocation;
+            return new Location_1(objGetLocation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocation != null ? retObjectGetLocation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Location_1 GetLocation(Func_1 getMethod, Action_1 setMethod, int expressionId, Activity compiledRootActivity, ActivityContext activityContext) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocation = null;
+        try {
+            retObjectGetLocation = classInstance.Invoke("GetLocation", getMethod, setMethod, expressionId, compiledRootActivity == null ? null : compiledRootActivity.getJCOInstance(), activityContext == null ? null : activityContext.getJCOInstance());
+            JCObject objGetLocation = (JCObject)retObjectGetLocation;
+            return new Location_1(objGetLocation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocation != null ? retObjectGetLocation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

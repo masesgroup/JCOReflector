@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.WeakEventManager;
 import system.componentmodel.INotifyPropertyChanged;
 import system.componentmodel.INotifyPropertyChangedImplementation;
+import system.EventHandler_1;
 import system.windows.IWeakEventListener;
 import system.windows.IWeakEventListenerImplementation;
 
@@ -57,7 +58,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PropertyChangedEventManager extends WeakEventManager  {
+public class PropertyChangedEventManager extends system.windows.WeakEventManager  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -158,11 +159,31 @@ public class PropertyChangedEventManager extends WeakEventManager  {
     
     // Methods section
     
+    public static void AddHandler(INotifyPropertyChanged source, EventHandler_1 handler, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddHandler", source == null ? null : source.getJCOInstance(), handler, propertyName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void AddListener(INotifyPropertyChanged source, IWeakEventListener listener, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddListener", source == null ? null : source.getJCOInstance(), listener == null ? null : listener.getJCOInstance(), propertyName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveHandler(INotifyPropertyChanged source, EventHandler_1 handler, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveHandler", source == null ? null : source.getJCOInstance(), handler, propertyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

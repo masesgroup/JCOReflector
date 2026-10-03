@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.DbConnection;
+import system.Nullable_1;
+import system.data.metadata.edm.StoreItemCollection;
 import system.data.common.DbCommandDefinition;
 import system.data.common.commandtrees.DbCommandTree;
 import system.data.common.DbCommand;
@@ -48,7 +50,6 @@ import system.data.common.DbProviderServices;
 import system.data.spatial.DbSpatialDataReader;
 import system.data.common.DbDataReader;
 import system.data.spatial.DbSpatialServices;
-import system.data.metadata.edm.StoreItemCollection;
 
 
 /**
@@ -162,6 +163,20 @@ public class DbProviderServices extends NetObject  {
     
     // Methods section
     
+    public boolean DatabaseExists(DbConnection connection, Nullable_1 commandTimeout, StoreItemCollection storeItemCollection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDatabaseExists = null;
+        try {
+            retObjectDatabaseExists = classInstance.Invoke("DatabaseExists", connection == null ? null : connection.getJCOInstance(), commandTimeout == null ? null : commandTimeout.getJCOInstance(), storeItemCollection == null ? null : storeItemCollection.getJCOInstance());
+            return (boolean)retObjectDatabaseExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDatabaseExists != null ? retObjectDatabaseExists.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbCommandDefinition CreateCommandDefinition(DbCommandTree commandTree) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -305,6 +320,26 @@ public class DbProviderServices extends NetObject  {
             return (java.lang.String)retObjectGetProviderManifestToken;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetProviderManifestToken != null ? retObjectGetProviderManifestToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CreateDatabase(DbConnection connection, Nullable_1 commandTimeout, StoreItemCollection storeItemCollection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CreateDatabase", connection == null ? null : connection.getJCOInstance(), commandTimeout == null ? null : commandTimeout.getJCOInstance(), storeItemCollection == null ? null : storeItemCollection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DeleteDatabase(DbConnection connection, Nullable_1 commandTimeout, StoreItemCollection storeItemCollection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DeleteDatabase", connection == null ? null : connection.getJCOInstance(), commandTimeout == null ? null : commandTimeout.getJCOInstance(), storeItemCollection == null ? null : storeItemCollection.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

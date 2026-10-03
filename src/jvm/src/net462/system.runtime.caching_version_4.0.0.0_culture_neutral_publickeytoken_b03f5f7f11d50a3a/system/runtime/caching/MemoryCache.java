@@ -42,6 +42,10 @@ import system.runtime.caching.ObjectCache;
 import system.collections.specialized.NameValueCollection;
 import system.runtime.caching.CacheItem;
 import system.runtime.caching.CacheItemPolicy;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.DateTimeOffset;
 import system.runtime.caching.CacheEntryRemovedReason;
 import system.runtime.caching.CacheEntryChangeMonitor;
@@ -62,7 +66,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MemoryCache extends ObjectCache implements AutoCloseable {
+public class MemoryCache extends system.runtime.caching.ObjectCache implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -331,6 +335,21 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
         }
     }
 
+    public IDictionary_2 GetValues(IEnumerable_1 keys, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValues = null;
+        try {
+            retObjectGetValues = classInstance.Invoke("GetValues", keys == null ? null : keys.getJCOInstance(), regionName);
+            JCObject objGetValues = (JCObject)retObjectGetValues;
+            return new IDictionary_2Implementation(objGetValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValues != null ? retObjectGetValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject AddOrGetExisting(java.lang.String key, NetObject value, DateTimeOffset absoluteExpiration, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +420,21 @@ public class MemoryCache extends ObjectCache implements AutoCloseable {
             return new NetObject(objRemove);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CacheEntryChangeMonitor CreateCacheEntryChangeMonitor(IEnumerable_1 keys, java.lang.String regionName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCacheEntryChangeMonitor = null;
+        try {
+            retObjectCreateCacheEntryChangeMonitor = classInstance.Invoke("CreateCacheEntryChangeMonitor", keys == null ? null : keys.getJCOInstance(), regionName);
+            JCObject objCreateCacheEntryChangeMonitor = (JCObject)retObjectCreateCacheEntryChangeMonitor;
+            return new CacheEntryChangeMonitor(objCreateCacheEntryChangeMonitor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCacheEntryChangeMonitor != null ? retObjectCreateCacheEntryChangeMonitor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

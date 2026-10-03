@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.WeakReference;
+import system.collections.generic.IReadOnlyDictionary_2;
+import system.collections.generic.IReadOnlyDictionary_2Implementation;
 import system.GCMemoryInfo;
 import system.GCKind;
 import system.GCNotificationStatus;
@@ -449,6 +451,21 @@ public class GC extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IReadOnlyDictionary_2 GetConfigurationVariables() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetConfigurationVariables = null;
+        try {
+            retObjectGetConfigurationVariables = classType.Invoke("GetConfigurationVariables");
+            JCObject objGetConfigurationVariables = (JCObject)retObjectGetConfigurationVariables;
+            return new IReadOnlyDictionary_2Implementation(objGetConfigurationVariables);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConfigurationVariables != null ? retObjectGetConfigurationVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

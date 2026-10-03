@@ -53,7 +53,7 @@ import microsoft.build.utilities.Task;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolTask extends Task  {
+public class ToolTask extends microsoft.build.utilities.Task  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

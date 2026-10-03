@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.hosting.WorkflowInstanceProxy;
 
 
@@ -141,6 +143,21 @@ public class IWorkflowInstanceExtensionImplementation extends NetObject implemen
 
     // Methods section
     
+    public IEnumerable_1 GetAdditionalExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAdditionalExtensions = null;
+        try {
+            retObjectGetAdditionalExtensions = classInstance.Invoke("GetAdditionalExtensions");
+            JCObject objGetAdditionalExtensions = (JCObject)retObjectGetAdditionalExtensions;
+            return new IEnumerable_1Implementation(objGetAdditionalExtensions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAdditionalExtensions != null ? retObjectGetAdditionalExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetInstance(WorkflowInstanceProxy instance) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

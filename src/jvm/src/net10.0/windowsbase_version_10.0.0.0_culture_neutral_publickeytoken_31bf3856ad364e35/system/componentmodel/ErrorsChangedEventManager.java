@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.WeakEventManager;
 import system.componentmodel.INotifyDataErrorInfo;
 import system.componentmodel.INotifyDataErrorInfoImplementation;
+import system.EventHandler_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.componentmodel.INotifyDataErrorInfoImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ErrorsChangedEventManager extends WeakEventManager  {
+public class ErrorsChangedEventManager extends system.windows.WeakEventManager  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -156,6 +157,26 @@ public class ErrorsChangedEventManager extends WeakEventManager  {
     
     // Methods section
     
+    public static void AddHandler(INotifyDataErrorInfo source, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddHandler", source == null ? null : source.getJCOInstance(), handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveHandler(INotifyDataErrorInfo source, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveHandler", source == null ? null : source.getJCOInstance(), handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

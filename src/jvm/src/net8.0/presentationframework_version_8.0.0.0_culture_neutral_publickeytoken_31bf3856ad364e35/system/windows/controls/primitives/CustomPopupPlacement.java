@@ -55,7 +55,7 @@ import system.windows.controls.primitives.PopupPrimaryAxis;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CustomPopupPlacement extends ValueType  {
+public class CustomPopupPlacement extends system.ValueType  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

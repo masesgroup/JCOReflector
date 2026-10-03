@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.metadata.MetadataBase;
 import system.identitymodel.metadata.EntityId;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.identitymodel.metadata.Organization;
 
 
@@ -55,7 +57,7 @@ import system.identitymodel.metadata.Organization;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EntityDescriptor extends MetadataBase  {
+public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -176,6 +178,36 @@ public class EntityDescriptor extends MetadataBase  {
     
     // Properties section
     
+    public ICollection_1 getContacts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContacts = null;
+        try {
+            retObjectContacts = classInstance.Get("Contacts");
+            JCObject val = (JCObject)retObjectContacts;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContacts != null ? retObjectContacts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getRoleDescriptors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoleDescriptors = null;
+        try {
+            retObjectRoleDescriptors = classInstance.Get("RoleDescriptors");
+            JCObject val = (JCObject)retObjectRoleDescriptors;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoleDescriptors != null ? retObjectRoleDescriptors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EntityId getEntityId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

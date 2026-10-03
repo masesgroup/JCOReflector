@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.ecma335.TableIndex;
+import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.AssemblyDefinitionHandle;
 import system.reflection.metadata.StringHandle;
 import system.Version;
@@ -89,6 +90,7 @@ import system.reflection.metadata.ModuleReferenceHandle;
 import system.reflection.ParameterAttributes;
 import system.reflection.metadata.PropertyDefinitionHandle;
 import system.reflection.PropertyAttributes;
+import system.reflection.metadata.ReservedBlob_1;
 import system.reflection.metadata.StandaloneSignatureHandle;
 import system.reflection.metadata.TypeReferenceHandle;
 import system.reflection.metadata.TypeSpecificationHandle;
@@ -263,6 +265,21 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
+    public ImmutableArray_1 GetRowCounts() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRowCounts = null;
+        try {
+            retObjectGetRowCounts = classInstance.Invoke("GetRowCounts");
+            JCObject objGetRowCounts = (JCObject)retObjectGetRowCounts;
+            return new ImmutableArray_1(objGetRowCounts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRowCounts != null ? retObjectGetRowCounts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AssemblyDefinitionHandle AddAssembly(StringHandle name, Version version, StringHandle culture, BlobHandle publicKey, AssemblyFlags flags, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -329,6 +346,21 @@ public class MetadataBuilder extends NetObject  {
         java.lang.Object retObjectGetOrAddBlob = null;
         try {
             retObjectGetOrAddBlob = classInstance.Invoke("GetOrAddBlob", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objGetOrAddBlob = (JCObject)retObjectGetOrAddBlob;
+            return new BlobHandle(objGetOrAddBlob);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrAddBlob != null ? retObjectGetOrAddBlob.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BlobHandle GetOrAddBlob(ImmutableArray_1 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrAddBlob = null;
+        try {
+            retObjectGetOrAddBlob = classInstance.Invoke("GetOrAddBlob", value == null ? null : value.getJCOInstance());
             JCObject objGetOrAddBlob = (JCObject)retObjectGetOrAddBlob;
             return new BlobHandle(objGetOrAddBlob);
         } catch (java.lang.ClassCastException cce) {
@@ -798,6 +830,36 @@ public class MetadataBuilder extends NetObject  {
             return new PropertyDefinitionHandle(objAddProperty);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddProperty != null ? retObjectAddProperty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReservedBlob_1 ReserveGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReserveGuid = null;
+        try {
+            retObjectReserveGuid = classInstance.Invoke("ReserveGuid");
+            JCObject objReserveGuid = (JCObject)retObjectReserveGuid;
+            return new ReservedBlob_1(objReserveGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReserveGuid != null ? retObjectReserveGuid.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReservedBlob_1 ReserveUserString(int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.reflection.metadata.ImageFormatLimitationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReserveUserString = null;
+        try {
+            retObjectReserveUserString = classInstance.Invoke("ReserveUserString", length);
+            JCObject objReserveUserString = (JCObject)retObjectReserveUserString;
+            return new ReservedBlob_1(objReserveUserString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReserveUserString != null ? retObjectReserveUserString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

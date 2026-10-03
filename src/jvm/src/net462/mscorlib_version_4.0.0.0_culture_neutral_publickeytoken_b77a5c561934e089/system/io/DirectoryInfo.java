@@ -39,9 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.FileSystemInfo;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.io.SearchOption;
 import system.io.DirectoryInfo;
 import system.security.accesscontrol.DirectorySecurity;
-import system.io.SearchOption;
 import system.io.FileInfo;
 import system.security.accesscontrol.AccessControlSections;
 
@@ -58,7 +60,7 @@ import system.security.accesscontrol.AccessControlSections;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DirectoryInfo extends FileSystemInfo  {
+public class DirectoryInfo extends system.io.FileSystemInfo  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -169,6 +171,141 @@ public class DirectoryInfo extends FileSystemInfo  {
     
     // Methods section
     
+    public IEnumerable_1 EnumerateDirectories() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateDirectories = null;
+        try {
+            retObjectEnumerateDirectories = classInstance.Invoke("EnumerateDirectories");
+            JCObject objEnumerateDirectories = (JCObject)retObjectEnumerateDirectories;
+            return new IEnumerable_1Implementation(objEnumerateDirectories);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateDirectories != null ? retObjectEnumerateDirectories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateDirectories(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateDirectories = null;
+        try {
+            retObjectEnumerateDirectories = classInstance.Invoke("EnumerateDirectories", searchPattern);
+            JCObject objEnumerateDirectories = (JCObject)retObjectEnumerateDirectories;
+            return new IEnumerable_1Implementation(objEnumerateDirectories);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateDirectories != null ? retObjectEnumerateDirectories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateDirectories(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateDirectories = null;
+        try {
+            retObjectEnumerateDirectories = classInstance.Invoke("EnumerateDirectories", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject objEnumerateDirectories = (JCObject)retObjectEnumerateDirectories;
+            return new IEnumerable_1Implementation(objEnumerateDirectories);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateDirectories != null ? retObjectEnumerateDirectories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateFiles() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateFiles = null;
+        try {
+            retObjectEnumerateFiles = classInstance.Invoke("EnumerateFiles");
+            JCObject objEnumerateFiles = (JCObject)retObjectEnumerateFiles;
+            return new IEnumerable_1Implementation(objEnumerateFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateFiles != null ? retObjectEnumerateFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateFiles(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateFiles = null;
+        try {
+            retObjectEnumerateFiles = classInstance.Invoke("EnumerateFiles", searchPattern);
+            JCObject objEnumerateFiles = (JCObject)retObjectEnumerateFiles;
+            return new IEnumerable_1Implementation(objEnumerateFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateFiles != null ? retObjectEnumerateFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateFiles(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateFiles = null;
+        try {
+            retObjectEnumerateFiles = classInstance.Invoke("EnumerateFiles", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject objEnumerateFiles = (JCObject)retObjectEnumerateFiles;
+            return new IEnumerable_1Implementation(objEnumerateFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateFiles != null ? retObjectEnumerateFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateFileSystemInfos() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateFileSystemInfos = null;
+        try {
+            retObjectEnumerateFileSystemInfos = classInstance.Invoke("EnumerateFileSystemInfos");
+            JCObject objEnumerateFileSystemInfos = (JCObject)retObjectEnumerateFileSystemInfos;
+            return new IEnumerable_1Implementation(objEnumerateFileSystemInfos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateFileSystemInfos != null ? retObjectEnumerateFileSystemInfos.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateFileSystemInfos(java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateFileSystemInfos = null;
+        try {
+            retObjectEnumerateFileSystemInfos = classInstance.Invoke("EnumerateFileSystemInfos", searchPattern);
+            JCObject objEnumerateFileSystemInfos = (JCObject)retObjectEnumerateFileSystemInfos;
+            return new IEnumerable_1Implementation(objEnumerateFileSystemInfos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateFileSystemInfos != null ? retObjectEnumerateFileSystemInfos.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateFileSystemInfos(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateFileSystemInfos = null;
+        try {
+            retObjectEnumerateFileSystemInfos = classInstance.Invoke("EnumerateFileSystemInfos", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject objEnumerateFileSystemInfos = (JCObject)retObjectEnumerateFileSystemInfos;
+            return new IEnumerable_1Implementation(objEnumerateFileSystemInfos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateFileSystemInfos != null ? retObjectEnumerateFileSystemInfos.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DirectoryInfo CreateSubdirectory(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

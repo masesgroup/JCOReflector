@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Action_1;
 import system.io.pipelines.PipeScheduler;
 
 
@@ -152,6 +153,16 @@ public class PipeScheduler extends NetObject  {
     
     // Methods section
     
+    public void Schedule(Action_1 action, NetObject state) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Schedule", action, state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

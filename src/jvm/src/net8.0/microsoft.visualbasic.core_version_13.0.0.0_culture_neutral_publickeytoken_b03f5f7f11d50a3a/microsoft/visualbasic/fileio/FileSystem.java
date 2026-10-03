@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.visualbasic.fileio.TextFieldParser;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import microsoft.visualbasic.fileio.SearchOption;
 import system.io.DirectoryInfo;
 import system.io.DriveInfo;
 import system.io.FileInfo;
@@ -276,6 +278,141 @@ public class FileSystem extends NetObject  {
             return new TextFieldParser(objOpenTextFieldParser);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenTextFieldParser != null ? retObjectOpenTextFieldParser.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 FindInFiles(java.lang.String directory, java.lang.String containsText, boolean ignoreCase, SearchOption searchType, java.lang.String... fileWildcards) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.InvalidCastException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindInFiles = null;
+        try {
+            retObjectFindInFiles = classType.Invoke("FindInFiles", directory, containsText, ignoreCase, searchType == null ? null : searchType.getJCOInstance(), fileWildcards);
+            JCObject objFindInFiles = (JCObject)retObjectFindInFiles;
+            return new ReadOnlyCollection_1(objFindInFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInFiles != null ? retObjectFindInFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 FindInFiles(java.lang.String dupParam0, java.lang.String dupParam1, boolean dupParam2, SearchOption dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.InvalidCastException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindInFiles = null;
+        try {
+            retObjectFindInFiles = classType.Invoke("FindInFiles", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut());
+            JCObject objFindInFiles = (JCObject)retObjectFindInFiles;
+            return new ReadOnlyCollection_1(objFindInFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInFiles != null ? retObjectFindInFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 FindInFiles(java.lang.String directory, java.lang.String containsText, boolean ignoreCase, SearchOption searchType) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.InvalidCastException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindInFiles = null;
+        try {
+            retObjectFindInFiles = classType.Invoke("FindInFiles", directory, containsText, ignoreCase, searchType == null ? null : searchType.getJCOInstance());
+            JCObject objFindInFiles = (JCObject)retObjectFindInFiles;
+            return new ReadOnlyCollection_1(objFindInFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindInFiles != null ? retObjectFindInFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetDirectories(java.lang.String directory, SearchOption searchType, java.lang.String... wildcards) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectories = null;
+        try {
+            retObjectGetDirectories = classType.Invoke("GetDirectories", directory, searchType == null ? null : searchType.getJCOInstance(), wildcards);
+            JCObject objGetDirectories = (JCObject)retObjectGetDirectories;
+            return new ReadOnlyCollection_1(objGetDirectories);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetDirectories(java.lang.String dupParam0, SearchOption dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectories = null;
+        try {
+            retObjectGetDirectories = classType.Invoke("GetDirectories", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
+            JCObject objGetDirectories = (JCObject)retObjectGetDirectories;
+            return new ReadOnlyCollection_1(objGetDirectories);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetDirectories(java.lang.String directory) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectories = null;
+        try {
+            retObjectGetDirectories = classType.Invoke("GetDirectories", directory);
+            JCObject objGetDirectories = (JCObject)retObjectGetDirectories;
+            return new ReadOnlyCollection_1(objGetDirectories);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetFiles(java.lang.String directory, SearchOption searchType, java.lang.String... wildcards) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFiles = null;
+        try {
+            retObjectGetFiles = classType.Invoke("GetFiles", directory, searchType == null ? null : searchType.getJCOInstance(), wildcards);
+            JCObject objGetFiles = (JCObject)retObjectGetFiles;
+            return new ReadOnlyCollection_1(objGetFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetFiles(java.lang.String dupParam0, SearchOption dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFiles = null;
+        try {
+            retObjectGetFiles = classType.Invoke("GetFiles", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
+            JCObject objGetFiles = (JCObject)retObjectGetFiles;
+            return new ReadOnlyCollection_1(objGetFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetFiles(java.lang.String directory) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFiles = null;
+        try {
+            retObjectGetFiles = classType.Invoke("GetFiles", directory);
+            JCObject objGetFiles = (JCObject)retObjectGetFiles;
+            return new ReadOnlyCollection_1(objGetFiles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -764,6 +901,21 @@ public class FileSystem extends NetObject  {
     
     // Properties section
     
+    public static ReadOnlyCollection_1 getDrives() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDrives = null;
+        try {
+            retObjectDrives = classType.Get("Drives");
+            JCObject val = (JCObject)retObjectDrives;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDrives != null ? retObjectDrives.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String getCurrentDirectory() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

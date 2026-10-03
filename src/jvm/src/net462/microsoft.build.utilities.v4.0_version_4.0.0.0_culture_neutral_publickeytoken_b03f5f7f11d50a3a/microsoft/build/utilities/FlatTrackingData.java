@@ -43,11 +43,14 @@ import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
 import system.DateTime;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import microsoft.build.utilities.Task;
 import microsoft.build.utilities.UpToDateCheckType;
 import microsoft.build.utilities.TaskLoggingHelper;
 import microsoft.build.utilities.FlatTrackingData;
 import microsoft.build.utilities.DependencyFilter;
+import system.collections.generic.List_1;
 
 
 /**
@@ -193,6 +196,16 @@ public class FlatTrackingData extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(tlogFiles), toObjectFromArray(tlogFilesToIgnore), missingFileTimeUtc == null ? null : missingFileTimeUtc.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FlatTrackingData(ITaskItem[] tlogFiles, ITaskItem[] tlogFilesToIgnore, DateTime missingFileTimeUtc, java.lang.String[] excludedInputPaths, IDictionary_2 sharedLastWriteTimeUtcCache) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(tlogFiles), toObjectFromArray(tlogFilesToIgnore), missingFileTimeUtc == null ? null : missingFileTimeUtc.getJCOInstance(), excludedInputPaths, sharedLastWriteTimeUtcCache == null ? null : sharedLastWriteTimeUtcCache.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,6 +425,46 @@ public class FlatTrackingData extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TlogFiles", toObjectFromArray(TlogFiles));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getDependencyTable() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDependencyTable = null;
+        try {
+            retObjectDependencyTable = classInstance.Get("DependencyTable");
+            JCObject val = (JCObject)retObjectDependencyTable;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDependencyTable != null ? retObjectDependencyTable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getMissingFiles() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMissingFiles = null;
+        try {
+            retObjectMissingFiles = classInstance.Get("MissingFiles");
+            JCObject val = (JCObject)retObjectMissingFiles;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMissingFiles != null ? retObjectMissingFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMissingFiles(List_1 MissingFiles) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MissingFiles", MissingFiles == null ? null : MissingFiles.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

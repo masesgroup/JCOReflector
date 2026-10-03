@@ -40,7 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.security.SecurityTokenSpecification;
 import system.identitymodel.tokens.SecurityToken;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.servicemodel.security.SecurityTokenAttachmentMode;
+import system.servicemodel.security.tokens.SecurityTokenParameters;
 
 
 /**
@@ -55,7 +57,7 @@ import system.servicemodel.security.SecurityTokenAttachmentMode;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SupportingTokenSpecification extends SecurityTokenSpecification  {
+public class SupportingTokenSpecification extends system.servicemodel.security.SecurityTokenSpecification  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -149,6 +151,26 @@ public class SupportingTokenSpecification extends SecurityTokenSpecification  {
     // Constructors section
     
     public SupportingTokenSpecification() throws Throwable {
+    }
+
+    public SupportingTokenSpecification(SecurityToken token, ReadOnlyCollection_1 tokenPolicies, SecurityTokenAttachmentMode attachmentMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(token == null ? null : token.getJCOInstance(), tokenPolicies == null ? null : tokenPolicies.getJCOInstance(), attachmentMode == null ? null : attachmentMode.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SupportingTokenSpecification(SecurityToken token, ReadOnlyCollection_1 tokenPolicies, SecurityTokenAttachmentMode attachmentMode, SecurityTokenParameters tokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(token == null ? null : token.getJCOInstance(), tokenPolicies == null ? null : tokenPolicies.getJCOInstance(), attachmentMode == null ? null : attachmentMode.getJCOInstance(), tokenParameters == null ? null : tokenParameters.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

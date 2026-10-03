@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.XmlQualifiedName;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -183,6 +185,21 @@ public class ContentLocatorPart extends NetObject  {
     
     // Properties section
     
+    public IDictionary_2 getNameValuePairs() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameValuePairs = null;
+        try {
+            retObjectNameValuePairs = classInstance.Get("NameValuePairs");
+            JCObject val = (JCObject)retObjectNameValuePairs;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameValuePairs != null ? retObjectNameValuePairs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlQualifiedName getPartType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

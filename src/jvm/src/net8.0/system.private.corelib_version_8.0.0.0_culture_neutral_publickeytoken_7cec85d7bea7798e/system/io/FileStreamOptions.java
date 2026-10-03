@@ -42,6 +42,7 @@ import system.io.FileAccess;
 import system.io.FileMode;
 import system.io.FileOptions;
 import system.io.FileShare;
+import system.Nullable_1;
 
 
 /**
@@ -362,6 +363,31 @@ public class FileStreamOptions extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Share", Share == null ? null : Share.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getUnixCreateMode() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnixCreateMode = null;
+        try {
+            retObjectUnixCreateMode = classInstance.Get("UnixCreateMode");
+            JCObject val = (JCObject)retObjectUnixCreateMode;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnixCreateMode != null ? retObjectUnixCreateMode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUnixCreateMode(Nullable_1 UnixCreateMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UnixCreateMode", UnixCreateMode == null ? null : UnixCreateMode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

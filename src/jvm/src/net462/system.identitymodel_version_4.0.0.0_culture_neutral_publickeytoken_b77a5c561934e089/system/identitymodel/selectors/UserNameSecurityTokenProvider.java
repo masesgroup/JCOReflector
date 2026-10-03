@@ -53,7 +53,7 @@ import system.identitymodel.selectors.SecurityTokenProvider;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UserNameSecurityTokenProvider extends SecurityTokenProvider  {
+public class UserNameSecurityTokenProvider extends system.identitymodel.selectors.SecurityTokenProvider  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

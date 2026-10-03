@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.Saml2NameIdentifier;
 import system.xml.XmlWriter;
+import system.collections.objectmodel.Collection_1;
 import system.DateTime;
 import system.identitymodel.tokens.EncryptingCredentials;
 import system.identitymodel.tokens.Saml2Advice;
@@ -195,6 +196,36 @@ public class Saml2Assertion extends NetObject  {
             return (boolean)retObjectCanWriteSourceData;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanWriteSourceData != null ? retObjectCanWriteSourceData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getExternalEncryptedKeys() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalEncryptedKeys = null;
+        try {
+            retObjectExternalEncryptedKeys = classInstance.Get("ExternalEncryptedKeys");
+            JCObject val = (JCObject)retObjectExternalEncryptedKeys;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalEncryptedKeys != null ? retObjectExternalEncryptedKeys.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getStatements() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatements = null;
+        try {
+            retObjectStatements = classInstance.Get("Statements");
+            JCObject val = (JCObject)retObjectStatements;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatements != null ? retObjectStatements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

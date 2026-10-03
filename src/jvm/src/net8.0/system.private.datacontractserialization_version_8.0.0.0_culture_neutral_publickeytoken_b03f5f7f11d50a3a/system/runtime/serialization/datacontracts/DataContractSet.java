@@ -41,9 +41,14 @@ import java.util.ArrayList;
 import system.runtime.serialization.datacontracts.DataContractSet;
 import system.runtime.serialization.ISerializationSurrogateProvider;
 import system.runtime.serialization.ISerializationSurrogateProviderImplementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.List_1;
+import system.xml.schema.XmlSchemaSet;
 import system.runtime.serialization.datacontracts.DataContract;
 import system.xml.XmlQualifiedName;
-import system.xml.schema.XmlSchemaSet;
+import system.Nullable_1;
+import system.collections.generic.Dictionary_2;
 import system.collections.Hashtable;
 
 
@@ -165,11 +170,36 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    public DataContractSet(ISerializationSurrogateProvider dataContractSurrogate, IEnumerable_1 referencedTypes, IEnumerable_1 referencedCollectionTypes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance(), referencedTypes == null ? null : referencedTypes.getJCOInstance(), referencedCollectionTypes == null ? null : referencedCollectionTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public List_1 ImportSchemaSet(XmlSchemaSet schemaSet, IEnumerable_1 elements, boolean importXmlDataType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportSchemaSet = null;
+        try {
+            retObjectImportSchemaSet = classInstance.Invoke("ImportSchemaSet", schemaSet == null ? null : schemaSet.getJCOInstance(), elements == null ? null : elements.getJCOInstance(), importXmlDataType);
+            JCObject objImportSchemaSet = (JCObject)retObjectImportSchemaSet;
+            return new List_1(objImportSchemaSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportSchemaSet != null ? retObjectImportSchemaSet.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataContract GetDataContract(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.runtime.serialization.InvalidDataContractException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -200,10 +230,80 @@ public class DataContractSet extends NetObject  {
         }
     }
 
+    public NetType GetReferencedType(XmlQualifiedName xmlName, DataContract dataContract, JCORefOut<DataContract> referencedContract, JCORefOut<NetObject[]> genericParameters, Nullable_1 supportGenericTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.FormatException, system.runtime.serialization.SerializationException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReferencedType = null;
+        try {
+            retObjectGetReferencedType = classInstance.Invoke("GetReferencedType", xmlName == null ? null : xmlName.getJCOInstance(), dataContract == null ? null : dataContract.getJCOInstance(), referencedContract.getJCRefOut(), genericParameters.getJCRefOut(), supportGenericTypes == null ? null : supportGenericTypes.getJCOInstance());
+            JCObject objGetReferencedType = (JCObject)retObjectGetReferencedType;
+            return new NetType(objGetReferencedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReferencedType != null ? retObjectGetReferencedType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public Dictionary_2 getProcessedContracts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessedContracts = null;
+        try {
+            retObjectProcessedContracts = classInstance.Get("ProcessedContracts");
+            JCObject val = (JCObject)retObjectProcessedContracts;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessedContracts != null ? retObjectProcessedContracts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 getContracts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContracts = null;
+        try {
+            retObjectContracts = classInstance.Get("Contracts");
+            JCObject val = (JCObject)retObjectContracts;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContracts != null ? retObjectContracts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 getKnownTypesForObject() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKnownTypesForObject = null;
+        try {
+            retObjectKnownTypesForObject = classInstance.Get("KnownTypesForObject");
+            JCObject val = (JCObject)retObjectKnownTypesForObject;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKnownTypesForObject != null ? retObjectKnownTypesForObject.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setKnownTypesForObject(Dictionary_2 KnownTypesForObject) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("KnownTypesForObject", KnownTypesForObject == null ? null : KnownTypesForObject.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Hashtable getSurrogateData() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

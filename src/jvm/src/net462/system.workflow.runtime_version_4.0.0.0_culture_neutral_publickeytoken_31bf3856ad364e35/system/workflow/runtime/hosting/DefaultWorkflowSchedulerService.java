@@ -54,7 +54,7 @@ import system.collections.specialized.NameValueCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DefaultWorkflowSchedulerService extends WorkflowSchedulerService  {
+public class DefaultWorkflowSchedulerService extends system.workflow.runtime.hosting.WorkflowSchedulerService  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

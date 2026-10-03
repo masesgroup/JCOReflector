@@ -56,7 +56,7 @@ import system.Single;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CounterSample extends ValueType  {
+public class CounterSample extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Diagnostics.PerformanceCounter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

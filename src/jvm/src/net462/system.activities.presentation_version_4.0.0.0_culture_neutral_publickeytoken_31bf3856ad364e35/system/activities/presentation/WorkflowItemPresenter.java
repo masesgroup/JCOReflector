@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.controls.ContentControl;
+import system.collections.generic.List_1;
 import system.activities.presentation.model.ModelItem;
+import system.windows.Point;
+import system.activities.presentation.WorkflowViewElement;
 import system.activities.presentation.view.TypeResolvingOptions;
 
 
@@ -55,7 +58,7 @@ import system.activities.presentation.view.TypeResolvingOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowItemPresenter extends ContentControl  {
+public class WorkflowItemPresenter extends system.windows.controls.ContentControl  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -167,7 +170,52 @@ public class WorkflowItemPresenter extends ContentControl  {
      *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
      */
     @Deprecated 
+    public boolean CanPasteItems(List_1 itemsToPaste) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject OnItemsCopied(List_1 itemsToCopy) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject OnItemsCut(List_1 itemsToCut) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     */
+    @Deprecated 
     public void OnItemMoved(ModelItem modelItem) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnItemsDelete(List_1 itemsToDelete) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnItemsPasted(List_1 itemsToPaste, List_1 metadata, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
     }
 

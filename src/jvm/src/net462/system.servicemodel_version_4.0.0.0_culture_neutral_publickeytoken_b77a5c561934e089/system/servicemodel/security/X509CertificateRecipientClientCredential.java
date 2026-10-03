@@ -42,6 +42,7 @@ import system.security.cryptography.x509certificates.StoreLocation;
 import system.security.cryptography.x509certificates.StoreName;
 import system.security.cryptography.x509certificates.X509FindType;
 import system.Uri;
+import system.collections.generic.Dictionary_2;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.servicemodel.security.X509ServiceCertificateAuthentication;
 
@@ -203,6 +204,21 @@ public class X509CertificateRecipientClientCredential extends NetObject  {
     
     // Properties section
     
+    public Dictionary_2 getScopedCertificates() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScopedCertificates = null;
+        try {
+            retObjectScopedCertificates = classInstance.Get("ScopedCertificates");
+            JCObject val = (JCObject)retObjectScopedCertificates;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScopedCertificates != null ? retObjectScopedCertificates.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public X509Certificate2 getDefaultCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

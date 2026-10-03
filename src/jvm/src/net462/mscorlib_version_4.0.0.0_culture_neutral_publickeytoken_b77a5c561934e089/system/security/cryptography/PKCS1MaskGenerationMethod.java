@@ -53,7 +53,7 @@ import system.security.cryptography.MaskGenerationMethod;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PKCS1MaskGenerationMethod extends MaskGenerationMethod  {
+public class PKCS1MaskGenerationMethod extends system.security.cryptography.MaskGenerationMethod  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

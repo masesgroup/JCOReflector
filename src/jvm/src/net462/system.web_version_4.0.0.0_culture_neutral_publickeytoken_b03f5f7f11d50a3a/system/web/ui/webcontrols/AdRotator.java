@@ -55,7 +55,7 @@ import system.web.ui.webcontrols.AdCreatedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AdRotator extends DataBoundControl  {
+public class AdRotator extends system.web.ui.webcontrols.DataBoundControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

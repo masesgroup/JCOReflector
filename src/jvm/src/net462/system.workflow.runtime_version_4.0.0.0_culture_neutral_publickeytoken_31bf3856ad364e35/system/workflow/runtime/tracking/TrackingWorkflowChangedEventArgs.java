@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.workflow.componentmodel.Activity;
 
 
@@ -54,7 +56,7 @@ import system.workflow.componentmodel.Activity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TrackingWorkflowChangedEventArgs extends EventArgs  {
+public class TrackingWorkflowChangedEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -159,6 +161,21 @@ public class TrackingWorkflowChangedEventArgs extends EventArgs  {
     
     // Properties section
     
+    public IList_1 getChanges() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChanges = null;
+        try {
+            retObjectChanges = classInstance.Get("Changes");
+            JCObject val = (JCObject)retObjectChanges;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChanges != null ? retObjectChanges.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Activity getDefinition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

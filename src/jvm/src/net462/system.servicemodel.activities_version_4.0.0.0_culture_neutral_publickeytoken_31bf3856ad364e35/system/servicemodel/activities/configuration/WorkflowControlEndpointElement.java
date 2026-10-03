@@ -54,7 +54,7 @@ import system.Uri;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowControlEndpointElement extends StandardEndpointElement  {
+public class WorkflowControlEndpointElement extends system.servicemodel.configuration.StandardEndpointElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

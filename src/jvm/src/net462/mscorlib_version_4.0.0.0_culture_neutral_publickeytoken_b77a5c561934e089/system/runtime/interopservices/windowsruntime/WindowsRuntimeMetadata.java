@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -151,6 +153,36 @@ public class WindowsRuntimeMetadata extends NetObject  {
     
     // Methods section
     
+    public static IEnumerable_1 ResolveNamespace(java.lang.String namespaceName, IEnumerable_1 packageGraphFilePaths) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolveNamespace = null;
+        try {
+            retObjectResolveNamespace = classType.Invoke("ResolveNamespace", namespaceName, packageGraphFilePaths == null ? null : packageGraphFilePaths.getJCOInstance());
+            JCObject objResolveNamespace = (JCObject)retObjectResolveNamespace;
+            return new IEnumerable_1Implementation(objResolveNamespace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveNamespace != null ? retObjectResolveNamespace.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 ResolveNamespace(java.lang.String namespaceName, java.lang.String windowsSdkFilePath, IEnumerable_1 packageGraphFilePaths) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolveNamespace = null;
+        try {
+            retObjectResolveNamespace = classType.Invoke("ResolveNamespace", namespaceName, windowsSdkFilePath, packageGraphFilePaths == null ? null : packageGraphFilePaths.getJCOInstance());
+            JCObject objResolveNamespace = (JCObject)retObjectResolveNamespace;
+            return new IEnumerable_1Implementation(objResolveNamespace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveNamespace != null ? retObjectResolveNamespace.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

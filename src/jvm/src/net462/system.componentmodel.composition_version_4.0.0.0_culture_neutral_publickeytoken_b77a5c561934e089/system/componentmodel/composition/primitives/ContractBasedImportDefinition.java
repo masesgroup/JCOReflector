@@ -39,8 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.composition.primitives.ImportDefinition;
-import system.componentmodel.composition.primitives.ExportDefinition;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.primitives.ImportCardinality;
 import system.componentmodel.composition.CreationPolicy;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.componentmodel.composition.primitives.ExportDefinition;
+import system.linq.expressions.Expression_1;
 
 
 /**
@@ -55,7 +61,7 @@ import system.componentmodel.composition.CreationPolicy;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ContractBasedImportDefinition extends ImportDefinition  {
+public class ContractBasedImportDefinition extends system.componentmodel.composition.primitives.ImportDefinition  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -151,6 +157,26 @@ public class ContractBasedImportDefinition extends ImportDefinition  {
     public ContractBasedImportDefinition() throws Throwable {
     }
 
+    public ContractBasedImportDefinition(java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, boolean isPrerequisite, CreationPolicy requiredCreationPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(contractName, requiredTypeIdentity, requiredMetadata == null ? null : requiredMetadata.getJCOInstance(), cardinality == null ? null : cardinality.getJCOInstance(), isRecomposable, isPrerequisite, requiredCreationPolicy == null ? null : requiredCreationPolicy.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ContractBasedImportDefinition(java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, boolean isPrerequisite, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(contractName, requiredTypeIdentity, requiredMetadata == null ? null : requiredMetadata.getJCOInstance(), cardinality == null ? null : cardinality.getJCOInstance(), isRecomposable, isPrerequisite, requiredCreationPolicy == null ? null : requiredCreationPolicy.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -174,6 +200,21 @@ public class ContractBasedImportDefinition extends ImportDefinition  {
     
     // Properties section
     
+    public IEnumerable_1 getRequiredMetadata() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiredMetadata = null;
+        try {
+            retObjectRequiredMetadata = classInstance.Get("RequiredMetadata");
+            JCObject val = (JCObject)retObjectRequiredMetadata;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequiredMetadata != null ? retObjectRequiredMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CreationPolicy getRequiredCreationPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

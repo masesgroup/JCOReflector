@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.DbProviderFactory;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.common.DbConnection;
 import system.data.DataRow;
 import system.data.DataTable;
@@ -178,6 +180,21 @@ public class DbProviderFactories extends NetObject  {
             return (boolean)retObjectUnregisterFactory;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnregisterFactory != null ? retObjectUnregisterFactory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetProviderInvariantNames() throws Throwable, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetProviderInvariantNames = null;
+        try {
+            retObjectGetProviderInvariantNames = classType.Invoke("GetProviderInvariantNames");
+            JCObject objGetProviderInvariantNames = (JCObject)retObjectGetProviderInvariantNames;
+            return new IEnumerable_1Implementation(objGetProviderInvariantNames);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderInvariantNames != null ? retObjectGetProviderInvariantNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

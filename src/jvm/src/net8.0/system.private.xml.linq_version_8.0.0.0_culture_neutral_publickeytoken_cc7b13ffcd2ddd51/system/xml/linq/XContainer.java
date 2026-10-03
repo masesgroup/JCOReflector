@@ -39,8 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.linq.XNode;
-import system.xml.linq.XElement;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xml.linq.XName;
+import system.xml.linq.XElement;
 import system.xml.XmlWriter;
 
 
@@ -56,7 +58,7 @@ import system.xml.XmlWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XContainer extends XNode  {
+public class XContainer extends system.xml.linq.XNode  {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -155,6 +157,96 @@ public class XContainer extends XNode  {
     
     // Methods section
     
+    public IEnumerable_1 Descendants() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescendants = null;
+        try {
+            retObjectDescendants = classInstance.Invoke("Descendants");
+            JCObject objDescendants = (JCObject)retObjectDescendants;
+            return new IEnumerable_1Implementation(objDescendants);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescendants != null ? retObjectDescendants.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 Descendants(XName name) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescendants = null;
+        try {
+            retObjectDescendants = classInstance.Invoke("Descendants", name == null ? null : name.getJCOInstance());
+            JCObject objDescendants = (JCObject)retObjectDescendants;
+            return new IEnumerable_1Implementation(objDescendants);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescendants != null ? retObjectDescendants.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 Elements() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElements = null;
+        try {
+            retObjectElements = classInstance.Invoke("Elements");
+            JCObject objElements = (JCObject)retObjectElements;
+            return new IEnumerable_1Implementation(objElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElements != null ? retObjectElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 Elements(XName name) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElements = null;
+        try {
+            retObjectElements = classInstance.Invoke("Elements", name == null ? null : name.getJCOInstance());
+            JCObject objElements = (JCObject)retObjectElements;
+            return new IEnumerable_1Implementation(objElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElements != null ? retObjectElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 DescendantNodes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescendantNodes = null;
+        try {
+            retObjectDescendantNodes = classInstance.Invoke("DescendantNodes");
+            JCObject objDescendantNodes = (JCObject)retObjectDescendantNodes;
+            return new IEnumerable_1Implementation(objDescendantNodes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescendantNodes != null ? retObjectDescendantNodes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 Nodes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodes = null;
+        try {
+            retObjectNodes = classInstance.Invoke("Nodes");
+            JCObject objNodes = (JCObject)retObjectNodes;
+            return new IEnumerable_1Implementation(objNodes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodes != null ? retObjectNodes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XElement Element(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

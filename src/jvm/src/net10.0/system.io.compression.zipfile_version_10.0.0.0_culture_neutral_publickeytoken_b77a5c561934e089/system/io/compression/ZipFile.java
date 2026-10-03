@@ -45,6 +45,7 @@ import system.threading.tasks.Task;
 import system.io.Stream;
 import system.io.compression.CompressionLevel;
 import system.threading.CancellationToken;
+import system.threading.tasks.Task_1;
 
 
 /**
@@ -408,6 +409,51 @@ public class ZipFile extends NetObject  {
             return new Task(objExtractToDirectoryAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractToDirectoryAsync != null ? retObjectExtractToDirectoryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 OpenAsync(java.lang.String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenAsync = null;
+        try {
+            retObjectOpenAsync = classType.Invoke("OpenAsync", archiveFileName, mode == null ? null : mode.getJCOInstance(), entryNameEncoding == null ? null : entryNameEncoding.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objOpenAsync = (JCObject)retObjectOpenAsync;
+            return new Task_1(objOpenAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenAsync != null ? retObjectOpenAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 OpenAsync(java.lang.String archiveFileName, ZipArchiveMode mode, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenAsync = null;
+        try {
+            retObjectOpenAsync = classType.Invoke("OpenAsync", archiveFileName, mode == null ? null : mode.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objOpenAsync = (JCObject)retObjectOpenAsync;
+            return new Task_1(objOpenAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenAsync != null ? retObjectOpenAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 OpenReadAsync(java.lang.String archiveFileName, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenReadAsync = null;
+        try {
+            retObjectOpenReadAsync = classType.Invoke("OpenReadAsync", archiveFileName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objOpenReadAsync = (JCObject)retObjectOpenReadAsync;
+            return new Task_1(objOpenReadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenReadAsync != null ? retObjectOpenReadAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

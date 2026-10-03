@@ -38,7 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xaml.XamlType;
+import system.xaml.XamlMember;
 import system.xaml.AmbientPropertyValue;
 
 
@@ -142,6 +145,51 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
 
     // Methods section
     
+    public IEnumerable_1 GetAllAmbientValues(XamlType... types) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllAmbientValues = null;
+        try {
+            retObjectGetAllAmbientValues = classInstance.Invoke("GetAllAmbientValues", (java.lang.Object)toObjectFromArray(types));
+            JCObject objGetAllAmbientValues = (JCObject)retObjectGetAllAmbientValues;
+            return new IEnumerable_1Implementation(objGetAllAmbientValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllAmbientValues != null ? retObjectGetAllAmbientValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetAllAmbientValues(IEnumerable_1 ceilingTypes, boolean searchLiveStackOnly, IEnumerable_1 types, XamlMember... properties) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllAmbientValues = null;
+        try {
+            retObjectGetAllAmbientValues = classInstance.Invoke("GetAllAmbientValues", ceilingTypes == null ? null : ceilingTypes.getJCOInstance(), searchLiveStackOnly, types == null ? null : types.getJCOInstance(), toObjectFromArray(properties));
+            JCObject objGetAllAmbientValues = (JCObject)retObjectGetAllAmbientValues;
+            return new IEnumerable_1Implementation(objGetAllAmbientValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllAmbientValues != null ? retObjectGetAllAmbientValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetAllAmbientValues(IEnumerable_1 ceilingTypes, XamlMember... properties) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllAmbientValues = null;
+        try {
+            retObjectGetAllAmbientValues = classInstance.Invoke("GetAllAmbientValues", ceilingTypes == null ? null : ceilingTypes.getJCOInstance(), toObjectFromArray(properties));
+            JCObject objGetAllAmbientValues = (JCObject)retObjectGetAllAmbientValues;
+            return new IEnumerable_1Implementation(objGetAllAmbientValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllAmbientValues != null ? retObjectGetAllAmbientValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetFirstAmbientValue(XamlType... types) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -150,6 +198,21 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
             retObjectGetFirstAmbientValue = classInstance.Invoke("GetFirstAmbientValue", (java.lang.Object)toObjectFromArray(types));
             JCObject objGetFirstAmbientValue = (JCObject)retObjectGetFirstAmbientValue;
             return new NetObject(objGetFirstAmbientValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFirstAmbientValue != null ? retObjectGetFirstAmbientValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AmbientPropertyValue GetFirstAmbientValue(IEnumerable_1 ceilingTypes, XamlMember... properties) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFirstAmbientValue = null;
+        try {
+            retObjectGetFirstAmbientValue = classInstance.Invoke("GetFirstAmbientValue", ceilingTypes == null ? null : ceilingTypes.getJCOInstance(), toObjectFromArray(properties));
+            JCObject objGetFirstAmbientValue = (JCObject)retObjectGetFirstAmbientValue;
+            return new AmbientPropertyValue(objGetFirstAmbientValue);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFirstAmbientValue != null ? retObjectGetFirstAmbientValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {

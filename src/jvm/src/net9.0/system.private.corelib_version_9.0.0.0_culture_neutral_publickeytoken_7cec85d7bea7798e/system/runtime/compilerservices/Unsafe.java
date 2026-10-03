@@ -152,6 +152,102 @@ public class Unsafe extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> boolean AreSame(JCORefOut<T> left, JCORefOut<T> right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAreSame = null;
+        try {
+            retObjectAreSame = classType.Invoke("AreSame", left.getJCRefOut(), right.getJCRefOut());
+            return (boolean)retObjectAreSame;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAreSame != null ? retObjectAreSame.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean IsAddressGreaterThan(JCORefOut<T> left, JCORefOut<T> right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAddressGreaterThan = null;
+        try {
+            retObjectIsAddressGreaterThan = classType.Invoke("IsAddressGreaterThan", left.getJCRefOut(), right.getJCRefOut());
+            return (boolean)retObjectIsAddressGreaterThan;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAddressGreaterThan != null ? retObjectIsAddressGreaterThan.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean IsAddressLessThan(JCORefOut<T> left, JCORefOut<T> right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAddressLessThan = null;
+        try {
+            retObjectIsAddressLessThan = classType.Invoke("IsAddressLessThan", left.getJCRefOut(), right.getJCRefOut());
+            return (boolean)retObjectIsAddressLessThan;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAddressLessThan != null ? retObjectIsAddressLessThan.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean IsNullRef(JCORefOut<T> source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNullRef = null;
+        try {
+            retObjectIsNullRef = classType.Invoke("IsNullRef", source.getJCRefOut());
+            return (boolean)retObjectIsNullRef;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNullRef != null ? retObjectIsNullRef.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int SizeOf() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSizeOf = null;
+        try {
+            retObjectSizeOf = classType.Invoke("SizeOf");
+            return (int)retObjectSizeOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportSizeOfError = true;
+            java.lang.String retObjectSizeOf_ToString = retObjectSizeOf == null ? "null" : retObjectSizeOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectSizeOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectSizeOfClass = retObjectSizeOf.getClass();
+                    // java.lang.reflect.Method retObjectSizeOfMethod = retObjectSizeOfClass.getMethod("intValue");
+                    // return (int)retObjectSizeOfMethod.invoke(retObjectSizeOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectSizeOfNumber = java.text.NumberFormat.getInstance().parse(retObjectSizeOf_ToString);
+                    return retObjectSizeOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportSizeOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectSizeOf != null ? retObjectSizeOf.getClass() : "null", retObjectSizeOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportSizeOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void CopyBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +283,26 @@ public class Unsafe extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InitBlockUnaligned", startAddress.getJCRefOut(), value, byteCount == null ? null : byteCount.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void SkipInit(JCORefOut<T> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SkipInit", value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void WriteUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteUnaligned", destination.getJCRefOut(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

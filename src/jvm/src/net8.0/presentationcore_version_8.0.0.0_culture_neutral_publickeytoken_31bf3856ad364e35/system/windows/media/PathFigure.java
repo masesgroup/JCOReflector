@@ -40,13 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.windows.media.animation.Animatable;
 import system.windows.Point;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.windows.media.PathFigure;
 import system.windows.media.ToleranceType;
 import system.windows.media.PathSegmentCollection;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -61,7 +61,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PathFigure extends Animatable implements IFormattable {
+public class PathFigure extends system.windows.media.animation.Animatable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -159,6 +159,16 @@ public class PathFigure extends Animatable implements IFormattable {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PathFigure(Point start, IEnumerable_1 segments, boolean closed) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(start == null ? null : start.getJCOInstance(), segments == null ? null : segments.getJCOInstance(), closed));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

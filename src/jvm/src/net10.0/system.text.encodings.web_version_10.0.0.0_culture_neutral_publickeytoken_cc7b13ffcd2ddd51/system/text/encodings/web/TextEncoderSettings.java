@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.text.encodings.web.TextEncoderSettings;
 import system.text.unicode.UnicodeRange;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -181,6 +183,21 @@ public class TextEncoderSettings extends NetObject  {
     
     // Methods section
     
+    public IEnumerable_1 GetAllowedCodePoints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllowedCodePoints = null;
+        try {
+            retObjectGetAllowedCodePoints = classInstance.Invoke("GetAllowedCodePoints");
+            JCObject objGetAllowedCodePoints = (JCObject)retObjectGetAllowedCodePoints;
+            return new IEnumerable_1Implementation(objGetAllowedCodePoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllowedCodePoints != null ? retObjectGetAllowedCodePoints.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AllowCharacter(char character) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +223,16 @@ public class TextEncoderSettings extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AllowCharacters", (java.lang.Object)dupParam0.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AllowCodePoints(IEnumerable_1 codePoints) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AllowCodePoints", codePoints == null ? null : codePoints.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

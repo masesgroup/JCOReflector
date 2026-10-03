@@ -74,7 +74,7 @@ import system.printing.PrintQueueStatus;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PrintQueue extends PrintSystemObject  {
+public class PrintQueue extends system.printing.PrintSystemObject  {
     /**
      * Fully assembly qualified name: System.Printing, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

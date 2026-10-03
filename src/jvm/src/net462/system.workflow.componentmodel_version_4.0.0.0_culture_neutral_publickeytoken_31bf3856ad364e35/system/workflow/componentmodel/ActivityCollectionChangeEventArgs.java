@@ -39,8 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
-import system.workflow.componentmodel.Activity;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.workflow.componentmodel.ActivityCollectionChangeAction;
+import system.workflow.componentmodel.Activity;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -55,7 +59,7 @@ import system.workflow.componentmodel.ActivityCollectionChangeAction;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityCollectionChangeEventArgs extends EventArgs  {
+public class ActivityCollectionChangeEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -151,6 +155,16 @@ public class ActivityCollectionChangeEventArgs extends EventArgs  {
     public ActivityCollectionChangeEventArgs() throws Throwable {
     }
 
+    public ActivityCollectionChangeEventArgs(int index, ICollection_1 removedItems, ICollection_1 addedItems, NetObject owner, ActivityCollectionChangeAction action) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(index, removedItems == null ? null : removedItems.getJCOInstance(), addedItems == null ? null : addedItems.getJCOInstance(), owner == null ? null : owner.getJCOInstance(), action == null ? null : action.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ActivityCollectionChangeEventArgs(int index, Activity removedActivity, Activity addedActivity, NetObject owner, ActivityCollectionChangeAction action) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -205,6 +219,36 @@ public class ActivityCollectionChangeEventArgs extends EventArgs  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getAddedItems() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddedItems = null;
+        try {
+            retObjectAddedItems = classInstance.Get("AddedItems");
+            JCObject val = (JCObject)retObjectAddedItems;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddedItems != null ? retObjectAddedItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getRemovedItems() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedItems = null;
+        try {
+            retObjectRemovedItems = classInstance.Get("RemovedItems");
+            JCObject val = (JCObject)retObjectRemovedItems;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemovedItems != null ? retObjectRemovedItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

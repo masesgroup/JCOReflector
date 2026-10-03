@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.tokens.SecurityTokenHandler;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.TimeSpan;
 import system.xml.XmlReader;
 import system.identitymodel.tokens.SessionSecurityToken;
 import system.identitymodel.tokens.SecurityToken;
@@ -48,7 +50,6 @@ import system.security.claims.ClaimsPrincipal;
 import system.DateTime;
 import system.xml.XmlNodeList;
 import system.xml.XmlWriter;
-import system.TimeSpan;
 
 
 /**
@@ -63,7 +64,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SessionSecurityTokenHandler extends SecurityTokenHandler  {
+public class SessionSecurityTokenHandler extends system.identitymodel.tokens.SecurityTokenHandler  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -166,6 +167,26 @@ public class SessionSecurityTokenHandler extends SecurityTokenHandler  {
         }
     }
 
+    public SessionSecurityTokenHandler(ReadOnlyCollection_1 transforms) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(transforms == null ? null : transforms.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SessionSecurityTokenHandler(ReadOnlyCollection_1 transforms, TimeSpan tokenLifetime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(transforms == null ? null : transforms.getJCOInstance(), tokenLifetime == null ? null : tokenLifetime.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -202,6 +223,36 @@ public class SessionSecurityTokenHandler extends SecurityTokenHandler  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectWriteToken != null ? retObjectWriteToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateToken = null;
+        try {
+            retObjectValidateToken = classInstance.Invoke("ValidateToken", token == null ? null : token.getJCOInstance());
+            JCObject objValidateToken = (JCObject)retObjectValidateToken;
+            return new ReadOnlyCollection_1(objValidateToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateToken != null ? retObjectValidateToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 ValidateToken(SessionSecurityToken token, java.lang.String endpointId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateToken = null;
+        try {
+            retObjectValidateToken = classInstance.Invoke("ValidateToken", token == null ? null : token.getJCOInstance(), endpointId);
+            JCObject objValidateToken = (JCObject)retObjectValidateToken;
+            return new ReadOnlyCollection_1(objValidateToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateToken != null ? retObjectValidateToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,6 +395,21 @@ public class SessionSecurityTokenHandler extends SecurityTokenHandler  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getTransforms() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransforms = null;
+        try {
+            retObjectTransforms = classInstance.Get("Transforms");
+            JCObject val = (JCObject)retObjectTransforms;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransforms != null ? retObjectTransforms.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getCookieElementName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

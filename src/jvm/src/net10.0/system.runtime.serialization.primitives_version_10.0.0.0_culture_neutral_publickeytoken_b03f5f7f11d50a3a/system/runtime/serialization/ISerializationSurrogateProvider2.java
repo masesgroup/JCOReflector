@@ -40,6 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 import system.runtime.serialization.ISerializationSurrogateProvider;
 import system.runtime.serialization.ISerializationSurrogateProviderImplementation;
 import system.reflection.MemberInfo;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.reflection.MemberInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ISerializationSurrogateProvider2 extends IJCOBridgeReflected, ISerializationSurrogateProvider {
+public interface ISerializationSurrogateProvider2 extends IJCOBridgeReflected, system.runtime.serialization.ISerializationSurrogateProvider {
     /**
      * Fully assembly qualified name: System.Runtime.Serialization.Primitives, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -126,6 +127,8 @@ public interface ISerializationSurrogateProvider2 extends IJCOBridgeReflected, I
 
     public NetType GetReferencedTypeOnImport(java.lang.String typeName, java.lang.String typeNamespace, NetObject customData) throws Throwable;
 
+
+    public void GetKnownCustomDataTypes(Collection_1 customDataTypes) throws Throwable;
 
 
     

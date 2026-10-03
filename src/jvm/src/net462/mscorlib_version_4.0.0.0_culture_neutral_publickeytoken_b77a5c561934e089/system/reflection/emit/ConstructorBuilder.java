@@ -52,6 +52,8 @@ import system.reflection.ParameterInfo;
 import system.security.permissions.SecurityAction;
 import system.security.PermissionSet;
 import system.reflection.emit.CustomAttributeBuilder;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.Guid;
 import system.UInt32;
 import system.reflection.CallingConventions;
@@ -71,7 +73,7 @@ import system.RuntimeMethodHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConstructorBuilder extends ConstructorInfo  {
+public class ConstructorBuilder extends system.reflection.ConstructorInfo  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -414,6 +416,26 @@ public class ConstructorBuilder extends ConstructorInfo  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetImplementationFlags", attributes == null ? null : attributes.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetMethodBody(byte[] il, int maxStack, byte[] localSignature, IEnumerable_1 exceptionHandlers, IEnumerable_1 tokenFixups) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetMethodBody", il, maxStack, localSignature, exceptionHandlers == null ? null : exceptionHandlers.getJCOInstance(), tokenFixups == null ? null : tokenFixups.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetMethodBody(JCORefOut dupParam0, int dupParam1, JCORefOut dupParam2, IEnumerable_1 dupParam3, IEnumerable_1 dupParam4) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetMethodBody", dupParam0.getJCRefOut(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

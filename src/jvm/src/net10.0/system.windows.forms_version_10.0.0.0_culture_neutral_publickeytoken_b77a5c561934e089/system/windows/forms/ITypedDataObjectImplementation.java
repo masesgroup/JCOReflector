@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.IDataObject;
 import system.windows.forms.IDataObjectImplementation;
+import system.Func_2;
 
 
 /**
@@ -179,6 +180,62 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
             return (boolean)retObjectGetDataPresent;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetDataPresent != null ? retObjectGetDataPresent.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, boolean autoConvert, JCORefOut<T> data) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classInstance.Invoke("TryGetData", format, autoConvert, data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classInstance.Invoke("TryGetData", format, resolver, autoConvert, data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, JCORefOut<T> data) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classInstance.Invoke("TryGetData", format, data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(JCORefOut<T> data) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classInstance.Invoke("TryGetData", data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

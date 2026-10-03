@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.windows.media.PixelFormatChannelMask;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -54,7 +56,7 @@ import system.windows.media.PixelFormatChannelMask;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PixelFormatChannelMask extends ValueType  {
+public class PixelFormatChannelMask extends system.ValueType  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -173,6 +175,21 @@ public class PixelFormatChannelMask extends ValueType  {
     
     // Properties section
     
+    public IList_1 getMask() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMask = null;
+        try {
+            retObjectMask = classInstance.Get("Mask");
+            JCObject val = (JCObject)retObjectMask;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMask != null ? retObjectMask.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

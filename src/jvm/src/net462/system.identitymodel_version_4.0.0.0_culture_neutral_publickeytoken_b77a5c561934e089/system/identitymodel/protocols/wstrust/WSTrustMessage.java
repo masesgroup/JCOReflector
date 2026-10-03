@@ -44,6 +44,7 @@ import system.identitymodel.protocols.wstrust.EndpointReference;
 import system.identitymodel.protocols.wstrust.Entropy;
 import system.identitymodel.protocols.wstrust.Lifetime;
 import system.identitymodel.protocols.wstrust.UseKey;
+import system.Nullable_1;
 
 
 /**
@@ -58,7 +59,7 @@ import system.identitymodel.protocols.wstrust.UseKey;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WSTrustMessage extends OpenObject  {
+public class WSTrustMessage extends system.identitymodel.OpenObject  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -305,6 +306,31 @@ public class WSTrustMessage extends OpenObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseKey", UseKey == null ? null : UseKey.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getKeySizeInBits() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySizeInBits = null;
+        try {
+            retObjectKeySizeInBits = classInstance.Get("KeySizeInBits");
+            JCObject val = (JCObject)retObjectKeySizeInBits;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeySizeInBits != null ? retObjectKeySizeInBits.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setKeySizeInBits(Nullable_1 KeySizeInBits) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("KeySizeInBits", KeySizeInBits == null ? null : KeySizeInBits.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

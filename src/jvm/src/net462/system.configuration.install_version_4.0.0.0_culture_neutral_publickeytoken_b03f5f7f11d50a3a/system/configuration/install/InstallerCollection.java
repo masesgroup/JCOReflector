@@ -55,7 +55,7 @@ import system.configuration.install.InstallerCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InstallerCollection extends CollectionBase  {
+public class InstallerCollection extends system.collections.CollectionBase  {
     /**
      * Fully assembly qualified name: System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

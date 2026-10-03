@@ -60,7 +60,7 @@ import system.windows.forms.MouseEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NotifyIcon extends Component  {
+public class NotifyIcon extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

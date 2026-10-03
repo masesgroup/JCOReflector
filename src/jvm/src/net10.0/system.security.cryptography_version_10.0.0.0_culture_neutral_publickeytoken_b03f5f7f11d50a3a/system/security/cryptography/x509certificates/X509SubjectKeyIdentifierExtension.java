@@ -42,6 +42,7 @@ import system.security.cryptography.x509certificates.X509Extension;
 import system.security.cryptography.AsnEncodedData;
 import system.security.cryptography.x509certificates.PublicKey;
 import system.security.cryptography.x509certificates.X509SubjectKeyIdentifierHashAlgorithm;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -56,7 +57,7 @@ import system.security.cryptography.x509certificates.X509SubjectKeyIdentifierHas
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509SubjectKeyIdentifierExtension extends X509Extension  {
+public class X509SubjectKeyIdentifierExtension extends system.security.cryptography.x509certificates.X509Extension  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -227,6 +228,21 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     
     // Properties section
     
+    public ReadOnlyMemory_1 getSubjectKeyIdentifierBytes() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectKeyIdentifierBytes = null;
+        try {
+            retObjectSubjectKeyIdentifierBytes = classInstance.Get("SubjectKeyIdentifierBytes");
+            JCObject val = (JCObject)retObjectSubjectKeyIdentifierBytes;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubjectKeyIdentifierBytes != null ? retObjectSubjectKeyIdentifierBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getSubjectKeyIdentifier() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

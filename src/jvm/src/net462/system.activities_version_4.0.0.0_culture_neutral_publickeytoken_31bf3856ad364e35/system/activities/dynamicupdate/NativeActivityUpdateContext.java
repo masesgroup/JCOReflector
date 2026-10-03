@@ -43,13 +43,53 @@ import system.activities.Bookmark;
 import system.activities.BookmarkScope;
 import system.activities.BookmarkCallback;
 import system.activities.BookmarkOptions;
+import system.activities.Location_1;
+import system.activities.Variable;
 import system.activities.Argument;
 import system.activities.RuntimeArgument;
-import system.activities.Variable;
 import system.activities.ActivityAction;
 import system.activities.CompletionCallback;
 import system.activities.FaultCallback;
+import system.activities.ActivityAction_1;
+import system.activities.ActivityAction_16;
+import system.activities.ActivityAction_15;
+import system.activities.ActivityAction_14;
+import system.activities.ActivityAction_13;
+import system.activities.ActivityAction_12;
+import system.activities.ActivityAction_11;
+import system.activities.ActivityAction_10;
+import system.activities.ActivityAction_9;
+import system.activities.ActivityAction_8;
+import system.activities.ActivityAction_7;
+import system.activities.ActivityAction_6;
+import system.activities.ActivityAction_5;
+import system.activities.ActivityAction_4;
+import system.activities.ActivityAction_3;
+import system.activities.ActivityAction_2;
+import system.activities.Activity_1;
+import system.activities.CompletionCallback_1;
 import system.activities.ActivityDelegate;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.activities.DelegateCompletionCallback;
+import system.activities.ActivityFunc_2;
+import system.activities.ActivityFunc_17;
+import system.activities.ActivityFunc_16;
+import system.activities.ActivityFunc_15;
+import system.activities.ActivityFunc_14;
+import system.activities.ActivityFunc_13;
+import system.activities.ActivityFunc_12;
+import system.activities.ActivityFunc_11;
+import system.activities.ActivityFunc_10;
+import system.activities.ActivityFunc_9;
+import system.activities.ActivityFunc_8;
+import system.activities.ActivityFunc_7;
+import system.activities.ActivityFunc_6;
+import system.activities.ActivityFunc_5;
+import system.activities.ActivityFunc_4;
+import system.activities.ActivityFunc_3;
+import system.activities.ActivityFunc_1;
+import system.activities.Variable_1;
 
 
 /**
@@ -341,6 +381,21 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    public <T extends IJCOBridgeReflected> Location_1 GetLocation(Variable variable) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocation = null;
+        try {
+            retObjectGetLocation = classInstance.Invoke("GetLocation", variable == null ? null : variable.getJCOInstance());
+            JCObject objGetLocation = (JCObject)retObjectGetLocation;
+            return new Location_1(objGetLocation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocation != null ? retObjectGetLocation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject FindExecutionProperty(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -461,6 +516,166 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    public <T extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_1 activityAction, T argument, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument == null ? null : ((IJCOBridgeReflected)argument).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_16 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, T15 argument15, T16 argument16, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), argument13 == null ? null : ((IJCOBridgeReflected)argument13).getJCOInstance(), argument14 == null ? null : ((IJCOBridgeReflected)argument14).getJCOInstance(), argument15 == null ? null : ((IJCOBridgeReflected)argument15).getJCOInstance(), argument16 == null ? null : ((IJCOBridgeReflected)argument16).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_15 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, T15 argument15, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), argument13 == null ? null : ((IJCOBridgeReflected)argument13).getJCOInstance(), argument14 == null ? null : ((IJCOBridgeReflected)argument14).getJCOInstance(), argument15 == null ? null : ((IJCOBridgeReflected)argument15).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_14 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), argument13 == null ? null : ((IJCOBridgeReflected)argument13).getJCOInstance(), argument14 == null ? null : ((IJCOBridgeReflected)argument14).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_13 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), argument13 == null ? null : ((IJCOBridgeReflected)argument13).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_12 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_11 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_10 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_9 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_8 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_7 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_6 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_5 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_4 activityAction, T1 argument1, T2 argument2, T3 argument3, T4 argument4, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_3 activityAction, T1 argument1, T2 argument2, T3 argument3, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> void ScheduleAction(ActivityAction_2 activityAction, T1 argument1, T2 argument2, CompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleAction", activityAction == null ? null : activityAction.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ScheduleActivity(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -501,6 +716,196 @@ public class NativeActivityUpdateContext extends NetObject  {
         }
     }
 
+    public <TResult extends IJCOBridgeReflected> void ScheduleActivity(Activity_1 activity, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleActivity", activity == null ? null : activity.getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ScheduleDelegate(ActivityDelegate activityDelegate, IDictionary_2 inputParameters, DelegateCompletionCallback onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleDelegate", activityDelegate == null ? null : activityDelegate.getJCOInstance(), inputParameters == null ? null : inputParameters.getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_2 activityFunc, T argument, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument == null ? null : ((IJCOBridgeReflected)argument).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_17 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, T15 argument15, T16 argument16, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), argument13 == null ? null : ((IJCOBridgeReflected)argument13).getJCOInstance(), argument14 == null ? null : ((IJCOBridgeReflected)argument14).getJCOInstance(), argument15 == null ? null : ((IJCOBridgeReflected)argument15).getJCOInstance(), argument16 == null ? null : ((IJCOBridgeReflected)argument16).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_16 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, T15 argument15, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), argument13 == null ? null : ((IJCOBridgeReflected)argument13).getJCOInstance(), argument14 == null ? null : ((IJCOBridgeReflected)argument14).getJCOInstance(), argument15 == null ? null : ((IJCOBridgeReflected)argument15).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_15 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, T14 argument14, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), argument13 == null ? null : ((IJCOBridgeReflected)argument13).getJCOInstance(), argument14 == null ? null : ((IJCOBridgeReflected)argument14).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_14 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, T13 argument13, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), argument13 == null ? null : ((IJCOBridgeReflected)argument13).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_13 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, T12 argument12, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), argument12 == null ? null : ((IJCOBridgeReflected)argument12).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_12 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, T11 argument11, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), argument11 == null ? null : ((IJCOBridgeReflected)argument11).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_11 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, T10 argument10, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), argument10 == null ? null : ((IJCOBridgeReflected)argument10).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_10 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, T9 argument9, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), argument9 == null ? null : ((IJCOBridgeReflected)argument9).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_9 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, T8 argument8, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), argument8 == null ? null : ((IJCOBridgeReflected)argument8).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_8 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, T7 argument7, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), argument7 == null ? null : ((IJCOBridgeReflected)argument7).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_7 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, T6 argument6, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), argument6 == null ? null : ((IJCOBridgeReflected)argument6).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_6 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, T5 argument5, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), argument5 == null ? null : ((IJCOBridgeReflected)argument5).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_5 activityFunc, T1 argument1, T2 argument2, T3 argument3, T4 argument4, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), argument4 == null ? null : ((IJCOBridgeReflected)argument4).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_4 activityFunc, T1 argument1, T2 argument2, T3 argument3, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), argument3 == null ? null : ((IJCOBridgeReflected)argument3).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_3 activityFunc, T1 argument1, T2 argument2, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), argument1 == null ? null : ((IJCOBridgeReflected)argument1).getJCOInstance(), argument2 == null ? null : ((IJCOBridgeReflected)argument2).getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> void ScheduleFunc(ActivityFunc_1 activityFunc, CompletionCallback_1 onCompleted, FaultCallback onFaulted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScheduleFunc", activityFunc == null ? null : activityFunc.getJCOInstance(), onCompleted, onFaulted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetValue(Argument argument, NetObject value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -516,6 +921,16 @@ public class NativeActivityUpdateContext extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", variable == null ? null : variable.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void SetValue(Variable_1 variable, T value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetValue", variable == null ? null : variable.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

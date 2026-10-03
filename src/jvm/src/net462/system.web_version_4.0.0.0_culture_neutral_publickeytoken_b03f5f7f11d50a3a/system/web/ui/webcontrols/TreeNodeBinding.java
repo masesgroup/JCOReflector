@@ -38,9 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Nullable_1;
 import system.web.ui.webcontrols.TreeNodeSelectAction;
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -55,7 +54,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TreeNodeBinding extends NetObject implements ICloneable {
+public class TreeNodeBinding extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -271,6 +270,31 @@ public class TreeNodeBinding extends NetObject implements ICloneable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Depth", Depth);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getShowCheckBox() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCheckBox = null;
+        try {
+            retObjectShowCheckBox = classInstance.Get("ShowCheckBox");
+            JCObject val = (JCObject)retObjectShowCheckBox;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowCheckBox != null ? retObjectShowCheckBox.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setShowCheckBox(Nullable_1 ShowCheckBox) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ShowCheckBox", ShowCheckBox == null ? null : ShowCheckBox.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

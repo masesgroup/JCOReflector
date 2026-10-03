@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.Stream;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 import system.DateTimeOffset;
 import system.io.compression.ZipArchive;
 import system.UInt32;
@@ -167,6 +169,21 @@ public class ZipArchiveEntry extends NetObject  {
             return new Stream(objOpen);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 OpenAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenAsync = null;
+        try {
+            retObjectOpenAsync = classInstance.Invoke("OpenAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objOpenAsync = (JCObject)retObjectOpenAsync;
+            return new Task_1(objOpenAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenAsync != null ? retObjectOpenAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

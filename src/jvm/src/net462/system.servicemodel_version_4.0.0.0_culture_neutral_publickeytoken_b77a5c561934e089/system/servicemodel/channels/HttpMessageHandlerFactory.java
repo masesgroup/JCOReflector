@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Func_1;
 import system.net.http.HttpMessageHandler;
 
 
@@ -147,6 +148,16 @@ public class HttpMessageHandlerFactory extends NetObject  {
     // Constructors section
     
     public HttpMessageHandlerFactory() throws Throwable {
+    }
+
+    public HttpMessageHandlerFactory(Func_1 handlers) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(handlers));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
     public HttpMessageHandlerFactory(NetType... handlers) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {

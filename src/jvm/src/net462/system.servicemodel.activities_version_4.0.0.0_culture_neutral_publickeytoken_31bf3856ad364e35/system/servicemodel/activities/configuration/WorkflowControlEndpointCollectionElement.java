@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.configuration.StandardEndpointCollectionElement_2;
+import system.servicemodel.activities.WorkflowControlEndpoint;
+import system.servicemodel.activities.configuration.WorkflowControlEndpointElement;
 
 
 /**
@@ -52,7 +55,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowControlEndpointCollectionElement extends NetObject  {
+public class WorkflowControlEndpointCollectionElement extends system.servicemodel.configuration.StandardEndpointCollectionElement_2<WorkflowControlEndpoint, WorkflowControlEndpointElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

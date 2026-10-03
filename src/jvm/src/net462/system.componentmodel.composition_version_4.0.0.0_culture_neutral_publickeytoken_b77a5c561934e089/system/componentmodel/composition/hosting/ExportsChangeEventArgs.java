@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.componentmodel.composition.hosting.AtomicComposition;
 
 
@@ -54,7 +56,7 @@ import system.componentmodel.composition.hosting.AtomicComposition;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ExportsChangeEventArgs extends EventArgs  {
+public class ExportsChangeEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -150,6 +152,16 @@ public class ExportsChangeEventArgs extends EventArgs  {
     public ExportsChangeEventArgs() throws Throwable {
     }
 
+    public ExportsChangeEventArgs(IEnumerable_1 addedExports, IEnumerable_1 removedExports, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(addedExports == null ? null : addedExports.getJCOInstance(), removedExports == null ? null : removedExports.getJCOInstance(), atomicComposition == null ? null : atomicComposition.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -159,6 +171,51 @@ public class ExportsChangeEventArgs extends EventArgs  {
     
     // Properties section
     
+    public IEnumerable_1 getAddedExports() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddedExports = null;
+        try {
+            retObjectAddedExports = classInstance.Get("AddedExports");
+            JCObject val = (JCObject)retObjectAddedExports;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddedExports != null ? retObjectAddedExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getRemovedExports() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedExports = null;
+        try {
+            retObjectRemovedExports = classInstance.Get("RemovedExports");
+            JCObject val = (JCObject)retObjectRemovedExports;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemovedExports != null ? retObjectRemovedExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getChangedContractNames() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangedContractNames = null;
+        try {
+            retObjectChangedContractNames = classInstance.Get("ChangedContractNames");
+            JCObject val = (JCObject)retObjectChangedContractNames;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangedContractNames != null ? retObjectChangedContractNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AtomicComposition getAtomicComposition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

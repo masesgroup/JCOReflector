@@ -53,7 +53,7 @@ import system.configuration.ConfigurationElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HandlerElement extends ConfigurationElement  {
+public class HandlerElement extends system.configuration.ConfigurationElement  {
     /**
      * Fully assembly qualified name: System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

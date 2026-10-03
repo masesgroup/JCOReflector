@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.Handle;
 import system.activities.NativeActivityContext;
 import system.activities.BookmarkScopeHandle;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.activities.BookmarkScopeHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ExclusiveHandle extends Handle  {
+public class ExclusiveHandle extends system.activities.Handle  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -186,6 +187,21 @@ public class ExclusiveHandle extends Handle  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getRegisteredBookmarkScopes() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegisteredBookmarkScopes = null;
+        try {
+            retObjectRegisteredBookmarkScopes = classInstance.Get("RegisteredBookmarkScopes");
+            JCObject val = (JCObject)retObjectRegisteredBookmarkScopes;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisteredBookmarkScopes != null ? retObjectRegisteredBookmarkScopes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

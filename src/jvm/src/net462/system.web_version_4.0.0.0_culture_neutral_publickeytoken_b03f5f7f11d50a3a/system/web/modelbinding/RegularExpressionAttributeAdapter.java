@@ -38,9 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.modelbinding.DataAnnotationsModelValidator_1;
+import system.componentmodel.dataannotations.RegularExpressionAttribute;
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.ModelBindingExecutionContext;
-import system.componentmodel.dataannotations.RegularExpressionAttribute;
 
 
 /**
@@ -55,7 +56,7 @@ import system.componentmodel.dataannotations.RegularExpressionAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RegularExpressionAttributeAdapter extends NetObject  {
+public class RegularExpressionAttributeAdapter extends system.web.modelbinding.DataAnnotationsModelValidator_1<RegularExpressionAttribute>  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

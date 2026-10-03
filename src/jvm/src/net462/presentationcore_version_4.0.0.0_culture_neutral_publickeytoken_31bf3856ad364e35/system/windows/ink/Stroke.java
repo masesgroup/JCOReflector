@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.windows.input.StylusPointCollection;
 import system.windows.ink.DrawingAttributes;
 import system.Guid;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.ink.StylusShape;
 import system.windows.Point;
 import system.windows.Rect;
 import system.windows.ink.Stroke;
@@ -201,6 +204,34 @@ public class Stroke extends NetObject  {
         }
     }
 
+    public boolean HitTest(IEnumerable_1 lassoPoints, int percentageWithinLasso) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
+        try {
+            retObjectHitTest = classInstance.Invoke("HitTest", lassoPoints == null ? null : lassoPoints.getJCOInstance(), percentageWithinLasso);
+            return (boolean)retObjectHitTest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean HitTest(IEnumerable_1 path, StylusShape stylusShape) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
+        try {
+            retObjectHitTest = classInstance.Invoke("HitTest", path == null ? null : path.getJCOInstance(), stylusShape == null ? null : stylusShape.getJCOInstance());
+            return (boolean)retObjectHitTest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean HitTest(Point point) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -294,6 +325,21 @@ public class Stroke extends NetObject  {
         }
     }
 
+    public StrokeCollection GetClipResult(IEnumerable_1 lassoPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClipResult = null;
+        try {
+            retObjectGetClipResult = classInstance.Invoke("GetClipResult", lassoPoints == null ? null : lassoPoints.getJCOInstance());
+            JCObject objGetClipResult = (JCObject)retObjectGetClipResult;
+            return new StrokeCollection(objGetClipResult);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClipResult != null ? retObjectGetClipResult.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StrokeCollection GetClipResult(Rect bounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -304,6 +350,36 @@ public class Stroke extends NetObject  {
             return new StrokeCollection(objGetClipResult);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClipResult != null ? retObjectGetClipResult.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StrokeCollection GetEraseResult(IEnumerable_1 lassoPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEraseResult = null;
+        try {
+            retObjectGetEraseResult = classInstance.Invoke("GetEraseResult", lassoPoints == null ? null : lassoPoints.getJCOInstance());
+            JCObject objGetEraseResult = (JCObject)retObjectGetEraseResult;
+            return new StrokeCollection(objGetEraseResult);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEraseResult != null ? retObjectGetEraseResult.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StrokeCollection GetEraseResult(IEnumerable_1 eraserPath, StylusShape eraserShape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEraseResult = null;
+        try {
+            retObjectGetEraseResult = classInstance.Invoke("GetEraseResult", eraserPath == null ? null : eraserPath.getJCOInstance(), eraserShape == null ? null : eraserShape.getJCOInstance());
+            JCObject objGetEraseResult = (JCObject)retObjectGetEraseResult;
+            return new StrokeCollection(objGetEraseResult);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEraseResult != null ? retObjectGetEraseResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

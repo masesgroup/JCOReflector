@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.webcontrols.WebControl;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.io.Stream;
 import system.web.HttpPostedFile;
 
@@ -55,7 +57,7 @@ import system.web.HttpPostedFile;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FileUpload extends WebControl  {
+public class FileUpload extends system.web.ui.webcontrols.WebControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -246,6 +248,21 @@ public class FileUpload extends WebControl  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectFileBytes != null ? retObjectFileBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getPostedFiles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPostedFiles = null;
+        try {
+            retObjectPostedFiles = classInstance.Get("PostedFiles");
+            JCObject val = (JCObject)retObjectPostedFiles;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostedFiles != null ? retObjectPostedFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

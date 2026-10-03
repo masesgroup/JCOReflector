@@ -41,10 +41,20 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.Single;
 import system.Action;
+import system.ArraySegment_1;
 import system.DateTime;
 import system.DateTimeOffset;
+import system.Nullable_1;
 import system.runtime.interopservices.javascript.JSObject;
 import system.threading.tasks.Task;
+import system.Func_2;
+import system.Action_1;
+import system.threading.tasks.Task_1;
+import system.Func_4;
+import system.Action_3;
+import system.Func_3;
+import system.Action_2;
+import system.Func_1;
 
 
 /**
@@ -59,7 +69,7 @@ import system.threading.tasks.Task;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JSMarshalerArgument extends ValueType  {
+public class JSMarshalerArgument extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Runtime.InteropServices.JavaScript, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -300,6 +310,16 @@ public class JSMarshalerArgument extends ValueType  {
         }
     }
 
+    public void ToJS(ArraySegment_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ToJS", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ToJS(DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -321,6 +341,16 @@ public class JSMarshalerArgument extends ValueType  {
     }
 
     public void ToJS(NetException value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ToJS", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ToJS(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -405,6 +435,16 @@ public class JSMarshalerArgument extends ValueType  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ToJSBig", value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ToJSBig(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ToJSBig", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

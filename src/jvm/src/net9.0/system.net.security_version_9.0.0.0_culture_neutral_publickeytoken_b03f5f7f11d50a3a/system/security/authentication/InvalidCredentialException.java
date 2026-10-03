@@ -52,7 +52,7 @@ import system.security.authentication.AuthenticationException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InvalidCredentialException extends AuthenticationException {
+public class InvalidCredentialException extends system.security.authentication.AuthenticationException {
     /**
      * Fully assembly qualified name: System.Net.Security, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

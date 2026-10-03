@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -118,6 +119,8 @@ public interface ICommandService extends IJCOBridgeReflected {
     public boolean CanExecuteCommand(int commandId) throws Throwable;
 
     public boolean IsCommandSupported(int commandId) throws Throwable;
+
+    public void ExecuteCommand(int commandId, Dictionary_2 parameters) throws Throwable;
 
 
     

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.linq.expressions.Expression;
 import system.dynamic.BindingRestrictions;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.dynamic.DynamicMetaObject;
 import system.dynamic.BinaryOperationBinder;
 import system.dynamic.ConvertBinder;
@@ -188,6 +190,21 @@ public class DynamicMetaObject extends NetObject  {
     
     // Methods section
     
+    public IEnumerable_1 GetDynamicMemberNames() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDynamicMemberNames = null;
+        try {
+            retObjectGetDynamicMemberNames = classInstance.Invoke("GetDynamicMemberNames");
+            JCObject objGetDynamicMemberNames = (JCObject)retObjectGetDynamicMemberNames;
+            return new IEnumerable_1Implementation(objGetDynamicMemberNames);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDynamicMemberNames != null ? retObjectGetDynamicMemberNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DynamicMetaObject BindBinaryOperation(BinaryOperationBinder binder, DynamicMetaObject arg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.dispatcher.DispatchRuntime;
+import system.collections.generic.SynchronizedCollection_1;
 import system.servicemodel.dispatcher.IDispatchMessageFormatter;
 import system.servicemodel.dispatcher.IDispatchMessageFormatterImplementation;
 import system.servicemodel.dispatcher.IOperationInvoker;
@@ -408,6 +409,51 @@ public class DispatchOperation extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionRequired", TransactionRequired);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getFaultContractInfos() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaultContractInfos = null;
+        try {
+            retObjectFaultContractInfos = classInstance.Get("FaultContractInfos");
+            JCObject val = (JCObject)retObjectFaultContractInfos;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaultContractInfos != null ? retObjectFaultContractInfos.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getCallContextInitializers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallContextInitializers = null;
+        try {
+            retObjectCallContextInitializers = classInstance.Get("CallContextInitializers");
+            JCObject val = (JCObject)retObjectCallContextInitializers;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallContextInitializers != null ? retObjectCallContextInitializers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getParameterInspectors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterInspectors = null;
+        try {
+            retObjectParameterInspectors = classInstance.Get("ParameterInspectors");
+            JCObject val = (JCObject)retObjectParameterInspectors;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterInspectors != null ? retObjectParameterInspectors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

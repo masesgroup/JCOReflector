@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.text.json.JsonSerializerOptions;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -180,6 +182,21 @@ public class DefaultJsonTypeInfoResolver extends NetObject  {
     
     // Properties section
     
+    public IList_1 getModifiers() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifiers = null;
+        try {
+            retObjectModifiers = classInstance.Get("Modifiers");
+            JCObject val = (JCObject)retObjectModifiers;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModifiers != null ? retObjectModifiers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

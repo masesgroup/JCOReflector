@@ -53,7 +53,7 @@ import system.security.cryptography.SHA1;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SHA1Managed extends SHA1  {
+public class SHA1Managed extends system.security.cryptography.SHA1  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

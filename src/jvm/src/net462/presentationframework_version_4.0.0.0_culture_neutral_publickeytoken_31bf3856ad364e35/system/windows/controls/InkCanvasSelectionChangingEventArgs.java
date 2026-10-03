@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.CancelEventArgs;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.ink.StrokeCollection;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -54,7 +57,7 @@ import system.windows.ink.StrokeCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InkCanvasSelectionChangingEventArgs extends CancelEventArgs  {
+public class InkCanvasSelectionChangingEventArgs extends system.componentmodel.CancelEventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -155,6 +158,21 @@ public class InkCanvasSelectionChangingEventArgs extends CancelEventArgs  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 GetSelectedElements() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedElements = null;
+        try {
+            retObjectGetSelectedElements = classInstance.Invoke("GetSelectedElements");
+            JCObject objGetSelectedElements = (JCObject)retObjectGetSelectedElements;
+            return new ReadOnlyCollection_1(objGetSelectedElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedElements != null ? retObjectGetSelectedElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StrokeCollection GetSelectedStrokes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -165,6 +183,16 @@ public class InkCanvasSelectionChangingEventArgs extends CancelEventArgs  {
             return new StrokeCollection(objGetSelectedStrokes);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedStrokes != null ? retObjectGetSelectedStrokes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetSelectedElements(IEnumerable_1 selectedElements) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetSelectedElements", selectedElements == null ? null : selectedElements.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

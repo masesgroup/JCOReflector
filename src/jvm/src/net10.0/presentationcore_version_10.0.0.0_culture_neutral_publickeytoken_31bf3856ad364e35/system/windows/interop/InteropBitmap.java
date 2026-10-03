@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.imaging.BitmapSource;
+import system.Nullable_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.windows.media.imaging.BitmapSource;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InteropBitmap extends BitmapSource  {
+public class InteropBitmap extends system.windows.media.imaging.BitmapSource  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -159,6 +160,16 @@ public class InteropBitmap extends BitmapSource  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Invalidate(Nullable_1 dirtyRect) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.NotImplementedException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.MulticastNotSupportedException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Invalidate", dirtyRect == null ? null : dirtyRect.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

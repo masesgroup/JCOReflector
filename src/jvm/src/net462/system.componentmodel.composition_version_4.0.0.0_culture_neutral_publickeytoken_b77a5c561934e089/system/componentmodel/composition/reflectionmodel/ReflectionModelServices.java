@@ -40,8 +40,17 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.composition.primitives.ComposablePartDefinition;
 import system.componentmodel.composition.primitives.ImportDefinition;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.Lazy_1;
+import system.componentmodel.composition.primitives.ICompositionElement;
+import system.componentmodel.composition.primitives.ICompositionElementImplementation;
 import system.componentmodel.composition.primitives.ContractBasedImportDefinition;
 import system.componentmodel.composition.reflectionmodel.LazyMemberInfo;
+import system.componentmodel.composition.primitives.ImportCardinality;
+import system.componentmodel.composition.CreationPolicy;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.componentmodel.composition.primitives.ExportDefinition;
 
 
@@ -198,6 +207,110 @@ public class ReflectionModelServices extends NetObject  {
         }
     }
 
+    public static boolean TryMakeGenericPartDefinition(ComposablePartDefinition partDefinition, IEnumerable_1 genericParameters, JCORefOut<ComposablePartDefinition> specialization) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryMakeGenericPartDefinition = null;
+        try {
+            retObjectTryMakeGenericPartDefinition = classType.Invoke("TryMakeGenericPartDefinition", partDefinition == null ? null : partDefinition.getJCOInstance(), genericParameters == null ? null : genericParameters.getJCOInstance(), specialization.getJCRefOut());
+            return (boolean)retObjectTryMakeGenericPartDefinition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryMakeGenericPartDefinition != null ? retObjectTryMakeGenericPartDefinition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ComposablePartDefinition CreatePartDefinition(Lazy_1 partType, boolean isDisposalRequired, Lazy_1 imports, Lazy_1 exports, Lazy_1 metadata, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePartDefinition = null;
+        try {
+            retObjectCreatePartDefinition = classType.Invoke("CreatePartDefinition", partType == null ? null : partType.getJCOInstance(), isDisposalRequired, imports == null ? null : imports.getJCOInstance(), exports == null ? null : exports.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
+            JCObject objCreatePartDefinition = (JCObject)retObjectCreatePartDefinition;
+            return new ComposablePartDefinition(objCreatePartDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePartDefinition != null ? retObjectCreatePartDefinition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ContractBasedImportDefinition CreateImportDefinition(LazyMemberInfo importingMember, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, boolean isPreRequisite, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata, boolean isExportFactory, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateImportDefinition = null;
+        try {
+            retObjectCreateImportDefinition = classType.Invoke("CreateImportDefinition", importingMember == null ? null : importingMember.getJCOInstance(), contractName, requiredTypeIdentity, requiredMetadata == null ? null : requiredMetadata.getJCOInstance(), cardinality == null ? null : cardinality.getJCOInstance(), isRecomposable, isPreRequisite, requiredCreationPolicy == null ? null : requiredCreationPolicy.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance(), isExportFactory, origin == null ? null : origin.getJCOInstance());
+            JCObject objCreateImportDefinition = (JCObject)retObjectCreateImportDefinition;
+            return new ContractBasedImportDefinition(objCreateImportDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateImportDefinition != null ? retObjectCreateImportDefinition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ContractBasedImportDefinition CreateImportDefinition(LazyMemberInfo importingMember, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata, boolean isExportFactory, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateImportDefinition = null;
+        try {
+            retObjectCreateImportDefinition = classType.Invoke("CreateImportDefinition", importingMember == null ? null : importingMember.getJCOInstance(), contractName, requiredTypeIdentity, requiredMetadata == null ? null : requiredMetadata.getJCOInstance(), cardinality == null ? null : cardinality.getJCOInstance(), isRecomposable, requiredCreationPolicy == null ? null : requiredCreationPolicy.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance(), isExportFactory, origin == null ? null : origin.getJCOInstance());
+            JCObject objCreateImportDefinition = (JCObject)retObjectCreateImportDefinition;
+            return new ContractBasedImportDefinition(objCreateImportDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateImportDefinition != null ? retObjectCreateImportDefinition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ContractBasedImportDefinition CreateImportDefinition(LazyMemberInfo importingMember, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, boolean isRecomposable, CreationPolicy requiredCreationPolicy, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateImportDefinition = null;
+        try {
+            retObjectCreateImportDefinition = classType.Invoke("CreateImportDefinition", importingMember == null ? null : importingMember.getJCOInstance(), contractName, requiredTypeIdentity, requiredMetadata == null ? null : requiredMetadata.getJCOInstance(), cardinality == null ? null : cardinality.getJCOInstance(), isRecomposable, requiredCreationPolicy == null ? null : requiredCreationPolicy.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
+            JCObject objCreateImportDefinition = (JCObject)retObjectCreateImportDefinition;
+            return new ContractBasedImportDefinition(objCreateImportDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateImportDefinition != null ? retObjectCreateImportDefinition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ContractBasedImportDefinition CreateImportDefinition(Lazy_1 parameter, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata, boolean isExportFactory, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateImportDefinition = null;
+        try {
+            retObjectCreateImportDefinition = classType.Invoke("CreateImportDefinition", parameter == null ? null : parameter.getJCOInstance(), contractName, requiredTypeIdentity, requiredMetadata == null ? null : requiredMetadata.getJCOInstance(), cardinality == null ? null : cardinality.getJCOInstance(), requiredCreationPolicy == null ? null : requiredCreationPolicy.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance(), isExportFactory, origin == null ? null : origin.getJCOInstance());
+            JCObject objCreateImportDefinition = (JCObject)retObjectCreateImportDefinition;
+            return new ContractBasedImportDefinition(objCreateImportDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateImportDefinition != null ? retObjectCreateImportDefinition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ContractBasedImportDefinition CreateImportDefinition(Lazy_1 parameter, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, CreationPolicy requiredCreationPolicy, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateImportDefinition = null;
+        try {
+            retObjectCreateImportDefinition = classType.Invoke("CreateImportDefinition", parameter == null ? null : parameter.getJCOInstance(), contractName, requiredTypeIdentity, requiredMetadata == null ? null : requiredMetadata.getJCOInstance(), cardinality == null ? null : cardinality.getJCOInstance(), requiredCreationPolicy == null ? null : requiredCreationPolicy.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
+            JCObject objCreateImportDefinition = (JCObject)retObjectCreateImportDefinition;
+            return new ContractBasedImportDefinition(objCreateImportDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateImportDefinition != null ? retObjectCreateImportDefinition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ContractBasedImportDefinition GetExportFactoryProductImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +321,21 @@ public class ReflectionModelServices extends NetObject  {
             return new ContractBasedImportDefinition(objGetExportFactoryProductImportDefinition);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExportFactoryProductImportDefinition != null ? retObjectGetExportFactoryProductImportDefinition.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ExportDefinition CreateExportDefinition(LazyMemberInfo exportingMember, java.lang.String contractName, Lazy_1 metadata, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateExportDefinition = null;
+        try {
+            retObjectCreateExportDefinition = classType.Invoke("CreateExportDefinition", exportingMember == null ? null : exportingMember.getJCOInstance(), contractName, metadata == null ? null : metadata.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
+            JCObject objCreateExportDefinition = (JCObject)retObjectCreateExportDefinition;
+            return new ExportDefinition(objCreateExportDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateExportDefinition != null ? retObjectCreateExportDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,6 +366,36 @@ public class ReflectionModelServices extends NetObject  {
             return new LazyMemberInfo(objGetImportingMember);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImportingMember != null ? retObjectGetImportingMember.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Lazy_1 GetImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetImportingParameter = null;
+        try {
+            retObjectGetImportingParameter = classType.Invoke("GetImportingParameter", importDefinition == null ? null : importDefinition.getJCOInstance());
+            JCObject objGetImportingParameter = (JCObject)retObjectGetImportingParameter;
+            return new Lazy_1(objGetImportingParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImportingParameter != null ? retObjectGetImportingParameter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Lazy_1 GetPartType(ComposablePartDefinition partDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPartType = null;
+        try {
+            retObjectGetPartType = classType.Invoke("GetPartType", partDefinition == null ? null : partDefinition.getJCOInstance());
+            JCObject objGetPartType = (JCObject)retObjectGetPartType;
+            return new Lazy_1(objGetPartType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPartType != null ? retObjectGetPartType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

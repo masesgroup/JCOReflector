@@ -40,16 +40,18 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.ValueTuple;
+import system.ValueTuple_1;
+import system.ValueTuple_2;
+import system.ValueTuple_3;
+import system.ValueTuple_4;
+import system.ValueTuple_5;
+import system.ValueTuple_6;
+import system.ValueTuple_7;
+import system.ValueTuple_8;
 import system.collections.IEqualityComparer;
 import system.collections.IEqualityComparerImplementation;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
-import system.collections.IStructuralEquatable;
-import system.collections.IStructuralEquatableImplementation;
-import system.collections.IStructuralComparable;
-import system.collections.IStructuralComparableImplementation;
-import system.IComparable;
-import system.IComparableImplementation;
 
 
 /**
@@ -64,7 +66,7 @@ import system.IComparableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ValueTuple extends ValueType implements IStructuralEquatable, IStructuralComparable, IComparable {
+public class ValueTuple extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -227,6 +229,126 @@ public class ValueTuple extends ValueType implements IStructuralEquatable, IStru
             retObjectCreate = classType.Invoke("Create");
             JCObject objCreate = (JCObject)retObjectCreate;
             return new ValueTuple(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected> ValueTuple_1 Create(T1 item1) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ValueTuple_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> ValueTuple_2 Create(T1 item1, T2 item2) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ValueTuple_2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> ValueTuple_3 Create(T1 item1, T2 item2, T3 item3) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance(), item3 == null ? null : ((IJCOBridgeReflected)item3).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ValueTuple_3(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> ValueTuple_4 Create(T1 item1, T2 item2, T3 item3, T4 item4) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance(), item3 == null ? null : ((IJCOBridgeReflected)item3).getJCOInstance(), item4 == null ? null : ((IJCOBridgeReflected)item4).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ValueTuple_4(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> ValueTuple_5 Create(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance(), item3 == null ? null : ((IJCOBridgeReflected)item3).getJCOInstance(), item4 == null ? null : ((IJCOBridgeReflected)item4).getJCOInstance(), item5 == null ? null : ((IJCOBridgeReflected)item5).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ValueTuple_5(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> ValueTuple_6 Create(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance(), item3 == null ? null : ((IJCOBridgeReflected)item3).getJCOInstance(), item4 == null ? null : ((IJCOBridgeReflected)item4).getJCOInstance(), item5 == null ? null : ((IJCOBridgeReflected)item5).getJCOInstance(), item6 == null ? null : ((IJCOBridgeReflected)item6).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ValueTuple_6(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> ValueTuple_7 Create(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance(), item3 == null ? null : ((IJCOBridgeReflected)item3).getJCOInstance(), item4 == null ? null : ((IJCOBridgeReflected)item4).getJCOInstance(), item5 == null ? null : ((IJCOBridgeReflected)item5).getJCOInstance(), item6 == null ? null : ((IJCOBridgeReflected)item6).getJCOInstance(), item7 == null ? null : ((IJCOBridgeReflected)item7).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ValueTuple_7(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> ValueTuple_8 Create(T1 item1, T2 item2, T3 item3, T4 item4, T5 item5, T6 item6, T7 item7, T8 item8) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance(), item3 == null ? null : ((IJCOBridgeReflected)item3).getJCOInstance(), item4 == null ? null : ((IJCOBridgeReflected)item4).getJCOInstance(), item5 == null ? null : ((IJCOBridgeReflected)item5).getJCOInstance(), item6 == null ? null : ((IJCOBridgeReflected)item6).getJCOInstance(), item7 == null ? null : ((IJCOBridgeReflected)item7).getJCOInstance(), item8 == null ? null : ((IJCOBridgeReflected)item8).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ValueTuple_8(objCreate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {

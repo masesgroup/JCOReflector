@@ -43,6 +43,8 @@ import system.Guid;
 import system.workflow.componentmodel.ActivityExecutionStatus;
 import system.DateTime;
 import system.EventArgs;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 
 
@@ -58,7 +60,7 @@ import system.workflow.runtime.tracking.TrackingAnnotationCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityTrackingRecord extends TrackingRecord  {
+public class ActivityTrackingRecord extends system.workflow.runtime.tracking.TrackingRecord  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -179,6 +181,21 @@ public class ActivityTrackingRecord extends TrackingRecord  {
     
     // Properties section
     
+    public IList_1 getBody() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
+        try {
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getContextGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

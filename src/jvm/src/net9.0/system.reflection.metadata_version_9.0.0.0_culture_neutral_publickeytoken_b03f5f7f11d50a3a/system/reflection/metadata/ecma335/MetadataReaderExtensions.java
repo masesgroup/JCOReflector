@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.reflection.metadata.MetadataReader;
 import system.reflection.metadata.ecma335.HeapIndex;
 import system.reflection.metadata.ecma335.TableIndex;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.SignatureTypeKind;
 import system.reflection.metadata.EntityHandle;
@@ -354,6 +356,66 @@ public class MetadataReaderExtensions extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetEditAndContinueLogEntries(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEditAndContinueLogEntries = null;
+        try {
+            retObjectGetEditAndContinueLogEntries = classType.Invoke("GetEditAndContinueLogEntries", reader == null ? null : reader.getJCOInstance());
+            JCObject objGetEditAndContinueLogEntries = (JCObject)retObjectGetEditAndContinueLogEntries;
+            return new IEnumerable_1Implementation(objGetEditAndContinueLogEntries);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditAndContinueLogEntries != null ? retObjectGetEditAndContinueLogEntries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetEditAndContinueMapEntries(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEditAndContinueMapEntries = null;
+        try {
+            retObjectGetEditAndContinueMapEntries = classType.Invoke("GetEditAndContinueMapEntries", reader == null ? null : reader.getJCOInstance());
+            JCObject objGetEditAndContinueMapEntries = (JCObject)retObjectGetEditAndContinueMapEntries;
+            return new IEnumerable_1Implementation(objGetEditAndContinueMapEntries);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditAndContinueMapEntries != null ? retObjectGetEditAndContinueMapEntries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetTypesWithEvents(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypesWithEvents = null;
+        try {
+            retObjectGetTypesWithEvents = classType.Invoke("GetTypesWithEvents", reader == null ? null : reader.getJCOInstance());
+            JCObject objGetTypesWithEvents = (JCObject)retObjectGetTypesWithEvents;
+            return new IEnumerable_1Implementation(objGetTypesWithEvents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypesWithEvents != null ? retObjectGetTypesWithEvents.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetTypesWithProperties(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypesWithProperties = null;
+        try {
+            retObjectGetTypesWithProperties = classType.Invoke("GetTypesWithProperties", reader == null ? null : reader.getJCOInstance());
+            JCObject objGetTypesWithProperties = (JCObject)retObjectGetTypesWithProperties;
+            return new IEnumerable_1Implementation(objGetTypesWithProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypesWithProperties != null ? retObjectGetTypesWithProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -54,7 +54,7 @@ import system.xml.linq.XObjectChange;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XObjectChangeEventArgs extends EventArgs  {
+public class XObjectChangeEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

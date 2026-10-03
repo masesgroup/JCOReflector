@@ -40,8 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.servicemodel.EndpointAddress;
 import system.AsyncCallback;
+import system.servicemodel.description.MetadataExchangeClient;
 import system.Uri;
 import system.servicemodel.description.MetadataExchangeClientMode;
 import system.servicemodel.description.ServiceEndpointCollection;
@@ -158,6 +161,66 @@ public class MetadataResolver extends NetObject  {
     
     // Methods section
     
+    public static IAsyncResult BeginResolve(IEnumerable_1 contracts, EndpointAddress address, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginResolve = null;
+        try {
+            retObjectBeginResolve = classType.Invoke("BeginResolve", contracts == null ? null : contracts.getJCOInstance(), address == null ? null : address.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginResolve = (JCObject)retObjectBeginResolve;
+            return new IAsyncResultImplementation(objBeginResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginResolve != null ? retObjectBeginResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IAsyncResult BeginResolve(IEnumerable_1 contracts, EndpointAddress address, MetadataExchangeClient client, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginResolve = null;
+        try {
+            retObjectBeginResolve = classType.Invoke("BeginResolve", contracts == null ? null : contracts.getJCOInstance(), address == null ? null : address.getJCOInstance(), client == null ? null : client.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginResolve = (JCObject)retObjectBeginResolve;
+            return new IAsyncResultImplementation(objBeginResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginResolve != null ? retObjectBeginResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IAsyncResult BeginResolve(IEnumerable_1 contracts, Uri address, MetadataExchangeClientMode mode, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginResolve = null;
+        try {
+            retObjectBeginResolve = classType.Invoke("BeginResolve", contracts == null ? null : contracts.getJCOInstance(), address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginResolve = (JCObject)retObjectBeginResolve;
+            return new IAsyncResultImplementation(objBeginResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginResolve != null ? retObjectBeginResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IAsyncResult BeginResolve(IEnumerable_1 contracts, Uri address, MetadataExchangeClientMode mode, MetadataExchangeClient client, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeginResolve = null;
+        try {
+            retObjectBeginResolve = classType.Invoke("BeginResolve", contracts == null ? null : contracts.getJCOInstance(), address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), client == null ? null : client.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginResolve = (JCObject)retObjectBeginResolve;
+            return new IAsyncResultImplementation(objBeginResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginResolve != null ? retObjectBeginResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static IAsyncResult BeginResolve(NetType contract, EndpointAddress address, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -198,6 +261,66 @@ public class MetadataResolver extends NetObject  {
             return new ServiceEndpointCollection(objEndResolve);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndResolve != null ? retObjectEndResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ServiceEndpointCollection Resolve(IEnumerable_1 contracts, EndpointAddress address) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolve = null;
+        try {
+            retObjectResolve = classType.Invoke("Resolve", contracts == null ? null : contracts.getJCOInstance(), address == null ? null : address.getJCOInstance());
+            JCObject objResolve = (JCObject)retObjectResolve;
+            return new ServiceEndpointCollection(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ServiceEndpointCollection Resolve(IEnumerable_1 contracts, EndpointAddress address, MetadataExchangeClient client) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolve = null;
+        try {
+            retObjectResolve = classType.Invoke("Resolve", contracts == null ? null : contracts.getJCOInstance(), address == null ? null : address.getJCOInstance(), client == null ? null : client.getJCOInstance());
+            JCObject objResolve = (JCObject)retObjectResolve;
+            return new ServiceEndpointCollection(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ServiceEndpointCollection Resolve(IEnumerable_1 contracts, Uri address, MetadataExchangeClientMode mode) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolve = null;
+        try {
+            retObjectResolve = classType.Invoke("Resolve", contracts == null ? null : contracts.getJCOInstance(), address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            JCObject objResolve = (JCObject)retObjectResolve;
+            return new ServiceEndpointCollection(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ServiceEndpointCollection Resolve(IEnumerable_1 contracts, Uri address, MetadataExchangeClientMode mode, MetadataExchangeClient client) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResolve = null;
+        try {
+            retObjectResolve = classType.Invoke("Resolve", contracts == null ? null : contracts.getJCOInstance(), address == null ? null : address.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), client == null ? null : client.getJCOInstance());
+            JCObject objResolve = (JCObject)retObjectResolve;
+            return new ServiceEndpointCollection(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

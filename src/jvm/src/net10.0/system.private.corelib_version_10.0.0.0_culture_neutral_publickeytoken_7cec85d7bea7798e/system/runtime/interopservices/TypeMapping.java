@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IReadOnlyDictionary_2;
+import system.collections.generic.IReadOnlyDictionary_2Implementation;
 
 
 /**
@@ -151,6 +153,36 @@ public class TypeMapping extends NetObject  {
     
     // Methods section
     
+    public static <TTypeMapGroup extends IJCOBridgeReflected> IReadOnlyDictionary_2 GetOrCreateExternalTypeMapping() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetOrCreateExternalTypeMapping = null;
+        try {
+            retObjectGetOrCreateExternalTypeMapping = classType.Invoke("GetOrCreateExternalTypeMapping");
+            JCObject objGetOrCreateExternalTypeMapping = (JCObject)retObjectGetOrCreateExternalTypeMapping;
+            return new IReadOnlyDictionary_2Implementation(objGetOrCreateExternalTypeMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrCreateExternalTypeMapping != null ? retObjectGetOrCreateExternalTypeMapping.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TTypeMapGroup extends IJCOBridgeReflected> IReadOnlyDictionary_2 GetOrCreateProxyTypeMapping() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.io.FileLoadException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetOrCreateProxyTypeMapping = null;
+        try {
+            retObjectGetOrCreateProxyTypeMapping = classType.Invoke("GetOrCreateProxyTypeMapping");
+            JCObject objGetOrCreateProxyTypeMapping = (JCObject)retObjectGetOrCreateProxyTypeMapping;
+            return new IReadOnlyDictionary_2Implementation(objGetOrCreateProxyTypeMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrCreateProxyTypeMapping != null ? retObjectGetOrCreateProxyTypeMapping.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

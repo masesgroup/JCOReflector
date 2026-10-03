@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.caching.FileChangeMonitor;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.DateTimeOffset;
 
 
@@ -54,7 +57,7 @@ import system.DateTimeOffset;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HostFileChangeMonitor extends FileChangeMonitor  {
+public class HostFileChangeMonitor extends system.runtime.caching.FileChangeMonitor  {
     /**
      * Fully assembly qualified name: System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -148,6 +151,16 @@ public class HostFileChangeMonitor extends FileChangeMonitor  {
     // Constructors section
     
     public HostFileChangeMonitor() throws Throwable {
+    }
+
+    public HostFileChangeMonitor(IList_1 filePaths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(filePaths == null ? null : filePaths.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

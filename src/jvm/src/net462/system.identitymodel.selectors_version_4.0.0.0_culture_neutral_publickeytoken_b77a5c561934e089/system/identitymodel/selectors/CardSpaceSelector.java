@@ -42,6 +42,8 @@ import system.identitymodel.tokens.GenericXmlSecurityToken;
 import system.identitymodel.selectors.CardSpacePolicyElement;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.xml.XmlElement;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -161,6 +163,21 @@ public class CardSpaceSelector extends NetObject  {
         java.lang.Object retObjectGetToken = null;
         try {
             retObjectGetToken = classType.Invoke("GetToken", toObjectFromArray(policyChain), tokenSerializer == null ? null : tokenSerializer.getJCOInstance());
+            JCObject objGetToken = (JCObject)retObjectGetToken;
+            return new GenericXmlSecurityToken(objGetToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToken != null ? retObjectGetToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static GenericXmlSecurityToken GetToken(XmlElement endpoint, IEnumerable_1 policy, XmlElement requiredRemoteTokenIssuer, SecurityTokenSerializer tokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.security.SecurityException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToken = null;
+        try {
+            retObjectGetToken = classType.Invoke("GetToken", endpoint == null ? null : endpoint.getJCOInstance(), policy == null ? null : policy.getJCOInstance(), requiredRemoteTokenIssuer == null ? null : requiredRemoteTokenIssuer.getJCOInstance(), tokenSerializer == null ? null : tokenSerializer.getJCOInstance());
             JCObject objGetToken = (JCObject)retObjectGetToken;
             return new GenericXmlSecurityToken(objGetToken);
         } catch (java.lang.ClassCastException cce) {

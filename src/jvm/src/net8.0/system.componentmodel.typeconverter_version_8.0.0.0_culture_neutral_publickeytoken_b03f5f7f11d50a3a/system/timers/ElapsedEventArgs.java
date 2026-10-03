@@ -54,7 +54,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ElapsedEventArgs extends EventArgs  {
+public class ElapsedEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

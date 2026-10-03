@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.dispatcher.MessageFilter;
 import system.servicemodel.MessageQuerySet;
 
@@ -165,6 +166,21 @@ public class CorrelationQuery extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getSelectAdditional() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectAdditional = null;
+        try {
+            retObjectSelectAdditional = classInstance.Get("SelectAdditional");
+            JCObject val = (JCObject)retObjectSelectAdditional;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectAdditional != null ? retObjectSelectAdditional.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MessageFilter getWhere() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

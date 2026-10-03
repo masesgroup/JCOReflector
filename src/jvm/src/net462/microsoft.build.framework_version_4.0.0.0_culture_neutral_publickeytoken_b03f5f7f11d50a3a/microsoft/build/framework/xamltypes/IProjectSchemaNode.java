@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -115,6 +117,10 @@ public interface IProjectSchemaNode extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IEnumerable_1 GetSchemaObjects(NetType type) throws Throwable;
+
+    public IEnumerable_1 GetSchemaObjectTypes() throws Throwable;
+
 
     
     // Properties section

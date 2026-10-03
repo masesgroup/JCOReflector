@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.List_1;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.ItemAutomationPeer;
@@ -144,6 +145,21 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
 
     // Methods section
     
+    public List_1 GetChildren(List_1 children) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildren = null;
+        try {
+            retObjectGetChildren = classInstance.Invoke("GetChildren", children == null ? null : children.getJCOInstance());
+            JCObject objGetChildren = (JCObject)retObjectGetChildren;
+            return new List_1(objGetChildren);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildren != null ? retObjectGetChildren.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.ActivationContext;
 import system.runtime.hosting.ActivationArguments;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.AppDomainInitializer;
 import system.LoaderOptimization;
 import system.security.policy.ApplicationTrust;
@@ -202,6 +204,16 @@ public class AppDomainSetup extends NetObject  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetConfigurationBytes != null ? retObjectGetConfigurationBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetCompatibilitySwitches(IEnumerable_1 switches) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetCompatibilitySwitches", switches == null ? null : switches.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

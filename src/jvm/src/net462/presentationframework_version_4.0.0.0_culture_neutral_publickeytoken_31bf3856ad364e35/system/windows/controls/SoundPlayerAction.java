@@ -54,7 +54,7 @@ import system.Uri;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SoundPlayerAction extends TriggerAction implements AutoCloseable {
+public class SoundPlayerAction extends system.windows.TriggerAction implements AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

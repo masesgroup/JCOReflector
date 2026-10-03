@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.activities.rules.RuleExecution;
 import system.workflow.activities.rules.RuleValidation;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.workflow.activities.rules.RuleCondition;
 
 
@@ -177,6 +179,21 @@ public class RuleCondition extends NetObject  {
             return (boolean)retObjectValidate;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 GetDependencies(RuleValidation validation) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDependencies = null;
+        try {
+            retObjectGetDependencies = classInstance.Invoke("GetDependencies", validation == null ? null : validation.getJCOInstance());
+            JCObject objGetDependencies = (JCObject)retObjectGetDependencies;
+            return new ICollection_1Implementation(objGetDependencies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDependencies != null ? retObjectGetDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

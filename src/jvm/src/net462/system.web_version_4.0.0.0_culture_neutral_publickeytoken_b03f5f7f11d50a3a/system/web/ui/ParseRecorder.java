@@ -44,6 +44,8 @@ import system.codedom.CodeCompileUnit;
 import system.codedom.CodeTypeDeclaration;
 import system.codedom.CodeMemberMethod;
 import system.text.regularexpressions.Match;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -231,6 +233,21 @@ public class ParseRecorder extends NetObject  {
     
     // Properties section
     
+    public static IList_1 getRecorderFactories() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRecorderFactories = null;
+        try {
+            retObjectRecorderFactories = classType.Get("RecorderFactories");
+            JCObject val = (JCObject)retObjectRecorderFactories;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecorderFactories != null ? retObjectRecorderFactories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.controls.GridView;
 import system.windows.controls.ListView;
+import system.collections.generic.List_1;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.ItemAutomationPeer;
@@ -171,6 +172,15 @@ public class GridViewAutomationPeer extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public List_1 GetChildren(List_1 children) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method

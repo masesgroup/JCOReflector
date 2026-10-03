@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.runtime.compilerservices.CallSiteBinder;
 import system.dynamic.DynamicMetaObject;
 import system.linq.expressions.Expression;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.linq.expressions.LabelTarget;
 
 
 /**
@@ -55,7 +57,7 @@ import system.linq.expressions.Expression;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DynamicMetaObjectBinder extends CallSiteBinder  {
+public class DynamicMetaObjectBinder extends system.runtime.compilerservices.CallSiteBinder  {
     /**
      * Fully assembly qualified name: System.Linq.Expressions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -194,6 +196,21 @@ public class DynamicMetaObjectBinder extends CallSiteBinder  {
             return new DynamicMetaObject(objDefer);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefer != null ? retObjectDefer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Expression Bind(NetObject[] args, ReadOnlyCollection_1 parameters, LabelTarget returnLabel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBind = null;
+        try {
+            retObjectBind = classInstance.Invoke("Bind", toObjectFromArray(args), parameters == null ? null : parameters.getJCOInstance(), returnLabel == null ? null : returnLabel.getJCOInstance());
+            JCObject objBind = (JCObject)retObjectBind;
+            return new Expression(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

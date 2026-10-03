@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.xsl.runtime.XmlQuerySequence_1;
 import system.xml.xpath.XPathItem;
 import system.xml.xsl.runtime.XmlQueryItemSequence;
 
@@ -54,7 +55,7 @@ import system.xml.xsl.runtime.XmlQueryItemSequence;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlQueryItemSequence extends NetObjectEnumerable  {
+public class XmlQueryItemSequence extends system.xml.xsl.runtime.XmlQuerySequence_1<XPathItem>  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

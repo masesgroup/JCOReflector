@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.servicemodel.description.WsdlImporter;
 import system.servicemodel.description.WsdlContractConversionContext;
 import system.servicemodel.description.WsdlEndpointConversionContext;
@@ -145,6 +147,16 @@ public class IWsdlImportExtensionImplementation extends NetObject implements IWs
 
     // Methods section
     
+    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection_1 policy) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BeforeImport", wsdlDocuments == null ? null : wsdlDocuments.getJCOInstance(), xmlSchemas == null ? null : xmlSchemas.getJCOInstance(), policy == null ? null : policy.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

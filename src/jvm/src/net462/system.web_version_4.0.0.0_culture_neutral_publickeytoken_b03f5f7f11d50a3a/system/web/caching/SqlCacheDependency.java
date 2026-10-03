@@ -54,7 +54,7 @@ import system.data.sqlclient.SqlCommand;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlCacheDependency extends CacheDependency  {
+public class SqlCacheDependency extends system.web.caching.CacheDependency  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

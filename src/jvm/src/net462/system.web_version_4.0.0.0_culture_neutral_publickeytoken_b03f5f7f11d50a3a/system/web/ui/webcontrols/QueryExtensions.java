@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.IQueryable_1;
+import system.linq.IQueryable_1Implementation;
 
 
 /**
@@ -151,6 +153,21 @@ public class QueryExtensions extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> IQueryable_1 SortBy(IQueryable_1 source, java.lang.String sortExpression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSortBy = null;
+        try {
+            retObjectSortBy = classType.Invoke("SortBy", source == null ? null : source.getJCOInstance(), sortExpression);
+            JCObject objSortBy = (JCObject)retObjectSortBy;
+            return new IQueryable_1Implementation(objSortBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortBy != null ? retObjectSortBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

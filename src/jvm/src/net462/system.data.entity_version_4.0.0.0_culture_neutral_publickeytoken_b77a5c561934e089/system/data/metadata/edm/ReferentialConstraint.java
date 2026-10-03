@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.data.metadata.edm.MetadataItem;
 import system.data.metadata.edm.BuiltInTypeKind;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 import system.data.metadata.edm.RelationshipEndMember;
 
 
@@ -55,7 +56,7 @@ import system.data.metadata.edm.RelationshipEndMember;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ReferentialConstraint extends MetadataItem  {
+public class ReferentialConstraint extends system.data.metadata.edm.MetadataItem  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -160,6 +161,36 @@ public class ReferentialConstraint extends MetadataItem  {
     
     // Properties section
     
+    public ReadOnlyMetadataCollection_1 getFromProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromProperties = null;
+        try {
+            retObjectFromProperties = classInstance.Get("FromProperties");
+            JCObject val = (JCObject)retObjectFromProperties;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromProperties != null ? retObjectFromProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getToProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToProperties = null;
+        try {
+            retObjectToProperties = classInstance.Get("ToProperties");
+            JCObject val = (JCObject)retObjectToProperties;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToProperties != null ? retObjectToProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RelationshipEndMember getFromRole() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

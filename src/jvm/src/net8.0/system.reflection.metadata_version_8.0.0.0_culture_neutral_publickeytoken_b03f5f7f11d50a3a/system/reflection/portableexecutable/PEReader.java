@@ -38,8 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.ImmutableArray_1;
 import system.io.Stream;
 import system.reflection.portableexecutable.PEStreamOptions;
+import system.Func_2;
 import system.reflection.metadata.MetadataReaderProvider;
 import system.reflection.portableexecutable.DebugDirectoryEntry;
 import system.reflection.portableexecutable.CodeViewDebugDirectoryData;
@@ -156,6 +158,16 @@ public class PEReader extends NetObject implements AutoCloseable {
     public PEReader() throws Throwable {
     }
 
+    public PEReader(ImmutableArray_1 peImage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(peImage == null ? null : peImage.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PEReader(Stream peStream, PEStreamOptions options, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.BadImageFormatException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +203,35 @@ public class PEReader extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    public boolean TryOpenAssociatedPortablePdb(java.lang.String peImagePath, Func_2 pdbFileStreamProvider, JCORefOut<MetadataReaderProvider> pdbReaderProvider, JCORefOut pdbPath) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.FormatException, system.OutOfMemoryException, system.io.IOException, system.io.compression.ZLibException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryOpenAssociatedPortablePdb = null;
+        try {
+            retObjectTryOpenAssociatedPortablePdb = classInstance.Invoke("TryOpenAssociatedPortablePdb", peImagePath, pdbFileStreamProvider, pdbReaderProvider.getJCRefOut(), pdbPath.getJCRefOut());
+            return (boolean)retObjectTryOpenAssociatedPortablePdb;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryOpenAssociatedPortablePdb != null ? retObjectTryOpenAssociatedPortablePdb.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 ReadDebugDirectory() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDebugDirectory = null;
+        try {
+            retObjectReadDebugDirectory = classInstance.Invoke("ReadDebugDirectory");
+            JCObject objReadDebugDirectory = (JCObject)retObjectReadDebugDirectory;
+            return new ImmutableArray_1(objReadDebugDirectory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDebugDirectory != null ? retObjectReadDebugDirectory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MetadataReaderProvider ReadEmbeddedPortablePdbDebugDirectoryData(DebugDirectoryEntry entry) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.BadImageFormatException, system.io.compression.ZLibException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

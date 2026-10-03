@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.dataannotations.ValidationContext;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -152,6 +156,62 @@ public class Validator extends NetObject  {
     
     // Methods section
     
+    public static boolean TryValidateObject(NetObject instance, ValidationContext validationContext, ICollection_1 validationResults, boolean validateAllProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryValidateObject = null;
+        try {
+            retObjectTryValidateObject = classType.Invoke("TryValidateObject", instance == null ? null : instance.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance(), validationResults == null ? null : validationResults.getJCOInstance(), validateAllProperties);
+            return (boolean)retObjectTryValidateObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryValidateObject != null ? retObjectTryValidateObject.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryValidateObject(NetObject instance, ValidationContext validationContext, ICollection_1 validationResults) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryValidateObject = null;
+        try {
+            retObjectTryValidateObject = classType.Invoke("TryValidateObject", instance == null ? null : instance.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance(), validationResults == null ? null : validationResults.getJCOInstance());
+            return (boolean)retObjectTryValidateObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryValidateObject != null ? retObjectTryValidateObject.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryValidateProperty(NetObject value, ValidationContext validationContext, ICollection_1 validationResults) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryValidateProperty = null;
+        try {
+            retObjectTryValidateProperty = classType.Invoke("TryValidateProperty", value == null ? null : value.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance(), validationResults == null ? null : validationResults.getJCOInstance());
+            return (boolean)retObjectTryValidateProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryValidateProperty != null ? retObjectTryValidateProperty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryValidateValue(NetObject value, ValidationContext validationContext, ICollection_1 validationResults, IEnumerable_1 validationAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryValidateValue = null;
+        try {
+            retObjectTryValidateValue = classType.Invoke("TryValidateValue", value == null ? null : value.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance(), validationResults == null ? null : validationResults.getJCOInstance(), validationAttributes == null ? null : validationAttributes.getJCOInstance());
+            return (boolean)retObjectTryValidateValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryValidateValue != null ? retObjectTryValidateValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void ValidateObject(NetObject instance, ValidationContext validationContext, boolean validateAllProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.dataannotations.ValidationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -177,6 +237,16 @@ public class Validator extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ValidateProperty", value == null ? null : value.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ValidateValue(NetObject value, ValidationContext validationContext, IEnumerable_1 validationAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.dataannotations.ValidationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ValidateValue", value == null ? null : value.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance(), validationAttributes == null ? null : validationAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

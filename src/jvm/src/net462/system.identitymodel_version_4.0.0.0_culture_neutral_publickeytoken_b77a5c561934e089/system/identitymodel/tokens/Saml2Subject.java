@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.Saml2NameIdentifier;
 import system.identitymodel.tokens.Saml2SubjectConfirmation;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -185,6 +186,21 @@ public class Saml2Subject extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getSubjectConfirmations() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectConfirmations = null;
+        try {
+            retObjectSubjectConfirmations = classInstance.Get("SubjectConfirmations");
+            JCObject val = (JCObject)retObjectSubjectConfirmations;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubjectConfirmations != null ? retObjectSubjectConfirmations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Saml2NameIdentifier getNameId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

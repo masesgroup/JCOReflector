@@ -54,7 +54,7 @@ import system.configuration.ConfigurationLocation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConfigurationLocationCollection extends ReadOnlyCollectionBase  {
+public class ConfigurationLocationCollection extends system.collections.ReadOnlyCollectionBase  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

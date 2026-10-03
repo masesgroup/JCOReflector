@@ -41,8 +41,10 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityToken;
 import system.xml.UniqueId;
 import system.DateTime;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.servicemodel.security.tokens.SecurityContextSecurityToken;
+import system.servicemodel.security.SecurityStateEncoder;
 import system.servicemodel.security.SecurityMessageProperty;
 
 
@@ -58,7 +60,7 @@ import system.servicemodel.security.SecurityMessageProperty;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SecurityContextSecurityToken extends SecurityToken implements AutoCloseable {
+public class SecurityContextSecurityToken extends system.identitymodel.tokens.SecurityToken implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -174,11 +176,45 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
         }
     }
 
+    public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(contextId == null ? null : contextId.getJCOInstance(), id, key, validFrom == null ? null : validFrom.getJCOInstance(), validTo == null ? null : validTo.getJCOInstance(), authorizationPolicies == null ? null : authorizationPolicies.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, UniqueId keyGeneration, DateTime keyEffectiveTime, DateTime keyExpirationTime, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(contextId == null ? null : contextId.getJCOInstance(), id, key, validFrom == null ? null : validFrom.getJCOInstance(), validTo == null ? null : validTo.getJCOInstance(), keyGeneration == null ? null : keyGeneration.getJCOInstance(), keyEffectiveTime == null ? null : keyEffectiveTime.getJCOInstance(), keyExpirationTime == null ? null : keyExpirationTime.getJCOInstance(), authorizationPolicies == null ? null : authorizationPolicies.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateKeyIdentifierClause = null;
+        try {
+            retObjectCanCreateKeyIdentifierClause = classInstance.Invoke("CanCreateKeyIdentifierClause");
+            return (boolean)retObjectCanCreateKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCreateKeyIdentifierClause != null ? retObjectCanCreateKeyIdentifierClause.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +224,66 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
             return (boolean)retObjectMatchesKeyIdentifierClause;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesKeyIdentifierClause != null ? retObjectMatchesKeyIdentifierClause.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, ReadOnlyCollection_1 authorizationPolicies, SecurityStateEncoder securityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.AccessViolationException, system.PlatformNotSupportedException, system.SystemException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCookieSecurityContextToken = null;
+        try {
+            retObjectCreateCookieSecurityContextToken = classType.Invoke("CreateCookieSecurityContextToken", contextId == null ? null : contextId.getJCOInstance(), id, key, validFrom == null ? null : validFrom.getJCOInstance(), validTo == null ? null : validTo.getJCOInstance(), authorizationPolicies == null ? null : authorizationPolicies.getJCOInstance(), securityStateEncoder == null ? null : securityStateEncoder.getJCOInstance());
+            JCObject objCreateCookieSecurityContextToken = (JCObject)retObjectCreateCookieSecurityContextToken;
+            return new SecurityContextSecurityToken(objCreateCookieSecurityContextToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCookieSecurityContextToken != null ? retObjectCreateCookieSecurityContextToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, DateTime dupParam3, DateTime dupParam4, ReadOnlyCollection_1 dupParam5, SecurityStateEncoder dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.AccessViolationException, system.PlatformNotSupportedException, system.SystemException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCookieSecurityContextToken = null;
+        try {
+            retObjectCreateCookieSecurityContextToken = classType.Invoke("CreateCookieSecurityContextToken", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6 == null ? null : dupParam6.getJCOInstance());
+            JCObject objCreateCookieSecurityContextToken = (JCObject)retObjectCreateCookieSecurityContextToken;
+            return new SecurityContextSecurityToken(objCreateCookieSecurityContextToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCookieSecurityContextToken != null ? retObjectCreateCookieSecurityContextToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, UniqueId keyGeneration, DateTime keyEffectiveTime, DateTime keyExpirationTime, ReadOnlyCollection_1 authorizationPolicies, SecurityStateEncoder securityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.SystemException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCookieSecurityContextToken = null;
+        try {
+            retObjectCreateCookieSecurityContextToken = classType.Invoke("CreateCookieSecurityContextToken", contextId == null ? null : contextId.getJCOInstance(), id, key, validFrom == null ? null : validFrom.getJCOInstance(), validTo == null ? null : validTo.getJCOInstance(), keyGeneration == null ? null : keyGeneration.getJCOInstance(), keyEffectiveTime == null ? null : keyEffectiveTime.getJCOInstance(), keyExpirationTime == null ? null : keyExpirationTime.getJCOInstance(), authorizationPolicies == null ? null : authorizationPolicies.getJCOInstance(), securityStateEncoder == null ? null : securityStateEncoder.getJCOInstance());
+            JCObject objCreateCookieSecurityContextToken = (JCObject)retObjectCreateCookieSecurityContextToken;
+            return new SecurityContextSecurityToken(objCreateCookieSecurityContextToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCookieSecurityContextToken != null ? retObjectCreateCookieSecurityContextToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, DateTime dupParam3, DateTime dupParam4, UniqueId dupParam5, DateTime dupParam6, DateTime dupParam7, ReadOnlyCollection_1 dupParam8, SecurityStateEncoder dupParam9) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.SystemException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCookieSecurityContextToken = null;
+        try {
+            retObjectCreateCookieSecurityContextToken = classType.Invoke("CreateCookieSecurityContextToken", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6 == null ? null : dupParam6.getJCOInstance(), dupParam7 == null ? null : dupParam7.getJCOInstance(), dupParam8 == null ? null : dupParam8.getJCOInstance(), dupParam9 == null ? null : dupParam9.getJCOInstance());
+            JCObject objCreateCookieSecurityContextToken = (JCObject)retObjectCreateCookieSecurityContextToken;
+            return new SecurityContextSecurityToken(objCreateCookieSecurityContextToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCookieSecurityContextToken != null ? retObjectCreateCookieSecurityContextToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,6 +325,31 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
             return (boolean)retObjectIsCookieMode;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCookieMode != null ? retObjectIsCookieMode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getAuthorizationPolicies() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorizationPolicies = null;
+        try {
+            retObjectAuthorizationPolicies = classInstance.Get("AuthorizationPolicies");
+            JCObject val = (JCObject)retObjectAuthorizationPolicies;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthorizationPolicies != null ? retObjectAuthorizationPolicies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAuthorizationPolicies(ReadOnlyCollection_1 AuthorizationPolicies) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AuthorizationPolicies", AuthorizationPolicies == null ? null : AuthorizationPolicies.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,6 +42,8 @@ import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.servicemodel.security.SecurityVersion;
 import system.identitymodel.tokens.SamlSerializer;
 import system.servicemodel.security.SecurityStateEncoder;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.servicemodel.security.TrustVersion;
 import system.servicemodel.security.SecureConversationVersion;
 import system.xml.XmlElement;
@@ -62,7 +64,7 @@ import system.servicemodel.security.WSSecurityTokenSerializer;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
+public class WSSecurityTokenSerializer extends system.identitymodel.selectors.SecurityTokenSerializer  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -200,6 +202,46 @@ public class WSSecurityTokenSerializer extends SecurityTokenSerializer  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(securityVersion == null ? null : securityVersion.getJCOInstance(), emitBspRequiredAttributes, samlSerializer == null ? null : samlSerializer.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(securityVersion == null ? null : securityVersion.getJCOInstance(), emitBspRequiredAttributes, samlSerializer == null ? null : samlSerializer.getJCOInstance(), securityStateEncoder == null ? null : securityStateEncoder.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(securityVersion == null ? null : securityVersion.getJCOInstance(), emitBspRequiredAttributes, samlSerializer == null ? null : samlSerializer.getJCOInstance(), securityStateEncoder == null ? null : securityStateEncoder.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance(), maximumKeyDerivationOffset, maximumKeyDerivationLabelLength, maximumKeyDerivationNonceLength));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WSSecurityTokenSerializer(SecurityVersion securityVersion, TrustVersion trustVersion, SecureConversationVersion secureConversationVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(securityVersion == null ? null : securityVersion.getJCOInstance(), trustVersion == null ? null : trustVersion.getJCOInstance(), secureConversationVersion == null ? null : secureConversationVersion.getJCOInstance(), emitBspRequiredAttributes, samlSerializer == null ? null : samlSerializer.getJCOInstance(), securityStateEncoder == null ? null : securityStateEncoder.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WSSecurityTokenSerializer(SecurityVersion securityVersion, TrustVersion trustVersion, SecureConversationVersion secureConversationVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(securityVersion == null ? null : securityVersion.getJCOInstance(), trustVersion == null ? null : trustVersion.getJCOInstance(), secureConversationVersion == null ? null : secureConversationVersion.getJCOInstance(), emitBspRequiredAttributes, samlSerializer == null ? null : samlSerializer.getJCOInstance(), securityStateEncoder == null ? null : securityStateEncoder.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance(), maximumKeyDerivationOffset, maximumKeyDerivationLabelLength, maximumKeyDerivationNonceLength));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.serialization.XmlObjectSerializer;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.runtime.serialization.IDataContractSurrogate;
+import system.runtime.serialization.IDataContractSurrogateImplementation;
 import system.runtime.serialization.json.DataContractJsonSerializerSettings;
 import system.xml.XmlDictionaryString;
 import system.xml.XmlDictionaryReader;
@@ -46,10 +50,9 @@ import system.xml.XmlReader;
 import system.io.Stream;
 import system.xml.XmlDictionaryWriter;
 import system.xml.XmlWriter;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.runtime.serialization.DateTimeFormat;
 import system.runtime.serialization.EmitTypeInformation;
-import system.runtime.serialization.IDataContractSurrogate;
-import system.runtime.serialization.IDataContractSurrogateImplementation;
 
 
 /**
@@ -64,7 +67,7 @@ import system.runtime.serialization.IDataContractSurrogateImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataContractJsonSerializer extends XmlObjectSerializer  {
+public class DataContractJsonSerializer extends system.runtime.serialization.XmlObjectSerializer  {
     /**
      * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -170,6 +173,26 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
         }
     }
 
+    public DataContractJsonSerializer(NetType type, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractJsonSerializer(NetType type, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance(), alwaysEmitTypeInformation));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataContractJsonSerializer(NetType type, DataContractJsonSerializerSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
@@ -190,11 +213,51 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
         }
     }
 
+    public DataContractJsonSerializer(NetType type, java.lang.String rootName, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName, knownTypes == null ? null : knownTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractJsonSerializer(NetType type, java.lang.String rootName, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName, knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance(), alwaysEmitTypeInformation));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName == null ? null : rootName.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName == null ? null : rootName.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName == null ? null : rootName.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, dataContractSurrogate == null ? null : dataContractSurrogate.getJCOInstance(), alwaysEmitTypeInformation));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,6 +542,21 @@ public class DataContractJsonSerializer extends XmlObjectSerializer  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getKnownTypes() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKnownTypes = null;
+        try {
+            retObjectKnownTypes = classInstance.Get("KnownTypes");
+            JCObject val = (JCObject)retObjectKnownTypes;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKnownTypes != null ? retObjectKnownTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

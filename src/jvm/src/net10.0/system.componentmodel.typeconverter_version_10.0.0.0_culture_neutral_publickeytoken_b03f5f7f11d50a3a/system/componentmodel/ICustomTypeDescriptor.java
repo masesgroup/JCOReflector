@@ -44,6 +44,7 @@ import system.Attribute;
 import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.TypeConverter;
+import system.Nullable_1;
 
 
 /**
@@ -156,6 +157,8 @@ public interface ICustomTypeDescriptor extends IJCOBridgeReflected {
     
     // Properties section
     
+    public Nullable_1 getRequireRegisteredTypes() throws Throwable;
+
 
 
     // Instance Events section

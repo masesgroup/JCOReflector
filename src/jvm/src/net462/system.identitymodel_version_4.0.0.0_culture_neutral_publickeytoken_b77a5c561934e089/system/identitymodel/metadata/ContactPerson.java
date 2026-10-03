@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.metadata.ContactType;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -174,6 +176,36 @@ public class ContactPerson extends NetObject  {
     
     // Properties section
     
+    public ICollection_1 getEmailAddresses() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmailAddresses = null;
+        try {
+            retObjectEmailAddresses = classInstance.Get("EmailAddresses");
+            JCObject val = (JCObject)retObjectEmailAddresses;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmailAddresses != null ? retObjectEmailAddresses.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getTelephoneNumbers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTelephoneNumbers = null;
+        try {
+            retObjectTelephoneNumbers = classInstance.Get("TelephoneNumbers");
+            JCObject val = (JCObject)retObjectTelephoneNumbers;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTelephoneNumbers != null ? retObjectTelephoneNumbers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ContactType getType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

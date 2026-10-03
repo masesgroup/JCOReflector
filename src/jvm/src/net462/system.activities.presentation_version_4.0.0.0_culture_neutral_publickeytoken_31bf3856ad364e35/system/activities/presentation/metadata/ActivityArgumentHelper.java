@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Func_2;
 
 
 /**
@@ -151,6 +152,16 @@ public class ActivityArgumentHelper extends NetObject  {
     
     // Methods section
     
+    public static void RegisterAccessorsGenerator(NetType activityType, Func_2 argumentAccessorsGenerator) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterAccessorsGenerator", activityType == null ? null : activityType.getJCOInstance(), argumentAccessorsGenerator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

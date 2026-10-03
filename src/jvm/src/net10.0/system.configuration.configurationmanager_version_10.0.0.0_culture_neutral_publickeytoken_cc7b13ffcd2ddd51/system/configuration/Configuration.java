@@ -47,6 +47,7 @@ import system.configuration.ConfigurationSectionCollection;
 import system.configuration.ConfigurationSectionGroupCollection;
 import system.configuration.ConnectionStringsSection;
 import system.configuration.ContextInformation;
+import system.Func_2;
 import system.runtime.versioning.FrameworkName;
 
 
@@ -395,6 +396,54 @@ public class Configuration extends NetObject  {
             return new ContextInformation(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluationContext != null ? retObjectEvaluationContext.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getAssemblyStringTransformer() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyStringTransformer = null;
+        try {
+            retObjectAssemblyStringTransformer = classInstance.Get("AssemblyStringTransformer");
+            return (Func_2)retObjectAssemblyStringTransformer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectAssemblyStringTransformer != null ? retObjectAssemblyStringTransformer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAssemblyStringTransformer(Func_2 AssemblyStringTransformer) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AssemblyStringTransformer", AssemblyStringTransformer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getTypeStringTransformer() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeStringTransformer = null;
+        try {
+            retObjectTypeStringTransformer = classInstance.Get("TypeStringTransformer");
+            return (Func_2)retObjectTypeStringTransformer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectTypeStringTransformer != null ? retObjectTypeStringTransformer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTypeStringTransformer(Func_2 TypeStringTransformer) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TypeStringTransformer", TypeStringTransformer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

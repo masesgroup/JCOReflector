@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.EdmMember;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.RelationshipEndMember;
 import system.data.metadata.edm.RelationshipType;
@@ -56,7 +58,7 @@ import system.data.metadata.edm.RelationshipType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NavigationProperty extends EdmMember  {
+public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -157,6 +159,21 @@ public class NavigationProperty extends EdmMember  {
     
     // Methods section
     
+    public IEnumerable_1 GetDependentProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDependentProperties = null;
+        try {
+            retObjectGetDependentProperties = classInstance.Invoke("GetDependentProperties");
+            JCObject objGetDependentProperties = (JCObject)retObjectGetDependentProperties;
+            return new IEnumerable_1Implementation(objGetDependentProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDependentProperties != null ? retObjectGetDependentProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -46,6 +46,7 @@ import system.identitymodel.protocols.wstrust.Renewing;
 import system.identitymodel.protocols.wstrust.RequestClaimCollection;
 import system.identitymodel.protocols.wstrust.RequestSecurityToken;
 import system.identitymodel.tokens.SecurityTokenElement;
+import system.Nullable_1;
 
 
 /**
@@ -60,7 +61,7 @@ import system.identitymodel.tokens.SecurityTokenElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RequestSecurityToken extends WSTrustMessage  {
+public class RequestSecurityToken extends system.identitymodel.protocols.wstrust.WSTrustMessage  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -526,6 +527,56 @@ public class RequestSecurityToken extends WSTrustMessage  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateTarget", ValidateTarget == null ? null : ValidateTarget.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getDelegatable() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelegatable = null;
+        try {
+            retObjectDelegatable = classInstance.Get("Delegatable");
+            JCObject val = (JCObject)retObjectDelegatable;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelegatable != null ? retObjectDelegatable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDelegatable(Nullable_1 Delegatable) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Delegatable", Delegatable == null ? null : Delegatable.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getForwardable() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForwardable = null;
+        try {
+            retObjectForwardable = classInstance.Get("Forwardable");
+            JCObject val = (JCObject)retObjectForwardable;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForwardable != null ? retObjectForwardable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setForwardable(Nullable_1 Forwardable) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Forwardable", Forwardable == null ? null : Forwardable.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

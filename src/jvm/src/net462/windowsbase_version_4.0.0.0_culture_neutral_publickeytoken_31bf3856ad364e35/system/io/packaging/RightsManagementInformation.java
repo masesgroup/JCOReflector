@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.security.rightsmanagement.PublishLicense;
 import system.security.rightsmanagement.UseLicense;
 import system.security.rightsmanagement.ContentUser;
@@ -157,6 +159,21 @@ public class RightsManagementInformation extends NetObject  {
     
     // Methods section
     
+    public IDictionary_2 GetEmbeddedUseLicenses() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.io.EndOfStreamException, system.io.FileFormatException, system.FormatException, system.security.rightsmanagement.RightsManagementException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEmbeddedUseLicenses = null;
+        try {
+            retObjectGetEmbeddedUseLicenses = classInstance.Invoke("GetEmbeddedUseLicenses");
+            JCObject objGetEmbeddedUseLicenses = (JCObject)retObjectGetEmbeddedUseLicenses;
+            return new IDictionary_2Implementation(objGetEmbeddedUseLicenses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEmbeddedUseLicenses != null ? retObjectGetEmbeddedUseLicenses.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PublishLicense LoadPublishLicense() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.io.FileFormatException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.UriFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

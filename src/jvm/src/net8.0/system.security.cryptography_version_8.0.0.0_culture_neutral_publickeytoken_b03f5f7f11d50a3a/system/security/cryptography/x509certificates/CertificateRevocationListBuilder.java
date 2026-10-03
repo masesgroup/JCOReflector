@@ -44,10 +44,13 @@ import system.numerics.BigInteger;
 import system.DateTimeOffset;
 import system.security.cryptography.HashAlgorithmName;
 import system.security.cryptography.x509certificates.X509AuthorityKeyIdentifierExtension;
+import system.Nullable_1;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.RSASignaturePadding;
 import system.security.cryptography.x509certificates.CertificateRevocationListBuilder;
 import system.security.cryptography.x509certificates.X509Extension;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -197,6 +200,52 @@ public class CertificateRevocationListBuilder extends NetObject  {
         }
     }
 
+    public byte[] Build(X500DistinguishedName issuerName, X509SignatureGenerator generator, BigInteger crlNumber, DateTimeOffset nextUpdate, HashAlgorithmName hashAlgorithm, X509AuthorityKeyIdentifierExtension authorityKeyIdentifier, Nullable_1 thisUpdate) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.ArrayTypeMismatchException, system.DivideByZeroException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuild = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectBuild = classInstance.Invoke("Build", issuerName == null ? null : issuerName.getJCOInstance(), generator == null ? null : generator.getJCOInstance(), crlNumber == null ? null : crlNumber.getJCOInstance(), nextUpdate == null ? null : nextUpdate.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), authorityKeyIdentifier == null ? null : authorityKeyIdentifier.getJCOInstance(), thisUpdate == null ? null : thisUpdate.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectBuild;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexBuild = 0; indexBuild < resultingArrayList.size(); indexBuild++ ) {
+				resultingArray[indexBuild] = (byte)resultingArrayList.get(indexBuild);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectBuild != null ? retObjectBuild.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] Build(X509Certificate2 issuerCertificate, BigInteger crlNumber, DateTimeOffset nextUpdate, HashAlgorithmName hashAlgorithm, RSASignaturePadding rsaSignaturePadding, Nullable_1 thisUpdate) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.formats.asn1.AsnContentException, system.DivideByZeroException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuild = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectBuild = classInstance.Invoke("Build", issuerCertificate == null ? null : issuerCertificate.getJCOInstance(), crlNumber == null ? null : crlNumber.getJCOInstance(), nextUpdate == null ? null : nextUpdate.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), rsaSignaturePadding == null ? null : rsaSignaturePadding.getJCOInstance(), thisUpdate == null ? null : thisUpdate.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectBuild;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexBuild = 0; indexBuild < resultingArrayList.size(); indexBuild++ ) {
+				resultingArray[indexBuild] = (byte)resultingArrayList.get(indexBuild);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectBuild != null ? retObjectBuild.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static CertificateRevocationListBuilder Load(byte[] currentCrl, JCORefOut<BigInteger> currentCrlNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -222,6 +271,51 @@ public class CertificateRevocationListBuilder extends NetObject  {
             return new CertificateRevocationListBuilder(objLoadPem);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPem != null ? retObjectLoadPem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static X509Extension BuildCrlDistributionPointExtension(IEnumerable_1 uris, boolean critical) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBuildCrlDistributionPointExtension = null;
+        try {
+            retObjectBuildCrlDistributionPointExtension = classType.Invoke("BuildCrlDistributionPointExtension", uris == null ? null : uris.getJCOInstance(), critical);
+            JCObject objBuildCrlDistributionPointExtension = (JCObject)retObjectBuildCrlDistributionPointExtension;
+            return new X509Extension(objBuildCrlDistributionPointExtension);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildCrlDistributionPointExtension != null ? retObjectBuildCrlDistributionPointExtension.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddEntry(byte[] serialNumber, Nullable_1 revocationTime, Nullable_1 reason) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEntry", serialNumber, revocationTime == null ? null : revocationTime.getJCOInstance(), reason == null ? null : reason.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddEntry(JCORefOut dupParam0, Nullable_1 dupParam1, Nullable_1 dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEntry", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddEntry(X509Certificate2 certificate, Nullable_1 revocationTime, Nullable_1 reason) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.OverflowException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEntry", certificate == null ? null : certificate.getJCOInstance(), revocationTime == null ? null : revocationTime.getJCOInstance(), reason == null ? null : reason.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

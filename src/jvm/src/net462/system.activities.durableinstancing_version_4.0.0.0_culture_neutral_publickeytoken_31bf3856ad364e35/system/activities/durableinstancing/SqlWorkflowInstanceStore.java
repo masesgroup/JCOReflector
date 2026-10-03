@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.durableinstancing.InstanceStore;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.durableinstancing.InstanceCompletionAction;
 import system.activities.durableinstancing.InstanceEncodingOption;
 import system.activities.durableinstancing.InstanceLockedExceptionAction;
@@ -57,7 +59,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlWorkflowInstanceStore extends InstanceStore  {
+public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.InstanceStore  {
     /**
      * Fully assembly qualified name: System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -174,6 +176,16 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
     
     // Methods section
     
+    public void Promote(java.lang.String name, IEnumerable_1 promoteAsVariant, IEnumerable_1 promoteAsBinary) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Promote", name, promoteAsVariant == null ? null : promoteAsVariant.getJCOInstance(), promoteAsBinary == null ? null : promoteAsBinary.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

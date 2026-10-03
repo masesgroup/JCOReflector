@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.runtime.durableinstancing.InstancePersistenceCommandException;
 import system.xml.linq.XName;
 import system.Guid;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
@@ -56,7 +58,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InstanceLockedException extends InstancePersistenceCommandException {
+public class InstanceLockedException extends system.runtime.durableinstancing.InstancePersistenceCommandException {
     /**
      * Fully assembly qualified name: System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -188,6 +190,36 @@ public class InstanceLockedException extends InstancePersistenceCommandException
         }
     }
 
+    public InstanceLockedException(XName commandName, Guid instanceId, Guid instanceOwnerId, IDictionary_2 serializableInstanceOwnerMetadata) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(commandName == null ? null : commandName.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), instanceOwnerId == null ? null : instanceOwnerId.getJCOInstance(), serializableInstanceOwnerMetadata == null ? null : serializableInstanceOwnerMetadata.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceLockedException(XName commandName, Guid instanceId, Guid instanceOwnerId, IDictionary_2 serializableInstanceOwnerMetadata, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(commandName == null ? null : commandName.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), instanceOwnerId == null ? null : instanceOwnerId.getJCOInstance(), serializableInstanceOwnerMetadata == null ? null : serializableInstanceOwnerMetadata.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceLockedException(XName commandName, Guid instanceId, Guid instanceOwnerId, IDictionary_2 serializableInstanceOwnerMetadata, java.lang.String message, NetException innerException) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(commandName == null ? null : commandName.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), instanceOwnerId == null ? null : instanceOwnerId.getJCOInstance(), serializableInstanceOwnerMetadata == null ? null : serializableInstanceOwnerMetadata.getJCOInstance(), message, innerException == null ? null : innerException.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public InstanceLockedException(XName commandName, Guid instanceId, java.lang.String message, NetException innerException) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -216,6 +248,31 @@ public class InstanceLockedException extends InstancePersistenceCommandException
     
     // Properties section
     
+    public IDictionary_2 getSerializableInstanceOwnerMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializableInstanceOwnerMetadata = null;
+        try {
+            retObjectSerializableInstanceOwnerMetadata = classInstance.Get("SerializableInstanceOwnerMetadata");
+            JCObject val = (JCObject)retObjectSerializableInstanceOwnerMetadata;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializableInstanceOwnerMetadata != null ? retObjectSerializableInstanceOwnerMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSerializableInstanceOwnerMetadata(IDictionary_2 SerializableInstanceOwnerMetadata) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SerializableInstanceOwnerMetadata", SerializableInstanceOwnerMetadata == null ? null : SerializableInstanceOwnerMetadata.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getInstanceOwnerId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.InArgument_1;
 
 
 /**
@@ -155,6 +156,31 @@ public class CorrelationInitializer extends NetObject  {
     
     // Properties section
     
+    public InArgument_1 getCorrelationHandle() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationHandle = null;
+        try {
+            retObjectCorrelationHandle = classInstance.Get("CorrelationHandle");
+            JCObject val = (JCObject)retObjectCorrelationHandle;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationHandle != null ? retObjectCorrelationHandle.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCorrelationHandle(InArgument_1 CorrelationHandle) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CorrelationHandle", CorrelationHandle == null ? null : CorrelationHandle.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

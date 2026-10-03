@@ -42,6 +42,7 @@ import system.ValueType;
 import system.reflection.metadata.Blob;
 import system.reflection.metadata.BlobWriter;
 import system.io.Stream;
+import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.BlobBuilder;
 import system.DateTime;
 import system.Decimal;
@@ -65,7 +66,7 @@ import system.UInt64;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BlobWriter extends ValueType  {
+public class BlobWriter extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -306,6 +307,36 @@ public class BlobWriter extends ValueType  {
         }
     }
 
+    public ImmutableArray_1 ToImmutableArray() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToImmutableArray = null;
+        try {
+            retObjectToImmutableArray = classInstance.Invoke("ToImmutableArray");
+            JCObject objToImmutableArray = (JCObject)retObjectToImmutableArray;
+            return new ImmutableArray_1(objToImmutableArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableArray != null ? retObjectToImmutableArray.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 ToImmutableArray(int start, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToImmutableArray = null;
+        try {
+            retObjectToImmutableArray = classInstance.Invoke("ToImmutableArray", start, byteCount);
+            JCObject objToImmutableArray = (JCObject)retObjectToImmutableArray;
+            return new ImmutableArray_1(objToImmutableArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableArray != null ? retObjectToImmutableArray.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Align(int alignment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -401,6 +432,26 @@ public class BlobWriter extends ValueType  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBytes", (java.lang.Object)dupParam0.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteBytes(ImmutableArray_1 buffer, int start, int byteCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteBytes", buffer == null ? null : buffer.getJCOInstance(), start, byteCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteBytes(ImmutableArray_1 buffer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteBytes", buffer == null ? null : buffer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

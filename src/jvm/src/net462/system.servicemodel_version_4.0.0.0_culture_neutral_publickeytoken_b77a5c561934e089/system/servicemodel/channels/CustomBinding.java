@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.channels.Binding;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.servicemodel.channels.BindingElement;
 import system.servicemodel.channels.BindingElementCollection;
 
@@ -55,7 +57,7 @@ import system.servicemodel.channels.BindingElementCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CustomBinding extends Binding  {
+public class CustomBinding extends system.servicemodel.channels.Binding  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -153,6 +155,16 @@ public class CustomBinding extends Binding  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CustomBinding(IEnumerable_1 bindingElementsInTopDownChannelStackOrder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(bindingElementsInTopDownChannelStackOrder == null ? null : bindingElementsInTopDownChannelStackOrder.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.controls.ItemsControl;
 import system.windows.DependencyObject;
 import system.windows.RoutedEventHandler;
+import system.Nullable_1;
 import system.windows.controls.SelectionChangedEventHandler;
 
 
@@ -56,7 +57,7 @@ import system.windows.controls.SelectionChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Selector extends ItemsControl  {
+public class Selector extends system.windows.controls.ItemsControl  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -282,6 +283,31 @@ public class Selector extends ItemsControl  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedIndex", SelectedIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIsSynchronizedWithCurrentItem() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronizedWithCurrentItem = null;
+        try {
+            retObjectIsSynchronizedWithCurrentItem = classInstance.Get("IsSynchronizedWithCurrentItem");
+            JCObject val = (JCObject)retObjectIsSynchronizedWithCurrentItem;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsSynchronizedWithCurrentItem != null ? retObjectIsSynchronizedWithCurrentItem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsSynchronizedWithCurrentItem(Nullable_1 IsSynchronizedWithCurrentItem) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsSynchronizedWithCurrentItem", IsSynchronizedWithCurrentItem == null ? null : IsSynchronizedWithCurrentItem.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

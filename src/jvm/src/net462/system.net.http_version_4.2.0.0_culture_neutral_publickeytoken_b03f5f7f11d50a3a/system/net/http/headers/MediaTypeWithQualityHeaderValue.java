@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.net.http.headers.MediaTypeHeaderValue;
 import system.net.http.headers.MediaTypeWithQualityHeaderValue;
+import system.Nullable_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.net.http.headers.MediaTypeWithQualityHeaderValue;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MediaTypeWithQualityHeaderValue extends MediaTypeHeaderValue  {
+public class MediaTypeWithQualityHeaderValue extends system.net.http.headers.MediaTypeHeaderValue  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -194,6 +195,31 @@ public class MediaTypeWithQualityHeaderValue extends MediaTypeHeaderValue  {
     
     // Properties section
     
+    public Nullable_1 getQuality() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuality = null;
+        try {
+            retObjectQuality = classInstance.Get("Quality");
+            JCObject val = (JCObject)retObjectQuality;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuality != null ? retObjectQuality.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setQuality(Nullable_1 Quality) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Quality", Quality == null ? null : Quality.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

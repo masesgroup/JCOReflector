@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.durableinstancing.InstancePersistenceCommand;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.Guid;
 
 
@@ -54,7 +56,7 @@ import system.Guid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand  {
+public class LoadWorkflowByInstanceKeyCommand extends system.runtime.durableinstancing.InstancePersistenceCommand  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -184,6 +186,21 @@ public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptUninitializedInstance", AcceptUninitializedInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getInstanceKeysToAssociate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKeysToAssociate = null;
+        try {
+            retObjectInstanceKeysToAssociate = classInstance.Get("InstanceKeysToAssociate");
+            JCObject val = (JCObject)retObjectInstanceKeysToAssociate;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKeysToAssociate != null ? retObjectInstanceKeysToAssociate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

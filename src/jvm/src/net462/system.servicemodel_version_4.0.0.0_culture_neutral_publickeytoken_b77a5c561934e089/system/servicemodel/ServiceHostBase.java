@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.channels.CommunicationObject;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.servicemodel.description.ServiceEndpoint;
 import system.Uri;
 import system.servicemodel.description.ServiceAuthenticationBehavior;
@@ -46,9 +47,9 @@ import system.servicemodel.description.ServiceAuthorizationBehavior;
 import system.servicemodel.description.ServiceCredentials;
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.dispatcher.ChannelDispatcherCollection;
+import system.servicemodel.IExtensionCollection_1;
+import system.servicemodel.IExtensionCollection_1Implementation;
 import system.TimeSpan;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -63,7 +64,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ServiceHostBase extends CommunicationObject implements IDisposable, AutoCloseable {
+public class ServiceHostBase extends system.servicemodel.channels.CommunicationObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -197,6 +198,21 @@ public class ServiceHostBase extends CommunicationObject implements IDisposable,
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 AddDefaultEndpoints() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDefaultEndpoints = null;
+        try {
+            retObjectAddDefaultEndpoints = classInstance.Invoke("AddDefaultEndpoints");
+            JCObject objAddDefaultEndpoints = (JCObject)retObjectAddDefaultEndpoints;
+            return new ReadOnlyCollection_1(objAddDefaultEndpoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDefaultEndpoints != null ? retObjectAddDefaultEndpoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,6 +374,21 @@ public class ServiceHostBase extends CommunicationObject implements IDisposable,
         }
     }
 
+    public ReadOnlyCollection_1 getBaseAddresses() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseAddresses = null;
+        try {
+            retObjectBaseAddresses = classInstance.Get("BaseAddresses");
+            JCObject val = (JCObject)retObjectBaseAddresses;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseAddresses != null ? retObjectBaseAddresses.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ServiceAuthenticationBehavior getAuthentication() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -428,6 +459,21 @@ public class ServiceHostBase extends CommunicationObject implements IDisposable,
             return new ChannelDispatcherCollection(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelDispatchers != null ? retObjectChannelDispatchers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IExtensionCollection_1 getExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtensions = null;
+        try {
+            retObjectExtensions = classInstance.Get("Extensions");
+            JCObject val = (JCObject)retObjectExtensions;
+            return new IExtensionCollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensions != null ? retObjectExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

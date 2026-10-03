@@ -195,6 +195,21 @@ public class DiagnosticSource extends NetObject  {
         }
     }
 
+    public <T extends IJCOBridgeReflected> Activity StartActivity(Activity activity, T args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartActivity = null;
+        try {
+            retObjectStartActivity = classInstance.Invoke("StartActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : ((IJCOBridgeReflected)args).getJCOInstance());
+            JCObject objStartActivity = (JCObject)retObjectStartActivity;
+            return new Activity(objStartActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartActivity != null ? retObjectStartActivity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void OnActivityExport(Activity activity, NetObject payload) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -225,11 +240,31 @@ public class DiagnosticSource extends NetObject  {
         }
     }
 
+    public <T extends IJCOBridgeReflected> void StopActivity(Activity activity, T args) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StopActivity", activity == null ? null : activity.getJCOInstance(), args == null ? null : ((IJCOBridgeReflected)args).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Write(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", name, value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void Write(java.lang.String name, T value) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", name, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -54,7 +54,7 @@ import system.windows.controls.GroupBox;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GroupBoxAutomationPeer extends FrameworkElementAutomationPeer  {
+public class GroupBoxAutomationPeer extends system.windows.automation.peers.FrameworkElementAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

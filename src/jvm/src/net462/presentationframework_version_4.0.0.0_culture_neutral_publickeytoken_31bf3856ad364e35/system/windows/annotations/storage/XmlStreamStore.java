@@ -40,6 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.windows.annotations.storage.AnnotationStore;
 import system.io.Stream;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.Uri;
+import system.windows.annotations.ContentLocator;
 import system.windows.annotations.Annotation;
 import system.Guid;
 
@@ -56,7 +62,7 @@ import system.Guid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlStreamStore extends AnnotationStore  {
+public class XmlStreamStore extends system.windows.annotations.storage.AnnotationStore  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -162,11 +168,66 @@ public class XmlStreamStore extends AnnotationStore  {
         }
     }
 
+    public XmlStreamStore(Stream stream, IDictionary_2 knownNamespaces) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.security.SecurityException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), knownNamespaces == null ? null : knownNamespaces.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public static IList_1 GetWellKnownCompatibleNamespaces(Uri name) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWellKnownCompatibleNamespaces = null;
+        try {
+            retObjectGetWellKnownCompatibleNamespaces = classType.Invoke("GetWellKnownCompatibleNamespaces", name == null ? null : name.getJCOInstance());
+            JCObject objGetWellKnownCompatibleNamespaces = (JCObject)retObjectGetWellKnownCompatibleNamespaces;
+            return new IList_1Implementation(objGetWellKnownCompatibleNamespaces);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWellKnownCompatibleNamespaces != null ? retObjectGetWellKnownCompatibleNamespaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetAnnotations() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.xml.xpath.XPathException, system.xml.XmlException, system.FormatException, system.MulticastNotSupportedException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnnotations = null;
+        try {
+            retObjectGetAnnotations = classInstance.Invoke("GetAnnotations");
+            JCObject objGetAnnotations = (JCObject)retObjectGetAnnotations;
+            return new IList_1Implementation(objGetAnnotations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnnotations != null ? retObjectGetAnnotations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetAnnotations(ContentLocator anchorLocator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.xpath.XPathException, system.xml.XmlException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnnotations = null;
+        try {
+            retObjectGetAnnotations = classInstance.Invoke("GetAnnotations", anchorLocator == null ? null : anchorLocator.getJCOInstance());
+            JCObject objGetAnnotations = (JCObject)retObjectGetAnnotations;
+            return new IList_1Implementation(objGetAnnotations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnnotations != null ? retObjectGetAnnotations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Annotation DeleteAnnotation(Guid annotationId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidCastException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -221,6 +282,36 @@ public class XmlStreamStore extends AnnotationStore  {
     
     // Properties section
     
+    public IList_1 getIgnoredNamespaces() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoredNamespaces = null;
+        try {
+            retObjectIgnoredNamespaces = classInstance.Get("IgnoredNamespaces");
+            JCObject val = (JCObject)retObjectIgnoredNamespaces;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIgnoredNamespaces != null ? retObjectIgnoredNamespaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 getWellKnownNamespaces() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWellKnownNamespaces = null;
+        try {
+            retObjectWellKnownNamespaces = classType.Get("WellKnownNamespaces");
+            JCObject val = (JCObject)retObjectWellKnownNamespaces;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWellKnownNamespaces != null ? retObjectWellKnownNamespaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

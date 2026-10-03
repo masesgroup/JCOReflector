@@ -40,13 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.Single;
 import system.windows.media.GlyphTypeface;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.windows.Point;
+import system.windows.markup.XmlLanguage;
 import system.windows.media.textformatting.CharacterHit;
 import system.windows.media.Geometry;
 import system.windows.Rect;
-import system.windows.markup.XmlLanguage;
-import system.windows.Point;
-import system.componentmodel.ISupportInitialize;
-import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -61,7 +61,7 @@ import system.componentmodel.ISupportInitializeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GlyphRun extends NetObject implements ISupportInitialize {
+public class GlyphRun extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -169,6 +169,26 @@ public class GlyphRun extends NetObject implements ISupportInitialize {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(pixelsPerDip == null ? null : pixelsPerDip.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GlyphRun(GlyphTypeface glyphTypeface, int bidiLevel, boolean isSideways, double renderingEmSize, Single pixelsPerDip, IList_1 glyphIndices, Point baselineOrigin, IList_1 advanceWidths, IList_1 glyphOffsets, IList_1 characters, java.lang.String deviceFontName, IList_1 clusterMap, IList_1 caretStops, XmlLanguage language) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(glyphTypeface == null ? null : glyphTypeface.getJCOInstance(), bidiLevel, isSideways, renderingEmSize, pixelsPerDip == null ? null : pixelsPerDip.getJCOInstance(), glyphIndices == null ? null : glyphIndices.getJCOInstance(), baselineOrigin == null ? null : baselineOrigin.getJCOInstance(), advanceWidths == null ? null : advanceWidths.getJCOInstance(), glyphOffsets == null ? null : glyphOffsets.getJCOInstance(), characters == null ? null : characters.getJCOInstance(), deviceFontName, clusterMap == null ? null : clusterMap.getJCOInstance(), caretStops == null ? null : caretStops.getJCOInstance(), language == null ? null : language.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GlyphRun(GlyphTypeface glyphTypeface, int bidiLevel, boolean isSideways, double renderingEmSize, IList_1 glyphIndices, Point baselineOrigin, IList_1 advanceWidths, IList_1 glyphOffsets, IList_1 characters, java.lang.String deviceFontName, IList_1 clusterMap, IList_1 caretStops, XmlLanguage language) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(glyphTypeface == null ? null : glyphTypeface.getJCOInstance(), bidiLevel, isSideways, renderingEmSize, glyphIndices == null ? null : glyphIndices.getJCOInstance(), baselineOrigin == null ? null : baselineOrigin.getJCOInstance(), advanceWidths == null ? null : advanceWidths.getJCOInstance(), glyphOffsets == null ? null : glyphOffsets.getJCOInstance(), characters == null ? null : characters.getJCOInstance(), deviceFontName, clusterMap == null ? null : clusterMap.getJCOInstance(), caretStops == null ? null : caretStops.getJCOInstance(), language == null ? null : language.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,6 +508,156 @@ public class GlyphRun extends NetObject implements ISupportInitialize {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PixelsPerDip", PixelsPerDip == null ? null : PixelsPerDip.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getCaretStops() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaretStops = null;
+        try {
+            retObjectCaretStops = classInstance.Get("CaretStops");
+            JCObject val = (JCObject)retObjectCaretStops;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaretStops != null ? retObjectCaretStops.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCaretStops(IList_1 CaretStops) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CaretStops", CaretStops == null ? null : CaretStops.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getCharacters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharacters = null;
+        try {
+            retObjectCharacters = classInstance.Get("Characters");
+            JCObject val = (JCObject)retObjectCharacters;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharacters != null ? retObjectCharacters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCharacters(IList_1 Characters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Characters", Characters == null ? null : Characters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getAdvanceWidths() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdvanceWidths = null;
+        try {
+            retObjectAdvanceWidths = classInstance.Get("AdvanceWidths");
+            JCObject val = (JCObject)retObjectAdvanceWidths;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdvanceWidths != null ? retObjectAdvanceWidths.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAdvanceWidths(IList_1 AdvanceWidths) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AdvanceWidths", AdvanceWidths == null ? null : AdvanceWidths.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getClusterMap() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClusterMap = null;
+        try {
+            retObjectClusterMap = classInstance.Get("ClusterMap");
+            JCObject val = (JCObject)retObjectClusterMap;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClusterMap != null ? retObjectClusterMap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setClusterMap(IList_1 ClusterMap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ClusterMap", ClusterMap == null ? null : ClusterMap.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getGlyphIndices() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlyphIndices = null;
+        try {
+            retObjectGlyphIndices = classInstance.Get("GlyphIndices");
+            JCObject val = (JCObject)retObjectGlyphIndices;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlyphIndices != null ? retObjectGlyphIndices.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setGlyphIndices(IList_1 GlyphIndices) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("GlyphIndices", GlyphIndices == null ? null : GlyphIndices.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getGlyphOffsets() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlyphOffsets = null;
+        try {
+            retObjectGlyphOffsets = classInstance.Get("GlyphOffsets");
+            JCObject val = (JCObject)retObjectGlyphOffsets;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlyphOffsets != null ? retObjectGlyphOffsets.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setGlyphOffsets(IList_1 GlyphOffsets) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("GlyphOffsets", GlyphOffsets == null ? null : GlyphOffsets.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

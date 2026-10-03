@@ -47,10 +47,7 @@ import system.security.cryptography.HashAlgorithmName;
 import system.security.cryptography.x509certificates.X509ContentType;
 import system.security.cryptography.PbeParameters;
 import system.security.cryptography.x509certificates.Pkcs12ExportPbeParameters;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -65,7 +62,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509Certificate extends NetObject implements IDeserializationCallback, ISerializable, AutoCloseable {
+public class X509Certificate extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -916,6 +913,21 @@ public class X509Certificate extends NetObject implements IDeserializationCallba
     
     // Properties section
     
+    public ReadOnlyMemory_1 getSerialNumberBytes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialNumberBytes = null;
+        try {
+            retObjectSerialNumberBytes = classInstance.Get("SerialNumberBytes");
+            JCObject val = (JCObject)retObjectSerialNumberBytes;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerialNumberBytes != null ? retObjectSerialNumberBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getIssuer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

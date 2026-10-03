@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.Guid;
 
 
@@ -54,7 +56,7 @@ import system.Guid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowApplicationEventArgs extends EventArgs  {
+public class WorkflowApplicationEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -155,6 +157,21 @@ public class WorkflowApplicationEventArgs extends EventArgs  {
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> IEnumerable_1 GetInstanceExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInstanceExtensions = null;
+        try {
+            retObjectGetInstanceExtensions = classInstance.Invoke("GetInstanceExtensions");
+            JCObject objGetInstanceExtensions = (JCObject)retObjectGetInstanceExtensions;
+            return new IEnumerable_1Implementation(objGetInstanceExtensions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstanceExtensions != null ? retObjectGetInstanceExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

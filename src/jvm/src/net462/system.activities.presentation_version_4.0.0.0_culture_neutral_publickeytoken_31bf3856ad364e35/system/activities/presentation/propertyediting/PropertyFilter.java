@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.presentation.propertyediting.IPropertyFilterTarget;
 import system.activities.presentation.propertyediting.IPropertyFilterTargetImplementation;
 
@@ -148,6 +150,16 @@ public class PropertyFilter extends NetObject  {
     // Constructors section
     
     public PropertyFilter() throws Throwable {
+    }
+
+    public PropertyFilter(IEnumerable_1 predicates) throws Throwable, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(predicates == null ? null : predicates.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
     public PropertyFilter(java.lang.String filterText) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {

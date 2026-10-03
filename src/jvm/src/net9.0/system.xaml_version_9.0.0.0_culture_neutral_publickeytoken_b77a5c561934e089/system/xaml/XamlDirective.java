@@ -39,7 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.XamlMember;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.xaml.XamlType;
+import system.xaml.schema.XamlValueConverter_1;
 import system.xaml.schema.AllowedMemberLocations;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -54,7 +60,7 @@ import system.xaml.schema.AllowedMemberLocations;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XamlDirective extends XamlMember  {
+public class XamlDirective extends system.xaml.XamlMember  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -150,6 +156,16 @@ public class XamlDirective extends XamlMember  {
     public XamlDirective() throws Throwable {
     }
 
+    public XamlDirective(IEnumerable_1 xamlNamespaces, java.lang.String name, XamlType xamlType, XamlValueConverter_1 typeConverter, AllowedMemberLocations allowedLocation) throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(xamlNamespaces == null ? null : xamlNamespaces.getJCOInstance(), name, xamlType == null ? null : xamlType.getJCOInstance(), typeConverter == null ? null : typeConverter.getJCOInstance(), allowedLocation == null ? null : allowedLocation.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XamlDirective(java.lang.String xamlNamespace, java.lang.String name) throws Throwable, system.MissingMemberException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
@@ -165,6 +181,21 @@ public class XamlDirective extends XamlMember  {
     
     // Methods section
     
+    public IList_1 GetXamlNamespaces() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXamlNamespaces = null;
+        try {
+            retObjectGetXamlNamespaces = classInstance.Invoke("GetXamlNamespaces");
+            JCObject objGetXamlNamespaces = (JCObject)retObjectGetXamlNamespaces;
+            return new IList_1Implementation(objGetXamlNamespaces);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXamlNamespaces != null ? retObjectGetXamlNamespaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

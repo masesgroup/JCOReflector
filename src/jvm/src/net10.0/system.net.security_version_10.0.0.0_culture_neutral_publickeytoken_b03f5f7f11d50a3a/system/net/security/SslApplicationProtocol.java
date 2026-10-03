@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.net.security.SslApplicationProtocol;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.net.security.SslApplicationProtocol;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SslApplicationProtocol extends ValueType  {
+public class SslApplicationProtocol extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Net.Security, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -193,6 +194,21 @@ public class SslApplicationProtocol extends ValueType  {
     
     // Properties section
     
+    public ReadOnlyMemory_1 getProtocol() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocol = null;
+        try {
+            retObjectProtocol = classInstance.Get("Protocol");
+            JCObject val = (JCObject)retObjectProtocol;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtocol != null ? retObjectProtocol.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

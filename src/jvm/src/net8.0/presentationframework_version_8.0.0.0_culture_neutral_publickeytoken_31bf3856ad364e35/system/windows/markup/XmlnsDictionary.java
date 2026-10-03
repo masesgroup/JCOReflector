@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.markup.XmlnsDictionary;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.Array;
 import system.collections.DictionaryEntry;
 import system.collections.ICollection;
@@ -183,6 +185,21 @@ public class XmlnsDictionary extends NetObjectEnumerable  {
             return (boolean)retObjectContains;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetNamespacePrefixes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespacePrefixes = null;
+        try {
+            retObjectGetNamespacePrefixes = classInstance.Invoke("GetNamespacePrefixes");
+            JCObject objGetNamespacePrefixes = (JCObject)retObjectGetNamespacePrefixes;
+            return new IEnumerable_1Implementation(objGetNamespacePrefixes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespacePrefixes != null ? retObjectGetNamespacePrefixes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

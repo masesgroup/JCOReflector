@@ -57,7 +57,7 @@ import system.security.cryptography.xml.ReferenceList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EncryptedKey extends EncryptedType  {
+public class EncryptedKey extends system.security.cryptography.xml.EncryptedType  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

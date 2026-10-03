@@ -56,7 +56,7 @@ import system.web.ui.webcontrols.webparts.ConnectionInterfaceCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ProviderConnectionPoint extends ConnectionPoint  {
+public class ProviderConnectionPoint extends system.web.ui.webcontrols.webparts.ConnectionPoint  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

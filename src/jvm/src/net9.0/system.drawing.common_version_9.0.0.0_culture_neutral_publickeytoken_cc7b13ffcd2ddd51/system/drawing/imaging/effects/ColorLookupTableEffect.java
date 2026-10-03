@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.drawing.imaging.effects.Effect;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.drawing.imaging.effects.Effect;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ColorLookupTableEffect extends Effect  {
+public class ColorLookupTableEffect extends system.drawing.imaging.effects.Effect  {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -168,6 +169,66 @@ public class ColorLookupTableEffect extends Effect  {
     
     // Properties section
     
+    public ReadOnlyMemory_1 getAlphaLookupTable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlphaLookupTable = null;
+        try {
+            retObjectAlphaLookupTable = classInstance.Get("AlphaLookupTable");
+            JCObject val = (JCObject)retObjectAlphaLookupTable;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlphaLookupTable != null ? retObjectAlphaLookupTable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 getBlueLookupTable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlueLookupTable = null;
+        try {
+            retObjectBlueLookupTable = classInstance.Get("BlueLookupTable");
+            JCObject val = (JCObject)retObjectBlueLookupTable;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlueLookupTable != null ? retObjectBlueLookupTable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 getGreenLookupTable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGreenLookupTable = null;
+        try {
+            retObjectGreenLookupTable = classInstance.Get("GreenLookupTable");
+            JCObject val = (JCObject)retObjectGreenLookupTable;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreenLookupTable != null ? retObjectGreenLookupTable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 getRedLookupTable() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedLookupTable = null;
+        try {
+            retObjectRedLookupTable = classInstance.Get("RedLookupTable");
+            JCObject val = (JCObject)retObjectRedLookupTable;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRedLookupTable != null ? retObjectRedLookupTable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

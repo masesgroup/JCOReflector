@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.specialized.NameObjectCollectionBase;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.web.HttpPostedFileBase;
 import system.Array;
 
@@ -55,7 +57,7 @@ import system.Array;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpFileCollectionBase extends NameObjectCollectionBase  {
+public class HttpFileCollectionBase extends system.collections.specialized.NameObjectCollectionBase  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -154,6 +156,21 @@ public class HttpFileCollectionBase extends NameObjectCollectionBase  {
     
     // Methods section
     
+    public IList_1 GetMultiple(java.lang.String name) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMultiple = null;
+        try {
+            retObjectGetMultiple = classInstance.Invoke("GetMultiple", name);
+            JCObject objGetMultiple = (JCObject)retObjectGetMultiple;
+            return new IList_1Implementation(objGetMultiple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMultiple != null ? retObjectGetMultiple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetKey(int index) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

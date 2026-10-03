@@ -42,6 +42,7 @@ import system.componentmodel.Component;
 import system.net.networkinformation.PingReply;
 import system.net.IPAddress;
 import system.net.networkinformation.PingOptions;
+import system.threading.tasks.Task_1;
 import system.net.networkinformation.PingCompletedEventHandler;
 
 
@@ -57,7 +58,7 @@ import system.net.networkinformation.PingCompletedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Ping extends Component  {
+public class Ping extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -339,6 +340,186 @@ public class Ping extends Component  {
             return new PingReply(objSend);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.networkinformation.PingException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address, int timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.networkinformation.PingException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance(), timeout);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address, int timeout, byte[] buffer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.networkinformation.PingException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance(), timeout, buffer);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.networkinformation.PingException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException, system.configuration.ConfigurationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.net.networkinformation.PingException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance(), timeout, buffer, options == null ? null : options.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException, system.configuration.ConfigurationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.net.networkinformation.PingException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.networkinformation.PingException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.networkinformation.PingException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress, timeout);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout, byte[] buffer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.networkinformation.PingException, system.AccessViolationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress, timeout, buffer);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.networkinformation.PingException, system.AccessViolationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.net.networkinformation.PingException, system.configuration.ConfigurationErrorsException, system.AccessViolationException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress, timeout, buffer, options == null ? null : options.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.net.networkinformation.PingException, system.configuration.ConfigurationErrorsException, system.AccessViolationException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

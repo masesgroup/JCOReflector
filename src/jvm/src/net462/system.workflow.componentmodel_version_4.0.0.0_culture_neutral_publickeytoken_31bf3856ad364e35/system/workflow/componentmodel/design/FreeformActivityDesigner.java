@@ -45,6 +45,7 @@ import system.workflow.componentmodel.design.ConnectionPoint;
 import system.workflow.componentmodel.design.HitTestInfo;
 import system.drawing.Point;
 import system.workflow.componentmodel.design.ActivityDesigner;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.drawing.Size;
 import system.windows.forms.AccessibleObject;
 import system.windows.forms.AutoSizeMode;
@@ -63,7 +64,7 @@ import system.workflow.componentmodel.design.ConnectorEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FreeformActivityDesigner extends CompositeActivityDesigner  {
+public class FreeformActivityDesigner extends system.workflow.componentmodel.design.CompositeActivityDesigner  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -225,6 +226,26 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
         }
     }
 
+    public void InsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InsertActivities", insertLocation == null ? null : insertLocation.getJCOInstance(), activitiesToInsert == null ? null : activitiesToInsert.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1 activitiesToMove) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MoveActivities", moveLocation == null ? null : moveLocation.getJCOInstance(), activitiesToMove == null ? null : activitiesToMove.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void MoveContainedDesigner(ActivityDesigner containedDesigner, Point newLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -312,6 +333,21 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableUserDrawnConnectors", EnableUserDrawnConnectors);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getConnectors() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectors = null;
+        try {
+            retObjectConnectors = classInstance.Get("Connectors");
+            JCObject val = (JCObject)retObjectConnectors;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectors != null ? retObjectConnectors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

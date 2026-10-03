@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.DataException;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 /**
  * The base .NET class managing System.Data.UpdateException, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
@@ -52,7 +55,7 @@ import system.data.DataException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UpdateException extends DataException {
+public class UpdateException extends system.data.DataException {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -164,6 +167,16 @@ public class UpdateException extends DataException {
 
     // Constructors section
     
+    public UpdateException(java.lang.String message, NetException innerException, IEnumerable_1 stateEntries) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, innerException == null ? null : innerException.getJCOInstance(), stateEntries == null ? null : stateEntries.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -172,5 +185,20 @@ public class UpdateException extends DataException {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getStateEntries() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateEntries = null;
+        try {
+            retObjectStateEntries = classInstance.Get("StateEntries");
+            JCObject val = (JCObject)retObjectStateEntries;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStateEntries != null ? retObjectStateEntries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 }

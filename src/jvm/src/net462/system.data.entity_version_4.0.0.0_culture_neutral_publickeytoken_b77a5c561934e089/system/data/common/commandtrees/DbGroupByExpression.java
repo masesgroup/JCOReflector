@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.commandtrees.DbExpression;
 import system.data.common.commandtrees.DbExpressionVisitor;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.data.common.commandtrees.DbGroupExpressionBinding;
 
 
@@ -55,7 +57,7 @@ import system.data.common.commandtrees.DbGroupExpressionBinding;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbGroupByExpression extends DbExpression  {
+public class DbGroupByExpression extends system.data.common.commandtrees.DbExpression  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -170,6 +172,36 @@ public class DbGroupByExpression extends DbExpression  {
     
     // Properties section
     
+    public IList_1 getAggregates() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAggregates = null;
+        try {
+            retObjectAggregates = classInstance.Get("Aggregates");
+            JCObject val = (JCObject)retObjectAggregates;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAggregates != null ? retObjectAggregates.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getKeys() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeys = null;
+        try {
+            retObjectKeys = classInstance.Get("Keys");
+            JCObject val = (JCObject)retObjectKeys;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeys != null ? retObjectKeys.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbGroupExpressionBinding getInput() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

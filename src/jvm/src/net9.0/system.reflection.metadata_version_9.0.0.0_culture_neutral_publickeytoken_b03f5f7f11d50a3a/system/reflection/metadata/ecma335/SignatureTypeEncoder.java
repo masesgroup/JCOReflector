@@ -47,6 +47,7 @@ import system.reflection.metadata.ecma335.MethodSignatureEncoder;
 import system.reflection.metadata.SignatureCallingConvention;
 import system.reflection.metadata.ecma335.FunctionPointerAttributes;
 import system.reflection.metadata.ecma335.SignatureTypeEncoder;
+import system.Action_1;
 import system.reflection.metadata.ecma335.ArrayShapeEncoder;
 import system.reflection.metadata.PrimitiveTypeCode;
 
@@ -63,7 +64,7 @@ import system.reflection.metadata.PrimitiveTypeCode;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SignatureTypeEncoder extends ValueType  {
+public class SignatureTypeEncoder extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -244,6 +245,16 @@ public class SignatureTypeEncoder extends ValueType  {
             return new SignatureTypeEncoder(objSZArray);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSZArray != null ? retObjectSZArray.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Array(Action_1 elementType, Action_1 arrayShape) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Array", elementType, arrayShape);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

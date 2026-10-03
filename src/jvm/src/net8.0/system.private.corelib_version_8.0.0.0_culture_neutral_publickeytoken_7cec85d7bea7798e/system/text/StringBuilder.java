@@ -44,14 +44,15 @@ import system.Single;
 import system.Decimal;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
+import system.ReadOnlyMemory_1;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
 import system.text.CompositeFormat;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -66,7 +67,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StringBuilder extends NetObject implements ISerializable {
+public class StringBuilder extends NetObject  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -531,6 +532,21 @@ public class StringBuilder extends NetObject implements ISerializable {
         }
     }
 
+    public StringBuilder Append(ReadOnlyMemory_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
+        try {
+            retObjectAppend = classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
+            return new StringBuilder(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StringBuilder Append(java.lang.String value, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -771,6 +787,51 @@ public class StringBuilder extends NetObject implements ISerializable {
         }
     }
 
+    public <TArg0 extends IJCOBridgeReflected, TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected> StringBuilder AppendFormat(IFormatProvider provider, CompositeFormat format, TArg0 arg0, TArg1 arg1, TArg2 arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
+        try {
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format == null ? null : format.getJCOInstance(), arg0 == null ? null : ((IJCOBridgeReflected)arg0).getJCOInstance(), arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
+            return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg0 extends IJCOBridgeReflected, TArg1 extends IJCOBridgeReflected> StringBuilder AppendFormat(IFormatProvider provider, CompositeFormat format, TArg0 arg0, TArg1 arg1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
+        try {
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format == null ? null : format.getJCOInstance(), arg0 == null ? null : ((IJCOBridgeReflected)arg0).getJCOInstance(), arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
+            return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg0 extends IJCOBridgeReflected> StringBuilder AppendFormat(IFormatProvider provider, CompositeFormat format, TArg0 arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendFormat = null;
+        try {
+            retObjectAppendFormat = classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format == null ? null : format.getJCOInstance(), arg0 == null ? null : ((IJCOBridgeReflected)arg0).getJCOInstance());
+            JCObject objAppendFormat = (JCObject)retObjectAppendFormat;
+            return new StringBuilder(objAppendFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendFormat != null ? retObjectAppendFormat.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StringBuilder AppendJoin(char separator, NetObject... values) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -852,6 +913,36 @@ public class StringBuilder extends NetObject implements ISerializable {
         java.lang.Object retObjectAppendJoin = null;
         try {
             retObjectAppendJoin = classInstance.Invoke("AppendJoin", dupParam0, dupParam1.getJCRefOut());
+            JCObject objAppendJoin = (JCObject)retObjectAppendJoin;
+            return new StringBuilder(objAppendJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendJoin != null ? retObjectAppendJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> StringBuilder AppendJoin(char separator, IEnumerable_1 values) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendJoin = null;
+        try {
+            retObjectAppendJoin = classInstance.Invoke("AppendJoin", separator, values == null ? null : values.getJCOInstance());
+            JCObject objAppendJoin = (JCObject)retObjectAppendJoin;
+            return new StringBuilder(objAppendJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendJoin != null ? retObjectAppendJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> StringBuilder AppendJoin(java.lang.String separator, IEnumerable_1 values) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendJoin = null;
+        try {
+            retObjectAppendJoin = classInstance.Invoke("AppendJoin", separator, values == null ? null : values.getJCOInstance());
             JCObject objAppendJoin = (JCObject)retObjectAppendJoin;
             return new StringBuilder(objAppendJoin);
         } catch (java.lang.ClassCastException cce) {

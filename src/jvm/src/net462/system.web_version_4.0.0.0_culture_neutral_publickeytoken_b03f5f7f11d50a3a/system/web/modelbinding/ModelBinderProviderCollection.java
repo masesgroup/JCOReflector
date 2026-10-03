@@ -38,10 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.web.modelbinding.ModelBinderProvider;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.web.modelbinding.IModelBinder;
 import system.web.modelbinding.IModelBinderImplementation;
 import system.web.modelbinding.ModelBindingExecutionContext;
 import system.web.modelbinding.ModelBindingContext;
+import system.Func_2;
+import system.Func_1;
 
 
 /**
@@ -56,7 +62,7 @@ import system.web.modelbinding.ModelBindingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModelBinderProviderCollection extends NetObjectEnumerable  {
+public class ModelBinderProviderCollection extends system.collections.objectmodel.Collection_1<ModelBinderProvider>  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -159,6 +165,16 @@ public class ModelBinderProviderCollection extends NetObjectEnumerable  {
         }
     }
 
+    public ModelBinderProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(list == null ? null : list.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -173,6 +189,16 @@ public class ModelBinderProviderCollection extends NetObjectEnumerable  {
             return new IModelBinderImplementation(objGetBinder);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBinder != null ? retObjectGetBinder.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterBinderForGenericType(NetType modelType, Func_2 modelBinderFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterBinderForGenericType", modelType == null ? null : modelType.getJCOInstance(), modelBinderFactory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,6 +219,16 @@ public class ModelBinderProviderCollection extends NetObjectEnumerable  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterBinderForGenericType", modelType == null ? null : modelType.getJCOInstance(), modelBinder == null ? null : modelBinder.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterBinderForType(NetType modelType, Func_1 modelBinderFactory) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterBinderForType", modelType == null ? null : modelType.getJCOInstance(), modelBinderFactory);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

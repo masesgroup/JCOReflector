@@ -43,6 +43,7 @@ import system.io.compression.ZipArchive;
 import system.io.compression.CompressionLevel;
 import system.threading.tasks.Task;
 import system.threading.CancellationToken;
+import system.threading.tasks.Task_1;
 
 
 /**
@@ -241,6 +242,36 @@ public class ZipFileExtensions extends NetObject  {
             return new Task(objExtractToFileAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractToFileAsync != null ? retObjectExtractToFileAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 CreateEntryFromFileAsync(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName, CompressionLevel compressionLevel, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEntryFromFileAsync = null;
+        try {
+            retObjectCreateEntryFromFileAsync = classType.Invoke("CreateEntryFromFileAsync", destination == null ? null : destination.getJCOInstance(), sourceFileName, entryName, compressionLevel == null ? null : compressionLevel.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCreateEntryFromFileAsync = (JCObject)retObjectCreateEntryFromFileAsync;
+            return new Task_1(objCreateEntryFromFileAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntryFromFileAsync != null ? retObjectCreateEntryFromFileAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 CreateEntryFromFileAsync(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEntryFromFileAsync = null;
+        try {
+            retObjectCreateEntryFromFileAsync = classType.Invoke("CreateEntryFromFileAsync", destination == null ? null : destination.getJCOInstance(), sourceFileName, entryName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCreateEntryFromFileAsync = (JCObject)retObjectCreateEntryFromFileAsync;
+            return new Task_1(objCreateEntryFromFileAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntryFromFileAsync != null ? retObjectCreateEntryFromFileAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

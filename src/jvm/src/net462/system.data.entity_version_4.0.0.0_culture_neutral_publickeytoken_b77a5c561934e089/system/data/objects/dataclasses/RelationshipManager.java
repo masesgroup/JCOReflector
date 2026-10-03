@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.data.objects.dataclasses.EntityCollection_1;
+import system.data.objects.dataclasses.EntityReference_1;
 import system.data.objects.dataclasses.IRelatedEnd;
 import system.data.objects.dataclasses.IRelatedEndImplementation;
 import system.data.objects.dataclasses.RelationshipManager;
@@ -159,6 +163,51 @@ public class RelationshipManager extends NetObject  {
     
     // Methods section
     
+    public IEnumerable_1 GetAllRelatedEnds() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllRelatedEnds = null;
+        try {
+            retObjectGetAllRelatedEnds = classInstance.Invoke("GetAllRelatedEnds");
+            JCObject objGetAllRelatedEnds = (JCObject)retObjectGetAllRelatedEnds;
+            return new IEnumerable_1Implementation(objGetAllRelatedEnds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllRelatedEnds != null ? retObjectGetAllRelatedEnds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TTargetEntity extends IJCOBridgeReflected> EntityCollection_1 GetRelatedCollection(java.lang.String relationshipName, java.lang.String targetRoleName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelatedCollection = null;
+        try {
+            retObjectGetRelatedCollection = classInstance.Invoke("GetRelatedCollection", relationshipName, targetRoleName);
+            JCObject objGetRelatedCollection = (JCObject)retObjectGetRelatedCollection;
+            return new EntityCollection_1(objGetRelatedCollection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelatedCollection != null ? retObjectGetRelatedCollection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TTargetEntity extends IJCOBridgeReflected> EntityReference_1 GetRelatedReference(java.lang.String relationshipName, java.lang.String targetRoleName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelatedReference = null;
+        try {
+            retObjectGetRelatedReference = classInstance.Invoke("GetRelatedReference", relationshipName, targetRoleName);
+            JCObject objGetRelatedReference = (JCObject)retObjectGetRelatedReference;
+            return new EntityReference_1(objGetRelatedReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelatedReference != null ? retObjectGetRelatedReference.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IRelatedEnd GetRelatedEnd(java.lang.String relationshipName, java.lang.String targetRoleName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -184,6 +233,26 @@ public class RelationshipManager extends NetObject  {
             return new RelationshipManager(objCreate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TTargetEntity extends IJCOBridgeReflected> void InitializeRelatedCollection(java.lang.String relationshipName, java.lang.String targetRoleName, EntityCollection_1 entityCollection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InitializeRelatedCollection", relationshipName, targetRoleName, entityCollection == null ? null : entityCollection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TTargetEntity extends IJCOBridgeReflected> void InitializeRelatedReference(java.lang.String relationshipName, java.lang.String targetRoleName, EntityReference_1 entityReference) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InitializeRelatedReference", relationshipName, targetRoleName, entityReference == null ? null : entityReference.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

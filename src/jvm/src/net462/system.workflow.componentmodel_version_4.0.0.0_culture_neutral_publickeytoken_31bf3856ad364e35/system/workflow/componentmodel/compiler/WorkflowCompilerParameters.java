@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.codedom.compiler.CompilerParameters;
 import system.workflow.componentmodel.compiler.WorkflowCompilerParameters;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.collections.specialized.StringCollection;
 
 
@@ -55,7 +57,7 @@ import system.collections.specialized.StringCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowCompilerParameters extends CompilerParameters  {
+public class WorkflowCompilerParameters extends system.codedom.compiler.CompilerParameters  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -225,6 +227,21 @@ public class WorkflowCompilerParameters extends CompilerParameters  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerateCodeCompileUnitOnly", GenerateCodeCompileUnitOnly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getUserCodeCompileUnits() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserCodeCompileUnits = null;
+        try {
+            retObjectUserCodeCompileUnits = classInstance.Get("UserCodeCompileUnits");
+            JCObject val = (JCObject)retObjectUserCodeCompileUnits;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserCodeCompileUnits != null ? retObjectUserCodeCompileUnits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

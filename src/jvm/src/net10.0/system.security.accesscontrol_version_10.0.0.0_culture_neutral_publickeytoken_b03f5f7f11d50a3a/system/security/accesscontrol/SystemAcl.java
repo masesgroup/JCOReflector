@@ -61,7 +61,7 @@ import system.security.accesscontrol.ObjectAuditRule;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SystemAcl extends CommonAcl  {
+public class SystemAcl extends system.security.accesscontrol.CommonAcl  {
     /**
      * Fully assembly qualified name: System.Security.AccessControl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

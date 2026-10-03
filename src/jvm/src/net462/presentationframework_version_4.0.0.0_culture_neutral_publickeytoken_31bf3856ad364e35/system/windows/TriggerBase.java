@@ -54,7 +54,7 @@ import system.windows.TriggerActionCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TriggerBase extends DependencyObject  {
+public class TriggerBase extends system.windows.DependencyObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

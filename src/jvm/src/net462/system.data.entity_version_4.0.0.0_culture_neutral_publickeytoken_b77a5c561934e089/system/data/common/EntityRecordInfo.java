@@ -40,7 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.DataRecordInfo;
 import system.data.metadata.edm.EntityType;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.EntityKey;
+import system.data.metadata.edm.EntitySet;
 
 
 /**
@@ -55,7 +58,7 @@ import system.data.EntityKey;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EntityRecordInfo extends DataRecordInfo  {
+public class EntityRecordInfo extends system.data.common.DataRecordInfo  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -149,6 +152,16 @@ public class EntityRecordInfo extends DataRecordInfo  {
     // Constructors section
     
     public EntityRecordInfo() throws Throwable {
+    }
+
+    public EntityRecordInfo(EntityType metadata, IEnumerable_1 memberInfo, EntityKey entityKey, EntitySet entitySet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(metadata == null ? null : metadata.getJCOInstance(), memberInfo == null ? null : memberInfo.getJCOInstance(), entityKey == null ? null : entityKey.getJCOInstance(), entitySet == null ? null : entitySet.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

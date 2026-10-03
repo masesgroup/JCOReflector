@@ -45,6 +45,9 @@ import system.windows.xps.packaging.IXpsFixedPageReaderImplementation;
 import system.Uri;
 import system.windows.xps.packaging.XpsStructure;
 import system.windows.xps.packaging.XpsSignatureDefinition;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.printing.PrintTicket;
 import system.windows.xps.packaging.XpsThumbnail;
 
@@ -248,6 +251,36 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getSignatureDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureDefinitions = null;
+        try {
+            retObjectSignatureDefinitions = classInstance.Get("SignatureDefinitions");
+            JCObject val = (JCObject)retObjectSignatureDefinitions;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignatureDefinitions != null ? retObjectSignatureDefinitions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getFixedPages() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFixedPages = null;
+        try {
+            retObjectFixedPages = classInstance.Get("FixedPages");
+            JCObject val = (JCObject)retObjectFixedPages;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFixedPages != null ? retObjectFixedPages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

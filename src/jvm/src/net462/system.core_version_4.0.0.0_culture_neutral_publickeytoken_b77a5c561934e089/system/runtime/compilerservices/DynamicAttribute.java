@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Attribute;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DynamicAttribute extends Attribute  {
+public class DynamicAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -174,6 +176,21 @@ public class DynamicAttribute extends Attribute  {
     
     // Properties section
     
+    public IList_1 getTransformFlags() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformFlags = null;
+        try {
+            retObjectTransformFlags = classInstance.Get("TransformFlags");
+            JCObject val = (JCObject)retObjectTransformFlags;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformFlags != null ? retObjectTransformFlags.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

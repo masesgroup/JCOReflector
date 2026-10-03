@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.WorkflowApplicationEventArgs;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.activities.WorkflowApplicationEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowApplicationIdleEventArgs extends WorkflowApplicationEventArgs  {
+public class WorkflowApplicationIdleEventArgs extends system.activities.WorkflowApplicationEventArgs  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -158,6 +159,21 @@ public class WorkflowApplicationIdleEventArgs extends WorkflowApplicationEventAr
     
     // Properties section
     
+    public ReadOnlyCollection_1 getBookmarks() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBookmarks = null;
+        try {
+            retObjectBookmarks = classInstance.Get("Bookmarks");
+            JCObject val = (JCObject)retObjectBookmarks;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBookmarks != null ? retObjectBookmarks.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

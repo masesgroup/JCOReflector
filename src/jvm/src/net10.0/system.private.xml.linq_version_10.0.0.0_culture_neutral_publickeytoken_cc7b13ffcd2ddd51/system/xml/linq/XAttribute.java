@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.xml.linq.XObject;
 import system.xml.linq.XAttribute;
 import system.xml.linq.XName;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xml.XmlNodeType;
 
 
@@ -56,7 +58,7 @@ import system.xml.XmlNodeType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XAttribute extends XObject  {
+public class XAttribute extends system.xml.linq.XObject  {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -210,6 +212,21 @@ public class XAttribute extends XObject  {
             return (boolean)retObjectIsNamespaceDeclaration;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNamespaceDeclaration != null ? retObjectIsNamespaceDeclaration.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 getEmptySequence() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmptySequence = null;
+        try {
+            retObjectEmptySequence = classType.Get("EmptySequence");
+            JCObject val = (JCObject)retObjectEmptySequence;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmptySequence != null ? retObjectEmptySequence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

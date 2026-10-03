@@ -58,7 +58,7 @@ import system.threading.tasks.ValueTask;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Timer extends MarshalByRefObject implements AutoCloseable {
+public class Timer extends system.MarshalByRefObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

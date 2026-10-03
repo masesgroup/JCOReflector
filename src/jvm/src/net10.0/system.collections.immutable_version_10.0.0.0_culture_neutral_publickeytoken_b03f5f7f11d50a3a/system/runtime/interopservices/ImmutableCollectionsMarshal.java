@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.ImmutableArray_1;
+import system.Memory_1;
 
 
 /**
@@ -151,6 +153,21 @@ public class ImmutableCollectionsMarshal extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 AsImmutableArray(T[] array) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsImmutableArray = null;
+        try {
+            retObjectAsImmutableArray = classType.Invoke("AsImmutableArray", array == null ? null : toObjectFromArray(array));
+            JCObject objAsImmutableArray = (JCObject)retObjectAsImmutableArray;
+            return new ImmutableArray_1(objAsImmutableArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsImmutableArray != null ? retObjectAsImmutableArray.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

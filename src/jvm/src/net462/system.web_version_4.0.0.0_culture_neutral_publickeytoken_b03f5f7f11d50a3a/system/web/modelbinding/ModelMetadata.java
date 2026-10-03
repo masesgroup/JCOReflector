@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.modelbinding.ModelMetadataProvider;
+import system.Func_1;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelBindingExecutionContext;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -149,11 +154,36 @@ public class ModelMetadata extends NetObject  {
     public ModelMetadata() throws Throwable {
     }
 
+    public ModelMetadata(ModelMetadataProvider provider, NetType containerType, Func_1 modelAccessor, NetType modelType, java.lang.String propertyName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(provider == null ? null : provider.getJCOInstance(), containerType == null ? null : containerType.getJCOInstance(), modelAccessor, modelType == null ? null : modelType.getJCOInstance(), propertyName));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public IEnumerable_1 GetValidators(ModelBindingExecutionContext context) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValidators = null;
+        try {
+            retObjectGetValidators = classInstance.Invoke("GetValidators", context == null ? null : context.getJCOInstance());
+            JCObject objGetValidators = (JCObject)retObjectGetValidators;
+            return new IEnumerable_1Implementation(objGetValidators);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValidators != null ? retObjectGetValidators.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetDisplayName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -413,6 +443,36 @@ public class ModelMetadata extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Order", Order);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 getAdditionalValues() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalValues = null;
+        try {
+            retObjectAdditionalValues = classInstance.Get("AdditionalValues");
+            JCObject val = (JCObject)retObjectAdditionalValues;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdditionalValues != null ? retObjectAdditionalValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getProperties() throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

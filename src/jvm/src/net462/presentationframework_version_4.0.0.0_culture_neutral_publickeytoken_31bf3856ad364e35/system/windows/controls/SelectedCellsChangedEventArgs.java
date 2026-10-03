@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.generic.List_1;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -53,7 +57,7 @@ import system.EventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SelectedCellsChangedEventArgs extends EventArgs  {
+public class SelectedCellsChangedEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -149,6 +153,26 @@ public class SelectedCellsChangedEventArgs extends EventArgs  {
     public SelectedCellsChangedEventArgs() throws Throwable {
     }
 
+    public SelectedCellsChangedEventArgs(List_1 addedCells, List_1 removedCells) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(addedCells == null ? null : addedCells.getJCOInstance(), removedCells == null ? null : removedCells.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SelectedCellsChangedEventArgs(ReadOnlyCollection_1 addedCells, ReadOnlyCollection_1 removedCells) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(addedCells == null ? null : addedCells.getJCOInstance(), removedCells == null ? null : removedCells.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +182,36 @@ public class SelectedCellsChangedEventArgs extends EventArgs  {
     
     // Properties section
     
+    public IList_1 getAddedCells() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddedCells = null;
+        try {
+            retObjectAddedCells = classInstance.Get("AddedCells");
+            JCObject val = (JCObject)retObjectAddedCells;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddedCells != null ? retObjectAddedCells.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getRemovedCells() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedCells = null;
+        try {
+            retObjectRemovedCells = classInstance.Get("RemovedCells");
+            JCObject val = (JCObject)retObjectRemovedCells;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemovedCells != null ? retObjectRemovedCells.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

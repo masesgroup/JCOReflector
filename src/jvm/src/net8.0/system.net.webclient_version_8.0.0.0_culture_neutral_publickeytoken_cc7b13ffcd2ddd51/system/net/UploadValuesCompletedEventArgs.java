@@ -53,7 +53,7 @@ import system.componentmodel.AsyncCompletedEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UploadValuesCompletedEventArgs extends AsyncCompletedEventArgs  {
+public class UploadValuesCompletedEventArgs extends system.componentmodel.AsyncCompletedEventArgs  {
     /**
      * Fully assembly qualified name: System.Net.WebClient, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

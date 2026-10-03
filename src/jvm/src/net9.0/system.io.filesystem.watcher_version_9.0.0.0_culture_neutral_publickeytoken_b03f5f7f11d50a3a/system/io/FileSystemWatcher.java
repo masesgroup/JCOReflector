@@ -42,6 +42,7 @@ import system.componentmodel.Component;
 import system.io.WaitForChangedResult;
 import system.io.WatcherChangeTypes;
 import system.TimeSpan;
+import system.collections.objectmodel.Collection_1;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.componentmodel.ISynchronizeInvoke;
@@ -64,7 +65,7 @@ import system.io.RenamedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FileSystemWatcher extends Component  {
+public class FileSystemWatcher extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.IO.FileSystem.Watcher, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -353,6 +354,21 @@ public class FileSystemWatcher extends Component  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InternalBufferSize", InternalBufferSize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getFilters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilters = null;
+        try {
+            retObjectFilters = classInstance.Get("Filters");
+            JCObject val = (JCObject)retObjectFilters;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilters != null ? retObjectFilters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

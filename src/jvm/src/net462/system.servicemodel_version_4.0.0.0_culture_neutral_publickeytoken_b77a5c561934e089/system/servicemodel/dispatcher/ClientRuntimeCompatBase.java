@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.collections.objectmodel.KeyedCollection_2;
 
 
 /**
@@ -157,6 +160,36 @@ public class ClientRuntimeCompatBase extends NetObject  {
     
     // Properties section
     
+    public IList_1 getMessageInspectors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageInspectors = null;
+        try {
+            retObjectMessageInspectors = classInstance.Get("MessageInspectors");
+            JCObject val = (JCObject)retObjectMessageInspectors;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageInspectors != null ? retObjectMessageInspectors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedCollection_2 getOperations() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperations = null;
+        try {
+            retObjectOperations = classInstance.Get("Operations");
+            JCObject val = (JCObject)retObjectOperations;
+            return new KeyedCollection_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperations != null ? retObjectOperations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

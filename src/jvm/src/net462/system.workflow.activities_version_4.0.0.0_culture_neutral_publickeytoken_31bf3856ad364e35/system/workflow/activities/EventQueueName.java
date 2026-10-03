@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.workflow.activities.EventQueueName;
 import system.workflow.runtime.CorrelationProperty;
 
@@ -155,6 +157,16 @@ public class EventQueueName extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(interfaceType == null ? null : interfaceType.getJCOInstance(), operation));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventQueueName(NetType interfaceType, java.lang.String operation, ICollection_1 propertyValues) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(interfaceType == null ? null : interfaceType.getJCOInstance(), operation, propertyValues == null ? null : propertyValues.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

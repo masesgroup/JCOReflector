@@ -39,8 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.Oid;
-import system.security.cryptography.x509certificates.X509ExtensionCollection;
+import system.ReadOnlyMemory_1;
 import system.DateTimeOffset;
+import system.Nullable_1;
+import system.security.cryptography.x509certificates.X509ExtensionCollection;
+import system.security.cryptography.pkcs.Rfc3161TimestampTokenInfo;
 
 
 /**
@@ -151,11 +154,35 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
     public Rfc3161TimestampTokenInfo() throws Throwable {
     }
 
+    public Rfc3161TimestampTokenInfo(Oid policyId, Oid hashAlgorithmId, ReadOnlyMemory_1 messageHash, ReadOnlyMemory_1 serialNumber, DateTimeOffset timestamp, Nullable_1 accuracyInMicroseconds, boolean isOrdering, Nullable_1 nonce, Nullable_1 timestampAuthorityName, X509ExtensionCollection extensions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException, system.ArrayTypeMismatchException, system.DivideByZeroException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(policyId == null ? null : policyId.getJCOInstance(), hashAlgorithmId == null ? null : hashAlgorithmId.getJCOInstance(), messageHash == null ? null : messageHash.getJCOInstance(), serialNumber == null ? null : serialNumber.getJCOInstance(), timestamp == null ? null : timestamp.getJCOInstance(), accuracyInMicroseconds == null ? null : accuracyInMicroseconds.getJCOInstance(), isOrdering, nonce == null ? null : nonce.getJCOInstance(), timestampAuthorityName == null ? null : timestampAuthorityName.getJCOInstance(), extensions == null ? null : extensions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public static boolean TryDecode(ReadOnlyMemory_1 encodedBytes, JCORefOut<Rfc3161TimestampTokenInfo> timestampTokenInfo, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryDecode = null;
+        try {
+            retObjectTryDecode = classType.Invoke("TryDecode", encodedBytes == null ? null : encodedBytes.getJCOInstance(), timestampTokenInfo.getJCRefOut(), bytesConsumed.getJCRefOut());
+            return (boolean)retObjectTryDecode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryDecode != null ? retObjectTryDecode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] Encode() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -174,6 +201,66 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetNonce() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNonce = null;
+        try {
+            retObjectGetNonce = classInstance.Invoke("GetNonce");
+            JCObject objGetNonce = (JCObject)retObjectGetNonce;
+            return new Nullable_1(objGetNonce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNonce != null ? retObjectGetNonce.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetTimestampAuthorityName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.OverflowException, system.formats.asn1.AsnContentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTimestampAuthorityName = null;
+        try {
+            retObjectGetTimestampAuthorityName = classInstance.Invoke("GetTimestampAuthorityName");
+            JCObject objGetTimestampAuthorityName = (JCObject)retObjectGetTimestampAuthorityName;
+            return new Nullable_1(objGetTimestampAuthorityName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTimestampAuthorityName != null ? retObjectGetTimestampAuthorityName.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 GetMessageHash() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMessageHash = null;
+        try {
+            retObjectGetMessageHash = classInstance.Invoke("GetMessageHash");
+            JCObject objGetMessageHash = (JCObject)retObjectGetMessageHash;
+            return new ReadOnlyMemory_1(objGetMessageHash);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageHash != null ? retObjectGetMessageHash.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 GetSerialNumber() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSerialNumber = null;
+        try {
+            retObjectGetSerialNumber = classInstance.Invoke("GetSerialNumber");
+            JCObject objGetSerialNumber = (JCObject)retObjectGetSerialNumber;
+            return new ReadOnlyMemory_1(objGetSerialNumber);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSerialNumber != null ? retObjectGetSerialNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,6 +363,21 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
             return new DateTimeOffset(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getAccuracyInMicroseconds() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccuracyInMicroseconds = null;
+        try {
+            retObjectAccuracyInMicroseconds = classInstance.Get("AccuracyInMicroseconds");
+            JCObject val = (JCObject)retObjectAccuracyInMicroseconds;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccuracyInMicroseconds != null ? retObjectAccuracyInMicroseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

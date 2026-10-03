@@ -54,7 +54,7 @@ import system.activities.Activity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NativeActivityUpdateMapMetadata extends UpdateMapMetadata  {
+public class NativeActivityUpdateMapMetadata extends system.activities.dynamicupdate.UpdateMapMetadata  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

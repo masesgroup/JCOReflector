@@ -56,7 +56,7 @@ import system.DateTimeOffset;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GnuTarEntry extends PosixTarEntry  {
+public class GnuTarEntry extends system.formats.tar.PosixTarEntry  {
     /**
      * Fully assembly qualified name: System.Formats.Tar, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

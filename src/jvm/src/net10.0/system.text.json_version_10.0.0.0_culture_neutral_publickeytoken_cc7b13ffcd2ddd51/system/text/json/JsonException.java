@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Nullable_1;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
@@ -165,6 +166,26 @@ public class JsonException extends NetException {
 
     // Constructors section
     
+    public JsonException(java.lang.String message, java.lang.String path, Nullable_1 lineNumber, Nullable_1 bytePositionInLine, NetException innerException) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, path, lineNumber == null ? null : lineNumber.getJCOInstance(), bytePositionInLine == null ? null : bytePositionInLine.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public JsonException(java.lang.String message, java.lang.String path, Nullable_1 lineNumber, Nullable_1 bytePositionInLine) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, path, lineNumber == null ? null : lineNumber.getJCOInstance(), bytePositionInLine == null ? null : bytePositionInLine.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -183,6 +204,56 @@ public class JsonException extends NetException {
     
     // Properties section
     
+    public Nullable_1 getBytePositionInLine() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytePositionInLine = null;
+        try {
+            retObjectBytePositionInLine = classInstance.Get("BytePositionInLine");
+            JCObject val = (JCObject)retObjectBytePositionInLine;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBytePositionInLine != null ? retObjectBytePositionInLine.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBytePositionInLine(Nullable_1 BytePositionInLine) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BytePositionInLine", BytePositionInLine == null ? null : BytePositionInLine.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getLineNumber() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
+        try {
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            JCObject val = (JCObject)retObjectLineNumber;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLineNumber(Nullable_1 LineNumber) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LineNumber", LineNumber == null ? null : LineNumber.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

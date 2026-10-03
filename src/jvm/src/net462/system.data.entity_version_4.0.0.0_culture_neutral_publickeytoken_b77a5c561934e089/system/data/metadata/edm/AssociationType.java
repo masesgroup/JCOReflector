@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.data.metadata.edm.RelationshipType;
 import system.data.metadata.edm.BuiltInTypeKind;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.data.metadata.edm.BuiltInTypeKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssociationType extends RelationshipType  {
+public class AssociationType extends system.data.metadata.edm.RelationshipType  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -168,6 +169,36 @@ public class AssociationType extends RelationshipType  {
             return (boolean)retObjectIsForeignKey;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsForeignKey != null ? retObjectIsForeignKey.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getAssociationEndMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociationEndMembers = null;
+        try {
+            retObjectAssociationEndMembers = classInstance.Get("AssociationEndMembers");
+            JCObject val = (JCObject)retObjectAssociationEndMembers;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociationEndMembers != null ? retObjectAssociationEndMembers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getReferentialConstraints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferentialConstraints = null;
+        try {
+            retObjectReferentialConstraints = classInstance.Get("ReferentialConstraints");
+            JCObject val = (JCObject)retObjectReferentialConstraints;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferentialConstraints != null ? retObjectReferentialConstraints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.spatial.DbGeography;
+import system.Nullable_1;
 import system.data.spatial.DbGeometry;
 
 
@@ -153,6 +154,21 @@ public class SqlSpatialFunctions extends NetObject  {
     
     // Methods section
     
+    public static DbGeography BufferWithTolerance(DbGeography geographyValue, Nullable_1 distance, Nullable_1 tolerance, Nullable_1 relative) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBufferWithTolerance = null;
+        try {
+            retObjectBufferWithTolerance = classType.Invoke("BufferWithTolerance", geographyValue == null ? null : geographyValue.getJCOInstance(), distance == null ? null : distance.getJCOInstance(), tolerance == null ? null : tolerance.getJCOInstance(), relative == null ? null : relative.getJCOInstance());
+            JCObject objBufferWithTolerance = (JCObject)retObjectBufferWithTolerance;
+            return new DbGeography(objBufferWithTolerance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBufferWithTolerance != null ? retObjectBufferWithTolerance.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbGeography EnvelopeCenter(DbGeography geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -168,6 +184,66 @@ public class SqlSpatialFunctions extends NetObject  {
         }
     }
 
+    public static DbGeography PointGeography(Nullable_1 latitude, Nullable_1 longitude, Nullable_1 spatialReferenceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPointGeography = null;
+        try {
+            retObjectPointGeography = classType.Invoke("PointGeography", latitude == null ? null : latitude.getJCOInstance(), longitude == null ? null : longitude.getJCOInstance(), spatialReferenceId == null ? null : spatialReferenceId.getJCOInstance());
+            JCObject objPointGeography = (JCObject)retObjectPointGeography;
+            return new DbGeography(objPointGeography);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointGeography != null ? retObjectPointGeography.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeography Reduce(DbGeography geographyValue, Nullable_1 tolerance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReduce = null;
+        try {
+            retObjectReduce = classType.Invoke("Reduce", geographyValue == null ? null : geographyValue.getJCOInstance(), tolerance == null ? null : tolerance.getJCOInstance());
+            JCObject objReduce = (JCObject)retObjectReduce;
+            return new DbGeography(objReduce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReduce != null ? retObjectReduce.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeography RingN(DbGeography geographyValue, Nullable_1 index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRingN = null;
+        try {
+            retObjectRingN = classType.Invoke("RingN", geographyValue == null ? null : geographyValue.getJCOInstance(), index == null ? null : index.getJCOInstance());
+            JCObject objRingN = (JCObject)retObjectRingN;
+            return new DbGeography(objRingN);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRingN != null ? retObjectRingN.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeometry BufferWithTolerance(DbGeometry geometryValue, Nullable_1 distance, Nullable_1 tolerance, Nullable_1 relative) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBufferWithTolerance = null;
+        try {
+            retObjectBufferWithTolerance = classType.Invoke("BufferWithTolerance", geometryValue == null ? null : geometryValue.getJCOInstance(), distance == null ? null : distance.getJCOInstance(), tolerance == null ? null : tolerance.getJCOInstance(), relative == null ? null : relative.getJCOInstance());
+            JCObject objBufferWithTolerance = (JCObject)retObjectBufferWithTolerance;
+            return new DbGeometry(objBufferWithTolerance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBufferWithTolerance != null ? retObjectBufferWithTolerance.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbGeometry MakeValid(DbGeometry geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -178,6 +254,126 @@ public class SqlSpatialFunctions extends NetObject  {
             return new DbGeometry(objMakeValid);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeValid != null ? retObjectMakeValid.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeometry PointGeometry(Nullable_1 xCoordinate, Nullable_1 yCoordinate, Nullable_1 spatialReferenceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPointGeometry = null;
+        try {
+            retObjectPointGeometry = classType.Invoke("PointGeometry", xCoordinate == null ? null : xCoordinate.getJCOInstance(), yCoordinate == null ? null : yCoordinate.getJCOInstance(), spatialReferenceId == null ? null : spatialReferenceId.getJCOInstance());
+            JCObject objPointGeometry = (JCObject)retObjectPointGeometry;
+            return new DbGeometry(objPointGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointGeometry != null ? retObjectPointGeometry.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGeometry Reduce(DbGeometry geometryValue, Nullable_1 tolerance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReduce = null;
+        try {
+            retObjectReduce = classType.Invoke("Reduce", geometryValue == null ? null : geometryValue.getJCOInstance(), tolerance == null ? null : tolerance.getJCOInstance());
+            JCObject objReduce = (JCObject)retObjectReduce;
+            return new DbGeometry(objReduce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReduce != null ? retObjectReduce.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 Filter(DbGeography geographyValue, DbGeography geographyOther) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFilter = null;
+        try {
+            retObjectFilter = classType.Invoke("Filter", geographyValue == null ? null : geographyValue.getJCOInstance(), geographyOther == null ? null : geographyOther.getJCOInstance());
+            JCObject objFilter = (JCObject)retObjectFilter;
+            return new Nullable_1(objFilter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 Filter(DbGeometry geometryValue, DbGeometry geometryOther) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFilter = null;
+        try {
+            retObjectFilter = classType.Invoke("Filter", geometryValue == null ? null : geometryValue.getJCOInstance(), geometryOther == null ? null : geometryOther.getJCOInstance());
+            JCObject objFilter = (JCObject)retObjectFilter;
+            return new Nullable_1(objFilter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 InstanceOf(DbGeography geographyValue, java.lang.String geometryTypeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInstanceOf = null;
+        try {
+            retObjectInstanceOf = classType.Invoke("InstanceOf", geographyValue == null ? null : geographyValue.getJCOInstance(), geometryTypeName);
+            JCObject objInstanceOf = (JCObject)retObjectInstanceOf;
+            return new Nullable_1(objInstanceOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceOf != null ? retObjectInstanceOf.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 InstanceOf(DbGeometry geometryValue, java.lang.String geometryTypeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInstanceOf = null;
+        try {
+            retObjectInstanceOf = classType.Invoke("InstanceOf", geometryValue == null ? null : geometryValue.getJCOInstance(), geometryTypeName);
+            JCObject objInstanceOf = (JCObject)retObjectInstanceOf;
+            return new Nullable_1(objInstanceOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceOf != null ? retObjectInstanceOf.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 EnvelopeAngle(DbGeography geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnvelopeAngle = null;
+        try {
+            retObjectEnvelopeAngle = classType.Invoke("EnvelopeAngle", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objEnvelopeAngle = (JCObject)retObjectEnvelopeAngle;
+            return new Nullable_1(objEnvelopeAngle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnvelopeAngle != null ? retObjectEnvelopeAngle.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 NumRings(DbGeography geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNumRings = null;
+        try {
+            retObjectNumRings = classType.Invoke("NumRings", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objNumRings = (JCObject)retObjectNumRings;
+            return new Nullable_1(objNumRings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumRings != null ? retObjectNumRings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

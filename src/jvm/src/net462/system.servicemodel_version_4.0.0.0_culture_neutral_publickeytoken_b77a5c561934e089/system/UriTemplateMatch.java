@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.collections.specialized.NameValueCollection;
 import system.Uri;
 import system.UriTemplate;
@@ -166,6 +167,36 @@ public class UriTemplateMatch extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getRelativePathSegments() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelativePathSegments = null;
+        try {
+            retObjectRelativePathSegments = classInstance.Get("RelativePathSegments");
+            JCObject val = (JCObject)retObjectRelativePathSegments;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelativePathSegments != null ? retObjectRelativePathSegments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getWildcardPathSegments() throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWildcardPathSegments = null;
+        try {
+            retObjectWildcardPathSegments = classInstance.Get("WildcardPathSegments");
+            JCObject val = (JCObject)retObjectWildcardPathSegments;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWildcardPathSegments != null ? retObjectWildcardPathSegments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NameValueCollection getBoundVariables() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

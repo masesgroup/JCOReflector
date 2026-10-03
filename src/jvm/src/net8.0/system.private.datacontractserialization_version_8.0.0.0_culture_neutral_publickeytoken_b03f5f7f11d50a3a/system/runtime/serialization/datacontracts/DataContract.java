@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.serialization.datacontracts.DataContract;
 import system.xml.XmlQualifiedName;
+import system.collections.generic.Dictionary_2;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.xml.XmlDictionaryString;
 
 
@@ -298,6 +300,46 @@ public class DataContract extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsValueType", IsValueType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 getKnownDataContracts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKnownDataContracts = null;
+        try {
+            retObjectKnownDataContracts = classInstance.Get("KnownDataContracts");
+            JCObject val = (JCObject)retObjectKnownDataContracts;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKnownDataContracts != null ? retObjectKnownDataContracts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setKnownDataContracts(Dictionary_2 KnownDataContracts) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("KnownDataContracts", KnownDataContracts == null ? null : KnownDataContracts.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getDataMembers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataMembers = null;
+        try {
+            retObjectDataMembers = classInstance.Get("DataMembers");
+            JCObject val = (JCObject)retObjectDataMembers;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataMembers != null ? retObjectDataMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

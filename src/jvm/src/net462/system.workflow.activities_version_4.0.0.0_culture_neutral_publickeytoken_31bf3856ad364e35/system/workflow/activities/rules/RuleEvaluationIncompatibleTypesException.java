@@ -55,7 +55,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RuleEvaluationIncompatibleTypesException extends RuleException {
+public class RuleEvaluationIncompatibleTypesException extends system.workflow.activities.rules.RuleException {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

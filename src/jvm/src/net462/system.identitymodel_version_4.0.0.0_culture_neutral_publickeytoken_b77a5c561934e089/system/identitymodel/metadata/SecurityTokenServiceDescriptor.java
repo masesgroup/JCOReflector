@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.metadata.WebServiceDescriptor;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.identitymodel.metadata.WebServiceDescriptor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SecurityTokenServiceDescriptor extends WebServiceDescriptor  {
+public class SecurityTokenServiceDescriptor extends system.identitymodel.metadata.WebServiceDescriptor  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -164,6 +165,36 @@ public class SecurityTokenServiceDescriptor extends WebServiceDescriptor  {
     
     // Properties section
     
+    public Collection_1 getPassiveRequestorEndpoints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassiveRequestorEndpoints = null;
+        try {
+            retObjectPassiveRequestorEndpoints = classInstance.Get("PassiveRequestorEndpoints");
+            JCObject val = (JCObject)retObjectPassiveRequestorEndpoints;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPassiveRequestorEndpoints != null ? retObjectPassiveRequestorEndpoints.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getSecurityTokenServiceEndpoints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenServiceEndpoints = null;
+        try {
+            retObjectSecurityTokenServiceEndpoints = classInstance.Get("SecurityTokenServiceEndpoints");
+            JCObject val = (JCObject)retObjectSecurityTokenServiceEndpoints;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenServiceEndpoints != null ? retObjectSecurityTokenServiceEndpoints.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -53,12 +53,12 @@ import system.data.sqlclient.SqlConnection;
 import system.enterpriseservices.ITransaction;
 import system.enterpriseservices.ITransactionImplementation;
 import system.transactions.Transaction;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.data.ConnectionState;
 import system.Guid;
 import system.TimeSpan;
 import system.data.sqlclient.SqlInfoMessageEventHandler;
-import system.ICloneable;
-import system.ICloneableImplementation;
 
 
 /**
@@ -73,7 +73,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlConnection extends DbConnection implements ICloneable {
+public class SqlConnection extends system.data.common.DbConnection  {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -455,6 +455,16 @@ public class SqlConnection extends DbConnection implements ICloneable {
         }
     }
 
+    public static void RegisterColumnEncryptionKeyStoreProviders(IDictionary_2 customProviders) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RegisterColumnEncryptionKeyStoreProviders", customProviders == null ? null : customProviders.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ResetStatistics() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -585,6 +595,21 @@ public class SqlConnection extends DbConnection implements ICloneable {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 getColumnEncryptionTrustedMasterKeyPaths() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectColumnEncryptionTrustedMasterKeyPaths = null;
+        try {
+            retObjectColumnEncryptionTrustedMasterKeyPaths = classType.Get("ColumnEncryptionTrustedMasterKeyPaths");
+            JCObject val = (JCObject)retObjectColumnEncryptionTrustedMasterKeyPaths;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnEncryptionTrustedMasterKeyPaths != null ? retObjectColumnEncryptionTrustedMasterKeyPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

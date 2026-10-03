@@ -56,7 +56,7 @@ import system.globalization.CultureInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PixelFormatConverter extends TypeConverter  {
+public class PixelFormatConverter extends system.componentmodel.TypeConverter  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

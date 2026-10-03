@@ -47,12 +47,16 @@ import system.AppDomainSetup;
 import system.security.PermissionSet;
 import system.security.policy.StrongName;
 import system.AppDomainInitializer;
+import system.Nullable_1;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
 import system.reflection.Assembly;
 import system.reflection.emit.AssemblyBuilder;
 import system.reflection.emit.AssemblyBuilderAccess;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.security.SecurityContextSource;
 import system.runtime.remoting.ObjectHandle;
 import system.CrossAppDomainDelegate;
 import system.security.policy.PolicyLevel;
@@ -86,7 +90,7 @@ import system.UnhandledExceptionEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AppDomain extends MarshalByRefObject  {
+public class AppDomain extends system.MarshalByRefObject  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -1160,6 +1164,21 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
+    public Nullable_1 IsCompatibilitySwitchSet(java.lang.String value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompatibilitySwitchSet = null;
+        try {
+            retObjectIsCompatibilitySwitchSet = classInstance.Invoke("IsCompatibilitySwitchSet", value);
+            JCObject objIsCompatibilitySwitchSet = (JCObject)retObjectIsCompatibilitySwitchSet;
+            return new Nullable_1(objIsCompatibilitySwitchSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsCompatibilitySwitchSet != null ? retObjectIsCompatibilitySwitchSet.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject CreateInstanceAndUnwrap(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.MissingMethodException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1517,6 +1536,36 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1 assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineDynamicAssembly = null;
+        try {
+            retObjectDefineDynamicAssembly = classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), assemblyAttributes == null ? null : assemblyAttributes.getJCOInstance());
+            JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineDynamicAssembly != null ? retObjectDefineDynamicAssembly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1 assemblyAttributes, SecurityContextSource securityContextSource) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineDynamicAssembly = null;
+        try {
+            retObjectDefineDynamicAssembly = classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), assemblyAttributes == null ? null : assemblyAttributes.getJCOInstance(), securityContextSource == null ? null : securityContextSource.getJCOInstance());
+            JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineDynamicAssembly != null ? retObjectDefineDynamicAssembly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1577,6 +1626,21 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, boolean isSynchronized, IEnumerable_1 assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineDynamicAssembly = null;
+        try {
+            retObjectDefineDynamicAssembly = classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), dir, isSynchronized, assemblyAttributes == null ? null : assemblyAttributes.getJCOInstance());
+            JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineDynamicAssembly != null ? retObjectDefineDynamicAssembly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1628,6 +1692,21 @@ public class AppDomain extends MarshalByRefObject  {
         java.lang.Object retObjectDefineDynamicAssembly = null;
         try {
             retObjectDefineDynamicAssembly = classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), dir, evidence == null ? null : evidence.getJCOInstance(), requiredPermissions == null ? null : requiredPermissions.getJCOInstance(), optionalPermissions == null ? null : optionalPermissions.getJCOInstance(), refusedPermissions == null ? null : refusedPermissions.getJCOInstance(), isSynchronized);
+            JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineDynamicAssembly != null ? retObjectDefineDynamicAssembly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, boolean isSynchronized, IEnumerable_1 assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineDynamicAssembly = null;
+        try {
+            retObjectDefineDynamicAssembly = classInstance.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), dir, evidence == null ? null : evidence.getJCOInstance(), requiredPermissions == null ? null : requiredPermissions.getJCOInstance(), optionalPermissions == null ? null : optionalPermissions.getJCOInstance(), refusedPermissions == null ? null : refusedPermissions.getJCOInstance(), isSynchronized, assemblyAttributes == null ? null : assemblyAttributes.getJCOInstance());
             JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
             return new AssemblyBuilder(objDefineDynamicAssembly);
         } catch (java.lang.ClassCastException cce) {

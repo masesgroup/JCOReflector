@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.claims.ClaimSet;
 import system.security.cryptography.x509certificates.X509Certificate2;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.DateTime;
 import system.identitymodel.claims.Claim;
 
@@ -56,7 +58,7 @@ import system.identitymodel.claims.Claim;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509CertificateClaimSet extends ClaimSet implements AutoCloseable {
+public class X509CertificateClaimSet extends system.identitymodel.claims.ClaimSet implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -167,6 +169,21 @@ public class X509CertificateClaimSet extends ClaimSet implements AutoCloseable {
     
     // Methods section
     
+    public IEnumerable_1 FindClaims(java.lang.String claimType, java.lang.String right) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindClaims = null;
+        try {
+            retObjectFindClaims = classInstance.Invoke("FindClaims", claimType, right);
+            JCObject objFindClaims = (JCObject)retObjectFindClaims;
+            return new IEnumerable_1Implementation(objFindClaims);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindClaims != null ? retObjectFindClaims.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

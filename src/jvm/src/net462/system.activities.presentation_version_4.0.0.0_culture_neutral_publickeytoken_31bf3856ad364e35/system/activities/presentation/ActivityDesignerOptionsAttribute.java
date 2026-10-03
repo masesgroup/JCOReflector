@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Attribute;
+import system.Func_2;
 
 
 /**
@@ -53,7 +54,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityDesignerOptionsAttribute extends Attribute  {
+public class ActivityDesignerOptionsAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -207,6 +208,30 @@ public class ActivityDesignerOptionsAttribute extends Attribute  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlwaysCollapseChildren", AlwaysCollapseChildren);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getOutlineViewIconProvider() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutlineViewIconProvider = null;
+        try {
+            retObjectOutlineViewIconProvider = classInstance.Get("OutlineViewIconProvider");
+            return (Func_2)retObjectOutlineViewIconProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectOutlineViewIconProvider != null ? retObjectOutlineViewIconProvider.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOutlineViewIconProvider(Func_2 OutlineViewIconProvider) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OutlineViewIconProvider", OutlineViewIconProvider);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

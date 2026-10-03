@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.Uri;
 
 
 /**
@@ -151,10 +154,130 @@ public class Fonts extends NetObject  {
     
     // Methods section
     
+    public static ICollection_1 GetFontFamilies(java.lang.String location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontFamilies = null;
+        try {
+            retObjectGetFontFamilies = classType.Invoke("GetFontFamilies", location);
+            JCObject objGetFontFamilies = (JCObject)retObjectGetFontFamilies;
+            return new ICollection_1Implementation(objGetFontFamilies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontFamilies != null ? retObjectGetFontFamilies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ICollection_1 GetFontFamilies(Uri baseUri, java.lang.String location) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.UriFormatException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.net.WebException, system.xml.XmlException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontFamilies = null;
+        try {
+            retObjectGetFontFamilies = classType.Invoke("GetFontFamilies", baseUri == null ? null : baseUri.getJCOInstance(), location);
+            JCObject objGetFontFamilies = (JCObject)retObjectGetFontFamilies;
+            return new ICollection_1Implementation(objGetFontFamilies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontFamilies != null ? retObjectGetFontFamilies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ICollection_1 GetFontFamilies(Uri baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontFamilies = null;
+        try {
+            retObjectGetFontFamilies = classType.Invoke("GetFontFamilies", baseUri == null ? null : baseUri.getJCOInstance());
+            JCObject objGetFontFamilies = (JCObject)retObjectGetFontFamilies;
+            return new ICollection_1Implementation(objGetFontFamilies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontFamilies != null ? retObjectGetFontFamilies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ICollection_1 GetTypefaces(java.lang.String location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypefaces = null;
+        try {
+            retObjectGetTypefaces = classType.Invoke("GetTypefaces", location);
+            JCObject objGetTypefaces = (JCObject)retObjectGetTypefaces;
+            return new ICollection_1Implementation(objGetTypefaces);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypefaces != null ? retObjectGetTypefaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ICollection_1 GetTypefaces(Uri baseUri, java.lang.String location) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypefaces = null;
+        try {
+            retObjectGetTypefaces = classType.Invoke("GetTypefaces", baseUri == null ? null : baseUri.getJCOInstance(), location);
+            JCObject objGetTypefaces = (JCObject)retObjectGetTypefaces;
+            return new ICollection_1Implementation(objGetTypefaces);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypefaces != null ? retObjectGetTypefaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ICollection_1 GetTypefaces(Uri baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTypefaces = null;
+        try {
+            retObjectGetTypefaces = classType.Invoke("GetTypefaces", baseUri == null ? null : baseUri.getJCOInstance());
+            JCObject objGetTypefaces = (JCObject)retObjectGetTypefaces;
+            return new ICollection_1Implementation(objGetTypefaces);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypefaces != null ? retObjectGetTypefaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public static ICollection_1 getSystemFontFamilies() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystemFontFamilies = null;
+        try {
+            retObjectSystemFontFamilies = classType.Get("SystemFontFamilies");
+            JCObject val = (JCObject)retObjectSystemFontFamilies;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystemFontFamilies != null ? retObjectSystemFontFamilies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ICollection_1 getSystemTypefaces() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystemTypefaces = null;
+        try {
+            retObjectSystemTypefaces = classType.Get("SystemTypefaces");
+            JCObject val = (JCObject)retObjectSystemTypefaces;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystemTypefaces != null ? retObjectSystemTypefaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

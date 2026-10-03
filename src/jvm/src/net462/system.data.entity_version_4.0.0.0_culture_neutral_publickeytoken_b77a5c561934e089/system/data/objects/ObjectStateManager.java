@@ -42,7 +42,10 @@ import system.data.metadata.edm.MetadataWorkspace;
 import system.data.EntityKey;
 import system.data.objects.ObjectStateEntry;
 import system.data.objects.dataclasses.RelationshipManager;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.EntityState;
+import system.linq.expressions.Expression_1;
 import system.componentmodel.CollectionChangeEventHandler;
 
 
@@ -211,6 +214,21 @@ public class ObjectStateManager extends NetObject  {
         }
     }
 
+    public IEnumerable_1 GetObjectStateEntries(EntityState state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjectStateEntries = null;
+        try {
+            retObjectGetObjectStateEntries = classInstance.Invoke("GetObjectStateEntries", state == null ? null : state.getJCOInstance());
+            JCObject objGetObjectStateEntries = (JCObject)retObjectGetObjectStateEntries;
+            return new IEnumerable_1Implementation(objGetObjectStateEntries);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectStateEntries != null ? retObjectGetObjectStateEntries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RelationshipManager GetRelationshipManager(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -262,6 +280,21 @@ public class ObjectStateManager extends NetObject  {
         java.lang.Object retObjectChangeRelationshipState = null;
         try {
             retObjectChangeRelationshipState = classInstance.Invoke("ChangeRelationshipState", sourceEntity == null ? null : sourceEntity.getJCOInstance(), targetEntity == null ? null : targetEntity.getJCOInstance(), relationshipName, targetRoleName, relationshipState == null ? null : relationshipState.getJCOInstance());
+            JCObject objChangeRelationshipState = (JCObject)retObjectChangeRelationshipState;
+            return new ObjectStateEntry(objChangeRelationshipState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeRelationshipState != null ? retObjectChangeRelationshipState.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TEntity extends IJCOBridgeReflected> ObjectStateEntry ChangeRelationshipState(TEntity sourceEntity, NetObject targetEntity, Expression_1 navigationPropertySelector, EntityState relationshipState) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeRelationshipState = null;
+        try {
+            retObjectChangeRelationshipState = classInstance.Invoke("ChangeRelationshipState", sourceEntity == null ? null : ((IJCOBridgeReflected)sourceEntity).getJCOInstance(), targetEntity == null ? null : targetEntity.getJCOInstance(), navigationPropertySelector == null ? null : navigationPropertySelector.getJCOInstance(), relationshipState == null ? null : relationshipState.getJCOInstance());
             JCObject objChangeRelationshipState = (JCObject)retObjectChangeRelationshipState;
             return new ObjectStateEntry(objChangeRelationshipState);
         } catch (java.lang.ClassCastException cce) {

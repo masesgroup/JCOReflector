@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Uri;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.windows.media.FamilyTypefaceCollection;
 import system.windows.media.FontFamilyMapCollection;
 import system.windows.media.LanguageSpecificStringDictionary;
@@ -183,6 +185,21 @@ public class FontFamily extends NetObject  {
     
     // Methods section
     
+    public ICollection_1 GetTypefaces() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.FileFormatException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypefaces = null;
+        try {
+            retObjectGetTypefaces = classInstance.Invoke("GetTypefaces");
+            JCObject objGetTypefaces = (JCObject)retObjectGetTypefaces;
+            return new ICollection_1Implementation(objGetTypefaces);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypefaces != null ? retObjectGetTypefaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

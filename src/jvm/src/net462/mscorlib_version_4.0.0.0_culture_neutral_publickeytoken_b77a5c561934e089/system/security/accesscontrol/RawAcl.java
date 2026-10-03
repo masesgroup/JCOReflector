@@ -54,7 +54,7 @@ import system.security.accesscontrol.GenericAce;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RawAcl extends GenericAcl  {
+public class RawAcl extends system.security.accesscontrol.GenericAcl  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

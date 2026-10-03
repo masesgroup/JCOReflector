@@ -45,6 +45,8 @@ import system.activities.presentation.ICompositeView;
 import system.activities.presentation.ICompositeViewImplementation;
 import system.windows.DragEventArgs;
 import system.activities.presentation.model.ModelItem;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.DependencyObject;
 import system.windows.DragDropEffects;
 import system.activities.presentation.WorkflowViewElement;
@@ -203,6 +205,36 @@ public class DragDropHelper extends NetObject  {
             return new ModelItem(objGetDraggedModelItem);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDraggedModelItem != null ? retObjectGetDraggedModelItem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetDraggedModelItems(DragEventArgs e) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDraggedModelItems = null;
+        try {
+            retObjectGetDraggedModelItems = classType.Invoke("GetDraggedModelItems", e == null ? null : e.getJCOInstance());
+            JCObject objGetDraggedModelItems = (JCObject)retObjectGetDraggedModelItems;
+            return new IEnumerable_1Implementation(objGetDraggedModelItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDraggedModelItems != null ? retObjectGetDraggedModelItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetDroppedObjects(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.ObjectDisposedException, system.io.IOException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDroppedObjects = null;
+        try {
+            retObjectGetDroppedObjects = classType.Invoke("GetDroppedObjects", dropTarget == null ? null : dropTarget.getJCOInstance(), e == null ? null : e.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetDroppedObjects = (JCObject)retObjectGetDroppedObjects;
+            return new IEnumerable_1Implementation(objGetDroppedObjects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDroppedObjects != null ? retObjectGetDroppedObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

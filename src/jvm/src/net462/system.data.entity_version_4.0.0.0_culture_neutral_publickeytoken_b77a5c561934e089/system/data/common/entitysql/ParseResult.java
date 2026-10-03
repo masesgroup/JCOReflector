@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.data.common.commandtrees.DbCommandTree;
 
 
@@ -158,6 +159,21 @@ public class ParseResult extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getFunctionDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFunctionDefinitions = null;
+        try {
+            retObjectFunctionDefinitions = classInstance.Get("FunctionDefinitions");
+            JCObject val = (JCObject)retObjectFunctionDefinitions;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunctionDefinitions != null ? retObjectFunctionDefinitions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbCommandTree getCommandTree() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

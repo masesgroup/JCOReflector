@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.TypeName;
 import system.reflection.metadata.AssemblyNameInfo;
 
@@ -235,6 +236,21 @@ public class TypeName extends NetObject  {
         }
     }
 
+    public ImmutableArray_1 GetGenericArguments() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGenericArguments = null;
+        try {
+            retObjectGetGenericArguments = classInstance.Invoke("GetGenericArguments");
+            JCObject objGetGenericArguments = (JCObject)retObjectGetGenericArguments;
+            return new ImmutableArray_1(objGetGenericArguments);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGenericArguments != null ? retObjectGetGenericArguments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TypeName GetElementType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -290,6 +306,21 @@ public class TypeName extends NetObject  {
             return new TypeName(objMakeByRefTypeName);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeByRefTypeName != null ? retObjectMakeByRefTypeName.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeName MakeGenericTypeName(ImmutableArray_1 typeArguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeGenericTypeName = null;
+        try {
+            retObjectMakeGenericTypeName = classInstance.Invoke("MakeGenericTypeName", typeArguments == null ? null : typeArguments.getJCOInstance());
+            JCObject objMakeGenericTypeName = (JCObject)retObjectMakeGenericTypeName;
+            return new TypeName(objMakeGenericTypeName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeGenericTypeName != null ? retObjectMakeGenericTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

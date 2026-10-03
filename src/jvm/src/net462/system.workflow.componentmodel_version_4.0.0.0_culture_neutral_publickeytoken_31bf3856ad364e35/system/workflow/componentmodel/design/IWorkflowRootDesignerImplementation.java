@@ -47,6 +47,7 @@ import system.IDisposableImplementation;
 import system.componentmodel.design.ViewTechnology;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.componentmodel.design.DesignerVerbCollection;
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
 
@@ -223,6 +224,21 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
             return (boolean)retObjectSupportsLayoutPersistence;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsLayoutPersistence != null ? retObjectSupportsLayoutPersistence.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getMessageFilters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageFilters = null;
+        try {
+            retObjectMessageFilters = classInstance.Get("MessageFilters");
+            JCObject val = (JCObject)retObjectMessageFilters;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageFilters != null ? retObjectMessageFilters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

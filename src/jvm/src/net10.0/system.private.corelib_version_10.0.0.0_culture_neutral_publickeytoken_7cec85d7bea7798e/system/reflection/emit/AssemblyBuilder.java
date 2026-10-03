@@ -44,6 +44,8 @@ import system.io.Stream;
 import system.reflection.emit.AssemblyBuilder;
 import system.reflection.AssemblyName;
 import system.reflection.emit.AssemblyBuilderAccess;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.emit.ModuleBuilder;
 import system.reflection.ManifestResourceInfo;
 import system.reflection.ConstructorInfo;
@@ -63,7 +65,7 @@ import system.reflection.MethodInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssemblyBuilder extends Assembly  {
+public class AssemblyBuilder extends system.reflection.Assembly  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -223,6 +225,21 @@ public class AssemblyBuilder extends Assembly  {
             return new Stream(objGetManifestResourceStream);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManifestResourceStream != null ? retObjectGetManifestResourceStream.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1 assemblyAttributes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefineDynamicAssembly = null;
+        try {
+            retObjectDefineDynamicAssembly = classType.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), assemblyAttributes == null ? null : assemblyAttributes.getJCOInstance());
+            JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineDynamicAssembly != null ? retObjectDefineDynamicAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

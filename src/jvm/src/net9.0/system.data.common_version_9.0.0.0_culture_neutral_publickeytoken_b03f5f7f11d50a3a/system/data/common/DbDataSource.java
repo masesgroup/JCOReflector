@@ -42,6 +42,8 @@ import system.data.common.DbBatch;
 import system.data.common.DbCommand;
 import system.data.common.DbConnection;
 import system.threading.tasks.ValueTask;
+import system.threading.tasks.ValueTask_1;
+import system.threading.CancellationToken;
 
 
 /**
@@ -225,6 +227,21 @@ public class DbDataSource extends NetObject implements AutoCloseable {
             return new ValueTask(objDisposeAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 OpenConnectionAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenConnectionAsync = null;
+        try {
+            retObjectOpenConnectionAsync = classInstance.Invoke("OpenConnectionAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objOpenConnectionAsync = (JCObject)retObjectOpenConnectionAsync;
+            return new ValueTask_1(objOpenConnectionAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenConnectionAsync != null ? retObjectOpenConnectionAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

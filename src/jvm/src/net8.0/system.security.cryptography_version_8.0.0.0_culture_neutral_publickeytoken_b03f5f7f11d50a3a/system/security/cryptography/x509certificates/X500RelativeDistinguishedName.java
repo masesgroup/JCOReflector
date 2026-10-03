@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.Oid;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -196,6 +197,21 @@ public class X500RelativeDistinguishedName extends NetObject  {
             return (boolean)retObjectHasMultipleElements;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasMultipleElements != null ? retObjectHasMultipleElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 getRawData() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawData = null;
+        try {
+            retObjectRawData = classInstance.Get("RawData");
+            JCObject val = (JCObject)retObjectRawData;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRawData != null ? retObjectRawData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

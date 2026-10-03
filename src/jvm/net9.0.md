@@ -301,29 +301,29 @@ Parsed assemblies are:
 > * System.DirectoryServices, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
 > * Analyzed Types = 28081
->   * Enumerators = 24
->   * Delegates = 365
+>   * Enumerators = 25
+>   * Delegates = 410
 >   * Classes
->     * Constructors = 6853
->     * Methods = 35486
->     * Properties = 18839
->     * Events = 1749
-> * Implemented Types = 7446
->   * Enumerators = 23
->   * Delegates = 365
+>     * Constructors = 7101
+>     * Methods = 36619
+>     * Properties = 19244
+>     * Events = 1754
+> * Implemented Types = 7710
+>   * Enumerators = 24
+>   * Delegates = 407
 >   * Enums = 1268
 >     * Flags = 274
->   * Interfaces = 376
->   * Classes = 5414
+>   * Interfaces = 416
+>   * Classes = 5595
 >     * Exceptions = 240
->     * Constructors = 5897
->     * Methods = 21653
->       * Duplicated Methods = 852
->     * Properties = 17531
->     * Events = 1641
-> * Discarded Types = 20634
+>     * Constructors = 6281
+>     * Methods = 26974
+>       * Duplicated Methods = 1002
+>     * Properties = 18611
+>     * Events = 1644
+> * Discarded Types = 20367
 >   * Non Public = 20260
->   * Generic = 317
+>   * Generic = 40
 >   * Internals = 20
 
 [//]: # "EndReport net9.0"

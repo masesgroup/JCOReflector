@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.configuration.ServiceModelConfigurationElementCollection_1;
+import system.servicemodel.configuration.BaseAddressElement;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BaseAddressElementCollection extends NetObjectEnumerable  {
+public class BaseAddressElementCollection extends system.servicemodel.configuration.ServiceModelConfigurationElementCollection_1<BaseAddressElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

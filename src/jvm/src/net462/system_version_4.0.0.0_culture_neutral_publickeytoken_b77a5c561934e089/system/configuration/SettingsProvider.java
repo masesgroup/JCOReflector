@@ -56,7 +56,7 @@ import system.configuration.SettingsPropertyCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SettingsProvider extends ProviderBase  {
+public class SettingsProvider extends system.configuration.provider.ProviderBase  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

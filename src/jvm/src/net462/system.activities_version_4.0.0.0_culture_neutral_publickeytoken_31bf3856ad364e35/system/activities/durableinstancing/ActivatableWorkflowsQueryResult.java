@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.durableinstancing.InstanceStoreQueryResult;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.List_1;
 
 
 /**
@@ -53,7 +58,7 @@ import system.runtime.durableinstancing.InstanceStoreQueryResult;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivatableWorkflowsQueryResult extends InstanceStoreQueryResult  {
+public class ActivatableWorkflowsQueryResult extends system.runtime.durableinstancing.InstanceStoreQueryResult  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -156,6 +161,26 @@ public class ActivatableWorkflowsQueryResult extends InstanceStoreQueryResult  {
         }
     }
 
+    public ActivatableWorkflowsQueryResult(IDictionary_2 parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(parameters == null ? null : parameters.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActivatableWorkflowsQueryResult(IEnumerable_1 parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(parameters == null ? null : parameters.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -164,6 +189,31 @@ public class ActivatableWorkflowsQueryResult extends InstanceStoreQueryResult  {
     
     // Properties section
     
+    public List_1 getActivationParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivationParameters = null;
+        try {
+            retObjectActivationParameters = classInstance.Get("ActivationParameters");
+            JCObject val = (JCObject)retObjectActivationParameters;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivationParameters != null ? retObjectActivationParameters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setActivationParameters(List_1 ActivationParameters) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ActivationParameters", ActivationParameters == null ? null : ActivationParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

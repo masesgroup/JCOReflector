@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.Guid;
 import system.workflow.runtime.tracking.SqlTrackingWorkflowInstance;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.workflow.runtime.tracking.SqlTrackingQueryOptions;
 
 
 /**
@@ -180,6 +183,21 @@ public class SqlTrackingQuery extends NetObject  {
             return (boolean)retObjectTryGetWorkflow;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetWorkflow != null ? retObjectTryGetWorkflow.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetWorkflows(SqlTrackingQueryOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.globalization.CultureNotFoundException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.TypeLoadException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWorkflows = null;
+        try {
+            retObjectGetWorkflows = classInstance.Invoke("GetWorkflows", options == null ? null : options.getJCOInstance());
+            JCObject objGetWorkflows = (JCObject)retObjectGetWorkflows;
+            return new IList_1Implementation(objGetWorkflows);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWorkflows != null ? retObjectGetWorkflows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

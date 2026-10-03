@@ -45,6 +45,12 @@ import system.reflection.EventInfo;
 import system.reflection.Assembly;
 import system.codedom.CodeCompileUnit;
 import system.EventHandler;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.Func_2;
+import system.Func_3;
 
 
 /**
@@ -451,6 +457,84 @@ public class TypeProvider extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    public ICollection_1 getReferencedAssemblies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.io.FileNotFoundException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.reflection.TargetParameterCountException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferencedAssemblies = null;
+        try {
+            retObjectReferencedAssemblies = classInstance.Get("ReferencedAssemblies");
+            JCObject val = (JCObject)retObjectReferencedAssemblies;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferencedAssemblies != null ? retObjectReferencedAssemblies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getTypeLoadErrors() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeLoadErrors = null;
+        try {
+            retObjectTypeLoadErrors = classInstance.Get("TypeLoadErrors");
+            JCObject val = (JCObject)retObjectTypeLoadErrors;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeLoadErrors != null ? retObjectTypeLoadErrors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getAssemblyNameResolver() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyNameResolver = null;
+        try {
+            retObjectAssemblyNameResolver = classInstance.Get("AssemblyNameResolver");
+            return (Func_2)retObjectAssemblyNameResolver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectAssemblyNameResolver != null ? retObjectAssemblyNameResolver.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAssemblyNameResolver(Func_2 AssemblyNameResolver) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AssemblyNameResolver", AssemblyNameResolver);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_3 getIsSupportedPropertyResolver() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedPropertyResolver = null;
+        try {
+            retObjectIsSupportedPropertyResolver = classInstance.Get("IsSupportedPropertyResolver");
+            return (Func_3)retObjectIsSupportedPropertyResolver;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3", retObjectIsSupportedPropertyResolver != null ? retObjectIsSupportedPropertyResolver.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsSupportedPropertyResolver(Func_3 IsSupportedPropertyResolver) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsSupportedPropertyResolver", IsSupportedPropertyResolver);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Assembly getLocalAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

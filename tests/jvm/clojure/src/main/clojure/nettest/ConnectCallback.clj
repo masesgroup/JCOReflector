@@ -1,0 +1,50 @@
+;;  MIT License
+;;
+;;  Copyright (c) 2020-2026 MASES s.r.l.
+;;
+;;  Permission is hereby granted, free of charge, to any person obtaining a copy
+;;  of this software and associated documentation files (the "Software"), to deal
+;;  in the Software without restriction, including without limitation the rights
+;;  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+;;  copies of the Software, and to permit persons to whom the Software is
+;;  furnished to do so, subject to the following conditions:
+;;
+;;  The above copyright notice and this permission notice shall be included in all
+;;  copies or substantial portions of the Software.
+;;
+;;  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+;;  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+;;  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+;;  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+;;  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+;;  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+;;  SOFTWARE.
+
+(ns nettest.ConnectCallback
+  (:import (org.mases.jcobridge.netreflection NetObject)
+           (system Console IAsyncResult)
+           (system.net.sockets Socket)
+           (system.threading ManualResetEvent))
+  (:gen-class
+   :name nettest.ConnectCallback
+   :main false
+   :extends system.AsyncCallback))
+
+(defn- client-atom [sym]
+  @(requiring-resolve (symbol "nettest.HelloNETSocketClientAsync" (name sym))))
+
+(defn -Invoke [this ^IAsyncResult ar]
+  (try
+    ;; Retrieve the socket from the state object.
+    (let [^Socket client (Socket/cast (.getAsyncState ar))]
+      ;; Complete the connection.
+      (.EndConnect client ar)
+
+      (Console/WriteLine "Socket connected to {0}"
+                         (NetObject. (.ToString (.getRemoteEndPoint client))))
+
+      ;; Signal that the connection has been made.
+      (.Set ^ManualResetEvent @(client-atom 'connectDone)))
+    (catch Throwable e
+      (.printStackTrace e)
+      (System/exit -1))))

@@ -169,7 +169,7 @@ public class JCOReflector {
      * @param loggingFilename the new log filename
      */
     public static synchronized void setLogFilename(String loggingFilename) {
-        if (!getInitialized())
+        if (getInitialized())
             return;
         writeLog("Set LogFilename to %s", loggingFilename);
         _loggingFilename = loggingFilename;
@@ -471,24 +471,24 @@ public class JCOReflector {
         setCommandLineArgs(args);
         for (int index = 0; index < args.length; index++) {
             String string = args[index];
-            if (string.toLowerCase() == "-debug") {
+            if (string.toLowerCase().equals("-debug")) {
                 setDebug(true);
-            } else if (string.toLowerCase() == "-logging") {
+            } else if (string.toLowerCase().equals("-logging")) {
                 setLogging(true);
-            } else if (string.toLowerCase() == "-instancebyassembly") {
+            } else if (string.toLowerCase().equals("-instancebyassembly")) {
                 setInstanceByAssembly(true);
-            } else if (string.toLowerCase() == "-logfilename") {
-                setLogFilename(args[index++]);
-            } else if (string.toLowerCase() == "-initrt") {
-                initRT(args[index++]);
-            } else if (string.toLowerCase() == "-inittemprt") {
+            } else if (string.toLowerCase().equals("-logfilename")) {
+                setLogFilename(args[++index]);
+            } else if (string.toLowerCase().equals("-initrt")) {
+                initRT(args[++index]);
+            } else if (string.toLowerCase().equals("-inittemprt")) {
                 initTempRT();
-            } else if (string.toLowerCase() == "-path") {
-                registerPath(args[index++]);
-            } else if (string.toLowerCase() == "-scopedon") {
-                setScopedOn(args[index++]);
-            } else if (string.toLowerCase() == "-scopedonversion") {
-                setScopedOnVersion(args[index++]);
+            } else if (string.toLowerCase().equals("-path")) {
+                registerPath(args[++index]);
+            } else if (string.toLowerCase().equals("-scopedon")) {
+                setScopedOn(args[++index]);
+            } else if (string.toLowerCase().equals("-scopedonversion")) {
+                setScopedOnVersion(args[++index]);
             }
         }
     }

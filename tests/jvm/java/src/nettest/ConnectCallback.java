@@ -22,7 +22,7 @@
  *  SOFTWARE.
  */
 
- package nettest;
+package nettest;
 
 import org.mases.jcobridge.netreflection.NetObject;
 

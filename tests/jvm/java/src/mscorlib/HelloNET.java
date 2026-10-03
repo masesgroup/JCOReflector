@@ -55,7 +55,7 @@ public class HelloNET {
             File.WriteAllBytes("test2.txt", resByte);
             Console.WriteLine(result);
             Console.WriteLine("Exiting with success");
-			Environment.Exit(0);
+            Environment.Exit(0);
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();
             System.exit(-1);

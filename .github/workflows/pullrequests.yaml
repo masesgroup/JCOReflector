@@ -12,6 +12,8 @@ on:
 
 env:
     SCALARELEASE: 2.13.18
+    JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+    JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
@@ -174,5 +176,48 @@ jobs:
         run: |
           cd ./tests/jvm/scala
           mkdir output
-          ..\..\..\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
+          ..\..\..\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
 
+      - name: Build Kotlin test source file
+        shell: pwsh
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+        run: |
+          New-Item -ItemType Directory -Force ./tests/jvm/kotlin/output | Out-Null
+          $cp  = (Get-ChildItem ./bin/${{ matrix.framework }} -Filter *.jar -Recurse |
+                  ForEach-Object { $_.FullName -replace '\\','/' }) -join ';'
+          $src = Get-ChildItem ./tests/jvm/kotlin/src/main/kotlin -Filter *.kt -Recurse |
+                  ForEach-Object { '"' + ($_.FullName -replace '\\','/') + '"' }
+          $lines = @('-cp', "`"$cp`"", '-include-runtime', '-d', '"./tests/jvm/kotlin/output/kotlintests.jar"') + $src
+          Set-Content -Path kotlinc.args -Value $lines -Encoding ascii
+          kotlinc '@kotlinc.args'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          
+      - name: Download Clojure
+        run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net9.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=9" >> $GITHUB_ENV
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net10.0'
+        shell: bash
+        run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
+
+      - name: Build Clojure test source files
+        shell: pwsh
+        continue-on-error: ${{ inputs.ForceExecution == true || matrix.framework == 'net462' }}
+        run: |
+          New-Item -ItemType Directory -Force tests/jvm/clojure/classes | Out-Null
+          $root = (Resolve-Path tests/jvm/clojure/src/main/clojure).Path
+          $namespaces = @(Get-ChildItem $root -Filter *.clj -Recurse | ForEach-Object {
+              $_.FullName.Substring($root.Length + 1) -replace '\.clj$','' -replace '[\\/]','.'
+          })
+          if ($namespaces.Count -eq 0) { throw "No Clojure test sources found" }
+          Write-Host "Compiling: $($namespaces -join ' ')"
+          $classes = (Resolve-Path tests/jvm/clojure/classes).Path
+          java -cp "./bin/${{ matrix.framework }}/*;./tests/jvm/clojure/target/dependency/*;./tests/jvm/clojure/src/main/clojure;./tests/jvm/clojure/classes" `
+            "-Dclojure.compile.path=$classes" `
+            clojure.lang.Compile @namespaces
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

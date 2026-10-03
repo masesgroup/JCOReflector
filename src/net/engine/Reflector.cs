@@ -2462,6 +2462,7 @@ namespace MASES.JCOReflector.Engine
                             {
                                 dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, methodGenericMarker)
                                                                               .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                              .Replace(Const.Methods.METHOD_JAVA_NAME, methodName)
                                                                               .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                                               .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                               .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
@@ -2469,6 +2470,7 @@ namespace MASES.JCOReflector.Engine
                             }
                             dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, methodGenericMarker)
                                                                        .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                       .Replace(Const.Methods.METHOD_JAVA_NAME, methodName)
                                                                        .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
                                                                        .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                        .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
@@ -2845,6 +2847,7 @@ namespace MASES.JCOReflector.Engine
 
                                 dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                             .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                            .Replace(Const.Methods.METHOD_JAVA_NAME, methodName)
                                                             .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                                             .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
                                                             .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
@@ -2855,6 +2858,7 @@ namespace MASES.JCOReflector.Engine
 
                                 dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                                            .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                           .Replace(Const.Methods.METHOD_JAVA_NAME, methodName)
                                                                            .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
                                                                            .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
                                                                            .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
@@ -3922,7 +3926,17 @@ namespace MASES.JCOReflector.Engine
             if (typeof(Delegate).IsAssignableFrom(innerType)) // delegate types are managed only with events
             {
                 string dummyEnumeratorType = string.Empty;
-                return innerType.ExportingDelegate(null, null, out dummyEnumeratorType, true);
+                // A parameter/return type can be a CONSTRUCTED generic delegate closed over an in-scope
+                // type parameter (e.g. Comparison<T> as a parameter of List<T>.Sort, T being List<T>'s own
+                // class-level parameter) — that's valid, ordinary usage, not a request to export a new
+                // top-level file for a closed instantiation. Validate against the delegate's own generic
+                // type DEFINITION (Comparison<>), which is what ExportingDelegate can actually generate,
+                // instead of the constructed type itself — ExportingDelegate's own guard always rejects a
+                // non-definition generic type, since it's never meant to export one as its own file.
+                var delegateTypeToCheck = (EnableGenerics && innerType.IsGenericType && !innerType.IsGenericTypeDefinition)
+                    ? innerType.GetGenericTypeDefinition()
+                    : innerType;
+                return delegateTypeToCheck.ExportingDelegate(null, null, out dummyEnumeratorType, true);
             }
             if (innerType.Name.Contains("IntPtr") || innerType.Name.Contains("*"))
                 return false;

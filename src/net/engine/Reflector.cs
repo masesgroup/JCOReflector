@@ -1306,7 +1306,6 @@ namespace MASES.JCOReflector.Engine
                 {
                     if (EnableGenerics)
                     {
-                        throw new Exception("wrong point");
                         // If any abstract member of this interface is NOT satisfied by a public method on
                         // the type (e.g. satisfied only via an explicit interface implementation, which the
                         // CLR always represents as a private target method), Java cannot see this class as

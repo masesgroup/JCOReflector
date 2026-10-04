@@ -66,7 +66,7 @@ import system.runtime.remoting.channels.IClientChannelSinkImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IClientChannelSink extends IJCOBridgeReflected, IChannelSinkBase {
+public interface IClientChannelSink extends IJCOBridgeReflected, system.runtime.remoting.channels.IChannelSinkBase {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

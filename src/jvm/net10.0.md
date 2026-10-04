@@ -315,22 +315,22 @@ Parsed assemblies are:
 >   * Classes
 >     * Constructors = 6927
 >     * Methods = 37539
->     * Properties = 19150
+>     * Properties = 19148
 >     * Events = 1828
-> * Implemented Types = 7529
+> * Implemented Types = 7527
 >   * Enumerators = 24
 >   * Delegates = 368
 >   * Enums = 1281
 >     * Flags = 275
->   * Interfaces = 379
->   * Classes = 5477
+>   * Interfaces = 378
+>   * Classes = 5476
 >     * Exceptions = 240
 >     * Constructors = 5967
 >     * Methods = 22126
 >       * Duplicated Methods = 898
 >     * Properties = 17828
 >     * Events = 1720
-> * Discarded Types = 21444
+> * Discarded Types = 21446
 >   * Non Public = 21044
 >   * Generic = 343
 >   * Internals = 20

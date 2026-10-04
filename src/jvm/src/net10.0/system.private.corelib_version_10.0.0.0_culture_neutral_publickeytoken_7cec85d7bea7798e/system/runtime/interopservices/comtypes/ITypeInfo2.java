@@ -61,7 +61,7 @@ import system.runtime.interopservices.comtypes.TYPEKIND;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ITypeInfo2 extends IJCOBridgeReflected, ITypeInfo {
+public interface ITypeInfo2 extends IJCOBridgeReflected, system.runtime.interopservices.comtypes.ITypeInfo {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

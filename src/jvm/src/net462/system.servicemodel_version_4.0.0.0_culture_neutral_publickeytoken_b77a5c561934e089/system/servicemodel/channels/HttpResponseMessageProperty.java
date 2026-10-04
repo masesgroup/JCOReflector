@@ -42,8 +42,6 @@ import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
 import system.net.HttpStatusCode;
 import system.net.WebHeaderCollection;
-import system.servicemodel.channels.IMessageProperty;
-import system.servicemodel.channels.IMessagePropertyImplementation;
 
 
 /**

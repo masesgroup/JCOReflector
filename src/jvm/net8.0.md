@@ -304,14 +304,14 @@ Parsed assemblies are:
 >   * Classes
 >     * Constructors = 6769
 >     * Methods = 32460
->     * Properties = 18564
+>     * Properties = 18562
 >     * Events = 1744
-> * Implemented Types = 7350
+> * Implemented Types = 7349
 >   * Enumerators = 23
 >   * Delegates = 364
 >   * Enums = 1258
 >     * Flags = 273
->   * Interfaces = 375
+>   * Interfaces = 374
 >   * Classes = 5330
 >     * Exceptions = 239
 >     * Constructors = 5839
@@ -319,7 +319,7 @@ Parsed assemblies are:
 >       * Duplicated Methods = 826
 >     * Properties = 17285
 >     * Events = 1636
-> * Discarded Types = 19482
+> * Discarded Types = 19483
 >   * Non Public = 19116
 >   * Generic = 309
 >   * Internals = 20

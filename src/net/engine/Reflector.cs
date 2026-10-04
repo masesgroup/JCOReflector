@@ -1325,26 +1325,21 @@ namespace MASES.JCOReflector.Engine
                         }
 
                         if (hasUnsatisfiedMember) continue;
+                    }
 
+                    // Pre-generics behavior when the flag is off: plain name relying on the import below —
+                    // no package qualification, since none was needed before this feature existed.
+                    var nameToAdd = EnableGenerics
+                        ? BuildQualifiedGenericTypeName(interfaceType, imports)
+                        : interfaceType.GetJavaClassName(interfaceType.Assembly);
 
-                        // Pre-generics behavior when the flag is off: plain name relying on the import below —
-                        // no package qualification, since none was needed before this feature existed.
-                        var nameToAdd = EnableGenerics
-                            ? BuildQualifiedGenericTypeName(interfaceType, imports)
-                            : interfaceType.GetJavaClassName(interfaceType.Assembly);
-
-                        if (string.IsNullOrEmpty(implementsStr))
-                        {
-                            implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + nameToAdd;
-                        }
-                        else
-                        {
-                            implementsStr += ", " + nameToAdd;
-                        }
+                    if (string.IsNullOrEmpty(implementsStr))
+                    {
+                        implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + nameToAdd;
                     }
                     else
                     {
-                        var nameToAdd = interfaceType.Name;
+                        implementsStr += ", " + nameToAdd;
                     }
                     imports.Add(interfaceType);
                 }

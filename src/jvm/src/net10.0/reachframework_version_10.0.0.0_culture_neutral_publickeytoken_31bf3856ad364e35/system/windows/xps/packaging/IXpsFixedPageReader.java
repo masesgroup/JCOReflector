@@ -63,7 +63,7 @@ import system.xml.XmlReader;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IXpsFixedPageReader extends IJCOBridgeReflected, IStoryFragmentProvider {
+public interface IXpsFixedPageReader extends IJCOBridgeReflected, system.windows.xps.packaging.IStoryFragmentProvider {
     /**
      * Fully assembly qualified name: ReachFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

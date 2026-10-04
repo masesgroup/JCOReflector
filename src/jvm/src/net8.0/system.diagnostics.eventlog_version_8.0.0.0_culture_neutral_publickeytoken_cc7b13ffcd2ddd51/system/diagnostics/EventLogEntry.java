@@ -60,7 +60,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventLogEntry extends Component implements ISerializable {
+public class EventLogEntry extends Component  {
     /**
      * Fully assembly qualified name: System.Diagnostics.EventLog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

@@ -720,7 +720,7 @@ namespace MASES.JCOReflector.Engine
             // reference that cannot survive being boxed or passed through the bridge as an object —
             // JCOBridge has no way to represent them at all, generics or not. Exclude the whole type.
 #if NET5_0_OR_GREATER
-            if (type.IsByRefLike) return false;
+            if (EnableGenerics && type.IsByRefLike) return false;
 #endif
             // Whole-type exclusions from ExportingAvoidanceMap (entries with a null member list) must also
             // stop the type itself from being exported as its own file — skipping just its members left
@@ -1341,7 +1341,6 @@ namespace MASES.JCOReflector.Engine
                     {
                         implementsStr += ", " + nameToAdd;
                     }
-
                     imports.Add(interfaceType);
                 }
             }
@@ -3903,7 +3902,7 @@ namespace MASES.JCOReflector.Engine
             // ref structs (Span<T>, ReadOnlySpan<T>...) can never cross the bridge as an object — same
             // reasoning as the TypePrefilter exclusion, but this is the gate that actually stops them
             // from being accepted as a parameter or return type of some OTHER method.
-            if (innerType.IsByRefLike) return false;
+            if (EnableGenerics && innerType.IsByRefLike) return false;
 #endif
             // FIX: If EnableGenerics is false, fallback immediately to the original native scart rule for any generic element
             if (!EnableGenerics && (innerType.IsGenericType || innerType.IsGenericParameter))

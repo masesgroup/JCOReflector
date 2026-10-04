@@ -76,4 +76,8 @@ public class JCOReflectorOptions {
      * EnableRefOutParameters: true
      */
     public static final Boolean EnableRefOutParameters = true;
+    /**
+     * EnableGenerics: false
+     */
+    public static final Boolean EnableGenerics = false;
 }

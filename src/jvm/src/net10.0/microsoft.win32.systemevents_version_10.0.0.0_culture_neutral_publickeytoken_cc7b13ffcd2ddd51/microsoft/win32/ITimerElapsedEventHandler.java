@@ -43,7 +43,7 @@ import microsoft.win32.TimerElapsedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link TimerElapsedEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.TimerElapsedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.TimerElapsedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.TimerElapsedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/Microsoft.Win32.TimerElapsedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

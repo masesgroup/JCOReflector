@@ -43,7 +43,7 @@ import system.web.ui.webcontrols.ImageMapEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ImageMapEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ImageMapEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ImageMapEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ImageMapEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.ImageMapEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

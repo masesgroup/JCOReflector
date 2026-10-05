@@ -50,7 +50,7 @@ import system.security.policy.PolicyStatement;
  * The base .NET class managing System.Security.Policy.FileCodeGroup, System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.FileCodeGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.FileCodeGroup</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.FileCodeGroup" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.Policy.FileCodeGroup</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

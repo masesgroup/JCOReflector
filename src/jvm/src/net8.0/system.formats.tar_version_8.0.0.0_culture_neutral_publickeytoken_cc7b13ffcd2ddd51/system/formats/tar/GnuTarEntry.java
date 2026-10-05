@@ -48,7 +48,7 @@ import system.DateTimeOffset;
  * The base .NET class managing System.Formats.Tar.GnuTarEntry, System.Formats.Tar, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Tar.GnuTarEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Tar.GnuTarEntry</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Tar.GnuTarEntry" target="_top">https://learn.microsoft.com/dotnet/api/System.Formats.Tar.GnuTarEntry</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

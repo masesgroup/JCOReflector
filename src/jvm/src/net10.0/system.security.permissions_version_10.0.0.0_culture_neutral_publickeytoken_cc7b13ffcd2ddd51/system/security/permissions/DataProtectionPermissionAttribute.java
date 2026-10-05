@@ -49,7 +49,7 @@ import system.security.permissions.DataProtectionPermissionFlags;
  * The base .NET class managing System.Security.Permissions.DataProtectionPermissionAttribute, System.Security.Permissions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.Permissions.DataProtectionPermissionAttribute</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

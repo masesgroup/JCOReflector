@@ -43,7 +43,7 @@ import system.componentmodel.design.serialization.ResolveNameEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ResolveNameEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.ResolveNameEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.ResolveNameEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ResolveNameEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.ResolveNameEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

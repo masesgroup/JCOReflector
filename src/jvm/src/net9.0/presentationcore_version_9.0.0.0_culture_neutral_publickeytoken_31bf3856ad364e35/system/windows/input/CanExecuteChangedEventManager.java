@@ -48,7 +48,7 @@ import system.EventHandler_1;
  * The base .NET class managing System.Windows.Input.CanExecuteChangedEventManager, PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.CanExecuteChangedEventManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.CanExecuteChangedEventManager</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.CanExecuteChangedEventManager" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Input.CanExecuteChangedEventManager</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

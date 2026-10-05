@@ -43,7 +43,7 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Runtime.InteropServices.ComTypes.PARAMFLAG, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.PARAMFLAG" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.PARAMFLAG</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.PARAMFLAG" target="_top">https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComTypes.PARAMFLAG</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

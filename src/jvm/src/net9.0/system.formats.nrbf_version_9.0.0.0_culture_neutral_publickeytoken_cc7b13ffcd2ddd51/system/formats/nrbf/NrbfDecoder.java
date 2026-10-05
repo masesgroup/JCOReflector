@@ -50,7 +50,7 @@ import system.collections.generic.IReadOnlyDictionary_2Implementation;
  * The base .NET class managing System.Formats.Nrbf.NrbfDecoder, System.Formats.Nrbf, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Nrbf.NrbfDecoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Nrbf.NrbfDecoder</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.NrbfDecoder" target="_top">https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.NrbfDecoder</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

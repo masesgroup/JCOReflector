@@ -49,7 +49,7 @@ import system.linq.expressions.LabelTarget;
  * The base .NET class managing System.Dynamic.DynamicMetaObjectBinder, System.Linq.Expressions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.DynamicMetaObjectBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.DynamicMetaObjectBinder</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicMetaObjectBinder" target="_top">https://learn.microsoft.com/dotnet/api/System.Dynamic.DynamicMetaObjectBinder</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

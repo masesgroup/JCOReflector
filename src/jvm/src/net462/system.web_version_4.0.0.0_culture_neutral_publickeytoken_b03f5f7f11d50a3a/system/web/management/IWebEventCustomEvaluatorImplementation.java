@@ -46,7 +46,7 @@ import system.web.management.RuleFiringRecord;
  * The base .NET class managing System.Web.Management.IWebEventCustomEvaluator, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Management.IWebEventCustomEvaluator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Management.IWebEventCustomEvaluator</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Web.Management.IWebEventCustomEvaluator" target="_top">https://learn.microsoft.com/dotnet/api/System.Web.Management.IWebEventCustomEvaluator</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

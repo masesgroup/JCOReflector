@@ -50,7 +50,7 @@ import system.text.Encoder;
  * The base .NET class managing System.Text.EncodingExtensions, System.Memory, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.EncodingExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.EncodingExtensions</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingExtensions" target="_top">https://learn.microsoft.com/dotnet/api/System.Text.EncodingExtensions</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

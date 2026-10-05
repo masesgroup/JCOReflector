@@ -46,7 +46,7 @@ import system.collections.generic.IDictionary_2Implementation;
  * The Java interface to be implemented to receive events from the CLR using {@link DelegateCompletionCallback}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DelegateCompletionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DelegateCompletionCallback</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DelegateCompletionCallback" target="_top">https://learn.microsoft.com/dotnet/api/System.Activities.DelegateCompletionCallback</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

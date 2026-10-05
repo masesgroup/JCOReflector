@@ -45,7 +45,7 @@ import system.io.compression.ZLibCompressionStrategy;
  * The base .NET class managing System.IO.Compression.ZLibCompressionOptions, System.IO.Compression, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZLibCompressionOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZLibCompressionOptions</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZLibCompressionOptions" target="_top">https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZLibCompressionOptions</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

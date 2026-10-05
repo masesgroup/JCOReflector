@@ -53,7 +53,7 @@ import system.Nullable_1;
  * The base .NET class managing System.IdentityModel.Protocols.WSTrust.RequestSecurityToken, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken" target="_top">https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.RequestSecurityToken</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -44,7 +44,7 @@ import system.IAssemblyLoadEventHandler;
  * The base .NET class managing System.AssemblyLoadEventHandler, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.AssemblyLoadEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.AssemblyLoadEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.AssemblyLoadEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.AssemblyLoadEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

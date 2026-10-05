@@ -46,7 +46,7 @@ import system.security.cryptography.Oid;
  * The base .NET class managing System.Security.Cryptography.X509Certificates.X509Extension, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Extension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Extension</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509Extension" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509Extension</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

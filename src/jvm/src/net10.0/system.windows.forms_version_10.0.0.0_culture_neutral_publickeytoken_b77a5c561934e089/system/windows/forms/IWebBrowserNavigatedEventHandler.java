@@ -43,7 +43,7 @@ import system.windows.forms.WebBrowserNavigatedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link WebBrowserNavigatedEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserNavigatedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserNavigatedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.WebBrowserNavigatedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Forms.WebBrowserNavigatedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

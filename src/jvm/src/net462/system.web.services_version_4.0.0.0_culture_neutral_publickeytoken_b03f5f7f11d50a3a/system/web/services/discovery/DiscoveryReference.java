@@ -46,7 +46,7 @@ import system.web.services.discovery.DiscoveryClientProtocol;
  * The base .NET class managing System.Web.Services.Discovery.DiscoveryReference, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Discovery.DiscoveryReference" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Discovery.DiscoveryReference</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryReference" target="_top">https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryReference</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -53,7 +53,7 @@ import system.web.services.discovery.DiscoveryExceptionDictionary;
  * The base .NET class managing System.Web.Services.Discovery.DiscoveryClientProtocol, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Discovery.DiscoveryClientProtocol" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Discovery.DiscoveryClientProtocol</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientProtocol" target="_top">https://learn.microsoft.com/dotnet/api/System.Web.Services.Discovery.DiscoveryClientProtocol</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

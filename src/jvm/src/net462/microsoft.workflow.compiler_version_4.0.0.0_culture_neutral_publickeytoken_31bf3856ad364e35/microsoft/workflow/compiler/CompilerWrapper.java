@@ -46,7 +46,7 @@ import system.workflow.componentmodel.compiler.WorkflowCompilerParameters;
  * The base .NET class managing Microsoft.Workflow.Compiler.CompilerWrapper, Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Workflow.Compiler.CompilerWrapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Workflow.Compiler.CompilerWrapper</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Workflow.Compiler.CompilerWrapper" target="_top">https://learn.microsoft.com/dotnet/api/Microsoft.Workflow.Compiler.CompilerWrapper</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

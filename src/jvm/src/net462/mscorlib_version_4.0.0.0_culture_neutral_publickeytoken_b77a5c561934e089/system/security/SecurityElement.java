@@ -46,7 +46,7 @@ import system.collections.Hashtable;
  * The base .NET class managing System.Security.SecurityElement, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityElement</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.SecurityElement" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.SecurityElement</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

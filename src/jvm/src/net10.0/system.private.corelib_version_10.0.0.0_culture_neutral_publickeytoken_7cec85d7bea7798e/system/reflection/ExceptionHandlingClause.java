@@ -45,7 +45,7 @@ import system.reflection.ExceptionHandlingClauseOptions;
  * The base .NET class managing System.Reflection.ExceptionHandlingClause, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ExceptionHandlingClause" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ExceptionHandlingClause</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ExceptionHandlingClause" target="_top">https://learn.microsoft.com/dotnet/api/System.Reflection.ExceptionHandlingClause</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -45,7 +45,7 @@ import system.drawing.PointF;
  * The base .NET class managing System.Drawing.Drawing2D.PathData, System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.PathData" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.PathData</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.PathData" target="_top">https://learn.microsoft.com/dotnet/api/System.Drawing.Drawing2D.PathData</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

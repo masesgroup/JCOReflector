@@ -43,7 +43,7 @@ import system.xml.serialization.UnreferencedObjectEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link UnreferencedObjectEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

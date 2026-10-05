@@ -44,7 +44,7 @@ import system.net.IUploadStringCompletedEventHandler;
  * The base .NET class managing System.Net.UploadStringCompletedEventHandler, System.Net.WebClient, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadStringCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadStringCompletedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Net.UploadStringCompletedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Net.UploadStringCompletedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

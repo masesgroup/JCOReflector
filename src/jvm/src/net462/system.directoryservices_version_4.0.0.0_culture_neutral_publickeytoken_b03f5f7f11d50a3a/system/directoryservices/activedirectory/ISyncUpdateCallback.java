@@ -44,7 +44,7 @@ import system.directoryservices.activedirectory.SyncFromAllServersOperationExcep
  * The Java interface to be implemented to receive events from the CLR using {@link SyncUpdateCallback}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncUpdateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncUpdateCallback</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncUpdateCallback" target="_top">https://learn.microsoft.com/dotnet/api/System.DirectoryServices.ActiveDirectory.SyncUpdateCallback</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -45,7 +45,7 @@ import microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid;
  * The base .NET class managing System.Security.Authentication.ExtendedProtection.ChannelBinding, System.Net.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ChannelBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ChannelBinding</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.Authentication.ExtendedProtection.ChannelBinding" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.Authentication.ExtendedProtection.ChannelBinding</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

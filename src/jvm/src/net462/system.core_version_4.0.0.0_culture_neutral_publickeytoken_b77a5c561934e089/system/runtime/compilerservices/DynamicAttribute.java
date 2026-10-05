@@ -47,7 +47,7 @@ import system.collections.generic.IList_1Implementation;
  * The base .NET class managing System.Runtime.CompilerServices.DynamicAttribute, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.DynamicAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.DynamicAttribute</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.DynamicAttribute" target="_top">https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.DynamicAttribute</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

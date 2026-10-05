@@ -54,7 +54,7 @@ import system.windows.Visibility;
  * The base .NET class managing System.Windows.Controls.DataGridColumn, PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridColumn" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridColumn</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumn" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumn</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

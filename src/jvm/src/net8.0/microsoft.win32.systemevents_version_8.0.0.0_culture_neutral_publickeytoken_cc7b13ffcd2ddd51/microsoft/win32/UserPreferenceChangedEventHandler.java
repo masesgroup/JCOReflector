@@ -44,7 +44,7 @@ import microsoft.win32.IUserPreferenceChangedEventHandler;
  * The base .NET class managing Microsoft.Win32.UserPreferenceChangedEventHandler, Microsoft.Win32.SystemEvents, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/Microsoft.Win32.UserPreferenceChangedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

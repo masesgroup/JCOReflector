@@ -45,7 +45,7 @@ import system.componentmodel.design.IServiceCreatorCallback;
  * The base .NET class managing System.ComponentModel.Design.ServiceCreatorCallback, System.ComponentModel.TypeConverter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceCreatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceCreatorCallback</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ServiceCreatorCallback" target="_top">https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ServiceCreatorCallback</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

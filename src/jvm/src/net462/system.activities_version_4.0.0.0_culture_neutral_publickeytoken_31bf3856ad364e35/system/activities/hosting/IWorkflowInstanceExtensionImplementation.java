@@ -47,7 +47,7 @@ import system.activities.hosting.WorkflowInstanceProxy;
  * The base .NET class managing System.Activities.Hosting.IWorkflowInstanceExtension, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Hosting.IWorkflowInstanceExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Hosting.IWorkflowInstanceExtension</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.IWorkflowInstanceExtension" target="_top">https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.IWorkflowInstanceExtension</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

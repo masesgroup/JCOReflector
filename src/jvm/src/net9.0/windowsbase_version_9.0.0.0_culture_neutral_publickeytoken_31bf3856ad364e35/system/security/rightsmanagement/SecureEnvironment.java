@@ -49,7 +49,7 @@ import system.security.rightsmanagement.UserActivationMode;
  * The base .NET class managing System.Security.RightsManagement.SecureEnvironment, WindowsBase, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.SecureEnvironment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.RightsManagement.SecureEnvironment</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.SecureEnvironment" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.SecureEnvironment</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

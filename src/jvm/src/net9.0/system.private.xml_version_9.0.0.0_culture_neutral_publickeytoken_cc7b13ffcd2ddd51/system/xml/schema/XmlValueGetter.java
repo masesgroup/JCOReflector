@@ -43,7 +43,7 @@ import system.xml.schema.IXmlValueGetter;
  * The base .NET class managing System.Xml.Schema.XmlValueGetter, System.Private.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCDelegate}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlValueGetter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlValueGetter</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlValueGetter" target="_top">https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlValueGetter</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

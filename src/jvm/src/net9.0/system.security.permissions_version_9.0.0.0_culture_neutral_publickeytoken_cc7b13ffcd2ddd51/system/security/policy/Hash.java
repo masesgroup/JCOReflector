@@ -50,7 +50,7 @@ import system.runtime.serialization.StreamingContext;
  * The base .NET class managing System.Security.Policy.Hash, System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Hash" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Hash</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.Hash" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.Policy.Hash</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

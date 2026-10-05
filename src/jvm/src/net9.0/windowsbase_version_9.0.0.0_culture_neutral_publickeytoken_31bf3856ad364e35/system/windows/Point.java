@@ -50,7 +50,7 @@ import system.windows.media.Matrix;
  * The base .NET class managing System.Windows.Point, WindowsBase, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Point" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Point</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Point" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Point</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

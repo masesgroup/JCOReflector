@@ -49,7 +49,7 @@ import system.data.DbType;
  * The base .NET class managing System.Data.OracleClient.OracleParameter, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleParameter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleParameter</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleParameter" target="_top">https://learn.microsoft.com/dotnet/api/System.Data.OracleClient.OracleParameter</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

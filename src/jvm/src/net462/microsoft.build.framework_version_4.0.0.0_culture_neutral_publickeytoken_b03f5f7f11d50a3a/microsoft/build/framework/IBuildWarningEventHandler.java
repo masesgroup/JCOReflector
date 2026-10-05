@@ -43,7 +43,7 @@ import microsoft.build.framework.BuildWarningEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link BuildWarningEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildWarningEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildWarningEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.BuildWarningEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

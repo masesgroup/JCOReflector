@@ -50,7 +50,7 @@ import system.collections.ICollectionImplementation;
  * The base .NET class managing System.ComponentModel.Design.Serialization.TypeCodeDomSerializer, System.Windows.Forms.Design, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.TypeCodeDomSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.TypeCodeDomSerializer</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.TypeCodeDomSerializer" target="_top">https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.Serialization.TypeCodeDomSerializer</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

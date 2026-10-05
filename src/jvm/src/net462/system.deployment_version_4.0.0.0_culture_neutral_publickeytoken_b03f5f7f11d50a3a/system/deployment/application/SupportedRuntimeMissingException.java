@@ -46,7 +46,7 @@ import system.runtime.serialization.StreamingContext;
  * The base .NET class managing System.Deployment.Application.SupportedRuntimeMissingException, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.SupportedRuntimeMissingException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.SupportedRuntimeMissingException</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.SupportedRuntimeMissingException" target="_top">https://learn.microsoft.com/dotnet/api/System.Deployment.Application.SupportedRuntimeMissingException</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

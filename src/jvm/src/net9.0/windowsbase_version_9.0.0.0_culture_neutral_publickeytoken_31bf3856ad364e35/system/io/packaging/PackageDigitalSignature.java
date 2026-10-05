@@ -53,7 +53,7 @@ import system.security.cryptography.xml.Signature;
  * The base .NET class managing System.IO.Packaging.PackageDigitalSignature, WindowsBase, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.PackageDigitalSignature" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.PackageDigitalSignature</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature" target="_top">https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

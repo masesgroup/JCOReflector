@@ -46,7 +46,7 @@ import system.collections.specialized.StringCollection;
  * The base .NET class managing System.Xml.Serialization.ImportContext, System.Private.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.ImportContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.ImportContext</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.ImportContext" target="_top">https://learn.microsoft.com/dotnet/api/System.Xml.Serialization.ImportContext</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

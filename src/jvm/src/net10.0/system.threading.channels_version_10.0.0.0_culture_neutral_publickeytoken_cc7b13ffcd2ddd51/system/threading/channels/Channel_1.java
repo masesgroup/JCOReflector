@@ -45,7 +45,7 @@ import system.threading.channels.Channel_2;
  * The base .NET class managing System.Threading.Channels.Channel`1, System.Threading.Channels, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.Channel`1" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.Channel`1</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-1" target="_top">https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-1</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

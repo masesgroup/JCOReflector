@@ -44,7 +44,7 @@ import system.net.security.IServerCertificateSelectionCallback;
  * The base .NET class managing System.Net.Security.ServerCertificateSelectionCallback, System.Net.Security, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.ServerCertificateSelectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.ServerCertificateSelectionCallback</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.ServerCertificateSelectionCallback" target="_top">https://learn.microsoft.com/dotnet/api/System.Net.Security.ServerCertificateSelectionCallback</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

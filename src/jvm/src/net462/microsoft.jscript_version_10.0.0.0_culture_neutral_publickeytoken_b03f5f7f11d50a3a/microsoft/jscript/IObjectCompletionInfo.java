@@ -43,7 +43,7 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing Microsoft.JScript.IObjectCompletionInfo, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.IObjectCompletionInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.IObjectCompletionInfo</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IObjectCompletionInfo" target="_top">https://learn.microsoft.com/dotnet/api/Microsoft.JScript.IObjectCompletionInfo</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

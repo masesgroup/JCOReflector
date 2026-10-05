@@ -43,7 +43,7 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Net.Security.NegotiateAuthenticationStatusCode, System.Net.Security, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.NegotiateAuthenticationStatusCode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.NegotiateAuthenticationStatusCode</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationStatusCode" target="_top">https://learn.microsoft.com/dotnet/api/System.Net.Security.NegotiateAuthenticationStatusCode</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

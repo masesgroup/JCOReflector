@@ -43,7 +43,7 @@ import system.componentmodel.design.ComponentChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ComponentChangedEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentChangedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.ComponentModel.Design.ComponentChangedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

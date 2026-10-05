@@ -53,7 +53,7 @@ import system.Action_2;
  * The base .NET class managing System.IO.Pipelines.PipeWriter, System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipelines.PipeWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipelines.PipeWriter</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeWriter" target="_top">https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeWriter</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

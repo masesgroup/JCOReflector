@@ -48,7 +48,7 @@ import system.collections.ICollectionImplementation;
  * The base .NET class managing System.Diagnostics.InstanceDataCollection, System.Diagnostics.PerformanceCounter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InstanceDataCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InstanceDataCollection</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceDataCollection" target="_top">https://learn.microsoft.com/dotnet/api/System.Diagnostics.InstanceDataCollection</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

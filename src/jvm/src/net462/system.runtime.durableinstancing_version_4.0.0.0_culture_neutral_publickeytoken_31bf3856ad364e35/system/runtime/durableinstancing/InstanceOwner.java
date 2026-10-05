@@ -45,7 +45,7 @@ import system.Guid;
  * The base .NET class managing System.Runtime.DurableInstancing.InstanceOwner, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceOwner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceOwner</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceOwner" target="_top">https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceOwner</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

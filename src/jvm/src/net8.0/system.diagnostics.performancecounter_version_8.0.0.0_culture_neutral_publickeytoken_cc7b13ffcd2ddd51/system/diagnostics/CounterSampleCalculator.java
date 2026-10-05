@@ -46,7 +46,7 @@ import system.diagnostics.CounterSample;
  * The base .NET class managing System.Diagnostics.CounterSampleCalculator, System.Diagnostics.PerformanceCounter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CounterSampleCalculator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CounterSampleCalculator</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSampleCalculator" target="_top">https://learn.microsoft.com/dotnet/api/System.Diagnostics.CounterSampleCalculator</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -51,7 +51,7 @@ import system.xml.schema.ValidationEventHandler;
  * The base .NET class managing System.Xml.Schema.XmlSchemaCollection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaCollection</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaCollection" target="_top">https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaCollection</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

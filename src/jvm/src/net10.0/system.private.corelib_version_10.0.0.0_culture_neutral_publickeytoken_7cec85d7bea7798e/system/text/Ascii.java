@@ -46,7 +46,7 @@ import system.Range;
  * The base .NET class managing System.Text.Ascii, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Ascii" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Ascii</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Text.Ascii" target="_top">https://learn.microsoft.com/dotnet/api/System.Text.Ascii</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

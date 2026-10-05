@@ -49,7 +49,7 @@ import system.io.pipes.PipeTransmissionMode;
  * The base .NET class managing System.IO.Pipes.AnonymousPipeServerStream, System.IO.Pipes, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.AnonymousPipeServerStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.AnonymousPipeServerStream</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipes.AnonymousPipeServerStream" target="_top">https://learn.microsoft.com/dotnet/api/System.IO.Pipes.AnonymousPipeServerStream</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

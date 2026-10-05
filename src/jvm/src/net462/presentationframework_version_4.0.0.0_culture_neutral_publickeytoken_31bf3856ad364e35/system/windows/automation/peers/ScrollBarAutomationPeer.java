@@ -46,7 +46,7 @@ import system.windows.controls.primitives.ScrollBar;
  * The base .NET class managing System.Windows.Automation.Peers.ScrollBarAutomationPeer, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.ScrollBarAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.ScrollBarAutomationPeer</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ScrollBarAutomationPeer" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.ScrollBarAutomationPeer</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

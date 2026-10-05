@@ -57,7 +57,7 @@ import microsoft.build.tasks.hosting.IVbcHostObjectFreeThreadedImplementation;
  * The base .NET class managing Microsoft.Build.Tasks.Hosting.IVbcHostObject5, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject5" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject5</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject5" target="_top">https://learn.microsoft.com/dotnet/api/Microsoft.Build.Tasks.Hosting.IVbcHostObject5</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

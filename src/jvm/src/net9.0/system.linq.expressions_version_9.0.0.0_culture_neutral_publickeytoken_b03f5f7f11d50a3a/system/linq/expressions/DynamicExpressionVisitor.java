@@ -45,7 +45,7 @@ import system.linq.expressions.ExpressionVisitor;
  * The base .NET class managing System.Linq.Expressions.DynamicExpressionVisitor, System.Linq.Expressions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.DynamicExpressionVisitor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.DynamicExpressionVisitor</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.DynamicExpressionVisitor" target="_top">https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.DynamicExpressionVisitor</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

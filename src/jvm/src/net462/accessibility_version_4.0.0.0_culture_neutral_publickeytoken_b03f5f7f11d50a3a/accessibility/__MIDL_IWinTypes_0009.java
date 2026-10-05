@@ -45,7 +45,7 @@ import system.ValueType;
  * The base .NET class managing Accessibility.__MIDL_IWinTypes_0009, Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Accessibility.__MIDL_IWinTypes_0009" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Accessibility.__MIDL_IWinTypes_0009</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Accessibility.__MIDL_IWinTypes_0009" target="_top">https://learn.microsoft.com/dotnet/api/Accessibility.__MIDL_IWinTypes_0009</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

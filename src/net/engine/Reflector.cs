@@ -425,30 +425,10 @@ namespace MASES.JCOReflector.Engine
             return type.Name;
         }
 
-        //static string GetJavaClassName(this Type type, Assembly currentAssembly)
-        //{
-        //    if (!EnableGenerics || !type.IsGenericType) return type.Name;
-        //
-        //    // Extract the clean name before the backtick (e.g., "List" from "List`1")
-        //    string cleanName = type.Name.Split('`')[0];
-        //
-        //    // Check if OTHER generic variants exist within the same namespace 
-        //    // with the exact same name but a different number of arguments
-        //    bool hasNameCollision = currentAssembly.GetTypes().Any(t =>
-        //        t.Namespace == type.Namespace &&
-        //        t.Name.StartsWith(cleanName + "`") &&
-        //        t.GetGenericArguments().Length != type.GetGenericArguments().Length
-        //    );
-        //
-        //    // If there is a collision (e.g., Tuple), use the clean suffix for Java (Tuple_2)
-        //    // If there is NO collision (e.g., List), use only the clean name without numbers
-        //    if (hasNameCollision)
-        //    {
-        //        return $"{cleanName}_{type.GetGenericArguments().Length}";
-        //    }
-        //
-        //    return cleanName;
-        //}
+        static string ConvertGenericForMicrosoftDocumentation(this string input)
+        {
+            return input.Replace('`', '-');
+        }
 
         static string GetAssemblies(this IEnumerable<string> assemblyNames)
         {
@@ -996,7 +976,8 @@ namespace MASES.JCOReflector.Engine
                                                          .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
                                                          .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                          .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
-                                                         .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
+                                                         .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName)
+                                                         .Replace(Const.Class.FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME, item.FullName.ConvertGenericForMicrosoftDocumentation());
 
             JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public values from {0}", item.Name);
             var enumValues = Enum.GetNames(item);
@@ -1117,14 +1098,16 @@ namespace MASES.JCOReflector.Engine
                                                                              .Replace(Const.Class.PACKAGE_CLASS_NAME, javaInterfaceName)
                                                                              .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                                              .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
-                                                                             .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
+                                                                             .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName)
+                                                                             .Replace(Const.Class.FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME, item.FullName.ConvertGenericForMicrosoftDocumentation());
 
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                                    .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseInterface)
                                                                    .Replace(Const.Class.PACKAGE_CLASS_NAME, javaInterfaceName)
                                                                    .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                                    .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
-                                                                   .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
+                                                                   .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName)
+                                                                   .Replace(Const.Class.FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME, item.FullName.ConvertGenericForMicrosoftDocumentation());
 
             // GENERICS INJECTION: Inject bounds and method type definitions into both files if item is generic
             if (EnableGenerics && item.IsGenericTypeDefinition)
@@ -1256,7 +1239,8 @@ namespace MASES.JCOReflector.Engine
                                                            .Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName)
                                                            .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                            .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
-                                                           .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
+                                                           .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName)
+                                                           .Replace(Const.Class.FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME, item.FullName.ConvertGenericForMicrosoftDocumentation());
 
             // GENERICS INJECTION: Inject bounds and method type definitions into master class template if item is generic
             if (EnableGenerics && item.IsGenericTypeDefinition)
@@ -1712,6 +1696,7 @@ namespace MASES.JCOReflector.Engine
                                                            .Replace(Const.Enumerator.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                            .Replace(Const.Enumerator.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
                                                            .Replace(Const.Enumerator.FULLYQUALIFIED_CLASS_NAME, item.FullName)
+                                                           .Replace(Const.Enumerator.FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME, item.FullName.ConvertGenericForMicrosoftDocumentation())
                                                            .Replace(Const.Enumerator.PACKAGE_CLASS_NEXT_SECTION, nextSection)
                                                            .Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
 
@@ -3587,6 +3572,7 @@ namespace MASES.JCOReflector.Engine
             // 1. Process and save the pure Java interface file
             var interfaceStr = interfaceTemplateToUse.Replace(Const.Delegates.PACKAGE_NAME, packageName)
                                                      .Replace(Const.Delegates.FULLYQUALIFIED_CLASS_NAME, item.FullName)
+                                                     .Replace(Const.Delegates.FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME, item.FullName.ConvertGenericForMicrosoftDocumentation())
                                                      .Replace(Const.Delegates.PACKAGE_IMPORT_SECTION, importsStr)
                                                      .Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName) // Pure name replacement, handles the IPACKAGE_CLASS_NAME substring correctly
                                                      .Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters) // Resolves placeholder inside the <...> block
@@ -3619,6 +3605,7 @@ namespace MASES.JCOReflector.Engine
                                                 .Replace(Const.Delegates.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
                                                 .Replace(Const.Delegates.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
                                                 .Replace(Const.Delegates.FULLYQUALIFIED_CLASS_NAME, item.FullName)
+                                                .Replace(Const.Delegates.FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME, item.FullName.ConvertGenericForMicrosoftDocumentation())
                                                 .Replace(Const.Delegates.DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK, converterBlockStr)
                                                 .Replace(Const.Delegates.DELEGATE_INVOKE_PARAMETERS, execParamStr)
                                                 .Replace(Const.Delegates.DELEGATE_PARAMETERS, inputParamStr)

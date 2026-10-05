@@ -66,6 +66,7 @@ public class GenericComparisonDelegateSortsAList {
     }
 
     static void testGenericComparisonDelegateSortsAList() throws Throwable {
+		Console.WriteLine("testGenericComparisonDelegateSortsAList");
         List_1<system.Object> list = new List_1<system.Object>() {};
         list.Add(new system.Object());
         list.Add(new system.Object());
@@ -89,6 +90,7 @@ public class GenericComparisonDelegateSortsAList {
      * and in a generic method, int and boolean return values, and an int property.
      */
     static void testNativeTypesInGenericMembers() throws Throwable {
+		Console.WriteLine("testNativeTypesInGenericMembers");
         // native int parameter of a generic constructor
         Dictionary_2<system.Object, system.Object> dict = new Dictionary_2<system.Object, system.Object>(16) {};
 
@@ -116,6 +118,7 @@ public class GenericComparisonDelegateSortsAList {
      * valid type argument, and the CLR compares the values, not the wrappers.
      */
     static void testNativeWrapperTypesAsTypeArguments() throws Throwable {
+		Console.WriteLine("testNativeWrapperTypesAsTypeArguments");
         Dictionary_2<UInt32, UInt32> dict = new Dictionary_2<UInt32, UInt32>() {};
         if (!dict.TryAdd(UInt32.Parse("1"), UInt32.Parse("10"))) throw new AssertionError("TryAdd of a new key must return true");
 
@@ -161,6 +164,7 @@ public class GenericComparisonDelegateSortsAList {
      * implements. Using one is a compile-time error, so the check is made on the bound itself.
      */
     static void testNativeJavaTypesCannotBeTypeArguments() {
+		Console.WriteLine("testNativeJavaTypesCannotBeTypeArguments");
         java.lang.reflect.Type[] bounds = List_1.class.getTypeParameters()[0].getBounds();
         if (bounds.length != 1 || bounds[0] != IJCOBridgeReflected.class)
             throw new AssertionError("The type parameter of List_1 must be bounded by IJCOBridgeReflected");

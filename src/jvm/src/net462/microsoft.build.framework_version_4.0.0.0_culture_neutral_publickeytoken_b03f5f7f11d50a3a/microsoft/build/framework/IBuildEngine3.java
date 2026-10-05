@@ -44,6 +44,8 @@ import microsoft.build.framework.IBuildEngineImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import microsoft.build.framework.BuildEngineResult;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import microsoft.build.framework.CustomBuildEventArgs;
 import microsoft.build.framework.BuildErrorEventArgs;
 import microsoft.build.framework.BuildMessageEventArgs;
@@ -62,7 +64,7 @@ import microsoft.build.framework.BuildWarningEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IBuildEngine3 extends IJCOBridgeReflected, IBuildEngine2, IBuildEngine {
+public interface IBuildEngine3 extends IJCOBridgeReflected, microsoft.build.framework.IBuildEngine2, microsoft.build.framework.IBuildEngine {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -128,6 +130,10 @@ public interface IBuildEngine3 extends IJCOBridgeReflected, IBuildEngine2, IBuil
     
 
 
+
+    public BuildEngineResult BuildProjectFilesInParallel(java.lang.String[] projectFileNames, java.lang.String[] targetNames, IDictionary[] globalProperties, IList_1[] removeGlobalProperties, java.lang.String[] toolsVersion, boolean returnTargetOutputs) throws Throwable;
+
+    public BuildEngineResult BuildProjectFilesInParallel(JCORefOut dupParam0, JCORefOut dupParam1, IDictionary[] dupParam2, IList_1[] dupParam3, JCORefOut dupParam4, boolean dupParam5) throws Throwable;
 
 
 

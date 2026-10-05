@@ -46,7 +46,9 @@ import system.data.IsolationLevel;
 import system.data.DataTable;
 import system.threading.tasks.Task;
 import system.threading.CancellationToken;
+import system.threading.tasks.Task_1;
 import system.threading.tasks.ValueTask;
+import system.threading.tasks.ValueTask_1;
 import system.transactions.Transaction;
 import system.data.ConnectionState;
 import system.data.StateChangeEventHandler;
@@ -64,7 +66,7 @@ import system.data.StateChangeEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbConnection extends Component  {
+public class DbConnection extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.Data.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -343,6 +345,66 @@ public class DbConnection extends Component  {
         }
     }
 
+    public Task_1 GetSchemaAsync(java.lang.String collectionName, java.lang.String[] restrictionValues, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaAsync = null;
+        try {
+            retObjectGetSchemaAsync = classInstance.Invoke("GetSchemaAsync", collectionName, restrictionValues, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetSchemaAsync = (JCObject)retObjectGetSchemaAsync;
+            return new Task_1(objGetSchemaAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaAsync != null ? retObjectGetSchemaAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetSchemaAsync(java.lang.String dupParam0, JCORefOut dupParam1, CancellationToken dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaAsync = null;
+        try {
+            retObjectGetSchemaAsync = classInstance.Invoke("GetSchemaAsync", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objGetSchemaAsync = (JCObject)retObjectGetSchemaAsync;
+            return new Task_1(objGetSchemaAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaAsync != null ? retObjectGetSchemaAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetSchemaAsync(java.lang.String collectionName, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaAsync = null;
+        try {
+            retObjectGetSchemaAsync = classInstance.Invoke("GetSchemaAsync", collectionName, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetSchemaAsync = (JCObject)retObjectGetSchemaAsync;
+            return new Task_1(objGetSchemaAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaAsync != null ? retObjectGetSchemaAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetSchemaAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaAsync = null;
+        try {
+            retObjectGetSchemaAsync = classInstance.Invoke("GetSchemaAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetSchemaAsync = (JCObject)retObjectGetSchemaAsync;
+            return new Task_1(objGetSchemaAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaAsync != null ? retObjectGetSchemaAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ValueTask DisposeAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -353,6 +415,36 @@ public class DbConnection extends Component  {
             return new ValueTask(objDisposeAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransactionAsync = null;
+        try {
+            retObjectBeginTransactionAsync = classInstance.Invoke("BeginTransactionAsync", isolationLevel == null ? null : isolationLevel.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objBeginTransactionAsync = (JCObject)retObjectBeginTransactionAsync;
+            return new ValueTask_1(objBeginTransactionAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransactionAsync != null ? retObjectBeginTransactionAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 BeginTransactionAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTransactionAsync = null;
+        try {
+            retObjectBeginTransactionAsync = classInstance.Invoke("BeginTransactionAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objBeginTransactionAsync = (JCObject)retObjectBeginTransactionAsync;
+            return new ValueTask_1(objBeginTransactionAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTransactionAsync != null ? retObjectBeginTransactionAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

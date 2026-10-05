@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.runtime.compilerservices.CallSiteBinder;
 import microsoft.csharp.runtimebinder.CSharpBinderFlags;
 import system.linq.expressions.ExpressionType;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -154,6 +156,21 @@ public class Binder extends NetObject  {
     
     // Methods section
     
+    public static CallSiteBinder BinaryOperation(CSharpBinderFlags flags, ExpressionType operation, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.RankException, system.NotSupportedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinaryOperation = null;
+        try {
+            retObjectBinaryOperation = classType.Invoke("BinaryOperation", flags == null ? null : flags.getJCOInstance(), operation == null ? null : operation.getJCOInstance(), context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objBinaryOperation = (JCObject)retObjectBinaryOperation;
+            return new CallSiteBinder(objBinaryOperation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinaryOperation != null ? retObjectBinaryOperation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static CallSiteBinder Convert(CSharpBinderFlags flags, NetType type, NetType context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -169,6 +186,81 @@ public class Binder extends NetObject  {
         }
     }
 
+    public static CallSiteBinder GetIndex(CSharpBinderFlags flags, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIndex = null;
+        try {
+            retObjectGetIndex = classType.Invoke("GetIndex", flags == null ? null : flags.getJCOInstance(), context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objGetIndex = (JCObject)retObjectGetIndex;
+            return new CallSiteBinder(objGetIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIndex != null ? retObjectGetIndex.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CallSiteBinder GetMember(CSharpBinderFlags flags, java.lang.String name, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.RankException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMember = null;
+        try {
+            retObjectGetMember = classType.Invoke("GetMember", flags == null ? null : flags.getJCOInstance(), name, context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objGetMember = (JCObject)retObjectGetMember;
+            return new CallSiteBinder(objGetMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMember != null ? retObjectGetMember.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CallSiteBinder Invoke(CSharpBinderFlags flags, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classType.Invoke("Invoke", flags == null ? null : flags.getJCOInstance(), context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new CallSiteBinder(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CallSiteBinder InvokeConstructor(CSharpBinderFlags flags, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.NotSupportedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvokeConstructor = null;
+        try {
+            retObjectInvokeConstructor = classType.Invoke("InvokeConstructor", flags == null ? null : flags.getJCOInstance(), context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objInvokeConstructor = (JCObject)retObjectInvokeConstructor;
+            return new CallSiteBinder(objInvokeConstructor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeConstructor != null ? retObjectInvokeConstructor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CallSiteBinder InvokeMember(CSharpBinderFlags flags, java.lang.String name, IEnumerable_1 typeArguments, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvokeMember = null;
+        try {
+            retObjectInvokeMember = classType.Invoke("InvokeMember", flags == null ? null : flags.getJCOInstance(), name, typeArguments == null ? null : typeArguments.getJCOInstance(), context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objInvokeMember = (JCObject)retObjectInvokeMember;
+            return new CallSiteBinder(objInvokeMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeMember != null ? retObjectInvokeMember.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static CallSiteBinder IsEvent(CSharpBinderFlags flags, java.lang.String name, NetType context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -179,6 +271,51 @@ public class Binder extends NetObject  {
             return new CallSiteBinder(objIsEvent);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsEvent != null ? retObjectIsEvent.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CallSiteBinder SetIndex(CSharpBinderFlags flags, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetIndex = null;
+        try {
+            retObjectSetIndex = classType.Invoke("SetIndex", flags == null ? null : flags.getJCOInstance(), context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objSetIndex = (JCObject)retObjectSetIndex;
+            return new CallSiteBinder(objSetIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetIndex != null ? retObjectSetIndex.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CallSiteBinder SetMember(CSharpBinderFlags flags, java.lang.String name, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.RankException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetMember = null;
+        try {
+            retObjectSetMember = classType.Invoke("SetMember", flags == null ? null : flags.getJCOInstance(), name, context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objSetMember = (JCObject)retObjectSetMember;
+            return new CallSiteBinder(objSetMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetMember != null ? retObjectSetMember.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CallSiteBinder UnaryOperation(CSharpBinderFlags flags, ExpressionType operation, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.RankException, system.NotSupportedException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnaryOperation = null;
+        try {
+            retObjectUnaryOperation = classType.Invoke("UnaryOperation", flags == null ? null : flags.getJCOInstance(), operation == null ? null : operation.getJCOInstance(), context == null ? null : context.getJCOInstance(), argumentInfo == null ? null : argumentInfo.getJCOInstance());
+            JCObject objUnaryOperation = (JCObject)retObjectUnaryOperation;
+            return new CallSiteBinder(objUnaryOperation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnaryOperation != null ? retObjectUnaryOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

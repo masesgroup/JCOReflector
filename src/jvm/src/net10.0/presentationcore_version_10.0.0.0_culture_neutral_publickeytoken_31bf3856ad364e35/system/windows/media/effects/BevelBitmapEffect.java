@@ -55,7 +55,7 @@ import system.windows.media.effects.EdgeProfile;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BevelBitmapEffect extends BitmapEffect  {
+public class BevelBitmapEffect extends system.windows.media.effects.BitmapEffect  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -56,7 +56,7 @@ import system.drawing.imaging.EmfPlusRecordType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Metafile extends Image  {
+public class Metafile extends system.drawing.Image  {
     /**
      * Fully assembly qualified name: System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

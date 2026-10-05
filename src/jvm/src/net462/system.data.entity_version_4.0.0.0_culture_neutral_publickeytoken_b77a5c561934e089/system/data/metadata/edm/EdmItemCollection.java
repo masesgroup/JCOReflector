@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.ItemCollection;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -53,7 +56,7 @@ import system.data.metadata.edm.ItemCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EdmItemCollection extends ItemCollection  {
+public class EdmItemCollection extends system.data.metadata.edm.ItemCollection  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -149,6 +152,16 @@ public class EdmItemCollection extends ItemCollection  {
     public EdmItemCollection() throws Throwable {
     }
 
+    public EdmItemCollection(IEnumerable_1 xmlReaders) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.xml.XmlException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.OutOfMemoryException, system.data.MetadataException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(xmlReaders == null ? null : xmlReaders.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EdmItemCollection(java.lang.String... filePaths) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.data.MetadataException, system.NotImplementedException, system.io.FileNotFoundException, system.NullReferenceException, system.MemberAccessException, system.xml.XmlException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException {
         try {
             // add reference to assemblyName.dll file
@@ -164,6 +177,36 @@ public class EdmItemCollection extends ItemCollection  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 GetPrimitiveTypes() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrimitiveTypes = null;
+        try {
+            retObjectGetPrimitiveTypes = classInstance.Invoke("GetPrimitiveTypes");
+            JCObject objGetPrimitiveTypes = (JCObject)retObjectGetPrimitiveTypes;
+            return new ReadOnlyCollection_1(objGetPrimitiveTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrimitiveTypes != null ? retObjectGetPrimitiveTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetPrimitiveTypes(double edmVersion) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrimitiveTypes = null;
+        try {
+            retObjectGetPrimitiveTypes = classInstance.Invoke("GetPrimitiveTypes", edmVersion);
+            JCObject objGetPrimitiveTypes = (JCObject)retObjectGetPrimitiveTypes;
+            return new ReadOnlyCollection_1(objGetPrimitiveTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrimitiveTypes != null ? retObjectGetPrimitiveTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

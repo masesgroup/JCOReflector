@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -163,6 +164,16 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
             return (boolean)retObjectIsCommandSupported;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsCommandSupported != null ? retObjectIsCommandSupported.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ExecuteCommand(int commandId, Dictionary_2 parameters) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ExecuteCommand", commandId, parameters == null ? null : parameters.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

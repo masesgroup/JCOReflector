@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.model.ModelItem;
+import system.collections.generic.Dictionary_2;
 import system.activities.presentation.view.ViewStateChangedEventHandler;
 
 
@@ -162,6 +163,21 @@ public class ViewStateService extends NetObject  {
             return (boolean)retObjectRemoveViewState;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveViewState != null ? retObjectRemoveViewState.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 RetrieveAllViewState(ModelItem modelItem) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetrieveAllViewState = null;
+        try {
+            retObjectRetrieveAllViewState = classInstance.Invoke("RetrieveAllViewState", modelItem == null ? null : modelItem.getJCOInstance());
+            JCObject objRetrieveAllViewState = (JCObject)retObjectRetrieveAllViewState;
+            return new Dictionary_2(objRetrieveAllViewState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRetrieveAllViewState != null ? retObjectRetrieveAllViewState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

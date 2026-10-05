@@ -42,6 +42,7 @@ import system.data.spatial.DbGeometry;
 import system.data.spatial.DbGeography;
 import system.data.spatial.DbGeographyWellKnownValue;
 import system.data.spatial.DbGeometryWellKnownValue;
+import system.Nullable_1;
 import system.data.spatial.DbSpatialServices;
 
 
@@ -1966,6 +1967,306 @@ public class DbSpatialServices extends NetObject  {
             return new DbGeometryWellKnownValue(objCreateWellKnownValue);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWellKnownValue != null ? retObjectCreateWellKnownValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetIsClosed(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsClosed = null;
+        try {
+            retObjectGetIsClosed = classInstance.Invoke("GetIsClosed", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetIsClosed = (JCObject)retObjectGetIsClosed;
+            return new Nullable_1(objGetIsClosed);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIsClosed != null ? retObjectGetIsClosed.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetIsClosed(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsClosed = null;
+        try {
+            retObjectGetIsClosed = classInstance.Invoke("GetIsClosed", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetIsClosed = (JCObject)retObjectGetIsClosed;
+            return new Nullable_1(objGetIsClosed);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIsClosed != null ? retObjectGetIsClosed.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetIsRing(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsRing = null;
+        try {
+            retObjectGetIsRing = classInstance.Invoke("GetIsRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetIsRing = (JCObject)retObjectGetIsRing;
+            return new Nullable_1(objGetIsRing);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIsRing != null ? retObjectGetIsRing.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetArea(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArea = null;
+        try {
+            retObjectGetArea = classInstance.Invoke("GetArea", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetArea = (JCObject)retObjectGetArea;
+            return new Nullable_1(objGetArea);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArea != null ? retObjectGetArea.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetArea(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArea = null;
+        try {
+            retObjectGetArea = classInstance.Invoke("GetArea", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetArea = (JCObject)retObjectGetArea;
+            return new Nullable_1(objGetArea);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArea != null ? retObjectGetArea.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetElevation(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElevation = null;
+        try {
+            retObjectGetElevation = classInstance.Invoke("GetElevation", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetElevation = (JCObject)retObjectGetElevation;
+            return new Nullable_1(objGetElevation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElevation != null ? retObjectGetElevation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetElevation(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElevation = null;
+        try {
+            retObjectGetElevation = classInstance.Invoke("GetElevation", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetElevation = (JCObject)retObjectGetElevation;
+            return new Nullable_1(objGetElevation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElevation != null ? retObjectGetElevation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetLatitude(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLatitude = null;
+        try {
+            retObjectGetLatitude = classInstance.Invoke("GetLatitude", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetLatitude = (JCObject)retObjectGetLatitude;
+            return new Nullable_1(objGetLatitude);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLatitude != null ? retObjectGetLatitude.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetLength(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLength = null;
+        try {
+            retObjectGetLength = classInstance.Invoke("GetLength", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetLength = (JCObject)retObjectGetLength;
+            return new Nullable_1(objGetLength);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLength != null ? retObjectGetLength.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetLength(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLength = null;
+        try {
+            retObjectGetLength = classInstance.Invoke("GetLength", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetLength = (JCObject)retObjectGetLength;
+            return new Nullable_1(objGetLength);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLength != null ? retObjectGetLength.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetLongitude(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLongitude = null;
+        try {
+            retObjectGetLongitude = classInstance.Invoke("GetLongitude", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetLongitude = (JCObject)retObjectGetLongitude;
+            return new Nullable_1(objGetLongitude);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLongitude != null ? retObjectGetLongitude.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetMeasure(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMeasure = null;
+        try {
+            retObjectGetMeasure = classInstance.Invoke("GetMeasure", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetMeasure = (JCObject)retObjectGetMeasure;
+            return new Nullable_1(objGetMeasure);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMeasure != null ? retObjectGetMeasure.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetMeasure(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMeasure = null;
+        try {
+            retObjectGetMeasure = classInstance.Invoke("GetMeasure", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetMeasure = (JCObject)retObjectGetMeasure;
+            return new Nullable_1(objGetMeasure);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMeasure != null ? retObjectGetMeasure.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetXCoordinate(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXCoordinate = null;
+        try {
+            retObjectGetXCoordinate = classInstance.Invoke("GetXCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetXCoordinate = (JCObject)retObjectGetXCoordinate;
+            return new Nullable_1(objGetXCoordinate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXCoordinate != null ? retObjectGetXCoordinate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetYCoordinate(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetYCoordinate = null;
+        try {
+            retObjectGetYCoordinate = classInstance.Invoke("GetYCoordinate", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetYCoordinate = (JCObject)retObjectGetYCoordinate;
+            return new Nullable_1(objGetYCoordinate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetYCoordinate != null ? retObjectGetYCoordinate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetElementCount(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementCount = null;
+        try {
+            retObjectGetElementCount = classInstance.Invoke("GetElementCount", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetElementCount = (JCObject)retObjectGetElementCount;
+            return new Nullable_1(objGetElementCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementCount != null ? retObjectGetElementCount.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetElementCount(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetElementCount = null;
+        try {
+            retObjectGetElementCount = classInstance.Invoke("GetElementCount", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetElementCount = (JCObject)retObjectGetElementCount;
+            return new Nullable_1(objGetElementCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetElementCount != null ? retObjectGetElementCount.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetInteriorRingCount(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInteriorRingCount = null;
+        try {
+            retObjectGetInteriorRingCount = classInstance.Invoke("GetInteriorRingCount", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetInteriorRingCount = (JCObject)retObjectGetInteriorRingCount;
+            return new Nullable_1(objGetInteriorRingCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInteriorRingCount != null ? retObjectGetInteriorRingCount.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetPointCount(DbGeography geographyValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPointCount = null;
+        try {
+            retObjectGetPointCount = classInstance.Invoke("GetPointCount", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetPointCount = (JCObject)retObjectGetPointCount;
+            return new Nullable_1(objGetPointCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPointCount != null ? retObjectGetPointCount.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetPointCount(DbGeometry geometryValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPointCount = null;
+        try {
+            retObjectGetPointCount = classInstance.Invoke("GetPointCount", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetPointCount = (JCObject)retObjectGetPointCount;
+            return new Nullable_1(objGetPointCount);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPointCount != null ? retObjectGetPointCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

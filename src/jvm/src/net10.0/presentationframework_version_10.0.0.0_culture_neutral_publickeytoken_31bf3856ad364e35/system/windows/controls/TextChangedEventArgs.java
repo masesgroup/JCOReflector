@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.RoutedEventArgs;
 import system.windows.RoutedEvent;
 import system.windows.controls.UndoAction;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.windows.controls.UndoAction;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextChangedEventArgs extends RoutedEventArgs  {
+public class TextChangedEventArgs extends system.windows.RoutedEventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -151,6 +153,16 @@ public class TextChangedEventArgs extends RoutedEventArgs  {
     public TextChangedEventArgs() throws Throwable {
     }
 
+    public TextChangedEventArgs(RoutedEvent id, UndoAction action, ICollection_1 changes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(id == null ? null : id.getJCOInstance(), action == null ? null : action.getJCOInstance(), changes == null ? null : changes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TextChangedEventArgs(RoutedEvent id, UndoAction action) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -170,6 +182,21 @@ public class TextChangedEventArgs extends RoutedEventArgs  {
     
     // Properties section
     
+    public ICollection_1 getChanges() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChanges = null;
+        try {
+            retObjectChanges = classInstance.Get("Changes");
+            JCObject val = (JCObject)retObjectChanges;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChanges != null ? retObjectChanges.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public UndoAction getUndoAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

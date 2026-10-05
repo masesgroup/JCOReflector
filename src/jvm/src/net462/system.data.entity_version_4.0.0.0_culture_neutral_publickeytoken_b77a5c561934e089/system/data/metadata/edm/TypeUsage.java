@@ -41,8 +41,10 @@ import java.util.ArrayList;
 import system.data.metadata.edm.MetadataItem;
 import system.data.metadata.edm.TypeUsage;
 import system.data.metadata.edm.PrimitiveType;
+import system.Nullable_1;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.BuiltInTypeKind;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -57,7 +59,7 @@ import system.data.metadata.edm.BuiltInTypeKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TypeUsage extends MetadataItem  {
+public class TypeUsage extends system.data.metadata.edm.MetadataItem  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -202,6 +204,36 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
+    public static TypeUsage CreateDateTimeOffsetTypeUsage(PrimitiveType primitiveType, Nullable_1 precision) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDateTimeOffsetTypeUsage = null;
+        try {
+            retObjectCreateDateTimeOffsetTypeUsage = classType.Invoke("CreateDateTimeOffsetTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), precision == null ? null : precision.getJCOInstance());
+            JCObject objCreateDateTimeOffsetTypeUsage = (JCObject)retObjectCreateDateTimeOffsetTypeUsage;
+            return new TypeUsage(objCreateDateTimeOffsetTypeUsage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDateTimeOffsetTypeUsage != null ? retObjectCreateDateTimeOffsetTypeUsage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypeUsage CreateDateTimeTypeUsage(PrimitiveType primitiveType, Nullable_1 precision) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDateTimeTypeUsage = null;
+        try {
+            retObjectCreateDateTimeTypeUsage = classType.Invoke("CreateDateTimeTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), precision == null ? null : precision.getJCOInstance());
+            JCObject objCreateDateTimeTypeUsage = (JCObject)retObjectCreateDateTimeTypeUsage;
+            return new TypeUsage(objCreateDateTimeTypeUsage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDateTimeTypeUsage != null ? retObjectCreateDateTimeTypeUsage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static TypeUsage CreateDecimalTypeUsage(PrimitiveType primitiveType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -277,6 +309,21 @@ public class TypeUsage extends MetadataItem  {
         }
     }
 
+    public static TypeUsage CreateTimeTypeUsage(PrimitiveType primitiveType, Nullable_1 precision) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTimeTypeUsage = null;
+        try {
+            retObjectCreateTimeTypeUsage = classType.Invoke("CreateTimeTypeUsage", primitiveType == null ? null : primitiveType.getJCOInstance(), precision == null ? null : precision.getJCOInstance());
+            JCObject objCreateTimeTypeUsage = (JCObject)retObjectCreateTimeTypeUsage;
+            return new TypeUsage(objCreateTimeTypeUsage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTimeTypeUsage != null ? retObjectCreateTimeTypeUsage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -291,6 +338,21 @@ public class TypeUsage extends MetadataItem  {
             return new EdmType(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEdmType != null ? retObjectEdmType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getFacets() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFacets = null;
+        try {
+            retObjectFacets = classInstance.Get("Facets");
+            JCObject val = (JCObject)retObjectFacets;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFacets != null ? retObjectFacets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

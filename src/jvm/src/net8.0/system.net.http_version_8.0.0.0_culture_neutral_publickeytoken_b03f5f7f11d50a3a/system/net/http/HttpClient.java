@@ -44,12 +44,14 @@ import system.net.http.HttpResponseMessage;
 import system.net.http.HttpRequestMessage;
 import system.net.http.HttpCompletionOption;
 import system.threading.CancellationToken;
+import system.threading.tasks.Task_1;
+import system.Uri;
+import system.net.http.HttpContent;
 import system.net.http.headers.HttpRequestHeaders;
 import system.net.http.HttpVersionPolicy;
 import system.net.IWebProxy;
 import system.net.IWebProxyImplementation;
 import system.TimeSpan;
-import system.Uri;
 import system.Version;
 
 
@@ -65,7 +67,7 @@ import system.Version;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpClient extends HttpMessageInvoker  {
+public class HttpClient extends system.net.http.HttpMessageInvoker  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -247,6 +249,606 @@ public class HttpClient extends HttpMessageInvoker  {
             return new HttpResponseMessage(objSend);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetByteArrayAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByteArrayAsync = null;
+        try {
+            retObjectGetByteArrayAsync = classInstance.Invoke("GetByteArrayAsync", requestUri, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetByteArrayAsync = (JCObject)retObjectGetByteArrayAsync;
+            return new Task_1(objGetByteArrayAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetByteArrayAsync != null ? retObjectGetByteArrayAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetByteArrayAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByteArrayAsync = null;
+        try {
+            retObjectGetByteArrayAsync = classInstance.Invoke("GetByteArrayAsync", requestUri);
+            JCObject objGetByteArrayAsync = (JCObject)retObjectGetByteArrayAsync;
+            return new Task_1(objGetByteArrayAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetByteArrayAsync != null ? retObjectGetByteArrayAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetByteArrayAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UriFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByteArrayAsync = null;
+        try {
+            retObjectGetByteArrayAsync = classInstance.Invoke("GetByteArrayAsync", requestUri == null ? null : requestUri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetByteArrayAsync = (JCObject)retObjectGetByteArrayAsync;
+            return new Task_1(objGetByteArrayAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetByteArrayAsync != null ? retObjectGetByteArrayAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetByteArrayAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByteArrayAsync = null;
+        try {
+            retObjectGetByteArrayAsync = classInstance.Invoke("GetByteArrayAsync", requestUri == null ? null : requestUri.getJCOInstance());
+            JCObject objGetByteArrayAsync = (JCObject)retObjectGetByteArrayAsync;
+            return new Task_1(objGetByteArrayAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetByteArrayAsync != null ? retObjectGetByteArrayAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetStreamAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStreamAsync = null;
+        try {
+            retObjectGetStreamAsync = classInstance.Invoke("GetStreamAsync", requestUri, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetStreamAsync = (JCObject)retObjectGetStreamAsync;
+            return new Task_1(objGetStreamAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStreamAsync != null ? retObjectGetStreamAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetStreamAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStreamAsync = null;
+        try {
+            retObjectGetStreamAsync = classInstance.Invoke("GetStreamAsync", requestUri);
+            JCObject objGetStreamAsync = (JCObject)retObjectGetStreamAsync;
+            return new Task_1(objGetStreamAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStreamAsync != null ? retObjectGetStreamAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetStreamAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UriFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStreamAsync = null;
+        try {
+            retObjectGetStreamAsync = classInstance.Invoke("GetStreamAsync", requestUri == null ? null : requestUri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetStreamAsync = (JCObject)retObjectGetStreamAsync;
+            return new Task_1(objGetStreamAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStreamAsync != null ? retObjectGetStreamAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetStreamAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStreamAsync = null;
+        try {
+            retObjectGetStreamAsync = classInstance.Invoke("GetStreamAsync", requestUri == null ? null : requestUri.getJCOInstance());
+            JCObject objGetStreamAsync = (JCObject)retObjectGetStreamAsync;
+            return new Task_1(objGetStreamAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStreamAsync != null ? retObjectGetStreamAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 DeleteAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteAsync = null;
+        try {
+            retObjectDeleteAsync = classInstance.Invoke("DeleteAsync", requestUri, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteAsync = (JCObject)retObjectDeleteAsync;
+            return new Task_1(objDeleteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteAsync != null ? retObjectDeleteAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 DeleteAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteAsync = null;
+        try {
+            retObjectDeleteAsync = classInstance.Invoke("DeleteAsync", requestUri);
+            JCObject objDeleteAsync = (JCObject)retObjectDeleteAsync;
+            return new Task_1(objDeleteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteAsync != null ? retObjectDeleteAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 DeleteAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteAsync = null;
+        try {
+            retObjectDeleteAsync = classInstance.Invoke("DeleteAsync", requestUri == null ? null : requestUri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeleteAsync = (JCObject)retObjectDeleteAsync;
+            return new Task_1(objDeleteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteAsync != null ? retObjectDeleteAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 DeleteAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteAsync = null;
+        try {
+            retObjectDeleteAsync = classInstance.Invoke("DeleteAsync", requestUri == null ? null : requestUri.getJCOInstance());
+            JCObject objDeleteAsync = (JCObject)retObjectDeleteAsync;
+            return new Task_1(objDeleteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteAsync != null ? retObjectDeleteAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(java.lang.String requestUri, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", requestUri, completionOption == null ? null : completionOption.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(java.lang.String requestUri, HttpCompletionOption completionOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", requestUri, completionOption == null ? null : completionOption.getJCOInstance());
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", requestUri, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", requestUri);
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(Uri requestUri, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", requestUri == null ? null : requestUri.getJCOInstance(), completionOption == null ? null : completionOption.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(Uri requestUri, HttpCompletionOption completionOption) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", requestUri == null ? null : requestUri.getJCOInstance(), completionOption == null ? null : completionOption.getJCOInstance());
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", requestUri == null ? null : requestUri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAsync = null;
+        try {
+            retObjectGetAsync = classInstance.Invoke("GetAsync", requestUri == null ? null : requestUri.getJCOInstance());
+            JCObject objGetAsync = (JCObject)retObjectGetAsync;
+            return new Task_1(objGetAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAsync != null ? retObjectGetAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PatchAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPatchAsync = null;
+        try {
+            retObjectPatchAsync = classInstance.Invoke("PatchAsync", requestUri, content == null ? null : content.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPatchAsync = (JCObject)retObjectPatchAsync;
+            return new Task_1(objPatchAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsync != null ? retObjectPatchAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PatchAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPatchAsync = null;
+        try {
+            retObjectPatchAsync = classInstance.Invoke("PatchAsync", requestUri, content == null ? null : content.getJCOInstance());
+            JCObject objPatchAsync = (JCObject)retObjectPatchAsync;
+            return new Task_1(objPatchAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsync != null ? retObjectPatchAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PatchAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPatchAsync = null;
+        try {
+            retObjectPatchAsync = classInstance.Invoke("PatchAsync", requestUri == null ? null : requestUri.getJCOInstance(), content == null ? null : content.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPatchAsync = (JCObject)retObjectPatchAsync;
+            return new Task_1(objPatchAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsync != null ? retObjectPatchAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PatchAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPatchAsync = null;
+        try {
+            retObjectPatchAsync = classInstance.Invoke("PatchAsync", requestUri == null ? null : requestUri.getJCOInstance(), content == null ? null : content.getJCOInstance());
+            JCObject objPatchAsync = (JCObject)retObjectPatchAsync;
+            return new Task_1(objPatchAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPatchAsync != null ? retObjectPatchAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PostAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPostAsync = null;
+        try {
+            retObjectPostAsync = classInstance.Invoke("PostAsync", requestUri, content == null ? null : content.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPostAsync = (JCObject)retObjectPostAsync;
+            return new Task_1(objPostAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsync != null ? retObjectPostAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PostAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPostAsync = null;
+        try {
+            retObjectPostAsync = classInstance.Invoke("PostAsync", requestUri, content == null ? null : content.getJCOInstance());
+            JCObject objPostAsync = (JCObject)retObjectPostAsync;
+            return new Task_1(objPostAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsync != null ? retObjectPostAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PostAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPostAsync = null;
+        try {
+            retObjectPostAsync = classInstance.Invoke("PostAsync", requestUri == null ? null : requestUri.getJCOInstance(), content == null ? null : content.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPostAsync = (JCObject)retObjectPostAsync;
+            return new Task_1(objPostAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsync != null ? retObjectPostAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PostAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPostAsync = null;
+        try {
+            retObjectPostAsync = classInstance.Invoke("PostAsync", requestUri == null ? null : requestUri.getJCOInstance(), content == null ? null : content.getJCOInstance());
+            JCObject objPostAsync = (JCObject)retObjectPostAsync;
+            return new Task_1(objPostAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostAsync != null ? retObjectPostAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PutAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPutAsync = null;
+        try {
+            retObjectPutAsync = classInstance.Invoke("PutAsync", requestUri, content == null ? null : content.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPutAsync = (JCObject)retObjectPutAsync;
+            return new Task_1(objPutAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsync != null ? retObjectPutAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PutAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPutAsync = null;
+        try {
+            retObjectPutAsync = classInstance.Invoke("PutAsync", requestUri, content == null ? null : content.getJCOInstance());
+            JCObject objPutAsync = (JCObject)retObjectPutAsync;
+            return new Task_1(objPutAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsync != null ? retObjectPutAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PutAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPutAsync = null;
+        try {
+            retObjectPutAsync = classInstance.Invoke("PutAsync", requestUri == null ? null : requestUri.getJCOInstance(), content == null ? null : content.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPutAsync = (JCObject)retObjectPutAsync;
+            return new Task_1(objPutAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsync != null ? retObjectPutAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 PutAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPutAsync = null;
+        try {
+            retObjectPutAsync = classInstance.Invoke("PutAsync", requestUri == null ? null : requestUri.getJCOInstance(), content == null ? null : content.getJCOInstance());
+            JCObject objPutAsync = (JCObject)retObjectPutAsync;
+            return new Task_1(objPutAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPutAsync != null ? retObjectPutAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", request == null ? null : request.getJCOInstance(), completionOption == null ? null : completionOption.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", request == null ? null : request.getJCOInstance(), completionOption == null ? null : completionOption.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", request == null ? null : request.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendAsync(HttpRequestMessage request) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", request == null ? null : request.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetStringAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStringAsync = null;
+        try {
+            retObjectGetStringAsync = classInstance.Invoke("GetStringAsync", requestUri, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetStringAsync = (JCObject)retObjectGetStringAsync;
+            return new Task_1(objGetStringAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStringAsync != null ? retObjectGetStringAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetStringAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStringAsync = null;
+        try {
+            retObjectGetStringAsync = classInstance.Invoke("GetStringAsync", requestUri);
+            JCObject objGetStringAsync = (JCObject)retObjectGetStringAsync;
+            return new Task_1(objGetStringAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStringAsync != null ? retObjectGetStringAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetStringAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UriFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStringAsync = null;
+        try {
+            retObjectGetStringAsync = classInstance.Invoke("GetStringAsync", requestUri == null ? null : requestUri.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetStringAsync = (JCObject)retObjectGetStringAsync;
+            return new Task_1(objGetStringAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStringAsync != null ? retObjectGetStringAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetStringAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStringAsync = null;
+        try {
+            retObjectGetStringAsync = classInstance.Invoke("GetStringAsync", requestUri == null ? null : requestUri.getJCOInstance());
+            JCObject objGetStringAsync = (JCObject)retObjectGetStringAsync;
+            return new Task_1(objGetStringAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStringAsync != null ? retObjectGetStringAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

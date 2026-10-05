@@ -42,6 +42,7 @@ import system.xml.XmlResolver;
 import system.security.PermissionSet;
 import system.security.policy.Evidence;
 import system.Uri;
+import system.threading.tasks.Task_1;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
 
@@ -58,7 +59,7 @@ import system.net.ICredentialsImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSecureResolver extends XmlResolver  {
+public class XmlSecureResolver extends system.xml.XmlResolver  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -214,6 +215,21 @@ public class XmlSecureResolver extends XmlResolver  {
             return new Evidence(objCreateEvidenceForUrl);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEvidenceForUrl != null ? retObjectCreateEvidenceForUrl.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.security.SecurityException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntityAsync = null;
+        try {
+            retObjectGetEntityAsync = classInstance.Invoke("GetEntityAsync", absoluteUri == null ? null : absoluteUri.getJCOInstance(), role, ofObjectToReturn == null ? null : ofObjectToReturn.getJCOInstance());
+            JCObject objGetEntityAsync = (JCObject)retObjectGetEntityAsync;
+            return new Task_1(objGetEntityAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntityAsync != null ? retObjectGetEntityAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.WindowsSecurityToken;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.DateTime;
 import system.identitymodel.tokens.SymmetricSecurityKey;
 import system.security.principal.WindowsIdentity;
@@ -57,7 +58,7 @@ import system.security.principal.WindowsIdentity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
+public class KerberosReceiverSecurityToken extends system.identitymodel.tokens.WindowsSecurityToken  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -188,6 +189,20 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateKeyIdentifierClause = null;
+        try {
+            retObjectCanCreateKeyIdentifierClause = classInstance.Invoke("CanCreateKeyIdentifierClause");
+            return (boolean)retObjectCanCreateKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCreateKeyIdentifierClause != null ? retObjectCanCreateKeyIdentifierClause.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ApplicationException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

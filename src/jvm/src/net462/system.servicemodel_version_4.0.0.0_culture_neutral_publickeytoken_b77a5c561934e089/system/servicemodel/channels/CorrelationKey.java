@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.durableinstancing.InstanceKey;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.xml.linq.XName;
 import system.xml.linq.XNamespace;
 
@@ -55,7 +57,7 @@ import system.xml.linq.XNamespace;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CorrelationKey extends InstanceKey  {
+public class CorrelationKey extends system.runtime.durableinstancing.InstanceKey  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -151,6 +153,16 @@ public class CorrelationKey extends InstanceKey  {
     public CorrelationKey() throws Throwable {
     }
 
+    public CorrelationKey(IDictionary_2 keyData, XName scopeName, XNamespace provider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(keyData == null ? null : keyData.getJCOInstance(), scopeName == null ? null : scopeName.getJCOInstance(), provider == null ? null : provider.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -160,6 +172,31 @@ public class CorrelationKey extends InstanceKey  {
     
     // Properties section
     
+    public IDictionary_2 getKeyData() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyData = null;
+        try {
+            retObjectKeyData = classInstance.Get("KeyData");
+            JCObject val = (JCObject)retObjectKeyData;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyData != null ? retObjectKeyData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setKeyData(IDictionary_2 KeyData) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("KeyData", KeyData == null ? null : KeyData.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getKeyString() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

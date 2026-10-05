@@ -46,6 +46,7 @@ import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.x509certificates.X509ContentType;
 import system.security.cryptography.x509certificates.X509NameType;
 import system.DateTime;
+import system.ReadOnlyMemory_1;
 import system.security.cryptography.AsymmetricAlgorithm;
 import system.security.cryptography.Oid;
 import system.security.cryptography.x509certificates.PublicKey;
@@ -65,7 +66,7 @@ import system.security.cryptography.x509certificates.X509ExtensionCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509Certificate2 extends X509Certificate  {
+public class X509Certificate2 extends system.security.cryptography.x509certificates.X509Certificate  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -687,6 +688,21 @@ public class X509Certificate2 extends X509Certificate  {
             return new DateTime(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotBefore != null ? retObjectNotBefore.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 getRawDataMemory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawDataMemory = null;
+        try {
+            retObjectRawDataMemory = classInstance.Get("RawDataMemory");
+            JCObject val = (JCObject)retObjectRawDataMemory;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRawDataMemory != null ? retObjectRawDataMemory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

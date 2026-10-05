@@ -54,7 +54,7 @@ import system.diagnostics.TraceSource;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InitializingTraceSourceEventArgs extends EventArgs  {
+public class InitializingTraceSourceEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Diagnostics.TraceSource, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -41,8 +41,11 @@ import system.collections.specialized.INotifyCollectionChanged;
 import system.collections.specialized.INotifyCollectionChangedImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.collections.objectmodel.ObservableCollection_1;
+import system.collections.objectmodel.ReadOnlyObservableCollection_1;
 import system.componentmodel.SortDescriptionCollection;
 import system.globalization.CultureInfo;
+import system.Predicate_1;
 import system.collections.specialized.NotifyCollectionChangedEventHandler;
 import system.componentmodel.CurrentChangingEventHandler;
 import system.EventHandler;
@@ -60,7 +63,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ICollectionView extends IJCOBridgeReflected, IEnumerable, INotifyCollectionChanged {
+public interface ICollectionView extends IJCOBridgeReflected, org.mases.jcobridge.netreflection.IEnumerable, system.collections.specialized.INotifyCollectionChanged {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -162,6 +165,10 @@ public interface ICollectionView extends IJCOBridgeReflected, IEnumerable, INoti
 
     public IEnumerable getSourceCollection() throws Throwable;
 
+    public ObservableCollection_1 getGroupDescriptions() throws Throwable;
+
+    public ReadOnlyObservableCollection_1 getGroups() throws Throwable;
+
     public SortDescriptionCollection getSortDescriptions() throws Throwable;
 
     public CultureInfo getCulture() throws Throwable;
@@ -169,6 +176,10 @@ public interface ICollectionView extends IJCOBridgeReflected, IEnumerable, INoti
     public void setCulture(CultureInfo Culture) throws Throwable;
 
     public NetObject getCurrentItem() throws Throwable;
+
+    public Predicate_1 getFilter() throws Throwable;
+
+    public void setFilter(Predicate_1 Filter) throws Throwable;
 
 
 

@@ -39,9 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.immutable.ImmutableArray_1;
 import system.Guid;
 import system.UInt32;
 import system.reflection.metadata.BlobContentId;
+import system.Func_2;
 
 
 /**
@@ -56,7 +58,7 @@ import system.reflection.metadata.BlobContentId;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BlobContentId extends ValueType  {
+public class BlobContentId extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -162,6 +164,16 @@ public class BlobContentId extends ValueType  {
         }
     }
 
+    public BlobContentId(ImmutableArray_1 id) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.BadImageFormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(id == null ? null : id.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BlobContentId(Guid guid, UInt32 stamp) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +203,20 @@ public class BlobContentId extends ValueType  {
         }
     }
 
+    public static Func_2 GetTimeBasedProvider() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTimeBasedProvider = null;
+        try {
+            retObjectGetTimeBasedProvider = classType.Invoke("GetTimeBasedProvider");
+            return (Func_2)retObjectGetTimeBasedProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into Func_2", retObjectGetTimeBasedProvider != null ? retObjectGetTimeBasedProvider.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static BlobContentId FromHash(byte[] hashCode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +238,21 @@ public class BlobContentId extends ValueType  {
         java.lang.Object retObjectFromHash = null;
         try {
             retObjectFromHash = classType.Invoke("FromHash", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objFromHash = (JCObject)retObjectFromHash;
+            return new BlobContentId(objFromHash);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromHash != null ? retObjectFromHash.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BlobContentId FromHash(ImmutableArray_1 hashCode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromHash = null;
+        try {
+            retObjectFromHash = classType.Invoke("FromHash", hashCode == null ? null : hashCode.getJCOInstance());
             JCObject objFromHash = (JCObject)retObjectFromHash;
             return new BlobContentId(objFromHash);
         } catch (java.lang.ClassCastException cce) {

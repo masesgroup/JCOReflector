@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.DependencyObject;
 import system.windows.FrameworkElement;
 import system.windows.controls.DataGridRow;
+import system.Nullable_1;
 import system.windows.controls.DataGridLength;
 import system.windows.controls.DataTemplateSelector;
 import system.windows.data.BindingBase;
@@ -61,7 +62,7 @@ import system.windows.Visibility;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridColumn extends DependencyObject  {
+public class DataGridColumn extends system.windows.DependencyObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -558,6 +559,31 @@ public class DataGridColumn extends DependencyObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayIndex", DisplayIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getSortDirection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDirection = null;
+        try {
+            retObjectSortDirection = classInstance.Get("SortDirection");
+            JCObject val = (JCObject)retObjectSortDirection;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortDirection != null ? retObjectSortDirection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSortDirection(Nullable_1 SortDirection) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SortDirection", SortDirection == null ? null : SortDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

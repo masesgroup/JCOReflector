@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.LocationReferenceEnvironment;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.threading.CancellationToken;
 
 
@@ -281,6 +283,21 @@ public class ValidationSettings extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Environment", Environment == null ? null : Environment.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getAdditionalConstraints() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalConstraints = null;
+        try {
+            retObjectAdditionalConstraints = classInstance.Get("AdditionalConstraints");
+            JCObject val = (JCObject)retObjectAdditionalConstraints;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdditionalConstraints != null ? retObjectAdditionalConstraints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

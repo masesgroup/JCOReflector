@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.primitives.ImportDefinition;
+import system.linq.IQueryable_1;
+import system.linq.IQueryable_1Implementation;
 
 
 /**
@@ -151,6 +156,21 @@ public class ComposablePartCatalog extends NetObjectEnumerable implements AutoCl
     
     // Methods section
     
+    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExports = null;
+        try {
+            retObjectGetExports = classInstance.Invoke("GetExports", definition == null ? null : definition.getJCOInstance());
+            JCObject objGetExports = (JCObject)retObjectGetExports;
+            return new IEnumerable_1Implementation(objGetExports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExports != null ? retObjectGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -178,6 +198,21 @@ public class ComposablePartCatalog extends NetObjectEnumerable implements AutoCl
     
     // Properties section
     
+    public IQueryable_1 getParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParts = null;
+        try {
+            retObjectParts = classInstance.Get("Parts");
+            JCObject val = (JCObject)retObjectParts;
+            return new IQueryable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParts != null ? retObjectParts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

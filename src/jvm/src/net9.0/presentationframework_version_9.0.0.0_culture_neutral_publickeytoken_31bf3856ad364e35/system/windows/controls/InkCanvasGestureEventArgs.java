@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.windows.RoutedEventArgs;
 import system.windows.ink.StrokeCollection;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -54,7 +57,7 @@ import system.windows.ink.StrokeCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InkCanvasGestureEventArgs extends RoutedEventArgs  {
+public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -150,11 +153,36 @@ public class InkCanvasGestureEventArgs extends RoutedEventArgs  {
     public InkCanvasGestureEventArgs() throws Throwable {
     }
 
+    public InkCanvasGestureEventArgs(StrokeCollection strokes, IEnumerable_1 gestureRecognitionResults) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(strokes == null ? null : strokes.getJCOInstance(), gestureRecognitionResults == null ? null : gestureRecognitionResults.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public ReadOnlyCollection_1 GetGestureRecognitionResults() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGestureRecognitionResults = null;
+        try {
+            retObjectGetGestureRecognitionResults = classInstance.Invoke("GetGestureRecognitionResults");
+            JCObject objGetGestureRecognitionResults = (JCObject)retObjectGetGestureRecognitionResults;
+            return new ReadOnlyCollection_1(objGetGestureRecognitionResults);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGestureRecognitionResults != null ? retObjectGetGestureRecognitionResults.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

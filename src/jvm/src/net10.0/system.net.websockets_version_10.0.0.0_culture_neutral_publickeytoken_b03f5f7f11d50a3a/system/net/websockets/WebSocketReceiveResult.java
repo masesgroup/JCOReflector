@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.websockets.WebSocketMessageType;
+import system.Nullable_1;
 
 
 /**
@@ -149,6 +150,16 @@ public class WebSocketReceiveResult extends NetObject  {
     public WebSocketReceiveResult() throws Throwable {
     }
 
+    public WebSocketReceiveResult(int count, WebSocketMessageType messageType, boolean endOfMessage, Nullable_1 closeStatus, java.lang.String closeStatusDescription) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(count, messageType == null ? null : messageType.getJCOInstance(), endOfMessage, closeStatus == null ? null : closeStatus.getJCOInstance(), closeStatusDescription));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public WebSocketReceiveResult(int count, WebSocketMessageType messageType, boolean endOfMessage) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -232,6 +243,21 @@ public class WebSocketReceiveResult extends NetObject  {
             return new WebSocketMessageType(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageType != null ? retObjectMessageType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getCloseStatus() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseStatus = null;
+        try {
+            retObjectCloseStatus = classInstance.Get("CloseStatus");
+            JCObject val = (JCObject)retObjectCloseStatus;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseStatus != null ? retObjectCloseStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

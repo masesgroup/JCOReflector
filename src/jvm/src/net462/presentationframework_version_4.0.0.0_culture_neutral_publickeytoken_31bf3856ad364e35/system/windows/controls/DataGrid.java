@@ -41,8 +41,14 @@ import java.util.ArrayList;
 import system.windows.controls.primitives.MultiSelector;
 import system.windows.RoutedEventArgs;
 import system.windows.controls.DataGridEditingUnit;
+import system.collections.objectmodel.Collection_1;
+import system.componentmodel.IItemProperties;
+import system.componentmodel.IItemPropertiesImplementation;
 import system.windows.controls.DataGridColumn;
 import system.windows.Visibility;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.collections.objectmodel.ObservableCollection_1;
 import system.windows.ComponentResourceKey;
 import system.windows.controls.ControlTemplate;
 import system.windows.controls.DataGridCellInfo;
@@ -81,7 +87,7 @@ import system.windows.controls.SelectedCellsChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGrid extends MultiSelector  {
+public class DataGrid extends system.windows.controls.primitives.MultiSelector  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -267,6 +273,21 @@ public class DataGrid extends MultiSelector  {
             return (boolean)retObjectCommitEdit;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCommitEdit != null ? retObjectCommitEdit.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Collection_1 GenerateColumns(IItemProperties itemProperties) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateColumns = null;
+        try {
+            retObjectGenerateColumns = classType.Invoke("GenerateColumns", itemProperties == null ? null : itemProperties.getJCOInstance());
+            JCObject objGenerateColumns = (JCObject)retObjectGenerateColumns;
+            return new Collection_1(objGenerateColumns);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateColumns != null ? retObjectGenerateColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1135,6 +1156,51 @@ public class DataGrid extends MultiSelector  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FrozenColumnCount", FrozenColumnCount);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getSelectedCells() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedCells = null;
+        try {
+            retObjectSelectedCells = classInstance.Get("SelectedCells");
+            JCObject val = (JCObject)retObjectSelectedCells;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedCells != null ? retObjectSelectedCells.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObservableCollection_1 getColumns() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
+        try {
+            retObjectColumns = classInstance.Get("Columns");
+            JCObject val = (JCObject)retObjectColumns;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObservableCollection_1 getRowValidationRules() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowValidationRules = null;
+        try {
+            retObjectRowValidationRules = classInstance.Get("RowValidationRules");
+            JCObject val = (JCObject)retObjectRowValidationRules;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowValidationRules != null ? retObjectRowValidationRules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

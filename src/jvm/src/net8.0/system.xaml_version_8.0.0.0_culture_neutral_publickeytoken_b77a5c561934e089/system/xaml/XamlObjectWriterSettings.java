@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.xaml.XamlWriterSettings;
 import system.xaml.XamlObjectWriterSettings;
+import system.EventHandler_1;
 import system.Uri;
 import system.windows.markup.INameScope;
 import system.windows.markup.INameScopeImplementation;
@@ -58,7 +59,7 @@ import system.xaml.permissions.XamlAccessLevel;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XamlObjectWriterSettings extends XamlWriterSettings  {
+public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -294,6 +295,126 @@ public class XamlObjectWriterSettings extends XamlWriterSettings  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipProvideValueOnRoot", SkipProvideValueOnRoot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventHandler_1 getXamlSetValueHandler() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXamlSetValueHandler = null;
+        try {
+            retObjectXamlSetValueHandler = classInstance.Get("XamlSetValueHandler");
+            return (EventHandler_1)retObjectXamlSetValueHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectXamlSetValueHandler != null ? retObjectXamlSetValueHandler.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setXamlSetValueHandler(EventHandler_1 XamlSetValueHandler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("XamlSetValueHandler", XamlSetValueHandler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventHandler_1 getAfterBeginInitHandler() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAfterBeginInitHandler = null;
+        try {
+            retObjectAfterBeginInitHandler = classInstance.Get("AfterBeginInitHandler");
+            return (EventHandler_1)retObjectAfterBeginInitHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectAfterBeginInitHandler != null ? retObjectAfterBeginInitHandler.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAfterBeginInitHandler(EventHandler_1 AfterBeginInitHandler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AfterBeginInitHandler", AfterBeginInitHandler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventHandler_1 getAfterEndInitHandler() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAfterEndInitHandler = null;
+        try {
+            retObjectAfterEndInitHandler = classInstance.Get("AfterEndInitHandler");
+            return (EventHandler_1)retObjectAfterEndInitHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectAfterEndInitHandler != null ? retObjectAfterEndInitHandler.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAfterEndInitHandler(EventHandler_1 AfterEndInitHandler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AfterEndInitHandler", AfterEndInitHandler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventHandler_1 getAfterPropertiesHandler() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAfterPropertiesHandler = null;
+        try {
+            retObjectAfterPropertiesHandler = classInstance.Get("AfterPropertiesHandler");
+            return (EventHandler_1)retObjectAfterPropertiesHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectAfterPropertiesHandler != null ? retObjectAfterPropertiesHandler.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAfterPropertiesHandler(EventHandler_1 AfterPropertiesHandler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AfterPropertiesHandler", AfterPropertiesHandler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EventHandler_1 getBeforePropertiesHandler() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeforePropertiesHandler = null;
+        try {
+            retObjectBeforePropertiesHandler = classInstance.Get("BeforePropertiesHandler");
+            return (EventHandler_1)retObjectBeforePropertiesHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectBeforePropertiesHandler != null ? retObjectBeforePropertiesHandler.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBeforePropertiesHandler(EventHandler_1 BeforePropertiesHandler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BeforePropertiesHandler", BeforePropertiesHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

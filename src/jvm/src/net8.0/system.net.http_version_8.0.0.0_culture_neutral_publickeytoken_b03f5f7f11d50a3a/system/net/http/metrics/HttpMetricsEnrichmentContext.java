@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.HttpRequestMessage;
+import system.Action_1;
 import system.net.http.HttpResponseMessage;
 
 
@@ -155,6 +156,16 @@ public class HttpMetricsEnrichmentContext extends NetObject  {
     
     // Methods section
     
+    public static void AddCallback(HttpRequestMessage request, Action_1 callback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddCallback", request == null ? null : request.getJCOInstance(), callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddCustomTag(java.lang.String name, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

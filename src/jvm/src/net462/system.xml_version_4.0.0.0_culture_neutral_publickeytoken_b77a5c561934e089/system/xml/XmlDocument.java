@@ -82,7 +82,7 @@ import system.xml.XmlNodeChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlDocument extends XmlNode  {
+public class XmlDocument extends system.xml.XmlNode  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

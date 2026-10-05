@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.DateTime;
 
 
@@ -56,7 +57,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WrappedKeySecurityToken extends SecurityToken  {
+public class WrappedKeySecurityToken extends system.identitymodel.tokens.SecurityToken  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -167,6 +168,20 @@ public class WrappedKeySecurityToken extends SecurityToken  {
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateKeyIdentifierClause = null;
+        try {
+            retObjectCanCreateKeyIdentifierClause = classInstance.Invoke("CanCreateKeyIdentifierClause");
+            return (boolean)retObjectCanCreateKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCreateKeyIdentifierClause != null ? retObjectCanCreateKeyIdentifierClause.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ApplicationException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

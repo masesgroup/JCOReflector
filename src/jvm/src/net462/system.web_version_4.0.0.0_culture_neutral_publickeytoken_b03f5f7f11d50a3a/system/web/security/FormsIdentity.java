@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.security.claims.ClaimsIdentity;
 import system.web.security.FormsAuthenticationTicket;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -54,7 +56,7 @@ import system.web.security.FormsAuthenticationTicket;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FormsIdentity extends ClaimsIdentity  {
+public class FormsIdentity extends system.security.claims.ClaimsIdentity  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

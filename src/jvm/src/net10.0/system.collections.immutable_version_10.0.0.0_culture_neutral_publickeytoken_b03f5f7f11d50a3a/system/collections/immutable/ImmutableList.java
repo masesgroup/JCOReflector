@@ -38,6 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.IImmutableList_1;
+import system.collections.immutable.IImmutableList_1Implementation;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.immutable.ImmutableList_1;
 
 
 /**
@@ -151,6 +158,446 @@ public class ImmutableList extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> int IndexOf(IImmutableList_1 list, T item, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexOf = null;
+        try {
+            retObjectIndexOf = classType.Invoke("IndexOf", list == null ? null : list.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance(), startIndex, count);
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexOfError = true;
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexOfClass = retObjectIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectIndexOfMethod = retObjectIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectIndexOfMethod.invoke(retObjectIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexOf_ToString);
+                    return retObjectIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int IndexOf(IImmutableList_1 list, T item, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexOf = null;
+        try {
+            retObjectIndexOf = classType.Invoke("IndexOf", list == null ? null : list.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance(), startIndex);
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexOfError = true;
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexOfClass = retObjectIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectIndexOfMethod = retObjectIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectIndexOfMethod.invoke(retObjectIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexOf_ToString);
+                    return retObjectIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int IndexOf(IImmutableList_1 list, T item, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexOf = null;
+        try {
+            retObjectIndexOf = classType.Invoke("IndexOf", list == null ? null : list.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance(), equalityComparer == null ? null : equalityComparer.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexOfError = true;
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexOfClass = retObjectIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectIndexOfMethod = retObjectIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectIndexOfMethod.invoke(retObjectIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexOf_ToString);
+                    return retObjectIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int IndexOf(IImmutableList_1 list, T item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexOf = null;
+        try {
+            retObjectIndexOf = classType.Invoke("IndexOf", list == null ? null : list.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportIndexOfError = true;
+            java.lang.String retObjectIndexOf_ToString = retObjectIndexOf == null ? "null" : retObjectIndexOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectIndexOfClass = retObjectIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectIndexOfMethod = retObjectIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectIndexOfMethod.invoke(retObjectIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectIndexOf_ToString);
+                    return retObjectIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null", retObjectIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int LastIndexOf(IImmutableList_1 list, T item, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastIndexOf = null;
+        try {
+            retObjectLastIndexOf = classType.Invoke("LastIndexOf", list == null ? null : list.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance(), startIndex, count);
+            return (int)retObjectLastIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportLastIndexOfError = true;
+            java.lang.String retObjectLastIndexOf_ToString = retObjectLastIndexOf == null ? "null" : retObjectLastIndexOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLastIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLastIndexOfClass = retObjectLastIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectLastIndexOfMethod = retObjectLastIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectLastIndexOfMethod.invoke(retObjectLastIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLastIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectLastIndexOf_ToString);
+                    return retObjectLastIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLastIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null", retObjectLastIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLastIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int LastIndexOf(IImmutableList_1 list, T item, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastIndexOf = null;
+        try {
+            retObjectLastIndexOf = classType.Invoke("LastIndexOf", list == null ? null : list.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance(), startIndex);
+            return (int)retObjectLastIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportLastIndexOfError = true;
+            java.lang.String retObjectLastIndexOf_ToString = retObjectLastIndexOf == null ? "null" : retObjectLastIndexOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLastIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLastIndexOfClass = retObjectLastIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectLastIndexOfMethod = retObjectLastIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectLastIndexOfMethod.invoke(retObjectLastIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLastIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectLastIndexOf_ToString);
+                    return retObjectLastIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLastIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null", retObjectLastIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLastIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int LastIndexOf(IImmutableList_1 list, T item, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastIndexOf = null;
+        try {
+            retObjectLastIndexOf = classType.Invoke("LastIndexOf", list == null ? null : list.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance(), equalityComparer == null ? null : equalityComparer.getJCOInstance());
+            return (int)retObjectLastIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportLastIndexOfError = true;
+            java.lang.String retObjectLastIndexOf_ToString = retObjectLastIndexOf == null ? "null" : retObjectLastIndexOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLastIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLastIndexOfClass = retObjectLastIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectLastIndexOfMethod = retObjectLastIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectLastIndexOfMethod.invoke(retObjectLastIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLastIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectLastIndexOf_ToString);
+                    return retObjectLastIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLastIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null", retObjectLastIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLastIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int LastIndexOf(IImmutableList_1 list, T item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastIndexOf = null;
+        try {
+            retObjectLastIndexOf = classType.Invoke("LastIndexOf", list == null ? null : list.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance());
+            return (int)retObjectLastIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportLastIndexOfError = true;
+            java.lang.String retObjectLastIndexOf_ToString = retObjectLastIndexOf == null ? "null" : retObjectLastIndexOf.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectLastIndexOf != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectLastIndexOfClass = retObjectLastIndexOf.getClass();
+                    // java.lang.reflect.Method retObjectLastIndexOfMethod = retObjectLastIndexOfClass.getMethod("intValue");
+                    // return (int)retObjectLastIndexOfMethod.invoke(retObjectLastIndexOf);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectLastIndexOfNumber = java.text.NumberFormat.getInstance().parse(retObjectLastIndexOf_ToString);
+                    return retObjectLastIndexOfNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportLastIndexOfError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null", retObjectLastIndexOf_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportLastIndexOfError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IImmutableList_1 Remove(IImmutableList_1 list, T value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemove = null;
+        try {
+            retObjectRemove = classType.Invoke("Remove", list == null ? null : list.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objRemove = (JCObject)retObjectRemove;
+            return new IImmutableList_1Implementation(objRemove);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IImmutableList_1 RemoveRange(IImmutableList_1 list, IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveRange = null;
+        try {
+            retObjectRemoveRange = classType.Invoke("RemoveRange", list == null ? null : list.getJCOInstance(), items == null ? null : items.getJCOInstance());
+            JCObject objRemoveRange = (JCObject)retObjectRemoveRange;
+            return new IImmutableList_1Implementation(objRemoveRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveRange != null ? retObjectRemoveRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IImmutableList_1 Replace(IImmutableList_1 list, T oldValue, T newValue) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplace = null;
+        try {
+            retObjectReplace = classType.Invoke("Replace", list == null ? null : list.getJCOInstance(), oldValue == null ? null : ((IJCOBridgeReflected)oldValue).getJCOInstance(), newValue == null ? null : ((IJCOBridgeReflected)newValue).getJCOInstance());
+            JCObject objReplace = (JCObject)retObjectReplace;
+            return new IImmutableList_1Implementation(objReplace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableList_1 Create() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableList_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableList_1 Create(T item) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableList_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableList_1 Create(T... items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", items == null ? null : toObjectFromArray(items));
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableList_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableList_1 CreateRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", items == null ? null : items.getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableList_1(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ImmutableList_1 ToImmutableList(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableList = null;
+        try {
+            retObjectToImmutableList = classType.Invoke("ToImmutableList", source == null ? null : source.getJCOInstance());
+            JCObject objToImmutableList = (JCObject)retObjectToImmutableList;
+            return new ImmutableList_1(objToImmutableList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableList != null ? retObjectToImmutableList.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -59,7 +59,7 @@ import system.directoryservices.protocols.DsmlResponseOrder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DsmlRequestDocument extends DsmlDocument  {
+public class DsmlRequestDocument extends system.directoryservices.protocols.DsmlDocument  {
     /**
      * Fully assembly qualified name: System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

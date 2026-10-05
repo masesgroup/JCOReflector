@@ -55,7 +55,7 @@ import system.codedom.CodeAttributeArgumentCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodeAttributeArgumentCollection extends CollectionBase  {
+public class CodeAttributeArgumentCollection extends system.collections.CollectionBase  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

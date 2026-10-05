@@ -41,7 +41,10 @@ import java.util.ArrayList;
 import system.activities.Activity;
 import system.activities.validation.ValidationResults;
 import system.activities.validation.ValidationSettings;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.activities.WorkflowIdentity;
+import system.collections.objectmodel.Collection_1;
 import system.xml.linq.XName;
 
 
@@ -194,6 +197,21 @@ public class WorkflowService extends NetObject  {
         }
     }
 
+    public IDictionary_2 GetContractDescriptions() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContractDescriptions = null;
+        try {
+            retObjectGetContractDescriptions = classInstance.Invoke("GetContractDescriptions");
+            JCObject objGetContractDescriptions = (JCObject)retObjectGetContractDescriptions;
+            return new IDictionary_2Implementation(objGetContractDescriptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContractDescriptions != null ? retObjectGetContractDescriptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -267,6 +285,51 @@ public class WorkflowService extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefinitionIdentity", DefinitionIdentity == null ? null : DefinitionIdentity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getUpdateMaps() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateMaps = null;
+        try {
+            retObjectUpdateMaps = classInstance.Get("UpdateMaps");
+            JCObject val = (JCObject)retObjectUpdateMaps;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateMaps != null ? retObjectUpdateMaps.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getEndpoints() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpoints = null;
+        try {
+            retObjectEndpoints = classInstance.Get("Endpoints");
+            JCObject val = (JCObject)retObjectEndpoints;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpoints != null ? retObjectEndpoints.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getImplementedContracts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementedContracts = null;
+        try {
+            retObjectImplementedContracts = classInstance.Get("ImplementedContracts");
+            JCObject val = (JCObject)retObjectImplementedContracts;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementedContracts != null ? retObjectImplementedContracts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

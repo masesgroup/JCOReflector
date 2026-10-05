@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.io.TextWriter;
 import system.web.HttpContext;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -207,6 +209,21 @@ public class RenderTraceListener extends NetObject  {
     
     // Properties section
     
+    public static IList_1 getListenerFactories() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListenerFactories = null;
+        try {
+            retObjectListenerFactories = classType.Get("ListenerFactories");
+            JCObject val = (JCObject)retObjectListenerFactories;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenerFactories != null ? retObjectListenerFactories.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

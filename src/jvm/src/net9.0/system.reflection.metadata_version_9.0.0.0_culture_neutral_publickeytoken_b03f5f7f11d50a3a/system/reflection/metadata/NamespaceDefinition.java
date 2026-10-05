@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.NamespaceDefinitionHandle;
 import system.reflection.metadata.StringHandle;
 
@@ -55,7 +56,7 @@ import system.reflection.metadata.StringHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NamespaceDefinition extends ValueType  {
+public class NamespaceDefinition extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -160,6 +161,51 @@ public class NamespaceDefinition extends ValueType  {
     
     // Properties section
     
+    public ImmutableArray_1 getExportedTypes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportedTypes = null;
+        try {
+            retObjectExportedTypes = classInstance.Get("ExportedTypes");
+            JCObject val = (JCObject)retObjectExportedTypes;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportedTypes != null ? retObjectExportedTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 getNamespaceDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceDefinitions = null;
+        try {
+            retObjectNamespaceDefinitions = classInstance.Get("NamespaceDefinitions");
+            JCObject val = (JCObject)retObjectNamespaceDefinitions;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespaceDefinitions != null ? retObjectNamespaceDefinitions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 getTypeDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeDefinitions = null;
+        try {
+            retObjectTypeDefinitions = classInstance.Get("TypeDefinitions");
+            JCObject val = (JCObject)retObjectTypeDefinitions;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeDefinitions != null ? retObjectTypeDefinitions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NamespaceDefinitionHandle getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

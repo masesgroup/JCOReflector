@@ -43,6 +43,7 @@ import system.io.compression.ZipArchiveMode;
 import system.text.Encoding;
 import system.io.compression.ZipArchiveEntry;
 import system.io.compression.CompressionLevel;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -270,6 +271,21 @@ public class ZipArchive extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getEntries() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntries = null;
+        try {
+            retObjectEntries = classInstance.Get("Entries");
+            JCObject val = (JCObject)retObjectEntries;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntries != null ? retObjectEntries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ZipArchiveMode getMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

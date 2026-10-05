@@ -53,7 +53,7 @@ import system.xml.schema.XmlSchemaAnnotated;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaXPath extends XmlSchemaAnnotated  {
+public class XmlSchemaXPath extends system.xml.schema.XmlSchemaAnnotated  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

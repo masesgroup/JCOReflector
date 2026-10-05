@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.EventArgs;
 import system.activities.presentation.services.ModelChangeInfo;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -54,7 +56,7 @@ import system.activities.presentation.services.ModelChangeInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModelChangedEventArgs extends EventArgs  {
+public class ModelChangedEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -167,6 +169,51 @@ public class ModelChangedEventArgs extends EventArgs  {
             return new ModelChangeInfo(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModelChangeInfo != null ? retObjectModelChangeInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getItemsAdded() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsAdded = null;
+        try {
+            retObjectItemsAdded = classInstance.Get("ItemsAdded");
+            JCObject val = (JCObject)retObjectItemsAdded;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsAdded != null ? retObjectItemsAdded.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getItemsRemoved() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsRemoved = null;
+        try {
+            retObjectItemsRemoved = classInstance.Get("ItemsRemoved");
+            JCObject val = (JCObject)retObjectItemsRemoved;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsRemoved != null ? retObjectItemsRemoved.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getPropertiesChanged() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertiesChanged = null;
+        try {
+            retObjectPropertiesChanged = classInstance.Get("PropertiesChanged");
+            JCObject val = (JCObject)retObjectPropertiesChanged;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertiesChanged != null ? retObjectPropertiesChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

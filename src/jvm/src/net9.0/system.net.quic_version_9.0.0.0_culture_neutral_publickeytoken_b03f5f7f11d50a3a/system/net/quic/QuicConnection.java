@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.threading.tasks.ValueTask;
 import system.threading.CancellationToken;
+import system.threading.tasks.ValueTask_1;
+import system.net.quic.QuicClientConnectionOptions;
+import system.net.quic.QuicStreamType;
 import system.net.IPEndPoint;
 import system.net.security.SslApplicationProtocol;
 import system.security.cryptography.x509certificates.X509Certificate;
@@ -183,6 +186,51 @@ public class QuicConnection extends NetObject  {
             return new ValueTask(objDisposeAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 ConnectAsync(QuicClientConnectionOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConnectAsync = null;
+        try {
+            retObjectConnectAsync = classType.Invoke("ConnectAsync", options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objConnectAsync = (JCObject)retObjectConnectAsync;
+            return new ValueTask_1(objConnectAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectAsync != null ? retObjectConnectAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 AcceptInboundStreamAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptInboundStreamAsync = null;
+        try {
+            retObjectAcceptInboundStreamAsync = classInstance.Invoke("AcceptInboundStreamAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAcceptInboundStreamAsync = (JCObject)retObjectAcceptInboundStreamAsync;
+            return new ValueTask_1(objAcceptInboundStreamAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptInboundStreamAsync != null ? retObjectAcceptInboundStreamAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 OpenOutboundStreamAsync(QuicStreamType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenOutboundStreamAsync = null;
+        try {
+            retObjectOpenOutboundStreamAsync = classInstance.Invoke("OpenOutboundStreamAsync", type == null ? null : type.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objOpenOutboundStreamAsync = (JCObject)retObjectOpenOutboundStreamAsync;
+            return new ValueTask_1(objOpenOutboundStreamAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenOutboundStreamAsync != null ? retObjectOpenOutboundStreamAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

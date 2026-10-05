@@ -43,6 +43,7 @@ import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.ITaskItem;
 import microsoft.build.framework.ITaskItemImplementation;
 import microsoft.build.utilities.DependencyFilter;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -452,6 +453,21 @@ public class CanonicalTrackedOutputFiles extends NetObject  {
     
     // Properties section
     
+    public Dictionary_2 getDependencyTable() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDependencyTable = null;
+        try {
+            retObjectDependencyTable = classInstance.Get("DependencyTable");
+            JCObject val = (JCObject)retObjectDependencyTable;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDependencyTable != null ? retObjectDependencyTable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

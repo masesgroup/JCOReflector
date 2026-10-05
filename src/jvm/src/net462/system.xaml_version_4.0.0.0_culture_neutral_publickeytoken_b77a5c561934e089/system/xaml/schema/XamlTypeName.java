@@ -38,10 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xaml.XamlType;
 import system.xaml.IXamlNamespaceResolver;
 import system.xaml.IXamlNamespaceResolverImplementation;
 import system.xaml.schema.XamlTypeName;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xaml.INamespacePrefixLookup;
 import system.xaml.INamespacePrefixLookupImplementation;
 
@@ -171,6 +175,16 @@ public class XamlTypeName extends NetObject  {
         }
     }
 
+    public XamlTypeName(java.lang.String xamlNamespace, java.lang.String name, IEnumerable_1 typeArguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(xamlNamespace, name, typeArguments == null ? null : typeArguments.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XamlTypeName(XamlType xamlType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException {
         try {
             // add reference to assemblyName.dll file
@@ -194,6 +208,49 @@ public class XamlTypeName extends NetObject  {
             return (boolean)retObjectTryParse;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParseList(java.lang.String typeNameList, IXamlNamespaceResolver namespaceResolver, JCORefOut<IList_1> result) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseList = null;
+        try {
+            retObjectTryParseList = classType.Invoke("TryParseList", typeNameList, namespaceResolver == null ? null : namespaceResolver.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseList;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseList != null ? retObjectTryParseList.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 ParseList(java.lang.String typeNameList, IXamlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseList = null;
+        try {
+            retObjectParseList = classType.Invoke("ParseList", typeNameList, namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            JCObject objParseList = (JCObject)retObjectParseList;
+            return new IList_1Implementation(objParseList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseList != null ? retObjectParseList.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String ToString(IList_1 typeNameList, INamespacePrefixLookup prefixLookup) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToString = null;
+        try {
+            retObjectToString = classType.Invoke("ToString", typeNameList == null ? null : typeNameList.getJCOInstance(), prefixLookup == null ? null : prefixLookup.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,6 +289,21 @@ public class XamlTypeName extends NetObject  {
     
     // Properties section
     
+    public IList_1 getTypeArguments() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeArguments = null;
+        try {
+            retObjectTypeArguments = classInstance.Get("TypeArguments");
+            JCObject val = (JCObject)retObjectTypeArguments;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeArguments != null ? retObjectTypeArguments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

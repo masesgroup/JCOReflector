@@ -41,6 +41,12 @@ import java.util.ArrayList;
 import system.text.json.serialization.metadata.JsonPropertyInfo;
 import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.text.json.JsonSerializerOptions;
+import system.text.json.serialization.metadata.JsonTypeInfo_1;
+import system.Action_1;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.Func_1;
+import system.Nullable_1;
 import system.reflection.ICustomAttributeProvider;
 import system.reflection.ICustomAttributeProviderImplementation;
 import system.text.json.serialization.JsonConverter;
@@ -191,6 +197,21 @@ public class JsonTypeInfo extends NetObject  {
         }
     }
 
+    public static <T extends IJCOBridgeReflected> JsonTypeInfo_1 CreateJsonTypeInfo(JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateJsonTypeInfo = null;
+        try {
+            retObjectCreateJsonTypeInfo = classType.Invoke("CreateJsonTypeInfo", options == null ? null : options.getJCOInstance());
+            JCObject objCreateJsonTypeInfo = (JCObject)retObjectCreateJsonTypeInfo;
+            return new JsonTypeInfo_1(objCreateJsonTypeInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateJsonTypeInfo != null ? retObjectCreateJsonTypeInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void MakeReadOnly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -224,6 +245,216 @@ public class JsonTypeInfo extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReadOnly", IsReadOnly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Action_1 getOnDeserialized() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnDeserialized = null;
+        try {
+            retObjectOnDeserialized = classInstance.Get("OnDeserialized");
+            return (Action_1)retObjectOnDeserialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectOnDeserialized != null ? retObjectOnDeserialized.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOnDeserialized(Action_1 OnDeserialized) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OnDeserialized", OnDeserialized);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Action_1 getOnDeserializing() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnDeserializing = null;
+        try {
+            retObjectOnDeserializing = classInstance.Get("OnDeserializing");
+            return (Action_1)retObjectOnDeserializing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectOnDeserializing != null ? retObjectOnDeserializing.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOnDeserializing(Action_1 OnDeserializing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OnDeserializing", OnDeserializing);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Action_1 getOnSerialized() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnSerialized = null;
+        try {
+            retObjectOnSerialized = classInstance.Get("OnSerialized");
+            return (Action_1)retObjectOnSerialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectOnSerialized != null ? retObjectOnSerialized.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOnSerialized(Action_1 OnSerialized) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OnSerialized", OnSerialized);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Action_1 getOnSerializing() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnSerializing = null;
+        try {
+            retObjectOnSerializing = classInstance.Get("OnSerializing");
+            return (Action_1)retObjectOnSerializing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectOnSerializing != null ? retObjectOnSerializing.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOnSerializing(Action_1 OnSerializing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("OnSerializing", OnSerializing);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getProperties() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_1 getCreateObject() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObject = null;
+        try {
+            retObjectCreateObject = classInstance.Get("CreateObject");
+            return (Func_1)retObjectCreateObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectCreateObject != null ? retObjectCreateObject.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCreateObject(Func_1 CreateObject) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CreateObject", CreateObject);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getNumberHandling() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberHandling = null;
+        try {
+            retObjectNumberHandling = classInstance.Get("NumberHandling");
+            JCObject val = (JCObject)retObjectNumberHandling;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumberHandling != null ? retObjectNumberHandling.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setNumberHandling(Nullable_1 NumberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("NumberHandling", NumberHandling == null ? null : NumberHandling.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getPreferredPropertyObjectCreationHandling() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredPropertyObjectCreationHandling = null;
+        try {
+            retObjectPreferredPropertyObjectCreationHandling = classInstance.Get("PreferredPropertyObjectCreationHandling");
+            JCObject val = (JCObject)retObjectPreferredPropertyObjectCreationHandling;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreferredPropertyObjectCreationHandling != null ? retObjectPreferredPropertyObjectCreationHandling.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPreferredPropertyObjectCreationHandling(Nullable_1 PreferredPropertyObjectCreationHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PreferredPropertyObjectCreationHandling", PreferredPropertyObjectCreationHandling == null ? null : PreferredPropertyObjectCreationHandling.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getUnmappedMemberHandling() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnmappedMemberHandling = null;
+        try {
+            retObjectUnmappedMemberHandling = classInstance.Get("UnmappedMemberHandling");
+            JCObject val = (JCObject)retObjectUnmappedMemberHandling;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnmappedMemberHandling != null ? retObjectUnmappedMemberHandling.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setUnmappedMemberHandling(Nullable_1 UnmappedMemberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("UnmappedMemberHandling", UnmappedMemberHandling == null ? null : UnmappedMemberHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

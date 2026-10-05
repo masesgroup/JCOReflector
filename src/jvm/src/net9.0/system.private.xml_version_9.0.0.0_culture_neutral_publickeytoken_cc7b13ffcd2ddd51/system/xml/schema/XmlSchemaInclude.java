@@ -54,7 +54,7 @@ import system.xml.schema.XmlSchemaAnnotation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaInclude extends XmlSchemaExternal  {
+public class XmlSchemaInclude extends system.xml.schema.XmlSchemaExternal  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

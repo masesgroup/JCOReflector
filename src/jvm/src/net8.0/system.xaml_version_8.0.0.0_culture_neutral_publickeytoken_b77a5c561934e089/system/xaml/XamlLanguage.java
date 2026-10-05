@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.xaml.XamlDirective;
 import system.xaml.XamlType;
 
@@ -157,6 +160,66 @@ public class XamlLanguage extends NetObject  {
     
     // Properties section
     
+    public static IList_1 getXamlNamespaces() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXamlNamespaces = null;
+        try {
+            retObjectXamlNamespaces = classType.Get("XamlNamespaces");
+            JCObject val = (JCObject)retObjectXamlNamespaces;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXamlNamespaces != null ? retObjectXamlNamespaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 getXmlNamespaces() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlNamespaces = null;
+        try {
+            retObjectXmlNamespaces = classType.Get("XmlNamespaces");
+            JCObject val = (JCObject)retObjectXmlNamespaces;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlNamespaces != null ? retObjectXmlNamespaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 getAllDirectives() throws Throwable, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllDirectives = null;
+        try {
+            retObjectAllDirectives = classType.Get("AllDirectives");
+            JCObject val = (JCObject)retObjectAllDirectives;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllDirectives != null ? retObjectAllDirectives.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 getAllTypes() throws Throwable, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllTypes = null;
+        try {
+            retObjectAllTypes = classType.Get("AllTypes");
+            JCObject val = (JCObject)retObjectAllTypes;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllTypes != null ? retObjectAllTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static XamlDirective getArguments() throws Throwable, system.ArgumentException, system.NotSupportedException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

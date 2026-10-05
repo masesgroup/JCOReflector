@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.security.cryptography.AsnEncodedData;
 import system.security.cryptography.x509certificates.X500DistinguishedName;
 import system.security.cryptography.x509certificates.X500DistinguishedNameFlags;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.security.cryptography.x509certificates.X500DistinguishedNameFlags;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X500DistinguishedName extends AsnEncodedData  {
+public class X500DistinguishedName extends system.security.cryptography.AsnEncodedData  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -206,6 +208,21 @@ public class X500DistinguishedName extends AsnEncodedData  {
     
     // Methods section
     
+    public IEnumerable_1 EnumerateRelativeDistinguishedNames(boolean reversed) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateRelativeDistinguishedNames = null;
+        try {
+            retObjectEnumerateRelativeDistinguishedNames = classInstance.Invoke("EnumerateRelativeDistinguishedNames", reversed);
+            JCObject objEnumerateRelativeDistinguishedNames = (JCObject)retObjectEnumerateRelativeDistinguishedNames;
+            return new IEnumerable_1Implementation(objEnumerateRelativeDistinguishedNames);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateRelativeDistinguishedNames != null ? retObjectEnumerateRelativeDistinguishedNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String Decode(X500DistinguishedNameFlags flag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

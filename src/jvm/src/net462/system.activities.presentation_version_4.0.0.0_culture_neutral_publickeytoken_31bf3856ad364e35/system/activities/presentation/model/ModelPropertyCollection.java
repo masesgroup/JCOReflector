@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.activities.presentation.model.ModelMemberCollection_2;
+import system.activities.presentation.model.ModelProperty;
+import system.windows.DependencyProperty;
 
 
 /**
@@ -52,7 +55,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModelPropertyCollection extends NetObjectEnumerable  {
+public class ModelPropertyCollection extends system.activities.presentation.model.ModelMemberCollection_2<ModelProperty, DependencyProperty>  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

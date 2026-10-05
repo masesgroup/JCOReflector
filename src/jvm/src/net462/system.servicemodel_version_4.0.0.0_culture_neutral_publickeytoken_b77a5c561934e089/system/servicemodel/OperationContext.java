@@ -40,12 +40,16 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.IContextChannel;
 import system.servicemodel.IContextChannelImplementation;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.security.claims.ClaimsPrincipal;
 import system.servicemodel.channels.MessageHeaders;
 import system.servicemodel.channels.MessageProperties;
 import system.servicemodel.channels.MessageVersion;
 import system.servicemodel.channels.RequestContext;
 import system.servicemodel.dispatcher.EndpointDispatcher;
+import system.servicemodel.IExtensionCollection_1;
+import system.servicemodel.IExtensionCollection_1Implementation;
 import system.servicemodel.InstanceContext;
 import system.servicemodel.OperationContext;
 import system.servicemodel.ServiceHostBase;
@@ -218,6 +222,21 @@ public class OperationContext extends NetObject  {
         }
     }
 
+    public ICollection_1 getSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportingTokens = null;
+        try {
+            retObjectSupportingTokens = classInstance.Get("SupportingTokens");
+            JCObject val = (JCObject)retObjectSupportingTokens;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportingTokens != null ? retObjectSupportingTokens.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ClaimsPrincipal getClaimsPrincipal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -378,6 +397,21 @@ public class OperationContext extends NetObject  {
             return new IContextChannelImplementation(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannel != null ? retObjectChannel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IExtensionCollection_1 getExtensions() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtensions = null;
+        try {
+            retObjectExtensions = classInstance.Get("Extensions");
+            JCObject val = (JCObject)retObjectExtensions;
+            return new IExtensionCollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensions != null ? retObjectExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

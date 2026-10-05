@@ -38,10 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.ContentElement;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.Point;
 import system.windows.UIElement;
+import system.collections.generic.IEnumerator_1;
+import system.collections.generic.IEnumerator_1Implementation;
 
 
 /**
@@ -144,6 +148,21 @@ public class IContentHostImplementation extends NetObject implements IContentHos
 
     // Methods section
     
+    public ReadOnlyCollection_1 GetRectangles(ContentElement child) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRectangles = null;
+        try {
+            retObjectGetRectangles = classInstance.Invoke("GetRectangles", child == null ? null : child.getJCOInstance());
+            JCObject objGetRectangles = (JCObject)retObjectGetRectangles;
+            return new ReadOnlyCollection_1(objGetRectangles);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRectangles != null ? retObjectGetRectangles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IInputElement InputHitTest(Point point) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -173,6 +192,21 @@ public class IContentHostImplementation extends NetObject implements IContentHos
     
     // Properties section
     
+    public IEnumerator_1 getHostedElements() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostedElements = null;
+        try {
+            retObjectHostedElements = classInstance.Get("HostedElements");
+            JCObject val = (JCObject)retObjectHostedElements;
+            return new IEnumerator_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostedElements != null ? retObjectHostedElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.x509certificates.X509Extension;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.security.cryptography.AsnEncodedData;
 
 
@@ -54,7 +56,7 @@ import system.security.cryptography.AsnEncodedData;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509SubjectAlternativeNameExtension extends X509Extension  {
+public class X509SubjectAlternativeNameExtension extends system.security.cryptography.x509certificates.X509Extension  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -171,6 +173,36 @@ public class X509SubjectAlternativeNameExtension extends X509Extension  {
     
     // Methods section
     
+    public IEnumerable_1 EnumerateIPAddresses() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateIPAddresses = null;
+        try {
+            retObjectEnumerateIPAddresses = classInstance.Invoke("EnumerateIPAddresses");
+            JCObject objEnumerateIPAddresses = (JCObject)retObjectEnumerateIPAddresses;
+            return new IEnumerable_1Implementation(objEnumerateIPAddresses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateIPAddresses != null ? retObjectEnumerateIPAddresses.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateDnsNames() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateDnsNames = null;
+        try {
+            retObjectEnumerateDnsNames = classInstance.Invoke("EnumerateDnsNames");
+            JCObject objEnumerateDnsNames = (JCObject)retObjectEnumerateDnsNames;
+            return new IEnumerable_1Implementation(objEnumerateDnsNames);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateDnsNames != null ? retObjectEnumerateDnsNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

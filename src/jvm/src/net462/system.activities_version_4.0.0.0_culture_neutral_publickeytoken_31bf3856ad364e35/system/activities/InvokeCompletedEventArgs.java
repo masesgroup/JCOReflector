@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.AsyncCompletedEventArgs;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.componentmodel.AsyncCompletedEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InvokeCompletedEventArgs extends AsyncCompletedEventArgs  {
+public class InvokeCompletedEventArgs extends system.componentmodel.AsyncCompletedEventArgs  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -158,6 +160,31 @@ public class InvokeCompletedEventArgs extends AsyncCompletedEventArgs  {
     
     // Properties section
     
+    public IDictionary_2 getOutputs() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputs = null;
+        try {
+            retObjectOutputs = classInstance.Get("Outputs");
+            JCObject val = (JCObject)retObjectOutputs;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputs != null ? retObjectOutputs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setOutputs(IDictionary_2 Outputs) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Outputs", Outputs == null ? null : Outputs.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

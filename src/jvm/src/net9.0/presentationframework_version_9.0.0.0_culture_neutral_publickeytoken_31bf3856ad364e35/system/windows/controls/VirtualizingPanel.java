@@ -62,7 +62,7 @@ import system.windows.controls.primitives.IItemContainerGeneratorImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class VirtualizingPanel extends Panel  {
+public class VirtualizingPanel extends system.windows.controls.Panel  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

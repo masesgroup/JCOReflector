@@ -54,7 +54,7 @@ import system.windows.media.animation.KeyTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DiscreteInt64KeyFrame extends Int64KeyFrame  {
+public class DiscreteInt64KeyFrame extends system.windows.media.animation.Int64KeyFrame  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

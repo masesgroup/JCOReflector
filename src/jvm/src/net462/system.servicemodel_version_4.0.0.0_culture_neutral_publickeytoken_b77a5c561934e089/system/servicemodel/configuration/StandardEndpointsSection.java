@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.configuration.ConfigurationSection;
 import system.servicemodel.configuration.StandardEndpointsSection;
 import system.configuration.Configuration;
+import system.collections.generic.List_1;
 import system.servicemodel.configuration.EndpointCollectionElement;
 import system.servicemodel.configuration.ServiceMetadataEndpointCollectionElement;
 
@@ -57,7 +58,7 @@ import system.servicemodel.configuration.ServiceMetadataEndpointCollectionElemen
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StandardEndpointsSection extends ConfigurationSection  {
+public class StandardEndpointsSection extends system.configuration.ConfigurationSection  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -183,6 +184,21 @@ public class StandardEndpointsSection extends ConfigurationSection  {
     
     // Properties section
     
+    public List_1 getEndpointCollections() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointCollections = null;
+        try {
+            retObjectEndpointCollections = classInstance.Get("EndpointCollections");
+            JCObject val = (JCObject)retObjectEndpointCollections;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpointCollections != null ? retObjectEndpointCollections.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ServiceMetadataEndpointCollectionElement getMexEndpoint() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -41,12 +41,14 @@ import java.util.ArrayList;
 import system.workflow.runtime.hosting.WorkflowPersistenceService;
 import system.collections.specialized.NameValueCollection;
 import system.TimeSpan;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.transactions.Transaction;
 import system.Guid;
-import system.workflow.runtime.IPendingWork;
-import system.workflow.runtime.IPendingWorkImplementation;
 
 
 /**
@@ -61,7 +63,7 @@ import system.workflow.runtime.IPendingWorkImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlWorkflowPersistenceService extends WorkflowPersistenceService implements IPendingWork {
+public class SqlWorkflowPersistenceService extends system.workflow.runtime.hosting.WorkflowPersistenceService  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -192,6 +194,36 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
     
     // Methods section
     
+    public IEnumerable_1 GetAllWorkflows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NullReferenceException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.sqltypes.SqlTypeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllWorkflows = null;
+        try {
+            retObjectGetAllWorkflows = classInstance.Invoke("GetAllWorkflows");
+            JCObject objGetAllWorkflows = (JCObject)retObjectGetAllWorkflows;
+            return new IEnumerable_1Implementation(objGetAllWorkflows);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllWorkflows != null ? retObjectGetAllWorkflows.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 LoadExpiredTimerWorkflowIds() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.sqltypes.SqlTypeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadExpiredTimerWorkflowIds = null;
+        try {
+            retObjectLoadExpiredTimerWorkflowIds = classInstance.Invoke("LoadExpiredTimerWorkflowIds");
+            JCObject objLoadExpiredTimerWorkflowIds = (JCObject)retObjectLoadExpiredTimerWorkflowIds;
+            return new IList_1Implementation(objLoadExpiredTimerWorkflowIds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadExpiredTimerWorkflowIds != null ? retObjectLoadExpiredTimerWorkflowIds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIPendingWork method available in IPendingWork to obtain an object with an invocable method

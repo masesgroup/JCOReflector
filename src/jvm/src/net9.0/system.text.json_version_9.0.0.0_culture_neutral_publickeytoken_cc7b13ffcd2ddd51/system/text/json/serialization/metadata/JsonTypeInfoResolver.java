@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.text.json.serialization.metadata.IJsonTypeInfoResolver;
 import system.text.json.serialization.metadata.IJsonTypeInfoResolverImplementation;
+import system.Action_1;
 
 
 /**
@@ -163,6 +164,21 @@ public class JsonTypeInfoResolver extends NetObject  {
             return new IJsonTypeInfoResolverImplementation(objCombine);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IJsonTypeInfoResolver WithAddedModifier(IJsonTypeInfoResolver resolver, Action_1 modifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithAddedModifier = null;
+        try {
+            retObjectWithAddedModifier = classType.Invoke("WithAddedModifier", resolver == null ? null : resolver.getJCOInstance(), modifier);
+            JCObject objWithAddedModifier = (JCObject)retObjectWithAddedModifier;
+            return new IJsonTypeInfoResolverImplementation(objWithAddedModifier);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithAddedModifier != null ? retObjectWithAddedModifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

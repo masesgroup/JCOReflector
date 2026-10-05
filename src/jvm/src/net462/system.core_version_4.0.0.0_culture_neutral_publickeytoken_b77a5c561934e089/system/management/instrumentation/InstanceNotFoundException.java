@@ -52,7 +52,7 @@ import system.management.instrumentation.InstrumentationException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InstanceNotFoundException extends InstrumentationException {
+public class InstanceNotFoundException extends system.management.instrumentation.InstrumentationException {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.Guid;
 import system.runtime.durableinstancing.InstanceKeyState;
 import system.runtime.durableinstancing.InstanceValueConsistency;
@@ -160,6 +162,31 @@ public class InstanceKeyView extends NetObject  {
     
     // Properties section
     
+    public IDictionary_2 getInstanceKeyMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKeyMetadata = null;
+        try {
+            retObjectInstanceKeyMetadata = classInstance.Get("InstanceKeyMetadata");
+            JCObject val = (JCObject)retObjectInstanceKeyMetadata;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKeyMetadata != null ? retObjectInstanceKeyMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInstanceKeyMetadata(IDictionary_2 InstanceKeyMetadata) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InstanceKeyMetadata", InstanceKeyMetadata == null ? null : InstanceKeyMetadata.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getInstanceKey() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

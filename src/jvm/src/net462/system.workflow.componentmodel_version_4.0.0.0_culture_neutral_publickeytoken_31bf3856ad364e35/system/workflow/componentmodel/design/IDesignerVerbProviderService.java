@@ -39,6 +39,7 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.workflow.componentmodel.design.IDesignerVerbProvider;
 import system.workflow.componentmodel.design.IDesignerVerbProviderImplementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -125,6 +126,8 @@ public interface IDesignerVerbProviderService extends IJCOBridgeReflected {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getVerbProviders() throws Throwable;
+
 
 
     // Instance Events section

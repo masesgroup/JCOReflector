@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.security.cryptography.pkcs.Pkcs9AttributeObject;
 import system.security.cryptography.AsnEncodedData;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.security.cryptography.AsnEncodedData;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Pkcs9LocalKeyId extends Pkcs9AttributeObject  {
+public class Pkcs9LocalKeyId extends system.security.cryptography.pkcs.Pkcs9AttributeObject  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -185,6 +186,21 @@ public class Pkcs9LocalKeyId extends Pkcs9AttributeObject  {
     
     // Properties section
     
+    public ReadOnlyMemory_1 getKeyId() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyId = null;
+        try {
+            retObjectKeyId = classInstance.Get("KeyId");
+            JCObject val = (JCObject)retObjectKeyId;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyId != null ? retObjectKeyId.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

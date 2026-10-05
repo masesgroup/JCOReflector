@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.security.cryptography.x509certificates.X509Extension;
 import system.security.cryptography.AsnEncodedData;
 import system.security.cryptography.x509certificates.X509BasicConstraintsExtension;
+import system.Nullable_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.security.cryptography.x509certificates.X509BasicConstraintsExtensi
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509BasicConstraintsExtension extends X509Extension  {
+public class X509BasicConstraintsExtension extends system.security.cryptography.x509certificates.X509Extension  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -182,6 +183,21 @@ public class X509BasicConstraintsExtension extends X509Extension  {
     
     // Methods section
     
+    public static X509BasicConstraintsExtension CreateForCertificateAuthority(Nullable_1 pathLengthConstraint) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateForCertificateAuthority = null;
+        try {
+            retObjectCreateForCertificateAuthority = classType.Invoke("CreateForCertificateAuthority", pathLengthConstraint == null ? null : pathLengthConstraint.getJCOInstance());
+            JCObject objCreateForCertificateAuthority = (JCObject)retObjectCreateForCertificateAuthority;
+            return new X509BasicConstraintsExtension(objCreateForCertificateAuthority);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateForCertificateAuthority != null ? retObjectCreateForCertificateAuthority.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static X509BasicConstraintsExtension CreateForEndEntity(boolean critical) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

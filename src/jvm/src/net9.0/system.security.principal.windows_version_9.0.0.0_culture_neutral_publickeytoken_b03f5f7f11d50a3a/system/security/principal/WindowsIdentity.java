@@ -45,14 +45,14 @@ import system.security.principal.WindowsIdentity;
 import system.security.principal.TokenAccessLevels;
 import system.threading.tasks.Task;
 import microsoft.win32.safehandles.SafeAccessTokenHandle;
+import system.Func_1;
+import system.threading.tasks.Task_1;
 import system.Action;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.security.principal.IdentityReferenceCollection;
 import system.security.principal.SecurityIdentifier;
 import system.security.principal.TokenImpersonationLevel;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -67,7 +67,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WindowsIdentity extends ClaimsIdentity implements ISerializable, IDeserializationCallback, AutoCloseable {
+public class WindowsIdentity extends system.security.claims.ClaimsIdentity implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Security.Principal.Windows, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -263,6 +263,21 @@ public class WindowsIdentity extends ClaimsIdentity implements ISerializable, ID
         }
     }
 
+    public static Task RunImpersonatedAsync(SafeAccessTokenHandle safeAccessTokenHandle, Func_1 func) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.security.SecurityException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRunImpersonatedAsync = null;
+        try {
+            retObjectRunImpersonatedAsync = classType.Invoke("RunImpersonatedAsync", safeAccessTokenHandle == null ? null : safeAccessTokenHandle.getJCOInstance(), func);
+            JCObject objRunImpersonatedAsync = (JCObject)retObjectRunImpersonatedAsync;
+            return new Task(objRunImpersonatedAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRunImpersonatedAsync != null ? retObjectRunImpersonatedAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -370,6 +385,36 @@ public class WindowsIdentity extends ClaimsIdentity implements ISerializable, ID
             return new SafeAccessTokenHandle(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessToken != null ? retObjectAccessToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getDeviceClaims() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceClaims = null;
+        try {
+            retObjectDeviceClaims = classInstance.Get("DeviceClaims");
+            JCObject val = (JCObject)retObjectDeviceClaims;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeviceClaims != null ? retObjectDeviceClaims.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getUserClaims() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserClaims = null;
+        try {
+            retObjectUserClaims = classInstance.Get("UserClaims");
+            JCObject val = (JCObject)retObjectUserClaims;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserClaims != null ? retObjectUserClaims.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

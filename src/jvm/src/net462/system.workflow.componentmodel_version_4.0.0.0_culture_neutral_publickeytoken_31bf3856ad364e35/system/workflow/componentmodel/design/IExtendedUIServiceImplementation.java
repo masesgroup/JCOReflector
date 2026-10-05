@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.Dictionary_2;
 import system.componentmodel.ITypeDescriptorContext;
 import system.componentmodel.ITypeDescriptorContextImplementation;
 import system.Uri;
@@ -155,6 +156,21 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
             return (boolean)retObjectNavigateToProperty;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNavigateToProperty != null ? retObjectNavigateToProperty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 GetXsdProjectItemsInfo() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXsdProjectItemsInfo = null;
+        try {
+            retObjectGetXsdProjectItemsInfo = classInstance.Invoke("GetXsdProjectItemsInfo");
+            JCObject objGetXsdProjectItemsInfo = (JCObject)retObjectGetXsdProjectItemsInfo;
+            return new Dictionary_2(objGetXsdProjectItemsInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXsdProjectItemsInfo != null ? retObjectGetXsdProjectItemsInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

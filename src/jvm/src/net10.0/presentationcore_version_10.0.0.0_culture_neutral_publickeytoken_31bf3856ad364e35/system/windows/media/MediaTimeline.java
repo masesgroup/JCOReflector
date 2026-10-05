@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.animation.Timeline;
+import system.Nullable_1;
+import system.windows.Duration;
+import system.windows.media.animation.RepeatBehavior;
 import system.Uri;
 import system.windows.media.MediaClock;
 import system.windows.media.MediaTimeline;
@@ -56,7 +59,7 @@ import system.windows.media.MediaTimeline;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MediaTimeline extends Timeline  {
+public class MediaTimeline extends system.windows.media.animation.Timeline  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -154,6 +157,36 @@ public class MediaTimeline extends Timeline  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MediaTimeline(Nullable_1 beginTime, Duration duration, RepeatBehavior repeatBehavior) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(beginTime == null ? null : beginTime.getJCOInstance(), duration == null ? null : duration.getJCOInstance(), repeatBehavior == null ? null : repeatBehavior.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MediaTimeline(Nullable_1 beginTime, Duration duration) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(beginTime == null ? null : beginTime.getJCOInstance(), duration == null ? null : duration.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MediaTimeline(Nullable_1 beginTime) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(beginTime == null ? null : beginTime.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

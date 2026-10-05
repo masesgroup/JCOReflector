@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.modelbinding.ModelMetadataProvider;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.web.modelbinding.ModelMetadata;
+import system.Func_1;
 
 
 /**
@@ -54,7 +57,7 @@ import system.web.modelbinding.ModelMetadata;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssociatedMetadataProvider extends ModelMetadataProvider  {
+public class AssociatedMetadataProvider extends system.web.modelbinding.ModelMetadataProvider  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -153,6 +156,51 @@ public class AssociatedMetadataProvider extends ModelMetadataProvider  {
     
     // Methods section
     
+    public IEnumerable_1 GetMetadataForProperties(NetObject container, NetType containerType) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadataForProperties = null;
+        try {
+            retObjectGetMetadataForProperties = classInstance.Invoke("GetMetadataForProperties", container == null ? null : container.getJCOInstance(), containerType == null ? null : containerType.getJCOInstance());
+            JCObject objGetMetadataForProperties = (JCObject)retObjectGetMetadataForProperties;
+            return new IEnumerable_1Implementation(objGetMetadataForProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadataForProperties != null ? retObjectGetMetadataForProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModelMetadata GetMetadataForProperty(Func_1 modelAccessor, NetType containerType, java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NullReferenceException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadataForProperty = null;
+        try {
+            retObjectGetMetadataForProperty = classInstance.Invoke("GetMetadataForProperty", modelAccessor, containerType == null ? null : containerType.getJCOInstance(), propertyName);
+            JCObject objGetMetadataForProperty = (JCObject)retObjectGetMetadataForProperty;
+            return new ModelMetadata(objGetMetadataForProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadataForProperty != null ? retObjectGetMetadataForProperty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ModelMetadata GetMetadataForType(Func_1 modelAccessor, NetType modelType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadataForType = null;
+        try {
+            retObjectGetMetadataForType = classInstance.Invoke("GetMetadataForType", modelAccessor, modelType == null ? null : modelType.getJCOInstance());
+            JCObject objGetMetadataForType = (JCObject)retObjectGetMetadataForType;
+            return new ModelMetadata(objGetMetadataForType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadataForType != null ? retObjectGetMetadataForType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

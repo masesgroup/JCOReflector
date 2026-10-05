@@ -42,6 +42,7 @@ import system.Guid;
 import system.xml.schema.XmlSchema;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -222,6 +223,36 @@ public class AnnotationResource extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getContentLocators() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentLocators = null;
+        try {
+            retObjectContentLocators = classInstance.Get("ContentLocators");
+            JCObject val = (JCObject)retObjectContentLocators;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentLocators != null ? retObjectContentLocators.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getContents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContents = null;
+        try {
+            retObjectContents = classInstance.Get("Contents");
+            JCObject val = (JCObject)retObjectContents;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContents != null ? retObjectContents.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

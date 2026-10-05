@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.Assembly;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.io.FileStream;
 import system.io.Stream;
 import system.globalization.CultureInfo;
@@ -46,6 +48,8 @@ import system.Version;
 import system.reflection.AssemblyName;
 import system.reflection.emit.AssemblyBuilder;
 import system.reflection.emit.AssemblyBuilderAccess;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.emit.ModuleBuilder;
 import system.reflection.ManifestResourceInfo;
 import system.reflection.Module;
@@ -77,7 +81,7 @@ import system.security.SecurityRuleSet;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssemblyBuilder extends Assembly  {
+public class AssemblyBuilder extends system.reflection.Assembly  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -187,6 +191,21 @@ public class AssemblyBuilder extends Assembly  {
             return (boolean)retObjectIsDefined;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetCustomAttributesData() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributesData = null;
+        try {
+            retObjectGetCustomAttributesData = classInstance.Invoke("GetCustomAttributesData");
+            JCObject objGetCustomAttributesData = (JCObject)retObjectGetCustomAttributesData;
+            return new IList_1Implementation(objGetCustomAttributesData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributesData != null ? retObjectGetCustomAttributesData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,6 +391,21 @@ public class AssemblyBuilder extends Assembly  {
         java.lang.Object retObjectDefineDynamicAssembly = null;
         try {
             retObjectDefineDynamicAssembly = classType.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
+            return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineDynamicAssembly != null ? retObjectDefineDynamicAssembly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1 assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefineDynamicAssembly = null;
+        try {
+            retObjectDefineDynamicAssembly = classType.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance(), assemblyAttributes == null ? null : assemblyAttributes.getJCOInstance());
             JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
             return new AssemblyBuilder(objDefineDynamicAssembly);
         } catch (java.lang.ClassCastException cce) {

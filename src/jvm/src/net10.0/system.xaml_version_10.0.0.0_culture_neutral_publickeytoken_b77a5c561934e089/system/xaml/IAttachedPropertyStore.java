@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.xaml.AttachableMemberIdentifier;
+import system.collections.generic.KeyValuePair_2;
 
 
 /**
@@ -119,6 +120,8 @@ public interface IAttachedPropertyStore extends IJCOBridgeReflected {
     public boolean RemoveProperty(AttachableMemberIdentifier attachableMemberIdentifier) throws Throwable;
 
     public boolean TryGetProperty(AttachableMemberIdentifier attachableMemberIdentifier, JCORefOut<NetObject> value) throws Throwable;
+
+    public void CopyPropertiesTo(KeyValuePair_2[] array, int index) throws Throwable;
 
     public void SetProperty(AttachableMemberIdentifier attachableMemberIdentifier, NetObject value) throws Throwable;
 

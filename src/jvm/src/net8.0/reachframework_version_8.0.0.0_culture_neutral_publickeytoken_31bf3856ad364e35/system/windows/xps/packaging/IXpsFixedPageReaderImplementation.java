@@ -47,6 +47,8 @@ import system.windows.xps.packaging.XpsImage;
 import system.windows.xps.packaging.XpsResource;
 import system.windows.xps.packaging.XpsResourceDictionary;
 import system.windows.xps.packaging.XpsStructure;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.printing.PrintTicket;
 import system.windows.xps.packaging.XpsThumbnail;
 import system.xml.XmlReader;
@@ -281,6 +283,66 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getColorContexts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColorContexts = null;
+        try {
+            retObjectColorContexts = classInstance.Get("ColorContexts");
+            JCObject val = (JCObject)retObjectColorContexts;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColorContexts != null ? retObjectColorContexts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getFonts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFonts = null;
+        try {
+            retObjectFonts = classInstance.Get("Fonts");
+            JCObject val = (JCObject)retObjectFonts;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFonts != null ? retObjectFonts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getImages() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImages = null;
+        try {
+            retObjectImages = classInstance.Get("Images");
+            JCObject val = (JCObject)retObjectImages;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImages != null ? retObjectImages.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getResourceDictionaries() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceDictionaries = null;
+        try {
+            retObjectResourceDictionaries = classInstance.Get("ResourceDictionaries");
+            JCObject val = (JCObject)retObjectResourceDictionaries;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceDictionaries != null ? retObjectResourceDictionaries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

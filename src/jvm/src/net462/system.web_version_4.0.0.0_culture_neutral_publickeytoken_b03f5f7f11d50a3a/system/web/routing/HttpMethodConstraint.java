@@ -42,8 +42,8 @@ import system.web.HttpContextBase;
 import system.web.routing.Route;
 import system.web.routing.RouteValueDictionary;
 import system.web.routing.RouteDirection;
-import system.web.routing.IRouteConstraint;
-import system.web.routing.IRouteConstraintImplementation;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -58,7 +58,7 @@ import system.web.routing.IRouteConstraintImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpMethodConstraint extends NetObject implements IRouteConstraint {
+public class HttpMethodConstraint extends NetObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -182,6 +182,31 @@ public class HttpMethodConstraint extends NetObject implements IRouteConstraint 
     
     // Properties section
     
+    public ICollection_1 getAllowedMethods() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedMethods = null;
+        try {
+            retObjectAllowedMethods = classInstance.Get("AllowedMethods");
+            JCObject val = (JCObject)retObjectAllowedMethods;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowedMethods != null ? retObjectAllowedMethods.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAllowedMethods(ICollection_1 AllowedMethods) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AllowedMethods", AllowedMethods == null ? null : AllowedMethods.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -42,6 +42,7 @@ import system.identitymodel.protocols.wstrust.EndpointReference;
 import system.xml.XmlDictionaryReader;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
+import system.collections.objectmodel.Collection_1;
 import system.Uri;
 
 
@@ -212,6 +213,21 @@ public class EndpointReference extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getDetails() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetails = null;
+        try {
+            retObjectDetails = classInstance.Get("Details");
+            JCObject val = (JCObject)retObjectDetails;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDetails != null ? retObjectDetails.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Uri getUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

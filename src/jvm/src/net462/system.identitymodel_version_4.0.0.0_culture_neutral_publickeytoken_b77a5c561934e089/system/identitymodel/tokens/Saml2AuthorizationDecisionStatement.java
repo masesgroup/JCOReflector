@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.Saml2Statement;
 import system.Uri;
 import system.identitymodel.tokens.SamlAccessDecision;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.Collection_1;
 import system.identitymodel.tokens.Saml2Evidence;
 
 
@@ -56,7 +59,7 @@ import system.identitymodel.tokens.Saml2Evidence;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
+public class Saml2AuthorizationDecisionStatement extends system.identitymodel.tokens.Saml2Statement  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -162,6 +165,16 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
         }
     }
 
+    public Saml2AuthorizationDecisionStatement(Uri resource, SamlAccessDecision decision, IEnumerable_1 actions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(resource == null ? null : resource.getJCOInstance(), decision == null ? null : decision.getJCOInstance(), actions == null ? null : actions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -171,6 +184,21 @@ public class Saml2AuthorizationDecisionStatement extends Saml2Statement  {
     
     // Properties section
     
+    public Collection_1 getActions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActions = null;
+        try {
+            retObjectActions = classInstance.Get("Actions");
+            JCObject val = (JCObject)retObjectActions;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActions != null ? retObjectActions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Saml2Evidence getEvidence() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

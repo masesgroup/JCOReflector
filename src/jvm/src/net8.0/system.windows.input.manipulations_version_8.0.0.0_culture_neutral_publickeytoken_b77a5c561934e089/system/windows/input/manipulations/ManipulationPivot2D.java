@@ -54,7 +54,7 @@ import system.Single;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ManipulationPivot2D extends ManipulationParameters2D  {
+public class ManipulationPivot2D extends system.windows.input.manipulations.ManipulationParameters2D  {
     /**
      * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

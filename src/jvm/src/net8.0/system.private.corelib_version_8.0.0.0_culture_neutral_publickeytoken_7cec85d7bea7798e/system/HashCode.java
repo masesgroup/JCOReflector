@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HashCode extends ValueType  {
+public class HashCode extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -154,6 +156,326 @@ public class HashCode extends ValueType  {
     
     // Methods section
     
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6, T7 value7, T8 value8) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", value1 == null ? null : ((IJCOBridgeReflected)value1).getJCOInstance(), value2 == null ? null : ((IJCOBridgeReflected)value2).getJCOInstance(), value3 == null ? null : ((IJCOBridgeReflected)value3).getJCOInstance(), value4 == null ? null : ((IJCOBridgeReflected)value4).getJCOInstance(), value5 == null ? null : ((IJCOBridgeReflected)value5).getJCOInstance(), value6 == null ? null : ((IJCOBridgeReflected)value6).getJCOInstance(), value7 == null ? null : ((IJCOBridgeReflected)value7).getJCOInstance(), value8 == null ? null : ((IJCOBridgeReflected)value8).getJCOInstance());
+            return (int)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCombineError = true;
+            java.lang.String retObjectCombine_ToString = retObjectCombine == null ? "null" : retObjectCombine.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCombine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCombineClass = retObjectCombine.getClass();
+                    // java.lang.reflect.Method retObjectCombineMethod = retObjectCombineClass.getMethod("intValue");
+                    // return (int)retObjectCombineMethod.invoke(retObjectCombine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCombineNumber = java.text.NumberFormat.getInstance().parse(retObjectCombine_ToString);
+                    return retObjectCombineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCombineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCombine != null ? retObjectCombine.getClass() : "null", retObjectCombine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCombineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6, T7 value7) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", value1 == null ? null : ((IJCOBridgeReflected)value1).getJCOInstance(), value2 == null ? null : ((IJCOBridgeReflected)value2).getJCOInstance(), value3 == null ? null : ((IJCOBridgeReflected)value3).getJCOInstance(), value4 == null ? null : ((IJCOBridgeReflected)value4).getJCOInstance(), value5 == null ? null : ((IJCOBridgeReflected)value5).getJCOInstance(), value6 == null ? null : ((IJCOBridgeReflected)value6).getJCOInstance(), value7 == null ? null : ((IJCOBridgeReflected)value7).getJCOInstance());
+            return (int)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCombineError = true;
+            java.lang.String retObjectCombine_ToString = retObjectCombine == null ? "null" : retObjectCombine.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCombine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCombineClass = retObjectCombine.getClass();
+                    // java.lang.reflect.Method retObjectCombineMethod = retObjectCombineClass.getMethod("intValue");
+                    // return (int)retObjectCombineMethod.invoke(retObjectCombine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCombineNumber = java.text.NumberFormat.getInstance().parse(retObjectCombine_ToString);
+                    return retObjectCombineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCombineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCombine != null ? retObjectCombine.getClass() : "null", retObjectCombine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCombineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5, T6 value6) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", value1 == null ? null : ((IJCOBridgeReflected)value1).getJCOInstance(), value2 == null ? null : ((IJCOBridgeReflected)value2).getJCOInstance(), value3 == null ? null : ((IJCOBridgeReflected)value3).getJCOInstance(), value4 == null ? null : ((IJCOBridgeReflected)value4).getJCOInstance(), value5 == null ? null : ((IJCOBridgeReflected)value5).getJCOInstance(), value6 == null ? null : ((IJCOBridgeReflected)value6).getJCOInstance());
+            return (int)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCombineError = true;
+            java.lang.String retObjectCombine_ToString = retObjectCombine == null ? "null" : retObjectCombine.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCombine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCombineClass = retObjectCombine.getClass();
+                    // java.lang.reflect.Method retObjectCombineMethod = retObjectCombineClass.getMethod("intValue");
+                    // return (int)retObjectCombineMethod.invoke(retObjectCombine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCombineNumber = java.text.NumberFormat.getInstance().parse(retObjectCombine_ToString);
+                    return retObjectCombineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCombineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCombine != null ? retObjectCombine.getClass() : "null", retObjectCombine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCombineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4, T5 value5) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", value1 == null ? null : ((IJCOBridgeReflected)value1).getJCOInstance(), value2 == null ? null : ((IJCOBridgeReflected)value2).getJCOInstance(), value3 == null ? null : ((IJCOBridgeReflected)value3).getJCOInstance(), value4 == null ? null : ((IJCOBridgeReflected)value4).getJCOInstance(), value5 == null ? null : ((IJCOBridgeReflected)value5).getJCOInstance());
+            return (int)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCombineError = true;
+            java.lang.String retObjectCombine_ToString = retObjectCombine == null ? "null" : retObjectCombine.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCombine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCombineClass = retObjectCombine.getClass();
+                    // java.lang.reflect.Method retObjectCombineMethod = retObjectCombineClass.getMethod("intValue");
+                    // return (int)retObjectCombineMethod.invoke(retObjectCombine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCombineNumber = java.text.NumberFormat.getInstance().parse(retObjectCombine_ToString);
+                    return retObjectCombineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCombineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCombine != null ? retObjectCombine.getClass() : "null", retObjectCombine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCombineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3, T4 value4) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", value1 == null ? null : ((IJCOBridgeReflected)value1).getJCOInstance(), value2 == null ? null : ((IJCOBridgeReflected)value2).getJCOInstance(), value3 == null ? null : ((IJCOBridgeReflected)value3).getJCOInstance(), value4 == null ? null : ((IJCOBridgeReflected)value4).getJCOInstance());
+            return (int)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCombineError = true;
+            java.lang.String retObjectCombine_ToString = retObjectCombine == null ? "null" : retObjectCombine.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCombine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCombineClass = retObjectCombine.getClass();
+                    // java.lang.reflect.Method retObjectCombineMethod = retObjectCombineClass.getMethod("intValue");
+                    // return (int)retObjectCombineMethod.invoke(retObjectCombine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCombineNumber = java.text.NumberFormat.getInstance().parse(retObjectCombine_ToString);
+                    return retObjectCombineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCombineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCombine != null ? retObjectCombine.getClass() : "null", retObjectCombine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCombineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2, T3 value3) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", value1 == null ? null : ((IJCOBridgeReflected)value1).getJCOInstance(), value2 == null ? null : ((IJCOBridgeReflected)value2).getJCOInstance(), value3 == null ? null : ((IJCOBridgeReflected)value3).getJCOInstance());
+            return (int)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCombineError = true;
+            java.lang.String retObjectCombine_ToString = retObjectCombine == null ? "null" : retObjectCombine.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCombine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCombineClass = retObjectCombine.getClass();
+                    // java.lang.reflect.Method retObjectCombineMethod = retObjectCombineClass.getMethod("intValue");
+                    // return (int)retObjectCombineMethod.invoke(retObjectCombine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCombineNumber = java.text.NumberFormat.getInstance().parse(retObjectCombine_ToString);
+                    return retObjectCombineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCombineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCombine != null ? retObjectCombine.getClass() : "null", retObjectCombine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCombineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> int Combine(T1 value1, T2 value2) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", value1 == null ? null : ((IJCOBridgeReflected)value1).getJCOInstance(), value2 == null ? null : ((IJCOBridgeReflected)value2).getJCOInstance());
+            return (int)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCombineError = true;
+            java.lang.String retObjectCombine_ToString = retObjectCombine == null ? "null" : retObjectCombine.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCombine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCombineClass = retObjectCombine.getClass();
+                    // java.lang.reflect.Method retObjectCombineMethod = retObjectCombineClass.getMethod("intValue");
+                    // return (int)retObjectCombineMethod.invoke(retObjectCombine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCombineNumber = java.text.NumberFormat.getInstance().parse(retObjectCombine_ToString);
+                    return retObjectCombineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCombineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCombine != null ? retObjectCombine.getClass() : "null", retObjectCombine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCombineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected> int Combine(T1 value1) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", value1 == null ? null : ((IJCOBridgeReflected)value1).getJCOInstance());
+            return (int)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportCombineError = true;
+            java.lang.String retObjectCombine_ToString = retObjectCombine == null ? "null" : retObjectCombine.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectCombine != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectCombineClass = retObjectCombine.getClass();
+                    // java.lang.reflect.Method retObjectCombineMethod = retObjectCombineClass.getMethod("intValue");
+                    // return (int)retObjectCombineMethod.invoke(retObjectCombine);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectCombineNumber = java.text.NumberFormat.getInstance().parse(retObjectCombine_ToString);
+                    return retObjectCombineNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportCombineError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectCombine != null ? retObjectCombine.getClass() : "null", retObjectCombine_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportCombineError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int ToHashCode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -189,6 +511,26 @@ public class HashCode extends ValueType  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void Add(T value, IEqualityComparer_1 comparer) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void Add(T value) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

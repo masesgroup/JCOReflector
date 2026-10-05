@@ -56,7 +56,7 @@ import system.io.BinaryWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpStaticObjectsCollectionWrapper extends HttpStaticObjectsCollectionBase  {
+public class HttpStaticObjectsCollectionWrapper extends system.web.HttpStaticObjectsCollectionBase  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

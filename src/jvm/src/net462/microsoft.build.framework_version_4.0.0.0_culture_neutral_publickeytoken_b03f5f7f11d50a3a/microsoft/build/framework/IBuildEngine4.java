@@ -46,6 +46,8 @@ import microsoft.build.framework.IBuildEngineImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import microsoft.build.framework.BuildEngineResult;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import microsoft.build.framework.RegisteredTaskObjectLifetime;
 import microsoft.build.framework.CustomBuildEventArgs;
 import microsoft.build.framework.BuildErrorEventArgs;
@@ -65,7 +67,7 @@ import microsoft.build.framework.BuildWarningEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IBuildEngine4 extends IJCOBridgeReflected, IBuildEngine3, IBuildEngine2, IBuildEngine {
+public interface IBuildEngine4 extends IJCOBridgeReflected, microsoft.build.framework.IBuildEngine3, microsoft.build.framework.IBuildEngine2, microsoft.build.framework.IBuildEngine {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -129,6 +131,7 @@ public interface IBuildEngine4 extends IJCOBridgeReflected, IBuildEngine3, IBuil
 
     // Methods section
     
+
 
 
 

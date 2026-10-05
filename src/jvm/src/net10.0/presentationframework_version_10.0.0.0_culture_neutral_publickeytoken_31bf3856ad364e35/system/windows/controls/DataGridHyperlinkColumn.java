@@ -55,7 +55,7 @@ import system.windows.Style;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridHyperlinkColumn extends DataGridBoundColumn  {
+public class DataGridHyperlinkColumn extends system.windows.controls.DataGridBoundColumn  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.List_1;
+import system.workflow.componentmodel.design.DesignerGlyph;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.workflow.componentmodel.design.ActivityDesignerGlyphCollection;
 
 
@@ -53,7 +57,7 @@ import system.workflow.componentmodel.design.ActivityDesignerGlyphCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityDesignerGlyphCollection extends NetObjectEnumerable  {
+public class ActivityDesignerGlyphCollection extends system.collections.generic.List_1<DesignerGlyph>  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -151,6 +155,16 @@ public class ActivityDesignerGlyphCollection extends NetObjectEnumerable  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActivityDesignerGlyphCollection(IEnumerable_1 glyphs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(glyphs == null ? null : glyphs.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

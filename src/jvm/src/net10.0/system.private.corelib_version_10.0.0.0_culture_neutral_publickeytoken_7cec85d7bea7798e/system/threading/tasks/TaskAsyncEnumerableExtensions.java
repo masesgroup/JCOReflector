@@ -38,9 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.IAsyncEnumerable_1;
+import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.threading.CancellationToken;
 import system.runtime.compilerservices.ConfiguredAsyncDisposable;
 import system.IAsyncDisposable;
 import system.IAsyncDisposableImplementation;
+import system.runtime.compilerservices.ConfiguredCancelableAsyncEnumerable_1;
 
 
 /**
@@ -154,6 +160,21 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> IEnumerable_1 ToBlockingEnumerable(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToBlockingEnumerable = null;
+        try {
+            retObjectToBlockingEnumerable = classType.Invoke("ToBlockingEnumerable", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objToBlockingEnumerable = (JCObject)retObjectToBlockingEnumerable;
+            return new IEnumerable_1Implementation(objToBlockingEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToBlockingEnumerable != null ? retObjectToBlockingEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ConfiguredAsyncDisposable ConfigureAwait(IAsyncDisposable source, boolean continueOnCapturedContext) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -164,6 +185,36 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
             return new ConfiguredAsyncDisposable(objConfigureAwait);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfigureAwait != null ? retObjectConfigureAwait.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ConfiguredCancelableAsyncEnumerable_1 ConfigureAwait(IAsyncEnumerable_1 source, boolean continueOnCapturedContext) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConfigureAwait = null;
+        try {
+            retObjectConfigureAwait = classType.Invoke("ConfigureAwait", source == null ? null : source.getJCOInstance(), continueOnCapturedContext);
+            JCObject objConfigureAwait = (JCObject)retObjectConfigureAwait;
+            return new ConfiguredCancelableAsyncEnumerable_1(objConfigureAwait);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfigureAwait != null ? retObjectConfigureAwait.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ConfiguredCancelableAsyncEnumerable_1 WithCancellation(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWithCancellation = null;
+        try {
+            retObjectWithCancellation = classType.Invoke("WithCancellation", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWithCancellation = (JCObject)retObjectWithCancellation;
+            return new ConfiguredCancelableAsyncEnumerable_1(objWithCancellation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithCancellation != null ? retObjectWithCancellation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

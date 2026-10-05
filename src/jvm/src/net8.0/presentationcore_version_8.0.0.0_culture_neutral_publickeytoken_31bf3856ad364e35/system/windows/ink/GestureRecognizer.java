@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.DependencyObject;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.ink.StrokeCollection;
 
 
 /**
@@ -53,7 +57,7 @@ import system.windows.DependencyObject;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GestureRecognizer extends DependencyObject implements AutoCloseable {
+public class GestureRecognizer extends system.windows.DependencyObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -156,15 +160,65 @@ public class GestureRecognizer extends DependencyObject implements AutoCloseable
         }
     }
 
+    public GestureRecognizer(IEnumerable_1 enabledApplicationGestures) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(enabledApplicationGestures == null ? null : enabledApplicationGestures.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
+    public ReadOnlyCollection_1 GetEnabledGestures() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnabledGestures = null;
+        try {
+            retObjectGetEnabledGestures = classInstance.Invoke("GetEnabledGestures");
+            JCObject objGetEnabledGestures = (JCObject)retObjectGetEnabledGestures;
+            return new ReadOnlyCollection_1(objGetEnabledGestures);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnabledGestures != null ? retObjectGetEnabledGestures.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 Recognize(StrokeCollection strokes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecognize = null;
+        try {
+            retObjectRecognize = classInstance.Invoke("Recognize", strokes == null ? null : strokes.getJCOInstance());
+            JCObject objRecognize = (JCObject)retObjectRecognize;
+            return new ReadOnlyCollection_1(objRecognize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecognize != null ? retObjectRecognize.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetEnabledGestures(IEnumerable_1 applicationGestures) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetEnabledGestures", applicationGestures == null ? null : applicationGestures.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

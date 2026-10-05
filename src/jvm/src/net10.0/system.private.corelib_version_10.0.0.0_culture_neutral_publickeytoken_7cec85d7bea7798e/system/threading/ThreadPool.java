@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.interopservices.SafeHandle;
 import system.threading.WaitCallback;
+import system.Action_1;
 import system.threading.IThreadPoolWorkItem;
 import system.threading.IThreadPoolWorkItemImplementation;
 import system.threading.RegisteredWaitHandle;
@@ -202,6 +203,20 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    public static <TState extends IJCOBridgeReflected> boolean QueueUserWorkItem(Action_1 callBack, TState state, boolean preferLocal) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.threading.ThreadStateException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectQueueUserWorkItem = null;
+        try {
+            retObjectQueueUserWorkItem = classType.Invoke("QueueUserWorkItem", callBack, state == null ? null : ((IJCOBridgeReflected)state).getJCOInstance(), preferLocal);
+            return (boolean)retObjectQueueUserWorkItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectQueueUserWorkItem != null ? retObjectQueueUserWorkItem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean SetMaxThreads(int workerThreads, int completionPortThreads) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -250,6 +265,20 @@ public class ThreadPool extends NetObject  {
         java.lang.Object retObjectUnsafeQueueUserWorkItem = null;
         try {
             retObjectUnsafeQueueUserWorkItem = classType.Invoke("UnsafeQueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
+            return (boolean)retObjectUnsafeQueueUserWorkItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnsafeQueueUserWorkItem != null ? retObjectUnsafeQueueUserWorkItem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TState extends IJCOBridgeReflected> boolean UnsafeQueueUserWorkItem(Action_1 callBack, TState state, boolean preferLocal) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.threading.ThreadStateException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnsafeQueueUserWorkItem = null;
+        try {
+            retObjectUnsafeQueueUserWorkItem = classType.Invoke("UnsafeQueueUserWorkItem", callBack, state == null ? null : ((IJCOBridgeReflected)state).getJCOInstance(), preferLocal);
             return (boolean)retObjectUnsafeQueueUserWorkItem;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnsafeQueueUserWorkItem != null ? retObjectUnsafeQueueUserWorkItem.getClass() : "null"), cce);

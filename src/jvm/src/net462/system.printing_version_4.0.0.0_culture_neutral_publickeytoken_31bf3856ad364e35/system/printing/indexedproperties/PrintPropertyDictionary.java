@@ -56,7 +56,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PrintPropertyDictionary extends Hashtable implements AutoCloseable {
+public class PrintPropertyDictionary extends system.collections.Hashtable implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -38,8 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.componentmodel.composition.primitives.ComposablePart;
 import system.componentmodel.composition.primitives.Export;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -157,6 +160,16 @@ public class CompositionBatch extends NetObject  {
         }
     }
 
+    public CompositionBatch(IEnumerable_1 partsToAdd, IEnumerable_1 partsToRemove) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(partsToAdd == null ? null : partsToAdd.getJCOInstance(), partsToRemove == null ? null : partsToRemove.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -200,6 +213,36 @@ public class CompositionBatch extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getPartsToAdd() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartsToAdd = null;
+        try {
+            retObjectPartsToAdd = classInstance.Get("PartsToAdd");
+            JCObject val = (JCObject)retObjectPartsToAdd;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartsToAdd != null ? retObjectPartsToAdd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPartsToRemove() throws Throwable, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartsToRemove = null;
+        try {
+            retObjectPartsToRemove = classInstance.Get("PartsToRemove");
+            JCObject val = (JCObject)retObjectPartsToRemove;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartsToRemove != null ? retObjectPartsToRemove.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

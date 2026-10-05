@@ -39,8 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.headers.ContentRangeHeaderValue;
-import system.ICloneable;
-import system.ICloneableImplementation;
+import system.Nullable_1;
 
 
 /**
@@ -55,7 +54,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ContentRangeHeaderValue extends NetObject implements ICloneable {
+public class ContentRangeHeaderValue extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -251,6 +250,51 @@ public class ContentRangeHeaderValue extends NetObject implements ICloneable {
             return (boolean)retObjectHasRange;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasRange != null ? retObjectHasRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getFrom() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrom = null;
+        try {
+            retObjectFrom = classInstance.Get("From");
+            JCObject val = (JCObject)retObjectFrom;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFrom != null ? retObjectFrom.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getLength() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
+        try {
+            retObjectLength = classInstance.Get("Length");
+            JCObject val = (JCObject)retObjectLength;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getTo() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTo = null;
+        try {
+            retObjectTo = classInstance.Get("To");
+            JCObject val = (JCObject)retObjectTo;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTo != null ? retObjectTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

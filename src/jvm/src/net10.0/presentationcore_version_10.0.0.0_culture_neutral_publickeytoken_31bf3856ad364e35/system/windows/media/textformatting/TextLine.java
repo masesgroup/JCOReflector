@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.textformatting.CharacterHit;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.windows.media.textformatting.TextLine;
 import system.windows.media.textformatting.TextCollapsingProperties;
 import system.windows.media.textformatting.TextLineBreak;
@@ -193,6 +197,66 @@ public class TextLine extends NetObject implements AutoCloseable {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetIndexedGlyphRuns() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIndexedGlyphRuns = null;
+        try {
+            retObjectGetIndexedGlyphRuns = classInstance.Invoke("GetIndexedGlyphRuns");
+            JCObject objGetIndexedGlyphRuns = (JCObject)retObjectGetIndexedGlyphRuns;
+            return new IEnumerable_1Implementation(objGetIndexedGlyphRuns);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIndexedGlyphRuns != null ? retObjectGetIndexedGlyphRuns.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetTextBounds(int firstTextSourceCharacterIndex, int textLength) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextBounds = null;
+        try {
+            retObjectGetTextBounds = classInstance.Invoke("GetTextBounds", firstTextSourceCharacterIndex, textLength);
+            JCObject objGetTextBounds = (JCObject)retObjectGetTextBounds;
+            return new IList_1Implementation(objGetTextBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextBounds != null ? retObjectGetTextBounds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetTextCollapsedRanges() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextCollapsedRanges = null;
+        try {
+            retObjectGetTextCollapsedRanges = classInstance.Invoke("GetTextCollapsedRanges");
+            JCObject objGetTextCollapsedRanges = (JCObject)retObjectGetTextCollapsedRanges;
+            return new IList_1Implementation(objGetTextCollapsedRanges);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextCollapsedRanges != null ? retObjectGetTextCollapsedRanges.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetTextRunSpans() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextRunSpans = null;
+        try {
+            retObjectGetTextRunSpans = classInstance.Invoke("GetTextRunSpans");
+            JCObject objGetTextRunSpans = (JCObject)retObjectGetTextRunSpans;
+            return new IList_1Implementation(objGetTextRunSpans);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextRunSpans != null ? retObjectGetTextRunSpans.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

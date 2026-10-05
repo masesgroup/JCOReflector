@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Nullable_1;
 import system.security.cryptography.KeySizes;
 
 
@@ -250,6 +251,21 @@ public class AesGcm extends NetObject implements AutoCloseable {
             return (boolean)retObjectIsSupported;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getTagSizeInBytes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagSizeInBytes = null;
+        try {
+            retObjectTagSizeInBytes = classInstance.Get("TagSizeInBytes");
+            JCObject val = (JCObject)retObjectTagSizeInBytes;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTagSizeInBytes != null ? retObjectTagSizeInBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

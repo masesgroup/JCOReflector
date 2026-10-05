@@ -53,7 +53,7 @@ import system.xaml.XamlDeferringLoader;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TemplateContentLoader extends XamlDeferringLoader  {
+public class TemplateContentLoader extends system.xaml.XamlDeferringLoader  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

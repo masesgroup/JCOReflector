@@ -38,8 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.GlobalItem;
 import system.data.metadata.edm.EntityContainer;
 import system.data.metadata.edm.EdmType;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.data.metadata.edm.DataSpace;
 
 
@@ -55,7 +58,7 @@ import system.data.metadata.edm.DataSpace;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ItemCollection extends NetObjectEnumerable  {
+public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCollection_1<GlobalItem>  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -182,6 +185,34 @@ public class ItemCollection extends NetObjectEnumerable  {
         }
     }
 
+    public <T extends IJCOBridgeReflected> boolean TryGetItem(java.lang.String identity, boolean ignoreCase, JCORefOut<T> item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetItem = null;
+        try {
+            retObjectTryGetItem = classInstance.Invoke("TryGetItem", identity, ignoreCase, item.getJCRefOut());
+            return (boolean)retObjectTryGetItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetItem != null ? retObjectTryGetItem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> boolean TryGetItem(java.lang.String identity, JCORefOut<T> item) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetItem = null;
+        try {
+            retObjectTryGetItem = classInstance.Invoke("TryGetItem", identity, item.getJCRefOut());
+            return (boolean)retObjectTryGetItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetItem != null ? retObjectTryGetItem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, boolean ignoreCase, JCORefOut<EdmType> type) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -205,6 +236,51 @@ public class ItemCollection extends NetObjectEnumerable  {
             return (boolean)retObjectTryGetType;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetType != null ? retObjectTryGetType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetFunctions(java.lang.String functionName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFunctions = null;
+        try {
+            retObjectGetFunctions = classInstance.Invoke("GetFunctions", functionName);
+            JCObject objGetFunctions = (JCObject)retObjectGetFunctions;
+            return new ReadOnlyCollection_1(objGetFunctions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFunctions != null ? retObjectGetFunctions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetFunctions(java.lang.String functionName, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFunctions = null;
+        try {
+            retObjectGetFunctions = classInstance.Invoke("GetFunctions", functionName, ignoreCase);
+            JCObject objGetFunctions = (JCObject)retObjectGetFunctions;
+            return new ReadOnlyCollection_1(objGetFunctions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFunctions != null ? retObjectGetFunctions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ReadOnlyCollection_1 GetItems() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItems = null;
+        try {
+            retObjectGetItems = classInstance.Invoke("GetItems");
+            JCObject objGetItems = (JCObject)retObjectGetItems;
+            return new ReadOnlyCollection_1(objGetItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItems != null ? retObjectGetItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

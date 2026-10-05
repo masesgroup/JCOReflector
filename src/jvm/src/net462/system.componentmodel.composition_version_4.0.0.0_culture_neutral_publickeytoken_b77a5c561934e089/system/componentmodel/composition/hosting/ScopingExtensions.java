@@ -42,6 +42,7 @@ import system.componentmodel.composition.primitives.ComposablePartDefinition;
 import system.componentmodel.composition.primitives.ImportCardinality;
 import system.componentmodel.composition.hosting.FilteredCatalog;
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
+import system.Func_2;
 
 
 /**
@@ -155,6 +156,20 @@ public class ScopingExtensions extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> boolean ContainsPartMetadata(ComposablePartDefinition part, java.lang.String key, T value) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContainsPartMetadata = null;
+        try {
+            retObjectContainsPartMetadata = classType.Invoke("ContainsPartMetadata", part == null ? null : part.getJCOInstance(), key, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (boolean)retObjectContainsPartMetadata;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsPartMetadata != null ? retObjectContainsPartMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean ContainsPartMetadataWithKey(ComposablePartDefinition part, java.lang.String key) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -206,6 +221,21 @@ public class ScopingExtensions extends NetObject  {
             return (boolean)retObjectImports;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FilteredCatalog Filter(ComposablePartCatalog catalog, Func_2 filter) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFilter = null;
+        try {
+            retObjectFilter = classType.Invoke("Filter", catalog == null ? null : catalog.getJCOInstance(), filter);
+            JCObject objFilter = (JCObject)retObjectFilter;
+            return new FilteredCatalog(objFilter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

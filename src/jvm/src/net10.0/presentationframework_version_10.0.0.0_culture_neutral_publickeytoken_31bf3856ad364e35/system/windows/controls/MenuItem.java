@@ -61,7 +61,7 @@ import system.windows.RoutedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MenuItem extends HeaderedItemsControl  {
+public class MenuItem extends system.windows.controls.HeaderedItemsControl  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

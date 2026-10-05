@@ -54,7 +54,7 @@ import system.web.ui.ViewStateException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebViewStateFailureAuditEvent extends WebFailureAuditEvent  {
+public class WebViewStateFailureAuditEvent extends system.web.management.WebFailureAuditEvent  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

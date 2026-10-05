@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.Uri;
+import system.servicemodel.channels.Message;
 
 
 /**
@@ -159,6 +162,21 @@ public class ServiceAuthenticationManager extends NetObject  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 Authenticate(ReadOnlyCollection_1 authPolicy, Uri listenUri, JCORefOut<Message> message) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticate = null;
+        try {
+            retObjectAuthenticate = classInstance.Invoke("Authenticate", authPolicy == null ? null : authPolicy.getJCOInstance(), listenUri == null ? null : listenUri.getJCOInstance(), message.getJCRefOut());
+            JCObject objAuthenticate = (JCObject)retObjectAuthenticate;
+            return new ReadOnlyCollection_1(objAuthenticate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticate != null ? retObjectAuthenticate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

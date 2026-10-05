@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.DateTime;
 import system.web.caching.CacheDependency;
+import system.Action_2;
 
 
 /**
@@ -311,6 +312,16 @@ public class CacheDependency extends NetObject implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("KeepDependenciesAlive");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetCacheDependencyChanged(Action_2 dependencyChangedAction) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetCacheDependencyChanged", dependencyChangedAction);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

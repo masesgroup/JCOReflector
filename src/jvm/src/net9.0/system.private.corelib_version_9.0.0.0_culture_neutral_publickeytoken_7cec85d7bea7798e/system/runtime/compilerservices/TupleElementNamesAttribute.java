@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Attribute;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TupleElementNamesAttribute extends Attribute  {
+public class TupleElementNamesAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -168,6 +170,21 @@ public class TupleElementNamesAttribute extends Attribute  {
     
     // Properties section
     
+    public IList_1 getTransformNames() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformNames = null;
+        try {
+            retObjectTransformNames = classInstance.Get("TransformNames");
+            JCObject val = (JCObject)retObjectTransformNames;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformNames != null ? retObjectTransformNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

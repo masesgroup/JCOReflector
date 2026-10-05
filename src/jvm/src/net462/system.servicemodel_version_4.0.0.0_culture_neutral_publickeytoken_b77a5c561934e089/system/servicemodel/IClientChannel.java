@@ -43,6 +43,8 @@ import system.servicemodel.channels.IChannel;
 import system.servicemodel.channels.IChannelImplementation;
 import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
+import system.servicemodel.IExtensibleObject_1;
+import system.servicemodel.IExtensibleObject_1Implementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.IAsyncResult;
@@ -55,6 +57,8 @@ import system.servicemodel.channels.IOutputSession;
 import system.servicemodel.channels.IOutputSessionImplementation;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
+import system.servicemodel.IExtensionCollection_1;
+import system.servicemodel.IExtensionCollection_1Implementation;
 import system.Uri;
 import system.EventHandler;
 
@@ -71,7 +75,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IClientChannel extends IJCOBridgeReflected, IContextChannel, IChannel, ICommunicationObject, IDisposable {
+public interface IClientChannel extends IJCOBridgeReflected, system.servicemodel.IContextChannel, system.servicemodel.channels.IChannel, system.servicemodel.ICommunicationObject, system.servicemodel.IExtensibleObject_1<IContextChannel>, system.IDisposable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

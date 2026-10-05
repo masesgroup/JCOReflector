@@ -65,7 +65,7 @@ import system.runtime.remoting.channels.IServerChannelSinkImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpChannel extends BaseChannelWithProperties  {
+public class HttpChannel extends system.runtime.remoting.channels.BaseChannelWithProperties  {
     /**
      * Fully assembly qualified name: System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

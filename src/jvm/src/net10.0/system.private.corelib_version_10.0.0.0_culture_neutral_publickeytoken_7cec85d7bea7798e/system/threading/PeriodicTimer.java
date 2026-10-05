@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.TimeSpan;
 import system.TimeProvider;
+import system.threading.tasks.ValueTask_1;
+import system.threading.CancellationToken;
 
 
 /**
@@ -175,6 +177,21 @@ public class PeriodicTimer extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    public ValueTask_1 WaitForNextTickAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForNextTickAsync = null;
+        try {
+            retObjectWaitForNextTickAsync = classInstance.Invoke("WaitForNextTickAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWaitForNextTickAsync = (JCObject)retObjectWaitForNextTickAsync;
+            return new ValueTask_1(objWaitForNextTickAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForNextTickAsync != null ? retObjectWaitForNextTickAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

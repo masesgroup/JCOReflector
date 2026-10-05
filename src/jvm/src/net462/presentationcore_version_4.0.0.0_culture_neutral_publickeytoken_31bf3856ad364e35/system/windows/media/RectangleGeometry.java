@@ -57,7 +57,7 @@ import system.windows.media.RectangleGeometry;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RectangleGeometry extends Geometry  {
+public class RectangleGeometry extends system.windows.media.Geometry  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -39,6 +39,7 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.windows.forms.IDataObject;
 import system.windows.forms.IDataObjectImplementation;
+import system.Func_2;
 
 
 /**
@@ -53,7 +54,7 @@ import system.windows.forms.IDataObjectImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ITypedDataObject extends IJCOBridgeReflected, IDataObject {
+public interface ITypedDataObject extends IJCOBridgeReflected, system.windows.forms.IDataObject {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -119,6 +120,14 @@ public interface ITypedDataObject extends IJCOBridgeReflected, IDataObject {
     
 
 
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, boolean autoConvert, JCORefOut<T> data) throws Throwable;
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable;
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, JCORefOut<T> data) throws Throwable;
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(JCORefOut<T> data) throws Throwable;
 
 
 

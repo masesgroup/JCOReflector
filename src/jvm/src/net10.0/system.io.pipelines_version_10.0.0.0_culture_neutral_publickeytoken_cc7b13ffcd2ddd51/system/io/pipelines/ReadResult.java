@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.buffers.ReadOnlySequence_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ReadResult extends ValueType  {
+public class ReadResult extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.IO.Pipelines, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -149,6 +150,16 @@ public class ReadResult extends ValueType  {
     public ReadResult() throws Throwable {
     }
 
+    public ReadResult(ReadOnlySequence_1 buffer, boolean isCanceled, boolean isCompleted) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(buffer == null ? null : buffer.getJCOInstance(), isCanceled, isCompleted));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -181,6 +192,21 @@ public class ReadResult extends ValueType  {
             return (boolean)retObjectIsCompleted;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCompleted != null ? retObjectIsCompleted.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlySequence_1 getBuffer() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
+        try {
+            retObjectBuffer = classInstance.Get("Buffer");
+            JCObject val = (JCObject)retObjectBuffer;
+            return new ReadOnlySequence_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

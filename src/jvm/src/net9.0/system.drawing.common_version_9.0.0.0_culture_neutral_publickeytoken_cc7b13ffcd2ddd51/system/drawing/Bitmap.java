@@ -68,7 +68,7 @@ import system.Single;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Bitmap extends Image  {
+public class Bitmap extends system.drawing.Image  {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

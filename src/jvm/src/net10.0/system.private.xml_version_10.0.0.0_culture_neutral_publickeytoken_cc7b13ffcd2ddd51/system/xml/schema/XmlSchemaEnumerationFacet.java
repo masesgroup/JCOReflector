@@ -53,7 +53,7 @@ import system.xml.schema.XmlSchemaFacet;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaEnumerationFacet extends XmlSchemaFacet  {
+public class XmlSchemaEnumerationFacet extends system.xml.schema.XmlSchemaFacet  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

@@ -38,12 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.servicemodel.description.MetadataSet;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.xml.schema.XmlSchema;
-import system.xml.serialization.IXmlSerializable;
-import system.xml.serialization.IXmlSerializableImplementation;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -58,7 +59,7 @@ import system.xml.serialization.IXmlSerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MetadataSet extends NetObject implements IXmlSerializable {
+public class MetadataSet extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -161,6 +162,16 @@ public class MetadataSet extends NetObject implements IXmlSerializable {
         }
     }
 
+    public MetadataSet(IEnumerable_1 sections) throws Throwable, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(sections == null ? null : sections.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -221,6 +232,36 @@ public class MetadataSet extends NetObject implements IXmlSerializable {
     
     // Properties section
     
+    public Collection_1 getMetadataSections() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataSections = null;
+        try {
+            retObjectMetadataSections = classInstance.Get("MetadataSections");
+            JCObject val = (JCObject)retObjectMetadataSections;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataSections != null ? retObjectMetadataSections.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
+        try {
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

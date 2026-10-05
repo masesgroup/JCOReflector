@@ -54,7 +54,7 @@ import system.xaml.hosting.configuration.XamlHostingSection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XamlHostingSectionGroup extends ConfigurationSectionGroup  {
+public class XamlHostingSectionGroup extends system.configuration.ConfigurationSectionGroup  {
     /**
      * Fully assembly qualified name: System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

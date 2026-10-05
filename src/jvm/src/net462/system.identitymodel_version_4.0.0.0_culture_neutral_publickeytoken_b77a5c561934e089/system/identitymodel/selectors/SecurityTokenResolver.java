@@ -43,6 +43,7 @@ import system.identitymodel.tokens.SecurityKey;
 import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.selectors.SecurityTokenResolver;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.xml.XmlNodeList;
 
 
@@ -194,6 +195,21 @@ public class SecurityTokenResolver extends NetObject  {
             return (boolean)retObjectTryResolveToken;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryResolveToken != null ? retObjectTryResolveToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SecurityTokenResolver CreateDefaultSecurityTokenResolver(ReadOnlyCollection_1 tokens, boolean canMatchLocalId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDefaultSecurityTokenResolver = null;
+        try {
+            retObjectCreateDefaultSecurityTokenResolver = classType.Invoke("CreateDefaultSecurityTokenResolver", tokens == null ? null : tokens.getJCOInstance(), canMatchLocalId);
+            JCObject objCreateDefaultSecurityTokenResolver = (JCObject)retObjectCreateDefaultSecurityTokenResolver;
+            return new SecurityTokenResolver(objCreateDefaultSecurityTokenResolver);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDefaultSecurityTokenResolver != null ? retObjectCreateDefaultSecurityTokenResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

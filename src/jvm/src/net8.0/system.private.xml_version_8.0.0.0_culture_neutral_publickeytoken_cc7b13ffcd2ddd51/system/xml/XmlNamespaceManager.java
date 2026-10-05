@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.XmlNameTable;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.xml.XmlNamespaceScope;
 
 
 /**
@@ -187,6 +190,21 @@ public class XmlNamespaceManager extends NetObjectEnumerable  {
             return (boolean)retObjectPopScope;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPopScope != null ? retObjectPopScope.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 GetNamespacesInScope(XmlNamespaceScope scope) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespacesInScope = null;
+        try {
+            retObjectGetNamespacesInScope = classInstance.Invoke("GetNamespacesInScope", scope == null ? null : scope.getJCOInstance());
+            JCObject objGetNamespacesInScope = (JCObject)retObjectGetNamespacesInScope;
+            return new IDictionary_2Implementation(objGetNamespacesInScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespacesInScope != null ? retObjectGetNamespacesInScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

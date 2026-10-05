@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.CompositeActivity;
 import system.workflow.activities.IfElseBranchActivity;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.workflow.componentmodel.ActivityCondition;
+import system.workflow.componentmodel.ActivityExecutionStatusChangedEventArgs;
 
 
 /**
@@ -54,7 +58,7 @@ import system.workflow.activities.IfElseBranchActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IfElseActivity extends CompositeActivity  {
+public class IfElseActivity extends system.workflow.componentmodel.CompositeActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -171,6 +175,45 @@ public class IfElseActivity extends CompositeActivity  {
     
     // Methods section
     
+    public IfElseBranchActivity AddBranch(ICollection_1 activities) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddBranch = null;
+        try {
+            retObjectAddBranch = classInstance.Invoke("AddBranch", activities == null ? null : activities.getJCOInstance());
+            JCObject objAddBranch = (JCObject)retObjectAddBranch;
+            return new IfElseBranchActivity(objAddBranch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddBranch != null ? retObjectAddBranch.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IfElseBranchActivity AddBranch(ICollection_1 activities, ActivityCondition branchCondition) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddBranch = null;
+        try {
+            retObjectAddBranch = classInstance.Invoke("AddBranch", activities == null ? null : activities.getJCOInstance(), branchCondition == null ? null : branchCondition.getJCOInstance());
+            JCObject objAddBranch = (JCObject)retObjectAddBranch;
+            return new IfElseBranchActivity(objAddBranch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddBranch != null ? retObjectAddBranch.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIActivityEventListener_1 method available in IActivityEventListener_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnEvent(NetObject sender, ActivityExecutionStatusChangedEventArgs e) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIActivityEventListener_1 to obtain the full interface.");
+    }
+
 
     
     // Properties section

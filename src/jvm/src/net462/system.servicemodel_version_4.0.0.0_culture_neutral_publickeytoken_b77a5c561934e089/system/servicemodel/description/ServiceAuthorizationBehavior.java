@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
+import system.collections.objectmodel.Collection_1;
+import system.servicemodel.channels.BindingParameterCollection;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.servicemodel.description.PrincipalPermissionMode;
 import system.servicemodel.ServiceAuthorizationManager;
 import system.web.security.RoleProvider;
@@ -197,6 +200,15 @@ public class ServiceAuthorizationBehavior extends NetObject  {
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
      */
     @Deprecated 
+    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -257,6 +269,31 @@ public class ServiceAuthorizationBehavior extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImpersonateOnSerializingReply", ImpersonateOnSerializingReply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getExternalAuthorizationPolicies() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalAuthorizationPolicies = null;
+        try {
+            retObjectExternalAuthorizationPolicies = classInstance.Get("ExternalAuthorizationPolicies");
+            JCObject val = (JCObject)retObjectExternalAuthorizationPolicies;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalAuthorizationPolicies != null ? retObjectExternalAuthorizationPolicies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1 ExternalAuthorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ExternalAuthorizationPolicies", ExternalAuthorizationPolicies == null ? null : ExternalAuthorizationPolicies.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

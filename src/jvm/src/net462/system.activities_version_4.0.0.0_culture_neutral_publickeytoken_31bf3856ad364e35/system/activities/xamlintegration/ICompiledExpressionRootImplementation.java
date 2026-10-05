@@ -38,7 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.linq.expressions.Expression;
+import system.activities.ActivityContext;
 
 
 /**
@@ -141,6 +144,80 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
 
     // Methods section
     
+    public boolean CanExecuteExpression(java.lang.String expressionText, boolean isReference, IList_1 locations, JCORefOut<java.util.concurrent.atomic.AtomicInteger> expressionId) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExecuteExpression = null;
+        try {
+            retObjectCanExecuteExpression = classInstance.Invoke("CanExecuteExpression", expressionText, isReference, locations == null ? null : locations.getJCOInstance(), expressionId.getJCRefOut());
+            return (boolean)retObjectCanExecuteExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExecuteExpression != null ? retObjectCanExecuteExpression.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetRequiredLocations(int expressionId) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequiredLocations = null;
+        try {
+            retObjectGetRequiredLocations = classInstance.Invoke("GetRequiredLocations", expressionId);
+            JCObject objGetRequiredLocations = (JCObject)retObjectGetRequiredLocations;
+            return new IList_1Implementation(objGetRequiredLocations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRequiredLocations != null ? retObjectGetRequiredLocations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Expression GetExpressionTreeForExpression(int expressionId, IList_1 locationReferences) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpressionTreeForExpression = null;
+        try {
+            retObjectGetExpressionTreeForExpression = classInstance.Invoke("GetExpressionTreeForExpression", expressionId, locationReferences == null ? null : locationReferences.getJCOInstance());
+            JCObject objGetExpressionTreeForExpression = (JCObject)retObjectGetExpressionTreeForExpression;
+            return new Expression(objGetExpressionTreeForExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpressionTreeForExpression != null ? retObjectGetExpressionTreeForExpression.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject InvokeExpression(int expressionId, IList_1 locations) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeExpression = null;
+        try {
+            retObjectInvokeExpression = classInstance.Invoke("InvokeExpression", expressionId, locations == null ? null : locations.getJCOInstance());
+            JCObject objInvokeExpression = (JCObject)retObjectInvokeExpression;
+            return new NetObject(objInvokeExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeExpression != null ? retObjectInvokeExpression.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject InvokeExpression(int expressionId, IList_1 locations, ActivityContext activityContext) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeExpression = null;
+        try {
+            retObjectInvokeExpression = classInstance.Invoke("InvokeExpression", expressionId, locations == null ? null : locations.getJCOInstance(), activityContext == null ? null : activityContext.getJCOInstance());
+            JCObject objInvokeExpression = (JCObject)retObjectInvokeExpression;
+            return new NetObject(objInvokeExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeExpression != null ? retObjectInvokeExpression.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

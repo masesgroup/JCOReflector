@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.generic.List_1;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -53,7 +56,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BuildEngineResult extends ValueType  {
+public class BuildEngineResult extends system.ValueType  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -149,6 +152,16 @@ public class BuildEngineResult extends ValueType  {
     public BuildEngineResult() throws Throwable {
     }
 
+    public BuildEngineResult(boolean result, List_1 targetOutputsPerProject) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(result, targetOutputsPerProject == null ? null : targetOutputsPerProject.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -167,6 +180,21 @@ public class BuildEngineResult extends ValueType  {
             return (boolean)retObjectResult;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResult != null ? retObjectResult.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getTargetOutputsPerProject() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetOutputsPerProject = null;
+        try {
+            retObjectTargetOutputsPerProject = classInstance.Get("TargetOutputsPerProject");
+            JCObject val = (JCObject)retObjectTargetOutputsPerProject;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetOutputsPerProject != null ? retObjectTargetOutputsPerProject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

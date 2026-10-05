@@ -38,8 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.io.pipelines.PipeOptions;
+import system.buffers.MemoryPool_1;
 import system.io.pipelines.PipeScheduler;
+import system.io.pipelines.PipeOptions;
 
 
 /**
@@ -148,6 +149,16 @@ public class PipeOptions extends NetObject  {
     // Constructors section
     
     public PipeOptions() throws Throwable {
+    }
+
+    public PipeOptions(MemoryPool_1 pool, PipeScheduler readerScheduler, PipeScheduler writerScheduler, long pauseWriterThreshold, long resumeWriterThreshold, int minimumSegmentSize, boolean useSynchronizationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(pool == null ? null : pool.getJCOInstance(), readerScheduler == null ? null : readerScheduler.getJCOInstance(), writerScheduler == null ? null : writerScheduler.getJCOInstance(), pauseWriterThreshold, resumeWriterThreshold, minimumSegmentSize, useSynchronizationContext));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 
@@ -288,6 +299,21 @@ public class PipeOptions extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MemoryPool_1 getPool() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPool = null;
+        try {
+            retObjectPool = classInstance.Get("Pool");
+            JCObject val = (JCObject)retObjectPool;
+            return new MemoryPool_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPool != null ? retObjectPool.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
+import system.collections.objectmodel.Collection_1;
+import system.servicemodel.channels.BindingParameterCollection;
 import system.net.AuthenticationSchemes;
 import system.servicemodel.ServiceAuthenticationManager;
 
@@ -189,6 +191,15 @@ public class ServiceAuthenticationBehavior extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.ConsoleKeyInfo;
 import system.io.Stream;
+import system.ValueTuple_2;
 import system.ConsoleColor;
 import system.io.TextWriter;
 import system.io.TextReader;
@@ -330,6 +331,21 @@ public class Console extends NetObject  {
             return (java.lang.String)retObjectReadLine;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadLine != null ? retObjectReadLine.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 GetCursorPosition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCursorPosition = null;
+        try {
+            retObjectGetCursorPosition = classType.Invoke("GetCursorPosition");
+            JCObject objGetCursorPosition = (JCObject)retObjectGetCursorPosition;
+            return new ValueTuple_2(objGetCursorPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCursorPosition != null ? retObjectGetCursorPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

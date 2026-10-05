@@ -40,8 +40,28 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.commandtrees.DbLambda;
 import system.data.common.commandtrees.DbExpression;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.common.commandtrees.DbVariableReferenceExpression;
 import system.data.metadata.edm.TypeUsage;
+import system.Func_17;
+import system.Func_16;
+import system.Func_15;
+import system.Func_14;
+import system.Func_13;
+import system.Func_12;
+import system.Func_11;
+import system.Func_10;
+import system.Func_9;
+import system.Func_8;
+import system.Func_7;
+import system.Func_6;
+import system.Func_5;
+import system.Func_4;
+import system.Func_3;
+import system.Func_2;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -157,6 +177,21 @@ public class DbLambda extends NetObject  {
     
     // Methods section
     
+    public static DbLambda Create(DbExpression body, IEnumerable_1 variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", body == null ? null : body.getJCOInstance(), variables == null ? null : variables.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbLambda Create(DbExpression body, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -172,10 +207,265 @@ public class DbLambda extends NetObject  {
         }
     }
 
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, TypeUsage argument13Type, TypeUsage argument14Type, TypeUsage argument15Type, TypeUsage argument16Type, Func_17 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), argument9Type == null ? null : argument9Type.getJCOInstance(), argument10Type == null ? null : argument10Type.getJCOInstance(), argument11Type == null ? null : argument11Type.getJCOInstance(), argument12Type == null ? null : argument12Type.getJCOInstance(), argument13Type == null ? null : argument13Type.getJCOInstance(), argument14Type == null ? null : argument14Type.getJCOInstance(), argument15Type == null ? null : argument15Type.getJCOInstance(), argument16Type == null ? null : argument16Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, TypeUsage argument13Type, TypeUsage argument14Type, TypeUsage argument15Type, Func_16 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), argument9Type == null ? null : argument9Type.getJCOInstance(), argument10Type == null ? null : argument10Type.getJCOInstance(), argument11Type == null ? null : argument11Type.getJCOInstance(), argument12Type == null ? null : argument12Type.getJCOInstance(), argument13Type == null ? null : argument13Type.getJCOInstance(), argument14Type == null ? null : argument14Type.getJCOInstance(), argument15Type == null ? null : argument15Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, TypeUsage argument13Type, TypeUsage argument14Type, Func_15 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), argument9Type == null ? null : argument9Type.getJCOInstance(), argument10Type == null ? null : argument10Type.getJCOInstance(), argument11Type == null ? null : argument11Type.getJCOInstance(), argument12Type == null ? null : argument12Type.getJCOInstance(), argument13Type == null ? null : argument13Type.getJCOInstance(), argument14Type == null ? null : argument14Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, TypeUsage argument13Type, Func_14 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), argument9Type == null ? null : argument9Type.getJCOInstance(), argument10Type == null ? null : argument10Type.getJCOInstance(), argument11Type == null ? null : argument11Type.getJCOInstance(), argument12Type == null ? null : argument12Type.getJCOInstance(), argument13Type == null ? null : argument13Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, TypeUsage argument12Type, Func_13 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), argument9Type == null ? null : argument9Type.getJCOInstance(), argument10Type == null ? null : argument10Type.getJCOInstance(), argument11Type == null ? null : argument11Type.getJCOInstance(), argument12Type == null ? null : argument12Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, TypeUsage argument11Type, Func_12 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), argument9Type == null ? null : argument9Type.getJCOInstance(), argument10Type == null ? null : argument10Type.getJCOInstance(), argument11Type == null ? null : argument11Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, TypeUsage argument10Type, Func_11 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), argument9Type == null ? null : argument9Type.getJCOInstance(), argument10Type == null ? null : argument10Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, TypeUsage argument9Type, Func_10 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), argument9Type == null ? null : argument9Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, TypeUsage argument8Type, Func_9 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), argument8Type == null ? null : argument8Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, TypeUsage argument7Type, Func_8 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), argument7Type == null ? null : argument7Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, TypeUsage argument6Type, Func_7 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), argument6Type == null ? null : argument6Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type, Func_6 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), argument5Type == null ? null : argument5Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, Func_5 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), argument4Type == null ? null : argument4Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, Func_4 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), argument3Type == null ? null : argument3Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, TypeUsage argument2Type, Func_3 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), argument2Type == null ? null : argument2Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambda Create(TypeUsage argument1Type, Func_2 lambdaFunction) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", argument1Type == null ? null : argument1Type.getJCOInstance(), lambdaFunction);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new DbLambda(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public IList_1 getVariables() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariables = null;
+        try {
+            retObjectVariables = classInstance.Get("Variables");
+            JCObject val = (JCObject)retObjectVariables;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariables != null ? retObjectVariables.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbExpression getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

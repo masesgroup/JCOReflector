@@ -45,6 +45,8 @@ import system.security.cryptography.KeyedHashAlgorithm;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.xml.DataObject;
 import system.security.cryptography.xml.Reference;
+import system.collections.objectmodel.Collection_1;
+import system.Func_2;
 import system.security.cryptography.xml.EncryptedXml;
 import system.security.cryptography.xml.KeyInfo;
 import system.security.cryptography.xml.Signature;
@@ -363,6 +365,45 @@ public class SignedXml extends NetObject  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSignatureValue != null ? retObjectSignatureValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getSafeCanonicalizationMethods() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeCanonicalizationMethods = null;
+        try {
+            retObjectSafeCanonicalizationMethods = classInstance.Get("SafeCanonicalizationMethods");
+            JCObject val = (JCObject)retObjectSafeCanonicalizationMethods;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSafeCanonicalizationMethods != null ? retObjectSafeCanonicalizationMethods.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getSignatureFormatValidator() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureFormatValidator = null;
+        try {
+            retObjectSignatureFormatValidator = classInstance.Get("SignatureFormatValidator");
+            return (Func_2)retObjectSignatureFormatValidator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectSignatureFormatValidator != null ? retObjectSignatureFormatValidator.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSignatureFormatValidator(Func_2 SignatureFormatValidator) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SignatureFormatValidator", SignatureFormatValidator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

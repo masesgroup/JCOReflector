@@ -57,7 +57,7 @@ import system.windows.media.media3d.Matrix3D;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ScaleTransform3D extends AffineTransform3D  {
+public class ScaleTransform3D extends system.windows.media.media3d.AffineTransform3D  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

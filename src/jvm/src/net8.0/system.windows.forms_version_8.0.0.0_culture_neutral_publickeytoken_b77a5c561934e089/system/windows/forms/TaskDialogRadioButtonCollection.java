@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.windows.forms.TaskDialogRadioButton;
 
 
@@ -53,7 +54,7 @@ import system.windows.forms.TaskDialogRadioButton;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TaskDialogRadioButtonCollection extends NetObjectEnumerable  {
+public class TaskDialogRadioButtonCollection extends system.collections.objectmodel.Collection_1<TaskDialogRadioButton>  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

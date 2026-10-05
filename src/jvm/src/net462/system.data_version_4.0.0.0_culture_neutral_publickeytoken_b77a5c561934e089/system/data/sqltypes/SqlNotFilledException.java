@@ -52,7 +52,7 @@ import system.data.sqltypes.SqlTypeException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlNotFilledException extends SqlTypeException {
+public class SqlNotFilledException extends system.data.sqltypes.SqlTypeException {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

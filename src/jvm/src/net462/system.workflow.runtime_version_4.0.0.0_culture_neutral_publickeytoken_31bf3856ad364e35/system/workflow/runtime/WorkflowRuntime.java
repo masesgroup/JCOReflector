@@ -39,9 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.runtime.configuration.WorkflowRuntimeSection;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.workflow.runtime.WorkflowInstance;
-import system.xml.XmlReader;
+import system.collections.generic.Dictionary_2;
 import system.Guid;
+import system.xml.XmlReader;
 
 
 /**
@@ -183,6 +185,51 @@ public class WorkflowRuntime extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    public ReadOnlyCollection_1 GetAllServices(NetType serviceType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllServices = null;
+        try {
+            retObjectGetAllServices = classInstance.Invoke("GetAllServices", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetAllServices = (JCObject)retObjectGetAllServices;
+            return new ReadOnlyCollection_1(objGetAllServices);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllServices != null ? retObjectGetAllServices.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetLoadedWorkflows() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLoadedWorkflows = null;
+        try {
+            retObjectGetLoadedWorkflows = classInstance.Invoke("GetLoadedWorkflows");
+            JCObject objGetLoadedWorkflows = (JCObject)retObjectGetLoadedWorkflows;
+            return new ReadOnlyCollection_1(objGetLoadedWorkflows);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLoadedWorkflows != null ? retObjectGetLoadedWorkflows.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ReadOnlyCollection_1 GetAllServices() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllServices = null;
+        try {
+            retObjectGetAllServices = classInstance.Invoke("GetAllServices");
+            JCObject objGetAllServices = (JCObject)retObjectGetAllServices;
+            return new ReadOnlyCollection_1(objGetAllServices);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllServices != null ? retObjectGetAllServices.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetService(NetType serviceType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,12 +260,72 @@ public class WorkflowRuntime extends NetObject implements AutoCloseable {
         }
     }
 
+    public WorkflowInstance CreateWorkflow(NetType workflowType, Dictionary_2 namedArgumentValues) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.workflow.runtime.tracking.TrackingProfileDeserializationException, system.security.cryptography.CryptographicException, system.ApplicationException, system.security.SecurityException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.OverflowException, system.xml.XmlException, system.UnauthorizedAccessException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWorkflow = null;
+        try {
+            retObjectCreateWorkflow = classInstance.Invoke("CreateWorkflow", workflowType == null ? null : workflowType.getJCOInstance(), namedArgumentValues == null ? null : namedArgumentValues.getJCOInstance());
+            JCObject objCreateWorkflow = (JCObject)retObjectCreateWorkflow;
+            return new WorkflowInstance(objCreateWorkflow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWorkflow != null ? retObjectCreateWorkflow.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowInstance CreateWorkflow(NetType workflowType, Dictionary_2 namedArgumentValues, Guid instanceId) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.workflow.runtime.tracking.TrackingProfileDeserializationException, system.security.cryptography.CryptographicException, system.ApplicationException, system.security.SecurityException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWorkflow = null;
+        try {
+            retObjectCreateWorkflow = classInstance.Invoke("CreateWorkflow", workflowType == null ? null : workflowType.getJCOInstance(), namedArgumentValues == null ? null : namedArgumentValues.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance());
+            JCObject objCreateWorkflow = (JCObject)retObjectCreateWorkflow;
+            return new WorkflowInstance(objCreateWorkflow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWorkflow != null ? retObjectCreateWorkflow.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public WorkflowInstance CreateWorkflow(XmlReader workflowDefinitionReader) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.MulticastNotSupportedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.xml.XmlException, system.UnauthorizedAccessException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateWorkflow = null;
         try {
             retObjectCreateWorkflow = classInstance.Invoke("CreateWorkflow", workflowDefinitionReader == null ? null : workflowDefinitionReader.getJCOInstance());
+            JCObject objCreateWorkflow = (JCObject)retObjectCreateWorkflow;
+            return new WorkflowInstance(objCreateWorkflow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWorkflow != null ? retObjectCreateWorkflow.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowInstance CreateWorkflow(XmlReader workflowDefinitionReader, XmlReader rulesReader, Dictionary_2 namedArgumentValues) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.workflow.runtime.tracking.TrackingProfileDeserializationException, system.security.cryptography.CryptographicException, system.ApplicationException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.OverflowException, system.xml.XmlException, system.UnauthorizedAccessException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWorkflow = null;
+        try {
+            retObjectCreateWorkflow = classInstance.Invoke("CreateWorkflow", workflowDefinitionReader == null ? null : workflowDefinitionReader.getJCOInstance(), rulesReader == null ? null : rulesReader.getJCOInstance(), namedArgumentValues == null ? null : namedArgumentValues.getJCOInstance());
+            JCObject objCreateWorkflow = (JCObject)retObjectCreateWorkflow;
+            return new WorkflowInstance(objCreateWorkflow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWorkflow != null ? retObjectCreateWorkflow.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowInstance CreateWorkflow(XmlReader workflowDefinitionReader, XmlReader rulesReader, Dictionary_2 namedArgumentValues, Guid instanceId) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.MulticastNotSupportedException, system.workflow.runtime.tracking.TrackingProfileDeserializationException, system.security.cryptography.CryptographicException, system.ApplicationException, system.security.SecurityException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWorkflow = null;
+        try {
+            retObjectCreateWorkflow = classInstance.Invoke("CreateWorkflow", workflowDefinitionReader == null ? null : workflowDefinitionReader.getJCOInstance(), rulesReader == null ? null : rulesReader.getJCOInstance(), namedArgumentValues == null ? null : namedArgumentValues.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance());
             JCObject objCreateWorkflow = (JCObject)retObjectCreateWorkflow;
             return new WorkflowInstance(objCreateWorkflow);
         } catch (java.lang.ClassCastException cce) {

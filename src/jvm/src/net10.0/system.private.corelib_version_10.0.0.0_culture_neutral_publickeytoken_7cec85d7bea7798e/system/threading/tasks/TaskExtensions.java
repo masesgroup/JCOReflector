@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.tasks.Task;
+import system.threading.tasks.Task_1;
 
 
 /**
@@ -152,6 +153,21 @@ public class TaskExtensions extends NetObject  {
     
     // Methods section
     
+    public static Task Unwrap(Task_1 task) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.NullReferenceException, system.threading.ThreadStateException, system.OperationCanceledException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnwrap = null;
+        try {
+            retObjectUnwrap = classType.Invoke("Unwrap", task == null ? null : task.getJCOInstance());
+            JCObject objUnwrap = (JCObject)retObjectUnwrap;
+            return new Task(objUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnwrap != null ? retObjectUnwrap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

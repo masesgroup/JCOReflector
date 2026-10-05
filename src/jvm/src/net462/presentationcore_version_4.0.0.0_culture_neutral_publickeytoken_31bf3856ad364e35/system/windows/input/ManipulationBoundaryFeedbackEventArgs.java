@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.input.InputEventArgs;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.input.ManipulationDelta;
@@ -56,7 +58,7 @@ import system.windows.input.ManipulationDelta;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ManipulationBoundaryFeedbackEventArgs extends InputEventArgs  {
+public class ManipulationBoundaryFeedbackEventArgs extends system.windows.input.InputEventArgs  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -161,6 +163,21 @@ public class ManipulationBoundaryFeedbackEventArgs extends InputEventArgs  {
     
     // Properties section
     
+    public IEnumerable_1 getManipulators() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManipulators = null;
+        try {
+            retObjectManipulators = classInstance.Get("Manipulators");
+            JCObject val = (JCObject)retObjectManipulators;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManipulators != null ? retObjectManipulators.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IInputElement getManipulationContainer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -42,6 +42,7 @@ import system.collections.DictionaryEntry;
 import system.Array;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.collections.objectmodel.Collection_1;
 import system.Uri;
 import system.windows.DeferrableContent;
 
@@ -414,6 +415,21 @@ public class ResourceDictionary extends NetObjectEnumerable  {
             return new ICollectionImplementation(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getMergedDictionaries() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.MulticastNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMergedDictionaries = null;
+        try {
+            retObjectMergedDictionaries = classInstance.Get("MergedDictionaries");
+            JCObject val = (JCObject)retObjectMergedDictionaries;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMergedDictionaries != null ? retObjectMergedDictionaries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

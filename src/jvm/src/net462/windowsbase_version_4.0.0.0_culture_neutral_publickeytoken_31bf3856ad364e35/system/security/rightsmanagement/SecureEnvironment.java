@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.rightsmanagement.ContentUser;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.security.rightsmanagement.SecureEnvironment;
 import system.security.rightsmanagement.AuthenticationType;
 import system.security.rightsmanagement.UserActivationMode;
@@ -166,6 +167,21 @@ public class SecureEnvironment extends NetObject implements AutoCloseable {
             return (boolean)retObjectIsUserActivated;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUserActivated != null ? retObjectIsUserActivated.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetActivatedUsers() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.rightsmanagement.RightsManagementException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetActivatedUsers = null;
+        try {
+            retObjectGetActivatedUsers = classType.Invoke("GetActivatedUsers");
+            JCObject objGetActivatedUsers = (JCObject)retObjectGetActivatedUsers;
+            return new ReadOnlyCollection_1(objGetActivatedUsers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetActivatedUsers != null ? retObjectGetActivatedUsers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

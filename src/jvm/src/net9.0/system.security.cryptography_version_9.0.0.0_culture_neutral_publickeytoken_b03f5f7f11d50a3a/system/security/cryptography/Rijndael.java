@@ -54,7 +54,7 @@ import system.security.cryptography.Rijndael;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Rijndael extends SymmetricAlgorithm  {
+public class Rijndael extends system.security.cryptography.SymmetricAlgorithm  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

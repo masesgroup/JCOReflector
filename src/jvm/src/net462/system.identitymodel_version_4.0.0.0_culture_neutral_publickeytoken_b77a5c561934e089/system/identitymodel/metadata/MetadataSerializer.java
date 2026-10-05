@@ -45,6 +45,7 @@ import system.identitymodel.metadata.MetadataBase;
 import system.io.Stream;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlWriter;
+import system.collections.generic.List_1;
 import system.identitymodel.selectors.X509CertificateValidator;
 import system.security.cryptography.x509certificates.StoreLocation;
 import system.security.cryptography.x509certificates.X509RevocationMode;
@@ -263,6 +264,21 @@ public class MetadataSerializer extends NetObject  {
     
     // Properties section
     
+    public List_1 getTrustedIssuers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustedIssuers = null;
+        try {
+            retObjectTrustedIssuers = classInstance.Get("TrustedIssuers");
+            JCObject val = (JCObject)retObjectTrustedIssuers;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustedIssuers != null ? retObjectTrustedIssuers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityTokenSerializer getSecurityTokenSerializer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

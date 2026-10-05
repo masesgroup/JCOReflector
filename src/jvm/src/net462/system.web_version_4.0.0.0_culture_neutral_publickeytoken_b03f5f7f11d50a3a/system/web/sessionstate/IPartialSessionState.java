@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -119,6 +121,8 @@ public interface IPartialSessionState extends IJCOBridgeReflected {
     
     // Properties section
     
+    public IList_1 getPartialSessionStateKeys() throws Throwable;
+
 
 
     // Instance Events section

@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ReadOnlyMemory_1;
+import system.formats.asn1.AsnEncodingRules;
+import system.formats.asn1.AsnReaderOptions;
+import system.Nullable_1;
 import system.formats.asn1.Asn1Tag;
 import system.UInt32;
 import system.UInt64;
@@ -47,7 +51,6 @@ import system.Enum;
 import system.formats.asn1.AsnReader;
 import system.numerics.BigInteger;
 import system.formats.asn1.UniversalTagNumber;
-import system.formats.asn1.AsnEncodingRules;
 
 
 /**
@@ -158,11 +161,269 @@ public class AsnReader extends NetObject  {
     public AsnReader() throws Throwable {
     }
 
+    public AsnReader(ReadOnlyMemory_1 data, AsnEncodingRules ruleSet, AsnReaderOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(data == null ? null : data.getJCOInstance(), ruleSet == null ? null : ruleSet.getJCOInstance(), options == null ? null : options.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public boolean ReadBoolean(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBoolean = null;
+        try {
+            retObjectReadBoolean = classInstance.Invoke("ReadBoolean", expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (boolean)retObjectReadBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadBoolean != null ? retObjectReadBoolean.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReadInt32(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadInt32 = null;
+        try {
+            retObjectTryReadInt32 = classInstance.Invoke("TryReadInt32", value.getJCRefOut(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (boolean)retObjectTryReadInt32;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadInt32 != null ? retObjectTryReadInt32.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReadInt64(JCORefOut<java.util.concurrent.atomic.AtomicLong> value, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadInt64 = null;
+        try {
+            retObjectTryReadInt64 = classInstance.Invoke("TryReadInt64", value.getJCRefOut(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (boolean)retObjectTryReadInt64;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadInt64 != null ? retObjectTryReadInt64.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReadPrimitiveBitString(JCORefOut<java.util.concurrent.atomic.AtomicInteger> unusedBitCount, JCORefOut<ReadOnlyMemory_1> value, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadPrimitiveBitString = null;
+        try {
+            retObjectTryReadPrimitiveBitString = classInstance.Invoke("TryReadPrimitiveBitString", unusedBitCount.getJCRefOut(), value.getJCRefOut(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (boolean)retObjectTryReadPrimitiveBitString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadPrimitiveBitString != null ? retObjectTryReadPrimitiveBitString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReadPrimitiveCharacterStringBytes(Asn1Tag expectedTag, JCORefOut<ReadOnlyMemory_1> contents) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadPrimitiveCharacterStringBytes = null;
+        try {
+            retObjectTryReadPrimitiveCharacterStringBytes = classInstance.Invoke("TryReadPrimitiveCharacterStringBytes", expectedTag == null ? null : expectedTag.getJCOInstance(), contents.getJCRefOut());
+            return (boolean)retObjectTryReadPrimitiveCharacterStringBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadPrimitiveCharacterStringBytes != null ? retObjectTryReadPrimitiveCharacterStringBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReadPrimitiveOctetString(JCORefOut<ReadOnlyMemory_1> contents, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadPrimitiveOctetString = null;
+        try {
+            retObjectTryReadPrimitiveOctetString = classInstance.Invoke("TryReadPrimitiveOctetString", contents.getJCRefOut(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (boolean)retObjectTryReadPrimitiveOctetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadPrimitiveOctetString != null ? retObjectTryReadPrimitiveOctetString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReadUInt32(JCORefOut<UInt32> value, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadUInt32 = null;
+        try {
+            retObjectTryReadUInt32 = classInstance.Invoke("TryReadUInt32", value.getJCRefOut(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (boolean)retObjectTryReadUInt32;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadUInt32 != null ? retObjectTryReadUInt32.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReadUInt64(JCORefOut<UInt64> value, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryReadUInt64 = null;
+        try {
+            retObjectTryReadUInt64 = classInstance.Invoke("TryReadUInt64", value.getJCRefOut(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (boolean)retObjectTryReadUInt64;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReadUInt64 != null ? retObjectTryReadUInt64.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] ReadBitString(JCORefOut<java.util.concurrent.atomic.AtomicInteger> unusedBitCount, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBitString = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectReadBitString = classInstance.Invoke("ReadBitString", unusedBitCount.getJCRefOut(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadBitString;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexReadBitString = 0; indexReadBitString < resultingArrayList.size(); indexReadBitString++ ) {
+				resultingArray[indexReadBitString] = (byte)resultingArrayList.get(indexReadBitString);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadBitString != null ? retObjectReadBitString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public byte[] ReadOctetString(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOctetString = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectReadOctetString = classInstance.Invoke("ReadOctetString", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadOctetString;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexReadOctetString = 0; indexReadOctetString < resultingArrayList.size(); indexReadOctetString++ ) {
+				resultingArray[indexReadOctetString] = (byte)resultingArrayList.get(indexReadOctetString);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadOctetString != null ? retObjectReadOctetString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BitArray ReadNamedBitList(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadNamedBitList = null;
+        try {
+            retObjectReadNamedBitList = classInstance.Invoke("ReadNamedBitList", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadNamedBitList = (JCObject)retObjectReadNamedBitList;
+            return new BitArray(objReadNamedBitList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadNamedBitList != null ? retObjectReadNamedBitList.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTimeOffset ReadGeneralizedTime(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadGeneralizedTime = null;
+        try {
+            retObjectReadGeneralizedTime = classInstance.Invoke("ReadGeneralizedTime", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadGeneralizedTime = (JCObject)retObjectReadGeneralizedTime;
+            return new DateTimeOffset(objReadGeneralizedTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadGeneralizedTime != null ? retObjectReadGeneralizedTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTimeOffset ReadUtcTime(int twoDigitYearMax, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUtcTime = null;
+        try {
+            retObjectReadUtcTime = classInstance.Invoke("ReadUtcTime", twoDigitYearMax, expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadUtcTime = (JCObject)retObjectReadUtcTime;
+            return new DateTimeOffset(objReadUtcTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUtcTime != null ? retObjectReadUtcTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTimeOffset ReadUtcTime(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadUtcTime = null;
+        try {
+            retObjectReadUtcTime = classInstance.Invoke("ReadUtcTime", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadUtcTime = (JCObject)retObjectReadUtcTime;
+            return new DateTimeOffset(objReadUtcTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadUtcTime != null ? retObjectReadUtcTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Enum ReadEnumeratedValue(NetType enumType, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadEnumeratedValue = null;
+        try {
+            retObjectReadEnumeratedValue = classInstance.Invoke("ReadEnumeratedValue", enumType == null ? null : enumType.getJCOInstance(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadEnumeratedValue = (JCObject)retObjectReadEnumeratedValue;
+            return new Enum(objReadEnumeratedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadEnumeratedValue != null ? retObjectReadEnumeratedValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Enum ReadNamedBitListValue(NetType flagsEnumType, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadNamedBitListValue = null;
+        try {
+            retObjectReadNamedBitListValue = classInstance.Invoke("ReadNamedBitListValue", flagsEnumType == null ? null : flagsEnumType.getJCOInstance(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadNamedBitListValue = (JCObject)retObjectReadNamedBitListValue;
+            return new Enum(objReadNamedBitListValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadNamedBitListValue != null ? retObjectReadNamedBitListValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Asn1Tag PeekTag() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -188,6 +449,179 @@ public class AsnReader extends NetObject  {
             return new AsnReader(objClone);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AsnReader ReadSequence(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSequence = null;
+        try {
+            retObjectReadSequence = classInstance.Invoke("ReadSequence", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadSequence = (JCObject)retObjectReadSequence;
+            return new AsnReader(objReadSequence);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSequence != null ? retObjectReadSequence.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AsnReader ReadSetOf(boolean skipSortOrderValidation, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSetOf = null;
+        try {
+            retObjectReadSetOf = classInstance.Invoke("ReadSetOf", skipSortOrderValidation, expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadSetOf = (JCObject)retObjectReadSetOf;
+            return new AsnReader(objReadSetOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSetOf != null ? retObjectReadSetOf.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AsnReader ReadSetOf(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSetOf = null;
+        try {
+            retObjectReadSetOf = classInstance.Invoke("ReadSetOf", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadSetOf = (JCObject)retObjectReadSetOf;
+            return new AsnReader(objReadSetOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSetOf != null ? retObjectReadSetOf.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BigInteger ReadInteger(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInteger = null;
+        try {
+            retObjectReadInteger = classInstance.Invoke("ReadInteger", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadInteger = (JCObject)retObjectReadInteger;
+            return new BigInteger(objReadInteger);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadInteger != null ? retObjectReadInteger.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 PeekContentBytes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekContentBytes = null;
+        try {
+            retObjectPeekContentBytes = classInstance.Invoke("PeekContentBytes");
+            JCObject objPeekContentBytes = (JCObject)retObjectPeekContentBytes;
+            return new ReadOnlyMemory_1(objPeekContentBytes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekContentBytes != null ? retObjectPeekContentBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 PeekEncodedValue() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeekEncodedValue = null;
+        try {
+            retObjectPeekEncodedValue = classInstance.Invoke("PeekEncodedValue");
+            JCObject objPeekEncodedValue = (JCObject)retObjectPeekEncodedValue;
+            return new ReadOnlyMemory_1(objPeekEncodedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeekEncodedValue != null ? retObjectPeekEncodedValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 ReadEncodedValue() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadEncodedValue = null;
+        try {
+            retObjectReadEncodedValue = classInstance.Invoke("ReadEncodedValue");
+            JCObject objReadEncodedValue = (JCObject)retObjectReadEncodedValue;
+            return new ReadOnlyMemory_1(objReadEncodedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadEncodedValue != null ? retObjectReadEncodedValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 ReadEnumeratedBytes(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadEnumeratedBytes = null;
+        try {
+            retObjectReadEnumeratedBytes = classInstance.Invoke("ReadEnumeratedBytes", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadEnumeratedBytes = (JCObject)retObjectReadEnumeratedBytes;
+            return new ReadOnlyMemory_1(objReadEnumeratedBytes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadEnumeratedBytes != null ? retObjectReadEnumeratedBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 ReadIntegerBytes(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadIntegerBytes = null;
+        try {
+            retObjectReadIntegerBytes = classInstance.Invoke("ReadIntegerBytes", expectedTag == null ? null : expectedTag.getJCOInstance());
+            JCObject objReadIntegerBytes = (JCObject)retObjectReadIntegerBytes;
+            return new ReadOnlyMemory_1(objReadIntegerBytes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadIntegerBytes != null ? retObjectReadIntegerBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ReadCharacterString(UniversalTagNumber encodingType, Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadCharacterString = null;
+        try {
+            retObjectReadCharacterString = classInstance.Invoke("ReadCharacterString", encodingType == null ? null : encodingType.getJCOInstance(), expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (java.lang.String)retObjectReadCharacterString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadCharacterString != null ? retObjectReadCharacterString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ReadObjectIdentifier(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.ArgumentNullException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadObjectIdentifier = null;
+        try {
+            retObjectReadObjectIdentifier = classInstance.Invoke("ReadObjectIdentifier", expectedTag == null ? null : expectedTag.getJCOInstance());
+            return (java.lang.String)retObjectReadObjectIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadObjectIdentifier != null ? retObjectReadObjectIdentifier.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReadNull(Nullable_1 expectedTag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReadNull", expectedTag == null ? null : expectedTag.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

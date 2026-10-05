@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.Index;
 import system.Range;
+import system.ValueTuple_2;
 
 
 /**
@@ -55,7 +56,7 @@ import system.Range;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Range extends ValueType  {
+public class Range extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -205,6 +206,21 @@ public class Range extends ValueType  {
             return new Range(objStartAt);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartAt != null ? retObjectStartAt.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTuple_2 GetOffsetAndLength(int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOffsetAndLength = null;
+        try {
+            retObjectGetOffsetAndLength = classInstance.Invoke("GetOffsetAndLength", length);
+            JCObject objGetOffsetAndLength = (JCObject)retObjectGetOffsetAndLength;
+            return new ValueTuple_2(objGetOffsetAndLength);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOffsetAndLength != null ? retObjectGetOffsetAndLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

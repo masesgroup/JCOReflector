@@ -44,11 +44,11 @@ import system.workflow.componentmodel.design.WorkflowTheme;
 import system.workflow.componentmodel.design.ThemeType;
 import system.componentmodel.design.serialization.IDesignerSerializationManager;
 import system.componentmodel.design.serialization.IDesignerSerializationManagerImplementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.workflow.componentmodel.design.AmbientTheme;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -63,7 +63,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowTheme extends NetObject implements IDisposable, AutoCloseable {
+public class WorkflowTheme extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -363,6 +363,21 @@ public class WorkflowTheme extends NetObject implements IDisposable, AutoCloseab
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 getStandardThemes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStandardThemes = null;
+        try {
+            retObjectStandardThemes = classType.Get("StandardThemes");
+            JCObject val = (JCObject)retObjectStandardThemes;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandardThemes != null ? retObjectStandardThemes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,6 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.ImmutableSortedDictionary_2;
+import system.collections.generic.IComparer_1;
+import system.collections.generic.IComparer_1Implementation;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.Func_2;
 
 
 /**
@@ -151,6 +159,186 @@ public class ImmutableSortedDictionary extends NetObject  {
     
     // Methods section
     
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 Create() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableSortedDictionary_2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 Create(IComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", keyComparer == null ? null : keyComparer.getJCOInstance(), valueComparer == null ? null : valueComparer.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableSortedDictionary_2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 Create(IComparer_1 keyComparer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableSortedDictionary_2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 CreateRange(IComparer_1 keyComparer, IEnumerable_1 items) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", keyComparer == null ? null : keyComparer.getJCOInstance(), items == null ? null : items.getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableSortedDictionary_2(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 CreateRange(IComparer_1 keyComparer, IEqualityComparer_1 valueComparer, IEnumerable_1 items) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", keyComparer == null ? null : keyComparer.getJCOInstance(), valueComparer == null ? null : valueComparer.getJCOInstance(), items == null ? null : items.getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableSortedDictionary_2(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 CreateRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", items == null ? null : items.getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableSortedDictionary_2(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, IComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableSortedDictionary = null;
+        try {
+            retObjectToImmutableSortedDictionary = classType.Invoke("ToImmutableSortedDictionary", source == null ? null : source.getJCOInstance(), keyComparer == null ? null : keyComparer.getJCOInstance(), valueComparer == null ? null : valueComparer.getJCOInstance());
+            JCObject objToImmutableSortedDictionary = (JCObject)retObjectToImmutableSortedDictionary;
+            return new ImmutableSortedDictionary_2(objToImmutableSortedDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableSortedDictionary != null ? retObjectToImmutableSortedDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, IComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableSortedDictionary = null;
+        try {
+            retObjectToImmutableSortedDictionary = classType.Invoke("ToImmutableSortedDictionary", source == null ? null : source.getJCOInstance(), keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objToImmutableSortedDictionary = (JCObject)retObjectToImmutableSortedDictionary;
+            return new ImmutableSortedDictionary_2(objToImmutableSortedDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableSortedDictionary != null ? retObjectToImmutableSortedDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableSortedDictionary = null;
+        try {
+            retObjectToImmutableSortedDictionary = classType.Invoke("ToImmutableSortedDictionary", source == null ? null : source.getJCOInstance());
+            JCObject objToImmutableSortedDictionary = (JCObject)retObjectToImmutableSortedDictionary;
+            return new ImmutableSortedDictionary_2(objToImmutableSortedDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableSortedDictionary != null ? retObjectToImmutableSortedDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableSortedDictionary = null;
+        try {
+            retObjectToImmutableSortedDictionary = classType.Invoke("ToImmutableSortedDictionary", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, keyComparer == null ? null : keyComparer.getJCOInstance(), valueComparer == null ? null : valueComparer.getJCOInstance());
+            JCObject objToImmutableSortedDictionary = (JCObject)retObjectToImmutableSortedDictionary;
+            return new ImmutableSortedDictionary_2(objToImmutableSortedDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableSortedDictionary != null ? retObjectToImmutableSortedDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector, IComparer_1 keyComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableSortedDictionary = null;
+        try {
+            retObjectToImmutableSortedDictionary = classType.Invoke("ToImmutableSortedDictionary", source == null ? null : source.getJCOInstance(), keySelector, elementSelector, keyComparer == null ? null : keyComparer.getJCOInstance());
+            JCObject objToImmutableSortedDictionary = (JCObject)retObjectToImmutableSortedDictionary;
+            return new ImmutableSortedDictionary_2(objToImmutableSortedDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableSortedDictionary != null ? retObjectToImmutableSortedDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> ImmutableSortedDictionary_2 ToImmutableSortedDictionary(IEnumerable_1 source, Func_2 keySelector, Func_2 elementSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableSortedDictionary = null;
+        try {
+            retObjectToImmutableSortedDictionary = classType.Invoke("ToImmutableSortedDictionary", source == null ? null : source.getJCOInstance(), keySelector, elementSelector);
+            JCObject objToImmutableSortedDictionary = (JCObject)retObjectToImmutableSortedDictionary;
+            return new ImmutableSortedDictionary_2(objToImmutableSortedDictionary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableSortedDictionary != null ? retObjectToImmutableSortedDictionary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

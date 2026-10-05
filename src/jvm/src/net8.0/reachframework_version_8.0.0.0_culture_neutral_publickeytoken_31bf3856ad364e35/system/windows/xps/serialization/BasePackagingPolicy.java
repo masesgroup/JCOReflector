@@ -38,12 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.windows.xps.serialization.XpsResourceStream;
 import system.xml.XmlWriter;
 import system.printing.PrintTicket;
 import system.Uri;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -58,7 +58,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BasePackagingPolicy extends NetObject implements IDisposable, AutoCloseable {
+public class BasePackagingPolicy extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: ReachFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -157,6 +157,21 @@ public class BasePackagingPolicy extends NetObject implements IDisposable, AutoC
     
     // Methods section
     
+    public IList_1 AcquireStreamForLinkTargets() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireStreamForLinkTargets = null;
+        try {
+            retObjectAcquireStreamForLinkTargets = classInstance.Invoke("AcquireStreamForLinkTargets");
+            JCObject objAcquireStreamForLinkTargets = (JCObject)retObjectAcquireStreamForLinkTargets;
+            return new IList_1Implementation(objAcquireStreamForLinkTargets);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireStreamForLinkTargets != null ? retObjectAcquireStreamForLinkTargets.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XpsResourceStream AcquireResourceStreamForXpsColorContext(java.lang.String resourceId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

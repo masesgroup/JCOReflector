@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.durableinstancing.InstancePersistenceCommand;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.runtime.durableinstancing.InstancePersistenceCommand;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CreateWorkflowOwnerCommand extends InstancePersistenceCommand  {
+public class CreateWorkflowOwnerCommand extends system.runtime.durableinstancing.InstancePersistenceCommand  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +166,21 @@ public class CreateWorkflowOwnerCommand extends InstancePersistenceCommand  {
     
     // Properties section
     
+    public IDictionary_2 getInstanceOwnerMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceOwnerMetadata = null;
+        try {
+            retObjectInstanceOwnerMetadata = classInstance.Get("InstanceOwnerMetadata");
+            JCObject val = (JCObject)retObjectInstanceOwnerMetadata;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceOwnerMetadata != null ? retObjectInstanceOwnerMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

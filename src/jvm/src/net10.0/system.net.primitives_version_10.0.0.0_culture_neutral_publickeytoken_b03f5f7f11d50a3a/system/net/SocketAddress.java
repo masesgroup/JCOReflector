@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.net.sockets.AddressFamily;
 import system.net.SocketAddress;
+import system.Memory_1;
 
 
 /**
@@ -278,6 +279,21 @@ public class SocketAddress extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Memory_1 getBuffer() throws Throwable, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
+        try {
+            retObjectBuffer = classInstance.Get("Buffer");
+            JCObject val = (JCObject)retObjectBuffer;
+            return new Memory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

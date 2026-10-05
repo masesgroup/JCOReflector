@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.servicemodel.description.OperationDescription;
 import system.servicemodel.DataContractFormatAttribute;
 import system.runtime.serialization.XmlObjectSerializer;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xml.XmlDictionaryString;
 import system.servicemodel.channels.BindingParameterCollection;
 import system.servicemodel.dispatcher.ClientOperation;
@@ -51,10 +53,6 @@ import system.servicemodel.description.WsdlEndpointConversionContext;
 import system.runtime.serialization.DataContractResolver;
 import system.runtime.serialization.IDataContractSurrogate;
 import system.runtime.serialization.IDataContractSurrogateImplementation;
-import system.servicemodel.description.IOperationBehavior;
-import system.servicemodel.description.IOperationBehaviorImplementation;
-import system.servicemodel.description.IWsdlExportExtension;
-import system.servicemodel.description.IWsdlExportExtensionImplementation;
 
 
 /**
@@ -69,7 +67,7 @@ import system.servicemodel.description.IWsdlExportExtensionImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataContractSerializerOperationBehavior extends NetObject implements IOperationBehavior, IWsdlExportExtension {
+public class DataContractSerializerOperationBehavior extends NetObject  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -190,6 +188,36 @@ public class DataContractSerializerOperationBehavior extends NetObject implement
     
     // Methods section
     
+    public XmlObjectSerializer CreateSerializer(NetType type, java.lang.String name, java.lang.String ns, IList_1 knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSerializer = null;
+        try {
+            retObjectCreateSerializer = classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), name, ns, knownTypes == null ? null : knownTypes.getJCOInstance());
+            JCObject objCreateSerializer = (JCObject)retObjectCreateSerializer;
+            return new XmlObjectSerializer(objCreateSerializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSerializer != null ? retObjectCreateSerializer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlObjectSerializer CreateSerializer(NetType type, XmlDictionaryString name, XmlDictionaryString ns, IList_1 knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSerializer = null;
+        try {
+            retObjectCreateSerializer = classInstance.Invoke("CreateSerializer", type == null ? null : type.getJCOInstance(), name == null ? null : name.getJCOInstance(), ns == null ? null : ns.getJCOInstance(), knownTypes == null ? null : knownTypes.getJCOInstance());
+            JCObject objCreateSerializer = (JCObject)retObjectCreateSerializer;
+            return new XmlObjectSerializer(objCreateSerializer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSerializer != null ? retObjectCreateSerializer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method

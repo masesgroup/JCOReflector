@@ -38,8 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.Guid;
 import system.UInt32;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.MemberTypes;
 import system.reflection.Module;
 
@@ -169,6 +173,21 @@ public class MemberInfo extends NetObject  {
         }
     }
 
+    public IList_1 GetCustomAttributesData() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributesData = null;
+        try {
+            retObjectGetCustomAttributesData = classInstance.Invoke("GetCustomAttributesData");
+            JCObject objGetCustomAttributesData = (JCObject)retObjectGetCustomAttributesData;
+            return new IList_1Implementation(objGetCustomAttributesData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributesData != null ? retObjectGetCustomAttributesData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -259,6 +278,21 @@ public class MemberInfo extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getCustomAttributes() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomAttributes = null;
+        try {
+            retObjectCustomAttributes = classInstance.Get("CustomAttributes");
+            JCObject val = (JCObject)retObjectCustomAttributes;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomAttributes != null ? retObjectCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

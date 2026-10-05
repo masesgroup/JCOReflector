@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.tokens.SecurityToken;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -149,6 +150,16 @@ public class SecurityTokenSpecification extends NetObject  {
     public SecurityTokenSpecification() throws Throwable {
     }
 
+    public SecurityTokenSpecification(SecurityToken token, ReadOnlyCollection_1 tokenPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(token == null ? null : token.getJCOInstance(), tokenPolicies == null ? null : tokenPolicies.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +169,21 @@ public class SecurityTokenSpecification extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getSecurityTokenPolicies() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenPolicies = null;
+        try {
+            retObjectSecurityTokenPolicies = classInstance.Get("SecurityTokenPolicies");
+            JCObject val = (JCObject)retObjectSecurityTokenPolicies;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenPolicies != null ? retObjectSecurityTokenPolicies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityToken getSecurityToken() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

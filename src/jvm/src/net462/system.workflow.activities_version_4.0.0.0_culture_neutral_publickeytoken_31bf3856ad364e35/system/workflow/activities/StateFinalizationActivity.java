@@ -53,7 +53,7 @@ import system.workflow.activities.SequenceActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StateFinalizationActivity extends SequenceActivity  {
+public class StateFinalizationActivity extends system.workflow.activities.SequenceActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

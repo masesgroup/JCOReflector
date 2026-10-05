@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.data.BindingExpressionBase;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.data.PriorityBinding;
 
 
@@ -54,7 +55,7 @@ import system.windows.data.PriorityBinding;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PriorityBindingExpression extends BindingExpressionBase  {
+public class PriorityBindingExpression extends system.windows.data.BindingExpressionBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -179,6 +180,21 @@ public class PriorityBindingExpression extends BindingExpressionBase  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getBindingExpressions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingExpressions = null;
+        try {
+            retObjectBindingExpressions = classInstance.Get("BindingExpressions");
+            JCObject val = (JCObject)retObjectBindingExpressions;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingExpressions != null ? retObjectBindingExpressions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BindingExpressionBase getActiveBindingExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

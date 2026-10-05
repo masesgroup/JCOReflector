@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.metadata.SingleSignOnDescriptor;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.identitymodel.metadata.SingleSignOnDescriptor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IdentityProviderSingleSignOnDescriptor extends SingleSignOnDescriptor  {
+public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel.metadata.SingleSignOnDescriptor  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -183,6 +185,36 @@ public class IdentityProviderSingleSignOnDescriptor extends SingleSignOnDescript
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WantAuthenticationRequestsSigned", WantAuthenticationRequestsSigned);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getSingleSignOnServices() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSingleSignOnServices = null;
+        try {
+            retObjectSingleSignOnServices = classInstance.Get("SingleSignOnServices");
+            JCObject val = (JCObject)retObjectSingleSignOnServices;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingleSignOnServices != null ? retObjectSingleSignOnServices.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getSupportedAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedAttributes = null;
+        try {
+            retObjectSupportedAttributes = classInstance.Get("SupportedAttributes");
+            JCObject val = (JCObject)retObjectSupportedAttributes;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedAttributes != null ? retObjectSupportedAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

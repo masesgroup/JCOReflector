@@ -53,7 +53,7 @@ import system.windows.controls.ListBoxItem;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ComboBoxItem extends ListBoxItem  {
+public class ComboBoxItem extends system.windows.controls.ListBoxItem  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

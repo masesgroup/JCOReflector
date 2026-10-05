@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.Single;
 import system.MidpointRounding;
+import system.ValueTuple_2;
 
 
 /**
@@ -843,6 +844,21 @@ public class MathF extends NetObject  {
             return new Single(objTruncate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncate != null ? retObjectTruncate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 SinCos(Single x) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSinCos = null;
+        try {
+            retObjectSinCos = classType.Invoke("SinCos", x == null ? null : x.getJCOInstance());
+            JCObject objSinCos = (JCObject)retObjectSinCos;
+            return new ValueTuple_2(objSinCos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSinCos != null ? retObjectSinCos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

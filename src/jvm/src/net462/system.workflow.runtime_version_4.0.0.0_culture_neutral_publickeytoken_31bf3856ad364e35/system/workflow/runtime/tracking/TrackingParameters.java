@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.Guid;
 import system.workflow.componentmodel.Activity;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -150,6 +152,16 @@ public class TrackingParameters extends NetObject  {
     public TrackingParameters() throws Throwable {
     }
 
+    public TrackingParameters(Guid instanceId, NetType workflowType, Activity rootActivity, IList_1 callPath, Guid callerInstanceId, Guid contextGuid, Guid callerContextGuid, Guid callerParentContextGuid) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(instanceId == null ? null : instanceId.getJCOInstance(), workflowType == null ? null : workflowType.getJCOInstance(), rootActivity == null ? null : rootActivity.getJCOInstance(), callPath == null ? null : callPath.getJCOInstance(), callerInstanceId == null ? null : callerInstanceId.getJCOInstance(), contextGuid == null ? null : contextGuid.getJCOInstance(), callerContextGuid == null ? null : callerContextGuid.getJCOInstance(), callerParentContextGuid == null ? null : callerParentContextGuid.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -159,6 +171,21 @@ public class TrackingParameters extends NetObject  {
     
     // Properties section
     
+    public IList_1 getCallPath() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallPath = null;
+        try {
+            retObjectCallPath = classInstance.Get("CallPath");
+            JCObject val = (JCObject)retObjectCallPath;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallPath != null ? retObjectCallPath.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getCallerContextGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.reflection.metadata.BlobContentId;
 import system.reflection.metadata.BlobBuilder;
+import system.Func_2;
 import system.reflection.portableexecutable.PEHeaderBuilder;
 
 
@@ -182,6 +183,20 @@ public class PEBuilder extends NetObject  {
             return (boolean)retObjectIsDeterministic;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDeterministic != null ? retObjectIsDeterministic.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getIdProvider() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdProvider = null;
+        try {
+            retObjectIdProvider = classInstance.Get("IdProvider");
+            return (Func_2)retObjectIdProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectIdProvider != null ? retObjectIdProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -43,6 +43,8 @@ import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.TimeSpan;
+import system.collections.generic.KeyedByTypeCollection_1;
+import system.collections.objectmodel.Collection_1;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
@@ -65,7 +67,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
+public class IssuedSecurityTokenProvider extends system.identitymodel.selectors.SecurityTokenProvider  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -385,6 +387,36 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedTokenRenewalThresholdPercentage", IssuedTokenRenewalThresholdPercentage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedByTypeCollection_1 getIssuerChannelBehaviors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerChannelBehaviors = null;
+        try {
+            retObjectIssuerChannelBehaviors = classInstance.Get("IssuerChannelBehaviors");
+            JCObject val = (JCObject)retObjectIssuerChannelBehaviors;
+            return new KeyedByTypeCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerChannelBehaviors != null ? retObjectIssuerChannelBehaviors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getTokenRequestParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenRequestParameters = null;
+        try {
+            retObjectTokenRequestParameters = classInstance.Get("TokenRequestParameters");
+            JCObject val = (JCObject)retObjectTokenRequestParameters;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenRequestParameters != null ? retObjectTokenRequestParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

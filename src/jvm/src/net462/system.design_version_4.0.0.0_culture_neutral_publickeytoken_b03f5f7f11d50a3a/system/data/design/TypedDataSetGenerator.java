@@ -44,6 +44,8 @@ import system.codedom.compiler.CodeDomProvider;
 import system.codedom.CodeCompileUnit;
 import system.collections.Hashtable;
 import system.data.common.DbProviderFactory;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -239,6 +241,21 @@ public class TypedDataSetGenerator extends NetObject  {
     
     // Properties section
     
+    public static ICollection_1 getReferencedAssemblies() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReferencedAssemblies = null;
+        try {
+            retObjectReferencedAssemblies = classType.Get("ReferencedAssemblies");
+            JCObject val = (JCObject)retObjectReferencedAssemblies;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferencedAssemblies != null ? retObjectReferencedAssemblies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

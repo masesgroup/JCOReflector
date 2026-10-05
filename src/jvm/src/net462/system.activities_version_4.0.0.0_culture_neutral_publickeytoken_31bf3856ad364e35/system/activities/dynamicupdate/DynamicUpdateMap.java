@@ -39,8 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.dynamicupdate.DynamicUpdateMap;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.dynamicupdate.DynamicUpdateMapQuery;
 import system.activities.Activity;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.activities.LocationReferenceEnvironment;
 
 
 /**
@@ -171,6 +176,21 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
 
+    public static DynamicUpdateMap Merge(IEnumerable_1 maps) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMerge = null;
+        try {
+            retObjectMerge = classType.Invoke("Merge", maps == null ? null : maps.getJCOInstance());
+            JCObject objMerge = (JCObject)retObjectMerge;
+            return new DynamicUpdateMap(objMerge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMerge != null ? retObjectMerge.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DynamicUpdateMapQuery Query(Activity updatedWorkflowDefinition, Activity originalWorkflowDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -181,6 +201,66 @@ public class DynamicUpdateMap extends NetObject  {
             return new DynamicUpdateMapQuery(objQuery);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuery != null ? retObjectQuery.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 CalculateImplementationMapItems(Activity activityDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCalculateImplementationMapItems = null;
+        try {
+            retObjectCalculateImplementationMapItems = classType.Invoke("CalculateImplementationMapItems", activityDefinitionToBeUpdated == null ? null : activityDefinitionToBeUpdated.getJCOInstance());
+            JCObject objCalculateImplementationMapItems = (JCObject)retObjectCalculateImplementationMapItems;
+            return new IDictionary_2Implementation(objCalculateImplementationMapItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalculateImplementationMapItems != null ? retObjectCalculateImplementationMapItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 CalculateImplementationMapItems(Activity activityDefinitionToBeUpdated, LocationReferenceEnvironment environment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCalculateImplementationMapItems = null;
+        try {
+            retObjectCalculateImplementationMapItems = classType.Invoke("CalculateImplementationMapItems", activityDefinitionToBeUpdated == null ? null : activityDefinitionToBeUpdated.getJCOInstance(), environment == null ? null : environment.getJCOInstance());
+            JCObject objCalculateImplementationMapItems = (JCObject)retObjectCalculateImplementationMapItems;
+            return new IDictionary_2Implementation(objCalculateImplementationMapItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalculateImplementationMapItems != null ? retObjectCalculateImplementationMapItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 CalculateMapItems(Activity workflowDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCalculateMapItems = null;
+        try {
+            retObjectCalculateMapItems = classType.Invoke("CalculateMapItems", workflowDefinitionToBeUpdated == null ? null : workflowDefinitionToBeUpdated.getJCOInstance());
+            JCObject objCalculateMapItems = (JCObject)retObjectCalculateMapItems;
+            return new IDictionary_2Implementation(objCalculateMapItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalculateMapItems != null ? retObjectCalculateMapItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IDictionary_2 CalculateMapItems(Activity workflowDefinitionToBeUpdated, LocationReferenceEnvironment environment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCalculateMapItems = null;
+        try {
+            retObjectCalculateMapItems = classType.Invoke("CalculateMapItems", workflowDefinitionToBeUpdated == null ? null : workflowDefinitionToBeUpdated.getJCOInstance(), environment == null ? null : environment.getJCOInstance());
+            JCObject objCalculateMapItems = (JCObject)retObjectCalculateMapItems;
+            return new IDictionary_2Implementation(objCalculateMapItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalculateMapItems != null ? retObjectCalculateMapItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

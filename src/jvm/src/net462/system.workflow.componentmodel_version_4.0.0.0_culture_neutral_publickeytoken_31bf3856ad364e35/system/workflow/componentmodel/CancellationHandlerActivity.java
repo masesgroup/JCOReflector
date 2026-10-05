@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.CompositeActivity;
+import system.workflow.componentmodel.ActivityExecutionStatusChangedEventArgs;
 
 
 /**
@@ -53,7 +54,7 @@ import system.workflow.componentmodel.CompositeActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CancellationHandlerActivity extends CompositeActivity  {
+public class CancellationHandlerActivity extends system.workflow.componentmodel.CompositeActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -170,6 +171,15 @@ public class CancellationHandlerActivity extends CompositeActivity  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIActivityEventListener_1 method available in IActivityEventListener_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnEvent(NetObject sender, ActivityExecutionStatusChangedEventArgs e) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIActivityEventListener_1 to obtain the full interface.");
+    }
+
 
     
     // Properties section

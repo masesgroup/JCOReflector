@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.Activity;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -209,6 +210,21 @@ public class PickBranch extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Trigger", Trigger == null ? null : Trigger.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariables = null;
+        try {
+            retObjectVariables = classInstance.Get("Variables");
+            JCObject val = (JCObject)retObjectVariables;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariables != null ? retObjectVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

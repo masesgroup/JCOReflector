@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.xml.XmlReader;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.SecurityTokenDescriptor;
 import system.identitymodel.selectors.SecurityTokenResolver;
@@ -211,6 +212,21 @@ public class SecurityTokenHandler extends NetObject  {
             return (boolean)retObjectCanWriteKeyIdentifierClause;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanWriteKeyIdentifierClause != null ? retObjectCanWriteKeyIdentifierClause.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateToken = null;
+        try {
+            retObjectValidateToken = classInstance.Invoke("ValidateToken", token == null ? null : token.getJCOInstance());
+            JCObject objValidateToken = (JCObject)retObjectValidateToken;
+            return new ReadOnlyCollection_1(objValidateToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateToken != null ? retObjectValidateToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

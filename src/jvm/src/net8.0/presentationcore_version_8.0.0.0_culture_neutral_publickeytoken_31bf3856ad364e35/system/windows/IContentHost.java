@@ -37,10 +37,14 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.ContentElement;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.Point;
 import system.windows.UIElement;
+import system.collections.generic.IEnumerator_1;
+import system.collections.generic.IEnumerator_1Implementation;
 
 
 /**
@@ -119,6 +123,8 @@ public interface IContentHost extends IJCOBridgeReflected {
 
     // Methods section
     
+    public ReadOnlyCollection_1 GetRectangles(ContentElement child) throws Throwable;
+
     public IInputElement InputHitTest(Point point) throws Throwable;
 
     public void OnChildDesiredSizeChanged(UIElement child) throws Throwable;
@@ -127,6 +133,8 @@ public interface IContentHost extends IJCOBridgeReflected {
     
     // Properties section
     
+    public IEnumerator_1 getHostedElements() throws Throwable;
+
 
 
     // Instance Events section

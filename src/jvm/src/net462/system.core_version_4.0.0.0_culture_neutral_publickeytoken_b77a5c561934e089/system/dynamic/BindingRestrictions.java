@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.dynamic.BindingRestrictions;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.linq.expressions.Expression;
 
 
@@ -153,6 +155,21 @@ public class BindingRestrictions extends NetObject  {
     
     // Methods section
     
+    public static BindingRestrictions Combine(IList_1 contributingObjects) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
+        try {
+            retObjectCombine = classType.Invoke("Combine", contributingObjects == null ? null : contributingObjects.getJCOInstance());
+            JCObject objCombine = (JCObject)retObjectCombine;
+            return new BindingRestrictions(objCombine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static BindingRestrictions GetExpressionRestriction(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

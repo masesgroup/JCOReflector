@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.identitymodel.selectors.AudienceUriMode;
 import system.identitymodel.selectors.X509CertificateValidator;
 import system.identitymodel.tokens.SamlSerializer;
@@ -182,6 +184,36 @@ public class IssuedTokenServiceCredential extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUntrustedRsaIssuers", AllowUntrustedRsaIssuers);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getKnownCertificates() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKnownCertificates = null;
+        try {
+            retObjectKnownCertificates = classInstance.Get("KnownCertificates");
+            JCObject val = (JCObject)retObjectKnownCertificates;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKnownCertificates != null ? retObjectKnownCertificates.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getAllowedAudienceUris() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedAudienceUris = null;
+        try {
+            retObjectAllowedAudienceUris = classInstance.Get("AllowedAudienceUris");
+            JCObject val = (JCObject)retObjectAllowedAudienceUris;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowedAudienceUris != null ? retObjectAllowedAudienceUris.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

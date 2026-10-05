@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.CommunicationException;
+import system.collections.objectmodel.Collection_1;
 
 /**
  * The base .NET class managing System.ServiceModel.Dispatcher.MessageFilterException, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
@@ -52,7 +53,7 @@ import system.servicemodel.CommunicationException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MessageFilterException extends CommunicationException {
+public class MessageFilterException extends system.servicemodel.CommunicationException {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -164,6 +165,26 @@ public class MessageFilterException extends CommunicationException {
 
     // Constructors section
     
+    public MessageFilterException(java.lang.String message, Collection_1 filters) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, filters == null ? null : filters.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MessageFilterException(java.lang.String message, NetException innerException, Collection_1 filters) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, innerException == null ? null : innerException.getJCOInstance(), filters == null ? null : filters.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -172,5 +193,20 @@ public class MessageFilterException extends CommunicationException {
     
     // Properties section
     
+    public Collection_1 getFilters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilters = null;
+        try {
+            retObjectFilters = classInstance.Get("Filters");
+            JCObject val = (JCObject)retObjectFilters;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilters != null ? retObjectFilters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 }

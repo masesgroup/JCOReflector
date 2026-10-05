@@ -38,10 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.text.json.Utf8JsonReader;
 import system.text.json.JsonDocument;
-import system.io.Stream;
+import system.buffers.ReadOnlySequence_1;
 import system.text.json.JsonDocumentOptions;
+import system.io.Stream;
+import system.ReadOnlyMemory_1;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 import system.text.json.Utf8JsonWriter;
 import system.text.json.JsonElement;
 
@@ -159,21 +162,37 @@ public class JsonDocument extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean TryParseValue(JCORefOut<Utf8JsonReader> reader, JCORefOut<JsonDocument> document) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public static JsonDocument Parse(ReadOnlySequence_1 utf8Json, JsonDocumentOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.text.json.JsonException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectTryParseValue = null;
+        java.lang.Object retObjectParse = null;
         try {
-            retObjectTryParseValue = classType.Invoke("TryParseValue", reader.getJCRefOut(), document.getJCRefOut());
-            return (boolean)retObjectTryParseValue;
+            retObjectParse = classType.Invoke("Parse", utf8Json == null ? null : utf8Json.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
+            return new JsonDocument(objParse);
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseValue != null ? retObjectTryParseValue.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
     public static JsonDocument Parse(Stream utf8Json, JsonDocumentOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.text.json.JsonException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
+        try {
+            retObjectParse = classType.Invoke("Parse", utf8Json == null ? null : utf8Json.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
+            return new JsonDocument(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonDocument Parse(ReadOnlyMemory_1 utf8Json, JsonDocumentOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.text.json.JsonException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -203,16 +222,16 @@ public class JsonDocument extends NetObject implements AutoCloseable {
         }
     }
 
-    public static JsonDocument ParseValue(JCORefOut<Utf8JsonReader> reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public static Task_1 ParseAsync(Stream utf8Json, JsonDocumentOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectParseValue = null;
+        java.lang.Object retObjectParseAsync = null;
         try {
-            retObjectParseValue = classType.Invoke("ParseValue", reader.getJCRefOut());
-            JCObject objParseValue = (JCObject)retObjectParseValue;
-            return new JsonDocument(objParseValue);
+            retObjectParseAsync = classType.Invoke("ParseAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objParseAsync = (JCObject)retObjectParseAsync;
+            return new Task_1(objParseAsync);
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseValue != null ? retObjectParseValue.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseAsync != null ? retObjectParseAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

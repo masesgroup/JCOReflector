@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.EventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StartupNextInstanceEventArgs extends EventArgs  {
+public class StartupNextInstanceEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: Microsoft.VisualBasic.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -149,6 +150,16 @@ public class StartupNextInstanceEventArgs extends EventArgs  {
     public StartupNextInstanceEventArgs() throws Throwable {
     }
 
+    public StartupNextInstanceEventArgs(ReadOnlyCollection_1 args, boolean bringToForegroundFlag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(args == null ? null : args.getJCOInstance(), bringToForegroundFlag));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -177,6 +188,21 @@ public class StartupNextInstanceEventArgs extends EventArgs  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BringToForeground", BringToForeground);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getCommandLine() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLine = null;
+        try {
+            retObjectCommandLine = classInstance.Get("CommandLine");
+            JCObject val = (JCObject)retObjectCommandLine;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandLine != null ? retObjectCommandLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

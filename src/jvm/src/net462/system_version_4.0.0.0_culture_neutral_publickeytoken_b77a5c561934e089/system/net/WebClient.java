@@ -43,6 +43,7 @@ import system.Uri;
 import system.collections.specialized.NameValueCollection;
 import system.io.Stream;
 import system.threading.tasks.Task;
+import system.threading.tasks.Task_1;
 import system.net.cache.RequestCachePolicy;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
@@ -76,7 +77,7 @@ import system.net.WriteStreamClosedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebClient extends Component  {
+public class WebClient extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -796,6 +797,456 @@ public class WebClient extends Component  {
             return new Task(objDownloadFileTaskAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownloadFileTaskAsync != null ? retObjectDownloadFileTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 DownloadDataTaskAsync(java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.net.WebException, system.threading.SemaphoreFullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadDataTaskAsync = null;
+        try {
+            retObjectDownloadDataTaskAsync = classInstance.Invoke("DownloadDataTaskAsync", address);
+            JCObject objDownloadDataTaskAsync = (JCObject)retObjectDownloadDataTaskAsync;
+            return new Task_1(objDownloadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownloadDataTaskAsync != null ? retObjectDownloadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 DownloadDataTaskAsync(Uri address) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.UriFormatException, system.security.SecurityException, system.MissingMethodException, system.net.WebException, system.threading.SemaphoreFullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadDataTaskAsync = null;
+        try {
+            retObjectDownloadDataTaskAsync = classInstance.Invoke("DownloadDataTaskAsync", address == null ? null : address.getJCOInstance());
+            JCObject objDownloadDataTaskAsync = (JCObject)retObjectDownloadDataTaskAsync;
+            return new Task_1(objDownloadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownloadDataTaskAsync != null ? retObjectDownloadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadDataTaskAsync(java.lang.String address, byte[] data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadDataTaskAsync = null;
+        try {
+            retObjectUploadDataTaskAsync = classInstance.Invoke("UploadDataTaskAsync", address, data);
+            JCObject objUploadDataTaskAsync = (JCObject)retObjectUploadDataTaskAsync;
+            return new Task_1(objUploadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadDataTaskAsync != null ? retObjectUploadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadDataTaskAsync(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadDataTaskAsync = null;
+        try {
+            retObjectUploadDataTaskAsync = classInstance.Invoke("UploadDataTaskAsync", dupParam0, dupParam1.getJCRefOut());
+            JCObject objUploadDataTaskAsync = (JCObject)retObjectUploadDataTaskAsync;
+            return new Task_1(objUploadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadDataTaskAsync != null ? retObjectUploadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadDataTaskAsync(java.lang.String address, java.lang.String method, byte[] data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadDataTaskAsync = null;
+        try {
+            retObjectUploadDataTaskAsync = classInstance.Invoke("UploadDataTaskAsync", address, method, data);
+            JCObject objUploadDataTaskAsync = (JCObject)retObjectUploadDataTaskAsync;
+            return new Task_1(objUploadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadDataTaskAsync != null ? retObjectUploadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadDataTaskAsync(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadDataTaskAsync = null;
+        try {
+            retObjectUploadDataTaskAsync = classInstance.Invoke("UploadDataTaskAsync", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            JCObject objUploadDataTaskAsync = (JCObject)retObjectUploadDataTaskAsync;
+            return new Task_1(objUploadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadDataTaskAsync != null ? retObjectUploadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadDataTaskAsync(Uri address, byte[] data) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.NullReferenceException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadDataTaskAsync = null;
+        try {
+            retObjectUploadDataTaskAsync = classInstance.Invoke("UploadDataTaskAsync", address == null ? null : address.getJCOInstance(), data);
+            JCObject objUploadDataTaskAsync = (JCObject)retObjectUploadDataTaskAsync;
+            return new Task_1(objUploadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadDataTaskAsync != null ? retObjectUploadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadDataTaskAsync(Uri dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.NullReferenceException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadDataTaskAsync = null;
+        try {
+            retObjectUploadDataTaskAsync = classInstance.Invoke("UploadDataTaskAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objUploadDataTaskAsync = (JCObject)retObjectUploadDataTaskAsync;
+            return new Task_1(objUploadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadDataTaskAsync != null ? retObjectUploadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadDataTaskAsync(Uri address, java.lang.String method, byte[] data) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadDataTaskAsync = null;
+        try {
+            retObjectUploadDataTaskAsync = classInstance.Invoke("UploadDataTaskAsync", address == null ? null : address.getJCOInstance(), method, data);
+            JCObject objUploadDataTaskAsync = (JCObject)retObjectUploadDataTaskAsync;
+            return new Task_1(objUploadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadDataTaskAsync != null ? retObjectUploadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadDataTaskAsync(Uri dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadDataTaskAsync = null;
+        try {
+            retObjectUploadDataTaskAsync = classInstance.Invoke("UploadDataTaskAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            JCObject objUploadDataTaskAsync = (JCObject)retObjectUploadDataTaskAsync;
+            return new Task_1(objUploadDataTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadDataTaskAsync != null ? retObjectUploadDataTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadFileTaskAsync(java.lang.String address, java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.net.WebException, system.io.IOException, system.OverflowException, system.InvalidCastException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadFileTaskAsync = null;
+        try {
+            retObjectUploadFileTaskAsync = classInstance.Invoke("UploadFileTaskAsync", address, fileName);
+            JCObject objUploadFileTaskAsync = (JCObject)retObjectUploadFileTaskAsync;
+            return new Task_1(objUploadFileTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadFileTaskAsync != null ? retObjectUploadFileTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadFileTaskAsync(java.lang.String address, java.lang.String method, java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.net.WebException, system.io.IOException, system.OverflowException, system.InvalidCastException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadFileTaskAsync = null;
+        try {
+            retObjectUploadFileTaskAsync = classInstance.Invoke("UploadFileTaskAsync", address, method, fileName);
+            JCObject objUploadFileTaskAsync = (JCObject)retObjectUploadFileTaskAsync;
+            return new Task_1(objUploadFileTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadFileTaskAsync != null ? retObjectUploadFileTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadFileTaskAsync(Uri address, java.lang.String fileName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.NullReferenceException, system.io.PathTooLongException, system.net.WebException, system.io.IOException, system.OverflowException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadFileTaskAsync = null;
+        try {
+            retObjectUploadFileTaskAsync = classInstance.Invoke("UploadFileTaskAsync", address == null ? null : address.getJCOInstance(), fileName);
+            JCObject objUploadFileTaskAsync = (JCObject)retObjectUploadFileTaskAsync;
+            return new Task_1(objUploadFileTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadFileTaskAsync != null ? retObjectUploadFileTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadFileTaskAsync(Uri address, java.lang.String method, java.lang.String fileName) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.net.WebException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidTimeZoneException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadFileTaskAsync = null;
+        try {
+            retObjectUploadFileTaskAsync = classInstance.Invoke("UploadFileTaskAsync", address == null ? null : address.getJCOInstance(), method, fileName);
+            JCObject objUploadFileTaskAsync = (JCObject)retObjectUploadFileTaskAsync;
+            return new Task_1(objUploadFileTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadFileTaskAsync != null ? retObjectUploadFileTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadValuesTaskAsync(java.lang.String address, NameValueCollection data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.net.WebException, system.InvalidCastException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadValuesTaskAsync = null;
+        try {
+            retObjectUploadValuesTaskAsync = classInstance.Invoke("UploadValuesTaskAsync", address, data == null ? null : data.getJCOInstance());
+            JCObject objUploadValuesTaskAsync = (JCObject)retObjectUploadValuesTaskAsync;
+            return new Task_1(objUploadValuesTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadValuesTaskAsync != null ? retObjectUploadValuesTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadValuesTaskAsync(java.lang.String address, java.lang.String method, NameValueCollection data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.net.WebException, system.InvalidCastException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadValuesTaskAsync = null;
+        try {
+            retObjectUploadValuesTaskAsync = classInstance.Invoke("UploadValuesTaskAsync", address, method, data == null ? null : data.getJCOInstance());
+            JCObject objUploadValuesTaskAsync = (JCObject)retObjectUploadValuesTaskAsync;
+            return new Task_1(objUploadValuesTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadValuesTaskAsync != null ? retObjectUploadValuesTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadValuesTaskAsync(Uri address, NameValueCollection data) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.NullReferenceException, system.net.WebException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadValuesTaskAsync = null;
+        try {
+            retObjectUploadValuesTaskAsync = classInstance.Invoke("UploadValuesTaskAsync", address == null ? null : address.getJCOInstance(), data == null ? null : data.getJCOInstance());
+            JCObject objUploadValuesTaskAsync = (JCObject)retObjectUploadValuesTaskAsync;
+            return new Task_1(objUploadValuesTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadValuesTaskAsync != null ? retObjectUploadValuesTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadValuesTaskAsync(Uri address, java.lang.String method, NameValueCollection data) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.net.WebException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadValuesTaskAsync = null;
+        try {
+            retObjectUploadValuesTaskAsync = classInstance.Invoke("UploadValuesTaskAsync", address == null ? null : address.getJCOInstance(), method, data == null ? null : data.getJCOInstance());
+            JCObject objUploadValuesTaskAsync = (JCObject)retObjectUploadValuesTaskAsync;
+            return new Task_1(objUploadValuesTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadValuesTaskAsync != null ? retObjectUploadValuesTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 OpenReadTaskAsync(java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenReadTaskAsync = null;
+        try {
+            retObjectOpenReadTaskAsync = classInstance.Invoke("OpenReadTaskAsync", address);
+            JCObject objOpenReadTaskAsync = (JCObject)retObjectOpenReadTaskAsync;
+            return new Task_1(objOpenReadTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenReadTaskAsync != null ? retObjectOpenReadTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 OpenReadTaskAsync(Uri address) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.UriFormatException, system.security.SecurityException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenReadTaskAsync = null;
+        try {
+            retObjectOpenReadTaskAsync = classInstance.Invoke("OpenReadTaskAsync", address == null ? null : address.getJCOInstance());
+            JCObject objOpenReadTaskAsync = (JCObject)retObjectOpenReadTaskAsync;
+            return new Task_1(objOpenReadTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenReadTaskAsync != null ? retObjectOpenReadTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 OpenWriteTaskAsync(java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWriteTaskAsync = null;
+        try {
+            retObjectOpenWriteTaskAsync = classInstance.Invoke("OpenWriteTaskAsync", address);
+            JCObject objOpenWriteTaskAsync = (JCObject)retObjectOpenWriteTaskAsync;
+            return new Task_1(objOpenWriteTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWriteTaskAsync != null ? retObjectOpenWriteTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 OpenWriteTaskAsync(java.lang.String address, java.lang.String method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWriteTaskAsync = null;
+        try {
+            retObjectOpenWriteTaskAsync = classInstance.Invoke("OpenWriteTaskAsync", address, method);
+            JCObject objOpenWriteTaskAsync = (JCObject)retObjectOpenWriteTaskAsync;
+            return new Task_1(objOpenWriteTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWriteTaskAsync != null ? retObjectOpenWriteTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 OpenWriteTaskAsync(Uri address) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.NullReferenceException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWriteTaskAsync = null;
+        try {
+            retObjectOpenWriteTaskAsync = classInstance.Invoke("OpenWriteTaskAsync", address == null ? null : address.getJCOInstance());
+            JCObject objOpenWriteTaskAsync = (JCObject)retObjectOpenWriteTaskAsync;
+            return new Task_1(objOpenWriteTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWriteTaskAsync != null ? retObjectOpenWriteTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 OpenWriteTaskAsync(Uri address, java.lang.String method) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWriteTaskAsync = null;
+        try {
+            retObjectOpenWriteTaskAsync = classInstance.Invoke("OpenWriteTaskAsync", address == null ? null : address.getJCOInstance(), method);
+            JCObject objOpenWriteTaskAsync = (JCObject)retObjectOpenWriteTaskAsync;
+            return new Task_1(objOpenWriteTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWriteTaskAsync != null ? retObjectOpenWriteTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 DownloadStringTaskAsync(java.lang.String address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.net.WebException, system.threading.SemaphoreFullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadStringTaskAsync = null;
+        try {
+            retObjectDownloadStringTaskAsync = classInstance.Invoke("DownloadStringTaskAsync", address);
+            JCObject objDownloadStringTaskAsync = (JCObject)retObjectDownloadStringTaskAsync;
+            return new Task_1(objDownloadStringTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownloadStringTaskAsync != null ? retObjectDownloadStringTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 DownloadStringTaskAsync(Uri address) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.UriFormatException, system.security.SecurityException, system.MissingMethodException, system.net.WebException, system.threading.SemaphoreFullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownloadStringTaskAsync = null;
+        try {
+            retObjectDownloadStringTaskAsync = classInstance.Invoke("DownloadStringTaskAsync", address == null ? null : address.getJCOInstance());
+            JCObject objDownloadStringTaskAsync = (JCObject)retObjectDownloadStringTaskAsync;
+            return new Task_1(objDownloadStringTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownloadStringTaskAsync != null ? retObjectDownloadStringTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadStringTaskAsync(java.lang.String address, java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadStringTaskAsync = null;
+        try {
+            retObjectUploadStringTaskAsync = classInstance.Invoke("UploadStringTaskAsync", address, data);
+            JCObject objUploadStringTaskAsync = (JCObject)retObjectUploadStringTaskAsync;
+            return new Task_1(objUploadStringTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadStringTaskAsync != null ? retObjectUploadStringTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadStringTaskAsync(java.lang.String address, java.lang.String method, java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MissingMethodException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadStringTaskAsync = null;
+        try {
+            retObjectUploadStringTaskAsync = classInstance.Invoke("UploadStringTaskAsync", address, method, data);
+            JCObject objUploadStringTaskAsync = (JCObject)retObjectUploadStringTaskAsync;
+            return new Task_1(objUploadStringTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadStringTaskAsync != null ? retObjectUploadStringTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadStringTaskAsync(Uri address, java.lang.String data) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.NullReferenceException, system.InvalidCastException, system.MissingMethodException, system.NotImplementedException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadStringTaskAsync = null;
+        try {
+            retObjectUploadStringTaskAsync = classInstance.Invoke("UploadStringTaskAsync", address == null ? null : address.getJCOInstance(), data);
+            JCObject objUploadStringTaskAsync = (JCObject)retObjectUploadStringTaskAsync;
+            return new Task_1(objUploadStringTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadStringTaskAsync != null ? retObjectUploadStringTaskAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 UploadStringTaskAsync(Uri address, java.lang.String method, java.lang.String data) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OutOfMemoryException, system.UriFormatException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.net.WebException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUploadStringTaskAsync = null;
+        try {
+            retObjectUploadStringTaskAsync = classInstance.Invoke("UploadStringTaskAsync", address == null ? null : address.getJCOInstance(), method, data);
+            JCObject objUploadStringTaskAsync = (JCObject)retObjectUploadStringTaskAsync;
+            return new Task_1(objUploadStringTaskAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUploadStringTaskAsync != null ? retObjectUploadStringTaskAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

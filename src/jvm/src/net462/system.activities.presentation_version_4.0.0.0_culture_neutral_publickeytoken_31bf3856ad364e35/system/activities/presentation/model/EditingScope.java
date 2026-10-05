@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.model.ModelEditingScope;
+import system.collections.generic.List_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.activities.presentation.model.ModelEditingScope;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EditingScope extends ModelEditingScope  {
+public class EditingScope extends system.activities.presentation.model.ModelEditingScope  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -177,6 +178,21 @@ public class EditingScope extends ModelEditingScope  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasEffectiveChanges", HasEffectiveChanges);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getChanges() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChanges = null;
+        try {
+            retObjectChanges = classInstance.Get("Changes");
+            JCObject val = (JCObject)retObjectChanges;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChanges != null ? retObjectChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

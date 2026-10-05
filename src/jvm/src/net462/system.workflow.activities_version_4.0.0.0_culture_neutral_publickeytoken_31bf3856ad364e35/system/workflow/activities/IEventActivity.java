@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.workflow.componentmodel.ActivityExecutionContext;
+import system.workflow.componentmodel.IActivityEventListener_1;
+import system.workflow.componentmodel.IActivityEventListener_1Implementation;
 import system.IComparable;
 import system.IComparableImplementation;
 
@@ -118,6 +120,10 @@ public interface IEventActivity extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void Subscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable;
+
+    public void Unsubscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable;
+
 
     
     // Properties section

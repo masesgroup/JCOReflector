@@ -49,6 +49,8 @@ import system.windows.interop.IKeyboardInputSite;
 import system.windows.interop.IKeyboardInputSiteImplementation;
 import system.windows.interop.IKeyboardInputSink;
 import system.windows.interop.IKeyboardInputSinkImplementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.input.RestoreFocusMode;
 import system.windows.interop.HwndTarget;
 import system.windows.media.Visual;
@@ -70,7 +72,7 @@ import system.windows.HwndDpiChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HwndSource extends PresentationSource implements AutoCloseable {
+public class HwndSource extends system.windows.PresentationSource implements AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -324,6 +326,21 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
             return (boolean)retObjectUsesPerPixelOpacity;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesPerPixelOpacity != null ? retObjectUsesPerPixelOpacity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getChildKeyboardInputSinks() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildKeyboardInputSinks = null;
+        try {
+            retObjectChildKeyboardInputSinks = classInstance.Get("ChildKeyboardInputSinks");
+            JCObject val = (JCObject)retObjectChildKeyboardInputSinks;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildKeyboardInputSinks != null ? retObjectChildKeyboardInputSinks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

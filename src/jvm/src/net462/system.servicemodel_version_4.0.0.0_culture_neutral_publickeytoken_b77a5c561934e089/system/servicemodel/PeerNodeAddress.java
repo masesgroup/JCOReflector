@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.EndpointAddress;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -149,6 +150,16 @@ public class PeerNodeAddress extends NetObject  {
     public PeerNodeAddress() throws Throwable {
     }
 
+    public PeerNodeAddress(EndpointAddress endpointAddress, ReadOnlyCollection_1 ipAddresses) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(endpointAddress == null ? null : endpointAddress.getJCOInstance(), ipAddresses == null ? null : ipAddresses.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +169,21 @@ public class PeerNodeAddress extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getIPAddresses() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIPAddresses = null;
+        try {
+            retObjectIPAddresses = classInstance.Get("IPAddresses");
+            JCObject val = (JCObject)retObjectIPAddresses;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIPAddresses != null ? retObjectIPAddresses.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EndpointAddress getEndpointAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

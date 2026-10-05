@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.HttpRequestError;
+import system.Nullable_1;
 
 /**
  * The base .NET class managing System.Net.Http.HttpRequestException, System.Net.Http, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
@@ -164,6 +165,26 @@ public class HttpRequestException extends NetException {
 
     // Constructors section
     
+    public HttpRequestException(HttpRequestError httpRequestError, java.lang.String message, NetException inner, Nullable_1 statusCode) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(httpRequestError == null ? null : httpRequestError.getJCOInstance(), message, inner == null ? null : inner.getJCOInstance(), statusCode == null ? null : statusCode.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HttpRequestException(java.lang.String message, NetException inner, Nullable_1 statusCode) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, inner == null ? null : inner.getJCOInstance(), statusCode == null ? null : statusCode.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -182,6 +203,21 @@ public class HttpRequestException extends NetException {
             return new HttpRequestError(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHttpRequestError != null ? retObjectHttpRequestError.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getStatusCode() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusCode = null;
+        try {
+            retObjectStatusCode = classInstance.Get("StatusCode");
+            JCObject val = (JCObject)retObjectStatusCode;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusCode != null ? retObjectStatusCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

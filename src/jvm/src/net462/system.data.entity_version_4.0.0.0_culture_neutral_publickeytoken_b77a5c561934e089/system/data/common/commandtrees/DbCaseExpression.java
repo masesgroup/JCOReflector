@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.commandtrees.DbExpression;
 import system.data.common.commandtrees.DbExpressionVisitor;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -54,7 +56,7 @@ import system.data.common.commandtrees.DbExpressionVisitor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbCaseExpression extends DbExpression  {
+public class DbCaseExpression extends system.data.common.commandtrees.DbExpression  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -169,6 +171,36 @@ public class DbCaseExpression extends DbExpression  {
     
     // Properties section
     
+    public IList_1 getThen() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThen = null;
+        try {
+            retObjectThen = classInstance.Get("Then");
+            JCObject val = (JCObject)retObjectThen;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThen != null ? retObjectThen.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getWhen() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWhen = null;
+        try {
+            retObjectWhen = classInstance.Get("When");
+            JCObject val = (JCObject)retObjectWhen;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhen != null ? retObjectWhen.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DbExpression getElse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

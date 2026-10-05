@@ -56,7 +56,7 @@ import system.runtime.remoting.activation.IConstructionCallMessageImplementation
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UrlAttribute extends ContextAttribute  {
+public class UrlAttribute extends system.runtime.remoting.contexts.ContextAttribute  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

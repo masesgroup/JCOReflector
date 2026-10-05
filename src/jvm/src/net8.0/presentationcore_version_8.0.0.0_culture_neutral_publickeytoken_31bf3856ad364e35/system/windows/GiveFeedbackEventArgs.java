@@ -54,7 +54,7 @@ import system.windows.DragDropEffects;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GiveFeedbackEventArgs extends RoutedEventArgs  {
+public class GiveFeedbackEventArgs extends system.windows.RoutedEventArgs  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

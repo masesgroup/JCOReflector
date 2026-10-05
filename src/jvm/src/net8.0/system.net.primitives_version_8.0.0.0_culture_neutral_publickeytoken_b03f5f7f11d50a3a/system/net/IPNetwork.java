@@ -43,8 +43,6 @@ import system.net.IPAddress;
 import system.net.IPNetwork;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -59,7 +57,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IPNetwork extends ValueType implements IFormattable {
+public class IPNetwork extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Net.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -234,6 +232,24 @@ public class IPNetwork extends ValueType implements IFormattable {
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIParsable_1 method available in IParsable_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<IPNetwork> result) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIParsable_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIParsable_1 method available in IParsable_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static IPNetwork Parse(java.lang.String s, IFormatProvider provider) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIParsable_1 to obtain the full interface.");
     }
 
 

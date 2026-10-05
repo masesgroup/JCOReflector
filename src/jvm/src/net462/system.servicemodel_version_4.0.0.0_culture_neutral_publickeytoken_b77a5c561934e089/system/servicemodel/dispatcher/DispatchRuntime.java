@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.SynchronizedCollection_1;
+import system.collections.generic.SynchronizedKeyedCollection_2;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.servicemodel.AuditLevel;
 import system.servicemodel.AuditLogLocation;
 import system.servicemodel.ConcurrencyMode;
@@ -411,6 +414,91 @@ public class DispatchRuntime extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateMustUnderstand", ValidateMustUnderstand);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getMessageInspectors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageInspectors = null;
+        try {
+            retObjectMessageInspectors = classInstance.Get("MessageInspectors");
+            JCObject val = (JCObject)retObjectMessageInspectors;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageInspectors != null ? retObjectMessageInspectors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getInputSessionShutdownHandlers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputSessionShutdownHandlers = null;
+        try {
+            retObjectInputSessionShutdownHandlers = classInstance.Get("InputSessionShutdownHandlers");
+            JCObject val = (JCObject)retObjectInputSessionShutdownHandlers;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputSessionShutdownHandlers != null ? retObjectInputSessionShutdownHandlers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getInstanceContextInitializers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceContextInitializers = null;
+        try {
+            retObjectInstanceContextInitializers = classInstance.Get("InstanceContextInitializers");
+            JCObject val = (JCObject)retObjectInstanceContextInitializers;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceContextInitializers != null ? retObjectInstanceContextInitializers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedKeyedCollection_2 getOperations() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperations = null;
+        try {
+            retObjectOperations = classInstance.Get("Operations");
+            JCObject val = (JCObject)retObjectOperations;
+            return new SynchronizedKeyedCollection_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperations != null ? retObjectOperations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getExternalAuthorizationPolicies() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalAuthorizationPolicies = null;
+        try {
+            retObjectExternalAuthorizationPolicies = classInstance.Get("ExternalAuthorizationPolicies");
+            JCObject val = (JCObject)retObjectExternalAuthorizationPolicies;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalAuthorizationPolicies != null ? retObjectExternalAuthorizationPolicies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1 ExternalAuthorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ExternalAuthorizationPolicies", ExternalAuthorizationPolicies == null ? null : ExternalAuthorizationPolicies.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

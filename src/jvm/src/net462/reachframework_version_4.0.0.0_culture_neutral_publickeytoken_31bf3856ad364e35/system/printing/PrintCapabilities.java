@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.Stream;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.Nullable_1;
 import system.printing.PageImageableArea;
 import system.printing.PageScalingFactorRange;
 
@@ -170,6 +172,306 @@ public class PrintCapabilities extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getPagesPerSheetCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagesPerSheetCapability = null;
+        try {
+            retObjectPagesPerSheetCapability = classInstance.Get("PagesPerSheetCapability");
+            JCObject val = (JCObject)retObjectPagesPerSheetCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagesPerSheetCapability != null ? retObjectPagesPerSheetCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getCollationCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollationCapability = null;
+        try {
+            retObjectCollationCapability = classInstance.Get("CollationCapability");
+            JCObject val = (JCObject)retObjectCollationCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollationCapability != null ? retObjectCollationCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getDeviceFontSubstitutionCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceFontSubstitutionCapability = null;
+        try {
+            retObjectDeviceFontSubstitutionCapability = classInstance.Get("DeviceFontSubstitutionCapability");
+            JCObject val = (JCObject)retObjectDeviceFontSubstitutionCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeviceFontSubstitutionCapability != null ? retObjectDeviceFontSubstitutionCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getDuplexingCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplexingCapability = null;
+        try {
+            retObjectDuplexingCapability = classInstance.Get("DuplexingCapability");
+            JCObject val = (JCObject)retObjectDuplexingCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplexingCapability != null ? retObjectDuplexingCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getInputBinCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputBinCapability = null;
+        try {
+            retObjectInputBinCapability = classInstance.Get("InputBinCapability");
+            JCObject val = (JCObject)retObjectInputBinCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputBinCapability != null ? retObjectInputBinCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getOutputColorCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputColorCapability = null;
+        try {
+            retObjectOutputColorCapability = classInstance.Get("OutputColorCapability");
+            JCObject val = (JCObject)retObjectOutputColorCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputColorCapability != null ? retObjectOutputColorCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getOutputQualityCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputQualityCapability = null;
+        try {
+            retObjectOutputQualityCapability = classInstance.Get("OutputQualityCapability");
+            JCObject val = (JCObject)retObjectOutputQualityCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputQualityCapability != null ? retObjectOutputQualityCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPageBorderlessCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageBorderlessCapability = null;
+        try {
+            retObjectPageBorderlessCapability = classInstance.Get("PageBorderlessCapability");
+            JCObject val = (JCObject)retObjectPageBorderlessCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageBorderlessCapability != null ? retObjectPageBorderlessCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPageMediaSizeCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageMediaSizeCapability = null;
+        try {
+            retObjectPageMediaSizeCapability = classInstance.Get("PageMediaSizeCapability");
+            JCObject val = (JCObject)retObjectPageMediaSizeCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageMediaSizeCapability != null ? retObjectPageMediaSizeCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPageMediaTypeCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageMediaTypeCapability = null;
+        try {
+            retObjectPageMediaTypeCapability = classInstance.Get("PageMediaTypeCapability");
+            JCObject val = (JCObject)retObjectPageMediaTypeCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageMediaTypeCapability != null ? retObjectPageMediaTypeCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPageOrderCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageOrderCapability = null;
+        try {
+            retObjectPageOrderCapability = classInstance.Get("PageOrderCapability");
+            JCObject val = (JCObject)retObjectPageOrderCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageOrderCapability != null ? retObjectPageOrderCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPageOrientationCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageOrientationCapability = null;
+        try {
+            retObjectPageOrientationCapability = classInstance.Get("PageOrientationCapability");
+            JCObject val = (JCObject)retObjectPageOrientationCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageOrientationCapability != null ? retObjectPageOrientationCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPageResolutionCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageResolutionCapability = null;
+        try {
+            retObjectPageResolutionCapability = classInstance.Get("PageResolutionCapability");
+            JCObject val = (JCObject)retObjectPageResolutionCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageResolutionCapability != null ? retObjectPageResolutionCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPagesPerSheetDirectionCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagesPerSheetDirectionCapability = null;
+        try {
+            retObjectPagesPerSheetDirectionCapability = classInstance.Get("PagesPerSheetDirectionCapability");
+            JCObject val = (JCObject)retObjectPagesPerSheetDirectionCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagesPerSheetDirectionCapability != null ? retObjectPagesPerSheetDirectionCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPhotoPrintingIntentCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPhotoPrintingIntentCapability = null;
+        try {
+            retObjectPhotoPrintingIntentCapability = classInstance.Get("PhotoPrintingIntentCapability");
+            JCObject val = (JCObject)retObjectPhotoPrintingIntentCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPhotoPrintingIntentCapability != null ? retObjectPhotoPrintingIntentCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getStaplingCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaplingCapability = null;
+        try {
+            retObjectStaplingCapability = classInstance.Get("StaplingCapability");
+            JCObject val = (JCObject)retObjectStaplingCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaplingCapability != null ? retObjectStaplingCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getTrueTypeFontModeCapability() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrueTypeFontModeCapability = null;
+        try {
+            retObjectTrueTypeFontModeCapability = classInstance.Get("TrueTypeFontModeCapability");
+            JCObject val = (JCObject)retObjectTrueTypeFontModeCapability;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrueTypeFontModeCapability != null ? retObjectTrueTypeFontModeCapability.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getOrientedPageMediaHeight() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrientedPageMediaHeight = null;
+        try {
+            retObjectOrientedPageMediaHeight = classInstance.Get("OrientedPageMediaHeight");
+            JCObject val = (JCObject)retObjectOrientedPageMediaHeight;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrientedPageMediaHeight != null ? retObjectOrientedPageMediaHeight.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getOrientedPageMediaWidth() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrientedPageMediaWidth = null;
+        try {
+            retObjectOrientedPageMediaWidth = classInstance.Get("OrientedPageMediaWidth");
+            JCObject val = (JCObject)retObjectOrientedPageMediaWidth;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrientedPageMediaWidth != null ? retObjectOrientedPageMediaWidth.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMaxCopyCount() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCopyCount = null;
+        try {
+            retObjectMaxCopyCount = classInstance.Get("MaxCopyCount");
+            JCObject val = (JCObject)retObjectMaxCopyCount;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxCopyCount != null ? retObjectMaxCopyCount.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PageImageableArea getPageImageableArea() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

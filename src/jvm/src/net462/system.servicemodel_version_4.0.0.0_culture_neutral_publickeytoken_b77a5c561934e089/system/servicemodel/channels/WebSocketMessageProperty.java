@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyDictionary_2;
 import system.net.websockets.WebSocketContext;
 import system.net.websockets.WebSocketMessageType;
 
@@ -165,6 +166,21 @@ public class WebSocketMessageProperty extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyDictionary_2 getOpeningHandshakeProperties() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpeningHandshakeProperties = null;
+        try {
+            retObjectOpeningHandshakeProperties = classInstance.Get("OpeningHandshakeProperties");
+            JCObject val = (JCObject)retObjectOpeningHandshakeProperties;
+            return new ReadOnlyDictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpeningHandshakeProperties != null ? retObjectOpeningHandshakeProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public WebSocketContext getWebSocketContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

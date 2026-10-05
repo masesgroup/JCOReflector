@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.metadata.edm.RelationshipSet;
 import system.data.metadata.edm.AssociationType;
 import system.data.metadata.edm.BuiltInTypeKind;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.data.metadata.edm.BuiltInTypeKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssociationSet extends RelationshipSet  {
+public class AssociationSet extends system.data.metadata.edm.RelationshipSet  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -170,6 +171,21 @@ public class AssociationSet extends RelationshipSet  {
             return new AssociationType(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementType != null ? retObjectElementType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getAssociationSetEnds() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociationSetEnds = null;
+        try {
+            retObjectAssociationSetEnds = classInstance.Get("AssociationSetEnds");
+            JCObject val = (JCObject)retObjectAssociationSetEnds;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociationSetEnds != null ? retObjectAssociationSetEnds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

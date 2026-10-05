@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.net.http.HttpMethod;
 import system.Uri;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.net.http.headers.HttpRequestHeaders;
 import system.net.http.HttpContent;
 import system.Version;
@@ -211,6 +213,21 @@ public class HttpRequestMessage extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    public IDictionary_2 getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public HttpRequestHeaders getHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.ImmutableArray_1;
+import system.collections.immutable.ImmutableDictionary_2;
+import system.collections.immutable.ImmutableQueue_1;
+import system.collections.immutable.ImmutableStack_1;
+import system.Func_3;
+import system.Func_2;
 
 
 /**
@@ -151,6 +157,168 @@ public class ImmutableInterlocked extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> boolean InterlockedInitialize(JCORefOut<ImmutableArray_1> location, ImmutableArray_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInterlockedInitialize = null;
+        try {
+            retObjectInterlockedInitialize = classType.Invoke("InterlockedInitialize", location.getJCRefOut(), value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectInterlockedInitialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInterlockedInitialize != null ? retObjectInterlockedInitialize.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean TryAdd(JCORefOut<ImmutableDictionary_2> location, TKey key, TValue value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryAdd = null;
+        try {
+            retObjectTryAdd = classType.Invoke("TryAdd", location.getJCRefOut(), key == null ? null : ((IJCOBridgeReflected)key).getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (boolean)retObjectTryAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAdd != null ? retObjectTryAdd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean TryDequeue(JCORefOut<ImmutableQueue_1> location, JCORefOut<T> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryDequeue = null;
+        try {
+            retObjectTryDequeue = classType.Invoke("TryDequeue", location.getJCRefOut(), value.getJCRefOut());
+            return (boolean)retObjectTryDequeue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryDequeue != null ? retObjectTryDequeue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean TryPop(JCORefOut<ImmutableStack_1> location, JCORefOut<T> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryPop = null;
+        try {
+            retObjectTryPop = classType.Invoke("TryPop", location.getJCRefOut(), value.getJCRefOut());
+            return (boolean)retObjectTryPop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryPop != null ? retObjectTryPop.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean TryRemove(JCORefOut<ImmutableDictionary_2> location, TKey key, JCORefOut<TValue> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryRemove = null;
+        try {
+            retObjectTryRemove = classType.Invoke("TryRemove", location.getJCRefOut(), key == null ? null : ((IJCOBridgeReflected)key).getJCOInstance(), value.getJCRefOut());
+            return (boolean)retObjectTryRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryRemove != null ? retObjectTryRemove.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> boolean TryUpdate(JCORefOut<ImmutableDictionary_2> location, TKey key, TValue newValue, TValue comparisonValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryUpdate = null;
+        try {
+            retObjectTryUpdate = classType.Invoke("TryUpdate", location.getJCRefOut(), key == null ? null : ((IJCOBridgeReflected)key).getJCOInstance(), newValue == null ? null : ((IJCOBridgeReflected)newValue).getJCOInstance(), comparisonValue == null ? null : ((IJCOBridgeReflected)comparisonValue).getJCOInstance());
+            return (boolean)retObjectTryUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryUpdate != null ? retObjectTryUpdate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected, TArg extends IJCOBridgeReflected> boolean Update(JCORefOut<ImmutableArray_1> location, Func_3 transformer, TArg transformerArgument) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUpdate = null;
+        try {
+            retObjectUpdate = classType.Invoke("Update", location.getJCRefOut(), transformer, transformerArgument == null ? null : ((IJCOBridgeReflected)transformerArgument).getJCOInstance());
+            return (boolean)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean Update(JCORefOut<ImmutableArray_1> location, Func_2 transformer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUpdate = null;
+        try {
+            retObjectUpdate = classType.Invoke("Update", location.getJCRefOut(), transformer);
+            return (boolean)retObjectUpdate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 InterlockedCompareExchange(JCORefOut<ImmutableArray_1> location, ImmutableArray_1 value, ImmutableArray_1 comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInterlockedCompareExchange = null;
+        try {
+            retObjectInterlockedCompareExchange = classType.Invoke("InterlockedCompareExchange", location.getJCRefOut(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
+            JCObject objInterlockedCompareExchange = (JCObject)retObjectInterlockedCompareExchange;
+            return new ImmutableArray_1(objInterlockedCompareExchange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterlockedCompareExchange != null ? retObjectInterlockedCompareExchange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 InterlockedExchange(JCORefOut<ImmutableArray_1> location, ImmutableArray_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInterlockedExchange = null;
+        try {
+            retObjectInterlockedExchange = classType.Invoke("InterlockedExchange", location.getJCRefOut(), value == null ? null : value.getJCOInstance());
+            JCObject objInterlockedExchange = (JCObject)retObjectInterlockedExchange;
+            return new ImmutableArray_1(objInterlockedExchange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterlockedExchange != null ? retObjectInterlockedExchange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void Enqueue(JCORefOut<ImmutableQueue_1> location, T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Enqueue", location.getJCRefOut(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void Push(JCORefOut<ImmutableStack_1> location, T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Push", location.getJCRefOut(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

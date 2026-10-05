@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.activities.tracking.WorkflowInstanceRecord;
 import system.Guid;
 import system.activities.WorkflowIdentity;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.activities.WorkflowIdentity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowInstanceUpdatedRecord extends WorkflowInstanceRecord  {
+public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.WorkflowInstanceRecord  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -161,11 +163,31 @@ public class WorkflowInstanceUpdatedRecord extends WorkflowInstanceRecord  {
         }
     }
 
+    public WorkflowInstanceUpdatedRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity, IList_1 blockingActivities) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(instanceId == null ? null : instanceId.getJCOInstance(), recordNumber, activityDefinitionId, originalDefinitionIdentity == null ? null : originalDefinitionIdentity.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance(), blockingActivities == null ? null : blockingActivities.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public WorkflowInstanceUpdatedRecord(Guid instanceId, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(instanceId == null ? null : instanceId.getJCOInstance(), activityDefinitionId, originalDefinitionIdentity == null ? null : originalDefinitionIdentity.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WorkflowInstanceUpdatedRecord(Guid instanceId, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity, IList_1 blockingActivities) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(instanceId == null ? null : instanceId.getJCOInstance(), activityDefinitionId, originalDefinitionIdentity == null ? null : originalDefinitionIdentity.getJCOInstance(), updatedDefinitionIdentity == null ? null : updatedDefinitionIdentity.getJCOInstance(), blockingActivities == null ? null : blockingActivities.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,6 +236,31 @@ public class WorkflowInstanceUpdatedRecord extends WorkflowInstanceRecord  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalDefinitionIdentity", OriginalDefinitionIdentity == null ? null : OriginalDefinitionIdentity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getBlockingActivities() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlockingActivities = null;
+        try {
+            retObjectBlockingActivities = classInstance.Get("BlockingActivities");
+            JCObject val = (JCObject)retObjectBlockingActivities;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlockingActivities != null ? retObjectBlockingActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBlockingActivities(IList_1 BlockingActivities) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BlockingActivities", BlockingActivities == null ? null : BlockingActivities.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

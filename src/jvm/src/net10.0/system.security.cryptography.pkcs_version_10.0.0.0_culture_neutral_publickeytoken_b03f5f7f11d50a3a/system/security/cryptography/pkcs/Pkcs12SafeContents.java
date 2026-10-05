@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.security.cryptography.pkcs.Pkcs12CertBag;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.pkcs.Pkcs12KeyBag;
@@ -46,6 +48,7 @@ import system.security.cryptography.pkcs.Pkcs12SafeContentsBag;
 import system.security.cryptography.pkcs.Pkcs12SafeContents;
 import system.security.cryptography.pkcs.Pkcs12SecretBag;
 import system.security.cryptography.Oid;
+import system.ReadOnlyMemory_1;
 import system.security.cryptography.pkcs.Pkcs12ShroudedKeyBag;
 import system.security.cryptography.PbeParameters;
 import system.security.cryptography.pkcs.Pkcs12SafeBag;
@@ -171,6 +174,21 @@ public class Pkcs12SafeContents extends NetObject  {
     
     // Methods section
     
+    public IEnumerable_1 GetBags() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBags = null;
+        try {
+            retObjectGetBags = classInstance.Invoke("GetBags");
+            JCObject objGetBags = (JCObject)retObjectGetBags;
+            return new IEnumerable_1Implementation(objGetBags);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBags != null ? retObjectGetBags.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Pkcs12CertBag AddCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.OverflowException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +229,21 @@ public class Pkcs12SafeContents extends NetObject  {
             return new Pkcs12SafeContentsBag(objAddNestedContents);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNestedContents != null ? retObjectAddNestedContents.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Pkcs12SecretBag AddSecret(Oid secretType, ReadOnlyMemory_1 secretValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddSecret = null;
+        try {
+            retObjectAddSecret = classInstance.Invoke("AddSecret", secretType == null ? null : secretType.getJCOInstance(), secretValue == null ? null : secretValue.getJCOInstance());
+            JCObject objAddSecret = (JCObject)retObjectAddSecret;
+            return new Pkcs12SecretBag(objAddSecret);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddSecret != null ? retObjectAddSecret.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

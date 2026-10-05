@@ -55,7 +55,7 @@ import system.xml.schema.XmlSchemaObjectTable;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaRedefine extends XmlSchemaExternal  {
+public class XmlSchemaRedefine extends system.xml.schema.XmlSchemaExternal  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

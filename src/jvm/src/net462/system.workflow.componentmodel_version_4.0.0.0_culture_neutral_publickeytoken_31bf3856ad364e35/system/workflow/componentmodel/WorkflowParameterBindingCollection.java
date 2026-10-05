@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.KeyedCollection_2;
 import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.WorkflowParameterBinding;
 
@@ -54,7 +55,7 @@ import system.workflow.componentmodel.WorkflowParameterBinding;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowParameterBindingCollection extends NetObjectEnumerable  {
+public class WorkflowParameterBindingCollection extends system.collections.objectmodel.KeyedCollection_2  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

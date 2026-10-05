@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.EntityTypeBase;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.data.metadata.edm.EntityTypeBase;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RelationshipType extends EntityTypeBase  {
+public class RelationshipType extends system.data.metadata.edm.EntityTypeBase  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +157,21 @@ public class RelationshipType extends EntityTypeBase  {
     
     // Properties section
     
+    public ReadOnlyMetadataCollection_1 getRelationshipEndMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipEndMembers = null;
+        try {
+            retObjectRelationshipEndMembers = classInstance.Get("RelationshipEndMembers");
+            JCObject val = (JCObject)retObjectRelationshipEndMembers;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelationshipEndMembers != null ? retObjectRelationshipEndMembers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.claims.ClaimsPrincipal;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -149,6 +150,16 @@ public class AuthorizationContext extends NetObject  {
     public AuthorizationContext() throws Throwable {
     }
 
+    public AuthorizationContext(ClaimsPrincipal principal, Collection_1 resource, Collection_1 action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(principal == null ? null : principal.getJCOInstance(), resource == null ? null : resource.getJCOInstance(), action == null ? null : action.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AuthorizationContext(ClaimsPrincipal principal, java.lang.String resource, java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -168,6 +179,36 @@ public class AuthorizationContext extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getAction() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
+        try {
+            retObjectAction = classInstance.Get("Action");
+            JCObject val = (JCObject)retObjectAction;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getResource() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResource = null;
+        try {
+            retObjectResource = classInstance.Get("Resource");
+            JCObject val = (JCObject)retObjectResource;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResource != null ? retObjectResource.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ClaimsPrincipal getPrincipal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

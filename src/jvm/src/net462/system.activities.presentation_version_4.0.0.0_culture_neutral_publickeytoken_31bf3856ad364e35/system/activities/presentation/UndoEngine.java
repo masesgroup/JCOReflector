@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.EditingContext;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.presentation.UndoUnit;
 import system.EventHandler;
 
@@ -189,6 +191,36 @@ public class UndoEngine extends NetObject  {
             return (boolean)retObjectUndo;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUndo != null ? retObjectUndo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetRedoActions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRedoActions = null;
+        try {
+            retObjectGetRedoActions = classInstance.Invoke("GetRedoActions");
+            JCObject objGetRedoActions = (JCObject)retObjectGetRedoActions;
+            return new IEnumerable_1Implementation(objGetRedoActions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRedoActions != null ? retObjectGetRedoActions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetUndoActions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUndoActions = null;
+        try {
+            retObjectGetUndoActions = classInstance.Invoke("GetUndoActions");
+            JCObject objGetUndoActions = (JCObject)retObjectGetUndoActions;
+            return new IEnumerable_1Implementation(objGetUndoActions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUndoActions != null ? retObjectGetUndoActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

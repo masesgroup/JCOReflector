@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.syndication.SyndicationCategory;
+import system.collections.generic.Dictionary_2;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
 
 
@@ -200,6 +201,21 @@ public class SyndicationCategory extends NetObject  {
     
     // Properties section
     
+    public Dictionary_2 getAttributeExtensions() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeExtensions = null;
+        try {
+            retObjectAttributeExtensions = classInstance.Get("AttributeExtensions");
+            JCObject val = (JCObject)retObjectAttributeExtensions;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeExtensions != null ? retObjectAttributeExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

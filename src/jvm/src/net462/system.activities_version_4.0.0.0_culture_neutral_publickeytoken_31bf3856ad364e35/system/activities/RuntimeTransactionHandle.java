@@ -44,11 +44,8 @@ import system.activities.AsyncCodeActivityContext;
 import system.activities.CodeActivityContext;
 import system.activities.NativeActivityContext;
 import system.activities.BookmarkCallback;
+import system.Action_2;
 import system.activities.RegistrationContext;
-import system.activities.IExecutionProperty;
-import system.activities.IExecutionPropertyImplementation;
-import system.activities.IPropertyRegistrationCallback;
-import system.activities.IPropertyRegistrationCallbackImplementation;
 
 
 /**
@@ -63,7 +60,7 @@ import system.activities.IPropertyRegistrationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RuntimeTransactionHandle extends Handle implements IExecutionProperty, IPropertyRegistrationCallback {
+public class RuntimeTransactionHandle extends system.activities.Handle  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -240,6 +237,26 @@ public class RuntimeTransactionHandle extends Handle implements IExecutionProper
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteTransaction", context == null ? null : context.getJCOInstance(), callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RequestTransactionContext(NativeActivityContext context, Action_2 callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RequestTransactionContext", context == null ? null : context.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RequireTransactionContext(NativeActivityContext context, Action_2 callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RequireTransactionContext", context == null ? null : context.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

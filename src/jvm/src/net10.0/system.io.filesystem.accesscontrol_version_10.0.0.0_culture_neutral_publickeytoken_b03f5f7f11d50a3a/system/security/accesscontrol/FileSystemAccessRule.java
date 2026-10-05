@@ -58,7 +58,7 @@ import system.security.accesscontrol.PropagationFlags;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FileSystemAccessRule extends AccessRule  {
+public class FileSystemAccessRule extends system.security.accesscontrol.AccessRule  {
     /**
      * Fully assembly qualified name: System.IO.FileSystem.AccessControl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -41,8 +41,12 @@ import java.util.ArrayList;
 import system.data.metadata.edm.ItemCollection;
 import system.data.metadata.edm.EnumType;
 import system.data.metadata.edm.StructuralType;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.reflection.Assembly;
 import system.data.metadata.edm.EdmItemCollection;
+import system.Action_1;
 
 
 /**
@@ -57,7 +61,7 @@ import system.data.metadata.edm.EdmItemCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ObjectItemCollection extends ItemCollection  {
+public class ObjectItemCollection extends system.data.metadata.edm.ItemCollection  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -192,6 +196,36 @@ public class ObjectItemCollection extends ItemCollection  {
         }
     }
 
+    public IEnumerable_1 GetPrimitiveTypes() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrimitiveTypes = null;
+        try {
+            retObjectGetPrimitiveTypes = classInstance.Invoke("GetPrimitiveTypes");
+            JCObject objGetPrimitiveTypes = (JCObject)retObjectGetPrimitiveTypes;
+            return new IEnumerable_1Implementation(objGetPrimitiveTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrimitiveTypes != null ? retObjectGetPrimitiveTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ReadOnlyCollection_1 GetItems() throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItems = null;
+        try {
+            retObjectGetItems = classInstance.Invoke("GetItems");
+            JCObject objGetItems = (JCObject)retObjectGetItems;
+            return new ReadOnlyCollection_1(objGetItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItems != null ? retObjectGetItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType GetClrType(EnumType objectSpaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -237,6 +271,16 @@ public class ObjectItemCollection extends ItemCollection  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance(), edmItemCollection == null ? null : edmItemCollection.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void LoadFromAssembly(Assembly assembly, EdmItemCollection edmItemCollection, Action_1 logLoadMessage) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.data.MetadataException, system.data.MappingException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance(), edmItemCollection == null ? null : edmItemCollection.getJCOInstance(), logLoadMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

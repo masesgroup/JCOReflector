@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.SynchronizedCollection_1;
+import system.servicemodel.dispatcher.ChannelDispatcherBase;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ChannelDispatcherCollection extends NetObjectEnumerable  {
+public class ChannelDispatcherCollection extends system.collections.generic.SynchronizedCollection_1<ChannelDispatcherBase>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

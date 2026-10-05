@@ -39,6 +39,7 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.workflow.componentmodel.design.IDesignerGlyphProvider;
 import system.workflow.componentmodel.design.IDesignerGlyphProviderImplementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -125,6 +126,8 @@ public interface IDesignerGlyphProviderService extends IJCOBridgeReflected {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getGlyphProviders() throws Throwable;
+
 
 
     // Instance Events section

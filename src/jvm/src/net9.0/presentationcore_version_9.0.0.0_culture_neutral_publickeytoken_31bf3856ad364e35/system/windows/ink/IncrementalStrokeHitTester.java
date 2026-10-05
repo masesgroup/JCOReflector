@@ -54,7 +54,7 @@ import system.windows.ink.StrokeHitEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IncrementalStrokeHitTester extends IncrementalHitTester  {
+public class IncrementalStrokeHitTester extends system.windows.ink.IncrementalHitTester  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

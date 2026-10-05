@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
+import system.collections.objectmodel.Collection_1;
+import system.servicemodel.channels.BindingParameterCollection;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -166,6 +170,15 @@ public class UseRequestHeadersForMetadataAddressBehavior extends NetObject  {
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
      */
     @Deprecated 
+    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
@@ -183,6 +196,21 @@ public class UseRequestHeadersForMetadataAddressBehavior extends NetObject  {
     
     // Properties section
     
+    public IDictionary_2 getDefaultPortsByScheme() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultPortsByScheme = null;
+        try {
+            retObjectDefaultPortsByScheme = classInstance.Get("DefaultPortsByScheme");
+            JCObject val = (JCObject)retObjectDefaultPortsByScheme;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultPortsByScheme != null ? retObjectDefaultPortsByScheme.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

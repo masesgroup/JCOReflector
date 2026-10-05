@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.description.ServiceHealthDataCollection;
 
 
@@ -53,7 +54,7 @@ import system.servicemodel.description.ServiceHealthDataCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ServiceHealthSection extends NetObjectEnumerable  {
+public class ServiceHealthSection extends system.collections.objectmodel.Collection_1<ServiceHealthDataCollection>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

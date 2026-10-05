@@ -54,7 +54,7 @@ import system.directoryservices.activedirectory.DirectoryServer;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DirectoryServerCollection extends CollectionBase  {
+public class DirectoryServerCollection extends system.collections.CollectionBase  {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

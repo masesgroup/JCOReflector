@@ -40,7 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.activities.presentation.EditingContext;
 import system.activities.debugger.SourceLocation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.activities.presentation.debug.BreakpointTypes;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -181,6 +184,21 @@ public class DebuggerService extends NetObject  {
         }
     }
 
+    public IDictionary_2 GetBreakpointLocations() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBreakpointLocations = null;
+        try {
+            retObjectGetBreakpointLocations = classInstance.Invoke("GetBreakpointLocations");
+            JCObject objGetBreakpointLocations = (JCObject)retObjectGetBreakpointLocations;
+            return new IDictionary_2Implementation(objGetBreakpointLocations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBreakpointLocations != null ? retObjectGetBreakpointLocations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DeleteBreakpoint(SourceLocation sourceLocation) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -226,6 +244,16 @@ public class DebuggerService extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateBreakpoint", sourceLocation == null ? null : sourceLocation.getJCOInstance(), newBreakpointType == null ? null : newBreakpointType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateSourceLocations(Dictionary_2 newSourceLocationMapping) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateSourceLocations", newSourceLocationMapping == null ? null : newSourceLocationMapping.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

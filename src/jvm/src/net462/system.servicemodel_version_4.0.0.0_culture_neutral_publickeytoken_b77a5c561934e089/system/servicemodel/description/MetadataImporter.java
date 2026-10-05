@@ -38,7 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.description.ServiceEndpointCollection;
+import system.collections.generic.Dictionary_2;
+import system.collections.generic.KeyedByTypeCollection_1;
 
 
 /**
@@ -152,6 +155,21 @@ public class MetadataImporter extends NetObject  {
     
     // Methods section
     
+    public Collection_1 ImportAllContracts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportAllContracts = null;
+        try {
+            retObjectImportAllContracts = classInstance.Invoke("ImportAllContracts");
+            JCObject objImportAllContracts = (JCObject)retObjectImportAllContracts;
+            return new Collection_1(objImportAllContracts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportAllContracts != null ? retObjectImportAllContracts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ServiceEndpointCollection ImportAllEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -171,6 +189,66 @@ public class MetadataImporter extends NetObject  {
     
     // Properties section
     
+    public Dictionary_2 getState() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
+        try {
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 getKnownContracts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKnownContracts = null;
+        try {
+            retObjectKnownContracts = classInstance.Get("KnownContracts");
+            JCObject val = (JCObject)retObjectKnownContracts;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKnownContracts != null ? retObjectKnownContracts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedByTypeCollection_1 getPolicyImportExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPolicyImportExtensions = null;
+        try {
+            retObjectPolicyImportExtensions = classInstance.Get("PolicyImportExtensions");
+            JCObject val = (JCObject)retObjectPolicyImportExtensions;
+            return new KeyedByTypeCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPolicyImportExtensions != null ? retObjectPolicyImportExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getErrors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrors = null;
+        try {
+            retObjectErrors = classInstance.Get("Errors");
+            JCObject val = (JCObject)retObjectErrors;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrors != null ? retObjectErrors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

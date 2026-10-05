@@ -38,13 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.identitymodel.tokens.SecurityTokenHandler;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.identitymodel.tokens.SecurityTokenHandlerConfiguration;
 import system.xml.XmlReader;
 import system.identitymodel.tokens.SecurityToken;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.identitymodel.tokens.SecurityTokenDescriptor;
 import system.identitymodel.tokens.SecurityTokenHandlerCollection;
-import system.identitymodel.tokens.SecurityTokenHandler;
 import system.xml.XmlWriter;
 
 
@@ -60,7 +64,7 @@ import system.xml.XmlWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SecurityTokenHandlerCollection extends NetObjectEnumerable  {
+public class SecurityTokenHandlerCollection extends system.collections.objectmodel.Collection_1<SecurityTokenHandler>  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -163,6 +167,26 @@ public class SecurityTokenHandlerCollection extends NetObjectEnumerable  {
         }
     }
 
+    public SecurityTokenHandlerCollection(IEnumerable_1 handlers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(handlers == null ? null : handlers.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityTokenHandlerCollection(IEnumerable_1 handlers, SecurityTokenHandlerConfiguration configuration) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(handlers == null ? null : handlers.getJCOInstance(), configuration == null ? null : configuration.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityTokenHandlerCollection(SecurityTokenHandlerConfiguration configuration) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -228,6 +252,21 @@ public class SecurityTokenHandlerCollection extends NetObjectEnumerable  {
             return (boolean)retObjectCanWriteToken;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanWriteToken != null ? retObjectCanWriteToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateToken = null;
+        try {
+            retObjectValidateToken = classInstance.Invoke("ValidateToken", token == null ? null : token.getJCOInstance());
+            JCObject objValidateToken = (JCObject)retObjectValidateToken;
+            return new ReadOnlyCollection_1(objValidateToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateToken != null ? retObjectValidateToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,6 +410,36 @@ public class SecurityTokenHandlerCollection extends NetObjectEnumerable  {
     
     // Properties section
     
+    public IEnumerable_1 getTokenTypeIdentifiers() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenTypeIdentifiers = null;
+        try {
+            retObjectTokenTypeIdentifiers = classInstance.Get("TokenTypeIdentifiers");
+            JCObject val = (JCObject)retObjectTokenTypeIdentifiers;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenTypeIdentifiers != null ? retObjectTokenTypeIdentifiers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getTokenTypes() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenTypes = null;
+        try {
+            retObjectTokenTypes = classInstance.Get("TokenTypes");
+            JCObject val = (JCObject)retObjectTokenTypes;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenTypes != null ? retObjectTokenTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityTokenHandlerConfiguration getConfiguration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

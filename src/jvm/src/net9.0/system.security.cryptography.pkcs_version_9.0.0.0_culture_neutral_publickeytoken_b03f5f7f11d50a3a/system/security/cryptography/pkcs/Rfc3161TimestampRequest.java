@@ -38,12 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ReadOnlyMemory_1;
 import system.security.cryptography.pkcs.Rfc3161TimestampRequest;
-import system.security.cryptography.pkcs.SignerInfo;
+import system.Nullable_1;
 import system.security.cryptography.HashAlgorithmName;
 import system.security.cryptography.Oid;
-import system.security.cryptography.pkcs.Rfc3161TimestampToken;
 import system.security.cryptography.x509certificates.X509ExtensionCollection;
+import system.security.cryptography.pkcs.SignerInfo;
+import system.security.cryptography.pkcs.Rfc3161TimestampToken;
 
 
 /**
@@ -159,6 +161,20 @@ public class Rfc3161TimestampRequest extends NetObject  {
     
     // Methods section
     
+    public static boolean TryDecode(ReadOnlyMemory_1 encodedBytes, JCORefOut<Rfc3161TimestampRequest> request, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryDecode = null;
+        try {
+            retObjectTryDecode = classType.Invoke("TryDecode", encodedBytes == null ? null : encodedBytes.getJCOInstance(), request.getJCRefOut(), bytesConsumed.getJCRefOut());
+            return (boolean)retObjectTryDecode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryDecode != null ? retObjectTryDecode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] Encode() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -177,6 +193,96 @@ public class Rfc3161TimestampRequest extends NetObject  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetNonce() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNonce = null;
+        try {
+            retObjectGetNonce = classInstance.Invoke("GetNonce");
+            JCObject objGetNonce = (JCObject)retObjectGetNonce;
+            return new Nullable_1(objGetNonce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNonce != null ? retObjectGetNonce.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMemory_1 GetMessageHash() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMessageHash = null;
+        try {
+            retObjectGetMessageHash = classInstance.Invoke("GetMessageHash");
+            JCObject objGetMessageHash = (JCObject)retObjectGetMessageHash;
+            return new ReadOnlyMemory_1(objGetMessageHash);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageHash != null ? retObjectGetMessageHash.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Rfc3161TimestampRequest CreateFromHash(ReadOnlyMemory_1 hash, HashAlgorithmName hashAlgorithm, Oid requestedPolicyId, Nullable_1 nonce, boolean requestSignerCertificates, X509ExtensionCollection extensions) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException, system.formats.asn1.AsnContentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromHash = null;
+        try {
+            retObjectCreateFromHash = classType.Invoke("CreateFromHash", hash == null ? null : hash.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), requestedPolicyId == null ? null : requestedPolicyId.getJCOInstance(), nonce == null ? null : nonce.getJCOInstance(), requestSignerCertificates, extensions == null ? null : extensions.getJCOInstance());
+            JCObject objCreateFromHash = (JCObject)retObjectCreateFromHash;
+            return new Rfc3161TimestampRequest(objCreateFromHash);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromHash != null ? retObjectCreateFromHash.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Rfc3161TimestampRequest CreateFromHash(ReadOnlyMemory_1 hash, Oid hashAlgorithmId, Oid requestedPolicyId, Nullable_1 nonce, boolean requestSignerCertificates, X509ExtensionCollection extensions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromHash = null;
+        try {
+            retObjectCreateFromHash = classType.Invoke("CreateFromHash", hash == null ? null : hash.getJCOInstance(), hashAlgorithmId == null ? null : hashAlgorithmId.getJCOInstance(), requestedPolicyId == null ? null : requestedPolicyId.getJCOInstance(), nonce == null ? null : nonce.getJCOInstance(), requestSignerCertificates, extensions == null ? null : extensions.getJCOInstance());
+            JCObject objCreateFromHash = (JCObject)retObjectCreateFromHash;
+            return new Rfc3161TimestampRequest(objCreateFromHash);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromHash != null ? retObjectCreateFromHash.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Rfc3161TimestampRequest CreateFromSignerInfo(SignerInfo signerInfo, HashAlgorithmName hashAlgorithm, Oid requestedPolicyId, Nullable_1 nonce, boolean requestSignerCertificates, X509ExtensionCollection extensions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromSignerInfo = null;
+        try {
+            retObjectCreateFromSignerInfo = classType.Invoke("CreateFromSignerInfo", signerInfo == null ? null : signerInfo.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), requestedPolicyId == null ? null : requestedPolicyId.getJCOInstance(), nonce == null ? null : nonce.getJCOInstance(), requestSignerCertificates, extensions == null ? null : extensions.getJCOInstance());
+            JCObject objCreateFromSignerInfo = (JCObject)retObjectCreateFromSignerInfo;
+            return new Rfc3161TimestampRequest(objCreateFromSignerInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromSignerInfo != null ? retObjectCreateFromSignerInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Rfc3161TimestampToken ProcessResponse(ReadOnlyMemory_1 responseBytes, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessResponse = null;
+        try {
+            retObjectProcessResponse = classInstance.Invoke("ProcessResponse", responseBytes == null ? null : responseBytes.getJCOInstance(), bytesConsumed.getJCRefOut());
+            JCObject objProcessResponse = (JCObject)retObjectProcessResponse;
+            return new Rfc3161TimestampToken(objProcessResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessResponse != null ? retObjectProcessResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

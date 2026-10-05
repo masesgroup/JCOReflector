@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ReadOnlyMemory_1;
+import system.security.cryptography.pkcs.Rfc3161TimestampToken;
 import system.security.cryptography.pkcs.SignerInfo;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.x509certificates.X509Certificate2Collection;
@@ -158,6 +160,20 @@ public class Rfc3161TimestampToken extends NetObject  {
     
     // Methods section
     
+    public static boolean TryDecode(ReadOnlyMemory_1 encodedBytes, JCORefOut<Rfc3161TimestampToken> token, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesConsumed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryDecode = null;
+        try {
+            retObjectTryDecode = classType.Invoke("TryDecode", encodedBytes == null ? null : encodedBytes.getJCOInstance(), token.getJCRefOut(), bytesConsumed.getJCRefOut());
+            return (boolean)retObjectTryDecode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryDecode != null ? retObjectTryDecode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean VerifySignatureForSignerInfo(SignerInfo signerInfo, JCORefOut<X509Certificate2> signerCertificate, X509Certificate2Collection extraCandidates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

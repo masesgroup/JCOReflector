@@ -38,11 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.windows.forms.TaskDialogButton;
+import system.threading.tasks.Task_1;
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
 import system.windows.forms.TaskDialogPage;
 import system.windows.forms.TaskDialogStartupLocation;
+import system.windows.forms.TaskDialogButton;
 
 
 /**
@@ -158,6 +159,36 @@ public class TaskDialog extends NetObject  {
     
     // Methods section
     
+    public static Task_1 ShowDialogAsync(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowDialogAsync = null;
+        try {
+            retObjectShowDialogAsync = classType.Invoke("ShowDialogAsync", owner == null ? null : owner.getJCOInstance(), page == null ? null : page.getJCOInstance(), startupLocation == null ? null : startupLocation.getJCOInstance());
+            JCObject objShowDialogAsync = (JCObject)retObjectShowDialogAsync;
+            return new Task_1(objShowDialogAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialogAsync != null ? retObjectShowDialogAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ShowDialogAsync(TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowDialogAsync = null;
+        try {
+            retObjectShowDialogAsync = classType.Invoke("ShowDialogAsync", page == null ? null : page.getJCOInstance(), startupLocation == null ? null : startupLocation.getJCOInstance());
+            JCObject objShowDialogAsync = (JCObject)retObjectShowDialogAsync;
+            return new Task_1(objShowDialogAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialogAsync != null ? retObjectShowDialogAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static TaskDialogButton ShowDialog(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

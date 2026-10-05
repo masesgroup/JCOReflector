@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.dispatcher.ClientOperationCompatBase;
 import system.servicemodel.dispatcher.ClientRuntime;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.generic.SynchronizedCollection_1;
 import system.reflection.MethodInfo;
 import system.servicemodel.dispatcher.IClientMessageFormatter;
 import system.servicemodel.dispatcher.IClientMessageFormatterImplementation;
@@ -57,7 +60,7 @@ import system.servicemodel.dispatcher.IClientMessageFormatterImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ClientOperation extends ClientOperationCompatBase  {
+public class ClientOperation extends system.servicemodel.dispatcher.ClientOperationCompatBase  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -297,6 +300,51 @@ public class ClientOperation extends ClientOperationCompatBase  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerializeRequest", SerializeRequest);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getClientParameterInspectors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientParameterInspectors = null;
+        try {
+            retObjectClientParameterInspectors = classInstance.Get("ClientParameterInspectors");
+            JCObject val = (JCObject)retObjectClientParameterInspectors;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientParameterInspectors != null ? retObjectClientParameterInspectors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getFaultContractInfos() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaultContractInfos = null;
+        try {
+            retObjectFaultContractInfos = classInstance.Get("FaultContractInfos");
+            JCObject val = (JCObject)retObjectFaultContractInfos;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaultContractInfos != null ? retObjectFaultContractInfos.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SynchronizedCollection_1 getParameterInspectorsNewClientOperation() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterInspectors = null;
+        try {
+            retObjectParameterInspectors = classInstance.Get("ParameterInspectors");
+            JCObject val = (JCObject)retObjectParameterInspectors;
+            return new SynchronizedCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterInspectors != null ? retObjectParameterInspectors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

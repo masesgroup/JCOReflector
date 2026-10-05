@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.runtime.WorkflowEventArgs;
+import system.collections.generic.Dictionary_2;
 import system.workflow.componentmodel.Activity;
 
 
@@ -54,7 +55,7 @@ import system.workflow.componentmodel.Activity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowCompletedEventArgs extends WorkflowEventArgs  {
+public class WorkflowCompletedEventArgs extends system.workflow.runtime.WorkflowEventArgs  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -159,6 +160,21 @@ public class WorkflowCompletedEventArgs extends WorkflowEventArgs  {
     
     // Properties section
     
+    public Dictionary_2 getOutputParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputParameters = null;
+        try {
+            retObjectOutputParameters = classInstance.Get("OutputParameters");
+            JCObject val = (JCObject)retObjectOutputParameters;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputParameters != null ? retObjectOutputParameters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Activity getWorkflowDefinition() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

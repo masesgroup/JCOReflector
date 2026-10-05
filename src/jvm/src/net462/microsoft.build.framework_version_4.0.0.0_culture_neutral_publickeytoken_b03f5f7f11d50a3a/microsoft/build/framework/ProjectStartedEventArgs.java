@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import microsoft.build.framework.BuildStatusEventArgs;
 import microsoft.build.framework.BuildEventContext;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.DateTime;
 
 
@@ -55,7 +57,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
+public class ProjectStartedEventArgs extends microsoft.build.framework.BuildStatusEventArgs  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -161,6 +163,16 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
         }
     }
 
+    public ProjectStartedEventArgs(int projectId, java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, BuildEventContext parentBuildEventContext, IDictionary_2 globalProperties, java.lang.String toolsVersion) throws Throwable, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(projectId, message, helpKeyword, projectFile, targetNames, properties == null ? null : properties.getJCOInstance(), items == null ? null : items.getJCOInstance(), parentBuildEventContext == null ? null : parentBuildEventContext.getJCOInstance(), globalProperties == null ? null : globalProperties.getJCOInstance(), toolsVersion));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ProjectStartedEventArgs(int projectId, java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, BuildEventContext parentBuildEventContext, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
@@ -250,6 +262,31 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
             return new BuildEventContext(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentProjectBuildEventContext != null ? retObjectParentProjectBuildEventContext.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getGlobalProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalProperties = null;
+        try {
+            retObjectGlobalProperties = classInstance.Get("GlobalProperties");
+            JCObject val = (JCObject)retObjectGlobalProperties;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobalProperties != null ? retObjectGlobalProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setGlobalProperties(IDictionary_2 GlobalProperties) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("GlobalProperties", GlobalProperties == null ? null : GlobalProperties.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

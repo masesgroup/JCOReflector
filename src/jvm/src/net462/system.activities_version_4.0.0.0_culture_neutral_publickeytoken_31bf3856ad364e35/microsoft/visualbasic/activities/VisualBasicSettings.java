@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.visualbasic.activities.VisualBasicSettings;
+import system.collections.generic.ISet_1;
+import system.collections.generic.ISet_1Implementation;
 
 
 /**
@@ -174,6 +176,31 @@ public class VisualBasicSettings extends NetObject  {
             return new VisualBasicSettings(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISet_1 getImportReferences() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportReferences = null;
+        try {
+            retObjectImportReferences = classInstance.Get("ImportReferences");
+            JCObject val = (JCObject)retObjectImportReferences;
+            return new ISet_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportReferences != null ? retObjectImportReferences.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setImportReferences(ISet_1 ImportReferences) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ImportReferences", ImportReferences == null ? null : ImportReferences.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

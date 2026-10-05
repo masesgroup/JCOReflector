@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.configuration.ConfigurationSection;
 import system.servicemodel.configuration.BindingsSection;
 import system.configuration.Configuration;
+import system.collections.generic.List_1;
 import system.servicemodel.configuration.BasicHttpBindingCollectionElement;
 import system.servicemodel.configuration.BasicHttpsBindingCollectionElement;
 import system.servicemodel.configuration.BindingCollectionElement;
@@ -71,7 +72,7 @@ import system.servicemodel.configuration.WSHttpBindingCollectionElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BindingsSection extends ConfigurationSection  {
+public class BindingsSection extends system.configuration.ConfigurationSection  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -197,6 +198,21 @@ public class BindingsSection extends ConfigurationSection  {
     
     // Properties section
     
+    public List_1 getBindingCollections() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingCollections = null;
+        try {
+            retObjectBindingCollections = classInstance.Get("BindingCollections");
+            JCObject val = (JCObject)retObjectBindingCollections;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingCollections != null ? retObjectBindingCollections.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BasicHttpBindingCollectionElement getBasicHttpBinding() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

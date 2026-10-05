@@ -54,7 +54,7 @@ import system.drawing.imaging.ColorMatrix;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ColorMatrixEffect extends Effect  {
+public class ColorMatrixEffect extends system.drawing.imaging.effects.Effect  {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

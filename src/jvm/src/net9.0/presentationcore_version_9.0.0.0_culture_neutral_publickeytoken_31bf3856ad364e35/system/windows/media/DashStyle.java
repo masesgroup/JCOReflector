@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.animation.Animatable;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.media.DashStyle;
 import system.windows.media.DoubleCollection;
 
@@ -55,7 +57,7 @@ import system.windows.media.DoubleCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DashStyle extends Animatable  {
+public class DashStyle extends system.windows.media.animation.Animatable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -153,6 +155,16 @@ public class DashStyle extends Animatable  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DashStyle(IEnumerable_1 dashes, double offset) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(dashes == null ? null : dashes.getJCOInstance(), offset));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

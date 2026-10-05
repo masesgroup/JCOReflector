@@ -42,7 +42,11 @@ import system.net.websockets.WebSocket;
 import system.threading.tasks.Task;
 import system.net.websockets.WebSocketCloseStatus;
 import system.threading.CancellationToken;
+import system.ArraySegment_1;
+import system.net.websockets.WebSocketMessageType;
+import system.threading.tasks.Task_1;
 import system.net.websockets.WebSocketState;
+import system.Nullable_1;
 
 
 /**
@@ -57,7 +61,7 @@ import system.net.websockets.WebSocketState;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AspNetWebSocket extends WebSocket  {
+public class AspNetWebSocket extends system.net.websockets.WebSocket  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -183,6 +187,36 @@ public class AspNetWebSocket extends WebSocket  {
             return new Task(objCloseOutputAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseOutputAsync != null ? retObjectCloseOutputAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task SendAsync(ArraySegment_1 buffer, WebSocketMessageType messageType, boolean endOfMessage, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.net.websockets.WebSocketException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", buffer == null ? null : buffer.getJCOInstance(), messageType == null ? null : messageType.getJCOInstance(), endOfMessage, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.websockets.WebSocketException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classInstance.Invoke("ReceiveAsync", buffer == null ? null : buffer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new Task_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

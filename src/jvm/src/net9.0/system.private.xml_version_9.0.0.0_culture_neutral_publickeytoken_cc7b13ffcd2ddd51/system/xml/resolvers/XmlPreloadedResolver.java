@@ -40,8 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.xml.XmlResolver;
 import system.xml.resolvers.XmlKnownDtds;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
 import system.Uri;
+import system.threading.tasks.Task_1;
 import system.io.Stream;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
 
@@ -58,7 +63,7 @@ import system.net.ICredentialsImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlPreloadedResolver extends XmlResolver  {
+public class XmlPreloadedResolver extends system.xml.XmlResolver  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -171,6 +176,16 @@ public class XmlPreloadedResolver extends XmlResolver  {
         }
     }
 
+    public XmlPreloadedResolver(XmlResolver fallbackResolver, XmlKnownDtds preloadedDtds, IEqualityComparer_1 uriComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(fallbackResolver == null ? null : fallbackResolver.getJCOInstance(), preloadedDtds == null ? null : preloadedDtds.getJCOInstance(), uriComparer == null ? null : uriComparer.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlPreloadedResolver(XmlResolver fallbackResolver, XmlKnownDtds preloadedDtds) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
@@ -219,6 +234,21 @@ public class XmlPreloadedResolver extends XmlResolver  {
             return new NetObject(objGetEntity);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntity != null ? retObjectGetEntity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntityAsync = null;
+        try {
+            retObjectGetEntityAsync = classInstance.Invoke("GetEntityAsync", absoluteUri == null ? null : absoluteUri.getJCOInstance(), role, ofObjectToReturn == null ? null : ofObjectToReturn.getJCOInstance());
+            JCObject objGetEntityAsync = (JCObject)retObjectGetEntityAsync;
+            return new Task_1(objGetEntityAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntityAsync != null ? retObjectGetEntityAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,6 +343,21 @@ public class XmlPreloadedResolver extends XmlResolver  {
     
     // Properties section
     
+    public IEnumerable_1 getPreloadedUris() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreloadedUris = null;
+        try {
+            retObjectPreloadedUris = classInstance.Get("PreloadedUris");
+            JCObject val = (JCObject)retObjectPreloadedUris;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreloadedUris != null ? retObjectPreloadedUris.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

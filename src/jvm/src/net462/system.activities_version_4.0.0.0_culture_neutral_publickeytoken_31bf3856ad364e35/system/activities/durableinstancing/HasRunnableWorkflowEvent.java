@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.durableinstancing.InstancePersistenceEvent_1;
+import system.activities.durableinstancing.HasRunnableWorkflowEvent;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HasRunnableWorkflowEvent extends NetObject  {
+public class HasRunnableWorkflowEvent extends system.runtime.durableinstancing.InstancePersistenceEvent_1<HasRunnableWorkflowEvent>  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

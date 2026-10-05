@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 import system.runtime.interopservices.javascript.JSObject;
 
 
@@ -152,6 +154,21 @@ public class JSHost extends NetObject  {
     
     // Methods section
     
+    public static Task_1 ImportAsync(java.lang.String moduleName, java.lang.String moduleUrl, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImportAsync = null;
+        try {
+            retObjectImportAsync = classType.Invoke("ImportAsync", moduleName, moduleUrl, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objImportAsync = (JCObject)retObjectImportAsync;
+            return new Task_1(objImportAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportAsync != null ? retObjectImportAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

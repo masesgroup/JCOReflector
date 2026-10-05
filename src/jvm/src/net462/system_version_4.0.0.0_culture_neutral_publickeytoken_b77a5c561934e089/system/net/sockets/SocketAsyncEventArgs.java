@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.net.EndPoint;
 import system.net.sockets.IPPacketInformation;
 import system.net.sockets.SendPacketsElement;
@@ -62,7 +64,7 @@ import system.net.sockets.TransmitFileOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
+public class SocketAsyncEventArgs extends system.EventArgs implements AutoCloseable {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -438,6 +440,31 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendPacketsSendSize", SendPacketsSendSize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getBufferList() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBufferList = null;
+        try {
+            retObjectBufferList = classInstance.Get("BufferList");
+            JCObject val = (JCObject)retObjectBufferList;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBufferList != null ? retObjectBufferList.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBufferList(IList_1 BufferList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.OverflowException, system.net.sockets.SocketException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BufferList", BufferList == null ? null : BufferList.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

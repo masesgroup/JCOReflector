@@ -66,7 +66,6 @@ public class GenericComparisonDelegateSortsAList {
     }
 
     static void testGenericComparisonDelegateSortsAList() throws Throwable {
-		Console.WriteLine("testGenericComparisonDelegateSortsAList");
         List_1<system.Object> list = new List_1<system.Object>() {};
         list.Add(new system.Object());
         list.Add(new system.Object());
@@ -86,28 +85,38 @@ public class GenericComparisonDelegateSortsAList {
     }
 
     /**
-     * Native types in the members of a generic class: an int parameter in a generic constructor
-     * and in a generic method, int and boolean return values, and an int property.
+     * Adds the pair to the dictionary and returns false when the key is already present.
+     * Dictionary.TryAdd does not exist on .NET Framework (net462), so the duplicate is detected
+     * through the ArgumentException thrown by Add.
+     */
+    private static <K extends IJCOBridgeReflected, V extends IJCOBridgeReflected> boolean addIfAbsent(Dictionary_2<K, V> dict, K key, V value) throws Throwable {
+        try {
+            dict.Add(key, value);
+            return true;
+        } catch (system.ArgumentException e) {
+            return false;
+        }
+    }
+
+    /**
+     * Native types in the members of a generic class: an int parameter in a generic constructor,
+     * boolean and int return values of generic methods, and an int property.
      */
     static void testNativeTypesInGenericMembers() throws Throwable {
-		Console.WriteLine("testNativeTypesInGenericMembers");
         // native int parameter of a generic constructor
         Dictionary_2<system.Object, system.Object> dict = new Dictionary_2<system.Object, system.Object>(16) {};
-
-        // native int parameter and return value of a generic method
-        if (dict.EnsureCapacity(16) < 16) throw new AssertionError("EnsureCapacity returned a capacity lower than requested");
 
         system.Object key = new system.Object();
         system.Object value = new system.Object();
 
         // native boolean return values of generic methods
-        if (!dict.TryAdd(key, value)) throw new AssertionError("TryAdd of a new key must return true");
-        if (dict.TryAdd(key, value)) throw new AssertionError("TryAdd of an existing key must return false");
+        if (!addIfAbsent(dict, key, value)) throw new AssertionError("Add of a new key must succeed");
+        if (addIfAbsent(dict, key, value)) throw new AssertionError("Add of an existing key must throw ArgumentException");
         if (!dict.ContainsKey(key)) throw new AssertionError("ContainsKey must find the added key");
         if (!dict.ContainsValue(value)) throw new AssertionError("ContainsValue must find the added value");
 
         // native int return value of a generic property
-        if (dict.getCount() != 1) throw new AssertionError("Count must be 1 after one TryAdd");
+        if (dict.getCount() != 1) throw new AssertionError("Count must be 1 after one Add");
 
         if (!dict.Remove(key)) throw new AssertionError("Remove of an existing key must return true");
         if (dict.getCount() != 0) throw new AssertionError("Count must be 0 after Remove");
@@ -118,14 +127,13 @@ public class GenericComparisonDelegateSortsAList {
      * valid type argument, and the CLR compares the values, not the wrappers.
      */
     static void testNativeWrapperTypesAsTypeArguments() throws Throwable {
-		Console.WriteLine("testNativeWrapperTypesAsTypeArguments");
         Dictionary_2<UInt32, UInt32> dict = new Dictionary_2<UInt32, UInt32>() {};
-        if (!dict.TryAdd(UInt32.Parse("1"), UInt32.Parse("10"))) throw new AssertionError("TryAdd of a new key must return true");
+        if (!addIfAbsent(dict, UInt32.Parse("1"), UInt32.Parse("10"))) throw new AssertionError("Add of a new key must succeed");
 
         // a different wrapper holding the same number is the same key
         if (!dict.ContainsKey(UInt32.Parse("1"))) throw new AssertionError("ContainsKey must compare keys by value");
         if (dict.ContainsKey(UInt32.Parse("2"))) throw new AssertionError("ContainsKey must not find a missing key");
-        if (dict.TryAdd(UInt32.Parse("1"), UInt32.Parse("11"))) throw new AssertionError("TryAdd of an equal key must return false");
+        if (addIfAbsent(dict, UInt32.Parse("1"), UInt32.Parse("11"))) throw new AssertionError("Add of an equal key must throw ArgumentException");
 
         // out parameter of a type-argument type: the result comes back through the instance supplied
         UInt32 found = UInt32.Parse("0");
@@ -163,8 +171,7 @@ public class GenericComparisonDelegateSortsAList {
      * type parameter: every type parameter is bounded by IJCOBridgeReflected, which none of them
      * implements. Using one is a compile-time error, so the check is made on the bound itself.
      */
-    static void testNativeJavaTypesCannotBeTypeArguments() throws Throwable {
-		Console.WriteLine("testNativeJavaTypesCannotBeTypeArguments");
+    static void testNativeJavaTypesCannotBeTypeArguments() {
         java.lang.reflect.Type[] bounds = List_1.class.getTypeParameters()[0].getBounds();
         if (bounds.length != 1 || bounds[0] != IJCOBridgeReflected.class)
             throw new AssertionError("The type parameter of List_1 must be bounded by IJCOBridgeReflected");

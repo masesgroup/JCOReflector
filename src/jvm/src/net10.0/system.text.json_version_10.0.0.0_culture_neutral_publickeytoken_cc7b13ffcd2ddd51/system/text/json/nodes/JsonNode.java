@@ -43,9 +43,12 @@ import system.text.json.JsonSerializerOptions;
 import system.text.json.JsonValueKind;
 import system.text.json.nodes.JsonArray;
 import system.io.Stream;
-import system.text.json.Utf8JsonReader;
+import system.Nullable_1;
+import system.text.json.JsonDocumentOptions;
 import system.text.json.nodes.JsonObject;
 import system.text.json.nodes.JsonValue;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 import system.text.json.Utf8JsonWriter;
 
 
@@ -301,6 +304,36 @@ public class JsonNode extends NetObject  {
         }
     }
 
+    public static JsonNode Parse(Stream utf8Json, Nullable_1 nodeOptions, JsonDocumentOptions documentOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
+        try {
+            retObjectParse = classType.Invoke("Parse", utf8Json == null ? null : utf8Json.getJCOInstance(), nodeOptions == null ? null : nodeOptions.getJCOInstance(), documentOptions == null ? null : documentOptions.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
+            return new JsonNode(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonNode Parse(java.lang.String json, Nullable_1 nodeOptions, JsonDocumentOptions documentOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
+        try {
+            retObjectParse = classType.Invoke("Parse", json, nodeOptions == null ? null : nodeOptions.getJCOInstance(), documentOptions == null ? null : documentOptions.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
+            return new JsonNode(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public JsonObject AsObject() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -331,6 +364,31 @@ public class JsonNode extends NetObject  {
         }
     }
 
+    public static Task_1 ParseAsync(Stream utf8Json, Nullable_1 nodeOptions, JsonDocumentOptions documentOptions, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseAsync = null;
+        try {
+            retObjectParseAsync = classType.Invoke("ParseAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), nodeOptions == null ? null : nodeOptions.getJCOInstance(), documentOptions == null ? null : documentOptions.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objParseAsync = (JCObject)retObjectParseAsync;
+            return new Task_1(objParseAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseAsync != null ? retObjectParseAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void ReplaceWith(T value) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReplaceWith", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void WriteTo(Utf8JsonWriter writer, JsonSerializerOptions options) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -345,6 +403,21 @@ public class JsonNode extends NetObject  {
     
     // Properties section
     
+    public Nullable_1 getOptions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
+        try {
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public JsonNode getParent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

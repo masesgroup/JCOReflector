@@ -40,12 +40,17 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.MetadataImporter;
 import system.servicemodel.description.MetadataSet;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.description.MetadataImporterQuotas;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.description.ContractDescription;
 import system.web.services.description.PortType;
 import system.servicemodel.description.ServiceEndpoint;
 import system.web.services.description.Port;
 import system.servicemodel.description.ServiceEndpointCollection;
 import system.web.services.description.Service;
+import system.collections.generic.KeyedByTypeCollection_1;
 import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
 
@@ -62,7 +67,7 @@ import system.xml.schema.XmlSchemaSet;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WsdlImporter extends MetadataImporter  {
+public class WsdlImporter extends system.servicemodel.description.MetadataImporter  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -168,11 +173,61 @@ public class WsdlImporter extends MetadataImporter  {
         }
     }
 
+    public WsdlImporter(MetadataSet metadata, IEnumerable_1 policyImportExtensions, IEnumerable_1 wsdlImportExtensions) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.TypeLoadException, system.RankException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(metadata == null ? null : metadata.getJCOInstance(), policyImportExtensions == null ? null : policyImportExtensions.getJCOInstance(), wsdlImportExtensions == null ? null : wsdlImportExtensions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WsdlImporter(MetadataSet metadata, IEnumerable_1 policyImportExtensions, IEnumerable_1 wsdlImportExtensions, MetadataImporterQuotas quotas) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.xml.XmlException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.NotSupportedException, system.RankException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(metadata == null ? null : metadata.getJCOInstance(), policyImportExtensions == null ? null : policyImportExtensions.getJCOInstance(), wsdlImportExtensions == null ? null : wsdlImportExtensions.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public Collection_1 ImportAllBindings() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportAllBindings = null;
+        try {
+            retObjectImportAllBindings = classInstance.Invoke("ImportAllBindings");
+            JCObject objImportAllBindings = (JCObject)retObjectImportAllBindings;
+            return new Collection_1(objImportAllBindings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportAllBindings != null ? retObjectImportAllBindings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 ImportAllContracts() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportAllContracts = null;
+        try {
+            retObjectImportAllContracts = classInstance.Invoke("ImportAllContracts");
+            JCObject objImportAllContracts = (JCObject)retObjectImportAllContracts;
+            return new Collection_1(objImportAllContracts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportAllContracts != null ? retObjectImportAllContracts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public system.servicemodel.channels.Binding ImportBinding(system.web.services.description.Binding wsdlBinding) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -282,6 +337,21 @@ public class WsdlImporter extends MetadataImporter  {
     
     // Properties section
     
+    public KeyedByTypeCollection_1 getWsdlImportExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWsdlImportExtensions = null;
+        try {
+            retObjectWsdlImportExtensions = classInstance.Get("WsdlImportExtensions");
+            JCObject val = (JCObject)retObjectWsdlImportExtensions;
+            return new KeyedByTypeCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWsdlImportExtensions != null ? retObjectWsdlImportExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ServiceDescriptionCollection getWsdlDocuments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

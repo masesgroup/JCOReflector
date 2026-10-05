@@ -38,9 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.description.ServiceEndpoint;
 import system.Uri;
 import system.configuration.Configuration;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.identitymodel.configuration.IdentityConfiguration;
 import system.servicemodel.description.ServiceAuthenticationBehavior;
 import system.servicemodel.description.ServiceAuthorizationBehavior;
@@ -162,6 +164,21 @@ public class ServiceConfiguration extends NetObject  {
     
     // Methods section
     
+    public Collection_1 EnableProtocol(system.servicemodel.channels.Binding protocol) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableProtocol = null;
+        try {
+            retObjectEnableProtocol = classInstance.Invoke("EnableProtocol", protocol == null ? null : protocol.getJCOInstance());
+            JCObject objEnableProtocol = (JCObject)retObjectEnableProtocol;
+            return new Collection_1(objEnableProtocol);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnableProtocol != null ? retObjectEnableProtocol.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ServiceEndpoint AddServiceEndpoint(NetType contractType, system.servicemodel.channels.Binding binding, java.lang.String address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -285,6 +302,21 @@ public class ServiceConfiguration extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseIdentityConfiguration", UseIdentityConfiguration);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getBaseAddresses() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseAddresses = null;
+        try {
+            retObjectBaseAddresses = classInstance.Get("BaseAddresses");
+            JCObject val = (JCObject)retObjectBaseAddresses;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseAddresses != null ? retObjectBaseAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -55,7 +55,7 @@ import system.componentmodel.ITypeDescriptorContextImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataProviderNameConverter extends StringConverter  {
+public class DataProviderNameConverter extends system.componentmodel.StringConverter  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

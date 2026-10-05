@@ -38,6 +38,22 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Tuple_1;
+import system.ValueTuple_1;
+import system.Tuple_2;
+import system.ValueTuple_2;
+import system.Tuple_3;
+import system.ValueTuple_3;
+import system.Tuple_4;
+import system.ValueTuple_4;
+import system.Tuple_5;
+import system.ValueTuple_5;
+import system.Tuple_6;
+import system.ValueTuple_6;
+import system.Tuple_7;
+import system.ValueTuple_7;
+import system.Tuple_8;
+import system.ValueTuple_8;
 
 
 /**
@@ -151,6 +167,456 @@ public class TupleExtensions extends NetObject  {
     
     // Methods section
     
+    public static <T1 extends IJCOBridgeReflected> Tuple_1 ToTuple(ValueTuple_1 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTuple = null;
+        try {
+            retObjectToTuple = classType.Invoke("ToTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToTuple = (JCObject)retObjectToTuple;
+            return new Tuple_1(objToTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTuple != null ? retObjectToTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> Tuple_2 ToTuple(ValueTuple_2 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTuple = null;
+        try {
+            retObjectToTuple = classType.Invoke("ToTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToTuple = (JCObject)retObjectToTuple;
+            return new Tuple_2(objToTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTuple != null ? retObjectToTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> Tuple_3 ToTuple(ValueTuple_3 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTuple = null;
+        try {
+            retObjectToTuple = classType.Invoke("ToTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToTuple = (JCObject)retObjectToTuple;
+            return new Tuple_3(objToTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTuple != null ? retObjectToTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> Tuple_4 ToTuple(ValueTuple_4 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTuple = null;
+        try {
+            retObjectToTuple = classType.Invoke("ToTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToTuple = (JCObject)retObjectToTuple;
+            return new Tuple_4(objToTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTuple != null ? retObjectToTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> Tuple_5 ToTuple(ValueTuple_5 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTuple = null;
+        try {
+            retObjectToTuple = classType.Invoke("ToTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToTuple = (JCObject)retObjectToTuple;
+            return new Tuple_5(objToTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTuple != null ? retObjectToTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> Tuple_6 ToTuple(ValueTuple_6 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTuple = null;
+        try {
+            retObjectToTuple = classType.Invoke("ToTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToTuple = (JCObject)retObjectToTuple;
+            return new Tuple_6(objToTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTuple != null ? retObjectToTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> Tuple_7 ToTuple(ValueTuple_7 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTuple = null;
+        try {
+            retObjectToTuple = classType.Invoke("ToTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToTuple = (JCObject)retObjectToTuple;
+            return new Tuple_7(objToTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTuple != null ? retObjectToTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> Tuple_8 ToTuple(ValueTuple_8 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToTuple = null;
+        try {
+            retObjectToTuple = classType.Invoke("ToTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToTuple = (JCObject)retObjectToTuple;
+            return new Tuple_8(objToTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToTuple != null ? retObjectToTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected> ValueTuple_1 ToValueTuple(Tuple_1 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToValueTuple = null;
+        try {
+            retObjectToValueTuple = classType.Invoke("ToValueTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToValueTuple = (JCObject)retObjectToValueTuple;
+            return new ValueTuple_1(objToValueTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToValueTuple != null ? retObjectToValueTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> ValueTuple_2 ToValueTuple(Tuple_2 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToValueTuple = null;
+        try {
+            retObjectToValueTuple = classType.Invoke("ToValueTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToValueTuple = (JCObject)retObjectToValueTuple;
+            return new ValueTuple_2(objToValueTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToValueTuple != null ? retObjectToValueTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> ValueTuple_3 ToValueTuple(Tuple_3 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToValueTuple = null;
+        try {
+            retObjectToValueTuple = classType.Invoke("ToValueTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToValueTuple = (JCObject)retObjectToValueTuple;
+            return new ValueTuple_3(objToValueTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToValueTuple != null ? retObjectToValueTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> ValueTuple_4 ToValueTuple(Tuple_4 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToValueTuple = null;
+        try {
+            retObjectToValueTuple = classType.Invoke("ToValueTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToValueTuple = (JCObject)retObjectToValueTuple;
+            return new ValueTuple_4(objToValueTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToValueTuple != null ? retObjectToValueTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> ValueTuple_5 ToValueTuple(Tuple_5 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToValueTuple = null;
+        try {
+            retObjectToValueTuple = classType.Invoke("ToValueTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToValueTuple = (JCObject)retObjectToValueTuple;
+            return new ValueTuple_5(objToValueTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToValueTuple != null ? retObjectToValueTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> ValueTuple_6 ToValueTuple(Tuple_6 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToValueTuple = null;
+        try {
+            retObjectToValueTuple = classType.Invoke("ToValueTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToValueTuple = (JCObject)retObjectToValueTuple;
+            return new ValueTuple_6(objToValueTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToValueTuple != null ? retObjectToValueTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> ValueTuple_7 ToValueTuple(Tuple_7 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToValueTuple = null;
+        try {
+            retObjectToValueTuple = classType.Invoke("ToValueTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToValueTuple = (JCObject)retObjectToValueTuple;
+            return new ValueTuple_7(objToValueTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToValueTuple != null ? retObjectToValueTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> ValueTuple_8 ToValueTuple(Tuple_8 value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToValueTuple = null;
+        try {
+            retObjectToValueTuple = classType.Invoke("ToValueTuple", value == null ? null : value.getJCOInstance());
+            JCObject objToValueTuple = (JCObject)retObjectToValueTuple;
+            return new ValueTuple_8(objToValueTuple);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToValueTuple != null ? retObjectToValueTuple.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected, T18 extends IJCOBridgeReflected, T19 extends IJCOBridgeReflected, T20 extends IJCOBridgeReflected, T21 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17, JCORefOut<T18> item18, JCORefOut<T19> item19, JCORefOut<T20> item20, JCORefOut<T21> item21) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut(), item14.getJCRefOut(), item15.getJCRefOut(), item16.getJCRefOut(), item17.getJCRefOut(), item18.getJCRefOut(), item19.getJCRefOut(), item20.getJCRefOut(), item21.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected, T18 extends IJCOBridgeReflected, T19 extends IJCOBridgeReflected, T20 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17, JCORefOut<T18> item18, JCORefOut<T19> item19, JCORefOut<T20> item20) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut(), item14.getJCRefOut(), item15.getJCRefOut(), item16.getJCRefOut(), item17.getJCRefOut(), item18.getJCRefOut(), item19.getJCRefOut(), item20.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected, T18 extends IJCOBridgeReflected, T19 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17, JCORefOut<T18> item18, JCORefOut<T19> item19) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut(), item14.getJCRefOut(), item15.getJCRefOut(), item16.getJCRefOut(), item17.getJCRefOut(), item18.getJCRefOut(), item19.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected, T18 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17, JCORefOut<T18> item18) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut(), item14.getJCRefOut(), item15.getJCRefOut(), item16.getJCRefOut(), item17.getJCRefOut(), item18.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected, T17 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16, JCORefOut<T17> item17) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut(), item14.getJCRefOut(), item15.getJCRefOut(), item16.getJCRefOut(), item17.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected, T16 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15, JCORefOut<T16> item16) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut(), item14.getJCRefOut(), item15.getJCRefOut(), item16.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected, T15 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14, JCORefOut<T15> item15) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut(), item14.getJCRefOut(), item15.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected, T14 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13, JCORefOut<T14> item14) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut(), item14.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected, T13 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12, JCORefOut<T13> item13) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut(), item13.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected, T12 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11, JCORefOut<T12> item12) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut(), item12.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected, T11 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10, JCORefOut<T11> item11) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut(), item11.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected, T10 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9, JCORefOut<T10> item10) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut(), item10.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected, T9 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8, JCORefOut<T9> item9) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut(), item9.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected, T8 extends IJCOBridgeReflected> void Deconstruct(Tuple_8 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7, JCORefOut<T8> item8) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut(), item8.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected, T7 extends IJCOBridgeReflected> void Deconstruct(Tuple_7 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6, JCORefOut<T7> item7) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut(), item7.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected, T6 extends IJCOBridgeReflected> void Deconstruct(Tuple_6 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5, JCORefOut<T6> item6) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut(), item6.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected, T5 extends IJCOBridgeReflected> void Deconstruct(Tuple_5 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4, JCORefOut<T5> item5) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut(), item5.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected, T4 extends IJCOBridgeReflected> void Deconstruct(Tuple_4 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3, JCORefOut<T4> item4) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut(), item4.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> void Deconstruct(Tuple_3 value, JCORefOut<T1> item1, JCORefOut<T2> item2, JCORefOut<T3> item3) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut(), item3.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> void Deconstruct(Tuple_2 value, JCORefOut<T1> item1, JCORefOut<T2> item2) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut(), item2.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected> void Deconstruct(Tuple_1 value, JCORefOut<T1> item1) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Deconstruct", value == null ? null : value.getJCOInstance(), item1.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

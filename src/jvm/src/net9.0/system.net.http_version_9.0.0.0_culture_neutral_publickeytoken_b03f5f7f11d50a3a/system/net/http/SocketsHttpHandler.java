@@ -39,11 +39,15 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.HttpMessageHandler;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.diagnostics.DistributedContextPropagator;
 import system.diagnostics.metrics.IMeterFactory;
 import system.diagnostics.metrics.IMeterFactoryImplementation;
+import system.Func_3;
 import system.net.CookieContainer;
 import system.net.DecompressionMethods;
+import system.net.http.HeaderEncodingSelector_1;
 import system.net.http.HttpKeepAlivePingPolicy;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
@@ -65,7 +69,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SocketsHttpHandler extends HttpMessageHandler  {
+public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -584,6 +588,21 @@ public class SocketsHttpHandler extends HttpMessageHandler  {
         }
     }
 
+    public IDictionary_2 getProperties() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DistributedContextPropagator getActivityHeadersPropagator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -634,6 +653,54 @@ public class SocketsHttpHandler extends HttpMessageHandler  {
         }
     }
 
+    public Func_3 getConnectCallback() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectCallback = null;
+        try {
+            retObjectConnectCallback = classInstance.Get("ConnectCallback");
+            return (Func_3)retObjectConnectCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3", retObjectConnectCallback != null ? retObjectConnectCallback.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setConnectCallback(Func_3 ConnectCallback) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ConnectCallback", ConnectCallback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_3 getPlaintextStreamFilter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlaintextStreamFilter = null;
+        try {
+            retObjectPlaintextStreamFilter = classInstance.Get("PlaintextStreamFilter");
+            return (Func_3)retObjectPlaintextStreamFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3", retObjectPlaintextStreamFilter != null ? retObjectPlaintextStreamFilter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPlaintextStreamFilter(Func_3 PlaintextStreamFilter) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PlaintextStreamFilter", PlaintextStreamFilter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CookieContainer getCookieContainer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -679,6 +746,54 @@ public class SocketsHttpHandler extends HttpMessageHandler  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutomaticDecompression", AutomaticDecompression == null ? null : AutomaticDecompression.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HeaderEncodingSelector_1 getRequestHeaderEncodingSelector() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestHeaderEncodingSelector = null;
+        try {
+            retObjectRequestHeaderEncodingSelector = classInstance.Get("RequestHeaderEncodingSelector");
+            return (HeaderEncodingSelector_1)retObjectRequestHeaderEncodingSelector;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HeaderEncodingSelector_1", retObjectRequestHeaderEncodingSelector != null ? retObjectRequestHeaderEncodingSelector.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setRequestHeaderEncodingSelector(HeaderEncodingSelector_1 RequestHeaderEncodingSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("RequestHeaderEncodingSelector", RequestHeaderEncodingSelector);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HeaderEncodingSelector_1 getResponseHeaderEncodingSelector() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseHeaderEncodingSelector = null;
+        try {
+            retObjectResponseHeaderEncodingSelector = classInstance.Get("ResponseHeaderEncodingSelector");
+            return (HeaderEncodingSelector_1)retObjectResponseHeaderEncodingSelector;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HeaderEncodingSelector_1", retObjectResponseHeaderEncodingSelector != null ? retObjectResponseHeaderEncodingSelector.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setResponseHeaderEncodingSelector(HeaderEncodingSelector_1 ResponseHeaderEncodingSelector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ResponseHeaderEncodingSelector", ResponseHeaderEncodingSelector);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

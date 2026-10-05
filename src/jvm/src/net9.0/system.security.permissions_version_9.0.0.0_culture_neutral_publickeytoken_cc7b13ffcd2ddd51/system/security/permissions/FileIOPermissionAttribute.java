@@ -57,7 +57,7 @@ import system.security.permissions.FileIOPermissionAccess;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FileIOPermissionAttribute extends CodeAccessSecurityAttribute  {
+public class FileIOPermissionAttribute extends system.security.permissions.CodeAccessSecurityAttribute  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

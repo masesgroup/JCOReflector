@@ -53,7 +53,7 @@ import microsoft.build.framework.xamltypes.CategorySchema;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Category extends CategorySchema  {
+public class Category extends microsoft.build.framework.xamltypes.CategorySchema  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

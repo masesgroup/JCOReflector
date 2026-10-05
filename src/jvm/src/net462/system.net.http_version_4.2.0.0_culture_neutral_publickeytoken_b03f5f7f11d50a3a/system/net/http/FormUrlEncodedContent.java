@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.ByteArrayContent;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.net.http.ByteArrayContent;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FormUrlEncodedContent extends ByteArrayContent  {
+public class FormUrlEncodedContent extends system.net.http.ByteArrayContent  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -147,6 +149,16 @@ public class FormUrlEncodedContent extends ByteArrayContent  {
     // Constructors section
     
     public FormUrlEncodedContent() throws Throwable {
+    }
+
+    public FormUrlEncodedContent(IEnumerable_1 nameValueCollection) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(nameValueCollection == null ? null : nameValueCollection.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

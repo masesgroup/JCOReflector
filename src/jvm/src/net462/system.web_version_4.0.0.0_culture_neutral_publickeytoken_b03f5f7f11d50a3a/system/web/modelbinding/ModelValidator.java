@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.web.modelbinding.ModelValidator;
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.ModelBindingExecutionContext;
@@ -154,6 +156,21 @@ public class ModelValidator extends NetObject  {
     
     // Methods section
     
+    public IEnumerable_1 Validate(NetObject container) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
+        try {
+            retObjectValidate = classInstance.Invoke("Validate", container == null ? null : container.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
+            return new IEnumerable_1Implementation(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ModelValidator GetModelValidator(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

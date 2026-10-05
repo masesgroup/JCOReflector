@@ -49,6 +49,8 @@ import system.TimeSpan;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.formats.nrbf.SerializationRecordId;
 import system.reflection.metadata.TypeName;
 
@@ -65,7 +67,7 @@ import system.reflection.metadata.TypeName;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ClassRecord extends SerializationRecord  {
+public class ClassRecord extends system.formats.nrbf.SerializationRecord  {
     /**
      * Fully assembly qualified name: System.Formats.Nrbf, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -604,6 +606,21 @@ public class ClassRecord extends SerializationRecord  {
     
     // Properties section
     
+    public IEnumerable_1 getMemberNames() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberNames = null;
+        try {
+            retObjectMemberNames = classInstance.Get("MemberNames");
+            JCObject val = (JCObject)retObjectMemberNames;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberNames != null ? retObjectMemberNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

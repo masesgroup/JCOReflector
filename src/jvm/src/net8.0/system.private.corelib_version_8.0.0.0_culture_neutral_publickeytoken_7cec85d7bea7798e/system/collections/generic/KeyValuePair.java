@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.KeyValuePair_2;
 
 
 /**
@@ -151,6 +152,21 @@ public class KeyValuePair extends NetObject  {
     
     // Methods section
     
+    public static <TKey extends IJCOBridgeReflected, TValue extends IJCOBridgeReflected> KeyValuePair_2 Create(TKey key, TValue value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", key == null ? null : ((IJCOBridgeReflected)key).getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new KeyValuePair_2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

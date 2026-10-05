@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.build.framework.BuildStatusEventArgs;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.DateTime;
 
 
@@ -54,7 +56,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BuildStartedEventArgs extends BuildStatusEventArgs  {
+public class BuildStartedEventArgs extends microsoft.build.framework.BuildStatusEventArgs  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -160,6 +162,16 @@ public class BuildStartedEventArgs extends BuildStatusEventArgs  {
         }
     }
 
+    public BuildStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, IDictionary_2 environmentOfBuild) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, environmentOfBuild == null ? null : environmentOfBuild.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BuildStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +201,21 @@ public class BuildStartedEventArgs extends BuildStatusEventArgs  {
     
     // Properties section
     
+    public IDictionary_2 getBuildEnvironment() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildEnvironment = null;
+        try {
+            retObjectBuildEnvironment = classInstance.Get("BuildEnvironment");
+            JCObject val = (JCObject)retObjectBuildEnvironment;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildEnvironment != null ? retObjectBuildEnvironment.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

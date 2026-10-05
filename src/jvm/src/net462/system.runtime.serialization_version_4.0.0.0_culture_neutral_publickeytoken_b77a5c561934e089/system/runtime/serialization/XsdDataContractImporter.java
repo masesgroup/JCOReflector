@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.codedom.CodeCompileUnit;
 import system.xml.schema.XmlSchemaSet;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.xml.schema.XmlSchemaElement;
 import system.xml.XmlQualifiedName;
 import system.codedom.CodeTypeReference;
@@ -189,6 +191,20 @@ public class XsdDataContractImporter extends NetObject  {
         }
     }
 
+    public boolean CanImport(XmlSchemaSet schemas, ICollection_1 typeNames) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanImport = null;
+        try {
+            retObjectCanImport = classInstance.Invoke("CanImport", schemas == null ? null : schemas.getJCOInstance(), typeNames == null ? null : typeNames.getJCOInstance());
+            return (boolean)retObjectCanImport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanImport != null ? retObjectCanImport.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean CanImport(XmlSchemaSet schemas, XmlSchemaElement element) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -247,6 +263,21 @@ public class XsdDataContractImporter extends NetObject  {
         }
     }
 
+    public ICollection_1 GetKnownTypeReferences(XmlQualifiedName typeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKnownTypeReferences = null;
+        try {
+            retObjectGetKnownTypeReferences = classInstance.Invoke("GetKnownTypeReferences", typeName == null ? null : typeName.getJCOInstance());
+            JCObject objGetKnownTypeReferences = (JCObject)retObjectGetKnownTypeReferences;
+            return new ICollection_1Implementation(objGetKnownTypeReferences);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetKnownTypeReferences != null ? retObjectGetKnownTypeReferences.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlQualifiedName Import(XmlSchemaSet schemas, XmlSchemaElement element) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -267,6 +298,16 @@ public class XsdDataContractImporter extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", schemas == null ? null : schemas.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Import(XmlSchemaSet schemas, ICollection_1 typeNames) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Import", schemas == null ? null : schemas.getJCOInstance(), typeNames == null ? null : typeNames.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

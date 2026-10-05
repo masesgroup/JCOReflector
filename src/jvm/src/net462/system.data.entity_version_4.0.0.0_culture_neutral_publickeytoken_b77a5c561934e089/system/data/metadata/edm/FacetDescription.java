@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.EdmType;
+import system.Nullable_1;
 
 
 /**
@@ -196,6 +197,36 @@ public class FacetDescription extends NetObject  {
             return new EdmType(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFacetType != null ? retObjectFacetType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMaxValue() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxValue = null;
+        try {
+            retObjectMaxValue = classInstance.Get("MaxValue");
+            JCObject val = (JCObject)retObjectMaxValue;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMinValue() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinValue = null;
+        try {
+            retObjectMinValue = classInstance.Get("MinValue");
+            JCObject val = (JCObject)retObjectMinValue;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinValue != null ? retObjectMinValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

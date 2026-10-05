@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.build.framework.xamltypes.BaseProperty;
+import system.Nullable_1;
 
 
 /**
@@ -53,7 +54,7 @@ import microsoft.build.framework.xamltypes.BaseProperty;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IntProperty extends BaseProperty  {
+public class IntProperty extends microsoft.build.framework.xamltypes.BaseProperty  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -174,6 +175,56 @@ public class IntProperty extends BaseProperty  {
     
     // Properties section
     
+    public Nullable_1 getMaxValue() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxValue = null;
+        try {
+            retObjectMaxValue = classInstance.Get("MaxValue");
+            JCObject val = (JCObject)retObjectMaxValue;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMaxValue(Nullable_1 MaxValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MaxValue", MaxValue == null ? null : MaxValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMinValue() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinValue = null;
+        try {
+            retObjectMinValue = classInstance.Get("MinValue");
+            JCObject val = (JCObject)retObjectMinValue;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinValue != null ? retObjectMinValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMinValue(Nullable_1 MinValue) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MinValue", MinValue == null ? null : MinValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

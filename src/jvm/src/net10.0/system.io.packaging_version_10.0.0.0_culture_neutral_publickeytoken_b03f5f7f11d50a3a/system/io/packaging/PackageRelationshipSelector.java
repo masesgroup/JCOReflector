@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.Uri;
 import system.io.packaging.PackageRelationshipSelectorType;
+import system.collections.generic.List_1;
+import system.io.packaging.Package;
 
 
 /**
@@ -165,6 +167,21 @@ public class PackageRelationshipSelector extends NetObject  {
     
     // Methods section
     
+    public List_1 Select(Package _package) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException, system.FormatException, system.io.IOException, system.xml.XmlException, system.io.FileFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
+        try {
+            retObjectSelect = classInstance.Invoke("Select", _package == null ? null : _package.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
+            return new List_1(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

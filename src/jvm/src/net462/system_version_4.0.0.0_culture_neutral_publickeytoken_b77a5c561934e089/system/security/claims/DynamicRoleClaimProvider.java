@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.claims.ClaimsIdentity;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -152,6 +154,16 @@ public class DynamicRoleClaimProvider extends NetObject  {
     
     // Methods section
     
+    public static void AddDynamicRoleClaims(ClaimsIdentity claimsIdentity, IEnumerable_1 claims) throws Throwable, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddDynamicRoleClaims", claimsIdentity == null ? null : claimsIdentity.getJCOInstance(), claims == null ? null : claims.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

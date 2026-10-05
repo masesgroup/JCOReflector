@@ -176,6 +176,20 @@ public class AttributedModelServices extends NetObject  {
         }
     }
 
+    public static <T extends IJCOBridgeReflected> boolean Exports(ComposablePartDefinition part) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExports = null;
+        try {
+            retObjectExports = classType.Invoke("Exports", part == null ? null : part.getJCOInstance());
+            return (boolean)retObjectExports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExports != null ? retObjectExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean Imports(ComposablePartDefinition part, NetType contractType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -199,6 +213,64 @@ public class AttributedModelServices extends NetObject  {
             return (boolean)retObjectImports;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean Imports(ComposablePartDefinition part) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImports = null;
+        try {
+            retObjectImports = classType.Invoke("Imports", part == null ? null : part.getJCOInstance());
+            return (boolean)retObjectImports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean Imports(ComposablePartDefinition part, ImportCardinality importCardinality) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectImports = null;
+        try {
+            retObjectImports = classType.Invoke("Imports", part == null ? null : part.getJCOInstance(), importCardinality == null ? null : importCardinality.getJCOInstance());
+            return (boolean)retObjectImports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ComposablePart AddExportedValue(CompositionBatch batch, java.lang.String contractName, T exportedValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddExportedValue = null;
+        try {
+            retObjectAddExportedValue = classType.Invoke("AddExportedValue", batch == null ? null : batch.getJCOInstance(), contractName, exportedValue == null ? null : ((IJCOBridgeReflected)exportedValue).getJCOInstance());
+            JCObject objAddExportedValue = (JCObject)retObjectAddExportedValue;
+            return new ComposablePart(objAddExportedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddExportedValue != null ? retObjectAddExportedValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ComposablePart AddExportedValue(CompositionBatch batch, T exportedValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddExportedValue = null;
+        try {
+            retObjectAddExportedValue = classType.Invoke("AddExportedValue", batch == null ? null : batch.getJCOInstance(), exportedValue == null ? null : ((IJCOBridgeReflected)exportedValue).getJCOInstance());
+            JCObject objAddExportedValue = (JCObject)retObjectAddExportedValue;
+            return new ComposablePart(objAddExportedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddExportedValue != null ? retObjectAddExportedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,6 +433,26 @@ public class AttributedModelServices extends NetObject  {
             return (java.lang.String)retObjectGetTypeIdentity;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTypeIdentity != null ? retObjectGetTypeIdentity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void ComposeExportedValue(CompositionContainer container, java.lang.String contractName, T exportedValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ComposeExportedValue", container == null ? null : container.getJCOInstance(), contractName, exportedValue == null ? null : ((IJCOBridgeReflected)exportedValue).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void ComposeExportedValue(CompositionContainer container, T exportedValue) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ComposeExportedValue", container == null ? null : container.getJCOInstance(), exportedValue == null ? null : ((IJCOBridgeReflected)exportedValue).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

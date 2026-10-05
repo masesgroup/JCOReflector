@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.TypeUsage;
 import system.xml.XmlReader;
 
@@ -162,6 +164,51 @@ public class DbProviderManifest extends NetObject  {
             return (boolean)retObjectSupportsEscapingLikeArgument;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupportsEscapingLikeArgument != null ? retObjectSupportsEscapingLikeArgument.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetStoreFunctions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStoreFunctions = null;
+        try {
+            retObjectGetStoreFunctions = classInstance.Invoke("GetStoreFunctions");
+            JCObject objGetStoreFunctions = (JCObject)retObjectGetStoreFunctions;
+            return new ReadOnlyCollection_1(objGetStoreFunctions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStoreFunctions != null ? retObjectGetStoreFunctions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetFacetDescriptions(EdmType edmType) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFacetDescriptions = null;
+        try {
+            retObjectGetFacetDescriptions = classInstance.Invoke("GetFacetDescriptions", edmType == null ? null : edmType.getJCOInstance());
+            JCObject objGetFacetDescriptions = (JCObject)retObjectGetFacetDescriptions;
+            return new ReadOnlyCollection_1(objGetFacetDescriptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFacetDescriptions != null ? retObjectGetFacetDescriptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetStoreTypes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStoreTypes = null;
+        try {
+            retObjectGetStoreTypes = classInstance.Invoke("GetStoreTypes");
+            JCObject objGetStoreTypes = (JCObject)retObjectGetStoreTypes;
+            return new ReadOnlyCollection_1(objGetStoreTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStoreTypes != null ? retObjectGetStoreTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

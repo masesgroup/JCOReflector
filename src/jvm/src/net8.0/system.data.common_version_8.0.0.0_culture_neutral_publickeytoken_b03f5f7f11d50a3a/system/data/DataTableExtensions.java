@@ -38,8 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.DataView;
 import system.data.DataTable;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.data.DataView;
+import system.data.EnumerableRowCollection_1;
+import system.data.LoadOption;
+import system.data.FillErrorEventHandler;
 
 
 /**
@@ -153,6 +158,21 @@ public class DataTableExtensions extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> DataTable CopyToDataTable(IEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.threading.LockRecursionException, system.data.sqltypes.SqlNullValueException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopyToDataTable = null;
+        try {
+            retObjectCopyToDataTable = classType.Invoke("CopyToDataTable", source == null ? null : source.getJCOInstance());
+            JCObject objCopyToDataTable = (JCObject)retObjectCopyToDataTable;
+            return new DataTable(objCopyToDataTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyToDataTable != null ? retObjectCopyToDataTable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DataView AsDataView(DataTable table) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -163,6 +183,56 @@ public class DataTableExtensions extends NetObject  {
             return new DataView(objAsDataView);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsDataView != null ? retObjectAsDataView.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> DataView AsDataView(EnumerableRowCollection_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsDataView = null;
+        try {
+            retObjectAsDataView = classType.Invoke("AsDataView", source == null ? null : source.getJCOInstance());
+            JCObject objAsDataView = (JCObject)retObjectAsDataView;
+            return new DataView(objAsDataView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsDataView != null ? retObjectAsDataView.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static EnumerableRowCollection_1 AsEnumerable(DataTable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsEnumerable = null;
+        try {
+            retObjectAsEnumerable = classType.Invoke("AsEnumerable", source == null ? null : source.getJCOInstance());
+            JCObject objAsEnumerable = (JCObject)retObjectAsEnumerable;
+            return new EnumerableRowCollection_1(objAsEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsEnumerable != null ? retObjectAsEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void CopyToDataTable(IEnumerable_1 source, DataTable table, LoadOption options, FillErrorEventHandler errorHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.threading.LockRecursionException, system.data.sqltypes.SqlNullValueException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CopyToDataTable", source == null ? null : source.getJCOInstance(), table == null ? null : table.getJCOInstance(), options == null ? null : options.getJCOInstance(), errorHandler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void CopyToDataTable(IEnumerable_1 source, DataTable table, LoadOption options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.threading.LockRecursionException, system.data.sqltypes.SqlNullValueException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CopyToDataTable", source == null ? null : source.getJCOInstance(), table == null ? null : table.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

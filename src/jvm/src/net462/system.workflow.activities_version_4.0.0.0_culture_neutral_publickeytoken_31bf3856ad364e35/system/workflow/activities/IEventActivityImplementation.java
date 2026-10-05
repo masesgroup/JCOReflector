@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.ActivityExecutionContext;
+import system.workflow.componentmodel.IActivityEventListener_1;
+import system.workflow.componentmodel.IActivityEventListener_1Implementation;
 import system.IComparable;
 import system.IComparableImplementation;
 
@@ -143,6 +145,26 @@ public class IEventActivityImplementation extends NetObject implements IEventAct
 
     // Methods section
     
+    public void Subscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Subscribe", parentContext == null ? null : parentContext.getJCOInstance(), parentEventHandler == null ? null : parentEventHandler.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Unsubscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Unsubscribe", parentContext == null ? null : parentContext.getJCOInstance(), parentEventHandler == null ? null : parentEventHandler.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

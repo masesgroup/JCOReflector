@@ -38,10 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import microsoft.build.framework.ITask;
-import microsoft.build.framework.ITaskImplementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
+import microsoft.build.framework.ITask;
+import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.TaskPropertyInfo;
 
 
@@ -164,6 +166,20 @@ public class XamlTaskFactory extends NetObject  {
     
     // Methods section
     
+    public boolean Initialize(java.lang.String taskName, IDictionary_2 taskParameters, java.lang.String taskElementContents, IBuildEngine taskFactoryLoggingHost) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.xaml.XamlException, system.xaml.XamlParseException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialize = null;
+        try {
+            retObjectInitialize = classInstance.Invoke("Initialize", taskName, taskParameters == null ? null : taskParameters.getJCOInstance(), taskElementContents, taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
+            return (boolean)retObjectInitialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInitialize != null ? retObjectInitialize.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

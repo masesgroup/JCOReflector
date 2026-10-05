@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.claims.ClaimsIdentity;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.security.claims.ClaimsIdentity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GenericIdentity extends ClaimsIdentity  {
+public class GenericIdentity extends system.security.claims.ClaimsIdentity  {
     /**
      * Fully assembly qualified name: System.Security.Claims, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -55,7 +55,7 @@ import system.security.principal.WindowsIdentity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509WindowsSecurityToken extends X509SecurityToken  {
+public class X509WindowsSecurityToken extends system.identitymodel.tokens.X509SecurityToken  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

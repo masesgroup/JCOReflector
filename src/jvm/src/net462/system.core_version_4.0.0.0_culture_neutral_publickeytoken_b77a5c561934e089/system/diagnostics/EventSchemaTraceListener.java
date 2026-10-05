@@ -58,7 +58,7 @@ import system.io.TextWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventSchemaTraceListener extends TextWriterTraceListener  {
+public class EventSchemaTraceListener extends system.diagnostics.TextWriterTraceListener  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -42,6 +42,7 @@ import system.net.security.SslStreamCertificateContext;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.x509certificates.X509Certificate2Collection;
 import system.net.security.SslCertificateTrust;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -191,6 +192,21 @@ public class SslStreamCertificateContext extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getIntermediateCertificates() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntermediateCertificates = null;
+        try {
+            retObjectIntermediateCertificates = classInstance.Get("IntermediateCertificates");
+            JCObject val = (JCObject)retObjectIntermediateCertificates;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntermediateCertificates != null ? retObjectIntermediateCertificates.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public X509Certificate2 getTargetCertificate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

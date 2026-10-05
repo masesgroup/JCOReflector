@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.text.Encoding;
 import system.text.EncoderFallback;
 import system.text.DecoderFallback;
@@ -154,6 +156,21 @@ public class EncodingProvider extends NetObject  {
     
     // Methods section
     
+    public IEnumerable_1 GetEncodings() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEncodings = null;
+        try {
+            retObjectGetEncodings = classInstance.Invoke("GetEncodings");
+            JCObject objGetEncodings = (JCObject)retObjectGetEncodings;
+            return new IEnumerable_1Implementation(objGetEncodings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEncodings != null ? retObjectGetEncodings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Encoding GetEncoding(int codepage, EncoderFallback encoderFallback, DecoderFallback decoderFallback) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
 import system.workflow.componentmodel.design.HitTestInfo;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.workflow.componentmodel.design.DesignerNavigationDirection;
 import system.workflow.componentmodel.design.ActivityDesigner;
 import system.drawing.Size;
@@ -58,7 +59,7 @@ import system.workflow.componentmodel.design.DesignerView;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StructuredCompositeActivityDesigner extends CompositeActivityDesigner  {
+public class StructuredCompositeActivityDesigner extends system.workflow.componentmodel.design.CompositeActivityDesigner  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -157,6 +158,34 @@ public class StructuredCompositeActivityDesigner extends CompositeActivityDesign
     
     // Methods section
     
+    public boolean CanInsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanInsertActivities = null;
+        try {
+            retObjectCanInsertActivities = classInstance.Invoke("CanInsertActivities", insertLocation == null ? null : insertLocation.getJCOInstance(), activitiesToInsert == null ? null : activitiesToInsert.getJCOInstance());
+            return (boolean)retObjectCanInsertActivities;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanInsertActivities != null ? retObjectCanInsertActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean CanRemoveActivities(ReadOnlyCollection_1 activitiesToRemove) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRemoveActivities = null;
+        try {
+            retObjectCanRemoveActivities = classInstance.Invoke("CanRemoveActivities", activitiesToRemove == null ? null : activitiesToRemove.getJCOInstance());
+            return (boolean)retObjectCanRemoveActivities;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRemoveActivities != null ? retObjectCanRemoveActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetNextSelectableObject(NetObject current, DesignerNavigationDirection direction) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -182,10 +211,45 @@ public class StructuredCompositeActivityDesigner extends CompositeActivityDesign
         }
     }
 
+    public void InsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InsertActivities", insertLocation == null ? null : insertLocation.getJCOInstance(), activitiesToInsert == null ? null : activitiesToInsert.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1 activitiesToMove) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MoveActivities", moveLocation == null ? null : moveLocation.getJCOInstance(), activitiesToMove == null ? null : activitiesToMove.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public ReadOnlyCollection_1 getViews() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.TypeLoadException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViews = null;
+        try {
+            retObjectViews = classInstance.Get("Views");
+            JCObject val = (JCObject)retObjectViews;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViews != null ? retObjectViews.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DesignerView getActiveView() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

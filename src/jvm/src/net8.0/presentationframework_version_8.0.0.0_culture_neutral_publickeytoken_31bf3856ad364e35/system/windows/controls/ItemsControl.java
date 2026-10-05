@@ -42,6 +42,7 @@ import system.windows.controls.Control;
 import system.windows.DependencyObject;
 import system.windows.controls.ItemsControl;
 import system.windows.DependencyProperty;
+import system.collections.objectmodel.ObservableCollection_1;
 import system.windows.controls.DataTemplateSelector;
 import system.windows.controls.GroupStyleSelector;
 import system.windows.controls.ItemCollection;
@@ -51,10 +52,6 @@ import system.windows.controls.StyleSelector;
 import system.windows.data.BindingGroup;
 import system.windows.DataTemplate;
 import system.windows.Style;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
-import system.windows.controls.primitives.IContainItemStorage;
-import system.windows.controls.primitives.IContainItemStorageImplementation;
 
 
 /**
@@ -69,7 +66,7 @@ import system.windows.controls.primitives.IContainItemStorageImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ItemsControl extends Control implements IAddChild, IContainItemStorage {
+public class ItemsControl extends system.windows.controls.Control  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -551,6 +548,21 @@ public class ItemsControl extends Control implements IAddChild, IContainItemStor
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemsSource", ItemsSource == null ? null : ItemsSource.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObservableCollection_1 getGroupStyle() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupStyle = null;
+        try {
+            retObjectGroupStyle = classInstance.Get("GroupStyle");
+            JCObject val = (JCObject)retObjectGroupStyle;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupStyle != null ? retObjectGroupStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

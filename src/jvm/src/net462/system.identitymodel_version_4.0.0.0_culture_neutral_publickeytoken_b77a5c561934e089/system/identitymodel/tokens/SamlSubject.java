@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SecurityKeyIdentifier;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.identitymodel.claims.ClaimSet;
 import system.identitymodel.selectors.SamlSecurityTokenAuthenticator;
 import system.xml.XmlDictionaryReader;
@@ -45,8 +49,9 @@ import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlDictionaryWriter;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.identitymodel.tokens.SecurityKey;
-import system.identitymodel.tokens.SecurityKeyIdentifier;
 
 
 /**
@@ -174,10 +179,35 @@ public class SamlSubject extends NetObject  {
         }
     }
 
+    public SamlSubject(java.lang.String nameFormat, java.lang.String nameQualifier, java.lang.String name, IEnumerable_1 confirmations, java.lang.String confirmationData, SecurityKeyIdentifier securityKeyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(nameFormat, nameQualifier, name, confirmations == null ? null : confirmations.getJCOInstance(), confirmationData, securityKeyIdentifier == null ? null : securityKeyIdentifier.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
+    public ReadOnlyCollection_1 ExtractClaims() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractClaims = null;
+        try {
+            retObjectExtractClaims = classInstance.Invoke("ExtractClaims");
+            JCObject objExtractClaims = (JCObject)retObjectExtractClaims;
+            return new ReadOnlyCollection_1(objExtractClaims);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractClaims != null ? retObjectExtractClaims.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ClaimSet ExtractSubjectKeyClaimSet(SamlSecurityTokenAuthenticator samlAuthenticator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -236,6 +266,21 @@ public class SamlSubject extends NetObject  {
             return (boolean)retObjectIsReadOnly;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getConfirmationMethods() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfirmationMethods = null;
+        try {
+            retObjectConfirmationMethods = classInstance.Get("ConfirmationMethods");
+            JCObject val = (JCObject)retObjectConfirmationMethods;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfirmationMethods != null ? retObjectConfirmationMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

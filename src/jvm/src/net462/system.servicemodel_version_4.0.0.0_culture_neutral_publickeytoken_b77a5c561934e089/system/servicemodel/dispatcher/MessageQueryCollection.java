@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.servicemodel.dispatcher.MessageQuery;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.channels.Message;
+import system.servicemodel.channels.MessageBuffer;
 
 
 /**
@@ -52,7 +58,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MessageQueryCollection extends NetObjectEnumerable  {
+public class MessageQueryCollection extends system.collections.objectmodel.Collection_1<MessageQuery>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -151,6 +157,36 @@ public class MessageQueryCollection extends NetObjectEnumerable  {
     
     // Methods section
     
+    public <TResult extends IJCOBridgeReflected> IEnumerable_1 Evaluate(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
+        try {
+            retObjectEvaluate = classInstance.Invoke("Evaluate", message == null ? null : message.getJCOInstance());
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
+            return new IEnumerable_1Implementation(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> IEnumerable_1 Evaluate(MessageBuffer buffer) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
+        try {
+            retObjectEvaluate = classInstance.Invoke("Evaluate", buffer == null ? null : buffer.getJCOInstance());
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
+            return new IEnumerable_1Implementation(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

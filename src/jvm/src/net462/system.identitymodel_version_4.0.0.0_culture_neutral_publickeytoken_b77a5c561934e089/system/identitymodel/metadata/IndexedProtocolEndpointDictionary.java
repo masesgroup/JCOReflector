@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.SortedList_2;
 import system.identitymodel.metadata.IndexedProtocolEndpoint;
 
 
@@ -53,7 +54,7 @@ import system.identitymodel.metadata.IndexedProtocolEndpoint;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IndexedProtocolEndpointDictionary extends NetObjectEnumerable  {
+public class IndexedProtocolEndpointDictionary extends system.collections.generic.SortedList_2  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

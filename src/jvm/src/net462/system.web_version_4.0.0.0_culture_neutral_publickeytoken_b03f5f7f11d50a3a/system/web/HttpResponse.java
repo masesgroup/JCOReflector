@@ -45,6 +45,7 @@ import system.AsyncCallback;
 import system.threading.tasks.Task;
 import system.web.ISubscriptionToken;
 import system.web.ISubscriptionTokenImplementation;
+import system.Action_1;
 import system.web.caching.CacheDependency;
 import system.web.HttpCookie;
 import system.collections.specialized.NameValueCollection;
@@ -220,6 +221,21 @@ public class HttpResponse extends NetObject  {
             return new Task(objFlushAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlushAsync != null ? retObjectFlushAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ISubscriptionToken AddOnSendingHeaders(Action_1 callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddOnSendingHeaders = null;
+        try {
+            retObjectAddOnSendingHeaders = classInstance.Invoke("AddOnSendingHeaders", callback);
+            JCObject objAddOnSendingHeaders = (JCObject)retObjectAddOnSendingHeaders;
+            return new ISubscriptionTokenImplementation(objAddOnSendingHeaders);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddOnSendingHeaders != null ? retObjectAddOnSendingHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

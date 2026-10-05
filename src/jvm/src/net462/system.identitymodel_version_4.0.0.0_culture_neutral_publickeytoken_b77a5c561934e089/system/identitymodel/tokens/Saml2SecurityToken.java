@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.Saml2Assertion;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.DateTime;
 
@@ -56,7 +57,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Saml2SecurityToken extends SecurityToken  {
+public class Saml2SecurityToken extends system.identitymodel.tokens.SecurityToken  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -162,11 +163,35 @@ public class Saml2SecurityToken extends SecurityToken  {
         }
     }
 
+    public Saml2SecurityToken(Saml2Assertion assertion, ReadOnlyCollection_1 keys, SecurityToken issuerToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(assertion == null ? null : assertion.getJCOInstance(), keys == null ? null : keys.getJCOInstance(), issuerToken == null ? null : issuerToken.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateKeyIdentifierClause = null;
+        try {
+            retObjectCanCreateKeyIdentifierClause = classInstance.Invoke("CanCreateKeyIdentifierClause");
+            return (boolean)retObjectCanCreateKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCreateKeyIdentifierClause != null ? retObjectCanCreateKeyIdentifierClause.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.MarshalByRefObject;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.Action_1;
+import system.Func_2;
 import system.web.hosting.IRegisteredObject;
 import system.web.hosting.IRegisteredObjectImplementation;
 import system.web.hosting.VirtualPathProvider;
@@ -63,7 +65,7 @@ import system.web.hosting.IApplicationHostImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HostingEnvironment extends MarshalByRefObject  {
+public class HostingEnvironment extends system.MarshalByRefObject  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -279,6 +281,26 @@ public class HostingEnvironment extends MarshalByRefObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MessageReceived");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void QueueBackgroundWorkItem(Action_1 workItem) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("QueueBackgroundWorkItem", workItem);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void QueueBackgroundWorkItem(Func_2 workItem) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("QueueBackgroundWorkItem", workItem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -44,6 +44,7 @@ import system.DateTime;
 import system.xml.schema.XmlSchema;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
+import system.collections.objectmodel.Collection_1;
 import system.windows.annotations.AnnotationAuthorChangedEventHandler;
 import system.windows.annotations.AnnotationResourceChangedEventHandler;
 
@@ -226,6 +227,51 @@ public class Annotation extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getAuthors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthors = null;
+        try {
+            retObjectAuthors = classInstance.Get("Authors");
+            JCObject val = (JCObject)retObjectAuthors;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthors != null ? retObjectAuthors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getAnchors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnchors = null;
+        try {
+            retObjectAnchors = classInstance.Get("Anchors");
+            JCObject val = (JCObject)retObjectAnchors;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnchors != null ? retObjectAnchors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getCargos() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCargos = null;
+        try {
+            retObjectCargos = classInstance.Get("Cargos");
+            JCObject val = (JCObject)retObjectCargos;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCargos != null ? retObjectCargos.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DateTime getCreationTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

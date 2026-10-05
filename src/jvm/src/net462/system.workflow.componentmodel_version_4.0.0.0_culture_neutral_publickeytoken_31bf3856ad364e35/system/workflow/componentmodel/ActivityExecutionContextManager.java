@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.workflow.componentmodel.ActivityExecutionContext;
 import system.workflow.componentmodel.Activity;
 import system.Guid;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -225,6 +228,36 @@ public class ActivityExecutionContextManager extends NetObject  {
     
     // Properties section
     
+    public IEnumerable_1 getPersistedExecutionContexts() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersistedExecutionContexts = null;
+        try {
+            retObjectPersistedExecutionContexts = classInstance.Get("PersistedExecutionContexts");
+            JCObject val = (JCObject)retObjectPersistedExecutionContexts;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPersistedExecutionContexts != null ? retObjectPersistedExecutionContexts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getExecutionContexts() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecutionContexts = null;
+        try {
+            retObjectExecutionContexts = classInstance.Get("ExecutionContexts");
+            JCObject val = (JCObject)retObjectExecutionContexts;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecutionContexts != null ? retObjectExecutionContexts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

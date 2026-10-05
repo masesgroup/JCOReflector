@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.interopservices.PosixSignalRegistration;
 import system.runtime.interopservices.PosixSignal;
+import system.Action_1;
 
 
 /**
@@ -155,6 +156,21 @@ public class PosixSignalRegistration extends NetObject implements AutoCloseable 
     
     // Methods section
     
+    public static PosixSignalRegistration Create(PosixSignal signal, Action_1 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", signal == null ? null : signal.getJCOInstance(), handler);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new PosixSignalRegistration(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

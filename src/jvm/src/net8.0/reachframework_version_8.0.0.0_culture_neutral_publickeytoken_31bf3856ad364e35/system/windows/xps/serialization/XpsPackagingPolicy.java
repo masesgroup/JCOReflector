@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.xps.serialization.BasePackagingPolicy;
 import system.windows.xps.packaging.XpsDocument;
 import system.windows.xps.packaging.PackageInterleavingOrder;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.windows.xps.serialization.XpsResourceStream;
 import system.xml.XmlWriter;
 import system.printing.PrintTicket;
@@ -60,7 +62,7 @@ import system.windows.xps.packaging.PackagingProgressEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XpsPackagingPolicy extends BasePackagingPolicy  {
+public class XpsPackagingPolicy extends system.windows.xps.serialization.BasePackagingPolicy  {
     /**
      * Fully assembly qualified name: ReachFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -181,6 +183,21 @@ public class XpsPackagingPolicy extends BasePackagingPolicy  {
     
     // Methods section
     
+    public IList_1 AcquireStreamForLinkTargets() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireStreamForLinkTargets = null;
+        try {
+            retObjectAcquireStreamForLinkTargets = classInstance.Invoke("AcquireStreamForLinkTargets");
+            JCObject objAcquireStreamForLinkTargets = (JCObject)retObjectAcquireStreamForLinkTargets;
+            return new IList_1Implementation(objAcquireStreamForLinkTargets);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireStreamForLinkTargets != null ? retObjectAcquireStreamForLinkTargets.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XpsResourceStream AcquireResourceStreamForXpsColorContext(java.lang.String resourceId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.windows.xps.XpsSerializationException, system.io.IOException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.configuration.NamedServiceModelExtensionCollectionElement_1;
 import system.servicemodel.configuration.BindingElementExtensionElement;
 import system.TimeSpan;
 
@@ -54,7 +55,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CustomBindingElement extends NetObjectEnumerable  {
+public class CustomBindingElement extends system.servicemodel.configuration.NamedServiceModelExtensionCollectionElement_1<BindingElementExtensionElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

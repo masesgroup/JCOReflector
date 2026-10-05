@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityToken;
 import system.xml.XmlElement;
 import system.identitymodel.tokens.SecurityTokenHandlerCollection;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -176,6 +177,21 @@ public class SecurityTokenElement extends NetObject  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 GetIdentities() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIdentities = null;
+        try {
+            retObjectGetIdentities = classInstance.Invoke("GetIdentities");
+            JCObject objGetIdentities = (JCObject)retObjectGetIdentities;
+            return new ReadOnlyCollection_1(objGetIdentities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIdentities != null ? retObjectGetIdentities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityToken GetSecurityToken() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

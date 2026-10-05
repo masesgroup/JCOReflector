@@ -43,6 +43,8 @@ import system.UInt16;
 import system.reflection.metadata.BlobBuilder;
 import system.reflection.portableexecutable.DebugDirectoryEntryType;
 import system.UInt32;
+import system.Action_2;
+import system.collections.immutable.ImmutableArray_1;
 
 
 /**
@@ -199,6 +201,26 @@ public class DebugDirectoryBuilder extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEntry", type == null ? null : type.getJCOInstance(), version == null ? null : version.getJCOInstance(), stamp == null ? null : stamp.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TData extends IJCOBridgeReflected> void AddEntry(DebugDirectoryEntryType type, UInt32 version, UInt32 stamp, TData data, Action_2 dataSerializer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddEntry", type == null ? null : type.getJCOInstance(), version == null ? null : version.getJCOInstance(), stamp == null ? null : stamp.getJCOInstance(), data == null ? null : ((IJCOBridgeReflected)data).getJCOInstance(), dataSerializer);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddPdbChecksumEntry(java.lang.String algorithmName, ImmutableArray_1 checksum) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddPdbChecksumEntry", algorithmName, checksum == null ? null : checksum.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

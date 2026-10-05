@@ -39,8 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.modelbinding.ModelMetadata;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.web.modelbinding.ModelValidationNode;
 import system.web.modelbinding.ModelBindingExecutionContext;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -161,6 +165,16 @@ public class ModelValidationNode extends NetObject  {
         }
     }
 
+    public ModelValidationNode(ModelMetadata modelMetadata, java.lang.String modelStateKey, IEnumerable_1 childNodes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(modelMetadata == null ? null : modelMetadata.getJCOInstance(), modelStateKey, childNodes == null ? null : childNodes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -243,6 +257,31 @@ public class ModelValidationNode extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateAllProperties", ValidateAllProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getChildNodes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildNodes = null;
+        try {
+            retObjectChildNodes = classInstance.Get("ChildNodes");
+            JCObject val = (JCObject)retObjectChildNodes;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildNodes != null ? retObjectChildNodes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setChildNodes(ICollection_1 ChildNodes) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ChildNodes", ChildNodes == null ? null : ChildNodes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

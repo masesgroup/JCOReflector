@@ -42,6 +42,7 @@ import system.MidpointRounding;
 import system.SByte;
 import system.Single;
 import system.Decimal;
+import system.ValueTuple_2;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
@@ -3198,6 +3199,141 @@ public class Math extends NetObject  {
             return new Decimal(objTruncate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncate != null ? retObjectTruncate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 DivRem(byte left, byte right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left, right);
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 SinCos(double x) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSinCos = null;
+        try {
+            retObjectSinCos = classType.Invoke("SinCos", x);
+            JCObject objSinCos = (JCObject)retObjectSinCos;
+            return new ValueTuple_2(objSinCos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSinCos != null ? retObjectSinCos.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 DivRem(short left, short right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left, right);
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 DivRem(int left, int right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left, right);
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 DivRem(long left, long right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left, right);
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 DivRem(SByte left, SByte right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 DivRem(UInt16 left, UInt16 right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 DivRem(UInt32 left, UInt32 right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTuple_2 DivRem(UInt64 left, UInt64 right) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivRem = null;
+        try {
+            retObjectDivRem = classType.Invoke("DivRem", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivRem = (JCObject)retObjectDivRem;
+            return new ValueTuple_2(objDivRem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivRem != null ? retObjectDivRem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

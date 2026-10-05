@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.threading.DispatcherObject;
 import system.windows.automation.peers.AutomationEvents;
+import system.collections.generic.List_1;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.AutomationHeadingLevel;
 import system.windows.automation.AutomationLiveSetting;
@@ -66,7 +67,7 @@ import system.windows.automation.AutomationProperty;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AutomationPeer extends DispatcherObject  {
+public class AutomationPeer extends system.windows.threading.DispatcherObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -380,6 +381,36 @@ public class AutomationPeer extends DispatcherObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 GetChildren() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildren = null;
+        try {
+            retObjectGetChildren = classInstance.Invoke("GetChildren");
+            JCObject objGetChildren = (JCObject)retObjectGetChildren;
+            return new List_1(objGetChildren);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildren != null ? retObjectGetChildren.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 GetControlledPeers() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetControlledPeers = null;
+        try {
+            retObjectGetControlledPeers = classInstance.Invoke("GetControlledPeers");
+            JCObject objGetControlledPeers = (JCObject)retObjectGetControlledPeers;
+            return new List_1(objGetControlledPeers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetControlledPeers != null ? retObjectGetControlledPeers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

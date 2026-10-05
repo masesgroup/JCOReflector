@@ -41,6 +41,10 @@ import java.util.ArrayList;
 import system.diagnostics.Activity;
 import system.diagnostics.ActivityKind;
 import system.diagnostics.ActivityContext;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.diagnostics.ActivityIdFormat;
+import system.DateTimeOffset;
 import system.diagnostics.ActivityListener;
 
 
@@ -181,6 +185,36 @@ public class ActivitySource extends NetObject implements AutoCloseable {
         }
     }
 
+    public Activity CreateActivity(java.lang.String name, ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1 links, ActivityIdFormat idFormat) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateActivity = null;
+        try {
+            retObjectCreateActivity = classInstance.Invoke("CreateActivity", name, kind == null ? null : kind.getJCOInstance(), parentContext == null ? null : parentContext.getJCOInstance(), tags == null ? null : tags.getJCOInstance(), links == null ? null : links.getJCOInstance(), idFormat == null ? null : idFormat.getJCOInstance());
+            JCObject objCreateActivity = (JCObject)retObjectCreateActivity;
+            return new Activity(objCreateActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateActivity != null ? retObjectCreateActivity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Activity CreateActivity(java.lang.String name, ActivityKind kind, java.lang.String parentId, IEnumerable_1 tags, IEnumerable_1 links, ActivityIdFormat idFormat) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateActivity = null;
+        try {
+            retObjectCreateActivity = classInstance.Invoke("CreateActivity", name, kind == null ? null : kind.getJCOInstance(), parentId, tags == null ? null : tags.getJCOInstance(), links == null ? null : links.getJCOInstance(), idFormat == null ? null : idFormat.getJCOInstance());
+            JCObject objCreateActivity = (JCObject)retObjectCreateActivity;
+            return new Activity(objCreateActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateActivity != null ? retObjectCreateActivity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Activity CreateActivity(java.lang.String name, ActivityKind kind) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -191,6 +225,51 @@ public class ActivitySource extends NetObject implements AutoCloseable {
             return new Activity(objCreateActivity);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateActivity != null ? retObjectCreateActivity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Activity StartActivity(ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1 links, DateTimeOffset startTime, java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartActivity = null;
+        try {
+            retObjectStartActivity = classInstance.Invoke("StartActivity", kind == null ? null : kind.getJCOInstance(), parentContext == null ? null : parentContext.getJCOInstance(), tags == null ? null : tags.getJCOInstance(), links == null ? null : links.getJCOInstance(), startTime == null ? null : startTime.getJCOInstance(), name);
+            JCObject objStartActivity = (JCObject)retObjectStartActivity;
+            return new Activity(objStartActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartActivity != null ? retObjectStartActivity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Activity StartActivity(java.lang.String name, ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1 links, DateTimeOffset startTime) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartActivity = null;
+        try {
+            retObjectStartActivity = classInstance.Invoke("StartActivity", name, kind == null ? null : kind.getJCOInstance(), parentContext == null ? null : parentContext.getJCOInstance(), tags == null ? null : tags.getJCOInstance(), links == null ? null : links.getJCOInstance(), startTime == null ? null : startTime.getJCOInstance());
+            JCObject objStartActivity = (JCObject)retObjectStartActivity;
+            return new Activity(objStartActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartActivity != null ? retObjectStartActivity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Activity StartActivity(java.lang.String name, ActivityKind kind, java.lang.String parentId, IEnumerable_1 tags, IEnumerable_1 links, DateTimeOffset startTime) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartActivity = null;
+        try {
+            retObjectStartActivity = classInstance.Invoke("StartActivity", name, kind == null ? null : kind.getJCOInstance(), parentId, tags == null ? null : tags.getJCOInstance(), links == null ? null : links.getJCOInstance(), startTime == null ? null : startTime.getJCOInstance());
+            JCObject objStartActivity = (JCObject)retObjectStartActivity;
+            return new Activity(objStartActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartActivity != null ? retObjectStartActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

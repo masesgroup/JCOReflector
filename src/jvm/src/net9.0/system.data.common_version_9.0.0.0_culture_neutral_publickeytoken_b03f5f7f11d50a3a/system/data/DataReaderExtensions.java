@@ -45,6 +45,8 @@ import system.Decimal;
 import system.Guid;
 import system.io.Stream;
 import system.io.TextReader;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 
 
 /**
@@ -718,6 +720,36 @@ public class DataReaderExtensions extends NetObject  {
             return (java.lang.String)retObjectGetString;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 IsDBNullAsync(DbDataReader reader, java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDBNullAsync = null;
+        try {
+            retObjectIsDBNullAsync = classType.Invoke("IsDBNullAsync", reader == null ? null : reader.getJCOInstance(), name, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objIsDBNullAsync = (JCObject)retObjectIsDBNullAsync;
+            return new Task_1(objIsDBNullAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsDBNullAsync != null ? retObjectIsDBNullAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Task_1 GetFieldValueAsync(DbDataReader reader, java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFieldValueAsync = null;
+        try {
+            retObjectGetFieldValueAsync = classType.Invoke("GetFieldValueAsync", reader == null ? null : reader.getJCOInstance(), name, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFieldValueAsync = (JCObject)retObjectGetFieldValueAsync;
+            return new Task_1(objGetFieldValueAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldValueAsync != null ? retObjectGetFieldValueAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

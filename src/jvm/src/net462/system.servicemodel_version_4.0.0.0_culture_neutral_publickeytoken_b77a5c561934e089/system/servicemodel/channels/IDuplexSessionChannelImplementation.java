@@ -48,6 +48,10 @@ import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
 import system.servicemodel.channels.IOutputChannel;
 import system.servicemodel.channels.IOutputChannelImplementation;
+import system.servicemodel.channels.ISessionChannel_1;
+import system.servicemodel.channels.ISessionChannel_1Implementation;
+import system.servicemodel.channels.IDuplexSession;
+import system.servicemodel.channels.IDuplexSessionImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.servicemodel.channels.Message;
@@ -514,6 +518,21 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
     
     // Properties section
     
+    public IDuplexSession getSession() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
+        try {
+            retObjectSession = classInstance.Get("Session");
+            JCObject val = (JCObject)retObjectSession;
+            return new IDuplexSessionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

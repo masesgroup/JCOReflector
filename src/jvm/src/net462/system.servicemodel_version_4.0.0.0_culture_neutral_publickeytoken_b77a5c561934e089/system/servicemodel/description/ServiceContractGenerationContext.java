@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.servicemodel.description.ServiceContractGenerator;
 import system.servicemodel.description.ContractDescription;
 import system.codedom.CodeTypeDeclaration;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -205,6 +206,21 @@ public class ServiceContractGenerationContext extends NetObject  {
             return new CodeTypeDeclaration(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplexCallbackType != null ? retObjectDuplexCallbackType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getOperations() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperations = null;
+        try {
+            retObjectOperations = classInstance.Get("Operations");
+            JCObject val = (JCObject)retObjectOperations;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperations != null ? retObjectOperations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

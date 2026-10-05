@@ -40,10 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.windows.FrameworkElement;
 import system.windows.UIElement;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.controls.InkCanvasSelectionHitResult;
 import system.windows.Point;
 import system.windows.ink.StrokeCollection;
 import system.windows.Rect;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.controls.InkCanvasEditingMode;
 import system.windows.controls.UIElementCollection;
 import system.windows.ink.DrawingAttributes;
@@ -59,8 +62,6 @@ import system.windows.controls.InkCanvasStrokeErasingEventHandler;
 import system.windows.controls.InkCanvasStrokesReplacedEventHandler;
 import system.windows.ink.DrawingAttributesReplacedEventHandler;
 import system.windows.RoutedEventHandler;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -75,7 +76,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InkCanvas extends FrameworkElement implements IAddChild {
+public class InkCanvas extends system.windows.FrameworkElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -356,6 +357,36 @@ public class InkCanvas extends FrameworkElement implements IAddChild {
         }
     }
 
+    public ReadOnlyCollection_1 GetEnabledGestures() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnabledGestures = null;
+        try {
+            retObjectGetEnabledGestures = classInstance.Invoke("GetEnabledGestures");
+            JCObject objGetEnabledGestures = (JCObject)retObjectGetEnabledGestures;
+            return new ReadOnlyCollection_1(objGetEnabledGestures);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnabledGestures != null ? retObjectGetEnabledGestures.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetSelectedElements() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedElements = null;
+        try {
+            retObjectGetSelectedElements = classInstance.Invoke("GetSelectedElements");
+            JCObject objGetSelectedElements = (JCObject)retObjectGetSelectedElements;
+            return new ReadOnlyCollection_1(objGetSelectedElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedElements != null ? retObjectGetSelectedElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public InkCanvasSelectionHitResult HitTestSelection(Point point) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.InvalidCastException, system.RankException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -441,6 +472,26 @@ public class InkCanvas extends FrameworkElement implements IAddChild {
         }
     }
 
+    public void Select(IEnumerable_1 selectedElements) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Select", selectedElements == null ? null : selectedElements.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Select(StrokeCollection selectedStrokes, IEnumerable_1 selectedElements) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Select", selectedStrokes == null ? null : selectedStrokes.getJCOInstance(), selectedElements == null ? null : selectedElements.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Select(StrokeCollection selectedStrokes) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -456,6 +507,16 @@ public class InkCanvas extends FrameworkElement implements IAddChild {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetBottom", element == null ? null : element.getJCOInstance(), length);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetEnabledGestures(IEnumerable_1 applicationGestures) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetEnabledGestures", applicationGestures == null ? null : applicationGestures.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -594,6 +655,31 @@ public class InkCanvas extends FrameworkElement implements IAddChild {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCustomCursor", UseCustomCursor);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getPreferredPasteFormats() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredPasteFormats = null;
+        try {
+            retObjectPreferredPasteFormats = classInstance.Get("PreferredPasteFormats");
+            JCObject val = (JCObject)retObjectPreferredPasteFormats;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreferredPasteFormats != null ? retObjectPreferredPasteFormats.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPreferredPasteFormats(IEnumerable_1 PreferredPasteFormats) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PreferredPasteFormats", PreferredPasteFormats == null ? null : PreferredPasteFormats.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

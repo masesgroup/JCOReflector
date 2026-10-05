@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.CompositeActivity;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.workflow.activities.ExecutionType;
@@ -58,7 +60,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ReplicatorActivity extends CompositeActivity  {
+public class ReplicatorActivity extends system.workflow.componentmodel.CompositeActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -242,6 +244,21 @@ public class ReplicatorActivity extends CompositeActivity  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getDynamicActivities() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicActivities = null;
+        try {
+            retObjectDynamicActivities = classInstance.Get("DynamicActivities");
+            JCObject val = (JCObject)retObjectDynamicActivities;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicActivities != null ? retObjectDynamicActivities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

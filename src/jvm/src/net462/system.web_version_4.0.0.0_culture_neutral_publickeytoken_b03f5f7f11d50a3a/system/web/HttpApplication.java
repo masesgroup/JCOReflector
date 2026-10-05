@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.web.HttpContext;
 import system.web.BeginEventHandler;
 import system.web.EndEventHandler;
+import system.Action_2;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
@@ -629,6 +630,16 @@ public class HttpApplication extends NetObject implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void OnExecuteRequestStep(Action_2 callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnExecuteRequestStep", callback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

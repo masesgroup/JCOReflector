@@ -53,7 +53,7 @@ import system.componentmodel.dataannotations.DataTypeAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EnumDataTypeAttribute extends DataTypeAttribute  {
+public class EnumDataTypeAttribute extends system.componentmodel.dataannotations.DataTypeAttribute  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Annotations, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -53,7 +53,7 @@ import system.management.ManagementQuery;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventQuery extends ManagementQuery  {
+public class EventQuery extends system.management.ManagementQuery  {
     /**
      * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -38,9 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.Documentation;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -154,6 +156,21 @@ public class MetadataItem extends NetObject  {
     
     // Methods section
     
+    public static ReadOnlyCollection_1 GetGeneralFacetDescriptions() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGeneralFacetDescriptions = null;
+        try {
+            retObjectGetGeneralFacetDescriptions = classType.Invoke("GetGeneralFacetDescriptions");
+            JCObject objGetGeneralFacetDescriptions = (JCObject)retObjectGetGeneralFacetDescriptions;
+            return new ReadOnlyCollection_1(objGetGeneralFacetDescriptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeneralFacetDescriptions != null ? retObjectGetGeneralFacetDescriptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static EdmType GetBuiltInType(BuiltInTypeKind builtInTypeKind) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -208,6 +225,21 @@ public class MetadataItem extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Documentation", Documentation == null ? null : Documentation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getMetadataProperties() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadataProperties = null;
+        try {
+            retObjectMetadataProperties = classInstance.Get("MetadataProperties");
+            JCObject val = (JCObject)retObjectMetadataProperties;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadataProperties != null ? retObjectMetadataProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

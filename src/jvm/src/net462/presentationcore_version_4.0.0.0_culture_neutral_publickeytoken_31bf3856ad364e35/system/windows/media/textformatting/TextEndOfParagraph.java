@@ -54,7 +54,7 @@ import system.windows.media.textformatting.TextRunProperties;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextEndOfParagraph extends TextEndOfLine  {
+public class TextEndOfParagraph extends system.windows.media.textformatting.TextEndOfLine  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

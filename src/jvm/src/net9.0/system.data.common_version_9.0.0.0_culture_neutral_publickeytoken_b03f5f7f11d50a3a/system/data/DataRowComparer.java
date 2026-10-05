@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.DataRowComparer_1;
 
 
 /**
@@ -155,6 +156,21 @@ public class DataRowComparer extends NetObject  {
     
     // Properties section
     
+    public static DataRowComparer_1 getDefault() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
+        try {
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
+            return new DataRowComparer_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

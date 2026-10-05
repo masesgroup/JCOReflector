@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.common.commandtrees.DbExpressionVisitor_1;
 import system.data.common.commandtrees.DbExpression;
 import system.data.common.commandtrees.DbAndExpression;
 import system.data.common.commandtrees.DbApplyExpression;
@@ -95,7 +96,7 @@ import system.data.common.commandtrees.DbVariableReferenceExpression;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DefaultExpressionVisitor extends NetObject  {
+public class DefaultExpressionVisitor extends system.data.common.commandtrees.DbExpressionVisitor_1<DbExpression>  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

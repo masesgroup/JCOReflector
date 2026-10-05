@@ -46,6 +46,7 @@ import system.reflection.portableexecutable.ResourceSectionBuilder;
 import system.reflection.portableexecutable.DebugDirectoryBuilder;
 import system.reflection.metadata.MethodDefinitionHandle;
 import system.reflection.portableexecutable.CorFlags;
+import system.Func_2;
 
 
 /**
@@ -60,7 +61,7 @@ import system.reflection.portableexecutable.CorFlags;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ManagedPEBuilder extends PEBuilder  {
+public class ManagedPEBuilder extends system.reflection.portableexecutable.PEBuilder  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -156,11 +157,31 @@ public class ManagedPEBuilder extends PEBuilder  {
     public ManagedPEBuilder() throws Throwable {
     }
 
+    public ManagedPEBuilder(PEHeaderBuilder header, MetadataRootBuilder metadataRootBuilder, BlobBuilder ilStream, BlobBuilder mappedFieldData, BlobBuilder managedResources, ResourceSectionBuilder nativeResources, DebugDirectoryBuilder debugDirectoryBuilder, int strongNameSignatureSize, MethodDefinitionHandle entryPoint, CorFlags flags, Func_2 deterministicIdProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(header == null ? null : header.getJCOInstance(), metadataRootBuilder == null ? null : metadataRootBuilder.getJCOInstance(), ilStream == null ? null : ilStream.getJCOInstance(), mappedFieldData == null ? null : mappedFieldData.getJCOInstance(), managedResources == null ? null : managedResources.getJCOInstance(), nativeResources == null ? null : nativeResources.getJCOInstance(), debugDirectoryBuilder == null ? null : debugDirectoryBuilder.getJCOInstance(), strongNameSignatureSize, entryPoint == null ? null : entryPoint.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), deterministicIdProvider));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public void Sign(BlobBuilder peImage, Func_2 signatureProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.NullReferenceException, system.FormatException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Sign", peImage == null ? null : peImage.getJCOInstance(), signatureProvider);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

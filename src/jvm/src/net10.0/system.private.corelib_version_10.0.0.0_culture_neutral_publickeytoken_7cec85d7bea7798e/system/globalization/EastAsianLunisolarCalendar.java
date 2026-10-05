@@ -56,7 +56,7 @@ import system.globalization.CalendarAlgorithmType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EastAsianLunisolarCalendar extends Calendar  {
+public class EastAsianLunisolarCalendar extends system.globalization.Calendar  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

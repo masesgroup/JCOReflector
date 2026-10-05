@@ -67,7 +67,7 @@ import system.directoryservices.activedirectory.SyncUpdateCallback;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AdamInstance extends DirectoryServer  {
+public class AdamInstance extends system.directoryservices.activedirectory.DirectoryServer  {
     /**
      * Fully assembly qualified name: System.DirectoryServices, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

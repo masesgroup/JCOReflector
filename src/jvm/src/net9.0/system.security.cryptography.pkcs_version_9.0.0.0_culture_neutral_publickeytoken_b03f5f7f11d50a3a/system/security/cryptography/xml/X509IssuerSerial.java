@@ -53,7 +53,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509IssuerSerial extends ValueType  {
+public class X509IssuerSerial extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

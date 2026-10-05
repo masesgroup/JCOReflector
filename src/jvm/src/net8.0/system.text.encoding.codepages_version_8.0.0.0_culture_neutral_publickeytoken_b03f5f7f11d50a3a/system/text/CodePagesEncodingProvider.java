@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.text.EncodingProvider;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.text.Encoding;
 
 
@@ -54,7 +56,7 @@ import system.text.Encoding;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CodePagesEncodingProvider extends EncodingProvider  {
+public class CodePagesEncodingProvider extends system.text.EncodingProvider  {
     /**
      * Fully assembly qualified name: System.Text.Encoding.CodePages, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -155,6 +157,21 @@ public class CodePagesEncodingProvider extends EncodingProvider  {
     
     // Methods section
     
+    public IEnumerable_1 GetEncodings() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEncodings = null;
+        try {
+            retObjectGetEncodings = classInstance.Invoke("GetEncodings");
+            JCObject objGetEncodings = (JCObject)retObjectGetEncodings;
+            return new IEnumerable_1Implementation(objGetEncodings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEncodings != null ? retObjectGetEncodings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Encoding GetEncoding(int codepage) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

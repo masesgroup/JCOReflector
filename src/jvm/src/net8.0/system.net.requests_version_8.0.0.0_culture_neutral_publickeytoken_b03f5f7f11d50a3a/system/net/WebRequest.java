@@ -51,6 +51,7 @@ import system.net.IWebProxy;
 import system.net.IWebProxyImplementation;
 import system.net.WebRequest;
 import system.net.WebResponse;
+import system.threading.tasks.Task_1;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 import system.net.cache.RequestCachePolicy;
@@ -59,8 +60,6 @@ import system.net.ICredentialsImplementation;
 import system.net.security.AuthenticationLevel;
 import system.net.WebHeaderCollection;
 import system.security.principal.TokenImpersonationLevel;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -75,7 +74,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebRequest extends MarshalByRefObject implements ISerializable {
+public class WebRequest extends system.MarshalByRefObject  {
     /**
      * Fully assembly qualified name: System.Net.Requests, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -363,6 +362,36 @@ public class WebRequest extends MarshalByRefObject implements ISerializable {
             return new WebResponse(objGetResponse);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResponse != null ? retObjectGetResponse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetRequestStreamAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequestStreamAsync = null;
+        try {
+            retObjectGetRequestStreamAsync = classInstance.Invoke("GetRequestStreamAsync");
+            JCObject objGetRequestStreamAsync = (JCObject)retObjectGetRequestStreamAsync;
+            return new Task_1(objGetRequestStreamAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRequestStreamAsync != null ? retObjectGetRequestStreamAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetResponseAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResponseAsync = null;
+        try {
+            retObjectGetResponseAsync = classInstance.Invoke("GetResponseAsync");
+            JCObject objGetResponseAsync = (JCObject)retObjectGetResponseAsync;
+            return new Task_1(objGetResponseAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResponseAsync != null ? retObjectGetResponseAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

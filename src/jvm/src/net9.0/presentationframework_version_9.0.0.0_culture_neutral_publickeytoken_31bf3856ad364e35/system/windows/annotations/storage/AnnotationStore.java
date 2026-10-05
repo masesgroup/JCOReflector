@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.windows.annotations.ContentLocator;
 import system.windows.annotations.Annotation;
 import system.Guid;
 import system.windows.annotations.AnnotationAuthorChangedEventHandler;
@@ -156,6 +159,36 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    public IList_1 GetAnnotations() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnnotations = null;
+        try {
+            retObjectGetAnnotations = classInstance.Invoke("GetAnnotations");
+            JCObject objGetAnnotations = (JCObject)retObjectGetAnnotations;
+            return new IList_1Implementation(objGetAnnotations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnnotations != null ? retObjectGetAnnotations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetAnnotations(ContentLocator anchorLocator) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnnotations = null;
+        try {
+            retObjectGetAnnotations = classInstance.Invoke("GetAnnotations", anchorLocator == null ? null : anchorLocator.getJCOInstance());
+            JCObject objGetAnnotations = (JCObject)retObjectGetAnnotations;
+            return new IList_1Implementation(objGetAnnotations);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnnotations != null ? retObjectGetAnnotations.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Annotation DeleteAnnotation(Guid annotationId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IReadOnlyList_1;
+import system.collections.generic.IReadOnlyList_1Implementation;
 import system.reflection.metadata.MetadataReader;
 import system.reflection.metadata.Handle;
 
@@ -148,6 +150,26 @@ public class MetadataAggregator extends NetObject  {
     // Constructors section
     
     public MetadataAggregator() throws Throwable {
+    }
+
+    public MetadataAggregator(IReadOnlyList_1 baseTableRowCounts, IReadOnlyList_1 baseHeapSizes, IReadOnlyList_1 deltaReaders) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(baseTableRowCounts == null ? null : baseTableRowCounts.getJCOInstance(), baseHeapSizes == null ? null : baseHeapSizes.getJCOInstance(), deltaReaders == null ? null : deltaReaders.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MetadataAggregator(MetadataReader baseReader, IReadOnlyList_1 deltaReaders) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(baseReader == null ? null : baseReader.getJCOInstance(), deltaReaders == null ? null : deltaReaders.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

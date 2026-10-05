@@ -56,7 +56,7 @@ import system.windows.TextMarkerStyle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class List extends Block  {
+public class List extends system.windows.documents.Block  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

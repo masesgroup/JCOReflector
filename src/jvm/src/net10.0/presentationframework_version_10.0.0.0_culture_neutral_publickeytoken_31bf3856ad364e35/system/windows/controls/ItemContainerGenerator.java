@@ -46,13 +46,10 @@ import system.windows.controls.primitives.GeneratorDirection;
 import system.windows.controls.ItemContainerGenerator;
 import system.windows.controls.Panel;
 import system.EventArgs;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.controls.primitives.GeneratorStatus;
 import system.EventHandler;
 import system.windows.controls.primitives.ItemsChangedEventHandler;
-import system.windows.controls.primitives.IItemContainerGenerator;
-import system.windows.controls.primitives.IItemContainerGeneratorImplementation;
-import system.windows.IWeakEventListener;
-import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -67,7 +64,7 @@ import system.windows.IWeakEventListenerImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ItemContainerGenerator extends NetObject implements IItemContainerGenerator, IWeakEventListener {
+public class ItemContainerGenerator extends NetObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -420,6 +417,21 @@ public class ItemContainerGenerator extends NetObject implements IItemContainerG
     
     // Properties section
     
+    public ReadOnlyCollection_1 getItems() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
+        try {
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public GeneratorStatus getStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

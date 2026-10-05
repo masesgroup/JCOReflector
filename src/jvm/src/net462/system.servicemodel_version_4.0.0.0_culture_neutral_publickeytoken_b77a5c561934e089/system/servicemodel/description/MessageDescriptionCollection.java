@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.description.MessageDescription;
 
 
@@ -53,7 +54,7 @@ import system.servicemodel.description.MessageDescription;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MessageDescriptionCollection extends NetObjectEnumerable  {
+public class MessageDescriptionCollection extends system.collections.objectmodel.Collection_1<MessageDescription>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -154,6 +155,21 @@ public class MessageDescriptionCollection extends NetObjectEnumerable  {
     
     // Methods section
     
+    public Collection_1 FindAll(java.lang.String action) throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAll = null;
+        try {
+            retObjectFindAll = classInstance.Invoke("FindAll", action);
+            JCObject objFindAll = (JCObject)retObjectFindAll;
+            return new Collection_1(objFindAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAll != null ? retObjectFindAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MessageDescription Find(java.lang.String action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

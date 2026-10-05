@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.List_1;
 import system.identitymodel.protocols.wstrust.EndpointReference;
 
 
@@ -164,6 +165,21 @@ public class Participants extends NetObject  {
     
     // Properties section
     
+    public List_1 getParticipant() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParticipant = null;
+        try {
+            retObjectParticipant = classInstance.Get("Participant");
+            JCObject val = (JCObject)retObjectParticipant;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParticipant != null ? retObjectParticipant.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EndpointReference getPrimary() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

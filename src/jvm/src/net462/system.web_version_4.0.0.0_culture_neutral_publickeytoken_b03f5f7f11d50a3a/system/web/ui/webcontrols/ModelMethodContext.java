@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.Page;
+import system.web.modelbinding.IValueProvider;
+import system.web.modelbinding.IValueProviderImplementation;
 import system.web.modelbinding.ModelStateDictionary;
 import system.web.ui.webcontrols.ModelMethodContext;
 
@@ -166,6 +168,54 @@ public class ModelMethodContext extends NetObject  {
     
     // Methods section
     
+    public <TModel extends IJCOBridgeReflected> boolean TryUpdateModel(TModel model) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryUpdateModel = null;
+        try {
+            retObjectTryUpdateModel = classInstance.Invoke("TryUpdateModel", model == null ? null : ((IJCOBridgeReflected)model).getJCOInstance());
+            return (boolean)retObjectTryUpdateModel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryUpdateModel != null ? retObjectTryUpdateModel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TModel extends IJCOBridgeReflected> boolean TryUpdateModel(TModel model, IValueProvider valueProvider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryUpdateModel = null;
+        try {
+            retObjectTryUpdateModel = classInstance.Invoke("TryUpdateModel", model == null ? null : ((IJCOBridgeReflected)model).getJCOInstance(), valueProvider == null ? null : valueProvider.getJCOInstance());
+            return (boolean)retObjectTryUpdateModel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryUpdateModel != null ? retObjectTryUpdateModel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TModel extends IJCOBridgeReflected> void UpdateModel(TModel model) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateModel", model == null ? null : ((IJCOBridgeReflected)model).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TModel extends IJCOBridgeReflected> void UpdateModel(TModel model, IValueProvider valueProvider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateModel", model == null ? null : ((IJCOBridgeReflected)model).getJCOInstance(), valueProvider == null ? null : valueProvider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

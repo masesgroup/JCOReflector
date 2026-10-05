@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.security.cryptography.HashAlgorithm;
 import system.io.Stream;
 import system.security.cryptography.SHA3_384;
+import system.threading.tasks.ValueTask_1;
+import system.threading.CancellationToken;
+import system.Memory_1;
 
 
 /**
@@ -55,7 +58,7 @@ import system.security.cryptography.SHA3_384;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SHA3_384 extends HashAlgorithm  {
+public class SHA3_384 extends system.security.cryptography.HashAlgorithm  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -233,6 +236,36 @@ public class SHA3_384 extends HashAlgorithm  {
             return new SHA3_384(objCreate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 HashDataAsync(Stream source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHashDataAsync = null;
+        try {
+            retObjectHashDataAsync = classType.Invoke("HashDataAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objHashDataAsync = (JCObject)retObjectHashDataAsync;
+            return new ValueTask_1(objHashDataAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashDataAsync != null ? retObjectHashDataAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 HashDataAsync(Stream source, Memory_1 destination, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHashDataAsync = null;
+        try {
+            retObjectHashDataAsync = classType.Invoke("HashDataAsync", source == null ? null : source.getJCOInstance(), destination == null ? null : destination.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objHashDataAsync = (JCObject)retObjectHashDataAsync;
+            return new ValueTask_1(objHashDataAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashDataAsync != null ? retObjectHashDataAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

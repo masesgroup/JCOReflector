@@ -38,7 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ReadOnlyMemory_1;
+import system.ArraySegment_1;
 import system.Array;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.Memory_1;
 
 
 /**
@@ -152,6 +157,62 @@ public class MemoryMarshal extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> boolean TryGetArray(ReadOnlyMemory_1 memory, JCORefOut<ArraySegment_1> segment) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetArray = null;
+        try {
+            retObjectTryGetArray = classType.Invoke("TryGetArray", memory == null ? null : memory.getJCOInstance(), segment.getJCRefOut());
+            return (boolean)retObjectTryGetArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetArray != null ? retObjectTryGetArray.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected, TManager extends IJCOBridgeReflected> boolean TryGetMemoryManager(ReadOnlyMemory_1 memory, JCORefOut<TManager> manager, JCORefOut<java.util.concurrent.atomic.AtomicInteger> start, JCORefOut<java.util.concurrent.atomic.AtomicInteger> length) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetMemoryManager = null;
+        try {
+            retObjectTryGetMemoryManager = classType.Invoke("TryGetMemoryManager", memory == null ? null : memory.getJCOInstance(), manager.getJCRefOut(), start.getJCRefOut(), length.getJCRefOut());
+            return (boolean)retObjectTryGetMemoryManager;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetMemoryManager != null ? retObjectTryGetMemoryManager.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected, TManager extends IJCOBridgeReflected> boolean TryGetMemoryManager(ReadOnlyMemory_1 memory, JCORefOut<TManager> manager) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetMemoryManager = null;
+        try {
+            retObjectTryGetMemoryManager = classType.Invoke("TryGetMemoryManager", memory == null ? null : memory.getJCOInstance(), manager.getJCRefOut());
+            return (boolean)retObjectTryGetMemoryManager;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetMemoryManager != null ? retObjectTryGetMemoryManager.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGetString(ReadOnlyMemory_1 memory, JCORefOut text, JCORefOut<java.util.concurrent.atomic.AtomicInteger> start, JCORefOut<java.util.concurrent.atomic.AtomicInteger> length) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetString = null;
+        try {
+            retObjectTryGetString = classType.Invoke("TryGetString", memory == null ? null : memory.getJCOInstance(), text.getJCRefOut(), start.getJCRefOut(), length.getJCRefOut());
+            return (boolean)retObjectTryGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetString != null ? retObjectTryGetString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static byte GetArrayDataReference(Array array) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -187,6 +248,51 @@ public class MemoryMarshal extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> IEnumerable_1 ToEnumerable(ReadOnlyMemory_1 memory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToEnumerable = null;
+        try {
+            retObjectToEnumerable = classType.Invoke("ToEnumerable", memory == null ? null : memory.getJCOInstance());
+            JCObject objToEnumerable = (JCObject)retObjectToEnumerable;
+            return new IEnumerable_1Implementation(objToEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToEnumerable != null ? retObjectToEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(ReadOnlyMemory_1 memory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", memory == null ? null : memory.getJCOInstance());
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 CreateFromPinnedArray(T[] array, int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromPinnedArray = null;
+        try {
+            retObjectCreateFromPinnedArray = classType.Invoke("CreateFromPinnedArray", array == null ? null : toObjectFromArray(array), start, length);
+            JCObject objCreateFromPinnedArray = (JCObject)retObjectCreateFromPinnedArray;
+            return new Memory_1(objCreateFromPinnedArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromPinnedArray != null ? retObjectCreateFromPinnedArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

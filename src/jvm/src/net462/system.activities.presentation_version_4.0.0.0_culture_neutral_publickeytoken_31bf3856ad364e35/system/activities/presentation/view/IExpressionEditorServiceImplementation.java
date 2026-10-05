@@ -42,6 +42,8 @@ import system.activities.presentation.view.IExpressionEditorInstance;
 import system.activities.presentation.view.IExpressionEditorInstanceImplementation;
 import system.activities.presentation.hosting.AssemblyContextControlItem;
 import system.activities.presentation.hosting.ImportedNamespaceContextItem;
+import system.collections.generic.List_1;
+import system.windows.Size;
 
 
 /**
@@ -144,6 +146,66 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
 
     // Methods section
     
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateExpressionEditor = null;
+        try {
+            retObjectCreateExpressionEditor = classInstance.Invoke("CreateExpressionEditor", assemblies == null ? null : assemblies.getJCOInstance(), importedNamespaces == null ? null : importedNamespaces.getJCOInstance(), variables == null ? null : variables.getJCOInstance(), text);
+            JCObject objCreateExpressionEditor = (JCObject)retObjectCreateExpressionEditor;
+            return new IExpressionEditorInstanceImplementation(objCreateExpressionEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateExpressionEditor != null ? retObjectCreateExpressionEditor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, NetType expressionType) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateExpressionEditor = null;
+        try {
+            retObjectCreateExpressionEditor = classInstance.Invoke("CreateExpressionEditor", assemblies == null ? null : assemblies.getJCOInstance(), importedNamespaces == null ? null : importedNamespaces.getJCOInstance(), variables == null ? null : variables.getJCOInstance(), text, expressionType == null ? null : expressionType.getJCOInstance());
+            JCObject objCreateExpressionEditor = (JCObject)retObjectCreateExpressionEditor;
+            return new IExpressionEditorInstanceImplementation(objCreateExpressionEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateExpressionEditor != null ? retObjectCreateExpressionEditor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, NetType expressionType, Size initialSize) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateExpressionEditor = null;
+        try {
+            retObjectCreateExpressionEditor = classInstance.Invoke("CreateExpressionEditor", assemblies == null ? null : assemblies.getJCOInstance(), importedNamespaces == null ? null : importedNamespaces.getJCOInstance(), variables == null ? null : variables.getJCOInstance(), text, expressionType == null ? null : expressionType.getJCOInstance(), initialSize == null ? null : initialSize.getJCOInstance());
+            JCObject objCreateExpressionEditor = (JCObject)retObjectCreateExpressionEditor;
+            return new IExpressionEditorInstanceImplementation(objCreateExpressionEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateExpressionEditor != null ? retObjectCreateExpressionEditor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, Size initialSize) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateExpressionEditor = null;
+        try {
+            retObjectCreateExpressionEditor = classInstance.Invoke("CreateExpressionEditor", assemblies == null ? null : assemblies.getJCOInstance(), importedNamespaces == null ? null : importedNamespaces.getJCOInstance(), variables == null ? null : variables.getJCOInstance(), text, initialSize == null ? null : initialSize.getJCOInstance());
+            JCObject objCreateExpressionEditor = (JCObject)retObjectCreateExpressionEditor;
+            return new IExpressionEditorInstanceImplementation(objCreateExpressionEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateExpressionEditor != null ? retObjectCreateExpressionEditor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CloseExpressionEditors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

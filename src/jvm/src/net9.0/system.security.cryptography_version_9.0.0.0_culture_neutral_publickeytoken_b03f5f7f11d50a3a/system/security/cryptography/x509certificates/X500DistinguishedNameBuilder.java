@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.security.cryptography.x509certificates.X500DistinguishedName;
 import system.security.cryptography.Oid;
+import system.Nullable_1;
 
 
 /**
@@ -171,6 +172,26 @@ public class X500DistinguishedNameBuilder extends NetObject  {
             return new X500DistinguishedName(objBuild);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuild != null ? retObjectBuild.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Add(Oid oid, java.lang.String value, Nullable_1 stringEncodingType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", oid == null ? null : oid.getJCOInstance(), value, stringEncodingType == null ? null : stringEncodingType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Add(java.lang.String oidValue, java.lang.String value, Nullable_1 stringEncodingType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", oidValue, value, stringEncodingType == null ? null : stringEncodingType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

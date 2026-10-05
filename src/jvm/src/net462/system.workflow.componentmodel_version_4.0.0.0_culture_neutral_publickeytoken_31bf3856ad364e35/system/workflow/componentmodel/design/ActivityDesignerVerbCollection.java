@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.design.DesignerVerbCollection;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.componentmodel.design.DesignerVerbCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityDesignerVerbCollection extends DesignerVerbCollection  {
+public class ActivityDesignerVerbCollection extends system.componentmodel.design.DesignerVerbCollection  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -151,6 +153,16 @@ public class ActivityDesignerVerbCollection extends DesignerVerbCollection  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActivityDesignerVerbCollection(IEnumerable_1 verbs) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(verbs == null ? null : verbs.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -53,7 +53,7 @@ import system.componentmodel.MemberDescriptor;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventDescriptor extends MemberDescriptor  {
+public class EventDescriptor extends system.componentmodel.MemberDescriptor  {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

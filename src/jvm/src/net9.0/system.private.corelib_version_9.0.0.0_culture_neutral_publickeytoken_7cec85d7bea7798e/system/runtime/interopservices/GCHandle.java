@@ -55,7 +55,7 @@ import system.runtime.interopservices.GCHandleType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GCHandle extends ValueType  {
+public class GCHandle extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

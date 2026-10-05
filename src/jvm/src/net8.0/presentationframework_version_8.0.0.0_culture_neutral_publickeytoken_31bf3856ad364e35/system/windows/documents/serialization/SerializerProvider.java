@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.documents.serialization.SerializerWriter;
 import system.windows.documents.serialization.SerializerDescriptor;
 import system.io.Stream;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -201,6 +202,21 @@ public class SerializerProvider extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getInstalledSerializers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstalledSerializers = null;
+        try {
+            retObjectInstalledSerializers = classInstance.Get("InstalledSerializers");
+            JCObject val = (JCObject)retObjectInstalledSerializers;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstalledSerializers != null ? retObjectInstalledSerializers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

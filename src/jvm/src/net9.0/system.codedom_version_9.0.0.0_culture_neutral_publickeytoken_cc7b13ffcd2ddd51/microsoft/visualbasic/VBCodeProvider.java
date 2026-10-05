@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.codedom.compiler.CodeDomProvider;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.codedom.compiler.ICodeCompiler;
 import system.codedom.compiler.ICodeCompilerImplementation;
 import system.codedom.compiler.ICodeGenerator;
@@ -62,7 +64,7 @@ import system.codedom.compiler.LanguageOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class VBCodeProvider extends CodeDomProvider  {
+public class VBCodeProvider extends system.codedom.compiler.CodeDomProvider  {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -160,6 +162,16 @@ public class VBCodeProvider extends CodeDomProvider  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public VBCodeProvider(IDictionary_2 providerOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(providerOptions == null ? null : providerOptions.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

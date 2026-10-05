@@ -38,11 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.UniqueId;
 import system.identitymodel.tokens.SessionSecurityToken;
 import system.identitymodel.tokens.SessionSecurityTokenCacheKey;
 import system.DateTime;
 import system.xml.XmlNodeList;
-import system.xml.UniqueId;
 
 
 /**
@@ -156,6 +158,21 @@ public class SessionSecurityTokenCache extends NetObject  {
     
     // Methods section
     
+    public IEnumerable_1 GetAll(java.lang.String endpointId, UniqueId contextId) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAll = null;
+        try {
+            retObjectGetAll = classInstance.Invoke("GetAll", endpointId, contextId == null ? null : contextId.getJCOInstance());
+            JCObject objGetAll = (JCObject)retObjectGetAll;
+            return new IEnumerable_1Implementation(objGetAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAll != null ? retObjectGetAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SessionSecurityToken Get(SessionSecurityTokenCacheKey key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

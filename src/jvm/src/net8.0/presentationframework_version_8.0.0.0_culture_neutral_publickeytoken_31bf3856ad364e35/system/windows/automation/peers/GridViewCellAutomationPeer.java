@@ -56,7 +56,7 @@ import system.windows.automation.provider.IRawElementProviderSimpleImplementatio
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GridViewCellAutomationPeer extends FrameworkElementAutomationPeer  {
+public class GridViewCellAutomationPeer extends system.windows.automation.peers.FrameworkElementAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

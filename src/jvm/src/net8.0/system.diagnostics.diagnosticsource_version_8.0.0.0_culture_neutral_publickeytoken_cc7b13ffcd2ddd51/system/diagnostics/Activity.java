@@ -46,9 +46,12 @@ import system.diagnostics.ActivityTraceId;
 import system.diagnostics.ActivitySpanId;
 import system.diagnostics.ActivityTraceFlags;
 import system.diagnostics.ActivityStatusCode;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.diagnostics.ActivityContext;
 import system.diagnostics.ActivityKind;
 import system.diagnostics.ActivitySource;
+import system.Func_1;
 import system.TimeSpan;
 
 
@@ -571,6 +574,81 @@ public class Activity extends NetObject implements AutoCloseable {
         }
     }
 
+    public IEnumerable_1 getTagObjects() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTagObjects = null;
+        try {
+            retObjectTagObjects = classInstance.Get("TagObjects");
+            JCObject val = (JCObject)retObjectTagObjects;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTagObjects != null ? retObjectTagObjects.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getBaggage() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaggage = null;
+        try {
+            retObjectBaggage = classInstance.Get("Baggage");
+            JCObject val = (JCObject)retObjectBaggage;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaggage != null ? retObjectBaggage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getTags() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTags = null;
+        try {
+            retObjectTags = classInstance.Get("Tags");
+            JCObject val = (JCObject)retObjectTags;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTags != null ? retObjectTags.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getEvents() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvents = null;
+        try {
+            retObjectEvents = classInstance.Get("Events");
+            JCObject val = (JCObject)retObjectEvents;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvents != null ? retObjectEvents.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getLinks() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinks = null;
+        try {
+            retObjectLinks = classInstance.Get("Links");
+            JCObject val = (JCObject)retObjectLinks;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinks != null ? retObjectLinks.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DateTime getStartTimeUtc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -841,6 +919,30 @@ public class Activity extends NetObject implements AutoCloseable {
             return new ActivityTraceId(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTraceId != null ? retObjectTraceId.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Func_1 getTraceIdGenerator() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTraceIdGenerator = null;
+        try {
+            retObjectTraceIdGenerator = classType.Get("TraceIdGenerator");
+            return (Func_1)retObjectTraceIdGenerator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectTraceIdGenerator != null ? retObjectTraceIdGenerator.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setTraceIdGenerator(Func_1 TraceIdGenerator) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("TraceIdGenerator", TraceIdGenerator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

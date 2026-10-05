@@ -55,7 +55,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ReaderWriterLock extends CriticalFinalizerObject  {
+public class ReaderWriterLock extends system.runtime.constrainedexecution.CriticalFinalizerObject  {
     /**
      * Fully assembly qualified name: System.Threading, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

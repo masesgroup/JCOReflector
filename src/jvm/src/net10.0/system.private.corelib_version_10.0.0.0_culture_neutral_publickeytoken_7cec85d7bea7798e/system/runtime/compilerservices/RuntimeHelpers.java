@@ -170,6 +170,20 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
+    public static <T extends IJCOBridgeReflected> boolean IsReferenceOrContainsReferences() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsReferenceOrContainsReferences = null;
+        try {
+            retObjectIsReferenceOrContainsReferences = classType.Invoke("IsReferenceOrContainsReferences");
+            return (boolean)retObjectIsReferenceOrContainsReferences;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsReferenceOrContainsReferences != null ? retObjectIsReferenceOrContainsReferences.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean TryEnsureSufficientExecutionStack() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

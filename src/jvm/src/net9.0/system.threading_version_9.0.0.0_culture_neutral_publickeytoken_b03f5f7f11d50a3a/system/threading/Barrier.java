@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Action_1;
 import system.threading.CancellationToken;
 import system.TimeSpan;
 
@@ -148,6 +149,16 @@ public class Barrier extends NetObject implements AutoCloseable {
     // Constructors section
     
     public Barrier() throws Throwable {
+    }
+
+    public Barrier(int participantCount, Action_1 postPhaseAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(participantCount, postPhaseAction));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
     public Barrier(int participantCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {

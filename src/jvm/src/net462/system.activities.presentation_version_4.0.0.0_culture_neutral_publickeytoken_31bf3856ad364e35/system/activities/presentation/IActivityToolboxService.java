@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -115,6 +117,10 @@ public interface IActivityToolboxService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IList_1 EnumCategories() throws Throwable;
+
+    public IList_1 EnumItems(java.lang.String categoryName) throws Throwable;
+
     public void AddCategory(java.lang.String categoryName) throws Throwable;
 
     public void AddItem(java.lang.String qualifiedTypeName, java.lang.String categoryName) throws Throwable;

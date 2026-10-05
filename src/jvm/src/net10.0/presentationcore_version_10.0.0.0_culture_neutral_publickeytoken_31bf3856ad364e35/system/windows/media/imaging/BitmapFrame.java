@@ -46,6 +46,7 @@ import system.windows.media.imaging.BitmapCacheOption;
 import system.Uri;
 import system.net.cache.RequestCachePolicy;
 import system.windows.media.imaging.BitmapMetadata;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.media.imaging.InPlaceBitmapMetadataWriter;
 import system.windows.media.imaging.BitmapDecoder;
 
@@ -62,7 +63,7 @@ import system.windows.media.imaging.BitmapDecoder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BitmapFrame extends BitmapSource  {
+public class BitmapFrame extends system.windows.media.imaging.BitmapSource  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -251,6 +252,21 @@ public class BitmapFrame extends BitmapSource  {
         }
     }
 
+    public static BitmapFrame Create(BitmapSource source, BitmapSource thumbnail, BitmapMetadata metadata, ReadOnlyCollection_1 colorContexts) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", source == null ? null : source.getJCOInstance(), thumbnail == null ? null : thumbnail.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance(), colorContexts == null ? null : colorContexts.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new BitmapFrame(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static BitmapFrame Create(BitmapSource source, BitmapSource thumbnail) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -300,6 +316,21 @@ public class BitmapFrame extends BitmapSource  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getColorContexts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColorContexts = null;
+        try {
+            retObjectColorContexts = classInstance.Get("ColorContexts");
+            JCObject val = (JCObject)retObjectColorContexts;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColorContexts != null ? retObjectColorContexts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

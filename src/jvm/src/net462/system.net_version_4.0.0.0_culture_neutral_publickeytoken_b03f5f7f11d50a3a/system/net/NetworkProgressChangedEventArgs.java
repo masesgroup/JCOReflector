@@ -53,7 +53,7 @@ import system.componentmodel.ProgressChangedEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NetworkProgressChangedEventArgs extends ProgressChangedEventArgs  {
+public class NetworkProgressChangedEventArgs extends system.componentmodel.ProgressChangedEventArgs  {
     /**
      * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

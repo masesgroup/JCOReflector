@@ -39,7 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.presentation.PublishServiceCallback;
+import system.activities.presentation.PublishServiceCallback_1;
 import system.activities.presentation.SubscribeServiceCallback;
+import system.activities.presentation.SubscribeServiceCallback_1;
 
 
 /**
@@ -167,6 +169,20 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    public <TServiceType extends IJCOBridgeReflected> boolean Contains() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
+        try {
+            retObjectContains = classInstance.Invoke("Contains");
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,6 +218,26 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    public <TServiceType extends IJCOBridgeReflected> void Publish(PublishServiceCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Publish", callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TServiceType extends IJCOBridgeReflected> void Publish(TServiceType serviceInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Publish", serviceInstance == null ? null : ((IJCOBridgeReflected)serviceInstance).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Subscribe(NetType serviceType, SubscribeServiceCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -212,11 +248,31 @@ public class ServiceManager extends NetObjectEnumerable  {
         }
     }
 
+    public <TServiceType extends IJCOBridgeReflected> void Subscribe(SubscribeServiceCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Subscribe", callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Unsubscribe(NetType serviceType, SubscribeServiceCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unsubscribe", serviceType == null ? null : serviceType.getJCOInstance(), callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TServiceType extends IJCOBridgeReflected> void Unsubscribe(SubscribeServiceCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Unsubscribe", callback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

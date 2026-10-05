@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.controls.primitives.ButtonBase;
+import system.Nullable_1;
 import system.windows.ComponentResourceKey;
 import system.windows.controls.DataGridColumn;
 import system.windows.media.Brush;
@@ -57,7 +58,7 @@ import system.windows.Visibility;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridColumnHeader extends ButtonBase  {
+public class DataGridColumnHeader extends system.windows.controls.primitives.ButtonBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -241,6 +242,21 @@ public class DataGridColumnHeader extends ButtonBase  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getSortDirection() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDirection = null;
+        try {
+            retObjectSortDirection = classInstance.Get("SortDirection");
+            JCObject val = (JCObject)retObjectSortDirection;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortDirection != null ? retObjectSortDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

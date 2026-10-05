@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.syndication.CategoriesDocument;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -53,7 +56,7 @@ import system.servicemodel.syndication.CategoriesDocument;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InlineCategoriesDocument extends CategoriesDocument  {
+public class InlineCategoriesDocument extends system.servicemodel.syndication.CategoriesDocument  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +159,26 @@ public class InlineCategoriesDocument extends CategoriesDocument  {
         }
     }
 
+    public InlineCategoriesDocument(IEnumerable_1 categories) throws Throwable, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(categories == null ? null : categories.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InlineCategoriesDocument(IEnumerable_1 categories, boolean isFixed, java.lang.String scheme) throws Throwable, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(categories == null ? null : categories.getJCOInstance(), isFixed, scheme));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -183,6 +206,21 @@ public class InlineCategoriesDocument extends CategoriesDocument  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFixed", IsFixed);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getCategories() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategories = null;
+        try {
+            retObjectCategories = classInstance.Get("Categories");
+            JCObject val = (JCObject)retObjectCategories;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategories != null ? retObjectCategories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

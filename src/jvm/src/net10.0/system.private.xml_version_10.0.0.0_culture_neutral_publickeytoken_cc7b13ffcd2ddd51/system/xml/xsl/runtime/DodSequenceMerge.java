@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xml.xsl.runtime.XmlQueryRuntime;
 
 
@@ -54,7 +56,7 @@ import system.xml.xsl.runtime.XmlQueryRuntime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DodSequenceMerge extends ValueType  {
+public class DodSequenceMerge extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -155,6 +157,31 @@ public class DodSequenceMerge extends ValueType  {
     
     // Methods section
     
+    public IList_1 MergeSequences() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMergeSequences = null;
+        try {
+            retObjectMergeSequences = classInstance.Invoke("MergeSequences");
+            JCObject objMergeSequences = (JCObject)retObjectMergeSequences;
+            return new IList_1Implementation(objMergeSequences);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMergeSequences != null ? retObjectMergeSequences.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddSequence(IList_1 sequence) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddSequence", sequence == null ? null : sequence.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Create(XmlQueryRuntime runtime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

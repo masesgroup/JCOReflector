@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.TimeSpan;
 import system.servicemodel.security.tokens.SecurityContextSecurityToken;
+import system.collections.objectmodel.Collection_1;
 import system.xml.UniqueId;
 import system.DateTime;
 
@@ -57,7 +58,7 @@ import system.DateTime;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SecurityContextSecurityTokenResolver extends SecurityTokenResolver  {
+public class SecurityContextSecurityTokenResolver extends system.identitymodel.selectors.SecurityTokenResolver  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -187,6 +188,21 @@ public class SecurityContextSecurityTokenResolver extends SecurityTokenResolver 
             return (boolean)retObjectTryAddContext;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAddContext != null ? retObjectTryAddContext.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 GetAllContexts(UniqueId contextId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllContexts = null;
+        try {
+            retObjectGetAllContexts = classInstance.Invoke("GetAllContexts", contextId == null ? null : contextId.getJCOInstance());
+            JCObject objGetAllContexts = (JCObject)retObjectGetAllContexts;
+            return new Collection_1(objGetAllContexts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllContexts != null ? retObjectGetAllContexts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

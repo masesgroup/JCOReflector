@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.IComparable;
 import system.IComparableImplementation;
 import system.Guid;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -200,6 +202,21 @@ public class MessageEventSubscription extends NetObject  {
     
     // Properties section
     
+    public ICollection_1 getCorrelationProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationProperties = null;
+        try {
+            retObjectCorrelationProperties = classInstance.Get("CorrelationProperties");
+            JCObject val = (JCObject)retObjectCorrelationProperties;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationProperties != null ? retObjectCorrelationProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getSubscriptionId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

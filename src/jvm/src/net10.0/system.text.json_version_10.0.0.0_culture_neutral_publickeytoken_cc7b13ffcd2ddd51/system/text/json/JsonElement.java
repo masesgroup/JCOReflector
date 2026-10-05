@@ -49,7 +49,6 @@ import system.Single;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
-import system.text.json.Utf8JsonReader;
 import system.text.json.JsonDocumentOptions;
 import system.text.json.Utf8JsonWriter;
 import system.text.json.JsonValueKind;
@@ -67,7 +66,7 @@ import system.text.json.JsonValueKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JsonElement extends ValueType  {
+public class JsonElement extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Text.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -895,21 +894,6 @@ public class JsonElement extends ValueType  {
             return new JsonElement(objParse);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static JsonElement ParseValue(JCORefOut<Utf8JsonReader> reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.RankException, system.NullReferenceException, system.NotSupportedException {
-        if (classType == null)
-            throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectParseValue = null;
-        try {
-            retObjectParseValue = classType.Invoke("ParseValue", reader.getJCRefOut());
-            JCObject objParseValue = (JCObject)retObjectParseValue;
-            return new JsonElement(objParseValue);
-        } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseValue != null ? retObjectParseValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

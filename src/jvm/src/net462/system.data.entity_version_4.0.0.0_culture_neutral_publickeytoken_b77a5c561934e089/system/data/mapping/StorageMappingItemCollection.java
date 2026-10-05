@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.data.mapping.MappingItemCollection;
 import system.data.metadata.edm.EdmItemCollection;
 import system.data.metadata.edm.StoreItemCollection;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.data.metadata.edm.StoreItemCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StorageMappingItemCollection extends MappingItemCollection  {
+public class StorageMappingItemCollection extends system.data.mapping.MappingItemCollection  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -149,6 +151,16 @@ public class StorageMappingItemCollection extends MappingItemCollection  {
     // Constructors section
     
     public StorageMappingItemCollection() throws Throwable {
+    }
+
+    public StorageMappingItemCollection(EdmItemCollection edmCollection, StoreItemCollection storeCollection, IEnumerable_1 xmlReaders) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.xml.XmlException, system.MulticastNotSupportedException, system.data.EntitySqlException, system.configuration.ConfigurationErrorsException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(edmCollection == null ? null : edmCollection.getJCOInstance(), storeCollection == null ? null : storeCollection.getJCOInstance(), xmlReaders == null ? null : xmlReaders.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
     public StorageMappingItemCollection(EdmItemCollection edmCollection, StoreItemCollection storeCollection, java.lang.String... filePaths) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.MetadataException, system.NotImplementedException, system.io.FileNotFoundException, system.NullReferenceException, system.MemberAccessException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.MappingException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.xml.XmlException, system.MulticastNotSupportedException, system.data.EntitySqlException, system.configuration.ConfigurationErrorsException {

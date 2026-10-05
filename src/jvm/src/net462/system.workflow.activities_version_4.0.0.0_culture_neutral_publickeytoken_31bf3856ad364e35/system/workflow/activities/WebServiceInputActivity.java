@@ -40,14 +40,15 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.ActivityExecutionContext;
+import system.workflow.componentmodel.IActivityEventListener_1;
+import system.workflow.componentmodel.IActivityEventListener_1Implementation;
+import system.workflow.componentmodel.QueueEventArgs;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.workflow.componentmodel.compiler.AccessTypes;
 import system.workflow.activities.WorkflowRoleCollection;
 import system.workflow.componentmodel.WorkflowParameterBindingCollection;
 import system.EventHandler;
-import system.workflow.componentmodel.IDynamicPropertyTypeProvider;
-import system.workflow.componentmodel.IDynamicPropertyTypeProviderImplementation;
 
 
 /**
@@ -62,7 +63,7 @@ import system.workflow.componentmodel.IDynamicPropertyTypeProviderImplementation
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebServiceInputActivity extends Activity implements IDynamicPropertyTypeProvider {
+public class WebServiceInputActivity extends system.workflow.componentmodel.Activity  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -179,6 +180,33 @@ public class WebServiceInputActivity extends Activity implements IDynamicPropert
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventActivity method available in IEventActivity to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Subscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventActivity to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventActivity method available in IEventActivity to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Unsubscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventActivity to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIActivityEventListener_1 method available in IActivityEventListener_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnEvent(NetObject sender, QueueEventArgs e) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIActivityEventListener_1 to obtain the full interface.");
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDynamicPropertyTypeProvider method available in IDynamicPropertyTypeProvider to obtain an object with an invocable method

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.diagnostics.tracing.DiagnosticCounter;
 import system.diagnostics.tracing.EventSource;
+import system.Func_1;
 import system.TimeSpan;
 
 
@@ -55,7 +56,7 @@ import system.TimeSpan;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IncrementingPollingCounter extends DiagnosticCounter  {
+public class IncrementingPollingCounter extends system.diagnostics.tracing.DiagnosticCounter  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -149,6 +150,16 @@ public class IncrementingPollingCounter extends DiagnosticCounter  {
     // Constructors section
     
     public IncrementingPollingCounter() throws Throwable {
+    }
+
+    public IncrementingPollingCounter(java.lang.String name, EventSource eventSource, Func_1 totalValueProvider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, eventSource == null ? null : eventSource.getJCOInstance(), totalValueProvider));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

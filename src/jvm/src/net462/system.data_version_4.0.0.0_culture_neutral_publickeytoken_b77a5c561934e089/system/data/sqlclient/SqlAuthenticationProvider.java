@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.data.sqlclient.SqlAuthenticationMethod;
 import system.data.sqlclient.SqlAuthenticationProvider;
+import system.threading.tasks.Task_1;
+import system.data.sqlclient.SqlAuthenticationParameters;
 
 
 /**
@@ -191,6 +193,21 @@ public class SqlAuthenticationProvider extends NetObject  {
             return new SqlAuthenticationProvider(objGetProvider);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProvider != null ? retObjectGetProvider.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AcquireTokenAsync(SqlAuthenticationParameters parameters) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireTokenAsync = null;
+        try {
+            retObjectAcquireTokenAsync = classInstance.Invoke("AcquireTokenAsync", parameters == null ? null : parameters.getJCOInstance());
+            JCObject objAcquireTokenAsync = (JCObject)retObjectAcquireTokenAsync;
+            return new Task_1(objAcquireTokenAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcquireTokenAsync != null ? retObjectAcquireTokenAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

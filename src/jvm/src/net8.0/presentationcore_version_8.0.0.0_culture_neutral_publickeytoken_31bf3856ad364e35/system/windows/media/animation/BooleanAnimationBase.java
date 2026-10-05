@@ -55,7 +55,7 @@ import system.windows.media.animation.BooleanAnimationBase;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BooleanAnimationBase extends AnimationTimeline  {
+public class BooleanAnimationBase extends system.windows.media.animation.AnimationTimeline  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

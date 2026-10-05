@@ -53,7 +53,7 @@ import system.transactions.Enlistment;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SinglePhaseEnlistment extends Enlistment  {
+public class SinglePhaseEnlistment extends system.transactions.Enlistment  {
     /**
      * Fully assembly qualified name: System.Transactions.Local, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

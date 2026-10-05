@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.data.objects.ObjectResult_1;
 import system.collections.IList;
 import system.collections.IListImplementation;
 
@@ -153,6 +154,21 @@ public class ObjectResult extends NetObjectEnumerable implements AutoCloseable {
     
     // Methods section
     
+    public <TElement extends IJCOBridgeReflected> ObjectResult_1 GetNextResult() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextResult = null;
+        try {
+            retObjectGetNextResult = classInstance.Invoke("GetNextResult");
+            JCObject objGetNextResult = (JCObject)retObjectGetNextResult;
+            return new ObjectResult_1(objGetNextResult);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextResult != null ? retObjectGetNextResult.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

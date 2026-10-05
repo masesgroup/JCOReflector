@@ -42,9 +42,11 @@ import system.servicemodel.syndication.CategoriesDocument;
 import system.xml.XmlReader;
 import system.servicemodel.syndication.CategoriesDocumentFormatter;
 import system.servicemodel.syndication.InlineCategoriesDocument;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.syndication.ReferencedCategoriesDocument;
 import system.Uri;
 import system.xml.XmlWriter;
+import system.collections.generic.Dictionary_2;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
 
 
@@ -189,6 +191,36 @@ public class CategoriesDocument extends NetObject  {
         }
     }
 
+    public static InlineCategoriesDocument Create(Collection_1 categories) throws Throwable, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", categories == null ? null : categories.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new InlineCategoriesDocument(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static InlineCategoriesDocument Create(Collection_1 categories, boolean isFixed, java.lang.String scheme) throws Throwable, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", categories == null ? null : categories.getJCOInstance(), isFixed, scheme);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new InlineCategoriesDocument(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ReferencedCategoriesDocument Create(Uri linkToCategoriesDocument) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -218,6 +250,21 @@ public class CategoriesDocument extends NetObject  {
     
     // Properties section
     
+    public Dictionary_2 getAttributeExtensions() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributeExtensions = null;
+        try {
+            retObjectAttributeExtensions = classInstance.Get("AttributeExtensions");
+            JCObject val = (JCObject)retObjectAttributeExtensions;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributeExtensions != null ? retObjectAttributeExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -54,7 +54,7 @@ import system.windows.controls.primitives.DataGridColumnHeadersPresenter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridColumnHeadersPresenterAutomationPeer extends ItemsControlAutomationPeer  {
+public class DataGridColumnHeadersPresenterAutomationPeer extends system.windows.automation.peers.ItemsControlAutomationPeer  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

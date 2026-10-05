@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.IDataObject;
+import system.windows.IDataObjectImplementation;
+import system.Func_2;
 
 
 /**
@@ -151,6 +154,62 @@ public class DataObjectExtensions extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, java.lang.String format, boolean autoConvert, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classType.Invoke("TryGetData", dataObject == null ? null : dataObject.getJCOInstance(), format, autoConvert, data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classType.Invoke("TryGetData", dataObject == null ? null : dataObject.getJCOInstance(), format, resolver, autoConvert, data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, java.lang.String format, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classType.Invoke("TryGetData", dataObject == null ? null : dataObject.getJCOInstance(), format, data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classType.Invoke("TryGetData", dataObject == null ? null : dataObject.getJCOInstance(), data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -44,6 +44,9 @@ import system.xml.XmlNameTable;
 import system.xml.XmlNodeType;
 import system.xml.XmlParserContext;
 import system.io.TextReader;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.xml.XmlNamespaceScope;
 import system.text.Encoding;
 import system.xml.DtdProcessing;
 import system.xml.EntityHandling;
@@ -65,7 +68,7 @@ import system.xml.XmlSpace;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlTextReader extends XmlReader  {
+public class XmlTextReader extends system.xml.XmlReader  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -953,6 +956,21 @@ public class XmlTextReader extends XmlReader  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 GetNamespacesInScope(XmlNamespaceScope scope) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespacesInScope = null;
+        try {
+            retObjectGetNamespacesInScope = classInstance.Invoke("GetNamespacesInScope", scope == null ? null : scope.getJCOInstance());
+            JCObject objGetNamespacesInScope = (JCObject)retObjectGetNamespacesInScope;
+            return new IDictionary_2Implementation(objGetNamespacesInScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespacesInScope != null ? retObjectGetNamespacesInScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

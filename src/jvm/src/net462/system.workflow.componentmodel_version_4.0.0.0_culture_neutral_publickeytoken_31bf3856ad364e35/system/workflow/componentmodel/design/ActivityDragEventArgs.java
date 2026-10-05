@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.DragEventArgs;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.drawing.Point;
 
 
@@ -54,7 +55,7 @@ import system.drawing.Point;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityDragEventArgs extends DragEventArgs  {
+public class ActivityDragEventArgs extends system.windows.forms.DragEventArgs  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -159,6 +160,21 @@ public class ActivityDragEventArgs extends DragEventArgs  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getActivities() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivities = null;
+        try {
+            retObjectActivities = classInstance.Get("Activities");
+            JCObject val = (JCObject)retObjectActivities;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivities != null ? retObjectActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Point getDragImageSnapPoint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

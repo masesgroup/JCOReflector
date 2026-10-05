@@ -53,7 +53,7 @@ import system.security.cryptography.HMAC;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HMACSHA512 extends HMAC  {
+public class HMACSHA512 extends system.security.cryptography.HMAC  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

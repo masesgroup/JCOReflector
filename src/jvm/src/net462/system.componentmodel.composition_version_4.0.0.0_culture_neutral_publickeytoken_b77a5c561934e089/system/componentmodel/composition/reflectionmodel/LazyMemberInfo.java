@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.reflection.MemberInfo;
 import system.reflection.MemberTypes;
+import system.Func_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.reflection.MemberTypes;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class LazyMemberInfo extends ValueType  {
+public class LazyMemberInfo extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +157,16 @@ public class LazyMemberInfo extends ValueType  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(member == null ? null : member.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public LazyMemberInfo(MemberTypes memberType, Func_1 accessorsCreator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(memberType == null ? null : memberType.getJCOInstance(), accessorsCreator));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

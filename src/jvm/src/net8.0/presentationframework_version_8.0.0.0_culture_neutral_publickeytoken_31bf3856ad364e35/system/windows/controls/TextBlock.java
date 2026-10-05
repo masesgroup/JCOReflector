@@ -51,6 +51,8 @@ import system.windows.LineStackingStrategy;
 import system.windows.media.Brush;
 import system.windows.media.FontFamily;
 import system.windows.TextAlignment;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.ContentElement;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.UIElement;
@@ -62,10 +64,6 @@ import system.windows.TextDecorationCollection;
 import system.windows.TextTrimming;
 import system.windows.TextWrapping;
 import system.windows.Thickness;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
-import system.IServiceProvider;
-import system.IServiceProviderImplementation;
 
 
 /**
@@ -80,7 +78,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextBlock extends FrameworkElement implements IAddChild, IServiceProvider {
+public class TextBlock extends system.windows.FrameworkElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -577,6 +575,15 @@ public class TextBlock extends FrameworkElement implements IAddChild, IServicePr
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContentHost method available in IContentHost to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ReadOnlyCollection_1 GetRectangles(ContentElement child) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContentHost to obtain the full interface.");
     }
 
     /**

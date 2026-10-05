@@ -37,7 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.linq.expressions.Expression;
+import system.activities.ActivityContext;
 
 
 /**
@@ -116,6 +119,16 @@ public interface ICompiledExpressionRoot extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean CanExecuteExpression(java.lang.String expressionText, boolean isReference, IList_1 locations, JCORefOut<java.util.concurrent.atomic.AtomicInteger> expressionId) throws Throwable;
+
+    public IList_1 GetRequiredLocations(int expressionId) throws Throwable;
+
+    public Expression GetExpressionTreeForExpression(int expressionId, IList_1 locationReferences) throws Throwable;
+
+    public NetObject InvokeExpression(int expressionId, IList_1 locations) throws Throwable;
+
+    public NetObject InvokeExpression(int expressionId, IList_1 locations, ActivityContext activityContext) throws Throwable;
+
     public java.lang.String GetLanguage() throws Throwable;
 
 

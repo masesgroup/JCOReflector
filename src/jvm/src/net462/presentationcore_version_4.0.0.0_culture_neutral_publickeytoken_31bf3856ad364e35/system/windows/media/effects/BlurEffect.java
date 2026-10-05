@@ -56,7 +56,7 @@ import system.windows.media.effects.RenderingBias;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BlurEffect extends Effect  {
+public class BlurEffect extends system.windows.media.effects.Effect  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

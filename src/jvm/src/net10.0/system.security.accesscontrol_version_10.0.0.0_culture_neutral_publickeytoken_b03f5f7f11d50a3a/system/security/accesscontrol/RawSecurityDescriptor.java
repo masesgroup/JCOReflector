@@ -56,7 +56,7 @@ import system.security.accesscontrol.RawAcl;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
+public class RawSecurityDescriptor extends system.security.accesscontrol.GenericSecurityDescriptor  {
     /**
      * Fully assembly qualified name: System.Security.AccessControl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

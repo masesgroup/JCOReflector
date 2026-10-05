@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.EventInfo;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.reflection.MethodInfo;
 import system.reflection.EventAttributes;
 import system.reflection.Module;
@@ -56,7 +58,7 @@ import system.reflection.Module;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ComAwareEventInfo extends EventInfo  {
+public class ComAwareEventInfo extends system.reflection.EventInfo  {
     /**
      * Fully assembly qualified name: System.Runtime.InteropServices, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -176,6 +178,21 @@ public class ComAwareEventInfo extends EventInfo  {
             return (boolean)retObjectIsDefined;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetCustomAttributesData() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributesData = null;
+        try {
+            retObjectGetCustomAttributesData = classInstance.Invoke("GetCustomAttributesData");
+            JCObject objGetCustomAttributesData = (JCObject)retObjectGetCustomAttributesData;
+            return new IList_1Implementation(objGetCustomAttributesData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributesData != null ? retObjectGetCustomAttributesData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

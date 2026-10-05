@@ -53,7 +53,7 @@ import system.EventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ErrorEventArgs extends EventArgs  {
+public class ErrorEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.IO.FileSystem.Watcher, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

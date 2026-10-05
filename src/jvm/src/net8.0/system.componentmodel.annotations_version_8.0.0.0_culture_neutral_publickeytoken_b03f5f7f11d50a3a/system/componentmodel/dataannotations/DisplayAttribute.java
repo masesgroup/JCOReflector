@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Attribute;
+import system.Nullable_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DisplayAttribute extends Attribute  {
+public class DisplayAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Annotations, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -160,6 +161,51 @@ public class DisplayAttribute extends Attribute  {
     
     // Methods section
     
+    public Nullable_1 GetAutoGenerateField() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAutoGenerateField = null;
+        try {
+            retObjectGetAutoGenerateField = classInstance.Invoke("GetAutoGenerateField");
+            JCObject objGetAutoGenerateField = (JCObject)retObjectGetAutoGenerateField;
+            return new Nullable_1(objGetAutoGenerateField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAutoGenerateField != null ? retObjectGetAutoGenerateField.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetAutoGenerateFilter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAutoGenerateFilter = null;
+        try {
+            retObjectGetAutoGenerateFilter = classInstance.Invoke("GetAutoGenerateFilter");
+            JCObject objGetAutoGenerateFilter = (JCObject)retObjectGetAutoGenerateFilter;
+            return new Nullable_1(objGetAutoGenerateFilter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAutoGenerateFilter != null ? retObjectGetAutoGenerateFilter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 GetOrder() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrder = null;
+        try {
+            retObjectGetOrder = classInstance.Invoke("GetOrder");
+            JCObject objGetOrder = (JCObject)retObjectGetOrder;
+            return new Nullable_1(objGetOrder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrder != null ? retObjectGetOrder.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetDescription() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

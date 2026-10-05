@@ -41,11 +41,10 @@ import java.util.ArrayList;
 import system.workflow.componentmodel.design.ConnectionPoint;
 import system.drawing.Point;
 import system.drawing.Size;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.drawing.Rectangle;
 import system.windows.forms.AccessibleObject;
 import system.workflow.componentmodel.design.FreeformActivityDesigner;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -60,7 +59,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Connector extends NetObject implements IDisposable, AutoCloseable {
+public class Connector extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -240,6 +239,21 @@ public class Connector extends NetObject implements IDisposable, AutoCloseable {
             return (boolean)retObjectConnectorModified;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConnectorModified != null ? retObjectConnectorModified.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getConnectorSegments() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectorSegments = null;
+        try {
+            retObjectConnectorSegments = classInstance.Get("ConnectorSegments");
+            JCObject val = (JCObject)retObjectConnectorSegments;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectorSegments != null ? retObjectConnectorSegments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

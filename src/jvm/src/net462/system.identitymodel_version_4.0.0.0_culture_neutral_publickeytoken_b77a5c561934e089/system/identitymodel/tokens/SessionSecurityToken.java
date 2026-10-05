@@ -40,12 +40,14 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.SecurityToken;
 import system.security.claims.ClaimsPrincipal;
+import system.Nullable_1;
 import system.TimeSpan;
 import system.xml.UniqueId;
 import system.DateTime;
 import system.identitymodel.tokens.SymmetricSecurityKey;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.Uri;
 
 
@@ -61,7 +63,7 @@ import system.Uri;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SessionSecurityToken extends SecurityToken  {
+public class SessionSecurityToken extends system.identitymodel.tokens.SecurityToken  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -177,6 +179,26 @@ public class SessionSecurityToken extends SecurityToken  {
         }
     }
 
+    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, java.lang.String context, Nullable_1 validFrom, Nullable_1 validTo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(claimsPrincipal == null ? null : claimsPrincipal.getJCOInstance(), context, validFrom == null ? null : validFrom.getJCOInstance(), validTo == null ? null : validTo.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, java.lang.String context, java.lang.String endpointId, Nullable_1 validFrom, Nullable_1 validTo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(claimsPrincipal == null ? null : claimsPrincipal.getJCOInstance(), context, endpointId, validFrom == null ? null : validFrom.getJCOInstance(), validTo == null ? null : validTo.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, TimeSpan lifetime) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -192,6 +214,16 @@ public class SessionSecurityToken extends SecurityToken  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(claimsPrincipal == null ? null : claimsPrincipal.getJCOInstance(), contextId == null ? null : contextId.getJCOInstance(), context, endpointId, validFrom == null ? null : validFrom.getJCOInstance(), lifetime == null ? null : lifetime.getJCOInstance(), key == null ? null : key.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, UniqueId contextId, java.lang.String context, java.lang.String endpointId, Nullable_1 validFrom, Nullable_1 validTo, SymmetricSecurityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ApplicationException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotImplementedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(claimsPrincipal == null ? null : claimsPrincipal.getJCOInstance(), contextId == null ? null : contextId.getJCOInstance(), context, endpointId, validFrom == null ? null : validFrom.getJCOInstance(), validTo == null ? null : validTo.getJCOInstance(), key == null ? null : key.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

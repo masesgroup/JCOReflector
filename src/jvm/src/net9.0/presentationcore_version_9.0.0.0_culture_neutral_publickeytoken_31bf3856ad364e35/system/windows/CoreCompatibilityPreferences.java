@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Nullable_1;
 
 
 /**
@@ -174,6 +175,31 @@ public class CoreCompatibilityPreferences extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("IsAltKeyRequiredInAccessKeyDefaultScope", IsAltKeyRequiredInAccessKeyDefaultScope);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Nullable_1 getEnableMultiMonitorDisplayClipping() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnableMultiMonitorDisplayClipping = null;
+        try {
+            retObjectEnableMultiMonitorDisplayClipping = classType.Get("EnableMultiMonitorDisplayClipping");
+            JCObject val = (JCObject)retObjectEnableMultiMonitorDisplayClipping;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnableMultiMonitorDisplayClipping != null ? retObjectEnableMultiMonitorDisplayClipping.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void setEnableMultiMonitorDisplayClipping(Nullable_1 EnableMultiMonitorDisplayClipping) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Set("EnableMultiMonitorDisplayClipping", EnableMultiMonitorDisplayClipping == null ? null : EnableMultiMonitorDisplayClipping.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

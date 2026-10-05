@@ -40,7 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.activities.presentation.ICompositeView;
 import system.activities.presentation.ICompositeViewImplementation;
+import system.collections.generic.List_1;
 import system.activities.presentation.model.ModelItem;
+import system.windows.Point;
+import system.activities.presentation.WorkflowViewElement;
 import system.activities.presentation.view.TypeResolvingOptions;
 
 
@@ -144,11 +147,100 @@ public class IMultipleDragEnabledCompositeViewImplementation extends NetObject i
 
     // Methods section
     
+    public boolean CanPasteItems(List_1 itemsToPaste) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanPasteItems = null;
+        try {
+            retObjectCanPasteItems = classInstance.Invoke("CanPasteItems", itemsToPaste == null ? null : itemsToPaste.getJCOInstance());
+            return (boolean)retObjectCanPasteItems;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanPasteItems != null ? retObjectCanPasteItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 SortSelectedItems(List_1 selectedItems) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortSelectedItems = null;
+        try {
+            retObjectSortSelectedItems = classInstance.Invoke("SortSelectedItems", selectedItems == null ? null : selectedItems.getJCOInstance());
+            JCObject objSortSelectedItems = (JCObject)retObjectSortSelectedItems;
+            return new List_1(objSortSelectedItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortSelectedItems != null ? retObjectSortSelectedItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject OnItemsCopied(List_1 itemsToCopy) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnItemsCopied = null;
+        try {
+            retObjectOnItemsCopied = classInstance.Invoke("OnItemsCopied", itemsToCopy == null ? null : itemsToCopy.getJCOInstance());
+            JCObject objOnItemsCopied = (JCObject)retObjectOnItemsCopied;
+            return new NetObject(objOnItemsCopied);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnItemsCopied != null ? retObjectOnItemsCopied.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject OnItemsCut(List_1 itemsToCut) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnItemsCut = null;
+        try {
+            retObjectOnItemsCut = classInstance.Invoke("OnItemsCut", itemsToCut == null ? null : itemsToCut.getJCOInstance());
+            JCObject objOnItemsCut = (JCObject)retObjectOnItemsCut;
+            return new NetObject(objOnItemsCut);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnItemsCut != null ? retObjectOnItemsCut.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void OnItemMoved(ModelItem modelItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnItemMoved", modelItem == null ? null : modelItem.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void OnItemsDelete(List_1 itemsToDelete) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnItemsDelete", itemsToDelete == null ? null : itemsToDelete.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void OnItemsMoved(List_1 movedItems) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnItemsMoved", movedItems == null ? null : movedItems.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void OnItemsPasted(List_1 itemsToPaste, List_1 metadata, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnItemsPasted", itemsToPaste == null ? null : itemsToPaste.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance(), pastePoint == null ? null : pastePoint.getJCOInstance(), pastePointReference == null ? null : pastePointReference.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

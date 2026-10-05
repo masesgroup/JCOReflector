@@ -43,6 +43,7 @@ import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.text.StringBuilder;
 import system.threading.tasks.Task;
+import system.ReadOnlyMemory_1;
 import system.threading.CancellationToken;
 import system.text.Encoding;
 
@@ -59,7 +60,7 @@ import system.text.Encoding;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StringWriter extends TextWriter  {
+public class StringWriter extends system.io.TextWriter  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -271,6 +272,21 @@ public class StringWriter extends TextWriter  {
         }
     }
 
+    public Task WriteAsync(ReadOnlyMemory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteAsync = null;
+        try {
+            retObjectWriteAsync = classInstance.Invoke("WriteAsync", buffer == null ? null : buffer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objWriteAsync = (JCObject)retObjectWriteAsync;
+            return new Task(objWriteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAsync != null ? retObjectWriteAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Task WriteAsync(java.lang.String value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -337,6 +353,21 @@ public class StringWriter extends TextWriter  {
         java.lang.Object retObjectWriteLineAsync = null;
         try {
             retObjectWriteLineAsync = classInstance.Invoke("WriteLineAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objWriteLineAsync = (JCObject)retObjectWriteLineAsync;
+            return new Task(objWriteLineAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteLineAsync != null ? retObjectWriteLineAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task WriteLineAsync(ReadOnlyMemory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteLineAsync = null;
+        try {
+            retObjectWriteLineAsync = classInstance.Invoke("WriteLineAsync", buffer == null ? null : buffer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
             JCObject objWriteLineAsync = (JCObject)retObjectWriteLineAsync;
             return new Task(objWriteLineAsync);
         } catch (java.lang.ClassCastException cce) {

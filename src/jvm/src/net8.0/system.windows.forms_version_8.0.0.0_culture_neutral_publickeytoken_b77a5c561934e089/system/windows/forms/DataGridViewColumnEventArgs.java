@@ -54,7 +54,7 @@ import system.windows.forms.DataGridViewColumn;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridViewColumnEventArgs extends EventArgs  {
+public class DataGridViewColumnEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

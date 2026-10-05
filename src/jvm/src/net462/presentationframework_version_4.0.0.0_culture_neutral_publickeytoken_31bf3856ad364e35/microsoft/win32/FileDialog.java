@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.win32.CommonDialog;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.componentmodel.CancelEventHandler;
 
 
@@ -54,7 +56,7 @@ import system.componentmodel.CancelEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FileDialog extends CommonDialog  {
+public class FileDialog extends microsoft.win32.CommonDialog  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -356,6 +358,31 @@ public class FileDialog extends CommonDialog  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterIndex", FilterIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getCustomPlaces() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomPlaces = null;
+        try {
+            retObjectCustomPlaces = classInstance.Get("CustomPlaces");
+            JCObject val = (JCObject)retObjectCustomPlaces;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomPlaces != null ? retObjectCustomPlaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCustomPlaces(IList_1 CustomPlaces) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CustomPlaces", CustomPlaces == null ? null : CustomPlaces.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

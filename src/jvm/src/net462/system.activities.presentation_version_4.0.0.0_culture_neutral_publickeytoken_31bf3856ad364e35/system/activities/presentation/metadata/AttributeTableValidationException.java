@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
@@ -165,6 +167,26 @@ public class AttributeTableValidationException extends NetException {
 
     // Constructors section
     
+    public AttributeTableValidationException(java.lang.String message, IEnumerable_1 validationErrors) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, validationErrors == null ? null : validationErrors.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AttributeTableValidationException(java.lang.String message, NetException inner, IEnumerable_1 validationErrors) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, inner == null ? null : inner.getJCOInstance(), validationErrors == null ? null : validationErrors.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -183,5 +205,20 @@ public class AttributeTableValidationException extends NetException {
     
     // Properties section
     
+    public IEnumerable_1 getValidationErrors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationErrors = null;
+        try {
+            retObjectValidationErrors = classInstance.Get("ValidationErrors");
+            JCObject val = (JCObject)retObjectValidationErrors;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationErrors != null ? retObjectValidationErrors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 }

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.Module;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.diagnostics.symbolstore.ISymbolDocumentWriter;
 import system.diagnostics.symbolstore.ISymbolDocumentWriterImplementation;
 import system.Guid;
@@ -57,6 +59,8 @@ import system.runtime.interopservices.CallingConvention;
 import system.runtime.interopservices.CharSet;
 import system.reflection.emit.MethodToken;
 import system.reflection.ConstructorInfo;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.MethodInfo;
 import system.reflection.emit.SignatureToken;
 import system.reflection.emit.SignatureHelper;
@@ -91,7 +95,7 @@ import system.reflection.Assembly;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ModuleBuilder extends Module  {
+public class ModuleBuilder extends system.reflection.Module  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -252,6 +256,21 @@ public class ModuleBuilder extends Module  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectResolveSignature != null ? retObjectResolveSignature.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetCustomAttributesData() throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributesData = null;
+        try {
+            retObjectGetCustomAttributesData = classInstance.Invoke("GetCustomAttributesData");
+            JCObject objGetCustomAttributesData = (JCObject)retObjectGetCustomAttributesData;
+            return new IList_1Implementation(objGetCustomAttributesData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributesData != null ? retObjectGetCustomAttributesData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,12 +513,42 @@ public class ModuleBuilder extends Module  {
         }
     }
 
+    public MethodToken GetConstructorToken(ConstructorInfo constructor, IEnumerable_1 optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConstructorToken = null;
+        try {
+            retObjectGetConstructorToken = classInstance.Invoke("GetConstructorToken", constructor == null ? null : constructor.getJCOInstance(), optionalParameterTypes == null ? null : optionalParameterTypes.getJCOInstance());
+            JCObject objGetConstructorToken = (JCObject)retObjectGetConstructorToken;
+            return new MethodToken(objGetConstructorToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConstructorToken != null ? retObjectGetConstructorToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodToken GetMethodToken(MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.MissingMethodException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMethodToken = null;
         try {
             retObjectGetMethodToken = classInstance.Invoke("GetMethodToken", method == null ? null : method.getJCOInstance());
+            JCObject objGetMethodToken = (JCObject)retObjectGetMethodToken;
+            return new MethodToken(objGetMethodToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodToken != null ? retObjectGetMethodToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodToken GetMethodToken(MethodInfo method, IEnumerable_1 optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethodToken = null;
+        try {
+            retObjectGetMethodToken = classInstance.Invoke("GetMethodToken", method == null ? null : method.getJCOInstance(), optionalParameterTypes == null ? null : optionalParameterTypes.getJCOInstance());
             JCObject objGetMethodToken = (JCObject)retObjectGetMethodToken;
             return new MethodToken(objGetMethodToken);
         } catch (java.lang.ClassCastException cce) {

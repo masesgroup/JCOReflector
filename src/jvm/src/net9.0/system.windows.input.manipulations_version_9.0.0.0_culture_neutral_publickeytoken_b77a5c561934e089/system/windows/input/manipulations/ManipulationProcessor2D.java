@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.windows.input.manipulations.Manipulations2D;
 import system.windows.input.manipulations.ManipulationPivot2D;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.input.manipulations.ManipulationParameters2D;
 import system.Single;
 
@@ -182,6 +184,16 @@ public class ManipulationProcessor2D extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompleteManipulation", timestamp);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ProcessManipulators(long timestamp, IEnumerable_1 manipulators) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ProcessManipulators", timestamp, manipulators == null ? null : manipulators.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

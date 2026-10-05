@@ -42,6 +42,9 @@ import system.xml.XmlReader;
 import system.io.Stream;
 import system.xml.XmlNodeType;
 import system.xml.XmlParserContext;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.xml.XmlNamespaceScope;
 import system.text.Encoding;
 import system.xml.EntityHandling;
 import system.xml.ReadState;
@@ -65,7 +68,7 @@ import system.xml.schema.ValidationEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlValidatingReader extends XmlReader  {
+public class XmlValidatingReader extends system.xml.XmlReader  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -741,6 +744,15 @@ public class XmlValidatingReader extends XmlReader  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlNamespaceResolver method available in IXmlNamespaceResolver to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IDictionary_2 GetNamespacesInScope(XmlNamespaceScope scope) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlNamespaceResolver to obtain the full interface.");
     }
 
     /**

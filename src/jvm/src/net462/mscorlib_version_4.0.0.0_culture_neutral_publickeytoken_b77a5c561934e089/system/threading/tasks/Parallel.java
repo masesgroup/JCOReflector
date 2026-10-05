@@ -39,7 +39,17 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.tasks.ParallelLoopResult;
+import system.Action_1;
+import system.Action_2;
 import system.threading.tasks.ParallelOptions;
+import system.Func_1;
+import system.Func_4;
+import system.collections.concurrent.OrderablePartitioner_1;
+import system.Func_5;
+import system.collections.concurrent.Partitioner_1;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.Action_3;
 import system.Action;
 
 
@@ -154,6 +164,486 @@ public class Parallel extends NetObject  {
     
     // Methods section
     
+    public static ParallelLoopResult For(int fromInclusive, int toExclusive, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, body);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParallelLoopResult For(int fromInclusive, int toExclusive, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, body);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParallelLoopResult For(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParallelLoopResult For(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParallelLoopResult For(long fromInclusive, long toExclusive, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, body);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParallelLoopResult For(long fromInclusive, long toExclusive, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, body);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParallelLoopResult For(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParallelLoopResult For(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TLocal extends IJCOBridgeReflected> ParallelLoopResult For(int fromInclusive, int toExclusive, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, localInit, body, localFinally);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TLocal extends IJCOBridgeReflected> ParallelLoopResult For(int fromInclusive, int toExclusive, ParallelOptions parallelOptions, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, parallelOptions == null ? null : parallelOptions.getJCOInstance(), localInit, body, localFinally);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TLocal extends IJCOBridgeReflected> ParallelLoopResult For(long fromInclusive, long toExclusive, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, localInit, body, localFinally);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TLocal extends IJCOBridgeReflected> ParallelLoopResult For(long fromInclusive, long toExclusive, ParallelOptions parallelOptions, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFor = null;
+        try {
+            retObjectFor = classType.Invoke("For", fromInclusive, toExclusive, parallelOptions == null ? null : parallelOptions.getJCOInstance(), localInit, body, localFinally);
+            JCObject objFor = (JCObject)retObjectFor;
+            return new ParallelLoopResult(objFor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFor != null ? retObjectFor.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(OrderablePartitioner_1 source, Func_1 localInit, Func_5 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), localInit, body, localFinally);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(OrderablePartitioner_1 source, ParallelOptions parallelOptions, Func_1 localInit, Func_5 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), localInit, body, localFinally);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), localInit, body, localFinally);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, ParallelOptions parallelOptions, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), localInit, body, localFinally);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), localInit, body, localFinally);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Func_1 localInit, Func_5 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), localInit, body, localFinally);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Func_1 localInit, Func_4 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), localInit, body, localFinally);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TLocal extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Func_1 localInit, Func_5 body, Action_1 localFinally) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), localInit, body, localFinally);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(OrderablePartitioner_1 source, Action_3 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(OrderablePartitioner_1 source, ParallelOptions parallelOptions, Action_3 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, Action_1 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, Action_2 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, ParallelOptions parallelOptions, Action_1 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(Partitioner_1 source, ParallelOptions parallelOptions, Action_2 body) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, Action_3 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Action_1 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Action_2 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ParallelLoopResult ForEach(IEnumerable_1 source, ParallelOptions parallelOptions, Action_3 body) throws Throwable, system.ArgumentNullException, system.OperationCanceledException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectForEach = null;
+        try {
+            retObjectForEach = classType.Invoke("ForEach", source == null ? null : source.getJCOInstance(), parallelOptions == null ? null : parallelOptions.getJCOInstance(), body);
+            JCObject objForEach = (JCObject)retObjectForEach;
+            return new ParallelLoopResult(objForEach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForEach != null ? retObjectForEach.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void Invoke(Action... actions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.AbandonedMutexException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

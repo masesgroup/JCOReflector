@@ -41,12 +41,16 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SamlSubjectStatement;
 import system.identitymodel.tokens.SamlSubject;
 import system.identitymodel.tokens.SamlAccessDecision;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SamlEvidence;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlDictionaryWriter;
-import system.identitymodel.tokens.SamlEvidence;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -61,7 +65,7 @@ import system.identitymodel.tokens.SamlEvidence;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SamlAuthorizationDecisionStatement extends SamlSubjectStatement  {
+public class SamlAuthorizationDecisionStatement extends system.identitymodel.tokens.SamlSubjectStatement  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -164,6 +168,26 @@ public class SamlAuthorizationDecisionStatement extends SamlSubjectStatement  {
         }
     }
 
+    public SamlAuthorizationDecisionStatement(SamlSubject samlSubject, java.lang.String resource, SamlAccessDecision accessDecision, IEnumerable_1 samlActions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(samlSubject == null ? null : samlSubject.getJCOInstance(), resource, accessDecision == null ? null : accessDecision.getJCOInstance(), samlActions == null ? null : samlActions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SamlAuthorizationDecisionStatement(SamlSubject samlSubject, java.lang.String resource, SamlAccessDecision accessDecision, IEnumerable_1 samlActions, SamlEvidence samlEvidence) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(samlSubject == null ? null : samlSubject.getJCOInstance(), resource, accessDecision == null ? null : accessDecision.getJCOInstance(), samlActions == null ? null : samlActions.getJCOInstance(), samlEvidence == null ? null : samlEvidence.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -202,6 +226,21 @@ public class SamlAuthorizationDecisionStatement extends SamlSubjectStatement  {
     
     // Properties section
     
+    public IList_1 getSamlActions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSamlActions = null;
+        try {
+            retObjectSamlActions = classInstance.Get("SamlActions");
+            JCObject val = (JCObject)retObjectSamlActions;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSamlActions != null ? retObjectSamlActions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SamlAccessDecision getAccessDecision() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

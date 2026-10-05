@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Guid;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -141,6 +142,21 @@ public class IStartWorkflowImplementation extends NetObject implements IStartWor
 
     // Methods section
     
+    public Guid StartWorkflow(NetType workflowType, Dictionary_2 namedArgumentValues) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartWorkflow = null;
+        try {
+            retObjectStartWorkflow = classInstance.Invoke("StartWorkflow", workflowType == null ? null : workflowType.getJCOInstance(), namedArgumentValues == null ? null : namedArgumentValues.getJCOInstance());
+            JCObject objStartWorkflow = (JCObject)retObjectStartWorkflow;
+            return new Guid(objStartWorkflow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartWorkflow != null ? retObjectStartWorkflow.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

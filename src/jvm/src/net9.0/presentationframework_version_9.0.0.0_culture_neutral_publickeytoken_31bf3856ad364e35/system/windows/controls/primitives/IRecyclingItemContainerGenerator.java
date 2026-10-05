@@ -60,7 +60,7 @@ import system.windows.DependencyObject;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IRecyclingItemContainerGenerator extends IJCOBridgeReflected, IItemContainerGenerator {
+public interface IRecyclingItemContainerGenerator extends IJCOBridgeReflected, system.windows.controls.primitives.IItemContainerGenerator {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

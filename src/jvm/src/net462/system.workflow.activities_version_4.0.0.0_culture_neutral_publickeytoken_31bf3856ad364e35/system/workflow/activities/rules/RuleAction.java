@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.activities.rules.RuleValidation;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.workflow.activities.rules.RuleAction;
 import system.workflow.activities.rules.RuleExecution;
 
@@ -163,6 +165,21 @@ public class RuleAction extends NetObject  {
             return (boolean)retObjectValidate;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 GetSideEffects(RuleValidation validation) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSideEffects = null;
+        try {
+            retObjectGetSideEffects = classInstance.Invoke("GetSideEffects", validation == null ? null : validation.getJCOInstance());
+            JCObject objGetSideEffects = (JCObject)retObjectGetSideEffects;
+            return new ICollection_1Implementation(objGetSideEffects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSideEffects != null ? retObjectGetSideEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

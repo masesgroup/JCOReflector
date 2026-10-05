@@ -37,10 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import microsoft.build.framework.ITask;
-import microsoft.build.framework.ITaskImplementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
+import microsoft.build.framework.ITask;
+import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.TaskPropertyInfo;
 
 
@@ -120,6 +122,8 @@ public interface ITaskFactory extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean Initialize(java.lang.String taskName, IDictionary_2 parameterGroup, java.lang.String taskBody, IBuildEngine taskFactoryLoggingHost) throws Throwable;
+
     public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable;
 
     public TaskPropertyInfo[] GetTaskParameters() throws Throwable;

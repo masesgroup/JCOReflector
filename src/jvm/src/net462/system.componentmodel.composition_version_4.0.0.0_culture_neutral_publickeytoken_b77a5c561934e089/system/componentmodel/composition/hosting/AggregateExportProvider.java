@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.composition.hosting.ExportProvider;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -53,7 +56,7 @@ import system.componentmodel.composition.hosting.ExportProvider;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AggregateExportProvider extends ExportProvider implements AutoCloseable {
+public class AggregateExportProvider extends system.componentmodel.composition.hosting.ExportProvider implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -149,6 +152,16 @@ public class AggregateExportProvider extends ExportProvider implements AutoClose
     public AggregateExportProvider() throws Throwable {
     }
 
+    public AggregateExportProvider(IEnumerable_1 providers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(providers == null ? null : providers.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AggregateExportProvider(ExportProvider... providers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException {
         try {
             // add reference to assemblyName.dll file
@@ -191,6 +204,21 @@ public class AggregateExportProvider extends ExportProvider implements AutoClose
     
     // Properties section
     
+    public ReadOnlyCollection_1 getProviders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviders = null;
+        try {
+            retObjectProviders = classInstance.Get("Providers");
+            JCObject val = (JCObject)retObjectProviders;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviders != null ? retObjectProviders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.commandtrees.DbExpression;
 import system.data.common.commandtrees.DbExpressionVisitor;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.data.metadata.edm.EdmFunction;
 
 
@@ -55,7 +57,7 @@ import system.data.metadata.edm.EdmFunction;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DbFunctionExpression extends DbExpression  {
+public class DbFunctionExpression extends system.data.common.commandtrees.DbExpression  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -170,6 +172,21 @@ public class DbFunctionExpression extends DbExpression  {
     
     // Properties section
     
+    public IList_1 getArguments() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArguments = null;
+        try {
+            retObjectArguments = classInstance.Get("Arguments");
+            JCObject val = (JCObject)retObjectArguments;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArguments != null ? retObjectArguments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EdmFunction getFunction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -46,6 +46,9 @@ import system.AsyncCallback;
 import system.net.sockets.Socket;
 import system.net.sockets.TcpClient;
 import system.net.sockets.TcpListener;
+import system.threading.tasks.Task_1;
+import system.threading.tasks.ValueTask_1;
+import system.threading.CancellationToken;
 import system.net.EndPoint;
 
 
@@ -306,6 +309,66 @@ public class TcpListener extends NetObject implements AutoCloseable {
             return new TcpListener(objCreate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AcceptSocketAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptSocketAsync = null;
+        try {
+            retObjectAcceptSocketAsync = classInstance.Invoke("AcceptSocketAsync");
+            JCObject objAcceptSocketAsync = (JCObject)retObjectAcceptSocketAsync;
+            return new Task_1(objAcceptSocketAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptSocketAsync != null ? retObjectAcceptSocketAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AcceptTcpClientAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptTcpClientAsync = null;
+        try {
+            retObjectAcceptTcpClientAsync = classInstance.Invoke("AcceptTcpClientAsync");
+            JCObject objAcceptTcpClientAsync = (JCObject)retObjectAcceptTcpClientAsync;
+            return new Task_1(objAcceptTcpClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptTcpClientAsync != null ? retObjectAcceptTcpClientAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 AcceptSocketAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptSocketAsync = null;
+        try {
+            retObjectAcceptSocketAsync = classInstance.Invoke("AcceptSocketAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAcceptSocketAsync = (JCObject)retObjectAcceptSocketAsync;
+            return new ValueTask_1(objAcceptSocketAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptSocketAsync != null ? retObjectAcceptSocketAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 AcceptTcpClientAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptTcpClientAsync = null;
+        try {
+            retObjectAcceptTcpClientAsync = classInstance.Invoke("AcceptTcpClientAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objAcceptTcpClientAsync = (JCObject)retObjectAcceptTcpClientAsync;
+            return new ValueTask_1(objAcceptTcpClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptTcpClientAsync != null ? retObjectAcceptTcpClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

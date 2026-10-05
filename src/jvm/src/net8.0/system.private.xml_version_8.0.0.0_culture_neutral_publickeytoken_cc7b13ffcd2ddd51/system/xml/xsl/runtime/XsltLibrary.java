@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.XmlQualifiedName;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xml.xpath.XPathNavigator;
 
 
@@ -169,6 +171,20 @@ public class XsltLibrary extends NetObject  {
         }
     }
 
+    public boolean EqualityOperator(double opCode, IList_1 left, IList_1 right) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEqualityOperator = null;
+        try {
+            retObjectEqualityOperator = classInstance.Invoke("EqualityOperator", opCode, left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectEqualityOperator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEqualityOperator != null ? retObjectEqualityOperator.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean FunctionAvailable(XmlQualifiedName name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +208,20 @@ public class XsltLibrary extends NetObject  {
             return (boolean)retObjectIsSameNodeSort;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSameNodeSort != null ? retObjectIsSameNodeSort.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean RelationalOperator(double opCode, IList_1 left, IList_1 right) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationalOperator = null;
+        try {
+            retObjectRelationalOperator = classInstance.Invoke("RelationalOperator", opCode, left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectRelationalOperator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRelationalOperator != null ? retObjectRelationalOperator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,6 +387,20 @@ public class XsltLibrary extends NetObject  {
         }
     }
 
+    public java.lang.String FormatMessage(java.lang.String res, IList_1 args) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatMessage = null;
+        try {
+            retObjectFormatMessage = classInstance.Invoke("FormatMessage", res, args == null ? null : args.getJCOInstance());
+            return (java.lang.String)retObjectFormatMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatMessage != null ? retObjectFormatMessage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String FormatNumberDynamic(double value, java.lang.String formatPicture, XmlQualifiedName decimalFormatName, java.lang.String errorMessageName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -380,6 +424,20 @@ public class XsltLibrary extends NetObject  {
             return (java.lang.String)retObjectFormatNumberStatic;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatNumberStatic != null ? retObjectFormatNumberStatic.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String NumberFormat(IList_1 value, java.lang.String formatString, double lang, java.lang.String letterValue, java.lang.String groupingSeparator, double groupingSize) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberFormat = null;
+        try {
+            retObjectNumberFormat = classInstance.Invoke("NumberFormat", value == null ? null : value.getJCOInstance(), formatString, lang, letterValue, groupingSeparator, groupingSize);
+            return (java.lang.String)retObjectNumberFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectNumberFormat != null ? retObjectNumberFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

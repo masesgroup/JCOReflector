@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.statements.TimerExtension;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.hosting.WorkflowInstanceProxy;
 
 
@@ -54,7 +56,7 @@ import system.activities.hosting.WorkflowInstanceProxy;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DurableTimerExtension extends TimerExtension implements AutoCloseable {
+public class DurableTimerExtension extends system.activities.statements.TimerExtension implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -161,6 +163,21 @@ public class DurableTimerExtension extends TimerExtension implements AutoCloseab
     
     // Methods section
     
+    public IEnumerable_1 GetAdditionalExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAdditionalExtensions = null;
+        try {
+            retObjectGetAdditionalExtensions = classInstance.Invoke("GetAdditionalExtensions");
+            JCObject objGetAdditionalExtensions = (JCObject)retObjectGetAdditionalExtensions;
+            return new IEnumerable_1Implementation(objGetAdditionalExtensions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAdditionalExtensions != null ? retObjectGetAdditionalExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

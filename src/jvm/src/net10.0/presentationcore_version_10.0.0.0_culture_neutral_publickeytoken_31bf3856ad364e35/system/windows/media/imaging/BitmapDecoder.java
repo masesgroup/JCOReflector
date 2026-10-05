@@ -46,6 +46,7 @@ import system.windows.media.imaging.BitmapCacheOption;
 import system.Uri;
 import system.net.cache.RequestCachePolicy;
 import system.windows.media.imaging.InPlaceBitmapMetadataWriter;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.media.imaging.BitmapCodecInfo;
 import system.windows.media.imaging.BitmapMetadata;
 import system.windows.media.imaging.BitmapPalette;
@@ -65,7 +66,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BitmapDecoder extends DispatcherObject  {
+public class BitmapDecoder extends system.windows.threading.DispatcherObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -237,6 +238,36 @@ public class BitmapDecoder extends DispatcherObject  {
             return (boolean)retObjectIsDownloading;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDownloading != null ? retObjectIsDownloading.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getColorContexts() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColorContexts = null;
+        try {
+            retObjectColorContexts = classInstance.Get("ColorContexts");
+            JCObject val = (JCObject)retObjectColorContexts;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColorContexts != null ? retObjectColorContexts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getFrames() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrames = null;
+        try {
+            retObjectFrames = classInstance.Get("Frames");
+            JCObject val = (JCObject)retObjectFrames;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFrames != null ? retObjectFrames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

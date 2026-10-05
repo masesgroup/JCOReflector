@@ -40,8 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.DateTimeOffset;
 import system.net.http.headers.WarningHeaderValue;
-import system.ICloneable;
-import system.ICloneableImplementation;
+import system.Nullable_1;
 
 
 /**
@@ -56,7 +55,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WarningHeaderValue extends NetObject implements ICloneable {
+public class WarningHeaderValue extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -254,6 +253,21 @@ public class WarningHeaderValue extends NetObject implements ICloneable {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getDate() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDate = null;
+        try {
+            retObjectDate = classInstance.Get("Date");
+            JCObject val = (JCObject)retObjectDate;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDate != null ? retObjectDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

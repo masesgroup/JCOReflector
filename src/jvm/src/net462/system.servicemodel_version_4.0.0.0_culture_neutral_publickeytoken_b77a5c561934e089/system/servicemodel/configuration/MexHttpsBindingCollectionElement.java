@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.configuration.MexBindingBindingCollectionElement_2;
+import system.servicemodel.WSHttpBinding;
+import system.servicemodel.configuration.MexHttpsBindingElement;
 
 
 /**
@@ -52,7 +55,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MexHttpsBindingCollectionElement extends NetObject  {
+public class MexHttpsBindingCollectionElement extends system.servicemodel.configuration.MexBindingBindingCollectionElement_2<WSHttpBinding, MexHttpsBindingElement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

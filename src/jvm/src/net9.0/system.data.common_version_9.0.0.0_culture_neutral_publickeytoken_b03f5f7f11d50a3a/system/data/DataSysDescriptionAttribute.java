@@ -53,7 +53,7 @@ import system.componentmodel.DescriptionAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataSysDescriptionAttribute extends DescriptionAttribute  {
+public class DataSysDescriptionAttribute extends system.componentmodel.DescriptionAttribute  {
     /**
      * Fully assembly qualified name: System.Data.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

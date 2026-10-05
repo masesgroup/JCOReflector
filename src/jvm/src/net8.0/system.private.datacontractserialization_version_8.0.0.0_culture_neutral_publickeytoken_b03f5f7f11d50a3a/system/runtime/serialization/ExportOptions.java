@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.runtime.serialization.ISerializationSurrogateProvider;
 import system.runtime.serialization.ISerializationSurrogateProviderImplementation;
 
@@ -165,6 +166,21 @@ public class ExportOptions extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getKnownTypes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKnownTypes = null;
+        try {
+            retObjectKnownTypes = classInstance.Get("KnownTypes");
+            JCObject val = (JCObject)retObjectKnownTypes;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKnownTypes != null ? retObjectKnownTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ISerializationSurrogateProvider getDataContractSurrogate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

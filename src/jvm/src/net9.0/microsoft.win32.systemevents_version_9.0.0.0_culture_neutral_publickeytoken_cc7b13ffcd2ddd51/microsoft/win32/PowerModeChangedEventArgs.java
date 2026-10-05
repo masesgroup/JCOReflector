@@ -54,7 +54,7 @@ import microsoft.win32.PowerModes;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PowerModeChangedEventArgs extends EventArgs  {
+public class PowerModeChangedEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: Microsoft.Win32.SystemEvents, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

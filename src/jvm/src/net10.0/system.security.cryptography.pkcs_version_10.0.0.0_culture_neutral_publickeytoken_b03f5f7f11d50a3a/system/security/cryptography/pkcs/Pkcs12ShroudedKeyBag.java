@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.pkcs.Pkcs12SafeBag;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.security.cryptography.pkcs.Pkcs12SafeBag;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Pkcs12ShroudedKeyBag extends Pkcs12SafeBag  {
+public class Pkcs12ShroudedKeyBag extends system.security.cryptography.pkcs.Pkcs12SafeBag  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -149,6 +150,16 @@ public class Pkcs12ShroudedKeyBag extends Pkcs12SafeBag  {
     public Pkcs12ShroudedKeyBag() throws Throwable {
     }
 
+    public Pkcs12ShroudedKeyBag(ReadOnlyMemory_1 encryptedPkcs8PrivateKey, boolean skipCopy) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(encryptedPkcs8PrivateKey == null ? null : encryptedPkcs8PrivateKey.getJCOInstance(), skipCopy));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +169,21 @@ public class Pkcs12ShroudedKeyBag extends Pkcs12SafeBag  {
     
     // Properties section
     
+    public ReadOnlyMemory_1 getEncryptedPkcs8PrivateKey() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptedPkcs8PrivateKey = null;
+        try {
+            retObjectEncryptedPkcs8PrivateKey = classInstance.Get("EncryptedPkcs8PrivateKey");
+            JCObject val = (JCObject)retObjectEncryptedPkcs8PrivateKey;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptedPkcs8PrivateKey != null ? retObjectEncryptedPkcs8PrivateKey.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

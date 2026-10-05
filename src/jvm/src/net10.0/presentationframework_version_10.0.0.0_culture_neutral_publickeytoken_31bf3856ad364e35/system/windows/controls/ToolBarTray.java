@@ -40,10 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.windows.FrameworkElement;
 import system.windows.DependencyObject;
+import system.collections.objectmodel.Collection_1;
 import system.windows.controls.Orientation;
 import system.windows.media.Brush;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -58,7 +57,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolBarTray extends FrameworkElement implements IAddChild {
+public class ToolBarTray extends system.windows.FrameworkElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -230,6 +229,21 @@ public class ToolBarTray extends FrameworkElement implements IAddChild {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsLocked", IsLocked);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getToolBars() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolBars = null;
+        try {
+            retObjectToolBars = classInstance.Get("ToolBars");
+            JCObject val = (JCObject)retObjectToolBars;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolBars != null ? retObjectToolBars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

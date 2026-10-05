@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.linq.expressions.Expression;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.LabelTarget;
 
 
@@ -153,6 +154,21 @@ public class CallSiteBinder extends NetObject  {
     
     // Methods section
     
+    public Expression Bind(NetObject[] args, ReadOnlyCollection_1 parameters, LabelTarget returnLabel) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBind = null;
+        try {
+            retObjectBind = classInstance.Invoke("Bind", toObjectFromArray(args), parameters == null ? null : parameters.getJCOInstance(), returnLabel == null ? null : returnLabel.getJCOInstance());
+            JCObject objBind = (JCObject)retObjectBind;
+            return new Expression(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

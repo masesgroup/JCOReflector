@@ -55,7 +55,7 @@ import system.security.principal.SecurityIdentifier;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SecurityIdentifier extends IdentityReference  {
+public class SecurityIdentifier extends system.security.principal.IdentityReference  {
     /**
      * Fully assembly qualified name: System.Security.Principal.Windows, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

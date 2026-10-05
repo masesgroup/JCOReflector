@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.net.http.headers.TransferCodingHeaderValue;
 import system.net.http.headers.TransferCodingWithQualityHeaderValue;
+import system.Nullable_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.net.http.headers.TransferCodingWithQualityHeaderValue;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TransferCodingWithQualityHeaderValue extends TransferCodingHeaderValue  {
+public class TransferCodingWithQualityHeaderValue extends system.net.http.headers.TransferCodingHeaderValue  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -194,6 +195,31 @@ public class TransferCodingWithQualityHeaderValue extends TransferCodingHeaderVa
     
     // Properties section
     
+    public Nullable_1 getQuality() throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OverflowException, system.NotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuality = null;
+        try {
+            retObjectQuality = classInstance.Get("Quality");
+            JCObject val = (JCObject)retObjectQuality;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuality != null ? retObjectQuality.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setQuality(Nullable_1 Quality) throws Throwable, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Quality", Quality == null ? null : Quality.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

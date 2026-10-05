@@ -38,7 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.description.ContractDescription;
+import system.collections.generic.KeyedByTypeCollection_1;
+import system.collections.objectmodel.KeyedCollection_2;
 import system.net.security.ProtectionLevel;
 import system.servicemodel.description.OperationDescriptionCollection;
 import system.servicemodel.SessionMode;
@@ -191,6 +194,21 @@ public class ContractDescription extends NetObject  {
         }
     }
 
+    public Collection_1 GetInheritedContracts() throws Throwable, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInheritedContracts = null;
+        try {
+            retObjectGetInheritedContracts = classInstance.Invoke("GetInheritedContracts");
+            JCObject objGetInheritedContracts = (JCObject)retObjectGetInheritedContracts;
+            return new Collection_1(objGetInheritedContracts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInheritedContracts != null ? retObjectGetInheritedContracts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ContractDescription GetContract(NetType contractType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -249,6 +267,36 @@ public class ContractDescription extends NetObject  {
             return (boolean)retObjectHasProtectionLevel;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasProtectionLevel != null ? retObjectHasProtectionLevel.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedByTypeCollection_1 getBehaviors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBehaviors = null;
+        try {
+            retObjectBehaviors = classInstance.Get("Behaviors");
+            JCObject val = (JCObject)retObjectBehaviors;
+            return new KeyedByTypeCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBehaviors != null ? retObjectBehaviors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedCollection_2 getContractBehaviors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractBehaviors = null;
+        try {
+            retObjectContractBehaviors = classInstance.Get("ContractBehaviors");
+            JCObject val = (JCObject)retObjectContractBehaviors;
+            return new KeyedCollection_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContractBehaviors != null ? retObjectContractBehaviors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

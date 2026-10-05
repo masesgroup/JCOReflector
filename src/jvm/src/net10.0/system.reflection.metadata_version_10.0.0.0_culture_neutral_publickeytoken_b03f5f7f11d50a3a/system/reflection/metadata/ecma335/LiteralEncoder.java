@@ -42,6 +42,7 @@ import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
 import system.reflection.metadata.ecma335.ScalarEncoder;
 import system.reflection.metadata.ecma335.VectorEncoder;
+import system.Action_1;
 import system.reflection.metadata.ecma335.CustomAttributeElementTypeEncoder;
 import system.reflection.metadata.ecma335.CustomAttributeArrayTypeEncoder;
 
@@ -58,7 +59,7 @@ import system.reflection.metadata.ecma335.CustomAttributeArrayTypeEncoder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class LiteralEncoder extends ValueType  {
+public class LiteralEncoder extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -199,11 +200,31 @@ public class LiteralEncoder extends ValueType  {
         }
     }
 
+    public void TaggedScalar(Action_1 type, Action_1 scalar) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("TaggedScalar", type, scalar);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void TaggedScalar(JCORefOut<CustomAttributeElementTypeEncoder> type, JCORefOut<ScalarEncoder> scalar) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TaggedScalar", type.getJCRefOut(), scalar.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void TaggedVector(Action_1 arrayType, Action_1 vector) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("TaggedVector", arrayType, vector);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.policy.AuthorizationContext;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.DateTime;
 
 
@@ -153,10 +158,55 @@ public class AuthorizationContext extends NetObject  {
     
     // Methods section
     
+    public static AuthorizationContext CreateDefaultAuthorizationContext(IList_1 authorizationPolicies) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDefaultAuthorizationContext = null;
+        try {
+            retObjectCreateDefaultAuthorizationContext = classType.Invoke("CreateDefaultAuthorizationContext", authorizationPolicies == null ? null : authorizationPolicies.getJCOInstance());
+            JCObject objCreateDefaultAuthorizationContext = (JCObject)retObjectCreateDefaultAuthorizationContext;
+            return new AuthorizationContext(objCreateDefaultAuthorizationContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDefaultAuthorizationContext != null ? retObjectCreateDefaultAuthorizationContext.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public IDictionary_2 getProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getClaimSets() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimSets = null;
+        try {
+            retObjectClaimSets = classInstance.Get("ClaimSets");
+            JCObject val = (JCObject)retObjectClaimSets;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimSets != null ? retObjectClaimSets.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DateTime getExpirationTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

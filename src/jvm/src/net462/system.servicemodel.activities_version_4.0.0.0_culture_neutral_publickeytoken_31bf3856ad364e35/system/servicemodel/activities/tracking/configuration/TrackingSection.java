@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.configuration.ConfigurationSection;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.activities.tracking.configuration.ProfileElementCollection;
 
 
@@ -54,7 +55,7 @@ import system.servicemodel.activities.tracking.configuration.ProfileElementColle
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TrackingSection extends ConfigurationSection  {
+public class TrackingSection extends system.configuration.ConfigurationSection  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -165,6 +166,21 @@ public class TrackingSection extends ConfigurationSection  {
     
     // Properties section
     
+    public Collection_1 getTrackingProfiles() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrackingProfiles = null;
+        try {
+            retObjectTrackingProfiles = classInstance.Get("TrackingProfiles");
+            JCObject val = (JCObject)retObjectTrackingProfiles;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrackingProfiles != null ? retObjectTrackingProfiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ProfileElementCollection getProfiles() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

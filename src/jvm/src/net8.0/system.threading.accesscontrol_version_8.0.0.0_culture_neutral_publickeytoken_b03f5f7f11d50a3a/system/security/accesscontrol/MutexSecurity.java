@@ -63,7 +63,7 @@ import system.security.accesscontrol.AuditFlags;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MutexSecurity extends NativeObjectSecurity  {
+public class MutexSecurity extends system.security.accesscontrol.NativeObjectSecurity  {
     /**
      * Fully assembly qualified name: System.Threading.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -38,16 +38,22 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.metadata.edm.EnumType;
 import system.data.metadata.edm.StructuralType;
 import system.data.metadata.edm.DataSpace;
 import system.data.metadata.edm.EntityContainer;
 import system.data.metadata.edm.ItemCollection;
 import system.data.metadata.edm.EdmType;
+import system.data.metadata.edm.EntitySetBase;
+import system.data.metadata.edm.EntityTypeBase;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.data.common.commandtrees.DbQueryCommandTree;
 import system.data.common.commandtrees.DbExpression;
 import system.data.common.entitysql.EntitySqlParser;
 import system.reflection.Assembly;
+import system.Action_1;
 
 
 /**
@@ -165,6 +171,16 @@ public class MetadataWorkspace extends NetObject  {
         }
     }
 
+    public MetadataWorkspace(IEnumerable_1 paths, IEnumerable_1 assembliesToConsider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException, system.MemberAccessException, system.data.ProviderIncompatibleException, system.configuration.ConfigurationErrorsException, system.threading.SynchronizationLockException, system.data.MappingException, system.OutOfMemoryException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(paths == null ? null : paths.getJCOInstance(), assembliesToConsider == null ? null : assembliesToConsider.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -220,6 +236,34 @@ public class MetadataWorkspace extends NetObject  {
             return (boolean)retObjectTryGetEntityContainer;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetEntityContainer != null ? retObjectTryGetEntityContainer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> boolean TryGetItem(java.lang.String identity, boolean ignoreCase, DataSpace dataSpace, JCORefOut<T> item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetItem = null;
+        try {
+            retObjectTryGetItem = classInstance.Invoke("TryGetItem", identity, ignoreCase, dataSpace == null ? null : dataSpace.getJCOInstance(), item.getJCRefOut());
+            return (boolean)retObjectTryGetItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetItem != null ? retObjectTryGetItem.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> boolean TryGetItem(java.lang.String identity, DataSpace space, JCORefOut<T> item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetItem = null;
+        try {
+            retObjectTryGetItem = classInstance.Invoke("TryGetItem", identity, space == null ? null : space.getJCOInstance(), item.getJCRefOut());
+            return (boolean)retObjectTryGetItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetItem != null ? retObjectTryGetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,6 +334,96 @@ public class MetadataWorkspace extends NetObject  {
             return (boolean)retObjectTryGetType;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetType != null ? retObjectTryGetType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetRequiredOriginalValueMembers(EntitySetBase entitySet, EntityTypeBase entityType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequiredOriginalValueMembers = null;
+        try {
+            retObjectGetRequiredOriginalValueMembers = classInstance.Invoke("GetRequiredOriginalValueMembers", entitySet == null ? null : entitySet.getJCOInstance(), entityType == null ? null : entityType.getJCOInstance());
+            JCObject objGetRequiredOriginalValueMembers = (JCObject)retObjectGetRequiredOriginalValueMembers;
+            return new IEnumerable_1Implementation(objGetRequiredOriginalValueMembers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRequiredOriginalValueMembers != null ? retObjectGetRequiredOriginalValueMembers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetFunctions(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFunctions = null;
+        try {
+            retObjectGetFunctions = classInstance.Invoke("GetFunctions", name, namespaceName, dataSpace == null ? null : dataSpace.getJCOInstance());
+            JCObject objGetFunctions = (JCObject)retObjectGetFunctions;
+            return new ReadOnlyCollection_1(objGetFunctions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFunctions != null ? retObjectGetFunctions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetFunctions(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.threading.SynchronizationLockException, system.threading.LockRecursionException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFunctions = null;
+        try {
+            retObjectGetFunctions = classInstance.Invoke("GetFunctions", name, namespaceName, dataSpace == null ? null : dataSpace.getJCOInstance(), ignoreCase);
+            JCObject objGetFunctions = (JCObject)retObjectGetFunctions;
+            return new ReadOnlyCollection_1(objGetFunctions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFunctions != null ? retObjectGetFunctions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetRelevantMembersForUpdate(EntitySetBase entitySet, EntityTypeBase entityType, boolean partialUpdateSupported) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelevantMembersForUpdate = null;
+        try {
+            retObjectGetRelevantMembersForUpdate = classInstance.Invoke("GetRelevantMembersForUpdate", entitySet == null ? null : entitySet.getJCOInstance(), entityType == null ? null : entityType.getJCOInstance(), partialUpdateSupported);
+            JCObject objGetRelevantMembersForUpdate = (JCObject)retObjectGetRelevantMembersForUpdate;
+            return new ReadOnlyCollection_1(objGetRelevantMembersForUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelevantMembersForUpdate != null ? retObjectGetRelevantMembersForUpdate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetItems(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItems = null;
+        try {
+            retObjectGetItems = classInstance.Invoke("GetItems", dataSpace == null ? null : dataSpace.getJCOInstance());
+            JCObject objGetItems = (JCObject)retObjectGetItems;
+            return new ReadOnlyCollection_1(objGetItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItems != null ? retObjectGetItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 GetPrimitiveTypes(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrimitiveTypes = null;
+        try {
+            retObjectGetPrimitiveTypes = classInstance.Invoke("GetPrimitiveTypes", dataSpace == null ? null : dataSpace.getJCOInstance());
+            JCObject objGetPrimitiveTypes = (JCObject)retObjectGetPrimitiveTypes;
+            return new ReadOnlyCollection_1(objGetPrimitiveTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrimitiveTypes != null ? retObjectGetPrimitiveTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,6 +609,16 @@ public class MetadataWorkspace extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void LoadFromAssembly(Assembly assembly, Action_1 logLoadMessage) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.data.MappingException, system.OutOfMemoryException, system.InvalidOperationException, system.data.MetadataException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadFromAssembly", assembly == null ? null : assembly.getJCOInstance(), logLoadMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -54,7 +54,7 @@ import system.web.ui.htmlcontrols.HtmlTableRowCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HtmlTable extends HtmlContainerControl  {
+public class HtmlTable extends system.web.ui.htmlcontrols.HtmlContainerControl  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

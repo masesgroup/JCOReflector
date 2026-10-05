@@ -39,11 +39,15 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.CodeAccessPermission;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.security.permissions.PermissionState;
 import system.xaml.permissions.XamlAccessLevel;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.SecurityElement;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -58,7 +62,7 @@ import system.security.SecurityElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XamlLoadPermission extends CodeAccessPermission  {
+public class XamlLoadPermission extends system.security.CodeAccessPermission  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -152,6 +156,16 @@ public class XamlLoadPermission extends CodeAccessPermission  {
     // Constructors section
     
     public XamlLoadPermission() throws Throwable {
+    }
+
+    public XamlLoadPermission(IEnumerable_1 allowedAccess) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(allowedAccess == null ? null : allowedAccess.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
     public XamlLoadPermission(PermissionState state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
@@ -295,6 +309,21 @@ public class XamlLoadPermission extends CodeAccessPermission  {
     
     // Properties section
     
+    public IList_1 getAllowedAccess() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedAccess = null;
+        try {
+            retObjectAllowedAccess = classInstance.Get("AllowedAccess");
+            JCObject val = (JCObject)retObjectAllowedAccess;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowedAccess != null ? retObjectAllowedAccess.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

@@ -45,6 +45,8 @@ import system.servicemodel.activities.WorkflowService;
 import system.servicemodel.description.ServiceEndpoint;
 import system.xml.linq.XName;
 import system.activities.hosting.WorkflowInstanceExtensionManager;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.servicemodel.activities.DurableInstancingOptions;
 
 
@@ -60,7 +62,7 @@ import system.servicemodel.activities.DurableInstancingOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowServiceHost extends ServiceHostBase  {
+public class WorkflowServiceHost extends system.servicemodel.ServiceHostBase  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -320,6 +322,21 @@ public class WorkflowServiceHost extends ServiceHostBase  {
             return new WorkflowInstanceExtensionManager(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowExtensions != null ? retObjectWorkflowExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getSupportedVersions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedVersions = null;
+        try {
+            retObjectSupportedVersions = classInstance.Get("SupportedVersions");
+            JCObject val = (JCObject)retObjectSupportedVersions;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedVersions != null ? retObjectSupportedVersions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

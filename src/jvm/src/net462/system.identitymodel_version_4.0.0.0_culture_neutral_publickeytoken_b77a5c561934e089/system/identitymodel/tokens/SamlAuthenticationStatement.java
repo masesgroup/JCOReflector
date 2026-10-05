@@ -41,11 +41,15 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SamlSubjectStatement;
 import system.identitymodel.tokens.SamlSubject;
 import system.DateTime;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlDictionaryWriter;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -60,7 +64,7 @@ import system.xml.XmlDictionaryWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SamlAuthenticationStatement extends SamlSubjectStatement  {
+public class SamlAuthenticationStatement extends system.identitymodel.tokens.SamlSubjectStatement  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -163,6 +167,16 @@ public class SamlAuthenticationStatement extends SamlSubjectStatement  {
         }
     }
 
+    public SamlAuthenticationStatement(SamlSubject samlSubject, java.lang.String authenticationMethod, DateTime authenticationInstant, java.lang.String dnsAddress, java.lang.String ipAddress, IEnumerable_1 authorityBindings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(samlSubject == null ? null : samlSubject.getJCOInstance(), authenticationMethod, authenticationInstant == null ? null : authenticationInstant.getJCOInstance(), dnsAddress, ipAddress, authorityBindings == null ? null : authorityBindings.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -201,6 +215,21 @@ public class SamlAuthenticationStatement extends SamlSubjectStatement  {
     
     // Properties section
     
+    public IList_1 getAuthorityBindings() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorityBindings = null;
+        try {
+            retObjectAuthorityBindings = classInstance.Get("AuthorityBindings");
+            JCObject val = (JCObject)retObjectAuthorityBindings;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthorityBindings != null ? retObjectAuthorityBindings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DateTime getAuthenticationInstant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

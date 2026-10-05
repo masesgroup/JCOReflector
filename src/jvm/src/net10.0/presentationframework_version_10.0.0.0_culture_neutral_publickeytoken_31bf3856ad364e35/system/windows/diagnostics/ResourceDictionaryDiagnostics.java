@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.ResourceDictionary;
+import system.Uri;
 
 
 /**
@@ -151,10 +155,100 @@ public class ResourceDictionaryDiagnostics extends NetObject  {
     
     // Methods section
     
+    public static IEnumerable_1 GetApplicationOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetApplicationOwners = null;
+        try {
+            retObjectGetApplicationOwners = classType.Invoke("GetApplicationOwners", dictionary == null ? null : dictionary.getJCOInstance());
+            JCObject objGetApplicationOwners = (JCObject)retObjectGetApplicationOwners;
+            return new IEnumerable_1Implementation(objGetApplicationOwners);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetApplicationOwners != null ? retObjectGetApplicationOwners.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetFrameworkContentElementOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFrameworkContentElementOwners = null;
+        try {
+            retObjectGetFrameworkContentElementOwners = classType.Invoke("GetFrameworkContentElementOwners", dictionary == null ? null : dictionary.getJCOInstance());
+            JCObject objGetFrameworkContentElementOwners = (JCObject)retObjectGetFrameworkContentElementOwners;
+            return new IEnumerable_1Implementation(objGetFrameworkContentElementOwners);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFrameworkContentElementOwners != null ? retObjectGetFrameworkContentElementOwners.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetFrameworkElementOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFrameworkElementOwners = null;
+        try {
+            retObjectGetFrameworkElementOwners = classType.Invoke("GetFrameworkElementOwners", dictionary == null ? null : dictionary.getJCOInstance());
+            JCObject objGetFrameworkElementOwners = (JCObject)retObjectGetFrameworkElementOwners;
+            return new IEnumerable_1Implementation(objGetFrameworkElementOwners);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFrameworkElementOwners != null ? retObjectGetFrameworkElementOwners.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetResourceDictionariesForSource(Uri uri) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetResourceDictionariesForSource = null;
+        try {
+            retObjectGetResourceDictionariesForSource = classType.Invoke("GetResourceDictionariesForSource", uri == null ? null : uri.getJCOInstance());
+            JCObject objGetResourceDictionariesForSource = (JCObject)retObjectGetResourceDictionariesForSource;
+            return new IEnumerable_1Implementation(objGetResourceDictionariesForSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResourceDictionariesForSource != null ? retObjectGetResourceDictionariesForSource.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public static IEnumerable_1 getGenericResourceDictionaries() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericResourceDictionaries = null;
+        try {
+            retObjectGenericResourceDictionaries = classType.Get("GenericResourceDictionaries");
+            JCObject val = (JCObject)retObjectGenericResourceDictionaries;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericResourceDictionaries != null ? retObjectGenericResourceDictionaries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 getThemedResourceDictionaries() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThemedResourceDictionaries = null;
+        try {
+            retObjectThemedResourceDictionaries = classType.Get("ThemedResourceDictionaries");
+            JCObject val = (JCObject)retObjectThemedResourceDictionaries;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThemedResourceDictionaries != null ? retObjectThemedResourceDictionaries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

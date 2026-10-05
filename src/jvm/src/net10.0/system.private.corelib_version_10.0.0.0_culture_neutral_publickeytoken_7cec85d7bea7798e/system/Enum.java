@@ -65,7 +65,7 @@ import system.Decimal;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Enum extends ValueType  {
+public class Enum extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -192,6 +192,20 @@ public class Enum extends ValueType  {
         }
     }
 
+    public static <TEnum extends IJCOBridgeReflected> boolean IsDefined(TEnum value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
+        try {
+            retObjectIsDefined = classType.Invoke("IsDefined", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean TryParse(NetType enumType, java.lang.String value, boolean ignoreCase, JCORefOut<NetObject> result) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +226,34 @@ public class Enum extends ValueType  {
         java.lang.Object retObjectTryParse = null;
         try {
             retObjectTryParse = classType.Invoke("TryParse", enumType == null ? null : enumType.getJCOInstance(), value, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TEnum extends IJCOBridgeReflected> boolean TryParse(java.lang.String value, boolean ignoreCase, JCORefOut<TEnum> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OverflowException, system.InvalidCastException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
+        try {
+            retObjectTryParse = classType.Invoke("TryParse", value, ignoreCase, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TEnum extends IJCOBridgeReflected> boolean TryParse(java.lang.String value, JCORefOut<TEnum> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
+        try {
+            retObjectTryParse = classType.Invoke("TryParse", value, result.getJCRefOut());
             return (boolean)retObjectTryParse;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
@@ -281,6 +323,21 @@ public class Enum extends ValueType  {
         java.lang.Object retObjectGetValuesAsUnderlyingType = null;
         try {
             retObjectGetValuesAsUnderlyingType = classType.Invoke("GetValuesAsUnderlyingType", enumType == null ? null : enumType.getJCOInstance());
+            JCObject objGetValuesAsUnderlyingType = (JCObject)retObjectGetValuesAsUnderlyingType;
+            return new Array(objGetValuesAsUnderlyingType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValuesAsUnderlyingType != null ? retObjectGetValuesAsUnderlyingType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TEnum extends IJCOBridgeReflected> Array GetValuesAsUnderlyingType() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValuesAsUnderlyingType = null;
+        try {
+            retObjectGetValuesAsUnderlyingType = classType.Invoke("GetValuesAsUnderlyingType");
             JCObject objGetValuesAsUnderlyingType = (JCObject)retObjectGetValuesAsUnderlyingType;
             return new Array(objGetValuesAsUnderlyingType);
         } catch (java.lang.ClassCastException cce) {
@@ -483,6 +540,20 @@ public class Enum extends ValueType  {
         }
     }
 
+    public static <TEnum extends IJCOBridgeReflected> java.lang.String GetName(TEnum value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetName = null;
+        try {
+            retObjectGetName = classType.Invoke("GetName", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -532,6 +603,29 @@ public class Enum extends ValueType  {
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             retObjectGetNames = classType.Invoke("GetNames", enumType == null ? null : enumType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetNames;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetNames = 0; indexGetNames < resultingArrayList.size(); indexGetNames++ ) {
+				resultingArray[indexGetNames] = (java.lang.String)resultingArrayList.get(indexGetNames);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetNames != null ? retObjectGetNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TEnum extends IJCOBridgeReflected> java.lang.String[] GetNames() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNames = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectGetNames = classType.Invoke("GetNames");
             JCObject resultingObjects = (JCObject)retObjectGetNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);

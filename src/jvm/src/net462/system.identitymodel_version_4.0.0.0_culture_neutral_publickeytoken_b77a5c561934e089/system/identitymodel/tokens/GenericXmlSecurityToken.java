@@ -42,6 +42,7 @@ import system.identitymodel.tokens.SecurityToken;
 import system.xml.XmlElement;
 import system.DateTime;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -56,7 +57,7 @@ import system.identitymodel.tokens.SecurityKeyIdentifierClause;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GenericXmlSecurityToken extends SecurityToken  {
+public class GenericXmlSecurityToken extends system.identitymodel.tokens.SecurityToken  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -152,11 +153,35 @@ public class GenericXmlSecurityToken extends SecurityToken  {
     public GenericXmlSecurityToken() throws Throwable {
     }
 
+    public GenericXmlSecurityToken(XmlElement tokenXml, SecurityToken proofToken, DateTime effectiveTime, DateTime expirationTime, SecurityKeyIdentifierClause internalTokenReference, SecurityKeyIdentifierClause externalTokenReference, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(tokenXml == null ? null : tokenXml.getJCOInstance(), proofToken == null ? null : proofToken.getJCOInstance(), effectiveTime == null ? null : effectiveTime.getJCOInstance(), expirationTime == null ? null : expirationTime.getJCOInstance(), internalTokenReference == null ? null : internalTokenReference.getJCOInstance(), externalTokenReference == null ? null : externalTokenReference.getJCOInstance(), authorizationPolicies == null ? null : authorizationPolicies.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> boolean CanCreateKeyIdentifierClause() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateKeyIdentifierClause = null;
+        try {
+            retObjectCanCreateKeyIdentifierClause = classInstance.Invoke("CanCreateKeyIdentifierClause");
+            return (boolean)retObjectCanCreateKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCreateKeyIdentifierClause != null ? retObjectCanCreateKeyIdentifierClause.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -175,6 +200,21 @@ public class GenericXmlSecurityToken extends SecurityToken  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getAuthorizationPolicies() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthorizationPolicies = null;
+        try {
+            retObjectAuthorizationPolicies = classInstance.Get("AuthorizationPolicies");
+            JCObject val = (JCObject)retObjectAuthorizationPolicies;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthorizationPolicies != null ? retObjectAuthorizationPolicies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityKeyIdentifierClause getExternalTokenReference() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

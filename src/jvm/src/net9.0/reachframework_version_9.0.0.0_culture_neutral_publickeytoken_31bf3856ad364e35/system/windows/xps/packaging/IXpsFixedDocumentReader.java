@@ -44,6 +44,9 @@ import system.windows.xps.packaging.IXpsFixedPageReaderImplementation;
 import system.Uri;
 import system.windows.xps.packaging.XpsStructure;
 import system.windows.xps.packaging.XpsSignatureDefinition;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.printing.PrintTicket;
 import system.windows.xps.packaging.XpsThumbnail;
 
@@ -60,7 +63,7 @@ import system.windows.xps.packaging.XpsThumbnail;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IXpsFixedDocumentReader extends IJCOBridgeReflected, IDocumentStructureProvider {
+public interface IXpsFixedDocumentReader extends IJCOBridgeReflected, system.windows.xps.packaging.IDocumentStructureProvider {
     /**
      * Fully assembly qualified name: ReachFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -138,6 +141,10 @@ public interface IXpsFixedDocumentReader extends IJCOBridgeReflected, IDocumentS
     // Properties section
     
     public int getDocumentNumber() throws Throwable;
+
+    public ICollection_1 getSignatureDefinitions() throws Throwable;
+
+    public ReadOnlyCollection_1 getFixedPages() throws Throwable;
 
     public PrintTicket getPrintTicket() throws Throwable;
 

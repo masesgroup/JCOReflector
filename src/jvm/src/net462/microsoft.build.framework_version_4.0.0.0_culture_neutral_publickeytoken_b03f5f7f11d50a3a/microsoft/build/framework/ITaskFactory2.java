@@ -39,10 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import microsoft.build.framework.ITaskFactory;
 import microsoft.build.framework.ITaskFactoryImplementation;
-import microsoft.build.framework.ITask;
-import microsoft.build.framework.ITaskImplementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
+import microsoft.build.framework.ITask;
+import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.TaskPropertyInfo;
 
 
@@ -58,7 +60,7 @@ import microsoft.build.framework.TaskPropertyInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface ITaskFactory2 extends IJCOBridgeReflected, ITaskFactory {
+public interface ITaskFactory2 extends IJCOBridgeReflected, microsoft.build.framework.ITaskFactory {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -122,6 +124,11 @@ public interface ITaskFactory2 extends IJCOBridgeReflected, ITaskFactory {
 
     // Methods section
     
+
+    public boolean Initialize(java.lang.String taskName, IDictionary_2 factoryIdentityParameters, IDictionary_2 parameterGroup, java.lang.String taskBody, IBuildEngine taskFactoryLoggingHost) throws Throwable;
+
+
+    public ITask CreateTask(IBuildEngine taskFactoryLoggingHost, IDictionary_2 taskIdentityParameters) throws Throwable;
 
 
 

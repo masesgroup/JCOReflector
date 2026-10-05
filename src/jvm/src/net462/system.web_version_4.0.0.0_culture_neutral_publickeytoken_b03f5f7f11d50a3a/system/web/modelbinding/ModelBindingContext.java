@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.modelbinding.ModelBindingContext;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.web.modelbinding.IValueProvider;
 import system.web.modelbinding.IValueProviderImplementation;
 import system.web.modelbinding.ModelBinderProviderCollection;
@@ -199,6 +201,21 @@ public class ModelBindingContext extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateRequest", ValidateRequest);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getPropertyMetadata() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyMetadata = null;
+        try {
+            retObjectPropertyMetadata = classInstance.Get("PropertyMetadata");
+            JCObject val = (JCObject)retObjectPropertyMetadata;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyMetadata != null ? retObjectPropertyMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

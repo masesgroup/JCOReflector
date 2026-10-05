@@ -44,6 +44,8 @@ import system.servicemodel.channels.IChannel;
 import system.servicemodel.channels.IChannelImplementation;
 import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
+import system.servicemodel.IExtensibleObject_1;
+import system.servicemodel.IExtensibleObject_1Implementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.IAsyncResult;
@@ -56,6 +58,8 @@ import system.servicemodel.channels.IOutputSession;
 import system.servicemodel.channels.IOutputSessionImplementation;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
+import system.servicemodel.IExtensionCollection_1;
+import system.servicemodel.IExtensionCollection_1Implementation;
 import system.Uri;
 import system.EventHandler;
 
@@ -471,6 +475,21 @@ public class IClientChannelImplementation extends NetObject implements IClientCh
             return new EndpointAddress(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteAddress != null ? retObjectRemoteAddress.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IExtensionCollection_1 getExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtensions = null;
+        try {
+            retObjectExtensions = classInstance.Get("Extensions");
+            JCObject val = (JCObject)retObjectExtensions;
+            return new IExtensionCollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensions != null ? retObjectExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

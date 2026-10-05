@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.x509certificates.X509Extension;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.security.cryptography.Oid;
 import system.security.cryptography.AsnEncodedData;
 
 
@@ -54,7 +57,7 @@ import system.security.cryptography.AsnEncodedData;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class X509AuthorityInformationAccessExtension extends X509Extension  {
+public class X509AuthorityInformationAccessExtension extends system.security.cryptography.x509certificates.X509Extension  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -167,10 +170,80 @@ public class X509AuthorityInformationAccessExtension extends X509Extension  {
         }
     }
 
+    public X509AuthorityInformationAccessExtension(IEnumerable_1 ocspUris, IEnumerable_1 caIssuersUris, boolean critical) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.OverflowException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(ocspUris == null ? null : ocspUris.getJCOInstance(), caIssuersUris == null ? null : caIssuersUris.getJCOInstance(), critical));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
+    public IEnumerable_1 EnumerateCAIssuersUris() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateCAIssuersUris = null;
+        try {
+            retObjectEnumerateCAIssuersUris = classInstance.Invoke("EnumerateCAIssuersUris");
+            JCObject objEnumerateCAIssuersUris = (JCObject)retObjectEnumerateCAIssuersUris;
+            return new IEnumerable_1Implementation(objEnumerateCAIssuersUris);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateCAIssuersUris != null ? retObjectEnumerateCAIssuersUris.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateOcspUris() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateOcspUris = null;
+        try {
+            retObjectEnumerateOcspUris = classInstance.Invoke("EnumerateOcspUris");
+            JCObject objEnumerateOcspUris = (JCObject)retObjectEnumerateOcspUris;
+            return new IEnumerable_1Implementation(objEnumerateOcspUris);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateOcspUris != null ? retObjectEnumerateOcspUris.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateUris(Oid accessMethodOid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateUris = null;
+        try {
+            retObjectEnumerateUris = classInstance.Invoke("EnumerateUris", accessMethodOid == null ? null : accessMethodOid.getJCOInstance());
+            JCObject objEnumerateUris = (JCObject)retObjectEnumerateUris;
+            return new IEnumerable_1Implementation(objEnumerateUris);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateUris != null ? retObjectEnumerateUris.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 EnumerateUris(java.lang.String accessMethodOid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.FormatException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnumerateUris = null;
+        try {
+            retObjectEnumerateUris = classInstance.Invoke("EnumerateUris", accessMethodOid);
+            JCObject objEnumerateUris = (JCObject)retObjectEnumerateUris;
+            return new IEnumerable_1Implementation(objEnumerateUris);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnumerateUris != null ? retObjectEnumerateUris.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

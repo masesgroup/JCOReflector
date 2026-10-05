@@ -53,7 +53,7 @@ import system.runtime.compilerservices.StateMachineAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IteratorStateMachineAttribute extends StateMachineAttribute  {
+public class IteratorStateMachineAttribute extends system.runtime.compilerservices.StateMachineAttribute  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

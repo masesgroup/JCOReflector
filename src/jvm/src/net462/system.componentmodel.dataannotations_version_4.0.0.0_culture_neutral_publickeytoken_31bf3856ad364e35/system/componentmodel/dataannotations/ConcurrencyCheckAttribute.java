@@ -53,7 +53,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConcurrencyCheckAttribute extends Attribute  {
+public class ConcurrencyCheckAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.activities.WorkflowRole;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.workflow.activities.WorkflowRole;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WebWorkflowRole extends WorkflowRole  {
+public class WebWorkflowRole extends system.workflow.activities.WorkflowRole  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -183,6 +185,21 @@ public class WebWorkflowRole extends WorkflowRole  {
             return (boolean)retObjectIncludesIdentity;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIncludesIdentity != null ? retObjectIncludesIdentity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetIdentities() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.TypeLoadException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIdentities = null;
+        try {
+            retObjectGetIdentities = classInstance.Invoke("GetIdentities");
+            JCObject objGetIdentities = (JCObject)retObjectGetIdentities;
+            return new IList_1Implementation(objGetIdentities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIdentities != null ? retObjectGetIdentities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

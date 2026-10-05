@@ -54,7 +54,7 @@ import system.diagnostics.ActivitySpanId;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivitySpanId extends ValueType  {
+public class ActivitySpanId extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

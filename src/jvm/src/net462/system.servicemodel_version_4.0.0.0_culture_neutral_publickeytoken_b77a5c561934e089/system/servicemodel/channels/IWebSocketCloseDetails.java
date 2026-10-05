@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.net.websockets.WebSocketCloseStatus;
+import system.Nullable_1;
 
 
 /**
@@ -122,6 +123,8 @@ public interface IWebSocketCloseDetails extends IJCOBridgeReflected {
     
     // Properties section
     
+    public Nullable_1 getInputCloseStatus() throws Throwable;
+
     public java.lang.String getInputCloseStatusDescription() throws Throwable;
 
 

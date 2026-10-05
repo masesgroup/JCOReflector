@@ -53,7 +53,7 @@ import microsoft.build.tasks.ManagedCompiler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Csc extends ManagedCompiler  {
+public class Csc extends microsoft.build.tasks.ManagedCompiler  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

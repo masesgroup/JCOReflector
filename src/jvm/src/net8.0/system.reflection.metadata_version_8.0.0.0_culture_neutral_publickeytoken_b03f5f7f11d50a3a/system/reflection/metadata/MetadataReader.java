@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.BlobHandle;
+import system.collections.immutable.ImmutableArray_1;
 import system.Guid;
 import system.reflection.metadata.GuidHandle;
 import system.reflection.AssemblyName;
@@ -269,6 +270,21 @@ public class MetadataReader extends NetObject  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetBlobBytes != null ? retObjectGetBlobBytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 GetBlobContent(BlobHandle handle) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.BadImageFormatException, system.InvalidOperationException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBlobContent = null;
+        try {
+            retObjectGetBlobContent = classInstance.Invoke("GetBlobContent", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetBlobContent = (JCObject)retObjectGetBlobContent;
+            return new ImmutableArray_1(objGetBlobContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBlobContent != null ? retObjectGetBlobContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

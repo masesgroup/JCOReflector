@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.immutable.ImmutableArray_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PdbChecksumDebugDirectoryData extends ValueType  {
+public class PdbChecksumDebugDirectoryData extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -158,6 +159,21 @@ public class PdbChecksumDebugDirectoryData extends ValueType  {
     
     // Properties section
     
+    public ImmutableArray_1 getChecksum() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChecksum = null;
+        try {
+            retObjectChecksum = classInstance.Get("Checksum");
+            JCObject val = (JCObject)retObjectChecksum;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChecksum != null ? retObjectChecksum.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getAlgorithmName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

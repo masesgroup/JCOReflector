@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.build.framework.xamltypes.BaseProperty;
+import system.collections.generic.List_1;
 
 
 /**
@@ -53,7 +54,7 @@ import microsoft.build.framework.xamltypes.BaseProperty;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EnumProperty extends BaseProperty  {
+public class EnumProperty extends microsoft.build.framework.xamltypes.BaseProperty  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -174,6 +175,31 @@ public class EnumProperty extends BaseProperty  {
     
     // Properties section
     
+    public List_1 getAdmissibleValues() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdmissibleValues = null;
+        try {
+            retObjectAdmissibleValues = classInstance.Get("AdmissibleValues");
+            JCObject val = (JCObject)retObjectAdmissibleValues;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdmissibleValues != null ? retObjectAdmissibleValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setAdmissibleValues(List_1 AdmissibleValues) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("AdmissibleValues", AdmissibleValues == null ? null : AdmissibleValues.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

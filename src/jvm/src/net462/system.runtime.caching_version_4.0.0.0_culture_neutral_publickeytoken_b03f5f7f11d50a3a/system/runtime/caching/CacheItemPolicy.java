@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.DateTimeOffset;
 import system.runtime.caching.CacheEntryRemovedCallback;
 import system.runtime.caching.CacheEntryUpdateCallback;
@@ -168,6 +169,21 @@ public class CacheItemPolicy extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getChangeMonitors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeMonitors = null;
+        try {
+            retObjectChangeMonitors = classInstance.Get("ChangeMonitors");
+            JCObject val = (JCObject)retObjectChangeMonitors;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeMonitors != null ? retObjectChangeMonitors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DateTimeOffset getAbsoluteExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

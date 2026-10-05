@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.MethodDefinitionHandle;
 
 
@@ -54,7 +55,7 @@ import system.reflection.metadata.MethodDefinitionHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventAccessors extends ValueType  {
+public class EventAccessors extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -159,6 +160,21 @@ public class EventAccessors extends ValueType  {
     
     // Properties section
     
+    public ImmutableArray_1 getOthers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOthers = null;
+        try {
+            retObjectOthers = classInstance.Get("Others");
+            JCObject val = (JCObject)retObjectOthers;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOthers != null ? retObjectOthers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodDefinitionHandle getAdder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

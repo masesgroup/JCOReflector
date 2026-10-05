@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.controls.ContentControl;
+import system.Nullable_1;
 import system.windows.controls.primitives.CustomPopupPlacementCallback;
 import system.windows.controls.primitives.PlacementMode;
 import system.windows.Rect;
@@ -58,7 +59,7 @@ import system.windows.RoutedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ToolTip extends ContentControl  {
+public class ToolTip extends system.windows.controls.ContentControl  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -336,6 +337,31 @@ public class ToolTip extends ContentControl  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalOffset", VerticalOffset);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getShowsToolTipOnKeyboardFocus() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowsToolTipOnKeyboardFocus = null;
+        try {
+            retObjectShowsToolTipOnKeyboardFocus = classInstance.Get("ShowsToolTipOnKeyboardFocus");
+            JCObject val = (JCObject)retObjectShowsToolTipOnKeyboardFocus;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowsToolTipOnKeyboardFocus != null ? retObjectShowsToolTipOnKeyboardFocus.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setShowsToolTipOnKeyboardFocus(Nullable_1 ShowsToolTipOnKeyboardFocus) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ShowsToolTipOnKeyboardFocus", ShowsToolTipOnKeyboardFocus == null ? null : ShowsToolTipOnKeyboardFocus.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

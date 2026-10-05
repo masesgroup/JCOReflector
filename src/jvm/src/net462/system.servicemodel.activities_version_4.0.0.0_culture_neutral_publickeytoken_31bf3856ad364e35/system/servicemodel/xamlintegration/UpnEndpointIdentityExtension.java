@@ -56,7 +56,7 @@ import system.IServiceProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UpnEndpointIdentityExtension extends MarkupExtension  {
+public class UpnEndpointIdentityExtension extends system.windows.markup.MarkupExtension  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

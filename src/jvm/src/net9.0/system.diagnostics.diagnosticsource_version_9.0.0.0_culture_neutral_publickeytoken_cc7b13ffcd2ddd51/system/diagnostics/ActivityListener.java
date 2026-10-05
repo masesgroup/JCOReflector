@@ -38,7 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Action_1;
 import system.diagnostics.ExceptionRecorder;
+import system.diagnostics.SampleActivity_1;
+import system.Func_2;
 
 
 /**
@@ -187,6 +190,54 @@ public class ActivityListener extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    public Action_1 getActivityStarted() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityStarted = null;
+        try {
+            retObjectActivityStarted = classInstance.Get("ActivityStarted");
+            return (Action_1)retObjectActivityStarted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectActivityStarted != null ? retObjectActivityStarted.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setActivityStarted(Action_1 ActivityStarted) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ActivityStarted", ActivityStarted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Action_1 getActivityStopped() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityStopped = null;
+        try {
+            retObjectActivityStopped = classInstance.Get("ActivityStopped");
+            return (Action_1)retObjectActivityStopped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectActivityStopped != null ? retObjectActivityStopped.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setActivityStopped(Action_1 ActivityStopped) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ActivityStopped", ActivityStopped);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ExceptionRecorder getExceptionRecorder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -206,6 +257,78 @@ public class ActivityListener extends NetObject implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExceptionRecorder", ExceptionRecorder);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SampleActivity_1 getSample() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSample = null;
+        try {
+            retObjectSample = classInstance.Get("Sample");
+            return (SampleActivity_1)retObjectSample;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into SampleActivity_1", retObjectSample != null ? retObjectSample.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSample(SampleActivity_1 Sample) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Sample", Sample);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SampleActivity_1 getSampleUsingParentId() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSampleUsingParentId = null;
+        try {
+            retObjectSampleUsingParentId = classInstance.Get("SampleUsingParentId");
+            return (SampleActivity_1)retObjectSampleUsingParentId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into SampleActivity_1", retObjectSampleUsingParentId != null ? retObjectSampleUsingParentId.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSampleUsingParentId(SampleActivity_1 SampleUsingParentId) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SampleUsingParentId", SampleUsingParentId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_2 getShouldListenTo() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldListenTo = null;
+        try {
+            retObjectShouldListenTo = classInstance.Get("ShouldListenTo");
+            return (Func_2)retObjectShouldListenTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectShouldListenTo != null ? retObjectShouldListenTo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setShouldListenTo(Func_2 ShouldListenTo) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ShouldListenTo", ShouldListenTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

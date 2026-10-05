@@ -42,6 +42,8 @@ import system.componentmodel.Component;
 import system.TimeSpan;
 import system.diagnostics.Process;
 import system.diagnostics.ProcessStartInfo;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.security.SecureString;
 import system.threading.tasks.Task;
 import system.threading.CancellationToken;
@@ -71,7 +73,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Process extends Component  {
+public class Process extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.Diagnostics.Process, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -327,6 +329,21 @@ public class Process extends Component  {
         java.lang.Object retObjectStart = null;
         try {
             retObjectStart = classType.Invoke("Start", startInfo == null ? null : startInfo.getJCOInstance());
+            JCObject objStart = (JCObject)retObjectStart;
+            return new Process(objStart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Process Start(java.lang.String fileName, IEnumerable_1 arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.ThreadStateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStart = null;
+        try {
+            retObjectStart = classType.Invoke("Start", fileName, arguments == null ? null : arguments.getJCOInstance());
             JCObject objStart = (JCObject)retObjectStart;
             return new Process(objStart);
         } catch (java.lang.ClassCastException cce) {

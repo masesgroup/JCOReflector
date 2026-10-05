@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.activities.rules.RuleValidation;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -164,6 +166,21 @@ public class RuleAnalysis extends NetObject  {
     
     // Methods section
     
+    public ICollection_1 GetSymbols() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSymbols = null;
+        try {
+            retObjectGetSymbols = classInstance.Invoke("GetSymbols");
+            JCObject objGetSymbols = (JCObject)retObjectGetSymbols;
+            return new ICollection_1Implementation(objGetSymbols);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSymbols != null ? retObjectGetSymbols.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddSymbol(java.lang.String symbol) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

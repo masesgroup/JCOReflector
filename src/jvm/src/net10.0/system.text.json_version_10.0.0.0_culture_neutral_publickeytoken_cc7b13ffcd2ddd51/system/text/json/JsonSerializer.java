@@ -41,14 +41,18 @@ import java.util.ArrayList;
 import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.text.json.JsonSerializerOptions;
 import system.text.json.serialization.JsonSerializerContext;
+import system.text.json.serialization.metadata.JsonTypeInfo_1;
+import system.collections.generic.IAsyncEnumerable_1;
+import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.io.pipelines.PipeReader;
+import system.threading.CancellationToken;
 import system.io.Stream;
 import system.text.json.JsonDocument;
 import system.text.json.JsonElement;
 import system.text.json.nodes.JsonNode;
-import system.text.json.Utf8JsonReader;
 import system.threading.tasks.Task;
 import system.io.pipelines.PipeWriter;
-import system.threading.CancellationToken;
+import system.threading.tasks.ValueTask_1;
 import system.text.json.Utf8JsonWriter;
 
 
@@ -227,6 +231,172 @@ public class JsonSerializer extends NetObject  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSerializeToUtf8Bytes != null ? retObjectSerializeToUtf8Bytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> byte[] SerializeToUtf8Bytes(TValue value, JsonSerializerOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeToUtf8Bytes = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectSerializeToUtf8Bytes = classType.Invoke("SerializeToUtf8Bytes", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSerializeToUtf8Bytes;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexSerializeToUtf8Bytes = 0; indexSerializeToUtf8Bytes < resultingArrayList.size(); indexSerializeToUtf8Bytes++ ) {
+				resultingArray[indexSerializeToUtf8Bytes] = (byte)resultingArrayList.get(indexSerializeToUtf8Bytes);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSerializeToUtf8Bytes != null ? retObjectSerializeToUtf8Bytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> byte[] SerializeToUtf8Bytes(TValue value, JsonTypeInfo_1 jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeToUtf8Bytes = null;
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            retObjectSerializeToUtf8Bytes = classType.Invoke("SerializeToUtf8Bytes", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSerializeToUtf8Bytes;
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexSerializeToUtf8Bytes = 0; indexSerializeToUtf8Bytes < resultingArrayList.size(); indexSerializeToUtf8Bytes++ ) {
+				resultingArray[indexSerializeToUtf8Bytes] = (byte)resultingArrayList.get(indexSerializeToUtf8Bytes);
+            }
+            return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSerializeToUtf8Bytes != null ? retObjectSerializeToUtf8Bytes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 DeserializeAsyncEnumerable(PipeReader utf8Json, boolean topLevelValues, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsyncEnumerable = null;
+        try {
+            retObjectDeserializeAsyncEnumerable = classType.Invoke("DeserializeAsyncEnumerable", utf8Json == null ? null : utf8Json.getJCOInstance(), topLevelValues, options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsyncEnumerable = (JCObject)retObjectDeserializeAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objDeserializeAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsyncEnumerable != null ? retObjectDeserializeAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 DeserializeAsyncEnumerable(PipeReader utf8Json, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsyncEnumerable = null;
+        try {
+            retObjectDeserializeAsyncEnumerable = classType.Invoke("DeserializeAsyncEnumerable", utf8Json == null ? null : utf8Json.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsyncEnumerable = (JCObject)retObjectDeserializeAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objDeserializeAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsyncEnumerable != null ? retObjectDeserializeAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 DeserializeAsyncEnumerable(PipeReader utf8Json, JsonTypeInfo_1 jsonTypeInfo, boolean topLevelValues, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsyncEnumerable = null;
+        try {
+            retObjectDeserializeAsyncEnumerable = classType.Invoke("DeserializeAsyncEnumerable", utf8Json == null ? null : utf8Json.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), topLevelValues, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsyncEnumerable = (JCObject)retObjectDeserializeAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objDeserializeAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsyncEnumerable != null ? retObjectDeserializeAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 DeserializeAsyncEnumerable(PipeReader utf8Json, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsyncEnumerable = null;
+        try {
+            retObjectDeserializeAsyncEnumerable = classType.Invoke("DeserializeAsyncEnumerable", utf8Json == null ? null : utf8Json.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsyncEnumerable = (JCObject)retObjectDeserializeAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objDeserializeAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsyncEnumerable != null ? retObjectDeserializeAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 DeserializeAsyncEnumerable(Stream utf8Json, boolean topLevelValues, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsyncEnumerable = null;
+        try {
+            retObjectDeserializeAsyncEnumerable = classType.Invoke("DeserializeAsyncEnumerable", utf8Json == null ? null : utf8Json.getJCOInstance(), topLevelValues, options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsyncEnumerable = (JCObject)retObjectDeserializeAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objDeserializeAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsyncEnumerable != null ? retObjectDeserializeAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 DeserializeAsyncEnumerable(Stream utf8Json, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsyncEnumerable = null;
+        try {
+            retObjectDeserializeAsyncEnumerable = classType.Invoke("DeserializeAsyncEnumerable", utf8Json == null ? null : utf8Json.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsyncEnumerable = (JCObject)retObjectDeserializeAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objDeserializeAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsyncEnumerable != null ? retObjectDeserializeAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 DeserializeAsyncEnumerable(Stream utf8Json, JsonTypeInfo_1 jsonTypeInfo, boolean topLevelValues, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsyncEnumerable = null;
+        try {
+            retObjectDeserializeAsyncEnumerable = classType.Invoke("DeserializeAsyncEnumerable", utf8Json == null ? null : utf8Json.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), topLevelValues, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsyncEnumerable = (JCObject)retObjectDeserializeAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objDeserializeAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsyncEnumerable != null ? retObjectDeserializeAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 DeserializeAsyncEnumerable(Stream utf8Json, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsyncEnumerable = null;
+        try {
+            retObjectDeserializeAsyncEnumerable = classType.Invoke("DeserializeAsyncEnumerable", utf8Json == null ? null : utf8Json.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsyncEnumerable = (JCObject)retObjectDeserializeAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objDeserializeAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsyncEnumerable != null ? retObjectDeserializeAsyncEnumerable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,51 +627,6 @@ public class JsonSerializer extends NetObject  {
         }
     }
 
-    public static NetObject Deserialize(JCORefOut<Utf8JsonReader> reader, JsonTypeInfo jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.text.json.JsonException {
-        if (classType == null)
-            throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectDeserialize = null;
-        try {
-            retObjectDeserialize = classType.Invoke("Deserialize", reader.getJCRefOut(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
-            JCObject objDeserialize = (JCObject)retObjectDeserialize;
-            return new NetObject(objDeserialize);
-        } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject Deserialize(JCORefOut<Utf8JsonReader> reader, NetType returnType, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.text.json.JsonException {
-        if (classType == null)
-            throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectDeserialize = null;
-        try {
-            retObjectDeserialize = classType.Invoke("Deserialize", reader.getJCRefOut(), returnType == null ? null : returnType.getJCOInstance(), options == null ? null : options.getJCOInstance());
-            JCObject objDeserialize = (JCObject)retObjectDeserialize;
-            return new NetObject(objDeserialize);
-        } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static NetObject Deserialize(JCORefOut<Utf8JsonReader> reader, NetType returnType, JsonSerializerContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.text.json.JsonException {
-        if (classType == null)
-            throw new java.lang.UnsupportedOperationException("classType is null.");
-        java.lang.Object retObjectDeserialize = null;
-        try {
-            retObjectDeserialize = classType.Invoke("Deserialize", reader.getJCRefOut(), returnType == null ? null : returnType.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            JCObject objDeserialize = (JCObject)retObjectDeserialize;
-            return new NetObject(objDeserialize);
-        } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String Serialize(NetObject value, JsonTypeInfo jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -536,6 +661,34 @@ public class JsonSerializer extends NetObject  {
         java.lang.Object retObjectSerialize = null;
         try {
             retObjectSerialize = classType.Invoke("Serialize", value == null ? null : value.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            return (java.lang.String)retObjectSerialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSerialize != null ? retObjectSerialize.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> java.lang.String Serialize(TValue value, JsonSerializerOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerialize = null;
+        try {
+            retObjectSerialize = classType.Invoke("Serialize", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance());
+            return (java.lang.String)retObjectSerialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSerialize != null ? retObjectSerialize.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> java.lang.String Serialize(TValue value, JsonTypeInfo_1 jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerialize = null;
+        try {
+            retObjectSerialize = classType.Invoke("Serialize", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
             return (java.lang.String)retObjectSerialize;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSerialize != null ? retObjectSerialize.getClass() : "null"), cce);
@@ -580,6 +733,36 @@ public class JsonSerializer extends NetObject  {
         java.lang.Object retObjectSerializeToDocument = null;
         try {
             retObjectSerializeToDocument = classType.Invoke("SerializeToDocument", value == null ? null : value.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objSerializeToDocument = (JCObject)retObjectSerializeToDocument;
+            return new JsonDocument(objSerializeToDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeToDocument != null ? retObjectSerializeToDocument.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> JsonDocument SerializeToDocument(TValue value, JsonSerializerOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.text.json.JsonException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeToDocument = null;
+        try {
+            retObjectSerializeToDocument = classType.Invoke("SerializeToDocument", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objSerializeToDocument = (JCObject)retObjectSerializeToDocument;
+            return new JsonDocument(objSerializeToDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeToDocument != null ? retObjectSerializeToDocument.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> JsonDocument SerializeToDocument(TValue value, JsonTypeInfo_1 jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.text.json.JsonException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeToDocument = null;
+        try {
+            retObjectSerializeToDocument = classType.Invoke("SerializeToDocument", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
             JCObject objSerializeToDocument = (JCObject)retObjectSerializeToDocument;
             return new JsonDocument(objSerializeToDocument);
         } catch (java.lang.ClassCastException cce) {
@@ -634,6 +817,36 @@ public class JsonSerializer extends NetObject  {
         }
     }
 
+    public static <TValue extends IJCOBridgeReflected> JsonElement SerializeToElement(TValue value, JsonSerializerOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.text.json.JsonException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeToElement = null;
+        try {
+            retObjectSerializeToElement = classType.Invoke("SerializeToElement", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objSerializeToElement = (JCObject)retObjectSerializeToElement;
+            return new JsonElement(objSerializeToElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeToElement != null ? retObjectSerializeToElement.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> JsonElement SerializeToElement(TValue value, JsonTypeInfo_1 jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.text.json.JsonException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeToElement = null;
+        try {
+            retObjectSerializeToElement = classType.Invoke("SerializeToElement", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
+            JCObject objSerializeToElement = (JCObject)retObjectSerializeToElement;
+            return new JsonElement(objSerializeToElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeToElement != null ? retObjectSerializeToElement.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static JsonNode SerializeToNode(NetObject value, JsonTypeInfo jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.text.json.JsonException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -670,6 +883,36 @@ public class JsonSerializer extends NetObject  {
         java.lang.Object retObjectSerializeToNode = null;
         try {
             retObjectSerializeToNode = classType.Invoke("SerializeToNode", value == null ? null : value.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objSerializeToNode = (JCObject)retObjectSerializeToNode;
+            return new JsonNode(objSerializeToNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeToNode != null ? retObjectSerializeToNode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> JsonNode SerializeToNode(TValue value, JsonSerializerOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.text.json.JsonException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeToNode = null;
+        try {
+            retObjectSerializeToNode = classType.Invoke("SerializeToNode", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objSerializeToNode = (JCObject)retObjectSerializeToNode;
+            return new JsonNode(objSerializeToNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeToNode != null ? retObjectSerializeToNode.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> JsonNode SerializeToNode(TValue value, JsonTypeInfo_1 jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.text.json.JsonException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeToNode = null;
+        try {
+            retObjectSerializeToNode = classType.Invoke("SerializeToNode", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
             JCObject objSerializeToNode = (JCObject)retObjectSerializeToNode;
             return new JsonNode(objSerializeToNode);
         } catch (java.lang.ClassCastException cce) {
@@ -769,6 +1012,216 @@ public class JsonSerializer extends NetObject  {
         }
     }
 
+    public static <TValue extends IJCOBridgeReflected> Task SerializeAsync(PipeWriter utf8Json, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeAsync = null;
+        try {
+            retObjectSerializeAsync = classType.Invoke("SerializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSerializeAsync = (JCObject)retObjectSerializeAsync;
+            return new Task(objSerializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeAsync != null ? retObjectSerializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task SerializeAsync(PipeWriter utf8Json, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeAsync = null;
+        try {
+            retObjectSerializeAsync = classType.Invoke("SerializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSerializeAsync = (JCObject)retObjectSerializeAsync;
+            return new Task(objSerializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeAsync != null ? retObjectSerializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task SerializeAsync(Stream utf8Json, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeAsync = null;
+        try {
+            retObjectSerializeAsync = classType.Invoke("SerializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSerializeAsync = (JCObject)retObjectSerializeAsync;
+            return new Task(objSerializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeAsync != null ? retObjectSerializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> Task SerializeAsync(Stream utf8Json, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSerializeAsync = null;
+        try {
+            retObjectSerializeAsync = classType.Invoke("SerializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSerializeAsync = (JCObject)retObjectSerializeAsync;
+            return new Task(objSerializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeAsync != null ? retObjectSerializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 DeserializeAsync(PipeReader utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 DeserializeAsync(PipeReader utf8Json, NetType returnType, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 DeserializeAsync(PipeReader utf8Json, NetType returnType, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), context == null ? null : context.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 DeserializeAsync(Stream utf8Json, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 DeserializeAsync(Stream utf8Json, NetType returnType, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ValueTask_1 DeserializeAsync(Stream utf8Json, NetType returnType, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), context == null ? null : context.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> ValueTask_1 DeserializeAsync(PipeReader utf8Json, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> ValueTask_1 DeserializeAsync(PipeReader utf8Json, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> ValueTask_1 DeserializeAsync(Stream utf8Json, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> ValueTask_1 DeserializeAsync(Stream utf8Json, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserializeAsync = null;
+        try {
+            retObjectDeserializeAsync = classType.Invoke("DeserializeAsync", utf8Json == null ? null : utf8Json.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objDeserializeAsync = (JCObject)retObjectDeserializeAsync;
+            return new ValueTask_1(objDeserializeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeAsync != null ? retObjectDeserializeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void Serialize(Stream utf8Json, NetObject value, JsonTypeInfo jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -824,6 +1277,46 @@ public class JsonSerializer extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Serialize", writer == null ? null : writer.getJCOInstance(), value == null ? null : value.getJCOInstance(), inputType == null ? null : inputType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> void Serialize(Stream utf8Json, TValue value, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Serialize", utf8Json == null ? null : utf8Json.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> void Serialize(Stream utf8Json, TValue value, JsonTypeInfo_1 jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Serialize", utf8Json == null ? null : utf8Json.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> void Serialize(Utf8JsonWriter writer, TValue value, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Serialize", writer == null ? null : writer.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> void Serialize(Utf8JsonWriter writer, TValue value, JsonTypeInfo_1 jsonTypeInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Serialize", writer == null ? null : writer.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

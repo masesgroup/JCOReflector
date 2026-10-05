@@ -43,6 +43,8 @@ import system.net.networkinformation.PingReply;
 import system.net.IPAddress;
 import system.net.networkinformation.PingOptions;
 import system.TimeSpan;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 import system.net.networkinformation.PingCompletedEventHandler;
 
 
@@ -58,7 +60,7 @@ import system.net.networkinformation.PingCompletedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Ping extends Component  {
+public class Ping extends system.componentmodel.Component  {
     /**
      * Fully assembly qualified name: System.Net.Ping, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -400,6 +402,246 @@ public class Ping extends Component  {
             return new PingReply(objSend);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance(), timeout, buffer, options == null ? null : options.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address, int timeout, byte[] buffer) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance(), timeout, buffer);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address, int timeout) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance(), timeout);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address, TimeSpan timeout, byte[] buffer, PingOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), buffer, options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress dupParam0, TimeSpan dupParam1, JCORefOut dupParam2, PingOptions dupParam3, CancellationToken dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(IPAddress address) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", address == null ? null : address.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress, timeout, buffer, options == null ? null : options.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout, byte[] buffer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress, timeout, buffer);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress, timeout);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, TimeSpan timeout, byte[] buffer, PingOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress, timeout == null ? null : timeout.getJCOInstance(), buffer, options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String dupParam0, TimeSpan dupParam1, JCORefOut dupParam2, PingOptions dupParam3, CancellationToken dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPingAsync = null;
+        try {
+            retObjectSendPingAsync = classInstance.Invoke("SendPingAsync", hostNameOrAddress);
+            JCObject objSendPingAsync = (JCObject)retObjectSendPingAsync;
+            return new Task_1(objSendPingAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPingAsync != null ? retObjectSendPingAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

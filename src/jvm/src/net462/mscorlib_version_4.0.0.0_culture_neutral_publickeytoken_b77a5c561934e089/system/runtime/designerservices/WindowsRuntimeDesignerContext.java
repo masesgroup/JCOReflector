@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.Assembly;
 import system.runtime.designerservices.WindowsRuntimeDesignerContext;
 
@@ -150,6 +152,16 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
     public WindowsRuntimeDesignerContext() throws Throwable {
     }
 
+    public WindowsRuntimeDesignerContext(IEnumerable_1 paths, java.lang.String name) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(paths == null ? null : paths.getJCOInstance(), name));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -180,6 +192,16 @@ public class WindowsRuntimeDesignerContext extends NetObject  {
             return new NetType(objGetType);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void InitializeSharedContext(IEnumerable_1 paths) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("InitializeSharedContext", paths == null ? null : paths.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

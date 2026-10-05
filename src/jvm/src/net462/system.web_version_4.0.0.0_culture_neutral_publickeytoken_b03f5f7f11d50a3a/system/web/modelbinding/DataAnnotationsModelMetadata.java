@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.DataAnnotationsModelMetadataProvider;
+import system.Func_1;
+import system.componentmodel.dataannotations.DisplayColumnAttribute;
 
 
 /**
@@ -54,7 +56,7 @@ import system.web.modelbinding.DataAnnotationsModelMetadataProvider;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataAnnotationsModelMetadata extends ModelMetadata  {
+public class DataAnnotationsModelMetadata extends system.web.modelbinding.ModelMetadata  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -148,6 +150,16 @@ public class DataAnnotationsModelMetadata extends ModelMetadata  {
     // Constructors section
     
     public DataAnnotationsModelMetadata() throws Throwable {
+    }
+
+    public DataAnnotationsModelMetadata(DataAnnotationsModelMetadataProvider provider, NetType containerType, Func_1 modelAccessor, NetType modelType, java.lang.String propertyName, DisplayColumnAttribute displayColumnAttribute) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(provider == null ? null : provider.getJCOInstance(), containerType == null ? null : containerType.getJCOInstance(), modelAccessor, modelType == null ? null : modelType.getJCOInstance(), propertyName, displayColumnAttribute == null ? null : displayColumnAttribute.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

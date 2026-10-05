@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.durableinstancing.InstancePersistenceCommand;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -53,7 +57,7 @@ import system.runtime.durableinstancing.InstancePersistenceCommand;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SaveWorkflowCommand extends InstancePersistenceCommand  {
+public class SaveWorkflowCommand extends system.runtime.durableinstancing.InstancePersistenceCommand  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -207,6 +211,96 @@ public class SaveWorkflowCommand extends InstancePersistenceCommand  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnlockInstance", UnlockInstance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getInstanceKeysToComplete() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKeysToComplete = null;
+        try {
+            retObjectInstanceKeysToComplete = classInstance.Get("InstanceKeysToComplete");
+            JCObject val = (JCObject)retObjectInstanceKeysToComplete;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKeysToComplete != null ? retObjectInstanceKeysToComplete.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getInstanceKeysToFree() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKeysToFree = null;
+        try {
+            retObjectInstanceKeysToFree = classInstance.Get("InstanceKeysToFree");
+            JCObject val = (JCObject)retObjectInstanceKeysToFree;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKeysToFree != null ? retObjectInstanceKeysToFree.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getInstanceKeyMetadataChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKeyMetadataChanges = null;
+        try {
+            retObjectInstanceKeyMetadataChanges = classInstance.Get("InstanceKeyMetadataChanges");
+            JCObject val = (JCObject)retObjectInstanceKeyMetadataChanges;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKeyMetadataChanges != null ? retObjectInstanceKeyMetadataChanges.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getInstanceKeysToAssociate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKeysToAssociate = null;
+        try {
+            retObjectInstanceKeysToAssociate = classInstance.Get("InstanceKeysToAssociate");
+            JCObject val = (JCObject)retObjectInstanceKeysToAssociate;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKeysToAssociate != null ? retObjectInstanceKeysToAssociate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getInstanceData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceData = null;
+        try {
+            retObjectInstanceData = classInstance.Get("InstanceData");
+            JCObject val = (JCObject)retObjectInstanceData;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceData != null ? retObjectInstanceData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getInstanceMetadataChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceMetadataChanges = null;
+        try {
+            retObjectInstanceMetadataChanges = classInstance.Get("InstanceMetadataChanges");
+            JCObject val = (JCObject)retObjectInstanceMetadataChanges;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceMetadataChanges != null ? retObjectInstanceMetadataChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

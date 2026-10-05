@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.printing.PrintSystemException;
+import system.collections.objectmodel.Collection_1;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
@@ -54,7 +55,7 @@ import system.runtime.serialization.StreamingContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PrintCommitAttributesException extends PrintSystemException {
+public class PrintCommitAttributesException extends system.printing.PrintSystemException {
     /**
      * Fully assembly qualified name: ReachFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -166,6 +167,26 @@ public class PrintCommitAttributesException extends PrintSystemException {
 
     // Constructors section
     
+    public PrintCommitAttributesException(int errorCode, Collection_1 attributesSuccessList, Collection_1 attributesFailList) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(errorCode, attributesSuccessList == null ? null : attributesSuccessList.getJCOInstance(), attributesFailList == null ? null : attributesFailList.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrintCommitAttributesException(int errorCode, java.lang.String message, Collection_1 attributesSuccessList, Collection_1 attributesFailList, java.lang.String objectName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(errorCode, message, attributesSuccessList == null ? null : attributesSuccessList.getJCOInstance(), attributesFailList == null ? null : attributesFailList.getJCOInstance(), objectName));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -184,6 +205,36 @@ public class PrintCommitAttributesException extends PrintSystemException {
     
     // Properties section
     
+    public Collection_1 getCommittedAttributesCollection() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommittedAttributesCollection = null;
+        try {
+            retObjectCommittedAttributesCollection = classInstance.Get("CommittedAttributesCollection");
+            JCObject val = (JCObject)retObjectCommittedAttributesCollection;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommittedAttributesCollection != null ? retObjectCommittedAttributesCollection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getFailedAttributesCollection() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFailedAttributesCollection = null;
+        try {
+            retObjectFailedAttributesCollection = classInstance.Get("FailedAttributesCollection");
+            JCObject val = (JCObject)retObjectFailedAttributesCollection;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFailedAttributesCollection != null ? retObjectFailedAttributesCollection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getPrintObjectName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

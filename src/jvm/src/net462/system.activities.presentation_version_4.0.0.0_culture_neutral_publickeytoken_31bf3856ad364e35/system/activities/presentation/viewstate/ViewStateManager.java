@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -163,6 +164,21 @@ public class ViewStateManager extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getViewStateData() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewStateData = null;
+        try {
+            retObjectViewStateData = classInstance.Get("ViewStateData");
+            JCObject val = (JCObject)retObjectViewStateData;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewStateData != null ? retObjectViewStateData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

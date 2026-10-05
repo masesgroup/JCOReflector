@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.tokens.SecurityKeyIdentifier;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.identitymodel.metadata.KeyType;
 
 
@@ -175,6 +177,21 @@ public class KeyDescriptor extends NetObject  {
     
     // Properties section
     
+    public ICollection_1 getEncryptionMethods() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionMethods = null;
+        try {
+            retObjectEncryptionMethods = classInstance.Get("EncryptionMethods");
+            JCObject val = (JCObject)retObjectEncryptionMethods;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionMethods != null ? retObjectEncryptionMethods.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public KeyType getUse() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

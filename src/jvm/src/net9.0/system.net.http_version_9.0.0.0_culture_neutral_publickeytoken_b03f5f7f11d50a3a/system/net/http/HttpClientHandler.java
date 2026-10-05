@@ -39,8 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.HttpMessageHandler;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.diagnostics.metrics.IMeterFactory;
 import system.diagnostics.metrics.IMeterFactoryImplementation;
+import system.Func_5;
 import system.net.CookieContainer;
 import system.net.DecompressionMethods;
 import system.net.http.ClientCertificateOption;
@@ -64,7 +67,7 @@ import system.security.cryptography.x509certificates.X509CertificateCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpClientHandler extends HttpMessageHandler  {
+public class HttpClientHandler extends system.net.http.HttpMessageHandler  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -561,6 +564,21 @@ public class HttpClientHandler extends HttpMessageHandler  {
         }
     }
 
+    public IDictionary_2 getProperties() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IMeterFactory getMeterFactory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -581,6 +599,44 @@ public class HttpClientHandler extends HttpMessageHandler  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MeterFactory", MeterFactory == null ? null : MeterFactory.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Func_5 getDangerousAcceptAnyServerCertificateValidator() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDangerousAcceptAnyServerCertificateValidator = null;
+        try {
+            retObjectDangerousAcceptAnyServerCertificateValidator = classType.Get("DangerousAcceptAnyServerCertificateValidator");
+            return (Func_5)retObjectDangerousAcceptAnyServerCertificateValidator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_5", retObjectDangerousAcceptAnyServerCertificateValidator != null ? retObjectDangerousAcceptAnyServerCertificateValidator.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Func_5 getServerCertificateCustomValidationCallback() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerCertificateCustomValidationCallback = null;
+        try {
+            retObjectServerCertificateCustomValidationCallback = classInstance.Get("ServerCertificateCustomValidationCallback");
+            return (Func_5)retObjectServerCertificateCustomValidationCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_5", retObjectServerCertificateCustomValidationCallback != null ? retObjectServerCertificateCustomValidationCallback.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setServerCertificateCustomValidationCallback(Func_5 ServerCertificateCustomValidationCallback) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ServerCertificateCustomValidationCallback", ServerCertificateCustomValidationCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

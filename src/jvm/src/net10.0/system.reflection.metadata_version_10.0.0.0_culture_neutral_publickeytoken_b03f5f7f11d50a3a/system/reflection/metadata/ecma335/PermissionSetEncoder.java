@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
 import system.reflection.metadata.ecma335.PermissionSetEncoder;
+import system.collections.immutable.ImmutableArray_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.reflection.metadata.ecma335.PermissionSetEncoder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PermissionSetEncoder extends ValueType  {
+public class PermissionSetEncoder extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -166,6 +167,21 @@ public class PermissionSetEncoder extends ValueType  {
     
     // Methods section
     
+    public PermissionSetEncoder AddPermission(java.lang.String typeName, ImmutableArray_1 encodedArguments) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddPermission = null;
+        try {
+            retObjectAddPermission = classInstance.Invoke("AddPermission", typeName, encodedArguments == null ? null : encodedArguments.getJCOInstance());
+            JCObject objAddPermission = (JCObject)retObjectAddPermission;
+            return new PermissionSetEncoder(objAddPermission);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddPermission != null ? retObjectAddPermission.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PermissionSetEncoder AddPermission(java.lang.String typeName, BlobBuilder encodedArguments) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

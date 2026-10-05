@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.ClientBase_1;
+import system.servicemodel.activities.IWorkflowInstanceManagement;
+import system.servicemodel.activities.IWorkflowInstanceManagementImplementation;
 import system.servicemodel.activities.WorkflowControlEndpoint;
 import system.servicemodel.EndpointAddress;
 import system.IAsyncResult;
@@ -58,7 +61,7 @@ import system.AsyncCallback;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowControlClient extends NetObject  {
+public class WorkflowControlClient extends system.servicemodel.ClientBase_1<IWorkflowInstanceManagement>  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

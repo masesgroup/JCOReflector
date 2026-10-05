@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.input.InputDevice;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.input.StylusDeviceCollection;
@@ -59,7 +60,7 @@ import system.windows.PresentationSource;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TabletDevice extends InputDevice  {
+public class TabletDevice extends system.windows.input.InputDevice  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -199,6 +200,21 @@ public class TabletDevice extends InputDevice  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getSupportedStylusPointProperties() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedStylusPointProperties = null;
+        try {
+            retObjectSupportedStylusPointProperties = classInstance.Get("SupportedStylusPointProperties");
+            JCObject val = (JCObject)retObjectSupportedStylusPointProperties;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedStylusPointProperties != null ? retObjectSupportedStylusPointProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

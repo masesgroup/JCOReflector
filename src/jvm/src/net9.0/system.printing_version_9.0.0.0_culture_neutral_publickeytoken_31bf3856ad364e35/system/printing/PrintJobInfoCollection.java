@@ -55,7 +55,7 @@ import system.printing.PrintSystemJobInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PrintJobInfoCollection extends PrintSystemObjects  {
+public class PrintJobInfoCollection extends system.printing.PrintSystemObjects  {
     /**
      * Fully assembly qualified name: System.Printing, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

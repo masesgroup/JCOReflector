@@ -54,7 +54,7 @@ import system.xml.schema.XmlSchemaForm;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlArrayItemAttribute extends Attribute  {
+public class XmlArrayItemAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

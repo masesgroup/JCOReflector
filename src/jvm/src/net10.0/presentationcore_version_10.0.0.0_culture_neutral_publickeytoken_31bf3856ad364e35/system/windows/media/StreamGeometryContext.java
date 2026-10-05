@@ -42,8 +42,8 @@ import system.windows.threading.DispatcherObject;
 import system.windows.Point;
 import system.windows.Size;
 import system.windows.media.SweepDirection;
-import system.IDisposable;
-import system.IDisposableImplementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -58,7 +58,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StreamGeometryContext extends DispatcherObject implements IDisposable, AutoCloseable {
+public class StreamGeometryContext extends system.windows.threading.DispatcherObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -202,6 +202,36 @@ public class StreamGeometryContext extends DispatcherObject implements IDisposab
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineTo", point == null ? null : point.getJCOInstance(), isStroked, isSmoothJoin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PolyBezierTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PolyBezierTo", points == null ? null : points.getJCOInstance(), isStroked, isSmoothJoin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PolyLineTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PolyLineTo", points == null ? null : points.getJCOInstance(), isStroked, isSmoothJoin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void PolyQuadraticBezierTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("PolyQuadraticBezierTo", points == null ? null : points.getJCOInstance(), isStroked, isSmoothJoin);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

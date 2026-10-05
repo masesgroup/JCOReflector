@@ -39,14 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.activities.WorkflowRole;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.workflow.activities.ActiveDirectoryRole;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 import system.directoryservices.DirectoryEntry;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
-import system.IDisposable;
-import system.IDisposableImplementation;
 
 
 /**
@@ -61,7 +61,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActiveDirectoryRole extends WorkflowRole implements ISerializable, IDisposable, AutoCloseable {
+public class ActiveDirectoryRole extends system.workflow.activities.WorkflowRole implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -171,6 +171,51 @@ public class ActiveDirectoryRole extends WorkflowRole implements ISerializable, 
             return (boolean)retObjectIncludesIdentity;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIncludesIdentity != null ? retObjectIncludesIdentity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 GetEntries() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OverflowException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntries = null;
+        try {
+            retObjectGetEntries = classInstance.Invoke("GetEntries");
+            JCObject objGetEntries = (JCObject)retObjectGetEntries;
+            return new ICollection_1Implementation(objGetEntries);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntries != null ? retObjectGetEntries.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetSecurityIdentifiers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSecurityIdentifiers = null;
+        try {
+            retObjectGetSecurityIdentifiers = classInstance.Invoke("GetSecurityIdentifiers");
+            JCObject objGetSecurityIdentifiers = (JCObject)retObjectGetSecurityIdentifiers;
+            return new IList_1Implementation(objGetSecurityIdentifiers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSecurityIdentifiers != null ? retObjectGetSecurityIdentifiers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 GetIdentities() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.OverflowException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIdentities = null;
+        try {
+            retObjectGetIdentities = classInstance.Invoke("GetIdentities");
+            JCObject objGetIdentities = (JCObject)retObjectGetIdentities;
+            return new IList_1Implementation(objGetIdentities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIdentities != null ? retObjectGetIdentities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

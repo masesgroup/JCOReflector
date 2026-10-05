@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.selectors.SecurityTokenAuthenticator;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.TimeSpan;
 import system.identitymodel.claims.ClaimSet;
 import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.SecurityToken;
@@ -59,7 +62,7 @@ import system.identitymodel.selectors.AudienceUriMode;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  {
+public class SamlSecurityTokenAuthenticator extends system.identitymodel.selectors.SecurityTokenAuthenticator  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -155,6 +158,26 @@ public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  
     public SamlSecurityTokenAuthenticator() throws Throwable {
     }
 
+    public SamlSecurityTokenAuthenticator(IList_1 supportingAuthenticators) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(supportingAuthenticators == null ? null : supportingAuthenticators.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SamlSecurityTokenAuthenticator(IList_1 supportingAuthenticators, TimeSpan maxClockSkew) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(supportingAuthenticators == null ? null : supportingAuthenticators.getJCOInstance(), maxClockSkew == null ? null : maxClockSkew.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -224,6 +247,21 @@ public class SamlSecurityTokenAuthenticator extends SecurityTokenAuthenticator  
     
     // Properties section
     
+    public IList_1 getAllowedAudienceUris() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowedAudienceUris = null;
+        try {
+            retObjectAllowedAudienceUris = classInstance.Get("AllowedAudienceUris");
+            JCObject val = (JCObject)retObjectAllowedAudienceUris;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllowedAudienceUris != null ? retObjectAllowedAudienceUris.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AudienceUriMode getAudienceUriMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

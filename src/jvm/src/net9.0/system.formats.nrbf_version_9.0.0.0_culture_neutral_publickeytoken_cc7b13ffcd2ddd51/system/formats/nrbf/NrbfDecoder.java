@@ -42,6 +42,8 @@ import system.io.Stream;
 import system.formats.nrbf.ClassRecord;
 import system.formats.nrbf.PayloadOptions;
 import system.formats.nrbf.SerializationRecord;
+import system.collections.generic.IReadOnlyDictionary_2;
+import system.collections.generic.IReadOnlyDictionary_2Implementation;
 
 
 /**
@@ -179,6 +181,21 @@ public class NrbfDecoder extends NetObject  {
             return new ClassRecord(objDecodeClassRecord);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecodeClassRecord != null ? retObjectDecodeClassRecord.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SerializationRecord Decode(Stream payload, JCORefOut<IReadOnlyDictionary_2> recordMap, PayloadOptions options, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.EndOfStreamException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecode = null;
+        try {
+            retObjectDecode = classType.Invoke("Decode", payload == null ? null : payload.getJCOInstance(), recordMap.getJCRefOut(), options == null ? null : options.getJCOInstance(), leaveOpen);
+            JCObject objDecode = (JCObject)retObjectDecode;
+            return new SerializationRecord(objDecode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecode != null ? retObjectDecode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

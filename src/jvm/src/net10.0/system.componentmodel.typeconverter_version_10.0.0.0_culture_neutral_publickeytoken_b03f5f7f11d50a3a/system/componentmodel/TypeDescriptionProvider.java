@@ -44,6 +44,7 @@ import system.componentmodel.ICustomTypeDescriptor;
 import system.componentmodel.ICustomTypeDescriptorImplementation;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
+import system.Nullable_1;
 
 
 /**
@@ -409,10 +410,35 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
+    public <T extends IJCOBridgeReflected> void RegisterType() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterType");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public Nullable_1 getRequireRegisteredTypes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireRegisteredTypes = null;
+        try {
+            retObjectRequireRegisteredTypes = classInstance.Get("RequireRegisteredTypes");
+            JCObject val = (JCObject)retObjectRequireRegisteredTypes;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequireRegisteredTypes != null ? retObjectRequireRegisteredTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

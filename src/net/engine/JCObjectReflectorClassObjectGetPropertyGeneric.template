@@ -1,0 +1,17 @@
+    public METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE getPROPERTY_JAVA_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+        if (PROPERTY_OBJECT == null)
+            throw new java.lang.UnsupportedOperationException("PROPERTY_OBJECT is null.");
+        java.lang.Object retObjectPROPERTY_NAME = null;
+        try {
+            retObjectPROPERTY_NAME = PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
+            JCObject val = (JCObject)retObjectPROPERTY_NAME;
+            // "new PROPERTY_IMPLEMENTATION_OUTPUTTYPE(...)" is never legal Java when it's a
+            // class-level generic parameter (erasure); build it reflectively instead, via the
+            // Class<T> captured at construction time.
+            return this.<PROPERTY_IMPLEMENTATION_OUTPUTTYPE>instantiateGenericArgument(GENERIC_ARGUMENT_INDEX, val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPROPERTY_NAME != null ? retObjectPROPERTY_NAME.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }

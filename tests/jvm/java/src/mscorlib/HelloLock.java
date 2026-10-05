@@ -27,6 +27,7 @@ package mscorlib;
 import org.mases.jcobridge.netreflection.JCORefOut;
 import org.mases.jcobridge.netreflection.JCOReflector;
 import system.threading.Monitor;
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class HelloLock {
@@ -39,8 +40,7 @@ public class HelloLock {
                 Monitor.Enter(object, JCORefOut.Create(lockTaken));
                 if (lockTaken.get()) {
                     System.out.println("Lock taken");
-                }
-                else {
+                } else {
                     System.out.println("Failed to acquire lock");
                     System.exit(-1);
                 }

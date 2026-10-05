@@ -72,6 +72,7 @@
                                         <DockPanel Height="30">
                                             <CheckBox Name="cbExportArray" Content="Array" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable arrays export"/>
                                             <CheckBox Name="cbDuplicateMethodNativeArray" Content="JCRefOut Array" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable duplication of methods with array of native types"/>
+                                            <CheckBox Name="cbEnableGenerics" Content="Generics" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable Generics"/>
                                             <CheckBox Name="cbExportExceptions" Content="Exceptions" IsChecked="True" VerticalContentAlignment="Center" ToolTip="Enable exceptions export"/>
                                             <Label Content="Max Depth" VerticalContentAlignment="Center" ToolTip="Analyzing depth to search for exception; -1 means no limits"/>
                                             <TextBox Name="tbMaxDepth" Text="{Binding ElementName=mainWindow, Path=MaxDepth, Mode=TwoWay}" ToolTip="Analyzing depth to search for exception; -1 means no limits"/>

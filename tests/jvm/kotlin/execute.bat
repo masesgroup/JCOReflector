@@ -1,3 +1,3 @@
 @echo off
-scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNETEvent
+scala -toolcp "../../bin/net8.0/*;./output" mscorlib.HelloNETEvent
 PAUSE

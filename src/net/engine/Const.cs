@@ -535,6 +535,7 @@ namespace MASES.JCOReflector.Engine
             public const string FULL_ASSEMBLY_CLASS_NAME = "FULL_ASSEMBLY_CLASS_NAME";
             public const string SHORT_ASSEMBLY_CLASS_NAME = "SHORT_ASSEMBLY_CLASS_NAME";
             public const string FULLYQUALIFIED_CLASS_NAME = "FULLYQUALIFIED_CLASS_NAME";
+            public const string FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME = "FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME";
 
             public const string CONSTRUCTORS_SECTION = "CONSTRUCTORS_SECTION";
             public const string METHODS_SECTION = "METHODS_SECTION";
@@ -645,6 +646,7 @@ namespace MASES.JCOReflector.Engine
             public const string FULL_ASSEMBLY_CLASS_NAME = "FULL_ASSEMBLY_CLASS_NAME";
             public const string SHORT_ASSEMBLY_CLASS_NAME = "SHORT_ASSEMBLY_CLASS_NAME";
             public const string FULLYQUALIFIED_CLASS_NAME = "FULLYQUALIFIED_CLASS_NAME";
+            public const string FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME = "FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME";
 
             public const string DELEGATE_NAME = "DELEGATE_NAME";
             public const string DELEGATE_RETURN_TYPE = "DELEGATE_RETURN_TYPE";
@@ -715,6 +717,7 @@ namespace MASES.JCOReflector.Engine
             public const string FULL_ASSEMBLY_CLASS_NAME = "FULL_ASSEMBLY_CLASS_NAME";
             public const string SHORT_ASSEMBLY_CLASS_NAME = "SHORT_ASSEMBLY_CLASS_NAME";
             public const string FULLYQUALIFIED_CLASS_NAME = "FULLYQUALIFIED_CLASS_NAME";
+            public const string FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME = "FULLYQUALIFIED_DOCUMENTATION_CLASS_NAME";
 
             public const string PACKAGE_CLASS_NEXT_SECTION = "PACKAGE_CLASS_NEXT_SECTION";
         }

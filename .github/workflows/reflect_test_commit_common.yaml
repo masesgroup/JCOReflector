@@ -225,6 +225,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+    
       - name: Download Clojure
         run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
 

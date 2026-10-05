@@ -55,7 +55,7 @@ import system.windows.media.media3d.Model3DCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Model3DGroup extends Model3D  {
+public class Model3DGroup extends system.windows.media.media3d.Model3D  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

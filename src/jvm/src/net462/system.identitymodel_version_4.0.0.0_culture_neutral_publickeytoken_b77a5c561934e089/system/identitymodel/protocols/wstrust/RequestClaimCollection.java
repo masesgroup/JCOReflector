@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.identitymodel.protocols.wstrust.RequestClaim;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RequestClaimCollection extends NetObjectEnumerable  {
+public class RequestClaimCollection extends system.collections.objectmodel.Collection_1<RequestClaim>  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

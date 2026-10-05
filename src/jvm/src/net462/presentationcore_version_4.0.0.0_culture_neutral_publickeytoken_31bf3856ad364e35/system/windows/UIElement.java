@@ -56,6 +56,8 @@ import system.windows.media.animation.HandoffBehavior;
 import system.windows.Rect;
 import system.windows.media.animation.AnimationTimeline;
 import system.windows.Size;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.input.CommandBindingCollection;
 import system.windows.input.InputBindingCollection;
 import system.windows.media.Brush;
@@ -97,7 +99,7 @@ import system.windows.RoutedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class UIElement extends Visual  {
+public class UIElement extends system.windows.media.Visual  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -1063,6 +1065,66 @@ public class UIElement extends Visual  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getTouchesCaptured() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTouchesCaptured = null;
+        try {
+            retObjectTouchesCaptured = classInstance.Get("TouchesCaptured");
+            JCObject val = (JCObject)retObjectTouchesCaptured;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTouchesCaptured != null ? retObjectTouchesCaptured.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getTouchesCapturedWithin() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTouchesCapturedWithin = null;
+        try {
+            retObjectTouchesCapturedWithin = classInstance.Get("TouchesCapturedWithin");
+            JCObject val = (JCObject)retObjectTouchesCapturedWithin;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTouchesCapturedWithin != null ? retObjectTouchesCapturedWithin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getTouchesDirectlyOver() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTouchesDirectlyOver = null;
+        try {
+            retObjectTouchesDirectlyOver = classInstance.Get("TouchesDirectlyOver");
+            JCObject val = (JCObject)retObjectTouchesDirectlyOver;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTouchesDirectlyOver != null ? retObjectTouchesDirectlyOver.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getTouchesOver() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTouchesOver = null;
+        try {
+            retObjectTouchesOver = classInstance.Get("TouchesOver");
+            JCObject val = (JCObject)retObjectTouchesOver;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTouchesOver != null ? retObjectTouchesOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

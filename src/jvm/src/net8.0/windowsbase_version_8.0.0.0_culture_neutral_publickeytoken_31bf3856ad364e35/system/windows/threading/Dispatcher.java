@@ -45,6 +45,8 @@ import system.threading.Thread;
 import system.windows.threading.DispatcherOperation;
 import system.Action;
 import system.threading.CancellationToken;
+import system.windows.threading.DispatcherOperation_1;
+import system.Func_1;
 import system.windows.threading.DispatcherPriorityAwaitable;
 import system.windows.threading.DispatcherProcessingDisabled;
 import system.windows.threading.DispatcherFrame;
@@ -234,6 +236,51 @@ public class Dispatcher extends NetObject  {
             retObjectInvokeAsync = classInstance.Invoke("InvokeAsync", callback);
             JCObject objInvokeAsync = (JCObject)retObjectInvokeAsync;
             return new DispatcherOperation(objInvokeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAsync != null ? retObjectInvokeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> DispatcherOperation_1 InvokeAsync(Func_1 callback, DispatcherPriority priority, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.InvalidCastException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeAsync = null;
+        try {
+            retObjectInvokeAsync = classInstance.Invoke("InvokeAsync", callback, priority == null ? null : priority.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objInvokeAsync = (JCObject)retObjectInvokeAsync;
+            return new DispatcherOperation_1(objInvokeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAsync != null ? retObjectInvokeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> DispatcherOperation_1 InvokeAsync(Func_1 callback, DispatcherPriority priority) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.InvalidCastException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeAsync = null;
+        try {
+            retObjectInvokeAsync = classInstance.Invoke("InvokeAsync", callback, priority == null ? null : priority.getJCOInstance());
+            JCObject objInvokeAsync = (JCObject)retObjectInvokeAsync;
+            return new DispatcherOperation_1(objInvokeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAsync != null ? retObjectInvokeAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> DispatcherOperation_1 InvokeAsync(Func_1 callback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.InvalidCastException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeAsync = null;
+        try {
+            retObjectInvokeAsync = classInstance.Invoke("InvokeAsync", callback);
+            JCObject objInvokeAsync = (JCObject)retObjectInvokeAsync;
+            return new DispatcherOperation_1(objInvokeAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAsync != null ? retObjectInvokeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {

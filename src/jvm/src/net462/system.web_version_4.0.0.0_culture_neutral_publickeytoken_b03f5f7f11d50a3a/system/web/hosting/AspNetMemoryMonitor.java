@@ -40,6 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.IObserver_1;
+import system.IObserver_1Implementation;
+import system.IObservable_1;
+import system.IObservable_1Implementation;
+import system.web.hosting.RecycleLimitInfo;
 
 
 /**
@@ -54,7 +59,7 @@ import system.IDisposableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AspNetMemoryMonitor extends NetObject implements AutoCloseable {
+public class AspNetMemoryMonitor extends NetObject implements system.IObservable_1<RecycleLimitInfo>, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -155,6 +160,21 @@ public class AspNetMemoryMonitor extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    public IDisposable Subscribe(IObserver_1 observer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubscribe = null;
+        try {
+            retObjectSubscribe = classInstance.Invoke("Subscribe", observer == null ? null : observer.getJCOInstance());
+            JCObject objSubscribe = (JCObject)retObjectSubscribe;
+            return new IDisposableImplementation(objSubscribe);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubscribe != null ? retObjectSubscribe.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -185,6 +205,15 @@ public class AspNetMemoryMonitor extends NetObject implements AutoCloseable {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIObservable_1 method available in IObservable_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IDisposable SubscribeFromIObservable_1(IObserver_1 observer) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIObservable_1 to obtain the full interface.");
+    }
+
     public void close() throws Exception {
         try {
             if (classInstance == null)
@@ -202,6 +231,56 @@ public class AspNetMemoryMonitor extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    public IObserver_1 getDefaultLowPhysicalMemoryObserver() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultLowPhysicalMemoryObserver = null;
+        try {
+            retObjectDefaultLowPhysicalMemoryObserver = classInstance.Get("DefaultLowPhysicalMemoryObserver");
+            JCObject val = (JCObject)retObjectDefaultLowPhysicalMemoryObserver;
+            return new IObserver_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultLowPhysicalMemoryObserver != null ? retObjectDefaultLowPhysicalMemoryObserver.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDefaultLowPhysicalMemoryObserver(IObserver_1 DefaultLowPhysicalMemoryObserver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DefaultLowPhysicalMemoryObserver", DefaultLowPhysicalMemoryObserver == null ? null : DefaultLowPhysicalMemoryObserver.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IObserver_1 getDefaultRecycleLimitObserver() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultRecycleLimitObserver = null;
+        try {
+            retObjectDefaultRecycleLimitObserver = classInstance.Get("DefaultRecycleLimitObserver");
+            JCObject val = (JCObject)retObjectDefaultRecycleLimitObserver;
+            return new IObserver_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultRecycleLimitObserver != null ? retObjectDefaultRecycleLimitObserver.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDefaultRecycleLimitObserver(IObserver_1 DefaultRecycleLimitObserver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DefaultRecycleLimitObserver", DefaultRecycleLimitObserver == null ? null : DefaultRecycleLimitObserver.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

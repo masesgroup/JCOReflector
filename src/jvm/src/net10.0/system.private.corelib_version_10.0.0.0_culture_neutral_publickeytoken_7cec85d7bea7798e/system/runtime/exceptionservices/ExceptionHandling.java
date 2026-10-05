@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Func_2;
 
 
 /**
@@ -156,6 +157,16 @@ public class ExceptionHandling extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RaiseAppDomainUnhandledExceptionEvent", exception == null ? null : exception.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetUnhandledExceptionHandler(Func_2 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetUnhandledExceptionHandler", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

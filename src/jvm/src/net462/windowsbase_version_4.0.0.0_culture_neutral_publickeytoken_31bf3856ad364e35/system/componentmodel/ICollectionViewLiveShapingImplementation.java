@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ObservableCollection_1;
+import system.Nullable_1;
 
 
 /**
@@ -181,6 +183,126 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
             return (boolean)retObjectCanChangeLiveSorting;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveSorting != null ? retObjectCanChangeLiveSorting.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObservableCollection_1 getLiveFilteringProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLiveFilteringProperties = null;
+        try {
+            retObjectLiveFilteringProperties = classInstance.Get("LiveFilteringProperties");
+            JCObject val = (JCObject)retObjectLiveFilteringProperties;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLiveFilteringProperties != null ? retObjectLiveFilteringProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObservableCollection_1 getLiveGroupingProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLiveGroupingProperties = null;
+        try {
+            retObjectLiveGroupingProperties = classInstance.Get("LiveGroupingProperties");
+            JCObject val = (JCObject)retObjectLiveGroupingProperties;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLiveGroupingProperties != null ? retObjectLiveGroupingProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObservableCollection_1 getLiveSortingProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLiveSortingProperties = null;
+        try {
+            retObjectLiveSortingProperties = classInstance.Get("LiveSortingProperties");
+            JCObject val = (JCObject)retObjectLiveSortingProperties;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLiveSortingProperties != null ? retObjectLiveSortingProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIsLiveFiltering() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLiveFiltering = null;
+        try {
+            retObjectIsLiveFiltering = classInstance.Get("IsLiveFiltering");
+            JCObject val = (JCObject)retObjectIsLiveFiltering;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsLiveFiltering != null ? retObjectIsLiveFiltering.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsLiveFiltering(Nullable_1 IsLiveFiltering) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsLiveFiltering", IsLiveFiltering == null ? null : IsLiveFiltering.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIsLiveGrouping() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLiveGrouping = null;
+        try {
+            retObjectIsLiveGrouping = classInstance.Get("IsLiveGrouping");
+            JCObject val = (JCObject)retObjectIsLiveGrouping;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsLiveGrouping != null ? retObjectIsLiveGrouping.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsLiveGrouping(Nullable_1 IsLiveGrouping) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsLiveGrouping", IsLiveGrouping == null ? null : IsLiveGrouping.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIsLiveSorting() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLiveSorting = null;
+        try {
+            retObjectIsLiveSorting = classInstance.Get("IsLiveSorting");
+            JCObject val = (JCObject)retObjectIsLiveSorting;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsLiveSorting != null ? retObjectIsLiveSorting.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setIsLiveSorting(Nullable_1 IsLiveSorting) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("IsLiveSorting", IsLiveSorting == null ? null : IsLiveSorting.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.specialized.NameValueCollection;
 import system.net.CookieCollection;
 import system.net.websockets.WebSocket;
@@ -198,6 +200,21 @@ public class WebSocketContext extends NetObject  {
             return (boolean)retObjectIsSecureConnection;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSecureConnection != null ? retObjectIsSecureConnection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getSecWebSocketProtocols() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecWebSocketProtocols = null;
+        try {
+            retObjectSecWebSocketProtocols = classInstance.Get("SecWebSocketProtocols");
+            JCObject val = (JCObject)retObjectSecWebSocketProtocols;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecWebSocketProtocols != null ? retObjectSecWebSocketProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

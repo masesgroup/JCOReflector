@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.ValueTuple_2;
 
 
 /**
@@ -53,7 +54,7 @@ import system.ValueType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DependentHandle extends ValueType implements AutoCloseable {
+public class DependentHandle extends system.ValueType implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -250,6 +251,21 @@ public class DependentHandle extends ValueType implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target == null ? null : Target.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTuple_2 getTargetAndDependent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetAndDependent = null;
+        try {
+            retObjectTargetAndDependent = classInstance.Get("TargetAndDependent");
+            JCObject val = (JCObject)retObjectTargetAndDependent;
+            return new ValueTuple_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetAndDependent != null ? retObjectTargetAndDependent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

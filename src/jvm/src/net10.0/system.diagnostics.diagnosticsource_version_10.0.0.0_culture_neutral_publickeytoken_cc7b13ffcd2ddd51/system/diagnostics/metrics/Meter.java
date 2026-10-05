@@ -39,6 +39,17 @@ import java.util.ArrayList;
 
 // Import section
 import system.diagnostics.metrics.MeterOptions;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.diagnostics.metrics.Counter_1;
+import system.diagnostics.metrics.Gauge_1;
+import system.diagnostics.metrics.Histogram_1;
+import system.diagnostics.metrics.InstrumentAdvice_1;
+import system.diagnostics.metrics.ObservableCounter_1;
+import system.Func_1;
+import system.diagnostics.metrics.ObservableGauge_1;
+import system.diagnostics.metrics.ObservableUpDownCounter_1;
+import system.diagnostics.metrics.UpDownCounter_1;
 
 
 /**
@@ -159,6 +170,16 @@ public class Meter extends NetObject implements AutoCloseable {
         }
     }
 
+    public Meter(java.lang.String name, java.lang.String version, IEnumerable_1 tags, NetObject scope) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, version, tags == null ? null : tags.getJCOInstance(), scope == null ? null : scope.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Meter(java.lang.String name, java.lang.String version) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -184,6 +205,246 @@ public class Meter extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    public <T extends IJCOBridgeReflected> Counter_1 CreateCounter(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCounter = null;
+        try {
+            retObjectCreateCounter = classInstance.Invoke("CreateCounter", name, unit, description, tags == null ? null : tags.getJCOInstance());
+            JCObject objCreateCounter = (JCObject)retObjectCreateCounter;
+            return new Counter_1(objCreateCounter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCounter != null ? retObjectCreateCounter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Counter_1 CreateCounter(java.lang.String name, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCounter = null;
+        try {
+            retObjectCreateCounter = classInstance.Invoke("CreateCounter", name, unit, description);
+            JCObject objCreateCounter = (JCObject)retObjectCreateCounter;
+            return new Counter_1(objCreateCounter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCounter != null ? retObjectCreateCounter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Gauge_1 CreateGauge(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateGauge = null;
+        try {
+            retObjectCreateGauge = classInstance.Invoke("CreateGauge", name, unit, description, tags == null ? null : tags.getJCOInstance());
+            JCObject objCreateGauge = (JCObject)retObjectCreateGauge;
+            return new Gauge_1(objCreateGauge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateGauge != null ? retObjectCreateGauge.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Gauge_1 CreateGauge(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateGauge = null;
+        try {
+            retObjectCreateGauge = classInstance.Invoke("CreateGauge", name);
+            JCObject objCreateGauge = (JCObject)retObjectCreateGauge;
+            return new Gauge_1(objCreateGauge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateGauge != null ? retObjectCreateGauge.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Histogram_1 CreateHistogram(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags, InstrumentAdvice_1 advice) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateHistogram = null;
+        try {
+            retObjectCreateHistogram = classInstance.Invoke("CreateHistogram", name, unit, description, tags == null ? null : tags.getJCOInstance(), advice == null ? null : advice.getJCOInstance());
+            JCObject objCreateHistogram = (JCObject)retObjectCreateHistogram;
+            return new Histogram_1(objCreateHistogram);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHistogram != null ? retObjectCreateHistogram.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Histogram_1 CreateHistogram(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateHistogram = null;
+        try {
+            retObjectCreateHistogram = classInstance.Invoke("CreateHistogram", name, unit, description, tags == null ? null : tags.getJCOInstance());
+            JCObject objCreateHistogram = (JCObject)retObjectCreateHistogram;
+            return new Histogram_1(objCreateHistogram);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHistogram != null ? retObjectCreateHistogram.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Histogram_1 CreateHistogram(java.lang.String name, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateHistogram = null;
+        try {
+            retObjectCreateHistogram = classInstance.Invoke("CreateHistogram", name, unit, description);
+            JCObject objCreateHistogram = (JCObject)retObjectCreateHistogram;
+            return new Histogram_1(objCreateHistogram);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHistogram != null ? retObjectCreateHistogram.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Histogram_1 CreateHistogram(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateHistogram = null;
+        try {
+            retObjectCreateHistogram = classInstance.Invoke("CreateHistogram", name);
+            JCObject objCreateHistogram = (JCObject)retObjectCreateHistogram;
+            return new Histogram_1(objCreateHistogram);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHistogram != null ? retObjectCreateHistogram.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ObservableCounter_1 CreateObservableCounter(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObservableCounter = null;
+        try {
+            retObjectCreateObservableCounter = classInstance.Invoke("CreateObservableCounter", name, observeValues, unit, description, tags == null ? null : tags.getJCOInstance());
+            JCObject objCreateObservableCounter = (JCObject)retObjectCreateObservableCounter;
+            return new ObservableCounter_1(objCreateObservableCounter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObservableCounter != null ? retObjectCreateObservableCounter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ObservableCounter_1 CreateObservableCounter(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObservableCounter = null;
+        try {
+            retObjectCreateObservableCounter = classInstance.Invoke("CreateObservableCounter", name, observeValues, unit, description);
+            JCObject objCreateObservableCounter = (JCObject)retObjectCreateObservableCounter;
+            return new ObservableCounter_1(objCreateObservableCounter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObservableCounter != null ? retObjectCreateObservableCounter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ObservableGauge_1 CreateObservableGauge(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObservableGauge = null;
+        try {
+            retObjectCreateObservableGauge = classInstance.Invoke("CreateObservableGauge", name, observeValues, unit, description, tags == null ? null : tags.getJCOInstance());
+            JCObject objCreateObservableGauge = (JCObject)retObjectCreateObservableGauge;
+            return new ObservableGauge_1(objCreateObservableGauge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObservableGauge != null ? retObjectCreateObservableGauge.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ObservableGauge_1 CreateObservableGauge(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObservableGauge = null;
+        try {
+            retObjectCreateObservableGauge = classInstance.Invoke("CreateObservableGauge", name, observeValues, unit, description);
+            JCObject objCreateObservableGauge = (JCObject)retObjectCreateObservableGauge;
+            return new ObservableGauge_1(objCreateObservableGauge);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObservableGauge != null ? retObjectCreateObservableGauge.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ObservableUpDownCounter_1 CreateObservableUpDownCounter(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObservableUpDownCounter = null;
+        try {
+            retObjectCreateObservableUpDownCounter = classInstance.Invoke("CreateObservableUpDownCounter", name, observeValues, unit, description, tags == null ? null : tags.getJCOInstance());
+            JCObject objCreateObservableUpDownCounter = (JCObject)retObjectCreateObservableUpDownCounter;
+            return new ObservableUpDownCounter_1(objCreateObservableUpDownCounter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObservableUpDownCounter != null ? retObjectCreateObservableUpDownCounter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ObservableUpDownCounter_1 CreateObservableUpDownCounter(java.lang.String name, Func_1 observeValues, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObservableUpDownCounter = null;
+        try {
+            retObjectCreateObservableUpDownCounter = classInstance.Invoke("CreateObservableUpDownCounter", name, observeValues, unit, description);
+            JCObject objCreateObservableUpDownCounter = (JCObject)retObjectCreateObservableUpDownCounter;
+            return new ObservableUpDownCounter_1(objCreateObservableUpDownCounter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObservableUpDownCounter != null ? retObjectCreateObservableUpDownCounter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> UpDownCounter_1 CreateUpDownCounter(java.lang.String name, java.lang.String unit, java.lang.String description, IEnumerable_1 tags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUpDownCounter = null;
+        try {
+            retObjectCreateUpDownCounter = classInstance.Invoke("CreateUpDownCounter", name, unit, description, tags == null ? null : tags.getJCOInstance());
+            JCObject objCreateUpDownCounter = (JCObject)retObjectCreateUpDownCounter;
+            return new UpDownCounter_1(objCreateUpDownCounter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpDownCounter != null ? retObjectCreateUpDownCounter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> UpDownCounter_1 CreateUpDownCounter(java.lang.String name, java.lang.String unit, java.lang.String description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateUpDownCounter = null;
+        try {
+            retObjectCreateUpDownCounter = classInstance.Invoke("CreateUpDownCounter", name, unit, description);
+            JCObject objCreateUpDownCounter = (JCObject)retObjectCreateUpDownCounter;
+            return new UpDownCounter_1(objCreateUpDownCounter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpDownCounter != null ? retObjectCreateUpDownCounter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +472,31 @@ public class Meter extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    public IEnumerable_1 getTags() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTags = null;
+        try {
+            retObjectTags = classInstance.Get("Tags");
+            JCObject val = (JCObject)retObjectTags;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTags != null ? retObjectTags.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTags(IEnumerable_1 Tags) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Tags", Tags == null ? null : Tags.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject getScope() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.objects.OriginalValueRecord;
 import system.data.EntityState;
 import system.data.common.DbDataRecord;
@@ -168,6 +170,21 @@ public class ObjectStateEntry extends NetObject  {
             return (boolean)retObjectIsPropertyChanged;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPropertyChanged != null ? retObjectIsPropertyChanged.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetModifiedProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModifiedProperties = null;
+        try {
+            retObjectGetModifiedProperties = classInstance.Invoke("GetModifiedProperties");
+            JCObject objGetModifiedProperties = (JCObject)retObjectGetModifiedProperties;
+            return new IEnumerable_1Implementation(objGetModifiedProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModifiedProperties != null ? retObjectGetModifiedProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

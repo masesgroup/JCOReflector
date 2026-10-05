@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.PathSegment;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.media.PolyLineSegment;
 import system.windows.media.PointCollection;
 
@@ -55,7 +57,7 @@ import system.windows.media.PointCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PolyLineSegment extends PathSegment  {
+public class PolyLineSegment extends system.windows.media.PathSegment  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -153,6 +155,16 @@ public class PolyLineSegment extends PathSegment  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PolyLineSegment(IEnumerable_1 points, boolean isStroked) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(points == null ? null : points.getJCOInstance(), isStroked));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

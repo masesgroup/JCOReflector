@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -115,6 +117,8 @@ public interface IValidationErrorService extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void ShowValidationErrors(IList_1 errors) throws Throwable;
+
 
     
     // Properties section

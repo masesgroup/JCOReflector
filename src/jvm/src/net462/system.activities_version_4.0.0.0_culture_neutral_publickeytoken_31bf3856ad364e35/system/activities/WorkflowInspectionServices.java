@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.Activity;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.Version;
 import system.activities.LocationReferenceEnvironment;
 
@@ -178,6 +180,21 @@ public class WorkflowInspectionServices extends NetObject  {
             return new Activity(objResolve);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetActivities(Activity activity) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetActivities = null;
+        try {
+            retObjectGetActivities = classType.Invoke("GetActivities", activity == null ? null : activity.getJCOInstance());
+            JCObject objGetActivities = (JCObject)retObjectGetActivities;
+            return new IEnumerable_1Implementation(objGetActivities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetActivities != null ? retObjectGetActivities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

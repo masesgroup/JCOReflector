@@ -44,6 +44,8 @@ import system.io.Stream;
 import system.runtime.serialization.IFormatter;
 import system.runtime.serialization.IFormatterImplementation;
 import system.workflow.componentmodel.DependencyProperty;
+import system.workflow.componentmodel.IActivityEventListener_1;
+import system.workflow.componentmodel.IActivityEventListener_1Implementation;
 import system.workflow.componentmodel.ActivityExecutionResult;
 import system.workflow.componentmodel.ActivityExecutionStatus;
 import system.workflow.componentmodel.CompositeActivity;
@@ -61,7 +63,7 @@ import system.workflow.componentmodel.CompositeActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Activity extends DependencyObject  {
+public class Activity extends system.workflow.componentmodel.DependencyObject  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -253,6 +255,16 @@ public class Activity extends DependencyObject  {
         }
     }
 
+    public void RegisterForStatusChange(DependencyProperty dependencyProp, IActivityEventListener_1 activityStatusChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterForStatusChange", dependencyProp == null ? null : dependencyProp.getJCOInstance(), activityStatusChangeListener == null ? null : activityStatusChangeListener.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Save(Stream stream) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -268,6 +280,16 @@ public class Activity extends DependencyObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance(), formatter == null ? null : formatter.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UnregisterForStatusChange(DependencyProperty dependencyProp, IActivityEventListener_1 activityStatusChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UnregisterForStatusChange", dependencyProp == null ? null : dependencyProp.getJCOInstance(), activityStatusChangeListener == null ? null : activityStatusChangeListener.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

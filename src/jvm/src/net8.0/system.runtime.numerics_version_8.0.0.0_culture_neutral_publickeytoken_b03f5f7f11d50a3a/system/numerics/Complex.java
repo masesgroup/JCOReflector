@@ -57,7 +57,7 @@ import system.IFormatProviderImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Complex extends ValueType  {
+public class Complex extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Runtime.Numerics, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -595,6 +595,51 @@ public class Complex extends ValueType  {
         }
     }
 
+    public static <TOther extends IJCOBridgeReflected> Complex CreateChecked(TOther value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateChecked = null;
+        try {
+            retObjectCreateChecked = classType.Invoke("CreateChecked", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreateChecked = (JCObject)retObjectCreateChecked;
+            return new Complex(objCreateChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateChecked != null ? retObjectCreateChecked.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOther extends IJCOBridgeReflected> Complex CreateSaturating(TOther value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateSaturating = null;
+        try {
+            retObjectCreateSaturating = classType.Invoke("CreateSaturating", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreateSaturating = (JCObject)retObjectCreateSaturating;
+            return new Complex(objCreateSaturating);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSaturating != null ? retObjectCreateSaturating.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOther extends IJCOBridgeReflected> Complex CreateTruncating(TOther value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTruncating = null;
+        try {
+            retObjectCreateTruncating = classType.Invoke("CreateTruncating", value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            JCObject objCreateTruncating = (JCObject)retObjectCreateTruncating;
+            return new Complex(objCreateTruncating);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTruncating != null ? retObjectCreateTruncating.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Complex Divide(double dividend, Complex divisor) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1040,6 +1085,42 @@ public class Complex extends ValueType  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsCanonical(Complex value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static boolean IsZero(Complex value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static Complex MaxMagnitudeNumber(Complex x, Complex y) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINumberBase_1 method available in INumberBase_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public static Complex MinMagnitudeNumber(Complex x, Complex y) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINumberBase_1 to obtain the full interface.");
     }
 
 

@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.List_1;
 
 
 /**
@@ -119,6 +120,14 @@ public interface IOutputCacheEntry extends IJCOBridgeReflected {
     
     // Properties section
     
+    public List_1 getHeaderElements() throws Throwable;
+
+    public void setHeaderElements(List_1 HeaderElements) throws Throwable;
+
+    public List_1 getResponseElements() throws Throwable;
+
+    public void setResponseElements(List_1 ResponseElements) throws Throwable;
+
 
 
     // Instance Events section

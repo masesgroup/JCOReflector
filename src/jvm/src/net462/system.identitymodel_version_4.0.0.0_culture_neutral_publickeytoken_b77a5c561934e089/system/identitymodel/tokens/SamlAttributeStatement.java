@@ -40,11 +40,15 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.SamlSubjectStatement;
 import system.identitymodel.tokens.SamlSubject;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlDictionaryWriter;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -59,7 +63,7 @@ import system.xml.XmlDictionaryWriter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SamlAttributeStatement extends SamlSubjectStatement  {
+public class SamlAttributeStatement extends system.identitymodel.tokens.SamlSubjectStatement  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -162,6 +166,16 @@ public class SamlAttributeStatement extends SamlSubjectStatement  {
         }
     }
 
+    public SamlAttributeStatement(SamlSubject samlSubject, IEnumerable_1 attributes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(samlSubject == null ? null : samlSubject.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -200,6 +214,21 @@ public class SamlAttributeStatement extends SamlSubjectStatement  {
     
     // Properties section
     
+    public IList_1 getAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
+        try {
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

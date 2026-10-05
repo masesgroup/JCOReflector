@@ -54,7 +54,7 @@ import microsoft.jscript.StringObject;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class StringConstructor extends ScriptFunction  {
+public class StringConstructor extends microsoft.jscript.ScriptFunction  {
     /**
      * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

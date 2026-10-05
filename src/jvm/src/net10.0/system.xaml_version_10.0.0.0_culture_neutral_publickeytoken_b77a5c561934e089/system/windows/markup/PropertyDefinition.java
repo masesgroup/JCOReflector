@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.markup.MemberDefinition;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xaml.XamlType;
 
 
@@ -54,7 +56,7 @@ import system.xaml.XamlType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PropertyDefinition extends MemberDefinition  {
+public class PropertyDefinition extends system.windows.markup.MemberDefinition  {
     /**
      * Fully assembly qualified name: System.Xaml, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -165,6 +167,21 @@ public class PropertyDefinition extends MemberDefinition  {
     
     // Properties section
     
+    public IList_1 getAttributes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
+        try {
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getModifier() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

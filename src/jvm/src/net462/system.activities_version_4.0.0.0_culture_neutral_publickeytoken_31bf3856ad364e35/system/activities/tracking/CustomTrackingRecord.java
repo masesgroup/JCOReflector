@@ -42,6 +42,8 @@ import system.activities.tracking.TrackingRecord;
 import system.Guid;
 import system.diagnostics.TraceLevel;
 import system.activities.tracking.ActivityInfo;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -56,7 +58,7 @@ import system.activities.tracking.ActivityInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CustomTrackingRecord extends TrackingRecord  {
+public class CustomTrackingRecord extends system.activities.tracking.TrackingRecord  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -211,6 +213,21 @@ public class CustomTrackingRecord extends TrackingRecord  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Activity", Activity == null ? null : Activity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectData = null;
+        try {
+            retObjectData = classInstance.Get("Data");
+            JCObject val = (JCObject)retObjectData;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectData != null ? retObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

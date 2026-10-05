@@ -43,9 +43,17 @@ import system.threading.tasks.TaskCreationOptions;
 import system.threading.tasks.TaskContinuationOptions;
 import system.threading.tasks.TaskScheduler;
 import system.threading.tasks.Task;
+import system.Action_1;
+import system.threading.tasks.Task_1;
+import system.Func_3;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.Func_6;
+import system.Func_5;
+import system.Func_4;
 import system.Action;
+import system.Func_2;
+import system.Func_1;
 
 
 /**
@@ -207,6 +215,411 @@ public class TaskFactory extends NetObject  {
     
     // Methods section
     
+    public Task ContinueWhenAll(Task[] tasks, Action_1 continuationAction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationAction, cancellationToken == null ? null : cancellationToken.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task ContinueWhenAll(Task[] tasks, Action_1 continuationAction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationAction, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task ContinueWhenAll(Task[] tasks, Action_1 continuationAction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationAction, continuationOptions == null ? null : continuationOptions.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task ContinueWhenAll(Task[] tasks, Action_1 continuationAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationAction);
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected> Task ContinueWhenAll(Task_1[] tasks, Action_1 continuationAction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationAction, cancellationToken == null ? null : cancellationToken.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected> Task ContinueWhenAll(Task_1[] tasks, Action_1 continuationAction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationAction, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected> Task ContinueWhenAll(Task_1[] tasks, Action_1 continuationAction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationAction, continuationOptions == null ? null : continuationOptions.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected> Task ContinueWhenAll(Task_1[] tasks, Action_1 continuationAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationAction);
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task ContinueWhenAny(Task[] tasks, Action_1 continuationAction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationAction, cancellationToken == null ? null : cancellationToken.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task ContinueWhenAny(Task[] tasks, Action_1 continuationAction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationAction, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task ContinueWhenAny(Task[] tasks, Action_1 continuationAction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationAction, continuationOptions == null ? null : continuationOptions.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task ContinueWhenAny(Task[] tasks, Action_1 continuationAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationAction);
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected> Task ContinueWhenAny(Task_1[] tasks, Action_1 continuationAction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationAction, cancellationToken == null ? null : cancellationToken.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected> Task ContinueWhenAny(Task_1[] tasks, Action_1 continuationAction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationAction, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected> Task ContinueWhenAny(Task_1[] tasks, Action_1 continuationAction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationAction, continuationOptions == null ? null : continuationOptions.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected> Task ContinueWhenAny(Task_1[] tasks, Action_1 continuationAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationAction);
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task FromAsync(Func_3 beginMethod, Action_1 endMethod, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task FromAsync(Func_3 beginMethod, Action_1 endMethod, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, state == null ? null : state.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task FromAsync(IAsyncResult asyncResult, Action_1 endMethod, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", asyncResult == null ? null : asyncResult.getJCOInstance(), endMethod, creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task FromAsync(IAsyncResult asyncResult, Action_1 endMethod, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", asyncResult == null ? null : asyncResult.getJCOInstance(), endMethod, creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task FromAsync(IAsyncResult asyncResult, Action_1 endMethod) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", asyncResult == null ? null : asyncResult.getJCOInstance(), endMethod);
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected> Task FromAsync(Func_6 beginMethod, Action_1 endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance(), arg3 == null ? null : ((IJCOBridgeReflected)arg3).getJCOInstance(), state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected> Task FromAsync(Func_6 beginMethod, Action_1 endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance(), arg3 == null ? null : ((IJCOBridgeReflected)arg3).getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected> Task FromAsync(Func_5 beginMethod, Action_1 endMethod, TArg1 arg1, TArg2 arg2, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance(), state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected> Task FromAsync(Func_5 beginMethod, Action_1 endMethod, TArg1 arg1, TArg2 arg2, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected> Task FromAsync(Func_4 beginMethod, Action_1 endMethod, TArg1 arg1, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected> Task FromAsync(Func_4 beginMethod, Action_1 endMethod, TArg1 arg1, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Task StartNew(Action action, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -260,6 +673,591 @@ public class TaskFactory extends NetObject  {
             retObjectStartNew = classInstance.Invoke("StartNew", action);
             JCObject objStartNew = (JCObject)retObjectStartNew;
             return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task StartNew(Action_1 action, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", action, state == null ? null : state.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task StartNew(Action_1 action, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", action, state == null ? null : state.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task StartNew(Action_1 action, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", action, state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task StartNew(Action_1 action, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", action, state == null ? null : state.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationFunction, cancellationToken == null ? null : cancellationToken.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task_1(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationFunction, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task_1(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationFunction, continuationOptions == null ? null : continuationOptions.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task_1(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationFunction);
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task_1(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationFunction, cancellationToken == null ? null : cancellationToken.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task_1(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationFunction, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task_1(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationFunction, continuationOptions == null ? null : continuationOptions.getJCOInstance());
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task_1(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAll = null;
+        try {
+            retObjectContinueWhenAll = classInstance.Invoke("ContinueWhenAll", toObjectFromArray(tasks), continuationFunction);
+            JCObject objContinueWhenAll = (JCObject)retObjectContinueWhenAll;
+            return new Task_1(objContinueWhenAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAll != null ? retObjectContinueWhenAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationFunction, cancellationToken == null ? null : cancellationToken.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task_1(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationFunction, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task_1(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationFunction, continuationOptions == null ? null : continuationOptions.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task_1(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAntecedentResult extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationFunction);
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task_1(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationFunction, cancellationToken == null ? null : cancellationToken.getJCOInstance(), continuationOptions == null ? null : continuationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task_1(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationFunction, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task_1(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationFunction, continuationOptions == null ? null : continuationOptions.getJCOInstance());
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task_1(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueWhenAny = null;
+        try {
+            retObjectContinueWhenAny = classInstance.Invoke("ContinueWhenAny", toObjectFromArray(tasks), continuationFunction);
+            JCObject objContinueWhenAny = (JCObject)retObjectContinueWhenAny;
+            return new Task_1(objContinueWhenAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinueWhenAny != null ? retObjectContinueWhenAny.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 FromAsync(Func_6 beginMethod, Func_2 endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance(), arg3 == null ? null : ((IJCOBridgeReflected)arg3).getJCOInstance(), state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 FromAsync(Func_6 beginMethod, Func_2 endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance(), arg3 == null ? null : ((IJCOBridgeReflected)arg3).getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 FromAsync(Func_5 beginMethod, Func_2 endMethod, TArg1 arg1, TArg2 arg2, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance(), state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 FromAsync(Func_5 beginMethod, Func_2 endMethod, TArg1 arg1, TArg2 arg2, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), arg2 == null ? null : ((IJCOBridgeReflected)arg2).getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 FromAsync(Func_4 beginMethod, Func_2 endMethod, TArg1 arg1, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TArg1 extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> Task_1 FromAsync(Func_4 beginMethod, Func_2 endMethod, TArg1 arg1, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, arg1 == null ? null : ((IJCOBridgeReflected)arg1).getJCOInstance(), state == null ? null : state.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 FromAsync(Func_3 beginMethod, Func_2 endMethod, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 FromAsync(Func_3 beginMethod, Func_2 endMethod, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", beginMethod, endMethod, state == null ? null : state.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 FromAsync(IAsyncResult asyncResult, Func_2 endMethod, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", asyncResult == null ? null : asyncResult.getJCOInstance(), endMethod, creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 FromAsync(IAsyncResult asyncResult, Func_2 endMethod, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", asyncResult == null ? null : asyncResult.getJCOInstance(), endMethod, creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 FromAsync(IAsyncResult asyncResult, Func_2 endMethod) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromAsync = null;
+        try {
+            retObjectFromAsync = classInstance.Invoke("FromAsync", asyncResult == null ? null : asyncResult.getJCOInstance(), endMethod);
+            JCObject objFromAsync = (JCObject)retObjectFromAsync;
+            return new Task_1(objFromAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromAsync != null ? retObjectFromAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 StartNew(Func_1 function, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", function, cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task_1(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 StartNew(Func_1 function, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", function, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task_1(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 StartNew(Func_1 function, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", function, creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task_1(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 StartNew(Func_1 function) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", function);
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task_1(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 StartNew(Func_2 function, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", function, state == null ? null : state.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task_1(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 StartNew(Func_2 function, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", function, state == null ? null : state.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task_1(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 StartNew(Func_2 function, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", function, state == null ? null : state.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task_1(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TResult extends IJCOBridgeReflected> Task_1 StartNew(Func_2 function, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
+        try {
+            retObjectStartNew = classInstance.Invoke("StartNew", function, state == null ? null : state.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
+            return new Task_1(objStartNew);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {

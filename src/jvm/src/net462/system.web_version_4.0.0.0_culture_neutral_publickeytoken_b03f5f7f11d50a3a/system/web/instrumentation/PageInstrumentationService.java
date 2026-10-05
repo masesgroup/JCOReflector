@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -182,6 +184,21 @@ public class PageInstrumentationService extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("IsEnabled", IsEnabled);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getExecutionListeners() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecutionListeners = null;
+        try {
+            retObjectExecutionListeners = classInstance.Get("ExecutionListeners");
+            JCObject val = (JCObject)retObjectExecutionListeners;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecutionListeners != null ? retObjectExecutionListeners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

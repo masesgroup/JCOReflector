@@ -66,7 +66,7 @@ import system.io.pipes.PipeStreamImpersonationWorker;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NamedPipeServerStream extends PipeStream  {
+public class NamedPipeServerStream extends system.io.pipes.PipeStream  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.diagnostics.tracing.EventCommand;
 
 
@@ -54,7 +56,7 @@ import system.diagnostics.tracing.EventCommand;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventCommandEventArgs extends EventArgs  {
+public class EventCommandEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -187,6 +189,31 @@ public class EventCommandEventArgs extends EventArgs  {
     
     // Properties section
     
+    public IDictionary_2 getArguments() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArguments = null;
+        try {
+            retObjectArguments = classInstance.Get("Arguments");
+            JCObject val = (JCObject)retObjectArguments;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArguments != null ? retObjectArguments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setArguments(IDictionary_2 Arguments) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Arguments", Arguments == null ? null : Arguments.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EventCommand getCommand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

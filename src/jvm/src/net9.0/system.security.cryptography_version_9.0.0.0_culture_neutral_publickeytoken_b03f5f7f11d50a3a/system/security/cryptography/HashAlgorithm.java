@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.io.Stream;
 import system.security.cryptography.HashAlgorithm;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 
 
 /**
@@ -419,6 +421,21 @@ public class HashAlgorithm extends NetObject implements AutoCloseable {
             return new HashAlgorithm(objCreate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ComputeHashAsync(Stream inputStream, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComputeHashAsync = null;
+        try {
+            retObjectComputeHashAsync = classInstance.Invoke("ComputeHashAsync", inputStream == null ? null : inputStream.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objComputeHashAsync = (JCObject)retObjectComputeHashAsync;
+            return new Task_1(objComputeHashAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComputeHashAsync != null ? retObjectComputeHashAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

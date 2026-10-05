@@ -40,6 +40,8 @@ import org.mases.jcobridge.netreflection.*;
 import system.linq.IQueryable;
 import system.linq.IQueryableImplementation;
 import system.linq.expressions.Expression;
+import system.linq.IQueryable_1;
+import system.linq.IQueryable_1Implementation;
 
 
 /**

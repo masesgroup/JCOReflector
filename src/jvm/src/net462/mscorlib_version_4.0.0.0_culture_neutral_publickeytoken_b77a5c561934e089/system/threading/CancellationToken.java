@@ -42,6 +42,7 @@ import system.ValueType;
 import system.threading.CancellationToken;
 import system.threading.CancellationTokenRegistration;
 import system.Action;
+import system.Action_1;
 import system.threading.WaitHandle;
 
 
@@ -57,7 +58,7 @@ import system.threading.WaitHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CancellationToken extends ValueType  {
+public class CancellationToken extends system.ValueType  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -203,6 +204,36 @@ public class CancellationToken extends ValueType  {
         java.lang.Object retObjectRegister = null;
         try {
             retObjectRegister = classInstance.Invoke("Register", callback, useSynchronizationContext);
+            JCObject objRegister = (JCObject)retObjectRegister;
+            return new CancellationTokenRegistration(objRegister);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CancellationTokenRegistration Register(Action_1 callback, NetObject state) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegister = null;
+        try {
+            retObjectRegister = classInstance.Invoke("Register", callback, state == null ? null : state.getJCOInstance());
+            JCObject objRegister = (JCObject)retObjectRegister;
+            return new CancellationTokenRegistration(objRegister);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CancellationTokenRegistration Register(Action_1 callback, NetObject state, boolean useSynchronizationContext) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegister = null;
+        try {
+            retObjectRegister = classInstance.Invoke("Register", callback, state == null ? null : state.getJCOInstance(), useSynchronizationContext);
             JCObject objRegister = (JCObject)retObjectRegister;
             return new CancellationTokenRegistration(objRegister);
         } catch (java.lang.ClassCastException cce) {

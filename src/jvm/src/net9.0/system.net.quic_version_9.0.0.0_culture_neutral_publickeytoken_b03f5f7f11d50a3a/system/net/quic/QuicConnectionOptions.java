@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Action_2;
 import system.net.quic.QuicReceiveWindowSizes;
 import system.TimeSpan;
 
@@ -352,6 +353,30 @@ public class QuicConnectionOptions extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultStreamErrorCode", DefaultStreamErrorCode);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Action_2 getStreamCapacityCallback() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStreamCapacityCallback = null;
+        try {
+            retObjectStreamCapacityCallback = classInstance.Get("StreamCapacityCallback");
+            return (Action_2)retObjectStreamCapacityCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectStreamCapacityCallback != null ? retObjectStreamCapacityCallback.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setStreamCapacityCallback(Action_2 StreamCapacityCallback) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("StreamCapacityCallback", StreamCapacityCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

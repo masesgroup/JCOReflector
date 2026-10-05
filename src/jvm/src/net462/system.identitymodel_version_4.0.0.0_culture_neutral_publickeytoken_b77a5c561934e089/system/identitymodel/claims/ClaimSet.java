@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.claims.Claim;
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.identitymodel.claims.ClaimSet;
 
 
@@ -162,6 +166,35 @@ public class ClaimSet extends NetObjectEnumerable  {
             return (boolean)retObjectContainsClaim;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsClaim != null ? retObjectContainsClaim.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean ContainsClaim(Claim claim, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsClaim = null;
+        try {
+            retObjectContainsClaim = classInstance.Invoke("ContainsClaim", claim == null ? null : claim.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (boolean)retObjectContainsClaim;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsClaim != null ? retObjectContainsClaim.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 FindClaims(java.lang.String claimType, java.lang.String right) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindClaims = null;
+        try {
+            retObjectFindClaims = classInstance.Invoke("FindClaims", claimType, right);
+            JCObject objFindClaims = (JCObject)retObjectFindClaims;
+            return new IEnumerable_1Implementation(objFindClaims);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindClaims != null ? retObjectFindClaims.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

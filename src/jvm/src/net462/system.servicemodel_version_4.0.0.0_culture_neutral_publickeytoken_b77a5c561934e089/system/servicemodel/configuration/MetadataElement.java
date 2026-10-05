@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.configuration.ConfigurationElement;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.configuration.PolicyImporterElementCollection;
 import system.servicemodel.configuration.WsdlImporterElementCollection;
 
@@ -55,7 +56,7 @@ import system.servicemodel.configuration.WsdlImporterElementCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MetadataElement extends ConfigurationElement  {
+public class MetadataElement extends system.configuration.ConfigurationElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -162,6 +163,36 @@ public class MetadataElement extends ConfigurationElement  {
     
     // Methods section
     
+    public Collection_1 LoadPolicyImportExtensions() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadPolicyImportExtensions = null;
+        try {
+            retObjectLoadPolicyImportExtensions = classInstance.Invoke("LoadPolicyImportExtensions");
+            JCObject objLoadPolicyImportExtensions = (JCObject)retObjectLoadPolicyImportExtensions;
+            return new Collection_1(objLoadPolicyImportExtensions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPolicyImportExtensions != null ? retObjectLoadPolicyImportExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 LoadWsdlImportExtensions() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadWsdlImportExtensions = null;
+        try {
+            retObjectLoadWsdlImportExtensions = classInstance.Invoke("LoadWsdlImportExtensions");
+            JCObject objLoadWsdlImportExtensions = (JCObject)retObjectLoadWsdlImportExtensions;
+            return new Collection_1(objLoadWsdlImportExtensions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadWsdlImportExtensions != null ? retObjectLoadWsdlImportExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

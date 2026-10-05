@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.activities.NativeActivity;
 import system.activities.Activity;
 import system.activities.ActivityDelegate;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.activities.ActivityDelegate;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InvokeDelegate extends NativeActivity  {
+public class InvokeDelegate extends system.activities.NativeActivity  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -211,6 +213,21 @@ public class InvokeDelegate extends NativeActivity  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Delegate", Delegate == null ? null : Delegate.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getDelegateArguments() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelegateArguments = null;
+        try {
+            retObjectDelegateArguments = classInstance.Get("DelegateArguments");
+            JCObject val = (JCObject)retObjectDelegateArguments;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelegateArguments != null ? retObjectDelegateArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

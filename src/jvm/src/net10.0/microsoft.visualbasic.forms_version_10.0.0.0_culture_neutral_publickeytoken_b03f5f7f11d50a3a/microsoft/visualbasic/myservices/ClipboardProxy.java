@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.TextDataFormat;
+import system.Func_2;
 import system.collections.specialized.StringCollection;
 import system.drawing.Image;
 import system.io.Stream;
@@ -244,6 +245,34 @@ public class ClipboardProxy extends NetObject  {
         }
     }
 
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2 resolver, JCORefOut<T> data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.runtime.interopservices.ExternalException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classInstance.Invoke("TryGetData", format, resolver, data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, JCORefOut<T> data) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.runtime.interopservices.ExternalException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetData = null;
+        try {
+            retObjectTryGetData = classInstance.Invoke("TryGetData", format, data.getJCRefOut());
+            return (boolean)retObjectTryGetData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetData != null ? retObjectTryGetData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public StringCollection GetFileDropList() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -392,6 +421,16 @@ public class ClipboardProxy extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", format, data == null ? null : data.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> void SetDataAsJson(java.lang.String format, T data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.runtime.interopservices.ExternalException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetDataAsJson", format, data == null ? null : ((IJCOBridgeReflected)data).getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

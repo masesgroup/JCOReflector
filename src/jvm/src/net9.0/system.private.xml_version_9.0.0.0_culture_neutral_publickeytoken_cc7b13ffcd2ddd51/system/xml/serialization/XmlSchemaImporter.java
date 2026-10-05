@@ -59,7 +59,7 @@ import system.xml.serialization.XmlTypeMapping;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaImporter extends SchemaImporter  {
+public class XmlSchemaImporter extends system.xml.serialization.SchemaImporter  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

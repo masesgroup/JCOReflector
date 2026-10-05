@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelMetadata;
+import system.web.modelbinding.ModelBindingExecutionContext;
 
 
 /**
@@ -151,6 +155,21 @@ public class ModelValidatorProvider extends NetObject  {
     
     // Methods section
     
+    public IEnumerable_1 GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValidators = null;
+        try {
+            retObjectGetValidators = classInstance.Invoke("GetValidators", metadata == null ? null : metadata.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetValidators = (JCObject)retObjectGetValidators;
+            return new IEnumerable_1Implementation(objGetValidators);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValidators != null ? retObjectGetValidators.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.BlobReader;
 import system.reflection.metadata.MethodBodyBlock;
 import system.reflection.metadata.StandaloneSignatureHandle;
@@ -179,6 +180,21 @@ public class MethodBodyBlock extends NetObject  {
         }
     }
 
+    public ImmutableArray_1 GetILContent() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetILContent = null;
+        try {
+            retObjectGetILContent = classInstance.Invoke("GetILContent");
+            JCObject objGetILContent = (JCObject)retObjectGetILContent;
+            return new ImmutableArray_1(objGetILContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetILContent != null ? retObjectGetILContent.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public BlobReader GetILReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -302,6 +318,21 @@ public class MethodBodyBlock extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 getExceptionRegions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionRegions = null;
+        try {
+            retObjectExceptionRegions = classInstance.Get("ExceptionRegions");
+            JCObject val = (JCObject)retObjectExceptionRegions;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptionRegions != null ? retObjectExceptionRegions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

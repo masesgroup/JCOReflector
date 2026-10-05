@@ -42,6 +42,7 @@ import system.identitymodel.tokens.Saml2Statement;
 import system.identitymodel.tokens.Saml2AuthenticationContext;
 import system.DateTime;
 import system.identitymodel.tokens.Saml2SubjectLocality;
+import system.Nullable_1;
 
 
 /**
@@ -56,7 +57,7 @@ import system.identitymodel.tokens.Saml2SubjectLocality;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Saml2AuthenticationStatement extends Saml2Statement  {
+public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Saml2Statement  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -251,6 +252,31 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubjectLocality", SubjectLocality == null ? null : SubjectLocality.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getSessionNotOnOrAfter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionNotOnOrAfter = null;
+        try {
+            retObjectSessionNotOnOrAfter = classInstance.Get("SessionNotOnOrAfter");
+            JCObject val = (JCObject)retObjectSessionNotOnOrAfter;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSessionNotOnOrAfter != null ? retObjectSessionNotOnOrAfter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setSessionNotOnOrAfter(Nullable_1 SessionNotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("SessionNotOnOrAfter", SessionNotOnOrAfter == null ? null : SessionNotOnOrAfter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -54,7 +54,7 @@ import system.servicemodel.activities.tracking.configuration.AnnotationElementCo
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TrackingQueryElement extends TrackingConfigurationElement  {
+public class TrackingQueryElement extends system.servicemodel.activities.tracking.configuration.TrackingConfigurationElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

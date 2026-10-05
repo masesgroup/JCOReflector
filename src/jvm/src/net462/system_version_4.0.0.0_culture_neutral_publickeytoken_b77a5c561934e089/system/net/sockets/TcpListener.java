@@ -46,6 +46,7 @@ import system.AsyncCallback;
 import system.net.sockets.Socket;
 import system.net.sockets.TcpClient;
 import system.net.sockets.TcpListener;
+import system.threading.tasks.Task_1;
 import system.net.EndPoint;
 
 
@@ -306,6 +307,36 @@ public class TcpListener extends NetObject  {
             return new TcpListener(objCreate);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AcceptSocketAsync() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NotSupportedException, system.NotImplementedException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptSocketAsync = null;
+        try {
+            retObjectAcceptSocketAsync = classInstance.Invoke("AcceptSocketAsync");
+            JCObject objAcceptSocketAsync = (JCObject)retObjectAcceptSocketAsync;
+            return new Task_1(objAcceptSocketAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptSocketAsync != null ? retObjectAcceptSocketAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AcceptTcpClientAsync() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NotSupportedException, system.NotImplementedException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptTcpClientAsync = null;
+        try {
+            retObjectAcceptTcpClientAsync = classInstance.Invoke("AcceptTcpClientAsync");
+            JCObject objAcceptTcpClientAsync = (JCObject)retObjectAcceptTcpClientAsync;
+            return new Task_1(objAcceptTcpClientAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptTcpClientAsync != null ? retObjectAcceptTcpClientAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

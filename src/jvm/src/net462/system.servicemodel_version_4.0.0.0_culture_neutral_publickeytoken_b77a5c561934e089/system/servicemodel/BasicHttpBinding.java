@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.servicemodel.HttpBindingBase;
 import system.servicemodel.BasicHttpSecurityMode;
 import system.servicemodel.channels.BindingElementCollection;
+import system.servicemodel.channels.IChannelFactory_1;
+import system.servicemodel.channels.IChannelFactory_1Implementation;
+import system.servicemodel.channels.BindingParameterCollection;
 import system.servicemodel.BasicHttpSecurity;
 import system.servicemodel.WSMessageEncoding;
 
@@ -57,7 +60,7 @@ import system.servicemodel.WSMessageEncoding;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BasicHttpBinding extends HttpBindingBase  {
+public class BasicHttpBinding extends system.servicemodel.HttpBindingBase  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -222,6 +225,21 @@ public class BasicHttpBinding extends HttpBindingBase  {
             return new BindingElementCollection(objCreateBindingElements);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindingElements != null ? retObjectCreateBindingElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelFactory_1 BuildChannelFactory(BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelFactory = null;
+        try {
+            retObjectBuildChannelFactory = classInstance.Invoke("BuildChannelFactory", parameters == null ? null : parameters.getJCOInstance());
+            JCObject objBuildChannelFactory = (JCObject)retObjectBuildChannelFactory;
+            return new IChannelFactory_1Implementation(objBuildChannelFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelFactory != null ? retObjectBuildChannelFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

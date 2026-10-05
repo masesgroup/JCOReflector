@@ -55,7 +55,7 @@ import system.web.modelbinding.DataAnnotationsValidatableObjectAdapterFactory;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorProvider  {
+public class DataAnnotationsModelValidatorProvider extends system.web.modelbinding.AssociatedValidatorProvider  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.diagnostics.metrics.Instrument;
+import system.Action_2;
 
 
 /**
@@ -232,6 +233,54 @@ public class MeterListener extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    public Action_2 getInstrumentPublished() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstrumentPublished = null;
+        try {
+            retObjectInstrumentPublished = classInstance.Get("InstrumentPublished");
+            return (Action_2)retObjectInstrumentPublished;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectInstrumentPublished != null ? retObjectInstrumentPublished.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInstrumentPublished(Action_2 InstrumentPublished) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InstrumentPublished", InstrumentPublished);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Action_2 getMeasurementsCompleted() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasurementsCompleted = null;
+        try {
+            retObjectMeasurementsCompleted = classInstance.Get("MeasurementsCompleted");
+            return (Action_2)retObjectMeasurementsCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectMeasurementsCompleted != null ? retObjectMeasurementsCompleted.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMeasurementsCompleted(Action_2 MeasurementsCompleted) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MeasurementsCompleted", MeasurementsCompleted);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

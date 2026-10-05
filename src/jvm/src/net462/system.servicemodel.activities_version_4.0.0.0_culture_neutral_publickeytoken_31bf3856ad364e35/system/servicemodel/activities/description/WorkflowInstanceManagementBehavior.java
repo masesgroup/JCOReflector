@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
+import system.collections.objectmodel.Collection_1;
+import system.servicemodel.channels.BindingParameterCollection;
 
 
 /**
@@ -161,6 +163,16 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
     
     // Methods section
     
+    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddBindingParameters", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance(), endpoints == null ? null : endpoints.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

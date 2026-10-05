@@ -38,6 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.immutable.ImmutableArray_1;
+import system.collections.generic.IComparer_1;
+import system.collections.generic.IComparer_1Implementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.Func_3;
+import system.Func_2;
 
 
 /**
@@ -151,6 +158,376 @@ public class ImmutableArray extends NetObject  {
     
     // Methods section
     
+    public static <T extends IJCOBridgeReflected> int BinarySearch(ImmutableArray_1 array, int index, int length, T value, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinarySearch = null;
+        try {
+            retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), index, length, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (int)retObjectBinarySearch;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportBinarySearchError = true;
+            java.lang.String retObjectBinarySearch_ToString = retObjectBinarySearch == null ? "null" : retObjectBinarySearch.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBinarySearch != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBinarySearchClass = retObjectBinarySearch.getClass();
+                    // java.lang.reflect.Method retObjectBinarySearchMethod = retObjectBinarySearchClass.getMethod("intValue");
+                    // return (int)retObjectBinarySearchMethod.invoke(retObjectBinarySearch);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBinarySearchNumber = java.text.NumberFormat.getInstance().parse(retObjectBinarySearch_ToString);
+                    return retObjectBinarySearchNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBinarySearchError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null", retObjectBinarySearch_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBinarySearchError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int BinarySearch(ImmutableArray_1 array, int index, int length, T value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinarySearch = null;
+        try {
+            retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), index, length, value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (int)retObjectBinarySearch;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportBinarySearchError = true;
+            java.lang.String retObjectBinarySearch_ToString = retObjectBinarySearch == null ? "null" : retObjectBinarySearch.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBinarySearch != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBinarySearchClass = retObjectBinarySearch.getClass();
+                    // java.lang.reflect.Method retObjectBinarySearchMethod = retObjectBinarySearchClass.getMethod("intValue");
+                    // return (int)retObjectBinarySearchMethod.invoke(retObjectBinarySearch);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBinarySearchNumber = java.text.NumberFormat.getInstance().parse(retObjectBinarySearch_ToString);
+                    return retObjectBinarySearchNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBinarySearchError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null", retObjectBinarySearch_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBinarySearchError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int BinarySearch(ImmutableArray_1 array, T value, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinarySearch = null;
+        try {
+            retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (int)retObjectBinarySearch;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportBinarySearchError = true;
+            java.lang.String retObjectBinarySearch_ToString = retObjectBinarySearch == null ? "null" : retObjectBinarySearch.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBinarySearch != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBinarySearchClass = retObjectBinarySearch.getClass();
+                    // java.lang.reflect.Method retObjectBinarySearchMethod = retObjectBinarySearchClass.getMethod("intValue");
+                    // return (int)retObjectBinarySearchMethod.invoke(retObjectBinarySearch);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBinarySearchNumber = java.text.NumberFormat.getInstance().parse(retObjectBinarySearch_ToString);
+                    return retObjectBinarySearchNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBinarySearchError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null", retObjectBinarySearch_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBinarySearchError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> int BinarySearch(ImmutableArray_1 array, T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinarySearch = null;
+        try {
+            retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+            return (int)retObjectBinarySearch;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportBinarySearchError = true;
+            java.lang.String retObjectBinarySearch_ToString = retObjectBinarySearch == null ? "null" : retObjectBinarySearch.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectBinarySearch != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectBinarySearchClass = retObjectBinarySearch.getClass();
+                    // java.lang.reflect.Method retObjectBinarySearchMethod = retObjectBinarySearchClass.getMethod("intValue");
+                    // return (int)retObjectBinarySearchMethod.invoke(retObjectBinarySearch);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectBinarySearchNumber = java.text.NumberFormat.getInstance().parse(retObjectBinarySearch_ToString);
+                    return retObjectBinarySearchNumber.intValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportBinarySearchError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into int and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null", retObjectBinarySearch_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportBinarySearchError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 Create() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableArray_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 Create(ImmutableArray_1 items, int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", items == null ? null : items.getJCOInstance(), start, length);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableArray_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 Create(T item1, T item2, T item3, T item4) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance(), item3 == null ? null : ((IJCOBridgeReflected)item3).getJCOInstance(), item4 == null ? null : ((IJCOBridgeReflected)item4).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableArray_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 Create(T item1, T item2, T item3) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance(), item3 == null ? null : ((IJCOBridgeReflected)item3).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableArray_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 Create(T item1, T item2) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item1 == null ? null : ((IJCOBridgeReflected)item1).getJCOInstance(), item2 == null ? null : ((IJCOBridgeReflected)item2).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableArray_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 Create(T item) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableArray_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 Create(T[] items, int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", items == null ? null : toObjectFromArray(items), start, length);
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableArray_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 Create(T... items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", items == null ? null : toObjectFromArray(items));
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new ImmutableArray_1(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ImmutableArray_1 CreateRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", items == null ? null : items.getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableArray_1(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TArg extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ImmutableArray_1 CreateRange(ImmutableArray_1 items, int start, int length, Func_3 selector, TArg arg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", items == null ? null : items.getJCOInstance(), start, length, selector, arg == null ? null : ((IJCOBridgeReflected)arg).getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableArray_1(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TArg extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ImmutableArray_1 CreateRange(ImmutableArray_1 items, Func_3 selector, TArg arg) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", items == null ? null : items.getJCOInstance(), selector, arg == null ? null : ((IJCOBridgeReflected)arg).getJCOInstance());
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableArray_1(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ImmutableArray_1 CreateRange(ImmutableArray_1 items, int start, int length, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", items == null ? null : items.getJCOInstance(), start, length, selector);
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableArray_1(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected, TResult extends IJCOBridgeReflected> ImmutableArray_1 CreateRange(ImmutableArray_1 items, Func_2 selector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRange = null;
+        try {
+            retObjectCreateRange = classType.Invoke("CreateRange", items == null ? null : items.getJCOInstance(), selector);
+            JCObject objCreateRange = (JCObject)retObjectCreateRange;
+            return new ImmutableArray_1(objCreateRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRange != null ? retObjectCreateRange.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSource extends IJCOBridgeReflected> ImmutableArray_1 ToImmutableArray(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToImmutableArray = null;
+        try {
+            retObjectToImmutableArray = classType.Invoke("ToImmutableArray", items == null ? null : items.getJCOInstance());
+            JCObject objToImmutableArray = (JCObject)retObjectToImmutableArray;
+            return new ImmutableArray_1(objToImmutableArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToImmutableArray != null ? retObjectToImmutableArray.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

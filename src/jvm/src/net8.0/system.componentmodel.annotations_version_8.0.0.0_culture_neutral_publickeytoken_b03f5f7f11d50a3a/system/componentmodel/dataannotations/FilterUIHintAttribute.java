@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Attribute;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FilterUIHintAttribute extends Attribute  {
+public class FilterUIHintAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Annotations, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -188,6 +190,21 @@ public class FilterUIHintAttribute extends Attribute  {
     
     // Properties section
     
+    public IDictionary_2 getControlParameters() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlParameters = null;
+        try {
+            retObjectControlParameters = classInstance.Get("ControlParameters");
+            JCObject val = (JCObject)retObjectControlParameters;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlParameters != null ? retObjectControlParameters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getFilterUIHint() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

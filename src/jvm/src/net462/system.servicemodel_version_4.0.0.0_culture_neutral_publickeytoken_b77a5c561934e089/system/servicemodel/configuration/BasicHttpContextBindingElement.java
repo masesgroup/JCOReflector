@@ -53,7 +53,7 @@ import system.servicemodel.configuration.BasicHttpBindingElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BasicHttpContextBindingElement extends BasicHttpBindingElement  {
+public class BasicHttpContextBindingElement extends system.servicemodel.configuration.BasicHttpBindingElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

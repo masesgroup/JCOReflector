@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.animation.TimelineGroup;
+import system.Nullable_1;
+import system.windows.Duration;
+import system.windows.media.animation.RepeatBehavior;
 import system.windows.media.animation.ParallelTimeline;
 import system.windows.media.animation.SlipBehavior;
 
@@ -55,7 +58,7 @@ import system.windows.media.animation.SlipBehavior;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ParallelTimeline extends TimelineGroup  {
+public class ParallelTimeline extends system.windows.media.animation.TimelineGroup  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -153,6 +156,36 @@ public class ParallelTimeline extends TimelineGroup  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParallelTimeline(Nullable_1 beginTime, Duration duration, RepeatBehavior repeatBehavior) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(beginTime == null ? null : beginTime.getJCOInstance(), duration == null ? null : duration.getJCOInstance(), repeatBehavior == null ? null : repeatBehavior.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParallelTimeline(Nullable_1 beginTime, Duration duration) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(beginTime == null ? null : beginTime.getJCOInstance(), duration == null ? null : duration.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ParallelTimeline(Nullable_1 beginTime) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(beginTime == null ? null : beginTime.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

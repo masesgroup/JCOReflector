@@ -59,7 +59,7 @@ import system.windows.Point;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AdornerLayer extends FrameworkElement  {
+public class AdornerLayer extends system.windows.FrameworkElement  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

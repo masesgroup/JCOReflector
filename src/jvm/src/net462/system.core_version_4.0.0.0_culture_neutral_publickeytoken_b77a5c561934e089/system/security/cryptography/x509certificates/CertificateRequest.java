@@ -47,6 +47,7 @@ import system.security.cryptography.x509certificates.PublicKey;
 import system.security.cryptography.x509certificates.X509SignatureGenerator;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.DateTimeOffset;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -337,6 +338,21 @@ public class CertificateRequest extends NetObject  {
     
     // Properties section
     
+    public Collection_1 getCertificateExtensions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateExtensions = null;
+        try {
+            retObjectCertificateExtensions = classInstance.Get("CertificateExtensions");
+            JCObject val = (JCObject)retObjectCertificateExtensions;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateExtensions != null ? retObjectCertificateExtensions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public HashAlgorithmName getHashAlgorithm() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

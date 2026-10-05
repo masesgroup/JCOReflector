@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.ValueType;
+import system.reflection.metadata.CustomAttributeValue_1;
+import system.reflection.metadata.ICustomAttributeTypeProvider_1;
+import system.reflection.metadata.ICustomAttributeTypeProvider_1Implementation;
 import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.EntityHandle;
 
@@ -55,7 +58,7 @@ import system.reflection.metadata.EntityHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CustomAttribute extends ValueType  {
+public class CustomAttribute extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -156,6 +159,21 @@ public class CustomAttribute extends ValueType  {
     
     // Methods section
     
+    public <TType extends IJCOBridgeReflected> CustomAttributeValue_1 DecodeValue(ICustomAttributeTypeProvider_1 provider) throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidCastException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecodeValue = null;
+        try {
+            retObjectDecodeValue = classInstance.Invoke("DecodeValue", provider == null ? null : provider.getJCOInstance());
+            JCObject objDecodeValue = (JCObject)retObjectDecodeValue;
+            return new CustomAttributeValue_1(objDecodeValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecodeValue != null ? retObjectDecodeValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

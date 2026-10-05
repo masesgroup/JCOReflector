@@ -39,11 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.CompositeActivity;
+import system.workflow.componentmodel.ActivityExecutionStatusChangedEventArgs;
 import system.workflow.componentmodel.ActivityExecutionStatus;
 import system.workflow.componentmodel.ActivityExecutionContext;
 import system.workflow.componentmodel.WorkflowTransactionOptions;
-import system.workflow.componentmodel.ICompensatableActivity;
-import system.workflow.componentmodel.ICompensatableActivityImplementation;
 
 
 /**
@@ -58,7 +57,7 @@ import system.workflow.componentmodel.ICompensatableActivityImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompensatableTransactionScopeActivity extends CompositeActivity implements ICompensatableActivity {
+public class CompensatableTransactionScopeActivity extends system.workflow.componentmodel.CompositeActivity  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -175,6 +174,15 @@ public class CompensatableTransactionScopeActivity extends CompositeActivity imp
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIActivityEventListener_1 method available in IActivityEventListener_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnEvent(NetObject sender, ActivityExecutionStatusChangedEventArgs e) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIActivityEventListener_1 to obtain the full interface.");
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToICompensatableActivity method available in ICompensatableActivity to obtain an object with an invocable method

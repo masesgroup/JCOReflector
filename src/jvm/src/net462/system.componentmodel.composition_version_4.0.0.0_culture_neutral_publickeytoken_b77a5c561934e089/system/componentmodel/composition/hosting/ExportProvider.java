@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.composition.primitives.ImportDefinition;
 import system.componentmodel.composition.hosting.AtomicComposition;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.Lazy_1;
+import system.Lazy_2;
 
 
 /**
@@ -153,6 +157,155 @@ public class ExportProvider extends NetObject  {
     
     // Methods section
     
+    public boolean TryGetExports(ImportDefinition definition, AtomicComposition atomicComposition, JCORefOut<IEnumerable_1> exports) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetExports = null;
+        try {
+            retObjectTryGetExports = classInstance.Invoke("TryGetExports", definition == null ? null : definition.getJCOInstance(), atomicComposition == null ? null : atomicComposition.getJCOInstance(), exports.getJCRefOut());
+            return (boolean)retObjectTryGetExports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetExports != null ? retObjectTryGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.composition.ImportCardinalityMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExports = null;
+        try {
+            retObjectGetExports = classInstance.Invoke("GetExports", definition == null ? null : definition.getJCOInstance());
+            JCObject objGetExports = (JCObject)retObjectGetExports;
+            return new IEnumerable_1Implementation(objGetExports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExports != null ? retObjectGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetExports(ImportDefinition definition, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.composition.ImportCardinalityMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExports = null;
+        try {
+            retObjectGetExports = classInstance.Invoke("GetExports", definition == null ? null : definition.getJCOInstance(), atomicComposition == null ? null : atomicComposition.getJCOInstance());
+            JCObject objGetExports = (JCObject)retObjectGetExports;
+            return new IEnumerable_1Implementation(objGetExports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExports != null ? retObjectGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> IEnumerable_1 GetExports() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionContractMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExports = null;
+        try {
+            retObjectGetExports = classInstance.Invoke("GetExports");
+            JCObject objGetExports = (JCObject)retObjectGetExports;
+            return new IEnumerable_1Implementation(objGetExports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExports != null ? retObjectGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> IEnumerable_1 GetExports(java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionContractMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExports = null;
+        try {
+            retObjectGetExports = classInstance.Invoke("GetExports", contractName);
+            JCObject objGetExports = (JCObject)retObjectGetExports;
+            return new IEnumerable_1Implementation(objGetExports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExports != null ? retObjectGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetExports(NetType type, NetType metadataViewType, java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExports = null;
+        try {
+            retObjectGetExports = classInstance.Invoke("GetExports", type == null ? null : type.getJCOInstance(), metadataViewType == null ? null : metadataViewType.getJCOInstance(), contractName);
+            JCObject objGetExports = (JCObject)retObjectGetExports;
+            return new IEnumerable_1Implementation(objGetExports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExports != null ? retObjectGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> IEnumerable_1 GetExportedValues() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionContractMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExportedValues = null;
+        try {
+            retObjectGetExportedValues = classInstance.Invoke("GetExportedValues");
+            JCObject objGetExportedValues = (JCObject)retObjectGetExportedValues;
+            return new IEnumerable_1Implementation(objGetExportedValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExportedValues != null ? retObjectGetExportedValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> IEnumerable_1 GetExportedValues(java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionContractMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExportedValues = null;
+        try {
+            retObjectGetExportedValues = classInstance.Invoke("GetExportedValues", contractName);
+            JCObject objGetExportedValues = (JCObject)retObjectGetExportedValues;
+            return new IEnumerable_1Implementation(objGetExportedValues);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExportedValues != null ? retObjectGetExportedValues.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Lazy_1 GetExport() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionContractMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExport = null;
+        try {
+            retObjectGetExport = classInstance.Invoke("GetExport");
+            JCObject objGetExport = (JCObject)retObjectGetExport;
+            return new Lazy_1(objGetExport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExport != null ? retObjectGetExport.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Lazy_1 GetExport(java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionContractMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExport = null;
+        try {
+            retObjectGetExport = classInstance.Invoke("GetExport", contractName);
+            JCObject objGetExport = (JCObject)retObjectGetExport;
+            return new Lazy_1(objGetExport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExport != null ? retObjectGetExport.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.DependencyObject;
 import system.collections.IList;
 import system.collections.IListImplementation;
+import system.collections.objectmodel.Collection_1;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -55,7 +57,7 @@ import system.collections.IListImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BindingGroup extends DependencyObject  {
+public class BindingGroup extends system.windows.DependencyObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -381,6 +383,51 @@ public class BindingGroup extends DependencyObject  {
             return new IListImplementation(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getValidationRules() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationRules = null;
+        try {
+            retObjectValidationRules = classInstance.Get("ValidationRules");
+            JCObject val = (JCObject)retObjectValidationRules;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationRules != null ? retObjectValidationRules.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getBindingExpressions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingExpressions = null;
+        try {
+            retObjectBindingExpressions = classInstance.Get("BindingExpressions");
+            JCObject val = (JCObject)retObjectBindingExpressions;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingExpressions != null ? retObjectBindingExpressions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getValidationErrors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationErrors = null;
+        try {
+            retObjectValidationErrors = classInstance.Get("ValidationErrors");
+            JCObject val = (JCObject)retObjectValidationErrors;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationErrors != null ? retObjectValidationErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

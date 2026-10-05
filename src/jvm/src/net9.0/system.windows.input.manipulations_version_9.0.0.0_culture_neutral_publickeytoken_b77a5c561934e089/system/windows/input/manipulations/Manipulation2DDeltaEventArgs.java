@@ -56,7 +56,7 @@ import system.windows.input.manipulations.ManipulationVelocities2D;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Manipulation2DDeltaEventArgs extends EventArgs  {
+public class Manipulation2DDeltaEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.Windows.Input.Manipulations, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

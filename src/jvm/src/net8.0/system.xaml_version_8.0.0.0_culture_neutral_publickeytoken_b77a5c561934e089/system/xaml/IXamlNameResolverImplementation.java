@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.EventHandler;
 
 
@@ -141,6 +143,51 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
 
     // Methods section
     
+    public IEnumerable_1 GetAllNamesAndValuesInScope() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllNamesAndValuesInScope = null;
+        try {
+            retObjectGetAllNamesAndValuesInScope = classInstance.Invoke("GetAllNamesAndValuesInScope");
+            JCObject objGetAllNamesAndValuesInScope = (JCObject)retObjectGetAllNamesAndValuesInScope;
+            return new IEnumerable_1Implementation(objGetAllNamesAndValuesInScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllNamesAndValuesInScope != null ? retObjectGetAllNamesAndValuesInScope.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetFixupToken(IEnumerable_1 names, boolean canAssignDirectly) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFixupToken = null;
+        try {
+            retObjectGetFixupToken = classInstance.Invoke("GetFixupToken", names == null ? null : names.getJCOInstance(), canAssignDirectly);
+            JCObject objGetFixupToken = (JCObject)retObjectGetFixupToken;
+            return new NetObject(objGetFixupToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFixupToken != null ? retObjectGetFixupToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetFixupToken(IEnumerable_1 names) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFixupToken = null;
+        try {
+            retObjectGetFixupToken = classInstance.Invoke("GetFixupToken", names == null ? null : names.getJCOInstance());
+            JCObject objGetFixupToken = (JCObject)retObjectGetFixupToken;
+            return new NetObject(objGetFixupToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFixupToken != null ? retObjectGetFixupToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject Resolve(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isFullyInitialized) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

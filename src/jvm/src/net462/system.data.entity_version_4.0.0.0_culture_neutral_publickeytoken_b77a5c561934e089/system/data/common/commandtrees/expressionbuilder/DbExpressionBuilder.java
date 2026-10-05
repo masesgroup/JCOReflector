@@ -38,12 +38,17 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.common.commandtrees.DbAndExpression;
+import system.collections.generic.KeyValuePair_2;
+import system.data.common.commandtrees.DbAggregate;
 import system.data.common.commandtrees.DbExpression;
+import system.data.common.commandtrees.DbAndExpression;
 import system.data.common.commandtrees.DbApplyExpression;
+import system.Func_2;
 import system.data.common.commandtrees.DbExpressionBinding;
 import system.data.common.commandtrees.DbArithmeticExpression;
 import system.data.common.commandtrees.DbCaseExpression;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.data.common.commandtrees.DbCastExpression;
 import system.data.metadata.edm.TypeUsage;
 import system.data.common.commandtrees.DbComparisonExpression;
@@ -65,6 +70,7 @@ import system.data.common.commandtrees.DbIsEmptyExpression;
 import system.data.common.commandtrees.DbIsNullExpression;
 import system.data.common.commandtrees.DbIsOfExpression;
 import system.data.common.commandtrees.DbJoinExpression;
+import system.Func_3;
 import system.data.common.commandtrees.DbLambda;
 import system.data.common.commandtrees.DbVariableReferenceExpression;
 import system.data.common.commandtrees.DbLambdaExpression;
@@ -208,6 +214,36 @@ public class DbExpressionBuilder extends NetObject  {
     
     // Methods section
     
+    public static KeyValuePair_2 As(DbAggregate value, java.lang.String alias) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAs = null;
+        try {
+            retObjectAs = classType.Invoke("As", value == null ? null : value.getJCOInstance(), alias);
+            JCObject objAs = (JCObject)retObjectAs;
+            return new KeyValuePair_2(objAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAs != null ? retObjectAs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static KeyValuePair_2 As(DbExpression value, java.lang.String alias) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAs = null;
+        try {
+            retObjectAs = classType.Invoke("As", value == null ? null : value.getJCOInstance(), alias);
+            JCObject objAs = (JCObject)retObjectAs;
+            return new KeyValuePair_2(objAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAs != null ? retObjectAs.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbAndExpression And(DbExpression left, DbExpression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -223,6 +259,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbApplyExpression CrossApply(DbExpression source, Func_2 apply) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrossApply = null;
+        try {
+            retObjectCrossApply = classType.Invoke("CrossApply", source == null ? null : source.getJCOInstance(), apply);
+            JCObject objCrossApply = (JCObject)retObjectCrossApply;
+            return new DbApplyExpression(objCrossApply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrossApply != null ? retObjectCrossApply.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbApplyExpression CrossApply(DbExpressionBinding input, DbExpressionBinding apply) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -233,6 +284,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbApplyExpression(objCrossApply);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrossApply != null ? retObjectCrossApply.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbApplyExpression OuterApply(DbExpression source, Func_2 apply) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOuterApply = null;
+        try {
+            retObjectOuterApply = classType.Invoke("OuterApply", source == null ? null : source.getJCOInstance(), apply);
+            JCObject objOuterApply = (JCObject)retObjectOuterApply;
+            return new DbApplyExpression(objOuterApply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOuterApply != null ? retObjectOuterApply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,6 +419,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbArithmeticExpression(objUnaryMinus);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnaryMinus != null ? retObjectUnaryMinus.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbCaseExpression Case(IEnumerable_1 whenExpressions, IEnumerable_1 thenExpressions, DbExpression elseExpression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCase = null;
+        try {
+            retObjectCase = classType.Invoke("Case", whenExpressions == null ? null : whenExpressions.getJCOInstance(), thenExpressions == null ? null : thenExpressions.getJCOInstance(), elseExpression == null ? null : elseExpression.getJCOInstance());
+            JCObject objCase = (JCObject)retObjectCase;
+            return new DbCaseExpression(objCase);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCase != null ? retObjectCase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,6 +569,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbConstantExpression(objConstant);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstant != null ? retObjectConstant.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbCrossJoinExpression CrossJoin(IEnumerable_1 inputs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrossJoin = null;
+        try {
+            retObjectCrossJoin = classType.Invoke("CrossJoin", inputs == null ? null : inputs.getJCOInstance());
+            JCObject objCrossJoin = (JCObject)retObjectCrossJoin;
+            return new DbCrossJoinExpression(objCrossJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrossJoin != null ? retObjectCrossJoin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,6 +754,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbFilterExpression Where(DbExpression source, Func_2 predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWhere = null;
+        try {
+            retObjectWhere = classType.Invoke("Where", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objWhere = (JCObject)retObjectWhere;
+            return new DbFilterExpression(objWhere);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWhere != null ? retObjectWhere.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbFunctionAggregate Aggregate(EdmFunction function, DbExpression argument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -688,6 +799,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbFunctionExpression Invoke(EdmFunction function, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classType.Invoke("Invoke", function == null ? null : function.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new DbFunctionExpression(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbFunctionExpression Invoke(EdmFunction function, DbExpression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -698,6 +824,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbFunctionExpression(objInvoke);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbGroupByExpression GroupBy(DbGroupExpressionBinding input, IEnumerable_1 keys, IEnumerable_1 aggregates) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGroupBy = null;
+        try {
+            retObjectGroupBy = classType.Invoke("GroupBy", input == null ? null : input.getJCOInstance(), keys == null ? null : keys.getJCOInstance(), aggregates == null ? null : aggregates.getJCOInstance());
+            JCObject objGroupBy = (JCObject)retObjectGroupBy;
+            return new DbGroupByExpression(objGroupBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupBy != null ? retObjectGroupBy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -808,6 +949,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbJoinExpression FullOuterJoin(DbExpression left, DbExpression right, Func_3 joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFullOuterJoin = null;
+        try {
+            retObjectFullOuterJoin = classType.Invoke("FullOuterJoin", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), joinCondition);
+            JCObject objFullOuterJoin = (JCObject)retObjectFullOuterJoin;
+            return new DbJoinExpression(objFullOuterJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFullOuterJoin != null ? retObjectFullOuterJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbJoinExpression FullOuterJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -818,6 +974,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbJoinExpression(objFullOuterJoin);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFullOuterJoin != null ? retObjectFullOuterJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbJoinExpression InnerJoin(DbExpression left, DbExpression right, Func_3 joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInnerJoin = null;
+        try {
+            retObjectInnerJoin = classType.Invoke("InnerJoin", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), joinCondition);
+            JCObject objInnerJoin = (JCObject)retObjectInnerJoin;
+            return new DbJoinExpression(objInnerJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInnerJoin != null ? retObjectInnerJoin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -838,6 +1009,36 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbJoinExpression Join(DbExpression outer, DbExpression inner, Func_2 outerKey, Func_2 innerKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKey, innerKey);
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new DbJoinExpression(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbJoinExpression LeftOuterJoin(DbExpression left, DbExpression right, Func_3 joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftOuterJoin = null;
+        try {
+            retObjectLeftOuterJoin = classType.Invoke("LeftOuterJoin", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), joinCondition);
+            JCObject objLeftOuterJoin = (JCObject)retObjectLeftOuterJoin;
+            return new DbJoinExpression(objLeftOuterJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftOuterJoin != null ? retObjectLeftOuterJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbJoinExpression LeftOuterJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -853,6 +1054,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbLambda Lambda(DbExpression body, IEnumerable_1 variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLambda = null;
+        try {
+            retObjectLambda = classType.Invoke("Lambda", body == null ? null : body.getJCOInstance(), variables == null ? null : variables.getJCOInstance());
+            JCObject objLambda = (JCObject)retObjectLambda;
+            return new DbLambda(objLambda);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLambda != null ? retObjectLambda.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbLambda Lambda(DbExpression body, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -863,6 +1079,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbLambda(objLambda);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLambda != null ? retObjectLambda.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbLambdaExpression Invoke(DbLambda lambda, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvoke = null;
+        try {
+            retObjectInvoke = classType.Invoke("Invoke", lambda == null ? null : lambda.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
+            return new DbLambdaExpression(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -943,6 +1174,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbNewInstanceExpression New(TypeUsage instanceType, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNew = null;
+        try {
+            retObjectNew = classType.Invoke("New", instanceType == null ? null : instanceType.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance());
+            JCObject objNew = (JCObject)retObjectNew;
+            return new DbNewInstanceExpression(objNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNew != null ? retObjectNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbNewInstanceExpression New(TypeUsage instanceType, DbExpression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -953,6 +1199,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbNewInstanceExpression(objNew);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNew != null ? retObjectNew.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbNewInstanceExpression NewCollection(IEnumerable_1 elements) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewCollection = null;
+        try {
+            retObjectNewCollection = classType.Invoke("NewCollection", elements == null ? null : elements.getJCOInstance());
+            JCObject objNewCollection = (JCObject)retObjectNewCollection;
+            return new DbNewInstanceExpression(objNewCollection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewCollection != null ? retObjectNewCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -983,6 +1244,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbNewInstanceExpression(objNewEmptyCollection);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewEmptyCollection != null ? retObjectNewEmptyCollection.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbNewInstanceExpression NewRow(IEnumerable_1 columnValues) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewRow = null;
+        try {
+            retObjectNewRow = classType.Invoke("NewRow", columnValues == null ? null : columnValues.getJCOInstance());
+            JCObject objNewRow = (JCObject)retObjectNewRow;
+            return new DbNewInstanceExpression(objNewRow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewRow != null ? retObjectNewRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1078,6 +1354,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static <TSelector extends IJCOBridgeReflected> DbProjectExpression Join(DbExpression outer, DbExpression inner, Func_2 outerKey, Func_2 innerKey, Func_3 selector) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException, system.InvalidCastException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJoin = null;
+        try {
+            retObjectJoin = classType.Invoke("Join", outer == null ? null : outer.getJCOInstance(), inner == null ? null : inner.getJCOInstance(), outerKey, innerKey, selector);
+            JCObject objJoin = (JCObject)retObjectJoin;
+            return new DbProjectExpression(objJoin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJoin != null ? retObjectJoin.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbProjectExpression Project(DbExpressionBinding input, DbExpression projection) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1088,6 +1379,51 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbProjectExpression(objProject);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProject != null ? retObjectProject.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TProjection extends IJCOBridgeReflected> DbProjectExpression Select(DbExpression source, Func_2 projection) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
+        try {
+            retObjectSelect = classType.Invoke("Select", source == null ? null : source.getJCOInstance(), projection);
+            JCObject objSelect = (JCObject)retObjectSelect;
+            return new DbProjectExpression(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbProjectExpression SelectMany(DbExpression source, Func_2 apply) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), apply);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new DbProjectExpression(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TSelector extends IJCOBridgeReflected> DbProjectExpression SelectMany(DbExpression source, Func_2 apply, Func_3 selector) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException, system.InvalidCastException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectMany = null;
+        try {
+            retObjectSelectMany = classType.Invoke("SelectMany", source == null ? null : source.getJCOInstance(), apply, selector);
+            JCObject objSelectMany = (JCObject)retObjectSelectMany;
+            return new DbProjectExpression(objSelectMany);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMany != null ? retObjectSelectMany.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1153,6 +1489,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbQuantifierExpression All(DbExpression source, Func_2 predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAll = null;
+        try {
+            retObjectAll = classType.Invoke("All", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objAll = (JCObject)retObjectAll;
+            return new DbQuantifierExpression(objAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbQuantifierExpression All(DbExpressionBinding input, DbExpression predicate) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1163,6 +1514,21 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbQuantifierExpression(objAll);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbQuantifierExpression Any(DbExpression source, Func_2 predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAny = null;
+        try {
+            retObjectAny = classType.Invoke("Any", source == null ? null : source.getJCOInstance(), predicate);
+            JCObject objAny = (JCObject)retObjectAny;
+            return new DbQuantifierExpression(objAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAny != null ? retObjectAny.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1183,12 +1549,42 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbRefExpression CreateRef(EntitySet entitySet, IEnumerable_1 keyValues) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRef = null;
+        try {
+            retObjectCreateRef = classType.Invoke("CreateRef", entitySet == null ? null : entitySet.getJCOInstance(), keyValues == null ? null : keyValues.getJCOInstance());
+            JCObject objCreateRef = (JCObject)retObjectCreateRef;
+            return new DbRefExpression(objCreateRef);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRef != null ? retObjectCreateRef.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbRefExpression CreateRef(EntitySet entitySet, DbExpression... keyValues) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRef = null;
         try {
             retObjectCreateRef = classType.Invoke("CreateRef", entitySet == null ? null : entitySet.getJCOInstance(), toObjectFromArray(keyValues));
+            JCObject objCreateRef = (JCObject)retObjectCreateRef;
+            return new DbRefExpression(objCreateRef);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRef != null ? retObjectCreateRef.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbRefExpression CreateRef(EntitySet entitySet, EntityType entityType, IEnumerable_1 keyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateRef = null;
+        try {
+            retObjectCreateRef = classType.Invoke("CreateRef", entitySet == null ? null : entitySet.getJCOInstance(), entityType == null ? null : entityType.getJCOInstance(), keyValues == null ? null : keyValues.getJCOInstance());
             JCObject objCreateRef = (JCObject)retObjectCreateRef;
             return new DbRefExpression(objCreateRef);
         } catch (java.lang.ClassCastException cce) {
@@ -1303,6 +1699,21 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
+    public static DbSkipExpression Skip(DbExpressionBinding input, IEnumerable_1 sortOrder, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSkip = null;
+        try {
+            retObjectSkip = classType.Invoke("Skip", input == null ? null : input.getJCOInstance(), sortOrder == null ? null : sortOrder.getJCOInstance(), count == null ? null : count.getJCOInstance());
+            JCObject objSkip = (JCObject)retObjectSkip;
+            return new DbSkipExpression(objSkip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSkip != null ? retObjectSkip.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbSkipExpression Skip(DbSortExpression argument, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -1373,6 +1784,141 @@ public class DbExpressionBuilder extends NetObject  {
             return new DbSortClause(objToSortClauseDescending);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSortClauseDescending != null ? retObjectToSortClauseDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression OrderBy(DbExpression source, Func_2 sortKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderBy = null;
+        try {
+            retObjectOrderBy = classType.Invoke("OrderBy", source == null ? null : source.getJCOInstance(), sortKey);
+            JCObject objOrderBy = (JCObject)retObjectOrderBy;
+            return new DbSortExpression(objOrderBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderBy != null ? retObjectOrderBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression OrderBy(DbExpression source, Func_2 sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderBy = null;
+        try {
+            retObjectOrderBy = classType.Invoke("OrderBy", source == null ? null : source.getJCOInstance(), sortKey, collation);
+            JCObject objOrderBy = (JCObject)retObjectOrderBy;
+            return new DbSortExpression(objOrderBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderBy != null ? retObjectOrderBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression OrderByDescending(DbExpression source, Func_2 sortKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderByDescending = null;
+        try {
+            retObjectOrderByDescending = classType.Invoke("OrderByDescending", source == null ? null : source.getJCOInstance(), sortKey);
+            JCObject objOrderByDescending = (JCObject)retObjectOrderByDescending;
+            return new DbSortExpression(objOrderByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderByDescending != null ? retObjectOrderByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression OrderByDescending(DbExpression source, Func_2 sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrderByDescending = null;
+        try {
+            retObjectOrderByDescending = classType.Invoke("OrderByDescending", source == null ? null : source.getJCOInstance(), sortKey, collation);
+            JCObject objOrderByDescending = (JCObject)retObjectOrderByDescending;
+            return new DbSortExpression(objOrderByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrderByDescending != null ? retObjectOrderByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression Sort(DbExpressionBinding input, IEnumerable_1 sortOrder) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSort = null;
+        try {
+            retObjectSort = classType.Invoke("Sort", input == null ? null : input.getJCOInstance(), sortOrder == null ? null : sortOrder.getJCOInstance());
+            JCObject objSort = (JCObject)retObjectSort;
+            return new DbSortExpression(objSort);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSort != null ? retObjectSort.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression ThenBy(DbSortExpression source, Func_2 sortKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenBy = null;
+        try {
+            retObjectThenBy = classType.Invoke("ThenBy", source == null ? null : source.getJCOInstance(), sortKey);
+            JCObject objThenBy = (JCObject)retObjectThenBy;
+            return new DbSortExpression(objThenBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenBy != null ? retObjectThenBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression ThenBy(DbSortExpression source, Func_2 sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenBy = null;
+        try {
+            retObjectThenBy = classType.Invoke("ThenBy", source == null ? null : source.getJCOInstance(), sortKey, collation);
+            JCObject objThenBy = (JCObject)retObjectThenBy;
+            return new DbSortExpression(objThenBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenBy != null ? retObjectThenBy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression ThenByDescending(DbSortExpression source, Func_2 sortKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenByDescending = null;
+        try {
+            retObjectThenByDescending = classType.Invoke("ThenByDescending", source == null ? null : source.getJCOInstance(), sortKey);
+            JCObject objThenByDescending = (JCObject)retObjectThenByDescending;
+            return new DbSortExpression(objThenByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenByDescending != null ? retObjectThenByDescending.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbSortExpression ThenByDescending(DbSortExpression source, Func_2 sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThenByDescending = null;
+        try {
+            retObjectThenByDescending = classType.Invoke("ThenByDescending", source == null ? null : source.getJCOInstance(), sortKey, collation);
+            JCObject objThenByDescending = (JCObject)retObjectThenByDescending;
+            return new DbSortExpression(objThenByDescending);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenByDescending != null ? retObjectThenByDescending.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

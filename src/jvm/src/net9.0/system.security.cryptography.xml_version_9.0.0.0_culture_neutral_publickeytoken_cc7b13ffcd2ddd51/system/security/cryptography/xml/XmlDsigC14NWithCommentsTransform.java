@@ -53,7 +53,7 @@ import system.security.cryptography.xml.XmlDsigC14NTransform;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlDsigC14NWithCommentsTransform extends XmlDsigC14NTransform  {
+public class XmlDsigC14NWithCommentsTransform extends system.security.cryptography.xml.XmlDsigC14NTransform  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

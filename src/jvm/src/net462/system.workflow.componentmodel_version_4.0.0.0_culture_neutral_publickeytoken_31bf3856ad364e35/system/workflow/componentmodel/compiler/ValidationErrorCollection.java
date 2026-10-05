@@ -38,8 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.workflow.componentmodel.compiler.ValidationErrorCollection;
+import system.collections.objectmodel.Collection_1;
 import system.workflow.componentmodel.compiler.ValidationError;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.workflow.componentmodel.compiler.ValidationErrorCollection;
 
 
 /**
@@ -54,7 +57,7 @@ import system.workflow.componentmodel.compiler.ValidationError;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ValidationErrorCollection extends NetObjectEnumerable  {
+public class ValidationErrorCollection extends system.collections.objectmodel.Collection_1<ValidationError>  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -157,6 +160,16 @@ public class ValidationErrorCollection extends NetObjectEnumerable  {
         }
     }
 
+    public ValidationErrorCollection(IEnumerable_1 value) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(value == null ? null : value.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ValidationErrorCollection(ValidationErrorCollection value) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +200,16 @@ public class ValidationErrorCollection extends NetObjectEnumerable  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToArray != null ? retObjectToArray.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddRange(IEnumerable_1 value) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddRange", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

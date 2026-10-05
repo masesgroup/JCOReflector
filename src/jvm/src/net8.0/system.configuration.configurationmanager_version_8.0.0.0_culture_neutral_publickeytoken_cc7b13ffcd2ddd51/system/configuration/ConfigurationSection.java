@@ -54,7 +54,7 @@ import system.configuration.SectionInformation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConfigurationSection extends ConfigurationElement  {
+public class ConfigurationSection extends system.configuration.ConfigurationElement  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

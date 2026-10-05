@@ -37,6 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.dataannotations.ValidationContext;
 
 
 /**
@@ -115,6 +118,8 @@ public interface IValidatableObject extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IEnumerable_1 Validate(ValidationContext validationContext) throws Throwable;
+
 
     
     // Properties section

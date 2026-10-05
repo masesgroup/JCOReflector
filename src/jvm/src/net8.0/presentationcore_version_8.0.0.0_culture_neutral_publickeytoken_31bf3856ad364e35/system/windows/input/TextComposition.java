@@ -57,7 +57,7 @@ import system.windows.input.TextCompositionAutoComplete;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextComposition extends DispatcherObject  {
+public class TextComposition extends system.windows.threading.DispatcherObject  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
+import system.collections.immutable.ImmutableArray_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.reflection.metadata.BlobBuilder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ArrayShapeEncoder extends ValueType  {
+public class ArrayShapeEncoder extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -165,6 +166,16 @@ public class ArrayShapeEncoder extends ValueType  {
     
     // Methods section
     
+    public void Shape(int rank, ImmutableArray_1 sizes, ImmutableArray_1 lowerBounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Shape", rank, sizes == null ? null : sizes.getJCOInstance(), lowerBounds == null ? null : lowerBounds.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

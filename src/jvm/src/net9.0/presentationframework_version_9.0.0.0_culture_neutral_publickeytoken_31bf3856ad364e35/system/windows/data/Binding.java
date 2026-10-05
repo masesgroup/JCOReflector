@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.data.BindingBase;
 import system.xml.XmlNamespaceManager;
 import system.windows.DependencyObject;
+import system.EventHandler_1;
+import system.collections.objectmodel.Collection_1;
 import system.globalization.CultureInfo;
 import system.windows.data.BindingMode;
 import system.windows.data.IValueConverter;
@@ -63,7 +65,7 @@ import system.windows.PropertyPath;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Binding extends BindingBase  {
+public class Binding extends system.windows.data.BindingBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -232,6 +234,46 @@ public class Binding extends BindingBase  {
             return new XmlNamespaceManager(objGetXmlNamespaceManager);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXmlNamespaceManager != null ? retObjectGetXmlNamespaceManager.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AddSourceUpdatedHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddSourceUpdatedHandler", element == null ? null : element.getJCOInstance(), handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void AddTargetUpdatedHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AddTargetUpdatedHandler", element == null ? null : element.getJCOInstance(), handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveSourceUpdatedHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveSourceUpdatedHandler", element == null ? null : element.getJCOInstance(), handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveTargetUpdatedHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveTargetUpdatedHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,6 +480,21 @@ public class Binding extends BindingBase  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidatesOnNotifyDataErrors", ValidatesOnNotifyDataErrors);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getValidationRules() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationRules = null;
+        try {
+            retObjectValidationRules = classInstance.Get("ValidationRules");
+            JCObject val = (JCObject)retObjectValidationRules;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationRules != null ? retObjectValidationRules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

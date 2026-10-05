@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.Stream;
+import system.Func_2;
 
 
 /**
@@ -301,6 +302,30 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
     
     // Properties section
     
+    public Func_2 getTypeNameConverter() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeNameConverter = null;
+        try {
+            retObjectTypeNameConverter = classInstance.Get("TypeNameConverter");
+            return (Func_2)retObjectTypeNameConverter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectTypeNameConverter != null ? retObjectTypeNameConverter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setTypeNameConverter(Func_2 TypeNameConverter) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("TypeNameConverter", TypeNameConverter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

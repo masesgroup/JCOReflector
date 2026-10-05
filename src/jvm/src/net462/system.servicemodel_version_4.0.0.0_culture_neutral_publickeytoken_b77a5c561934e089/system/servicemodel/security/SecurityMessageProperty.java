@@ -42,6 +42,8 @@ import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
 import system.servicemodel.security.SecurityMessageProperty;
 import system.servicemodel.channels.Message;
+import system.collections.objectmodel.Collection_1;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.servicemodel.security.SecurityTokenSpecification;
 import system.servicemodel.ServiceSecurityContext;
 
@@ -231,6 +233,61 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
             return (boolean)retObjectHasIncomingSupportingTokens;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasIncomingSupportingTokens != null ? retObjectHasIncomingSupportingTokens.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getIncomingSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingSupportingTokens = null;
+        try {
+            retObjectIncomingSupportingTokens = classInstance.Get("IncomingSupportingTokens");
+            JCObject val = (JCObject)retObjectIncomingSupportingTokens;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncomingSupportingTokens != null ? retObjectIncomingSupportingTokens.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getOutgoingSupportingTokens() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutgoingSupportingTokens = null;
+        try {
+            retObjectOutgoingSupportingTokens = classInstance.Get("OutgoingSupportingTokens");
+            JCObject val = (JCObject)retObjectOutgoingSupportingTokens;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutgoingSupportingTokens != null ? retObjectOutgoingSupportingTokens.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getExternalAuthorizationPolicies() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalAuthorizationPolicies = null;
+        try {
+            retObjectExternalAuthorizationPolicies = classInstance.Get("ExternalAuthorizationPolicies");
+            JCObject val = (JCObject)retObjectExternalAuthorizationPolicies;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalAuthorizationPolicies != null ? retObjectExternalAuthorizationPolicies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1 ExternalAuthorizationPolicies) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ExternalAuthorizationPolicies", ExternalAuthorizationPolicies == null ? null : ExternalAuthorizationPolicies.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

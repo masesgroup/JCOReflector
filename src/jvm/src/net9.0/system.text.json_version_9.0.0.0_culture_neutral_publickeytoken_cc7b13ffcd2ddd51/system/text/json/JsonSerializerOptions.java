@@ -42,6 +42,8 @@ import system.text.json.JsonSerializerDefaults;
 import system.text.json.JsonSerializerOptions;
 import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.text.json.serialization.JsonConverter;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.text.encodings.web.JavaScriptEncoder;
 import system.text.json.JsonCommentHandling;
 import system.text.json.JsonNamingPolicy;
@@ -233,6 +235,16 @@ public class JsonSerializerOptions extends NetObject  {
             return new JsonTypeInfo(objGetTypeInfo);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeInfo != null ? retObjectGetTypeInfo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TContext extends IJCOBridgeReflected> void AddContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddContext");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -685,6 +697,36 @@ public class JsonSerializerOptions extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDepth", MaxDepth);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getConverters() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverters = null;
+        try {
+            retObjectConverters = classInstance.Get("Converters");
+            JCObject val = (JCObject)retObjectConverters;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConverters != null ? retObjectConverters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getTypeInfoResolverChain() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeInfoResolverChain = null;
+        try {
+            retObjectTypeInfoResolverChain = classInstance.Get("TypeInfoResolverChain");
+            JCObject val = (JCObject)retObjectTypeInfoResolverChain;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeInfoResolverChain != null ? retObjectTypeInfoResolverChain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

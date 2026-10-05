@@ -37,6 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.xml.XmlNamespaceScope;
 
 
 /**
@@ -115,6 +118,8 @@ public interface IXmlNamespaceResolver extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IDictionary_2 GetNamespacesInScope(XmlNamespaceScope scope) throws Throwable;
+
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable;
 
     public java.lang.String LookupPrefix(java.lang.String namespaceName) throws Throwable;

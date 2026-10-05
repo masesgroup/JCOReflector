@@ -54,7 +54,7 @@ import system.workflow.runtime.tracking.TrackingAnnotationCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowDataTrackingExtract extends TrackingExtract  {
+public class WorkflowDataTrackingExtract extends system.workflow.runtime.tracking.TrackingExtract  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

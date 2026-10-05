@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.presentation.ContextItem;
 import system.activities.presentation.SubscribeContextCallback;
+import system.activities.presentation.SubscribeContextCallback_1;
 
 
 /**
@@ -167,6 +168,20 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    public <TItemType extends IJCOBridgeReflected> boolean Contains() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
+        try {
+            retObjectContains = classInstance.Invoke("Contains");
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ContextItem GetValue(NetType itemType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -202,11 +217,31 @@ public class ContextItemManager extends NetObjectEnumerable  {
         }
     }
 
+    public <TContextItemType extends IJCOBridgeReflected> void Subscribe(SubscribeContextCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Subscribe", callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Unsubscribe(NetType contextItemType, SubscribeContextCallback callback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unsubscribe", contextItemType == null ? null : contextItemType.getJCOInstance(), callback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TContextItemType extends IJCOBridgeReflected> void Unsubscribe(SubscribeContextCallback_1 callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Unsubscribe", callback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

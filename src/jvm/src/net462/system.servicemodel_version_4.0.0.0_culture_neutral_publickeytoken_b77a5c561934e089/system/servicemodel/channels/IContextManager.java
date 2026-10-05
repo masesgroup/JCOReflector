@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -115,6 +117,10 @@ public interface IContextManager extends IJCOBridgeReflected {
 
     // Methods section
     
+    public IDictionary_2 GetContext() throws Throwable;
+
+    public void SetContext(IDictionary_2 context) throws Throwable;
+
 
     
     // Properties section

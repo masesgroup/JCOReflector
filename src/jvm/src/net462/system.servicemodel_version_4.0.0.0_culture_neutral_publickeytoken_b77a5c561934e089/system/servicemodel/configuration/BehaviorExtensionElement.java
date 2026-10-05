@@ -53,7 +53,7 @@ import system.servicemodel.configuration.ServiceModelExtensionElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BehaviorExtensionElement extends ServiceModelExtensionElement  {
+public class BehaviorExtensionElement extends system.servicemodel.configuration.ServiceModelExtensionElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -59,7 +59,7 @@ import system.collections.specialized.NameValueCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class LocalFileSettingsProvider extends SettingsProvider  {
+public class LocalFileSettingsProvider extends system.configuration.SettingsProvider  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

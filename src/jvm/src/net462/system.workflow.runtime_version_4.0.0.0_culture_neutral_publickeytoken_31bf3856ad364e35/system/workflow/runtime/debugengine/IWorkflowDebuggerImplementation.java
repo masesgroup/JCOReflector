@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.Guid;
 import system.workflow.componentmodel.ActivityExecutionStatus;
 import system.workflow.runtime.debugengine.ActivityHandlerDescriptor;
+import system.collections.generic.List_1;
 
 
 /**
@@ -238,6 +239,16 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetInitialActivityStatus", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), activityQualifiedName, hierarchicalActivityId, status == null ? null : status.getJCOInstance(), stateReaderId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void UpdateHandlerMethodsForActivity(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, List_1 handlerMethods) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("UpdateHandlerMethodsForActivity", programId == null ? null : programId.getJCOInstance(), scheduleTypeId == null ? null : scheduleTypeId.getJCOInstance(), activityQualifiedName, handlerMethods == null ? null : handlerMethods.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

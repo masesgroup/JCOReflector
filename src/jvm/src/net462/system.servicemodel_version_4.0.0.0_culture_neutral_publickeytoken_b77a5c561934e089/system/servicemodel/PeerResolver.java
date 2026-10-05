@@ -38,8 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.servicemodel.PeerNodeAddress;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.TimeSpan;
+import system.servicemodel.PeerNodeAddress;
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.description.ClientCredentials;
 import system.servicemodel.peerresolvers.PeerReferralPolicy;
@@ -156,6 +157,21 @@ public class PeerResolver extends NetObject  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 Resolve(java.lang.String meshId, int maxAddresses, TimeSpan timeout) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolve = null;
+        try {
+            retObjectResolve = classInstance.Invoke("Resolve", meshId, maxAddresses, timeout == null ? null : timeout.getJCOInstance());
+            JCObject objResolve = (JCObject)retObjectResolve;
+            return new ReadOnlyCollection_1(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject Register(java.lang.String meshId, PeerNodeAddress nodeAddress, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

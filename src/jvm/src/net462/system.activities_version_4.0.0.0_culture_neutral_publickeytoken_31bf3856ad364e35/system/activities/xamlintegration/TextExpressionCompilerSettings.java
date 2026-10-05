@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Action_1;
 import system.activities.Activity;
 
 
@@ -231,6 +232,30 @@ public class TextExpressionCompilerSettings extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerateAsPartialClass", GenerateAsPartialClass);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Action_1 getLogSourceGenerationMessage() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogSourceGenerationMessage = null;
+        try {
+            retObjectLogSourceGenerationMessage = classInstance.Get("LogSourceGenerationMessage");
+            return (Action_1)retObjectLogSourceGenerationMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectLogSourceGenerationMessage != null ? retObjectLogSourceGenerationMessage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setLogSourceGenerationMessage(Action_1 LogSourceGenerationMessage) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("LogSourceGenerationMessage", LogSourceGenerationMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -44,6 +44,8 @@ import system.AsyncCallback;
 import system.net.IPAddress;
 import system.net.sockets.AddressFamily;
 import system.net.IPHostEntry;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 
 
 /**
@@ -454,6 +456,111 @@ public class Dns extends NetObject  {
             return (java.lang.String)retObjectGetHostName;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHostName != null ? retObjectGetHostName.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetHostAddressesAsync(java.lang.String hostNameOrAddress, AddressFamily family, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostAddressesAsync = null;
+        try {
+            retObjectGetHostAddressesAsync = classType.Invoke("GetHostAddressesAsync", hostNameOrAddress, family == null ? null : family.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetHostAddressesAsync = (JCObject)retObjectGetHostAddressesAsync;
+            return new Task_1(objGetHostAddressesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostAddressesAsync != null ? retObjectGetHostAddressesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetHostAddressesAsync(java.lang.String hostNameOrAddress, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostAddressesAsync = null;
+        try {
+            retObjectGetHostAddressesAsync = classType.Invoke("GetHostAddressesAsync", hostNameOrAddress, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetHostAddressesAsync = (JCObject)retObjectGetHostAddressesAsync;
+            return new Task_1(objGetHostAddressesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostAddressesAsync != null ? retObjectGetHostAddressesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetHostAddressesAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostAddressesAsync = null;
+        try {
+            retObjectGetHostAddressesAsync = classType.Invoke("GetHostAddressesAsync", hostNameOrAddress);
+            JCObject objGetHostAddressesAsync = (JCObject)retObjectGetHostAddressesAsync;
+            return new Task_1(objGetHostAddressesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostAddressesAsync != null ? retObjectGetHostAddressesAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetHostEntryAsync(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostEntryAsync = null;
+        try {
+            retObjectGetHostEntryAsync = classType.Invoke("GetHostEntryAsync", address == null ? null : address.getJCOInstance());
+            JCObject objGetHostEntryAsync = (JCObject)retObjectGetHostEntryAsync;
+            return new Task_1(objGetHostEntryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostEntryAsync != null ? retObjectGetHostEntryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress, AddressFamily family, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostEntryAsync = null;
+        try {
+            retObjectGetHostEntryAsync = classType.Invoke("GetHostEntryAsync", hostNameOrAddress, family == null ? null : family.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetHostEntryAsync = (JCObject)retObjectGetHostEntryAsync;
+            return new Task_1(objGetHostEntryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostEntryAsync != null ? retObjectGetHostEntryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostEntryAsync = null;
+        try {
+            retObjectGetHostEntryAsync = classType.Invoke("GetHostEntryAsync", hostNameOrAddress, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetHostEntryAsync = (JCObject)retObjectGetHostEntryAsync;
+            return new Task_1(objGetHostEntryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostEntryAsync != null ? retObjectGetHostEntryAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHostEntryAsync = null;
+        try {
+            retObjectGetHostEntryAsync = classType.Invoke("GetHostEntryAsync", hostNameOrAddress);
+            JCObject objGetHostEntryAsync = (JCObject)retObjectGetHostEntryAsync;
+            return new Task_1(objGetHostEntryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHostEntryAsync != null ? retObjectGetHostEntryAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

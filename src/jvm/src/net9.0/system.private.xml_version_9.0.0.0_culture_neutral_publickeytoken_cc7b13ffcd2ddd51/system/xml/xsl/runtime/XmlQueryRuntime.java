@@ -40,12 +40,14 @@ import java.util.ArrayList;
 // Import section
 import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.runtime.XmlILIndex;
-import system.xml.xpath.XPathItem;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xml.schema.XmlTypeCode;
+import system.xml.xpath.XPathItem;
+import system.xml.xsl.runtime.XmlQueryOutput;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.xml.XmlQualifiedName;
-import system.xml.xsl.runtime.XmlQueryOutput;
 import system.xml.xsl.runtime.XmlCollation;
 import system.xml.xsl.runtime.XmlNavigatorFilter;
 import system.xml.xpath.XPathNodeType;
@@ -237,6 +239,34 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    public boolean MatchesXmlType(IList_1 seq, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesXmlType = null;
+        try {
+            retObjectMatchesXmlType = classInstance.Invoke("MatchesXmlType", seq == null ? null : seq.getJCOInstance(), indexType);
+            return (boolean)retObjectMatchesXmlType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesXmlType != null ? retObjectMatchesXmlType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean MatchesXmlType(IList_1 seq, XmlTypeCode code) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesXmlType = null;
+        try {
+            retObjectMatchesXmlType = classInstance.Invoke("MatchesXmlType", seq == null ? null : seq.getJCOInstance(), code == null ? null : code.getJCOInstance());
+            return (boolean)retObjectMatchesXmlType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesXmlType != null ? retObjectMatchesXmlType.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean MatchesXmlType(XPathItem item, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -340,6 +370,36 @@ public class XmlQueryRuntime extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 EndSequenceConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndSequenceConstruction = null;
+        try {
+            retObjectEndSequenceConstruction = classInstance.Invoke("EndSequenceConstruction", output.getJCRefOut());
+            JCObject objEndSequenceConstruction = (JCObject)retObjectEndSequenceConstruction;
+            return new IList_1Implementation(objEndSequenceConstruction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndSequenceConstruction != null ? retObjectEndSequenceConstruction.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 DocOrderDistinct(IList_1 seq) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocOrderDistinct = null;
+        try {
+            retObjectDocOrderDistinct = classInstance.Invoke("DocOrderDistinct", seq == null ? null : seq.getJCOInstance());
+            JCObject objDocOrderDistinct = (JCObject)retObjectDocOrderDistinct;
+            return new IList_1Implementation(objDocOrderDistinct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocOrderDistinct != null ? retObjectDocOrderDistinct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,13 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.animation.Animatable;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.media.GradientStop;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.windows.media.GradientStopCollection;
 import system.Array;
-import system.IFormattable;
-import system.IFormattableImplementation;
 
 
 /**
@@ -60,7 +60,7 @@ import system.IFormattableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GradientStopCollection extends Animatable implements IFormattable {
+public class GradientStopCollection extends system.windows.media.animation.Animatable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -168,6 +168,16 @@ public class GradientStopCollection extends Animatable implements IFormattable {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(capacity));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public GradientStopCollection(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(collection == null ? null : collection.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

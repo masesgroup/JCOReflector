@@ -39,11 +39,15 @@ import java.util.ArrayList;
 
 // Import section
 import system.DateTime;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlDictionaryWriter;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 
 
 /**
@@ -171,6 +175,16 @@ public class SamlConditions extends NetObject  {
         }
     }
 
+    public SamlConditions(DateTime notBefore, DateTime notOnOrAfter, IEnumerable_1 conditions) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(notBefore == null ? null : notBefore.getJCOInstance(), notOnOrAfter == null ? null : notOnOrAfter.getJCOInstance(), conditions == null ? null : conditions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -218,6 +232,21 @@ public class SamlConditions extends NetObject  {
             return (boolean)retObjectIsReadOnly;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getConditions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditions = null;
+        try {
+            retObjectConditions = classInstance.Get("Conditions");
+            JCObject val = (JCObject)retObjectConditions;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConditions != null ? retObjectConditions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

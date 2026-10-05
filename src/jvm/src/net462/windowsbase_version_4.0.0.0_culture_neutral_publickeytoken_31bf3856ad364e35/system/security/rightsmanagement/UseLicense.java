@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.security.rightsmanagement.CryptoProvider;
 import system.security.rightsmanagement.SecureEnvironment;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.Guid;
 import system.security.rightsmanagement.ContentUser;
 
@@ -186,6 +188,21 @@ public class UseLicense extends NetObject  {
     
     // Properties section
     
+    public IDictionary_2 getApplicationData() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationData = null;
+        try {
+            retObjectApplicationData = classInstance.Get("ApplicationData");
+            JCObject val = (JCObject)retObjectApplicationData;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationData != null ? retObjectApplicationData.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getContentId() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

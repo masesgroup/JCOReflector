@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.presentation.toolbox.ToolboxItemWrapper;
 import system.Array;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.componentmodel.PropertyChangedEventHandler;
 
 
@@ -272,6 +274,21 @@ public class ToolboxCategory extends NetObjectEnumerable  {
     
     // Properties section
     
+    public ICollection_1 getTools() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTools = null;
+        try {
+            retObjectTools = classInstance.Get("Tools");
+            JCObject val = (JCObject)retObjectTools;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTools != null ? retObjectTools.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getCategoryName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

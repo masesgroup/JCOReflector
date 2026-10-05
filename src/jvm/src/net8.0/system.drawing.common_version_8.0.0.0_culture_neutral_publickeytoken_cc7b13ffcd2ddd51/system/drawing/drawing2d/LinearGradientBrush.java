@@ -65,7 +65,7 @@ import system.drawing.drawing2d.WrapMode;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class LinearGradientBrush extends Brush  {
+public class LinearGradientBrush extends system.drawing.Brush  {
     /**
      * Fully assembly qualified name: System.Drawing.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

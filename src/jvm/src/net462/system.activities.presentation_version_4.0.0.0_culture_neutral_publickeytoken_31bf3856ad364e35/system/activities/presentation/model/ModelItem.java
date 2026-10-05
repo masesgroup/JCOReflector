@@ -42,6 +42,8 @@ import system.activities.presentation.model.ModelEditingScope;
 import system.activities.presentation.model.ModelItem;
 import system.activities.presentation.model.ModelProperty;
 import system.activities.presentation.model.ModelPropertyCollection;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.componentmodel.AttributeCollection;
 import system.windows.DependencyObject;
 import system.componentmodel.PropertyChangedEventHandler;
@@ -307,6 +309,36 @@ public class ModelItem extends NetObject  {
             return new ModelPropertyCollection(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getParents() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParents = null;
+        try {
+            retObjectParents = classInstance.Get("Parents");
+            JCObject val = (JCObject)retObjectParents;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParents != null ? retObjectParents.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getSources() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSources = null;
+        try {
+            retObjectSources = classInstance.Get("Sources");
+            JCObject val = (JCObject)retObjectSources;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSources != null ? retObjectSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

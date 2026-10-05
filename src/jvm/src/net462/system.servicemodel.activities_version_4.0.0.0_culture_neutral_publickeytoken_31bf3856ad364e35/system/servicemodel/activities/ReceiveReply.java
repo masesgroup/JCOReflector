@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.Activity;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.activities.ReceiveContent;
 import system.servicemodel.activities.Send;
 
@@ -55,7 +56,7 @@ import system.servicemodel.activities.Send;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ReceiveReply extends Activity  {
+public class ReceiveReply extends system.activities.Activity  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -166,6 +167,21 @@ public class ReceiveReply extends Activity  {
     
     // Properties section
     
+    public Collection_1 getCorrelationInitializers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationInitializers = null;
+        try {
+            retObjectCorrelationInitializers = classInstance.Get("CorrelationInitializers");
+            JCObject val = (JCObject)retObjectCorrelationInitializers;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationInitializers != null ? retObjectCorrelationInitializers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ReceiveContent getContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

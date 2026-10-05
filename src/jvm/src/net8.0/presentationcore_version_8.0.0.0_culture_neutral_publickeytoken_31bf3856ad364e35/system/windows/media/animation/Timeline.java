@@ -39,8 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.animation.Animatable;
-import system.windows.media.animation.Clock;
+import system.Nullable_1;
 import system.windows.media.animation.Timeline;
+import system.windows.media.animation.Clock;
 import system.windows.Duration;
 import system.windows.media.animation.FillBehavior;
 import system.windows.media.animation.RepeatBehavior;
@@ -59,7 +60,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Timeline extends Animatable  {
+public class Timeline extends system.windows.media.animation.Animatable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -158,6 +159,21 @@ public class Timeline extends Animatable  {
     
     // Methods section
     
+    public static Nullable_1 GetDesiredFrameRate(Timeline timeline) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDesiredFrameRate = null;
+        try {
+            retObjectGetDesiredFrameRate = classType.Invoke("GetDesiredFrameRate", timeline == null ? null : timeline.getJCOInstance());
+            JCObject objGetDesiredFrameRate = (JCObject)retObjectGetDesiredFrameRate;
+            return new Nullable_1(objGetDesiredFrameRate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesiredFrameRate != null ? retObjectGetDesiredFrameRate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Clock CreateClock() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -213,6 +229,16 @@ public class Timeline extends Animatable  {
             return new Timeline(objCloneCurrentValue);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetDesiredFrameRate(Timeline timeline, Nullable_1 desiredFrameRate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetDesiredFrameRate", timeline == null ? null : timeline.getJCOInstance(), desiredFrameRate == null ? null : desiredFrameRate.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,6 +417,31 @@ public class Timeline extends Animatable  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpeedRatio", SpeedRatio);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getBeginTime() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTime = null;
+        try {
+            retObjectBeginTime = classInstance.Get("BeginTime");
+            JCObject val = (JCObject)retObjectBeginTime;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTime != null ? retObjectBeginTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBeginTime(Nullable_1 BeginTime) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BeginTime", BeginTime == null ? null : BeginTime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

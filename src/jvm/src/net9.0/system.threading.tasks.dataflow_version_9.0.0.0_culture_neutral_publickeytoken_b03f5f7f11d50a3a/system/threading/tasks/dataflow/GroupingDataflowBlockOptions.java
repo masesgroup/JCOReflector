@@ -53,7 +53,7 @@ import system.threading.tasks.dataflow.DataflowBlockOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GroupingDataflowBlockOptions extends DataflowBlockOptions  {
+public class GroupingDataflowBlockOptions extends system.threading.tasks.dataflow.DataflowBlockOptions  {
     /**
      * Fully assembly qualified name: System.Threading.Tasks.Dataflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

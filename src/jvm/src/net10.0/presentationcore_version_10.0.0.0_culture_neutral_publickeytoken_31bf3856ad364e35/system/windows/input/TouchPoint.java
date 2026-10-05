@@ -42,6 +42,7 @@ import system.windows.input.TouchDevice;
 import system.windows.Point;
 import system.windows.Rect;
 import system.windows.input.TouchAction;
+import system.windows.input.TouchPoint;
 import system.windows.Size;
 
 
@@ -168,6 +169,15 @@ public class TouchPoint extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEquatable_1 method available in IEquatable_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Equals(TouchPoint other) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEquatable_1 to obtain the full interface.");
+    }
+
 
     
     // Properties section

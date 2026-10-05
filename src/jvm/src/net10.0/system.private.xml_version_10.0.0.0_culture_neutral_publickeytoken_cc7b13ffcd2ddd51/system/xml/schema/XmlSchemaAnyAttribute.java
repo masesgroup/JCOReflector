@@ -54,7 +54,7 @@ import system.xml.schema.XmlSchemaContentProcessing;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlSchemaAnyAttribute extends XmlSchemaAnnotated  {
+public class XmlSchemaAnyAttribute extends system.xml.schema.XmlSchemaAnnotated  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

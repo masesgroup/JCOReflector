@@ -55,7 +55,7 @@ import system.componentmodel.CollectionChangeEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GridTableStylesCollection extends BaseCollection  {
+public class GridTableStylesCollection extends system.windows.forms.BaseCollection  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

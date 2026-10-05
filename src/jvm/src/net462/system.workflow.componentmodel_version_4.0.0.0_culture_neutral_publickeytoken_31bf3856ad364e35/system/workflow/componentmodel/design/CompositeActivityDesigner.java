@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.design.ActivityDesigner;
 import system.workflow.componentmodel.design.HitTestInfo;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.workflow.componentmodel.design.DesignerNavigationDirection;
 import system.windows.forms.IDataObject;
 import system.windows.forms.IDataObjectImplementation;
@@ -64,7 +65,7 @@ import system.windows.forms.AccessibleObject;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompositeActivityDesigner extends ActivityDesigner  {
+public class CompositeActivityDesigner extends system.workflow.componentmodel.design.ActivityDesigner  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -163,6 +164,48 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
     
     // Methods section
     
+    public boolean CanInsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanInsertActivities = null;
+        try {
+            retObjectCanInsertActivities = classInstance.Invoke("CanInsertActivities", insertLocation == null ? null : insertLocation.getJCOInstance(), activitiesToInsert == null ? null : activitiesToInsert.getJCOInstance());
+            return (boolean)retObjectCanInsertActivities;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanInsertActivities != null ? retObjectCanInsertActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean CanMoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1 activitiesToMove) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanMoveActivities = null;
+        try {
+            retObjectCanMoveActivities = classInstance.Invoke("CanMoveActivities", moveLocation == null ? null : moveLocation.getJCOInstance(), activitiesToMove == null ? null : activitiesToMove.getJCOInstance());
+            return (boolean)retObjectCanMoveActivities;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanMoveActivities != null ? retObjectCanMoveActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean CanRemoveActivities(ReadOnlyCollection_1 activitiesToRemove) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRemoveActivities = null;
+        try {
+            retObjectCanRemoveActivities = classInstance.Invoke("CanRemoveActivities", activitiesToRemove == null ? null : activitiesToRemove.getJCOInstance());
+            return (boolean)retObjectCanRemoveActivities;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRemoveActivities != null ? retObjectCanRemoveActivities.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean IsContainedDesignerVisible(ActivityDesigner containedDesigner) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -274,11 +317,61 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
         }
     }
 
+    public static void InsertActivities(CompositeActivityDesigner compositeActivityDesigner, HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert, java.lang.String undoTransactionDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("InsertActivities", compositeActivityDesigner == null ? null : compositeActivityDesigner.getJCOInstance(), insertLocation == null ? null : insertLocation.getJCOInstance(), activitiesToInsert == null ? null : activitiesToInsert.getJCOInstance(), undoTransactionDescription);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void InsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InsertActivities", insertLocation == null ? null : insertLocation.getJCOInstance(), activitiesToInsert == null ? null : activitiesToInsert.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1 activitiesToMove) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MoveActivities", moveLocation == null ? null : moveLocation.getJCOInstance(), activitiesToMove == null ? null : activitiesToMove.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void MoveDesigners(ActivityDesigner activityDesigner, boolean moveBack) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MoveDesigners", activityDesigner == null ? null : activityDesigner.getJCOInstance(), moveBack);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveActivities(ReadOnlyCollection_1 activitiesToRemove) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveActivities", activitiesToRemove == null ? null : activitiesToRemove.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void RemoveActivities(IServiceProvider serviceProvider, ReadOnlyCollection_1 activitiesToRemove, java.lang.String transactionDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("RemoveActivities", serviceProvider == null ? null : serviceProvider.getJCOInstance(), activitiesToRemove == null ? null : activitiesToRemove.getJCOInstance(), transactionDescription);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,6 +428,21 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
             return (boolean)retObjectIsEditable;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEditable != null ? retObjectIsEditable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getContainedDesigners() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainedDesigners = null;
+        try {
+            retObjectContainedDesigners = classInstance.Get("ContainedDesigners");
+            JCObject val = (JCObject)retObjectContainedDesigners;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainedDesigners != null ? retObjectContainedDesigners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

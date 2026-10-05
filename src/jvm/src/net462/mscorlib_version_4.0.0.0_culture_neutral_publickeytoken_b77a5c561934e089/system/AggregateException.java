@@ -38,9 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.AggregateException;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.Func_2;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 /**
  * The base .NET class managing System.AggregateException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
@@ -166,11 +170,31 @@ public class AggregateException extends NetException {
 
     // Constructors section
     
+    public AggregateException(IEnumerable_1 innerExceptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(innerExceptions == null ? null : innerExceptions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AggregateException(NetException... innerExceptions) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(innerExceptions)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AggregateException(java.lang.String message, IEnumerable_1 innerExceptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, innerExceptions == null ? null : innerExceptions.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +254,34 @@ public class AggregateException extends NetException {
         }
     }
 
+    public void Handle(Func_2 predicate) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.AggregateException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Handle", predicate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public ReadOnlyCollection_1 getInnerExceptions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerExceptions = null;
+        try {
+            retObjectInnerExceptions = classInstance.Get("InnerExceptions");
+            JCObject val = (JCObject)retObjectInnerExceptions;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInnerExceptions != null ? retObjectInnerExceptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 }

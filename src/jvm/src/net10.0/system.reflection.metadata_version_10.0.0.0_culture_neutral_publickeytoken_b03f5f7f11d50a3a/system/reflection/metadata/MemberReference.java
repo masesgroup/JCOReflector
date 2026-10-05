@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.reflection.metadata.CustomAttributeHandleCollection;
 import system.reflection.metadata.MemberReferenceKind;
+import system.reflection.metadata.MethodSignature_1;
+import system.reflection.metadata.ISignatureTypeProvider_2;
+import system.reflection.metadata.ISignatureTypeProvider_2Implementation;
 import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.StringHandle;
@@ -58,7 +61,7 @@ import system.reflection.metadata.StringHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MemberReference extends ValueType  {
+public class MemberReference extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Reflection.Metadata, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -184,6 +187,21 @@ public class MemberReference extends ValueType  {
             return new MemberReferenceKind(objGetKind);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetKind != null ? retObjectGetKind.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TType extends IJCOBridgeReflected, TGenericContext extends IJCOBridgeReflected> MethodSignature_1 DecodeMethodSignature(ISignatureTypeProvider_2 provider, TGenericContext genericContext) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecodeMethodSignature = null;
+        try {
+            retObjectDecodeMethodSignature = classInstance.Invoke("DecodeMethodSignature", provider == null ? null : provider.getJCOInstance(), genericContext == null ? null : ((IJCOBridgeReflected)genericContext).getJCOInstance());
+            JCObject objDecodeMethodSignature = (JCObject)retObjectDecodeMethodSignature;
+            return new MethodSignature_1(objDecodeMethodSignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecodeMethodSignature != null ? retObjectDecodeMethodSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

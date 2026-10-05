@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.linq.expressions.Expression_1;
+import system.activities.Activity_1;
 
 
 /**
@@ -151,6 +153,64 @@ public class ExpressionServices extends NetObject  {
     
     // Methods section
     
+    public static <TResult extends IJCOBridgeReflected> boolean TryConvert(Expression_1 expression, JCORefOut<Activity_1> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryConvert = null;
+        try {
+            retObjectTryConvert = classType.Invoke("TryConvert", expression == null ? null : expression.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryConvert;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryConvert != null ? retObjectTryConvert.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> boolean TryConvertReference(Expression_1 expression, JCORefOut<Activity_1> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryConvertReference = null;
+        try {
+            retObjectTryConvertReference = classType.Invoke("TryConvertReference", expression == null ? null : expression.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryConvertReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryConvertReference != null ? retObjectTryConvertReference.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> Activity_1 ConvertReference(Expression_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertReference = null;
+        try {
+            retObjectConvertReference = classType.Invoke("ConvertReference", expression == null ? null : expression.getJCOInstance());
+            JCObject objConvertReference = (JCObject)retObjectConvertReference;
+            return new Activity_1(objConvertReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertReference != null ? retObjectConvertReference.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TResult extends IJCOBridgeReflected> Activity_1 Convert(Expression_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
+        try {
+            retObjectConvert = classType.Invoke("Convert", expression == null ? null : expression.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
+            return new Activity_1(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

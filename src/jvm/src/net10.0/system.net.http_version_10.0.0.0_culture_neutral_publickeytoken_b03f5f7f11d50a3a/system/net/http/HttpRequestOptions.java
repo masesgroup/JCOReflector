@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.http.HttpRequestOptionsKey_1;
+import system.collections.generic.KeyValuePair_2;
 
 
 /**
@@ -159,6 +161,111 @@ public class HttpRequestOptions extends NetObjectEnumerable  {
     
     // Methods section
     
+    public <TValue extends IJCOBridgeReflected> boolean TryGetValue(HttpRequestOptionsKey_1 key, JCORefOut<TValue> value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetValue = null;
+        try {
+            retObjectTryGetValue = classInstance.Invoke("TryGetValue", key == null ? null : key.getJCOInstance(), value.getJCRefOut());
+            return (boolean)retObjectTryGetValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetValue != null ? retObjectTryGetValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TValue extends IJCOBridgeReflected> void Set(HttpRequestOptionsKey_1 key, TValue value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Set", key == null ? null : key.getJCOInstance(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDictionary_2 method available in IDictionary_2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ContainsKey(java.lang.String key) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary_2 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDictionary_2 method available in IDictionary_2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Remove(java.lang.String key) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary_2 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDictionary_2 method available in IDictionary_2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean TryGetValue(java.lang.String key, JCORefOut<NetObject> value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary_2 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDictionary_2 method available in IDictionary_2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Add(java.lang.String key, NetObject value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary_2 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Remove(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Add(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Clear() throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(KeyValuePair_2[] array, int arrayIndex) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
 
     
     // Properties section

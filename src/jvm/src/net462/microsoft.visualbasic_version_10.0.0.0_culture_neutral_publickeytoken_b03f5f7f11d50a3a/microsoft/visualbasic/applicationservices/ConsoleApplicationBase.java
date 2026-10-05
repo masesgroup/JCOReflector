@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.visualbasic.applicationservices.ApplicationBase;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.deployment.application.ApplicationDeployment;
 
 
@@ -54,7 +55,7 @@ import system.deployment.application.ApplicationDeployment;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConsoleApplicationBase extends ApplicationBase  {
+public class ConsoleApplicationBase extends microsoft.visualbasic.applicationservices.ApplicationBase  {
     /**
      * Fully assembly qualified name: Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -174,6 +175,21 @@ public class ConsoleApplicationBase extends ApplicationBase  {
             return (boolean)retObjectIsNetworkDeployed;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNetworkDeployed != null ? retObjectIsNetworkDeployed.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getCommandLineArgs() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLineArgs = null;
+        try {
+            retObjectCommandLineArgs = classInstance.Get("CommandLineArgs");
+            JCObject val = (JCObject)retObjectCommandLineArgs;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandLineArgs != null ? retObjectCommandLineArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Attribute;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.Attribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssociationAttribute extends Attribute  {
+public class AssociationAttribute extends system.Attribute  {
     /**
      * Fully assembly qualified name: System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -187,6 +189,36 @@ public class AssociationAttribute extends Attribute  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsForeignKey", IsForeignKey);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getOtherKeyMembers() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOtherKeyMembers = null;
+        try {
+            retObjectOtherKeyMembers = classInstance.Get("OtherKeyMembers");
+            JCObject val = (JCObject)retObjectOtherKeyMembers;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOtherKeyMembers != null ? retObjectOtherKeyMembers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getThisKeyMembers() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThisKeyMembers = null;
+        try {
+            retObjectThisKeyMembers = classInstance.Get("ThisKeyMembers");
+            JCObject val = (JCObject)retObjectThisKeyMembers;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThisKeyMembers != null ? retObjectThisKeyMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.schema.XmlSchemaSet;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.xml.schema.XmlSchemaType;
 import system.xml.XmlQualifiedName;
 import system.runtime.serialization.ExportOptions;
@@ -173,6 +175,20 @@ public class XsdDataContractExporter extends NetObject  {
     
     // Methods section
     
+    public boolean CanExport(ICollection_1 assemblies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExport = null;
+        try {
+            retObjectCanExport = classInstance.Invoke("CanExport", assemblies == null ? null : assemblies.getJCOInstance());
+            return (boolean)retObjectCanExport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExport != null ? retObjectCanExport.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean CanExport(NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -227,6 +243,16 @@ public class XsdDataContractExporter extends NetObject  {
             return new XmlQualifiedName(objGetSchemaTypeName);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaTypeName != null ? retObjectGetSchemaTypeName.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Export(ICollection_1 assemblies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.RankException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Export", assemblies == null ? null : assemblies.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

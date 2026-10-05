@@ -53,7 +53,7 @@ import system.workflow.runtime.WorkflowEventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowTerminatedEventArgs extends WorkflowEventArgs  {
+public class WorkflowTerminatedEventArgs extends system.workflow.runtime.WorkflowEventArgs  {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

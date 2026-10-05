@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.linq.expressions.Expression;
 import system.linq.expressions.IndexExpression;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.ExpressionType;
 import system.reflection.PropertyInfo;
 
@@ -56,7 +59,7 @@ import system.reflection.PropertyInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IndexExpression extends Expression  {
+public class IndexExpression extends system.linq.expressions.Expression  {
     /**
      * Fully assembly qualified name: System.Linq.Expressions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -172,6 +175,21 @@ public class IndexExpression extends Expression  {
         }
     }
 
+    public IndexExpression Update(Expression object, IEnumerable_1 arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
+        try {
+            retObjectUpdate = classInstance.Invoke("Update", object == null ? null : object.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance());
+            JCObject objUpdate = (JCObject)retObjectUpdate;
+            return new IndexExpression(objUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -211,6 +229,21 @@ public class IndexExpression extends Expression  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getArguments() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArguments = null;
+        try {
+            retObjectArguments = classInstance.Get("Arguments");
+            JCObject val = (JCObject)retObjectArguments;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArguments != null ? retObjectArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

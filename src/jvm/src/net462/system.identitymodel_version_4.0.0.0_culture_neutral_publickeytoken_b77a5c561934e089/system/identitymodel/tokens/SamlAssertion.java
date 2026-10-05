@@ -41,12 +41,16 @@ import java.util.ArrayList;
 import system.DateTime;
 import system.identitymodel.tokens.SamlConditions;
 import system.identitymodel.tokens.SamlAdvice;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenResolver;
 import system.xml.XmlWriter;
 import system.xml.XmlDictionaryWriter;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.SigningCredentials;
 
@@ -161,6 +165,16 @@ public class SamlAssertion extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SamlAssertion(java.lang.String assertionId, java.lang.String issuer, DateTime issueInstant, SamlConditions samlConditions, SamlAdvice samlAdvice, IEnumerable_1 samlStatements) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(assertionId, issuer, issueInstant == null ? null : issueInstant.getJCOInstance(), samlConditions == null ? null : samlConditions.getJCOInstance(), samlAdvice == null ? null : samlAdvice.getJCOInstance(), samlStatements == null ? null : samlStatements.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,6 +331,21 @@ public class SamlAssertion extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getStatements() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatements = null;
+        try {
+            retObjectStatements = classInstance.Get("Statements");
+            JCObject val = (JCObject)retObjectStatements;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatements != null ? retObjectStatements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

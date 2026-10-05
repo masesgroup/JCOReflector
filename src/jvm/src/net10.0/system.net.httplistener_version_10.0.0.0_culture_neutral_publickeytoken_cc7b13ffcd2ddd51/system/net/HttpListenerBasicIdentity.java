@@ -53,7 +53,7 @@ import system.security.principal.GenericIdentity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpListenerBasicIdentity extends GenericIdentity  {
+public class HttpListenerBasicIdentity extends system.security.principal.GenericIdentity  {
     /**
      * Fully assembly qualified name: System.Net.HttpListener, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

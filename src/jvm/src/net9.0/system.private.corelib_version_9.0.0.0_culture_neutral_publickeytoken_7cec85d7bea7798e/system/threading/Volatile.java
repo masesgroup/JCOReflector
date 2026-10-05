@@ -266,6 +266,16 @@ public class Volatile extends NetObject  {
         }
     }
 
+    public static <T extends IJCOBridgeReflected> void Write(JCORefOut<T> location, T value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Write", location.getJCRefOut(), value == null ? null : ((IJCOBridgeReflected)value).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

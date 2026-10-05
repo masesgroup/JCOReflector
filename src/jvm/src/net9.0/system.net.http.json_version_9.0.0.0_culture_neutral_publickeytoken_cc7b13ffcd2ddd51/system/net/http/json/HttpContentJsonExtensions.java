@@ -38,6 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IAsyncEnumerable_1;
+import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.net.http.HttpContent;
+import system.text.json.JsonSerializerOptions;
+import system.threading.CancellationToken;
+import system.text.json.serialization.metadata.JsonTypeInfo_1;
+import system.threading.tasks.Task_1;
+import system.text.json.serialization.JsonSerializerContext;
 
 
 /**
@@ -151,6 +159,141 @@ public class HttpContentJsonExtensions extends NetObject  {
     
     // Methods section
     
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 ReadFromJsonAsAsyncEnumerable(HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectReadFromJsonAsAsyncEnumerable = classType.Invoke("ReadFromJsonAsAsyncEnumerable", content == null ? null : content.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsAsyncEnumerable = (JCObject)retObjectReadFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objReadFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsAsyncEnumerable != null ? retObjectReadFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 ReadFromJsonAsAsyncEnumerable(HttpContent content, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectReadFromJsonAsAsyncEnumerable = classType.Invoke("ReadFromJsonAsAsyncEnumerable", content == null ? null : content.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsAsyncEnumerable = (JCObject)retObjectReadFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objReadFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsAsyncEnumerable != null ? retObjectReadFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TValue extends IJCOBridgeReflected> IAsyncEnumerable_1 ReadFromJsonAsAsyncEnumerable(HttpContent content, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsAsyncEnumerable = null;
+        try {
+            retObjectReadFromJsonAsAsyncEnumerable = classType.Invoke("ReadFromJsonAsAsyncEnumerable", content == null ? null : content.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsAsyncEnumerable = (JCObject)retObjectReadFromJsonAsAsyncEnumerable;
+            return new IAsyncEnumerable_1Implementation(objReadFromJsonAsAsyncEnumerable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsAsyncEnumerable != null ? retObjectReadFromJsonAsAsyncEnumerable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReadFromJsonAsync(HttpContent content, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsync = null;
+        try {
+            retObjectReadFromJsonAsync = classType.Invoke("ReadFromJsonAsync", content == null ? null : content.getJCOInstance(), type == null ? null : type.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsync = (JCObject)retObjectReadFromJsonAsync;
+            return new Task_1(objReadFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsync != null ? retObjectReadFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReadFromJsonAsync(HttpContent content, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsync = null;
+        try {
+            retObjectReadFromJsonAsync = classType.Invoke("ReadFromJsonAsync", content == null ? null : content.getJCOInstance(), type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsync = (JCObject)retObjectReadFromJsonAsync;
+            return new Task_1(objReadFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsync != null ? retObjectReadFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Task_1 ReadFromJsonAsync(HttpContent content, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsync = null;
+        try {
+            retObjectReadFromJsonAsync = classType.Invoke("ReadFromJsonAsync", content == null ? null : content.getJCOInstance(), type == null ? null : type.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsync = (JCObject)retObjectReadFromJsonAsync;
+            return new Task_1(objReadFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsync != null ? retObjectReadFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Task_1 ReadFromJsonAsync(HttpContent content, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsync = null;
+        try {
+            retObjectReadFromJsonAsync = classType.Invoke("ReadFromJsonAsync", content == null ? null : content.getJCOInstance(), options == null ? null : options.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsync = (JCObject)retObjectReadFromJsonAsync;
+            return new Task_1(objReadFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsync != null ? retObjectReadFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Task_1 ReadFromJsonAsync(HttpContent content, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsync = null;
+        try {
+            retObjectReadFromJsonAsync = classType.Invoke("ReadFromJsonAsync", content == null ? null : content.getJCOInstance(), jsonTypeInfo == null ? null : jsonTypeInfo.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsync = (JCObject)retObjectReadFromJsonAsync;
+            return new Task_1(objReadFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsync != null ? retObjectReadFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Task_1 ReadFromJsonAsync(HttpContent content, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFromJsonAsync = null;
+        try {
+            retObjectReadFromJsonAsync = classType.Invoke("ReadFromJsonAsync", content == null ? null : content.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadFromJsonAsync = (JCObject)retObjectReadFromJsonAsync;
+            return new Task_1(objReadFromJsonAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFromJsonAsync != null ? retObjectReadFromJsonAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

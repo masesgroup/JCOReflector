@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xml.xpath.XPathNavigator;
 import system.xml.XmlNameTable;
 
@@ -164,6 +166,21 @@ public class XmlQueryContext extends NetObject  {
             return (boolean)retObjectLateBoundFunctionExists;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLateBoundFunctionExists != null ? retObjectLateBoundFunctionExists.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 InvokeXsltLateBoundFunction(java.lang.String name, java.lang.String namespaceUri, IList_1[] args) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.OverflowException, system.FormatException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeXsltLateBoundFunction = null;
+        try {
+            retObjectInvokeXsltLateBoundFunction = classInstance.Invoke("InvokeXsltLateBoundFunction", name, namespaceUri, toObjectFromArray(args));
+            JCObject objInvokeXsltLateBoundFunction = (JCObject)retObjectInvokeXsltLateBoundFunction;
+            return new IList_1Implementation(objInvokeXsltLateBoundFunction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeXsltLateBoundFunction != null ? retObjectInvokeXsltLateBoundFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

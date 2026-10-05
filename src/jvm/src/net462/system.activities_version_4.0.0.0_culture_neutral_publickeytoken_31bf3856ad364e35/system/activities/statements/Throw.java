@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.CodeActivity;
+import system.activities.InArgument_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.activities.CodeActivity;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Throw extends CodeActivity  {
+public class Throw extends system.activities.CodeActivity  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +165,31 @@ public class Throw extends CodeActivity  {
     
     // Properties section
     
+    public InArgument_1 getException() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectException = null;
+        try {
+            retObjectException = classInstance.Get("Exception");
+            JCObject val = (JCObject)retObjectException;
+            return new InArgument_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectException != null ? retObjectException.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setException(InArgument_1 Exception) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Exception", Exception == null ? null : Exception.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

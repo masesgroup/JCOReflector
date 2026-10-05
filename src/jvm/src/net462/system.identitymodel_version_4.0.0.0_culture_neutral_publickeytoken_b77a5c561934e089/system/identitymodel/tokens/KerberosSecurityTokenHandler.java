@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.tokens.SecurityTokenHandler;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.tokens.SecurityToken;
 
 
 /**
@@ -53,7 +55,7 @@ import system.identitymodel.tokens.SecurityTokenHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class KerberosSecurityTokenHandler extends SecurityTokenHandler  {
+public class KerberosSecurityTokenHandler extends system.identitymodel.tokens.SecurityTokenHandler  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -160,6 +162,21 @@ public class KerberosSecurityTokenHandler extends SecurityTokenHandler  {
     
     // Methods section
     
+    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateToken = null;
+        try {
+            retObjectValidateToken = classInstance.Invoke("ValidateToken", token == null ? null : token.getJCOInstance());
+            JCObject objValidateToken = (JCObject)retObjectValidateToken;
+            return new ReadOnlyCollection_1(objValidateToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateToken != null ? retObjectValidateToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String[] GetTokenTypeIdentifiers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

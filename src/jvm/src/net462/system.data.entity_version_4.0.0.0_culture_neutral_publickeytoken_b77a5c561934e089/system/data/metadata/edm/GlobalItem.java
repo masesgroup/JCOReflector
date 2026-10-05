@@ -53,7 +53,7 @@ import system.data.metadata.edm.MetadataItem;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class GlobalItem extends MetadataItem  {
+public class GlobalItem extends system.data.metadata.edm.MetadataItem  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

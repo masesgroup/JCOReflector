@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.diagnostics.tracing.EventChannel;
 import system.diagnostics.tracing.EventKeywords;
 import system.diagnostics.tracing.EventLevel;
@@ -61,7 +62,7 @@ import system.Guid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EventWrittenEventArgs extends EventArgs  {
+public class EventWrittenEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -251,6 +252,56 @@ public class EventWrittenEventArgs extends EventArgs  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventId", EventId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPayload() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPayload = null;
+        try {
+            retObjectPayload = classInstance.Get("Payload");
+            JCObject val = (JCObject)retObjectPayload;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPayload != null ? retObjectPayload.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPayload(ReadOnlyCollection_1 Payload) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Payload", Payload == null ? null : Payload.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getPayloadNames() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPayloadNames = null;
+        try {
+            retObjectPayloadNames = classInstance.Get("PayloadNames");
+            JCObject val = (JCObject)retObjectPayloadNames;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPayloadNames != null ? retObjectPayloadNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setPayloadNames(ReadOnlyCollection_1 PayloadNames) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("PayloadNames", PayloadNames == null ? null : PayloadNames.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

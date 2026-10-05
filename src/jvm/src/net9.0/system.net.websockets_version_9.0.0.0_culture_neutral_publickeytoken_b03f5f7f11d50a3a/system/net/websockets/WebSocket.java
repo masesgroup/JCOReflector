@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ArraySegment_1;
 import system.net.websockets.WebSocket;
 import system.io.Stream;
 import system.TimeSpan;
@@ -45,8 +46,15 @@ import system.net.websockets.WebSocketCreationOptions;
 import system.threading.tasks.Task;
 import system.net.websockets.WebSocketCloseStatus;
 import system.threading.CancellationToken;
+import system.net.websockets.WebSocketMessageType;
+import system.threading.tasks.Task_1;
 import system.threading.tasks.ValueTask;
+import system.ReadOnlyMemory_1;
+import system.net.websockets.WebSocketMessageFlags;
+import system.threading.tasks.ValueTask_1;
+import system.Memory_1;
 import system.net.websockets.WebSocketState;
+import system.Nullable_1;
 
 
 /**
@@ -174,6 +182,51 @@ public class WebSocket extends NetObject implements AutoCloseable {
         }
     }
 
+    public static ArraySegment_1 CreateClientBuffer(int receiveBufferSize, int sendBufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateClientBuffer = null;
+        try {
+            retObjectCreateClientBuffer = classType.Invoke("CreateClientBuffer", receiveBufferSize, sendBufferSize);
+            JCObject objCreateClientBuffer = (JCObject)retObjectCreateClientBuffer;
+            return new ArraySegment_1(objCreateClientBuffer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateClientBuffer != null ? retObjectCreateClientBuffer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ArraySegment_1 CreateServerBuffer(int receiveBufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateServerBuffer = null;
+        try {
+            retObjectCreateServerBuffer = classType.Invoke("CreateServerBuffer", receiveBufferSize);
+            JCObject objCreateServerBuffer = (JCObject)retObjectCreateServerBuffer;
+            return new ArraySegment_1(objCreateServerBuffer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateServerBuffer != null ? retObjectCreateServerBuffer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static WebSocket CreateClientWebSocket(Stream innerStream, java.lang.String subProtocol, int receiveBufferSize, int sendBufferSize, TimeSpan keepAliveInterval, boolean useZeroMaskingKey, ArraySegment_1 internalBuffer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateClientWebSocket = null;
+        try {
+            retObjectCreateClientWebSocket = classType.Invoke("CreateClientWebSocket", innerStream == null ? null : innerStream.getJCOInstance(), subProtocol, receiveBufferSize, sendBufferSize, keepAliveInterval == null ? null : keepAliveInterval.getJCOInstance(), useZeroMaskingKey, internalBuffer == null ? null : internalBuffer.getJCOInstance());
+            JCObject objCreateClientWebSocket = (JCObject)retObjectCreateClientWebSocket;
+            return new WebSocket(objCreateClientWebSocket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateClientWebSocket != null ? retObjectCreateClientWebSocket.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static WebSocket CreateFromStream(Stream stream, boolean isServer, java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -229,6 +282,81 @@ public class WebSocket extends NetObject implements AutoCloseable {
             return new Task(objCloseOutputAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseOutputAsync != null ? retObjectCloseOutputAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task SendAsync(ArraySegment_1 buffer, WebSocketMessageType messageType, boolean endOfMessage, CancellationToken cancellationToken) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", buffer == null ? null : buffer.getJCOInstance(), messageType == null ? null : messageType.getJCOInstance(), endOfMessage, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classInstance.Invoke("ReceiveAsync", buffer == null ? null : buffer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new Task_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask SendAsync(ReadOnlyMemory_1 buffer, WebSocketMessageType messageType, boolean endOfMessage, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", buffer == null ? null : buffer.getJCOInstance(), messageType == null ? null : messageType.getJCOInstance(), endOfMessage, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new ValueTask(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask SendAsync(ReadOnlyMemory_1 buffer, WebSocketMessageType messageType, WebSocketMessageFlags messageFlags, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", buffer == null ? null : buffer.getJCOInstance(), messageType == null ? null : messageType.getJCOInstance(), messageFlags == null ? null : messageFlags.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new ValueTask(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ValueTask_1 ReceiveAsync(Memory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classInstance.Invoke("ReceiveAsync", buffer == null ? null : buffer.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new ValueTask_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,6 +419,21 @@ public class WebSocket extends NetObject implements AutoCloseable {
             return new WebSocketState(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getCloseStatus() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseStatus = null;
+        try {
+            retObjectCloseStatus = classInstance.Get("CloseStatus");
+            JCObject val = (JCObject)retObjectCloseStatus;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseStatus != null ? retObjectCloseStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

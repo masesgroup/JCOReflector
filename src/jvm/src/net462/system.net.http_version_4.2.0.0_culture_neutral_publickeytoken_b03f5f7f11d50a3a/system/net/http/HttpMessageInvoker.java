@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.HttpMessageHandler;
+import system.threading.tasks.Task_1;
+import system.net.http.HttpRequestMessage;
+import system.threading.CancellationToken;
 
 
 /**
@@ -174,6 +177,21 @@ public class HttpMessageInvoker extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    public Task_1 SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classInstance.Invoke("SendAsync", request == null ? null : request.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

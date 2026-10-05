@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.DependencyObject;
+import system.Nullable_1;
 import system.windows.controls.primitives.PlacementMode;
 import system.windows.Rect;
 import system.windows.UIElement;
@@ -412,6 +413,21 @@ public class ToolTipService extends NetObject  {
         }
     }
 
+    public static Nullable_1 GetShowsToolTipOnKeyboardFocus(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetShowsToolTipOnKeyboardFocus = null;
+        try {
+            retObjectGetShowsToolTipOnKeyboardFocus = classType.Invoke("GetShowsToolTipOnKeyboardFocus", element == null ? null : element.getJCOInstance());
+            JCObject objGetShowsToolTipOnKeyboardFocus = (JCObject)retObjectGetShowsToolTipOnKeyboardFocus;
+            return new Nullable_1(objGetShowsToolTipOnKeyboardFocus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetShowsToolTipOnKeyboardFocus != null ? retObjectGetShowsToolTipOnKeyboardFocus.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject GetToolTip(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -607,6 +623,16 @@ public class ToolTipService extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetShowOnDisabled", element == null ? null : element.getJCOInstance(), value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetShowsToolTipOnKeyboardFocus(DependencyObject element, Nullable_1 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetShowsToolTipOnKeyboardFocus", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

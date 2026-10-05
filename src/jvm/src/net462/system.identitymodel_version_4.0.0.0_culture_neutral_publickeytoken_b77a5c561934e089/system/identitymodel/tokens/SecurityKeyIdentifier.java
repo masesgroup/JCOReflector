@@ -171,6 +171,20 @@ public class SecurityKeyIdentifier extends NetObjectEnumerable  {
     
     // Methods section
     
+    public <TClause extends IJCOBridgeReflected> boolean TryFind(JCORefOut<TClause> clause) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryFind = null;
+        try {
+            retObjectTryFind = classInstance.Invoke("TryFind", clause.getJCRefOut());
+            return (boolean)retObjectTryFind;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryFind != null ? retObjectTryFind.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityKey CreateKey() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

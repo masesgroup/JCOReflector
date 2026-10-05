@@ -38,6 +38,29 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.threading.tasks.dataflow.ITargetBlock_1;
+import system.threading.tasks.dataflow.ITargetBlock_1Implementation;
+import system.threading.tasks.dataflow.IReceivableSourceBlock_1;
+import system.threading.tasks.dataflow.IReceivableSourceBlock_1Implementation;
+import system.collections.generic.IAsyncEnumerable_1;
+import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.threading.CancellationToken;
+import system.IDisposable;
+import system.IDisposableImplementation;
+import system.threading.tasks.dataflow.ISourceBlock_1;
+import system.threading.tasks.dataflow.ISourceBlock_1Implementation;
+import system.Predicate_1;
+import system.threading.tasks.dataflow.DataflowLinkOptions;
+import system.IObservable_1;
+import system.IObservable_1Implementation;
+import system.IObserver_1;
+import system.IObserver_1Implementation;
+import system.threading.tasks.dataflow.IPropagatorBlock_2;
+import system.threading.tasks.dataflow.IPropagatorBlock_2Implementation;
+import system.threading.tasks.Task_1;
+import system.Action_1;
+import system.threading.tasks.dataflow.DataflowBlockOptions;
+import system.TimeSpan;
 
 
 /**
@@ -151,6 +174,334 @@ public class DataflowBlock extends NetObject  {
     
     // Methods section
     
+    public static <TInput extends IJCOBridgeReflected> boolean Post(ITargetBlock_1 target, TInput item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPost = null;
+        try {
+            retObjectPost = classType.Invoke("Post", target == null ? null : target.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance());
+            return (boolean)retObjectPost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPost != null ? retObjectPost.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> boolean TryReceive(IReceivableSourceBlock_1 source, JCORefOut<TOutput> item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryReceive = null;
+        try {
+            retObjectTryReceive = classType.Invoke("TryReceive", source == null ? null : source.getJCOInstance(), item.getJCRefOut());
+            return (boolean)retObjectTryReceive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryReceive != null ? retObjectTryReceive.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> IAsyncEnumerable_1 ReceiveAllAsync(IReceivableSourceBlock_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveAllAsync = null;
+        try {
+            retObjectReceiveAllAsync = classType.Invoke("ReceiveAllAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReceiveAllAsync = (JCObject)retObjectReceiveAllAsync;
+            return new IAsyncEnumerable_1Implementation(objReceiveAllAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAllAsync != null ? retObjectReceiveAllAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> IDisposable LinkTo(ISourceBlock_1 source, ITargetBlock_1 target, Predicate_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLinkTo = null;
+        try {
+            retObjectLinkTo = classType.Invoke("LinkTo", source == null ? null : source.getJCOInstance(), target == null ? null : target.getJCOInstance(), predicate);
+            JCObject objLinkTo = (JCObject)retObjectLinkTo;
+            return new IDisposableImplementation(objLinkTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkTo != null ? retObjectLinkTo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> IDisposable LinkTo(ISourceBlock_1 source, ITargetBlock_1 target, DataflowLinkOptions linkOptions, Predicate_1 predicate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLinkTo = null;
+        try {
+            retObjectLinkTo = classType.Invoke("LinkTo", source == null ? null : source.getJCOInstance(), target == null ? null : target.getJCOInstance(), linkOptions == null ? null : linkOptions.getJCOInstance(), predicate);
+            JCObject objLinkTo = (JCObject)retObjectLinkTo;
+            return new IDisposableImplementation(objLinkTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkTo != null ? retObjectLinkTo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> IDisposable LinkTo(ISourceBlock_1 source, ITargetBlock_1 target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLinkTo = null;
+        try {
+            retObjectLinkTo = classType.Invoke("LinkTo", source == null ? null : source.getJCOInstance(), target == null ? null : target.getJCOInstance());
+            JCObject objLinkTo = (JCObject)retObjectLinkTo;
+            return new IDisposableImplementation(objLinkTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkTo != null ? retObjectLinkTo.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> IObservable_1 AsObservable(ISourceBlock_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsObservable = null;
+        try {
+            retObjectAsObservable = classType.Invoke("AsObservable", source == null ? null : source.getJCOInstance());
+            JCObject objAsObservable = (JCObject)retObjectAsObservable;
+            return new IObservable_1Implementation(objAsObservable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsObservable != null ? retObjectAsObservable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TInput extends IJCOBridgeReflected> IObserver_1 AsObserver(ITargetBlock_1 target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsObserver = null;
+        try {
+            retObjectAsObserver = classType.Invoke("AsObserver", target == null ? null : target.getJCOInstance());
+            JCObject objAsObserver = (JCObject)retObjectAsObserver;
+            return new IObserver_1Implementation(objAsObserver);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsObserver != null ? retObjectAsObserver.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TInput extends IJCOBridgeReflected, TOutput extends IJCOBridgeReflected> IPropagatorBlock_2 Encapsulate(ITargetBlock_1 target, ISourceBlock_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncapsulate = null;
+        try {
+            retObjectEncapsulate = classType.Invoke("Encapsulate", target == null ? null : target.getJCOInstance(), source == null ? null : source.getJCOInstance());
+            JCObject objEncapsulate = (JCObject)retObjectEncapsulate;
+            return new IPropagatorBlock_2Implementation(objEncapsulate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncapsulate != null ? retObjectEncapsulate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TInput extends IJCOBridgeReflected> ITargetBlock_1 NullTarget() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNullTarget = null;
+        try {
+            retObjectNullTarget = classType.Invoke("NullTarget");
+            JCObject objNullTarget = (JCObject)retObjectNullTarget;
+            return new ITargetBlock_1Implementation(objNullTarget);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNullTarget != null ? retObjectNullTarget.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> Task_1 OutputAvailableAsync(ISourceBlock_1 source, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutputAvailableAsync = null;
+        try {
+            retObjectOutputAvailableAsync = classType.Invoke("OutputAvailableAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objOutputAvailableAsync = (JCObject)retObjectOutputAvailableAsync;
+            return new Task_1(objOutputAvailableAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputAvailableAsync != null ? retObjectOutputAvailableAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> Task_1 OutputAvailableAsync(ISourceBlock_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutputAvailableAsync = null;
+        try {
+            retObjectOutputAvailableAsync = classType.Invoke("OutputAvailableAsync", source == null ? null : source.getJCOInstance());
+            JCObject objOutputAvailableAsync = (JCObject)retObjectOutputAvailableAsync;
+            return new Task_1(objOutputAvailableAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputAvailableAsync != null ? retObjectOutputAvailableAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TInput extends IJCOBridgeReflected> Task_1 SendAsync(ITargetBlock_1 target, TInput item, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classType.Invoke("SendAsync", target == null ? null : target.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TInput extends IJCOBridgeReflected> Task_1 SendAsync(ITargetBlock_1 target, TInput item) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSendAsync = null;
+        try {
+            retObjectSendAsync = classType.Invoke("SendAsync", target == null ? null : target.getJCOInstance(), item == null ? null : ((IJCOBridgeReflected)item).getJCOInstance());
+            JCObject objSendAsync = (JCObject)retObjectSendAsync;
+            return new Task_1(objSendAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendAsync != null ? retObjectSendAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> Task_1 Choose(ISourceBlock_1 source1, Action_1 action1, ISourceBlock_1 source2, Action_1 action2, ISourceBlock_1 source3, Action_1 action3, DataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.AggregateException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChoose = null;
+        try {
+            retObjectChoose = classType.Invoke("Choose", source1 == null ? null : source1.getJCOInstance(), action1, source2 == null ? null : source2.getJCOInstance(), action2, source3 == null ? null : source3.getJCOInstance(), action3, dataflowBlockOptions == null ? null : dataflowBlockOptions.getJCOInstance());
+            JCObject objChoose = (JCObject)retObjectChoose;
+            return new Task_1(objChoose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChoose != null ? retObjectChoose.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected, T3 extends IJCOBridgeReflected> Task_1 Choose(ISourceBlock_1 source1, Action_1 action1, ISourceBlock_1 source2, Action_1 action2, ISourceBlock_1 source3, Action_1 action3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChoose = null;
+        try {
+            retObjectChoose = classType.Invoke("Choose", source1 == null ? null : source1.getJCOInstance(), action1, source2 == null ? null : source2.getJCOInstance(), action2, source3 == null ? null : source3.getJCOInstance(), action3);
+            JCObject objChoose = (JCObject)retObjectChoose;
+            return new Task_1(objChoose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChoose != null ? retObjectChoose.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> Task_1 Choose(ISourceBlock_1 source1, Action_1 action1, ISourceBlock_1 source2, Action_1 action2, DataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.AggregateException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChoose = null;
+        try {
+            retObjectChoose = classType.Invoke("Choose", source1 == null ? null : source1.getJCOInstance(), action1, source2 == null ? null : source2.getJCOInstance(), action2, dataflowBlockOptions == null ? null : dataflowBlockOptions.getJCOInstance());
+            JCObject objChoose = (JCObject)retObjectChoose;
+            return new Task_1(objChoose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChoose != null ? retObjectChoose.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeReflected> Task_1 Choose(ISourceBlock_1 source1, Action_1 action1, ISourceBlock_1 source2, Action_1 action2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChoose = null;
+        try {
+            retObjectChoose = classType.Invoke("Choose", source1 == null ? null : source1.getJCOInstance(), action1, source2 == null ? null : source2.getJCOInstance(), action2);
+            JCObject objChoose = (JCObject)retObjectChoose;
+            return new Task_1(objChoose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChoose != null ? retObjectChoose.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> Task_1 ReceiveAsync(ISourceBlock_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classType.Invoke("ReceiveAsync", source == null ? null : source.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new Task_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> Task_1 ReceiveAsync(ISourceBlock_1 source, TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.AggregateException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classType.Invoke("ReceiveAsync", source == null ? null : source.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new Task_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> Task_1 ReceiveAsync(ISourceBlock_1 source, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classType.Invoke("ReceiveAsync", source == null ? null : source.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new Task_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TOutput extends IJCOBridgeReflected> Task_1 ReceiveAsync(ISourceBlock_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReceiveAsync = null;
+        try {
+            retObjectReceiveAsync = classType.Invoke("ReceiveAsync", source == null ? null : source.getJCOInstance());
+            JCObject objReceiveAsync = (JCObject)retObjectReceiveAsync;
+            return new Task_1(objReceiveAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveAsync != null ? retObjectReceiveAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

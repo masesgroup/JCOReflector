@@ -40,8 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.security.tokens.SecurityTokenParameters;
 import system.servicemodel.EndpointAddress;
-import system.identitymodel.tokens.SecurityKeyType;
+import system.collections.objectmodel.Collection_1;
 import system.servicemodel.MessageSecurityVersion;
+import system.identitymodel.selectors.SecurityTokenSerializer;
+import system.identitymodel.tokens.SecurityKeyType;
 
 
 /**
@@ -56,7 +58,7 @@ import system.servicemodel.MessageSecurityVersion;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
+public class IssuedSecurityTokenParameters extends system.servicemodel.security.tokens.SecurityTokenParameters  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -193,6 +195,21 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
     
     // Methods section
     
+    public Collection_1 CreateRequestParameters(MessageSecurityVersion messageSecurityVersion, SecurityTokenSerializer securityTokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.xml.XmlException, system.RankException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateRequestParameters = null;
+        try {
+            retObjectCreateRequestParameters = classInstance.Invoke("CreateRequestParameters", messageSecurityVersion == null ? null : messageSecurityVersion.getJCOInstance(), securityTokenSerializer == null ? null : securityTokenSerializer.getJCOInstance());
+            JCObject objCreateRequestParameters = (JCObject)retObjectCreateRequestParameters;
+            return new Collection_1(objCreateRequestParameters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRequestParameters != null ? retObjectCreateRequestParameters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
@@ -266,6 +283,36 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeySize", KeySize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getClaimTypeRequirements() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimTypeRequirements = null;
+        try {
+            retObjectClaimTypeRequirements = classInstance.Get("ClaimTypeRequirements");
+            JCObject val = (JCObject)retObjectClaimTypeRequirements;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimTypeRequirements != null ? retObjectClaimTypeRequirements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getAdditionalRequestParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalRequestParameters = null;
+        try {
+            retObjectAdditionalRequestParameters = classInstance.Get("AdditionalRequestParameters");
+            JCObject val = (JCObject)retObjectAdditionalRequestParameters;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdditionalRequestParameters != null ? retObjectAdditionalRequestParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -53,7 +53,7 @@ import system.EventArgs;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WritingCancelledEventArgs extends EventArgs  {
+public class WritingCancelledEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

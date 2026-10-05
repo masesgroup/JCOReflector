@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.controls.ContentControl;
+import system.Nullable_1;
 import system.windows.Window;
 import system.windows.DependencyObject;
 import system.windows.media.ImageSource;
@@ -68,7 +69,7 @@ import system.windows.DpiChangedEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Window extends ContentControl  {
+public class Window extends system.windows.controls.ContentControl  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -184,6 +185,21 @@ public class Window extends ContentControl  {
             return (boolean)retObjectActivate;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectActivate != null ? retObjectActivate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 ShowDialog() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.InvalidCastException, system.MulticastNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.threading.ThreadStateException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDialog = null;
+        try {
+            retObjectShowDialog = classInstance.Invoke("ShowDialog");
+            JCObject objShowDialog = (JCObject)retObjectShowDialog;
+            return new Nullable_1(objShowDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialog != null ? retObjectShowDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,6 +469,31 @@ public class Window extends ContentControl  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Top", Top);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getDialogResult() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDialogResult = null;
+        try {
+            retObjectDialogResult = classInstance.Get("DialogResult");
+            JCObject val = (JCObject)retObjectDialogResult;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDialogResult != null ? retObjectDialogResult.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setDialogResult(Nullable_1 DialogResult) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("DialogResult", DialogResult == null ? null : DialogResult.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.DbDataReader;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -161,6 +162,21 @@ public class DbDataReaderExtensions extends NetObject  {
             return (boolean)retObjectCanGetColumnSchema;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanGetColumnSchema != null ? retObjectCanGetColumnSchema.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetColumnSchema(DbDataReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetColumnSchema = null;
+        try {
+            retObjectGetColumnSchema = classType.Invoke("GetColumnSchema", reader == null ? null : reader.getJCOInstance());
+            JCObject objGetColumnSchema = (JCObject)retObjectGetColumnSchema;
+            return new ReadOnlyCollection_1(objGetColumnSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColumnSchema != null ? retObjectGetColumnSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

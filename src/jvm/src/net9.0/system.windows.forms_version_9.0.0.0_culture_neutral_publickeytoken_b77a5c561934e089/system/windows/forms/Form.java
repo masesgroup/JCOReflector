@@ -45,6 +45,7 @@ import system.drawing.Font;
 import system.threading.tasks.Task;
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
+import system.threading.tasks.Task_1;
 import system.windows.forms.DialogResult;
 import system.windows.forms.Form;
 import system.windows.forms.MdiLayout;
@@ -85,7 +86,7 @@ import system.windows.forms.InputLanguageChangingEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Form extends ContainerControl  {
+public class Form extends system.windows.forms.ContainerControl  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -245,6 +246,36 @@ public class Form extends ContainerControl  {
             return new Task(objShowAsync);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowAsync != null ? retObjectShowAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ShowDialogAsync() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDialogAsync = null;
+        try {
+            retObjectShowDialogAsync = classInstance.Invoke("ShowDialogAsync");
+            JCObject objShowDialogAsync = (JCObject)retObjectShowDialogAsync;
+            return new Task_1(objShowDialogAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialogAsync != null ? retObjectShowDialogAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ShowDialogAsync(IWin32Window owner) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDialogAsync = null;
+        try {
+            retObjectShowDialogAsync = classInstance.Invoke("ShowDialogAsync", owner == null ? null : owner.getJCOInstance());
+            JCObject objShowDialogAsync = (JCObject)retObjectShowDialogAsync;
+            return new Task_1(objShowDialogAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialogAsync != null ? retObjectShowDialogAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

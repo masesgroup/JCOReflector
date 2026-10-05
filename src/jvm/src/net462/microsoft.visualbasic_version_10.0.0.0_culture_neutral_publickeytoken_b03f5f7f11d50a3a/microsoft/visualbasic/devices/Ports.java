@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.io.ports.SerialPort;
 import system.io.ports.Parity;
 import system.io.ports.StopBits;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -241,6 +242,21 @@ public class Ports extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getSerialPortNames() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialPortNames = null;
+        try {
+            retObjectSerialPortNames = classInstance.Get("SerialPortNames");
+            JCObject val = (JCObject)retObjectSerialPortNames;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerialPortNames != null ? retObjectSerialPortNames.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

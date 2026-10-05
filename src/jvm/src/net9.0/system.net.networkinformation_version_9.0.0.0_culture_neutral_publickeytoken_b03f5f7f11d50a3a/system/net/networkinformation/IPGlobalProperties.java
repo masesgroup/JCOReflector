@@ -50,6 +50,7 @@ import system.net.networkinformation.TcpConnectionInformation;
 import system.net.networkinformation.TcpStatistics;
 import system.net.networkinformation.UdpStatistics;
 import system.net.networkinformation.UnicastIPAddressInformationCollection;
+import system.threading.tasks.Task_1;
 import system.net.networkinformation.NetBiosNodeType;
 
 
@@ -402,6 +403,21 @@ public class IPGlobalProperties extends NetObject  {
             return new UnicastIPAddressInformationCollection(objGetUnicastAddresses);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnicastAddresses != null ? retObjectGetUnicastAddresses.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetUnicastAddressesAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUnicastAddressesAsync = null;
+        try {
+            retObjectGetUnicastAddressesAsync = classInstance.Invoke("GetUnicastAddressesAsync");
+            JCObject objGetUnicastAddressesAsync = (JCObject)retObjectGetUnicastAddressesAsync;
+            return new Task_1(objGetUnicastAddressesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnicastAddressesAsync != null ? retObjectGetUnicastAddressesAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -65,7 +65,7 @@ import system.workflow.componentmodel.design.DesignerGeometry;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ActivityDesignerTheme extends DesignerTheme  {
+public class ActivityDesignerTheme extends system.workflow.componentmodel.design.DesignerTheme  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

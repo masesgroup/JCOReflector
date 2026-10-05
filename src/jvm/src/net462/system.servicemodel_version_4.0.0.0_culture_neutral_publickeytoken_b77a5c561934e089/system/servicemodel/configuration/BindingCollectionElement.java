@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.configuration.ConfigurationElement;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.configuration.ConfigurationElement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class BindingCollectionElement extends ConfigurationElement  {
+public class BindingCollectionElement extends system.configuration.ConfigurationElement  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -170,6 +171,21 @@ public class BindingCollectionElement extends ConfigurationElement  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getConfiguredBindings() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfiguredBindings = null;
+        try {
+            retObjectConfiguredBindings = classInstance.Get("ConfiguredBindings");
+            JCObject val = (JCObject)retObjectConfiguredBindings;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfiguredBindings != null ? retObjectConfiguredBindings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getBindingName() throws Throwable, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.FormatException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -54,7 +54,7 @@ import system.collections.specialized.StringCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PrintSystemObjectPropertiesChangedEventArgs extends EventArgs implements AutoCloseable {
+public class PrintSystemObjectPropertiesChangedEventArgs extends system.EventArgs implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Printing, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

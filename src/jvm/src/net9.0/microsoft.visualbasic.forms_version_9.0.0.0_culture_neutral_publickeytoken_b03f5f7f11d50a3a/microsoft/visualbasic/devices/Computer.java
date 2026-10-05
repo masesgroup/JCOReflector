@@ -58,7 +58,7 @@ import system.windows.forms.Screen;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Computer extends ServerComputer  {
+public class Computer extends microsoft.visualbasic.devices.ServerComputer  {
     /**
      * Fully assembly qualified name: Microsoft.VisualBasic.Forms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

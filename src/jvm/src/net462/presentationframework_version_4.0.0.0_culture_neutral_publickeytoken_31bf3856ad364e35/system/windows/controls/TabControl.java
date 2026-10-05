@@ -56,7 +56,7 @@ import system.windows.DataTemplate;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TabControl extends Selector  {
+public class TabControl extends system.windows.controls.primitives.Selector  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

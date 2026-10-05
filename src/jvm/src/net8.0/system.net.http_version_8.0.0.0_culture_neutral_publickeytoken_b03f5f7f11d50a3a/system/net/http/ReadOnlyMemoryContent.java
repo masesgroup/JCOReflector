@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.HttpContent;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.net.http.HttpContent;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ReadOnlyMemoryContent extends HttpContent  {
+public class ReadOnlyMemoryContent extends system.net.http.HttpContent  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -147,6 +148,16 @@ public class ReadOnlyMemoryContent extends HttpContent  {
     // Constructors section
     
     public ReadOnlyMemoryContent() throws Throwable {
+    }
+
+    public ReadOnlyMemoryContent(ReadOnlyMemory_1 content) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentException, system.FormatException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(content == null ? null : content.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

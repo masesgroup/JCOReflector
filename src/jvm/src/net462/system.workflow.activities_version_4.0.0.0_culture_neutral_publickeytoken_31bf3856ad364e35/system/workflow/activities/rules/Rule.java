@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.activities.rules.RuleCondition;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.workflow.activities.rules.Rule;
 import system.workflow.activities.rules.RuleReevaluationBehavior;
 
@@ -168,6 +170,26 @@ public class Rule extends NetObject  {
         }
     }
 
+    public Rule(java.lang.String name, RuleCondition condition, IList_1 thenActions) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, condition == null ? null : condition.getJCOInstance(), thenActions == null ? null : thenActions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Rule(java.lang.String name, RuleCondition condition, IList_1 thenActions, IList_1 elseActions) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, condition == null ? null : condition.getJCOInstance(), thenActions == null ? null : thenActions.getJCOInstance(), elseActions == null ? null : elseActions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -260,6 +282,36 @@ public class Rule extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Priority", Priority);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getElseActions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElseActions = null;
+        try {
+            retObjectElseActions = classInstance.Get("ElseActions");
+            JCObject val = (JCObject)retObjectElseActions;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElseActions != null ? retObjectElseActions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getThenActions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThenActions = null;
+        try {
+            retObjectThenActions = classInstance.Get("ThenActions");
+            JCObject val = (JCObject)retObjectThenActions;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThenActions != null ? retObjectThenActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

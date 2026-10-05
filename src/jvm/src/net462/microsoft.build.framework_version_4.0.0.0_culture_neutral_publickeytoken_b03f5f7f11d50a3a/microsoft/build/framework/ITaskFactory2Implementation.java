@@ -40,10 +40,12 @@ import java.util.ArrayList;
 // Import section
 import microsoft.build.framework.ITaskFactory;
 import microsoft.build.framework.ITaskFactoryImplementation;
-import microsoft.build.framework.ITask;
-import microsoft.build.framework.ITaskImplementation;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import microsoft.build.framework.IBuildEngine;
 import microsoft.build.framework.IBuildEngineImplementation;
+import microsoft.build.framework.ITask;
+import microsoft.build.framework.ITaskImplementation;
 import microsoft.build.framework.TaskPropertyInfo;
 
 
@@ -147,12 +149,55 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
 
     // Methods section
     
+    public boolean Initialize(java.lang.String taskName, IDictionary_2 parameterGroup, java.lang.String taskBody, IBuildEngine taskFactoryLoggingHost) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialize = null;
+        try {
+            retObjectInitialize = classInstance.Invoke("Initialize", taskName, parameterGroup == null ? null : parameterGroup.getJCOInstance(), taskBody, taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
+            return (boolean)retObjectInitialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInitialize != null ? retObjectInitialize.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Initialize(java.lang.String taskName, IDictionary_2 factoryIdentityParameters, IDictionary_2 parameterGroup, java.lang.String taskBody, IBuildEngine taskFactoryLoggingHost) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialize = null;
+        try {
+            retObjectInitialize = classInstance.Invoke("Initialize", taskName, factoryIdentityParameters == null ? null : factoryIdentityParameters.getJCOInstance(), parameterGroup == null ? null : parameterGroup.getJCOInstance(), taskBody, taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
+            return (boolean)retObjectInitialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInitialize != null ? retObjectInitialize.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ITask CreateTask(IBuildEngine taskFactoryLoggingHost) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateTask = null;
         try {
             retObjectCreateTask = classInstance.Invoke("CreateTask", taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance());
+            JCObject objCreateTask = (JCObject)retObjectCreateTask;
+            return new ITaskImplementation(objCreateTask);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTask != null ? retObjectCreateTask.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ITask CreateTask(IBuildEngine taskFactoryLoggingHost, IDictionary_2 taskIdentityParameters) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTask = null;
+        try {
+            retObjectCreateTask = classInstance.Invoke("CreateTask", taskFactoryLoggingHost == null ? null : taskFactoryLoggingHost.getJCOInstance(), taskIdentityParameters == null ? null : taskIdentityParameters.getJCOInstance());
             JCObject objCreateTask = (JCObject)retObjectCreateTask;
             return new ITaskImplementation(objCreateTask);
         } catch (java.lang.ClassCastException cce) {

@@ -38,8 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.text.SpanLineEnumerator;
-import system.text.SpanRuneEnumerator;
+import system.Memory_1;
+import system.ArraySegment_1;
+import system.Index;
+import system.Range;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -153,6 +156,391 @@ public class MemoryExtensions extends NetObject  {
     
     // Methods section
     
+    public static Memory_1 Trim(Memory_1 memory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrim = null;
+        try {
+            retObjectTrim = classType.Invoke("Trim", memory == null ? null : memory.getJCOInstance());
+            JCObject objTrim = (JCObject)retObjectTrim;
+            return new Memory_1(objTrim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrim != null ? retObjectTrim.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Memory_1 TrimEnd(Memory_1 memory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimEnd = null;
+        try {
+            retObjectTrimEnd = classType.Invoke("TrimEnd", memory == null ? null : memory.getJCOInstance());
+            JCObject objTrimEnd = (JCObject)retObjectTrimEnd;
+            return new Memory_1(objTrimEnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimEnd != null ? retObjectTrimEnd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Memory_1 TrimStart(Memory_1 memory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimStart = null;
+        try {
+            retObjectTrimStart = classType.Invoke("TrimStart", memory == null ? null : memory.getJCOInstance());
+            JCObject objTrimStart = (JCObject)retObjectTrimStart;
+            return new Memory_1(objTrimStart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimStart != null ? retObjectTrimStart.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(ArraySegment_1 segment, int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", segment == null ? null : segment.getJCOInstance(), start, length);
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(ArraySegment_1 segment, int start) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", segment == null ? null : segment.getJCOInstance(), start);
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(ArraySegment_1 segment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", segment == null ? null : segment.getJCOInstance());
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(T[] array, int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", array == null ? null : toObjectFromArray(array), start, length);
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(T[] array, int start) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", array == null ? null : toObjectFromArray(array), start);
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(T[] array, Index startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", array == null ? null : toObjectFromArray(array), startIndex == null ? null : startIndex.getJCOInstance());
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(T[] array, Range range) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", array == null ? null : toObjectFromArray(array), range == null ? null : range.getJCOInstance());
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 AsMemory(T[] array) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", array == null ? null : toObjectFromArray(array));
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new Memory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 Trim(Memory_1 memory, T trimElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrim = null;
+        try {
+            retObjectTrim = classType.Invoke("Trim", memory == null ? null : memory.getJCOInstance(), trimElement == null ? null : ((IJCOBridgeReflected)trimElement).getJCOInstance());
+            JCObject objTrim = (JCObject)retObjectTrim;
+            return new Memory_1(objTrim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrim != null ? retObjectTrim.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 TrimEnd(Memory_1 memory, T trimElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimEnd = null;
+        try {
+            retObjectTrimEnd = classType.Invoke("TrimEnd", memory == null ? null : memory.getJCOInstance(), trimElement == null ? null : ((IJCOBridgeReflected)trimElement).getJCOInstance());
+            JCObject objTrimEnd = (JCObject)retObjectTrimEnd;
+            return new Memory_1(objTrimEnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimEnd != null ? retObjectTrimEnd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> Memory_1 TrimStart(Memory_1 memory, T trimElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimStart = null;
+        try {
+            retObjectTrimStart = classType.Invoke("TrimStart", memory == null ? null : memory.getJCOInstance(), trimElement == null ? null : ((IJCOBridgeReflected)trimElement).getJCOInstance());
+            JCObject objTrimStart = (JCObject)retObjectTrimStart;
+            return new Memory_1(objTrimStart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimStart != null ? retObjectTrimStart.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyMemory_1 AsMemory(java.lang.String text, int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", text, start, length);
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new ReadOnlyMemory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyMemory_1 AsMemory(java.lang.String text, int start) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", text, start);
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new ReadOnlyMemory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyMemory_1 AsMemory(java.lang.String text, Index startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", text, startIndex == null ? null : startIndex.getJCOInstance());
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new ReadOnlyMemory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyMemory_1 AsMemory(java.lang.String text, Range range) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", text, range == null ? null : range.getJCOInstance());
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new ReadOnlyMemory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyMemory_1 AsMemory(java.lang.String text) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsMemory = null;
+        try {
+            retObjectAsMemory = classType.Invoke("AsMemory", text);
+            JCObject objAsMemory = (JCObject)retObjectAsMemory;
+            return new ReadOnlyMemory_1(objAsMemory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsMemory != null ? retObjectAsMemory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyMemory_1 Trim(ReadOnlyMemory_1 memory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrim = null;
+        try {
+            retObjectTrim = classType.Invoke("Trim", memory == null ? null : memory.getJCOInstance());
+            JCObject objTrim = (JCObject)retObjectTrim;
+            return new ReadOnlyMemory_1(objTrim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrim != null ? retObjectTrim.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyMemory_1 TrimEnd(ReadOnlyMemory_1 memory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimEnd = null;
+        try {
+            retObjectTrimEnd = classType.Invoke("TrimEnd", memory == null ? null : memory.getJCOInstance());
+            JCObject objTrimEnd = (JCObject)retObjectTrimEnd;
+            return new ReadOnlyMemory_1(objTrimEnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimEnd != null ? retObjectTrimEnd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyMemory_1 TrimStart(ReadOnlyMemory_1 memory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimStart = null;
+        try {
+            retObjectTrimStart = classType.Invoke("TrimStart", memory == null ? null : memory.getJCOInstance());
+            JCObject objTrimStart = (JCObject)retObjectTrimStart;
+            return new ReadOnlyMemory_1(objTrimStart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimStart != null ? retObjectTrimStart.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ReadOnlyMemory_1 Trim(ReadOnlyMemory_1 memory, T trimElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrim = null;
+        try {
+            retObjectTrim = classType.Invoke("Trim", memory == null ? null : memory.getJCOInstance(), trimElement == null ? null : ((IJCOBridgeReflected)trimElement).getJCOInstance());
+            JCObject objTrim = (JCObject)retObjectTrim;
+            return new ReadOnlyMemory_1(objTrim);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrim != null ? retObjectTrim.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ReadOnlyMemory_1 TrimEnd(ReadOnlyMemory_1 memory, T trimElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimEnd = null;
+        try {
+            retObjectTrimEnd = classType.Invoke("TrimEnd", memory == null ? null : memory.getJCOInstance(), trimElement == null ? null : ((IJCOBridgeReflected)trimElement).getJCOInstance());
+            JCObject objTrimEnd = (JCObject)retObjectTrimEnd;
+            return new ReadOnlyMemory_1(objTrimEnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimEnd != null ? retObjectTrimEnd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> ReadOnlyMemory_1 TrimStart(ReadOnlyMemory_1 memory, T trimElement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTrimStart = null;
+        try {
+            retObjectTrimStart = classType.Invoke("TrimStart", memory == null ? null : memory.getJCOInstance(), trimElement == null ? null : ((IJCOBridgeReflected)trimElement).getJCOInstance());
+            JCObject objTrimStart = (JCObject)retObjectTrimStart;
+            return new ReadOnlyMemory_1(objTrimStart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimStart != null ? retObjectTrimStart.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <T extends IJCOBridgeReflected> void CopyTo(T[] source, Memory_1 destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CopyTo", source == null ? null : toObjectFromArray(source), destination == null ? null : destination.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

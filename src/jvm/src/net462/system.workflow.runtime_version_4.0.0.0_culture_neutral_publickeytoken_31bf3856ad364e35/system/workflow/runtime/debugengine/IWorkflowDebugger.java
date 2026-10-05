@@ -40,6 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 import system.Guid;
 import system.workflow.componentmodel.ActivityExecutionStatus;
 import system.workflow.runtime.debugengine.ActivityHandlerDescriptor;
+import system.collections.generic.List_1;
 
 
 /**
@@ -137,6 +138,8 @@ public interface IWorkflowDebugger extends IJCOBridgeReflected {
     public void ScheduleTypeLoaded(Guid programId, Guid scheduleTypeId, java.lang.String assemblyFullName, java.lang.String fileName, java.lang.String md5Digest, boolean isDynamic, java.lang.String scheduleNamespace, java.lang.String scheduleName, java.lang.String workflowMarkup) throws Throwable;
 
     public void SetInitialActivityStatus(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable;
+
+    public void UpdateHandlerMethodsForActivity(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, List_1 handlerMethods) throws Throwable;
 
 
     

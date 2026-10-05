@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.List_1;
 import system.net.security.CipherSuitesPolicy;
 import system.net.security.EncryptionPolicy;
 import system.net.security.RemoteCertificateValidationCallback;
@@ -239,6 +240,31 @@ public class SslServerAuthenticationOptions extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCertificateRequired", ClientCertificateRequired);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 getApplicationProtocols() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationProtocols = null;
+        try {
+            retObjectApplicationProtocols = classInstance.Get("ApplicationProtocols");
+            JCObject val = (JCObject)retObjectApplicationProtocols;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationProtocols != null ? retObjectApplicationProtocols.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setApplicationProtocols(List_1 ApplicationProtocols) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ApplicationProtocols", ApplicationProtocols == null ? null : ApplicationProtocols.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

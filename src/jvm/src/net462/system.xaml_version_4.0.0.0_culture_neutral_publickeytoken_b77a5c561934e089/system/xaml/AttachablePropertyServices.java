@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.AttachableMemberIdentifier;
+import system.collections.generic.KeyValuePair_2;
 
 
 /**
@@ -215,6 +216,16 @@ public class AttachablePropertyServices extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void CopyPropertiesTo(NetObject instance, KeyValuePair_2[] array, int index) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CopyPropertiesTo", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

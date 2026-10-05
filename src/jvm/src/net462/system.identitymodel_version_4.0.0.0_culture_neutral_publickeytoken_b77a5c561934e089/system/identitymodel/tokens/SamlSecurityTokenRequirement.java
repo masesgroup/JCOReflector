@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.xml.XmlElement;
 import system.identitymodel.selectors.AudienceUriMode;
 import system.identitymodel.tokens.SecurityToken;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.identitymodel.selectors.X509CertificateValidator;
 
 
@@ -182,6 +184,16 @@ public class SamlSecurityTokenRequirement extends NetObject  {
             return (boolean)retObjectShouldEnforceAudienceRestriction;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldEnforceAudienceRestriction != null ? retObjectShouldEnforceAudienceRestriction.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ValidateAudienceRestriction(IList_1 allowedAudienceUris, IList_1 tokenAudiences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ValidateAudienceRestriction", allowedAudienceUris == null ? null : allowedAudienceUris.getJCOInstance(), tokenAudiences == null ? null : tokenAudiences.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

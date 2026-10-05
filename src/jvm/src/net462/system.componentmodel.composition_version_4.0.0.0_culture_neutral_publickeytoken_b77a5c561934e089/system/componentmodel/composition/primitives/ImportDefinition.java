@@ -38,8 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.componentmodel.composition.primitives.ExportDefinition;
+import system.linq.expressions.Expression_1;
 import system.componentmodel.composition.primitives.ImportCardinality;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.componentmodel.composition.primitives.ExportDefinition;
 
 
 /**
@@ -150,6 +153,26 @@ public class ImportDefinition extends NetObject  {
     public ImportDefinition() throws Throwable {
     }
 
+    public ImportDefinition(Expression_1 constraint, java.lang.String contractName, ImportCardinality cardinality, boolean isRecomposable, boolean isPrerequisite) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(constraint == null ? null : constraint.getJCOInstance(), contractName, cardinality == null ? null : cardinality.getJCOInstance(), isRecomposable, isPrerequisite));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImportDefinition(Expression_1 constraint, java.lang.String contractName, ImportCardinality cardinality, boolean isRecomposable, boolean isPrerequisite, IDictionary_2 metadata) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(constraint == null ? null : constraint.getJCOInstance(), contractName, cardinality == null ? null : cardinality.getJCOInstance(), isRecomposable, isPrerequisite, metadata == null ? null : metadata.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -201,6 +224,21 @@ public class ImportDefinition extends NetObject  {
         }
     }
 
+    public IDictionary_2 getMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetadata = null;
+        try {
+            retObjectMetadata = classInstance.Get("Metadata");
+            JCObject val = (JCObject)retObjectMetadata;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMetadata != null ? retObjectMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ImportCardinality getCardinality() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -211,6 +249,21 @@ public class ImportDefinition extends NetObject  {
             return new ImportCardinality(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCardinality != null ? retObjectCardinality.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Expression_1 getConstraint() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstraint = null;
+        try {
+            retObjectConstraint = classInstance.Get("Constraint");
+            JCObject val = (JCObject)retObjectConstraint;
+            return new Expression_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstraint != null ? retObjectConstraint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

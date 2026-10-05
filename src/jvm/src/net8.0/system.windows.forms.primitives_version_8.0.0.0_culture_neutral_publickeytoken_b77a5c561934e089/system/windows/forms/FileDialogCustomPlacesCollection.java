@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.windows.forms.FileDialogCustomPlace;
 import system.Guid;
 
 
@@ -53,7 +55,7 @@ import system.Guid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class FileDialogCustomPlacesCollection extends NetObjectEnumerable  {
+public class FileDialogCustomPlacesCollection extends system.collections.objectmodel.Collection_1<FileDialogCustomPlace>  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

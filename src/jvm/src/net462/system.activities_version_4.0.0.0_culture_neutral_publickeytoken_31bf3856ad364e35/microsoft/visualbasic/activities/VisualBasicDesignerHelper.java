@@ -39,9 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.Activity;
-import system.activities.ActivityWithResult;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.activities.LocationReferenceEnvironment;
 import system.activities.expressionparser.SourceExpressionException;
 import microsoft.visualbasic.activities.VisualBasicSettings;
+import system.activities.ActivityWithResult;
 import system.activities.validation.Constraint;
 
 
@@ -156,6 +159,36 @@ public class VisualBasicDesignerHelper extends NetObject  {
     
     // Methods section
     
+    public static Activity CreatePrecompiledVisualBasicReference(NetType targetType, java.lang.String expressionText, IEnumerable_1 namespaces, IEnumerable_1 referencedAssemblies, LocationReferenceEnvironment environment, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePrecompiledVisualBasicReference = null;
+        try {
+            retObjectCreatePrecompiledVisualBasicReference = classType.Invoke("CreatePrecompiledVisualBasicReference", targetType == null ? null : targetType.getJCOInstance(), expressionText, namespaces == null ? null : namespaces.getJCOInstance(), referencedAssemblies == null ? null : referencedAssemblies.getJCOInstance(), environment == null ? null : environment.getJCOInstance(), returnType.getJCRefOut(), compileError.getJCRefOut(), vbSettings.getJCRefOut());
+            JCObject objCreatePrecompiledVisualBasicReference = (JCObject)retObjectCreatePrecompiledVisualBasicReference;
+            return new Activity(objCreatePrecompiledVisualBasicReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePrecompiledVisualBasicReference != null ? retObjectCreatePrecompiledVisualBasicReference.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Activity CreatePrecompiledVisualBasicValue(NetType targetType, java.lang.String expressionText, IEnumerable_1 namespaces, IEnumerable_1 referencedAssemblies, LocationReferenceEnvironment environment, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePrecompiledVisualBasicValue = null;
+        try {
+            retObjectCreatePrecompiledVisualBasicValue = classType.Invoke("CreatePrecompiledVisualBasicValue", targetType == null ? null : targetType.getJCOInstance(), expressionText, namespaces == null ? null : namespaces.getJCOInstance(), referencedAssemblies == null ? null : referencedAssemblies.getJCOInstance(), environment == null ? null : environment.getJCOInstance(), returnType.getJCRefOut(), compileError.getJCRefOut(), vbSettings.getJCRefOut());
+            JCObject objCreatePrecompiledVisualBasicValue = (JCObject)retObjectCreatePrecompiledVisualBasicValue;
+            return new Activity(objCreatePrecompiledVisualBasicValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePrecompiledVisualBasicValue != null ? retObjectCreatePrecompiledVisualBasicValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Activity RecompileVisualBasicReference(ActivityWithResult visualBasicReference, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");

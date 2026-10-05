@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.linq.expressions.Expression;
 import system.linq.expressions.DynamicExpression;
 import system.runtime.compilerservices.CallSiteBinder;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.ExpressionType;
 
 
@@ -56,7 +59,7 @@ import system.linq.expressions.ExpressionType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DynamicExpression extends Expression  {
+public class DynamicExpression extends system.linq.expressions.Expression  {
     /**
      * Fully assembly qualified name: System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -157,6 +160,21 @@ public class DynamicExpression extends Expression  {
     
     // Methods section
     
+    public static DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDynamic = null;
+        try {
+            retObjectDynamic = classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance());
+            JCObject objDynamic = (JCObject)retObjectDynamic;
+            return new DynamicExpression(objDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamic != null ? retObjectDynamic.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DynamicExpression DynamicNewDynamicExpression(CallSiteBinder binder, NetType returnType, Expression arg0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -227,6 +245,21 @@ public class DynamicExpression extends Expression  {
             return new DynamicExpression(objDynamic);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamic != null ? retObjectDynamic.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DynamicExpression MakeDynamicNewDynamicExpression(NetType delegateType, CallSiteBinder binder, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeDynamic = null;
+        try {
+            retObjectMakeDynamic = classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance());
+            JCObject objMakeDynamic = (JCObject)retObjectMakeDynamic;
+            return new DynamicExpression(objMakeDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeDynamic != null ? retObjectMakeDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,6 +340,21 @@ public class DynamicExpression extends Expression  {
         }
     }
 
+    public DynamicExpression Update(IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
+        try {
+            retObjectUpdate = classInstance.Invoke("Update", arguments == null ? null : arguments.getJCOInstance());
+            JCObject objUpdate = (JCObject)retObjectUpdate;
+            return new DynamicExpression(objUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIDynamicExpression method available in IDynamicExpression to obtain an object with an invocable method
@@ -338,6 +386,21 @@ public class DynamicExpression extends Expression  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getArguments() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArguments = null;
+        try {
+            retObjectArguments = classInstance.Get("Arguments");
+            JCObject val = (JCObject)retObjectArguments;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArguments != null ? retObjectArguments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CallSiteBinder getBinder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

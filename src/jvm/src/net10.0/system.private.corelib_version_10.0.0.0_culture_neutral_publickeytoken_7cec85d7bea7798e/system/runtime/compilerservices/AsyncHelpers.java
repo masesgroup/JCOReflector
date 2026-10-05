@@ -195,6 +195,26 @@ public class AsyncHelpers extends NetObject  {
         }
     }
 
+    public static <TAwaiter extends IJCOBridgeReflected> void AwaitAwaiter(TAwaiter awaiter) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("AwaitAwaiter", awaiter == null ? null : ((IJCOBridgeReflected)awaiter).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static <TAwaiter extends IJCOBridgeReflected> void UnsafeAwaitAwaiter(TAwaiter awaiter) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("UnsafeAwaitAwaiter", awaiter == null ? null : ((IJCOBridgeReflected)awaiter).getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -40,8 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.activities.LocationReference;
 import system.activities.ArgumentDirection;
+import system.collections.generic.List_1;
 import system.activities.Location;
 import system.activities.ActivityContext;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -56,7 +58,7 @@ import system.activities.ActivityContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RuntimeArgument extends LocationReference  {
+public class RuntimeArgument extends system.activities.LocationReference  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -172,6 +174,26 @@ public class RuntimeArgument extends LocationReference  {
         }
     }
 
+    public RuntimeArgument(java.lang.String name, NetType argumentType, ArgumentDirection direction, boolean isRequired, List_1 overloadGroupNames) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, argumentType == null ? null : argumentType.getJCOInstance(), direction == null ? null : direction.getJCOInstance(), isRequired, overloadGroupNames == null ? null : overloadGroupNames.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RuntimeArgument(java.lang.String name, NetType argumentType, ArgumentDirection direction, List_1 overloadGroupNames) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, argumentType == null ? null : argumentType.getJCOInstance(), direction == null ? null : direction.getJCOInstance(), overloadGroupNames == null ? null : overloadGroupNames.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -265,6 +287,21 @@ public class RuntimeArgument extends LocationReference  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Direction", Direction == null ? null : Direction.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getOverloadGroupNames() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverloadGroupNames = null;
+        try {
+            retObjectOverloadGroupNames = classInstance.Get("OverloadGroupNames");
+            JCObject val = (JCObject)retObjectOverloadGroupNames;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverloadGroupNames != null ? retObjectOverloadGroupNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

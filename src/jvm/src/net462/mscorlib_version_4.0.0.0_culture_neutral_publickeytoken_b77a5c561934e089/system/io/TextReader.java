@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.MarshalByRefObject;
 import system.io.TextReader;
+import system.threading.tasks.Task_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.io.TextReader;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TextReader extends MarshalByRefObject implements AutoCloseable {
+public class TextReader extends system.MarshalByRefObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -351,6 +352,96 @@ public class TextReader extends MarshalByRefObject implements AutoCloseable {
             return (java.lang.String)retObjectReadToEnd;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadToEnd != null ? retObjectReadToEnd.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReadAsync(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAsync = null;
+        try {
+            retObjectReadAsync = classInstance.Invoke("ReadAsync", buffer, index, count);
+            JCObject objReadAsync = (JCObject)retObjectReadAsync;
+            return new Task_1(objReadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAsync != null ? retObjectReadAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReadAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAsync = null;
+        try {
+            retObjectReadAsync = classInstance.Invoke("ReadAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objReadAsync = (JCObject)retObjectReadAsync;
+            return new Task_1(objReadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAsync != null ? retObjectReadAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReadBlockAsync(char[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBlockAsync = null;
+        try {
+            retObjectReadBlockAsync = classInstance.Invoke("ReadBlockAsync", buffer, index, count);
+            JCObject objReadBlockAsync = (JCObject)retObjectReadBlockAsync;
+            return new Task_1(objReadBlockAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadBlockAsync != null ? retObjectReadBlockAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReadBlockAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBlockAsync = null;
+        try {
+            retObjectReadBlockAsync = classInstance.Invoke("ReadBlockAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objReadBlockAsync = (JCObject)retObjectReadBlockAsync;
+            return new Task_1(objReadBlockAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadBlockAsync != null ? retObjectReadBlockAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReadLineAsync() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadLineAsync = null;
+        try {
+            retObjectReadLineAsync = classInstance.Invoke("ReadLineAsync");
+            JCObject objReadLineAsync = (JCObject)retObjectReadLineAsync;
+            return new Task_1(objReadLineAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadLineAsync != null ? retObjectReadLineAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReadToEndAsync() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToEndAsync = null;
+        try {
+            retObjectReadToEndAsync = classInstance.Invoke("ReadToEndAsync");
+            JCObject objReadToEndAsync = (JCObject)retObjectReadToEndAsync;
+            return new Task_1(objReadToEndAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadToEndAsync != null ? retObjectReadToEndAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
+import system.collections.objectmodel.Collection_1;
+import system.servicemodel.channels.BindingParameterCollection;
 
 
 /**
@@ -142,6 +144,16 @@ public class IServiceBehaviorImplementation extends NetObject implements IServic
 
     // Methods section
     
+    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddBindingParameters", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance(), endpoints == null ? null : endpoints.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

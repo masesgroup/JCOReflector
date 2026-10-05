@@ -45,6 +45,7 @@ import system.IComparableImplementation;
 import system.workflow.runtime.IPendingWork;
 import system.workflow.runtime.IPendingWorkImplementation;
 import system.workflow.activities.StateActivity;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.workflow.activities.StateMachineWorkflowActivity;
 import system.workflow.runtime.WorkflowInstance;
 
@@ -216,6 +217,51 @@ public class StateMachineWorkflowInstance extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getPossibleStateTransitions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.NotSupportedException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPossibleStateTransitions = null;
+        try {
+            retObjectPossibleStateTransitions = classInstance.Get("PossibleStateTransitions");
+            JCObject val = (JCObject)retObjectPossibleStateTransitions;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPossibleStateTransitions != null ? retObjectPossibleStateTransitions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getStateHistory() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.OverflowException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.NotSupportedException, system.UnauthorizedAccessException, system.configuration.ConfigurationErrorsException, system.data.sqltypes.SqlNullValueException, system.runtime.serialization.SerializationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStateHistory = null;
+        try {
+            retObjectStateHistory = classInstance.Get("StateHistory");
+            JCObject val = (JCObject)retObjectStateHistory;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStateHistory != null ? retObjectStateHistory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getStates() throws Throwable, system.OverflowException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.workflow.componentmodel.compiler.WorkflowValidationFailedException, system.xml.XmlException, system.NotSupportedException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.configuration.ConfigurationErrorsException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStates = null;
+        try {
+            retObjectStates = classInstance.Get("States");
+            JCObject val = (JCObject)retObjectStates;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStates != null ? retObjectStates.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

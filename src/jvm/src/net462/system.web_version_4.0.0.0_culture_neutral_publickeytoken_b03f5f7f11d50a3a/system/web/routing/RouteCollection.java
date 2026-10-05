@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.web.routing.RouteBase;
 import system.web.hosting.VirtualPathProvider;
 import system.IDisposable;
 import system.IDisposableImplementation;
@@ -47,7 +49,6 @@ import system.web.routing.RouteData;
 import system.web.HttpContextBase;
 import system.web.routing.VirtualPathData;
 import system.web.routing.RequestContext;
-import system.web.routing.RouteBase;
 
 
 /**
@@ -62,7 +63,7 @@ import system.web.routing.RouteBase;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RouteCollection extends NetObjectEnumerable  {
+public class RouteCollection extends system.collections.objectmodel.Collection_1<RouteBase>  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

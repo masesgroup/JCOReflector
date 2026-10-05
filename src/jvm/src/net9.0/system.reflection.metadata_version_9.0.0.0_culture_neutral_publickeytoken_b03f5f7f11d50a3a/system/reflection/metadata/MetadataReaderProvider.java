@@ -42,6 +42,7 @@ import system.reflection.metadata.MetadataReader;
 import system.reflection.metadata.MetadataReaderOptions;
 import system.reflection.metadata.MetadataStringDecoder;
 import system.reflection.metadata.MetadataReaderProvider;
+import system.collections.immutable.ImmutableArray_1;
 import system.io.Stream;
 import system.reflection.metadata.MetadataStreamOptions;
 
@@ -174,6 +175,21 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
         }
     }
 
+    public static MetadataReaderProvider FromMetadataImage(ImmutableArray_1 image) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromMetadataImage = null;
+        try {
+            retObjectFromMetadataImage = classType.Invoke("FromMetadataImage", image == null ? null : image.getJCOInstance());
+            JCObject objFromMetadataImage = (JCObject)retObjectFromMetadataImage;
+            return new MetadataReaderProvider(objFromMetadataImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromMetadataImage != null ? retObjectFromMetadataImage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MetadataReaderProvider FromMetadataStream(Stream stream, MetadataStreamOptions options, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -184,6 +200,21 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
             return new MetadataReaderProvider(objFromMetadataStream);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromMetadataStream != null ? retObjectFromMetadataStream.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MetadataReaderProvider FromPortablePdbImage(ImmutableArray_1 image) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromPortablePdbImage = null;
+        try {
+            retObjectFromPortablePdbImage = classType.Invoke("FromPortablePdbImage", image == null ? null : image.getJCOInstance());
+            JCObject objFromPortablePdbImage = (JCObject)retObjectFromPortablePdbImage;
+            return new MetadataReaderProvider(objFromPortablePdbImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromPortablePdbImage != null ? retObjectFromPortablePdbImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

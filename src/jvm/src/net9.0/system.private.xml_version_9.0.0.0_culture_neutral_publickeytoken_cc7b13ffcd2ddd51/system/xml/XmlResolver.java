@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Uri;
+import system.threading.tasks.Task_1;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
 import system.xml.XmlResolver;
@@ -179,6 +180,21 @@ public class XmlResolver extends NetObject  {
             return new NetObject(objGetEntity);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntity != null ? retObjectGetEntity.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntityAsync = null;
+        try {
+            retObjectGetEntityAsync = classInstance.Invoke("GetEntityAsync", absoluteUri == null ? null : absoluteUri.getJCOInstance(), role, ofObjectToReturn == null ? null : ofObjectToReturn.getJCOInstance());
+            JCObject objGetEntityAsync = (JCObject)retObjectGetEntityAsync;
+            return new Task_1(objGetEntityAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntityAsync != null ? retObjectGetEntityAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

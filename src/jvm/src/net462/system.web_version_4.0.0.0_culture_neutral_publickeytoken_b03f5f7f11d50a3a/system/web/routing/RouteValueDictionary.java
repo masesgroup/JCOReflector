@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
+import system.collections.generic.KeyValuePair_2;
 
 
 /**
@@ -155,6 +158,16 @@ public class RouteValueDictionary extends NetObjectEnumerable  {
         }
     }
 
+    public RouteValueDictionary(IDictionary_2 dictionary) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(dictionary == null ? null : dictionary.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RouteValueDictionary(NetObject values) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
@@ -243,6 +256,42 @@ public class RouteValueDictionary extends NetObjectEnumerable  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Remove(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Add(KeyValuePair_2 item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(KeyValuePair_2[] array, int arrayIndex) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
 
 

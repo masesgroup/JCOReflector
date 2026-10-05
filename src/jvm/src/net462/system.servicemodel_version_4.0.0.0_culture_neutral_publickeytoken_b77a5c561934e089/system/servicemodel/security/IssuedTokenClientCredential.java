@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.Dictionary_2;
+import system.collections.generic.KeyedByTypeCollection_1;
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.security.SecurityKeyEntropyMode;
 import system.TimeSpan;
@@ -229,6 +231,36 @@ public class IssuedTokenClientCredential extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedTokenRenewalThresholdPercentage", IssuedTokenRenewalThresholdPercentage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 getIssuerChannelBehaviors() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerChannelBehaviors = null;
+        try {
+            retObjectIssuerChannelBehaviors = classInstance.Get("IssuerChannelBehaviors");
+            JCObject val = (JCObject)retObjectIssuerChannelBehaviors;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerChannelBehaviors != null ? retObjectIssuerChannelBehaviors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyedByTypeCollection_1 getLocalIssuerChannelBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalIssuerChannelBehaviors = null;
+        try {
+            retObjectLocalIssuerChannelBehaviors = classInstance.Get("LocalIssuerChannelBehaviors");
+            JCObject val = (JCObject)retObjectLocalIssuerChannelBehaviors;
+            return new KeyedByTypeCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalIssuerChannelBehaviors != null ? retObjectLocalIssuerChannelBehaviors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

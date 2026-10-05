@@ -41,7 +41,11 @@ import java.util.ArrayList;
 import system.security.policy.EvidenceBase;
 import system.ApplicationIdentity;
 import system.security.PermissionSet;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.security.SecurityElement;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.security.policy.PolicyStatement;
 
 
@@ -57,7 +61,7 @@ import system.security.policy.PolicyStatement;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ApplicationTrust extends EvidenceBase  {
+public class ApplicationTrust extends system.security.policy.EvidenceBase  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -170,6 +174,16 @@ public class ApplicationTrust extends EvidenceBase  {
         }
     }
 
+    public ApplicationTrust(PermissionSet defaultGrantSet, IEnumerable_1 fullTrustAssemblies) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(defaultGrantSet == null ? null : defaultGrantSet.getJCOInstance(), fullTrustAssemblies == null ? null : fullTrustAssemblies.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -271,6 +285,21 @@ public class ApplicationTrust extends EvidenceBase  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationIdentity", ApplicationIdentity == null ? null : ApplicationIdentity.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getFullTrustAssemblies() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullTrustAssemblies = null;
+        try {
+            retObjectFullTrustAssemblies = classInstance.Get("FullTrustAssemblies");
+            JCObject val = (JCObject)retObjectFullTrustAssemblies;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFullTrustAssemblies != null ? retObjectFullTrustAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

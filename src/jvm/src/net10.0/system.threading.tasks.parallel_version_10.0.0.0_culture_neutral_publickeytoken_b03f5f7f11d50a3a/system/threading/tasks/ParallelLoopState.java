@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Nullable_1;
 
 
 /**
@@ -214,6 +215,21 @@ public class ParallelLoopState extends NetObject  {
             return (boolean)retObjectShouldExitCurrentIteration;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldExitCurrentIteration != null ? retObjectShouldExitCurrentIteration.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getLowestBreakIteration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLowestBreakIteration = null;
+        try {
+            retObjectLowestBreakIteration = classInstance.Get("LowestBreakIteration");
+            JCObject val = (JCObject)retObjectLowestBreakIteration;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLowestBreakIteration != null ? retObjectLowestBreakIteration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

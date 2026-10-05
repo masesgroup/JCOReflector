@@ -53,7 +53,7 @@ import system.windows.DependencyObject;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TriggerAction extends DependencyObject  {
+public class TriggerAction extends system.windows.DependencyObject  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

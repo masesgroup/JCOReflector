@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.Dictionary_2;
+import system.servicemodel.dispatcher.MessageQueryTable_1;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MessageQuerySet extends NetObjectEnumerable  {
+public class MessageQuerySet extends system.collections.generic.Dictionary_2  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -155,10 +157,35 @@ public class MessageQuerySet extends NetObjectEnumerable  {
         }
     }
 
+    public MessageQuerySet(MessageQueryTable_1 queryTable) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(queryTable == null ? null : queryTable.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
+    public MessageQueryTable_1 GetMessageQueryTable() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMessageQueryTable = null;
+        try {
+            retObjectGetMessageQueryTable = classInstance.Invoke("GetMessageQueryTable");
+            JCObject objGetMessageQueryTable = (JCObject)retObjectGetMessageQueryTable;
+            return new MessageQueryTable_1(objGetMessageQueryTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMessageQueryTable != null ? retObjectGetMessageQueryTable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

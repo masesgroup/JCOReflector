@@ -54,7 +54,7 @@ import system.runtime.compilerservices.AsyncIteratorMethodBuilder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AsyncIteratorMethodBuilder extends ValueType  {
+public class AsyncIteratorMethodBuilder extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -170,11 +170,41 @@ public class AsyncIteratorMethodBuilder extends ValueType  {
         }
     }
 
+    public <TAwaiter extends IJCOBridgeReflected, TStateMachine extends IJCOBridgeReflected> void AwaitOnCompleted(JCORefOut<TAwaiter> awaiter, JCORefOut<TStateMachine> stateMachine) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AwaitOnCompleted", awaiter.getJCRefOut(), stateMachine.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TAwaiter extends IJCOBridgeReflected, TStateMachine extends IJCOBridgeReflected> void AwaitUnsafeOnCompleted(JCORefOut<TAwaiter> awaiter, JCORefOut<TStateMachine> stateMachine) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AwaitUnsafeOnCompleted", awaiter.getJCRefOut(), stateMachine.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Complete() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TStateMachine extends IJCOBridgeReflected> void MoveNext(JCORefOut<TStateMachine> stateMachine) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MoveNext", stateMachine.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

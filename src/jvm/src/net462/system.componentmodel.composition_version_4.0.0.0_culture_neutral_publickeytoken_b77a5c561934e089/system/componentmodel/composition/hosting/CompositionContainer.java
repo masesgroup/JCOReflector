@@ -43,7 +43,11 @@ import system.componentmodel.composition.hosting.CompositionOptions;
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
 import system.componentmodel.composition.hosting.CompositionBatch;
 import system.componentmodel.composition.primitives.Export;
+import system.Lazy_1;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.componentmodel.composition.primitives.ComposablePart;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -58,7 +62,7 @@ import system.componentmodel.composition.primitives.ComposablePart;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CompositionContainer extends ExportProvider implements AutoCloseable {
+public class CompositionContainer extends system.componentmodel.composition.hosting.ExportProvider implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -245,6 +249,26 @@ public class CompositionContainer extends ExportProvider implements AutoCloseabl
         }
     }
 
+    public <T extends IJCOBridgeReflected> void ReleaseExport(Lazy_1 export) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReleaseExport", export == null ? null : export.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReleaseExports(IEnumerable_1 exports) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReleaseExports", exports == null ? null : exports.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SatisfyImportsOnce(ComposablePart part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException, system.MulticastNotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -272,6 +296,21 @@ public class CompositionContainer extends ExportProvider implements AutoCloseabl
     
     // Properties section
     
+    public ReadOnlyCollection_1 getProviders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviders = null;
+        try {
+            retObjectProviders = classInstance.Get("Providers");
+            JCObject val = (JCObject)retObjectProviders;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviders != null ? retObjectProviders.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ComposablePartCatalog getCatalog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

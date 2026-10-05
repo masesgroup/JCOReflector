@@ -42,6 +42,10 @@ import system.componentmodel.composition.primitives.ComposablePartCatalog;
 import system.componentmodel.composition.primitives.ICompositionElement;
 import system.componentmodel.composition.primitives.ICompositionElementImplementation;
 import system.reflection.ReflectionContext;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.primitives.ImportDefinition;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -56,7 +60,7 @@ import system.reflection.ReflectionContext;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DirectoryCatalog extends ComposablePartCatalog  {
+public class DirectoryCatalog extends system.componentmodel.composition.primitives.ComposablePartCatalog  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -237,6 +241,21 @@ public class DirectoryCatalog extends ComposablePartCatalog  {
     
     // Methods section
     
+    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExports = null;
+        try {
+            retObjectGetExports = classInstance.Invoke("GetExports", definition == null ? null : definition.getJCOInstance());
+            JCObject objGetExports = (JCObject)retObjectGetExports;
+            return new IEnumerable_1Implementation(objGetExports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExports != null ? retObjectGetExports.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Refresh() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NotImplementedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -251,6 +270,21 @@ public class DirectoryCatalog extends ComposablePartCatalog  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getLoadedFiles() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadedFiles = null;
+        try {
+            retObjectLoadedFiles = classInstance.Get("LoadedFiles");
+            JCObject val = (JCObject)retObjectLoadedFiles;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadedFiles != null ? retObjectLoadedFiles.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getFullPath() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

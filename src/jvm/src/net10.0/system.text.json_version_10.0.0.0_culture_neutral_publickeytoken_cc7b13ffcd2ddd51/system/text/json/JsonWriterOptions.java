@@ -54,7 +54,7 @@ import system.text.encodings.web.JavaScriptEncoder;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class JsonWriterOptions extends ValueType  {
+public class JsonWriterOptions extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Text.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

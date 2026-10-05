@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import microsoft.build.framework.xamltypes.BaseProperty;
+import system.collections.generic.List_1;
 
 
 /**
@@ -53,7 +54,7 @@ import microsoft.build.framework.xamltypes.BaseProperty;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DynamicEnumProperty extends BaseProperty  {
+public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.BaseProperty  {
     /**
      * Fully assembly qualified name: Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -164,6 +165,31 @@ public class DynamicEnumProperty extends BaseProperty  {
     
     // Properties section
     
+    public List_1 getProviderSettings() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderSettings = null;
+        try {
+            retObjectProviderSettings = classInstance.Get("ProviderSettings");
+            JCObject val = (JCObject)retObjectProviderSettings;
+            return new List_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviderSettings != null ? retObjectProviderSettings.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setProviderSettings(List_1 ProviderSettings) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ProviderSettings", ProviderSettings == null ? null : ProviderSettings.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getEnumProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

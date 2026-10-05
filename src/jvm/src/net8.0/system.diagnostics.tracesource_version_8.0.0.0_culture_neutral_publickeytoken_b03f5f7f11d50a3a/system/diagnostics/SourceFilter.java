@@ -55,7 +55,7 @@ import system.diagnostics.TraceEventType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SourceFilter extends TraceFilter  {
+public class SourceFilter extends system.diagnostics.TraceFilter  {
     /**
      * Fully assembly qualified name: System.Diagnostics.TraceSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

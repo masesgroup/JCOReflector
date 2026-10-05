@@ -54,7 +54,7 @@ import system.security.cryptography.Oid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Pkcs9AttributeObject extends AsnEncodedData  {
+public class Pkcs9AttributeObject extends system.security.cryptography.AsnEncodedData  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

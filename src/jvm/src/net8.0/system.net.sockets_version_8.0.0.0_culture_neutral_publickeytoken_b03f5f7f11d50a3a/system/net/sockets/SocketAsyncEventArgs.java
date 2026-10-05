@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.Memory_1;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.net.EndPoint;
 import system.net.sockets.IPPacketInformation;
 import system.net.sockets.SendPacketsElement;
@@ -61,7 +64,7 @@ import system.net.sockets.TransmitFileOptions;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
+public class SocketAsyncEventArgs extends system.EventArgs implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.Sockets, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -213,6 +216,16 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBuffer", offset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetBuffer(Memory_1 buffer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetBuffer", buffer == null ? null : buffer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,6 +465,31 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
         }
     }
 
+    public IList_1 getBufferList() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBufferList = null;
+        try {
+            retObjectBufferList = classInstance.Get("BufferList");
+            JCObject val = (JCObject)retObjectBufferList;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBufferList != null ? retObjectBufferList.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setBufferList(IList_1 BufferList) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("BufferList", BufferList == null ? null : BufferList.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetException getConnectByNameError() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -462,6 +500,21 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
             return new NetException(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectByNameError != null ? retObjectConnectByNameError.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Memory_1 getMemoryBuffer() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemoryBuffer = null;
+        try {
+            retObjectMemoryBuffer = classInstance.Get("MemoryBuffer");
+            JCObject val = (JCObject)retObjectMemoryBuffer;
+            return new Memory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemoryBuffer != null ? retObjectMemoryBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

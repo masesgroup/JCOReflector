@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.modelbinding.ModelValidatorProvider;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelMetadata;
+import system.web.modelbinding.ModelBindingExecutionContext;
 
 
 /**
@@ -53,7 +57,7 @@ import system.web.modelbinding.ModelValidatorProvider;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AssociatedValidatorProvider extends ModelValidatorProvider  {
+public class AssociatedValidatorProvider extends system.web.modelbinding.ModelValidatorProvider  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -152,6 +156,21 @@ public class AssociatedValidatorProvider extends ModelValidatorProvider  {
     
     // Methods section
     
+    public IEnumerable_1 GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValidators = null;
+        try {
+            retObjectGetValidators = classInstance.Invoke("GetValidators", metadata == null ? null : metadata.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetValidators = (JCObject)retObjectGetValidators;
+            return new IEnumerable_1Implementation(objGetValidators);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValidators != null ? retObjectGetValidators.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

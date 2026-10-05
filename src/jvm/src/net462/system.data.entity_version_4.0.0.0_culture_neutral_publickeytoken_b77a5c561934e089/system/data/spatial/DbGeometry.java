@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.spatial.DbGeometry;
+import system.Nullable_1;
 import system.data.spatial.DbGeometryWellKnownValue;
 
 
@@ -299,6 +300,21 @@ public class DbGeometry extends NetObject  {
             return resultingArray;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectAsBinary != null ? retObjectAsBinary.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DbGeometry Buffer(Nullable_1 distance) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
+        try {
+            retObjectBuffer = classInstance.Invoke("Buffer", distance == null ? null : distance.getJCOInstance());
+            JCObject objBuffer = (JCObject)retObjectBuffer;
+            return new DbGeometry(objBuffer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -844,6 +860,21 @@ public class DbGeometry extends NetObject  {
         }
     }
 
+    public Nullable_1 Distance(DbGeometry other) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDistance = null;
+        try {
+            retObjectDistance = classInstance.Invoke("Distance", other == null ? null : other.getJCOInstance());
+            JCObject objDistance = (JCObject)retObjectDistance;
+            return new Nullable_1(objDistance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDistance != null ? retObjectDistance.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String AsGml() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -1178,6 +1209,171 @@ public class DbGeometry extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WellKnownValue", WellKnownValue == null ? null : WellKnownValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIsClosed() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClosed = null;
+        try {
+            retObjectIsClosed = classInstance.Get("IsClosed");
+            JCObject val = (JCObject)retObjectIsClosed;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsClosed != null ? retObjectIsClosed.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getIsRing() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRing = null;
+        try {
+            retObjectIsRing = classInstance.Get("IsRing");
+            JCObject val = (JCObject)retObjectIsRing;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsRing != null ? retObjectIsRing.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getArea() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArea = null;
+        try {
+            retObjectArea = classInstance.Get("Area");
+            JCObject val = (JCObject)retObjectArea;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArea != null ? retObjectArea.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getElevation() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElevation = null;
+        try {
+            retObjectElevation = classInstance.Get("Elevation");
+            JCObject val = (JCObject)retObjectElevation;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElevation != null ? retObjectElevation.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getLength() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
+        try {
+            retObjectLength = classInstance.Get("Length");
+            JCObject val = (JCObject)retObjectLength;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMeasure() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasure = null;
+        try {
+            retObjectMeasure = classInstance.Get("Measure");
+            JCObject val = (JCObject)retObjectMeasure;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasure != null ? retObjectMeasure.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getXCoordinate() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXCoordinate = null;
+        try {
+            retObjectXCoordinate = classInstance.Get("XCoordinate");
+            JCObject val = (JCObject)retObjectXCoordinate;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXCoordinate != null ? retObjectXCoordinate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getYCoordinate() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectYCoordinate = null;
+        try {
+            retObjectYCoordinate = classInstance.Get("YCoordinate");
+            JCObject val = (JCObject)retObjectYCoordinate;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYCoordinate != null ? retObjectYCoordinate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getElementCount() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementCount = null;
+        try {
+            retObjectElementCount = classInstance.Get("ElementCount");
+            JCObject val = (JCObject)retObjectElementCount;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementCount != null ? retObjectElementCount.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getInteriorRingCount() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInteriorRingCount = null;
+        try {
+            retObjectInteriorRingCount = classInstance.Get("InteriorRingCount");
+            JCObject val = (JCObject)retObjectInteriorRingCount;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInteriorRingCount != null ? retObjectInteriorRingCount.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getPointCount() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointCount = null;
+        try {
+            retObjectPointCount = classInstance.Get("PointCount");
+            JCObject val = (JCObject)retObjectPointCount;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointCount != null ? retObjectPointCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

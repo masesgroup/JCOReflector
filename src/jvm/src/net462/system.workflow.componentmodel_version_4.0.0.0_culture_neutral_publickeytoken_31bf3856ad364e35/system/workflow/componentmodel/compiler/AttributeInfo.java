@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.Attribute;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -199,6 +200,21 @@ public class AttributeInfo extends NetObject  {
             return (boolean)retObjectCreatable;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreatable != null ? retObjectCreatable.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 getArgumentValues() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentValues = null;
+        try {
+            retObjectArgumentValues = classInstance.Get("ArgumentValues");
+            JCObject val = (JCObject)retObjectArgumentValues;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArgumentValues != null ? retObjectArgumentValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

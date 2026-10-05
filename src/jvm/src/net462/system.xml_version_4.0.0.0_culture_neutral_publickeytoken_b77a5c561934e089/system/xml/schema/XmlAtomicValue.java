@@ -58,7 +58,7 @@ import system.xml.schema.XmlSchemaType;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlAtomicValue extends XPathItem  {
+public class XmlAtomicValue extends system.xml.xpath.XPathItem  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

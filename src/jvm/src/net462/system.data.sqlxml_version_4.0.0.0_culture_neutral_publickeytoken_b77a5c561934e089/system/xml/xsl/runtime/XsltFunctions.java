@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.xpath.XPathNavigator;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xml.xpath.XPathItem;
 import system.xml.XmlQualifiedName;
 
@@ -196,6 +198,46 @@ public class XsltFunctions extends NetObject  {
         }
     }
 
+    public static double MSNumber(IList_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMSNumber = null;
+        try {
+            retObjectMSNumber = classType.Invoke("MSNumber", value == null ? null : value.getJCOInstance());
+            return (double)retObjectMSNumber;
+        } catch (java.lang.ClassCastException cce) {
+            boolean reportMSNumberError = true;
+            java.lang.String retObjectMSNumber_ToString = retObjectMSNumber == null ? "null" : retObjectMSNumber.toString();
+            try {
+                if (!org.mases.jcobridge.netreflection.JCOReflector.getFallbackOnNativeParse()) {
+                    throw new java.lang.RuntimeException("Application encountered an exception currently not managed since FallbackOnNativeParse is false. To automatically try to manage this kind of conditions use JCOReflector.setFallbackOnNativeParse and set the value to true; in any case you can opt-in to open an issue on GitHub.");
+                }
+                if (retObjectMSNumber != null) {
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453728706
+                    // java.lang.Class<?> retObjectMSNumberClass = retObjectMSNumber.getClass();
+                    // java.lang.reflect.Method retObjectMSNumberMethod = retObjectMSNumberClass.getMethod("doubleValue");
+                    // return (double)retObjectMSNumberMethod.invoke(retObjectMSNumber);
+
+                    // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+                    // https://github.com/masesgroup/JCOReflector/issues/253#issuecomment-3453924465
+                    java.lang.Number retObjectMSNumberNumber = java.text.NumberFormat.getInstance().parse(retObjectMSNumber_ToString);
+                    return retObjectMSNumberNumber.doubleValue();
+                }
+                else throw new java.lang.NullPointerException("Return value is null and this is not expected");
+            } catch (java.lang.Exception cceInner) {
+                reportMSNumberError = false;
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s (%s) into double and, as fallback solution, using java.lang.Number with exception %s (%s)", retObjectMSNumber != null ? retObjectMSNumber.getClass() : "null", retObjectMSNumber_ToString, cceInner.getClass(), cceInner.getMessage()), cce);
+            }
+            finally {
+                if (reportMSNumberError) {
+                    java.lang.System.err.println("Output returned from a fallback solution.");
+                }
+            }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static double MSStringCompare(java.lang.String s1, java.lang.String s2, java.lang.String lang, java.lang.String options) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -285,6 +327,20 @@ public class XsltFunctions extends NetObject  {
             return (java.lang.String)retObjectBaseUri;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBaseUri != null ? retObjectBaseUri.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String EXslObjectType(IList_1 value) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEXslObjectType = null;
+        try {
+            retObjectEXslObjectType = classType.Invoke("EXslObjectType", value == null ? null : value.getJCOInstance());
+            return (java.lang.String)retObjectEXslObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEXslObjectType != null ? retObjectEXslObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

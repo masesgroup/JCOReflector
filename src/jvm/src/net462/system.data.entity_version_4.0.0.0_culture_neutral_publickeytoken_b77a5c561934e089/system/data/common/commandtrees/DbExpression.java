@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.common.commandtrees.DbExpression;
+import system.Nullable_1;
 import system.data.spatial.DbGeography;
 import system.data.spatial.DbGeometry;
 import system.data.common.commandtrees.DbExpressionVisitor;
@@ -187,6 +188,96 @@ public class DbExpression extends NetObject  {
         }
     }
 
+    public static DbExpression FromBoolean(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromBoolean = null;
+        try {
+            retObjectFromBoolean = classType.Invoke("FromBoolean", value == null ? null : value.getJCOInstance());
+            JCObject objFromBoolean = (JCObject)retObjectFromBoolean;
+            return new DbExpression(objFromBoolean);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromBoolean != null ? retObjectFromBoolean.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromByte(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromByte = null;
+        try {
+            retObjectFromByte = classType.Invoke("FromByte", value == null ? null : value.getJCOInstance());
+            JCObject objFromByte = (JCObject)retObjectFromByte;
+            return new DbExpression(objFromByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromByte != null ? retObjectFromByte.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromDateTime(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDateTime = null;
+        try {
+            retObjectFromDateTime = classType.Invoke("FromDateTime", value == null ? null : value.getJCOInstance());
+            JCObject objFromDateTime = (JCObject)retObjectFromDateTime;
+            return new DbExpression(objFromDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromDateTime != null ? retObjectFromDateTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromDateTimeOffset(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDateTimeOffset = null;
+        try {
+            retObjectFromDateTimeOffset = classType.Invoke("FromDateTimeOffset", value == null ? null : value.getJCOInstance());
+            JCObject objFromDateTimeOffset = (JCObject)retObjectFromDateTimeOffset;
+            return new DbExpression(objFromDateTimeOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromDateTimeOffset != null ? retObjectFromDateTimeOffset.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromDecimal(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDecimal = null;
+        try {
+            retObjectFromDecimal = classType.Invoke("FromDecimal", value == null ? null : value.getJCOInstance());
+            JCObject objFromDecimal = (JCObject)retObjectFromDecimal;
+            return new DbExpression(objFromDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromDecimal != null ? retObjectFromDecimal.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromDouble(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDouble = null;
+        try {
+            retObjectFromDouble = classType.Invoke("FromDouble", value == null ? null : value.getJCOInstance());
+            JCObject objFromDouble = (JCObject)retObjectFromDouble;
+            return new DbExpression(objFromDouble);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromDouble != null ? retObjectFromDouble.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DbExpression FromGeography(DbGeography value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
@@ -212,6 +303,81 @@ public class DbExpression extends NetObject  {
             return new DbExpression(objFromGeometry);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromGeometry != null ? retObjectFromGeometry.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromGuid(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromGuid = null;
+        try {
+            retObjectFromGuid = classType.Invoke("FromGuid", value == null ? null : value.getJCOInstance());
+            JCObject objFromGuid = (JCObject)retObjectFromGuid;
+            return new DbExpression(objFromGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromGuid != null ? retObjectFromGuid.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromInt16(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromInt16 = null;
+        try {
+            retObjectFromInt16 = classType.Invoke("FromInt16", value == null ? null : value.getJCOInstance());
+            JCObject objFromInt16 = (JCObject)retObjectFromInt16;
+            return new DbExpression(objFromInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromInt16 != null ? retObjectFromInt16.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromInt32(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromInt32 = null;
+        try {
+            retObjectFromInt32 = classType.Invoke("FromInt32", value == null ? null : value.getJCOInstance());
+            JCObject objFromInt32 = (JCObject)retObjectFromInt32;
+            return new DbExpression(objFromInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromInt32 != null ? retObjectFromInt32.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromInt64(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromInt64 = null;
+        try {
+            retObjectFromInt64 = classType.Invoke("FromInt64", value == null ? null : value.getJCOInstance());
+            JCObject objFromInt64 = (JCObject)retObjectFromInt64;
+            return new DbExpression(objFromInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromInt64 != null ? retObjectFromInt64.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DbExpression FromSingle(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromSingle = null;
+        try {
+            retObjectFromSingle = classType.Invoke("FromSingle", value == null ? null : value.getJCOInstance());
+            JCObject objFromSingle = (JCObject)retObjectFromSingle;
+            return new DbExpression(objFromSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromSingle != null ? retObjectFromSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -41,8 +41,9 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityTokenHandler;
 import system.identitymodel.tokens.SamlSecurityTokenRequirement;
 import system.xml.XmlReader;
-import system.identitymodel.tokens.SecurityKeyIdentifierClause;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.identitymodel.tokens.SecurityToken;
+import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.identitymodel.tokens.SecurityTokenDescriptor;
 import system.xml.XmlNodeList;
 import system.xml.XmlWriter;
@@ -62,7 +63,7 @@ import system.identitymodel.selectors.X509CertificateValidator;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
+public class SamlSecurityTokenHandler extends system.identitymodel.tokens.SecurityTokenHandler  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -188,6 +189,21 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
             return (boolean)retObjectCanReadToken;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanReadToken != null ? retObjectCanReadToken.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.xml.XmlException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateToken = null;
+        try {
+            retObjectValidateToken = classInstance.Invoke("ValidateToken", token == null ? null : token.getJCOInstance());
+            JCObject objValidateToken = (JCObject)retObjectValidateToken;
+            return new ReadOnlyCollection_1(objValidateToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateToken != null ? retObjectValidateToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

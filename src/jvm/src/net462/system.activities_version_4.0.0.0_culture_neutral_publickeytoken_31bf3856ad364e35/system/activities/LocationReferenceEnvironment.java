@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.LocationReference;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.Activity;
 import system.activities.LocationReferenceEnvironment;
 
@@ -177,6 +179,21 @@ public class LocationReferenceEnvironment extends NetObject  {
             return (boolean)retObjectTryGetLocationReference;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetLocationReference != null ? retObjectTryGetLocationReference.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 GetLocationReferences() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocationReferences = null;
+        try {
+            retObjectGetLocationReferences = classInstance.Invoke("GetLocationReferences");
+            JCObject objGetLocationReferences = (JCObject)retObjectGetLocationReferences;
+            return new IEnumerable_1Implementation(objGetLocationReferences);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocationReferences != null ? retObjectGetLocationReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

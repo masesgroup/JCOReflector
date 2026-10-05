@@ -47,6 +47,10 @@ import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
 import system.servicemodel.channels.IOutputChannel;
 import system.servicemodel.channels.IOutputChannelImplementation;
+import system.servicemodel.channels.ISessionChannel_1;
+import system.servicemodel.channels.ISessionChannel_1Implementation;
+import system.servicemodel.channels.IDuplexSession;
+import system.servicemodel.channels.IDuplexSessionImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.servicemodel.channels.Message;
@@ -70,7 +74,7 @@ import system.EventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public interface IDuplexSessionChannel extends IJCOBridgeReflected, IDuplexChannel, IInputChannel, IChannel, ICommunicationObject, IOutputChannel {
+public interface IDuplexSessionChannel extends IJCOBridgeReflected, system.servicemodel.channels.IDuplexChannel, system.servicemodel.channels.IInputChannel, system.servicemodel.channels.IChannel, system.servicemodel.ICommunicationObject, system.servicemodel.channels.IOutputChannel, system.servicemodel.channels.ISessionChannel_1<IDuplexSession> {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.ecma335.HeapIndex;
+import system.collections.immutable.ImmutableArray_1;
 
 
 /**
@@ -198,6 +199,51 @@ public class MetadataSizes extends NetObject  {
     
     // Properties section
     
+    public ImmutableArray_1 getExternalRowCounts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalRowCounts = null;
+        try {
+            retObjectExternalRowCounts = classInstance.Get("ExternalRowCounts");
+            JCObject val = (JCObject)retObjectExternalRowCounts;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalRowCounts != null ? retObjectExternalRowCounts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 getHeapSizes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeapSizes = null;
+        try {
+            retObjectHeapSizes = classInstance.Get("HeapSizes");
+            JCObject val = (JCObject)retObjectHeapSizes;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeapSizes != null ? retObjectHeapSizes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ImmutableArray_1 getRowCounts() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowCounts = null;
+        try {
+            retObjectRowCounts = classInstance.Get("RowCounts");
+            JCObject val = (JCObject)retObjectRowCounts;
+            return new ImmutableArray_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowCounts != null ? retObjectRowCounts.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

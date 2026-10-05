@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.FunctionParameter;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.data.metadata.edm.FunctionParameter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EdmFunction extends EdmType  {
+public class EdmFunction extends system.data.metadata.edm.EdmType  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -184,6 +185,36 @@ public class EdmFunction extends EdmType  {
             return new FunctionParameter(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnParameter != null ? retObjectReturnParameter.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
+        try {
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getReturnParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnParameters = null;
+        try {
+            retObjectReturnParameters = classInstance.Get("ReturnParameters");
+            JCObject val = (JCObject)retObjectReturnParameters;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnParameters != null ? retObjectReturnParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

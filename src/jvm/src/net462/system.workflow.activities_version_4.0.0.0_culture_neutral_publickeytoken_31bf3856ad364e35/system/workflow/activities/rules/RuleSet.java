@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.workflow.activities.rules.RuleValidation;
 import system.workflow.activities.rules.RuleSet;
 import system.workflow.activities.rules.RuleExecution;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 import system.workflow.activities.rules.RuleChainingBehavior;
 
 
@@ -226,6 +228,21 @@ public class RuleSet extends NetObject  {
     
     // Properties section
     
+    public ICollection_1 getRules() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRules = null;
+        try {
+            retObjectRules = classInstance.Get("Rules");
+            JCObject val = (JCObject)retObjectRules;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRules != null ? retObjectRules.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

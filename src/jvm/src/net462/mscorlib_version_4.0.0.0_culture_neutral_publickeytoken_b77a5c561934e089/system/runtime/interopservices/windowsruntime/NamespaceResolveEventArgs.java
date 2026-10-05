@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.EventArgs;
 import system.reflection.Assembly;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.reflection.Assembly;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NamespaceResolveEventArgs extends EventArgs  {
+public class NamespaceResolveEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -169,6 +170,21 @@ public class NamespaceResolveEventArgs extends EventArgs  {
     
     // Properties section
     
+    public Collection_1 getResolvedAssemblies() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolvedAssemblies = null;
+        try {
+            retObjectResolvedAssemblies = classInstance.Get("ResolvedAssemblies");
+            JCObject val = (JCObject)retObjectResolvedAssemblies;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolvedAssemblies != null ? retObjectResolvedAssemblies.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Assembly getRequestingAssembly() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

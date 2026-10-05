@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -140,6 +141,21 @@ public class IDbColumnSchemaGeneratorImplementation extends NetObject implements
 
     // Methods section
     
+    public ReadOnlyCollection_1 GetColumnSchema() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnSchema = null;
+        try {
+            retObjectGetColumnSchema = classInstance.Invoke("GetColumnSchema");
+            JCObject objGetColumnSchema = (JCObject)retObjectGetColumnSchema;
+            return new ReadOnlyCollection_1(objGetColumnSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColumnSchema != null ? retObjectGetColumnSchema.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

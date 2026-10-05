@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.FamilyTypeface;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.windows.FontStretch;
 import system.windows.FontStyle;
 import system.windows.FontWeight;
@@ -477,6 +479,21 @@ public class FamilyTypeface extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XHeight", XHeight);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IDictionary_2 getAdjustedFaceNames() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjustedFaceNames = null;
+        try {
+            retObjectAdjustedFaceNames = classInstance.Get("AdjustedFaceNames");
+            JCObject val = (JCObject)retObjectAdjustedFaceNames;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjustedFaceNames != null ? retObjectAdjustedFaceNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

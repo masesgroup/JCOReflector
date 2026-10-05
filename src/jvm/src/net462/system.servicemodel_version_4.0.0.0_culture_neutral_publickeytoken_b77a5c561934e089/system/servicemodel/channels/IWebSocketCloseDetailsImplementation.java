@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.websockets.WebSocketCloseStatus;
+import system.Nullable_1;
 
 
 /**
@@ -155,6 +156,21 @@ public class IWebSocketCloseDetailsImplementation extends NetObject implements I
     
     // Properties section
     
+    public Nullable_1 getInputCloseStatus() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputCloseStatus = null;
+        try {
+            retObjectInputCloseStatus = classInstance.Get("InputCloseStatus");
+            JCObject val = (JCObject)retObjectInputCloseStatus;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputCloseStatus != null ? retObjectInputCloseStatus.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String getInputCloseStatusDescription() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

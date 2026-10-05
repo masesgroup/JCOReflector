@@ -54,7 +54,7 @@ import system.runtime.serialization.configuration.ParameterElementCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TypeElement extends ConfigurationElement  {
+public class TypeElement extends system.configuration.ConfigurationElement  {
     /**
      * Fully assembly qualified name: System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

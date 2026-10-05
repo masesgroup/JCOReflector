@@ -42,6 +42,7 @@ import system.MarshalByRefObject;
 import system.configuration.assemblies.AssemblyHashAlgorithm;
 import system.reflection.AssemblyName;
 import system.AppDomain;
+import system.Nullable_1;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
@@ -71,7 +72,7 @@ import system.UnhandledExceptionEventHandler;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AppDomain extends MarshalByRefObject  {
+public class AppDomain extends system.MarshalByRefObject  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -650,6 +651,21 @@ public class AppDomain extends MarshalByRefObject  {
             return new AppDomain(objCreateDomain);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDomain != null ? retObjectCreateDomain.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 IsCompatibilitySwitchSet(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompatibilitySwitchSet = null;
+        try {
+            retObjectIsCompatibilitySwitchSet = classInstance.Invoke("IsCompatibilitySwitchSet", value);
+            JCObject objIsCompatibilitySwitchSet = (JCObject)retObjectIsCompatibilitySwitchSet;
+            return new Nullable_1(objIsCompatibilitySwitchSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsCompatibilitySwitchSet != null ? retObjectIsCompatibilitySwitchSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

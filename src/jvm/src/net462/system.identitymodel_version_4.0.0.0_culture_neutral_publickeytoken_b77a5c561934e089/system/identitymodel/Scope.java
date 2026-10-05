@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.EncryptingCredentials;
 import system.identitymodel.tokens.SigningCredentials;
+import system.collections.generic.Dictionary_2;
 
 
 /**
@@ -248,6 +249,21 @@ public class Scope extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenEncryptionRequired", TokenEncryptionRequired);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Dictionary_2 getProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new Dictionary_2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

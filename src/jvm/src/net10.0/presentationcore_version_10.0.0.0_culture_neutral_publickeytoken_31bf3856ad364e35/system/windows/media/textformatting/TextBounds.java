@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.windows.FlowDirection;
 import system.windows.Rect;
 
@@ -159,6 +161,21 @@ public class TextBounds extends NetObject  {
     
     // Properties section
     
+    public IList_1 getTextRunBounds() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextRunBounds = null;
+        try {
+            retObjectTextRunBounds = classInstance.Get("TextRunBounds");
+            JCObject val = (JCObject)retObjectTextRunBounds;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextRunBounds != null ? retObjectTextRunBounds.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public FlowDirection getFlowDirection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

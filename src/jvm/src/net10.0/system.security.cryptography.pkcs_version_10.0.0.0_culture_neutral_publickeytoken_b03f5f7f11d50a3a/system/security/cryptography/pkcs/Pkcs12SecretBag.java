@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.security.cryptography.pkcs.Pkcs12SafeBag;
 import system.security.cryptography.Oid;
+import system.ReadOnlyMemory_1;
 
 
 /**
@@ -54,7 +55,7 @@ import system.security.cryptography.Oid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class Pkcs12SecretBag extends Pkcs12SafeBag  {
+public class Pkcs12SecretBag extends system.security.cryptography.pkcs.Pkcs12SafeBag  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -174,6 +175,21 @@ public class Pkcs12SecretBag extends Pkcs12SafeBag  {
     
     // Properties section
     
+    public ReadOnlyMemory_1 getSecretValue() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecretValue = null;
+        try {
+            retObjectSecretValue = classInstance.Get("SecretValue");
+            JCObject val = (JCObject)retObjectSecretValue;
+            return new ReadOnlyMemory_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecretValue != null ? retObjectSecretValue.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

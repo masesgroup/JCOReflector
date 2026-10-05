@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
 import system.identitymodel.tokens.SecurityKeyType;
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.security.SecurityAlgorithmSuite;
@@ -293,6 +294,36 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NegotiateServiceCredential", NegotiateServiceCredential);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getClaimTypeRequirements() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaimTypeRequirements = null;
+        try {
+            retObjectClaimTypeRequirements = classInstance.Get("ClaimTypeRequirements");
+            JCObject val = (JCObject)retObjectClaimTypeRequirements;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaimTypeRequirements != null ? retObjectClaimTypeRequirements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getTokenRequestParameters() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenRequestParameters = null;
+        try {
+            retObjectTokenRequestParameters = classInstance.Get("TokenRequestParameters");
+            JCObject val = (JCObject)retObjectTokenRequestParameters;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenRequestParameters != null ? retObjectTokenRequestParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

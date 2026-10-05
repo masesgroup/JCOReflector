@@ -53,7 +53,7 @@ import system.runtime.interopservices.CriticalHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class CriticalHandleZeroOrMinusOneIsInvalid extends CriticalHandle  {
+public class CriticalHandleZeroOrMinusOneIsInvalid extends system.runtime.interopservices.CriticalHandle  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

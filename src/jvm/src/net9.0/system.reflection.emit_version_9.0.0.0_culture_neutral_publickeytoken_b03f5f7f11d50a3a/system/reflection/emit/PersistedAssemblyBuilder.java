@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.reflection.emit.AssemblyBuilder;
 import system.reflection.AssemblyName;
 import system.reflection.Assembly;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.metadata.ecma335.MetadataBuilder;
 import system.reflection.metadata.BlobBuilder;
 import system.io.Stream;
@@ -59,7 +61,7 @@ import system.reflection.Module;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PersistedAssemblyBuilder extends AssemblyBuilder  {
+public class PersistedAssemblyBuilder extends system.reflection.emit.AssemblyBuilder  {
     /**
      * Fully assembly qualified name: System.Reflection.Emit, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -153,6 +155,16 @@ public class PersistedAssemblyBuilder extends AssemblyBuilder  {
     // Constructors section
     
     public PersistedAssemblyBuilder() throws Throwable {
+    }
+
+    public PersistedAssemblyBuilder(AssemblyName name, Assembly coreAssembly, IEnumerable_1 assemblyAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.reflection.metadata.ImageFormatLimitationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name == null ? null : name.getJCOInstance(), coreAssembly == null ? null : coreAssembly.getJCOInstance(), assemblyAttributes == null ? null : assemblyAttributes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
     }
 
 

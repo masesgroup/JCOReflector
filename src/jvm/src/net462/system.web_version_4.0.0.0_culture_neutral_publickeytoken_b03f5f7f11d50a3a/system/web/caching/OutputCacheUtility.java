@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.HttpResponse;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.web.caching.CacheDependency;
 
 
@@ -163,6 +165,21 @@ public class OutputCacheUtility extends NetObject  {
             return new NetArrayList(objGetContentBuffers);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContentBuffers != null ? retObjectGetContentBuffers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEnumerable_1 GetValidationCallbacks(HttpResponse response) throws Throwable, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValidationCallbacks = null;
+        try {
+            retObjectGetValidationCallbacks = classType.Invoke("GetValidationCallbacks", response == null ? null : response.getJCOInstance());
+            JCObject objGetValidationCallbacks = (JCObject)retObjectGetValidationCallbacks;
+            return new IEnumerable_1Implementation(objGetValidationCallbacks);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValidationCallbacks != null ? retObjectGetValidationCallbacks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

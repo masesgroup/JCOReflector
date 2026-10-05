@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.SimpleType;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.PrimitiveType;
 import system.data.metadata.edm.PrimitiveTypeKind;
@@ -57,7 +58,7 @@ import system.data.metadata.edm.BuiltInTypeKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class PrimitiveType extends SimpleType  {
+public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -158,6 +159,21 @@ public class PrimitiveType extends SimpleType  {
     
     // Methods section
     
+    public static ReadOnlyCollection_1 GetEdmPrimitiveTypes() throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEdmPrimitiveTypes = null;
+        try {
+            retObjectGetEdmPrimitiveTypes = classType.Invoke("GetEdmPrimitiveTypes");
+            JCObject objGetEdmPrimitiveTypes = (JCObject)retObjectGetEdmPrimitiveTypes;
+            return new ReadOnlyCollection_1(objGetEdmPrimitiveTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEdmPrimitiveTypes != null ? retObjectGetEdmPrimitiveTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EdmType GetEdmPrimitiveType() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +208,21 @@ public class PrimitiveType extends SimpleType  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getFacetDescriptions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFacetDescriptions = null;
+        try {
+            retObjectFacetDescriptions = classInstance.Get("FacetDescriptions");
+            JCObject val = (JCObject)retObjectFacetDescriptions;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFacetDescriptions != null ? retObjectFacetDescriptions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public PrimitiveTypeKind getPrimitiveTypeKind() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

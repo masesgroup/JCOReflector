@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.metadata.edm.EntityTypeBase;
 import system.data.metadata.edm.RefType;
 import system.data.metadata.edm.BuiltInTypeKind;
+import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
 
 
 /**
@@ -55,7 +56,7 @@ import system.data.metadata.edm.BuiltInTypeKind;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class EntityType extends EntityTypeBase  {
+public class EntityType extends system.data.metadata.edm.EntityTypeBase  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -175,6 +176,36 @@ public class EntityType extends EntityTypeBase  {
     
     // Properties section
     
+    public ReadOnlyMetadataCollection_1 getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
+        try {
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReadOnlyMetadataCollection_1 getNavigationProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationProperties = null;
+        try {
+            retObjectNavigationProperties = classInstance.Get("NavigationProperties");
+            JCObject val = (JCObject)retObjectNavigationProperties;
+            return new ReadOnlyMetadataCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationProperties != null ? retObjectNavigationProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

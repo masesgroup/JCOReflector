@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.globalization.CultureInfo;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
+import system.collections.objectmodel.ObservableCollection_1;
 import system.componentmodel.SortDescriptionCollection;
 
 
@@ -236,6 +237,21 @@ public class GroupDescription extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomSort", CustomSort == null ? null : CustomSort.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObservableCollection_1 getGroupNames() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupNames = null;
+        try {
+            retObjectGroupNames = classInstance.Get("GroupNames");
+            JCObject val = (JCObject)retObjectGroupNames;
+            return new ObservableCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupNames != null ? retObjectGroupNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

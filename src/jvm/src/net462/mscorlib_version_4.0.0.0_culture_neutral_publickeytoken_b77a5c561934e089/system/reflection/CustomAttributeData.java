@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.reflection.Assembly;
+import system.reflection.MemberInfo;
+import system.reflection.Module;
+import system.reflection.ParameterInfo;
 import system.reflection.ConstructorInfo;
 
 
@@ -154,10 +160,100 @@ public class CustomAttributeData extends NetObject  {
     
     // Methods section
     
+    public static IList_1 GetCustomAttributes(Assembly target) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
+        try {
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", target == null ? null : target.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
+            return new IList_1Implementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetCustomAttributes(MemberInfo target) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
+        try {
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", target == null ? null : target.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
+            return new IList_1Implementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetCustomAttributes(Module target) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
+        try {
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", target == null ? null : target.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
+            return new IList_1Implementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IList_1 GetCustomAttributes(ParameterInfo target) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
+        try {
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", target == null ? null : target.getJCOInstance());
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
+            return new IList_1Implementation(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
+    public IList_1 getNamedArguments() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamedArguments = null;
+        try {
+            retObjectNamedArguments = classInstance.Get("NamedArguments");
+            JCObject val = (JCObject)retObjectNamedArguments;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamedArguments != null ? retObjectNamedArguments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IList_1 getConstructorArguments() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstructorArguments = null;
+        try {
+            retObjectConstructorArguments = classInstance.Get("ConstructorArguments");
+            JCObject val = (JCObject)retObjectConstructorArguments;
+            return new IList_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstructorArguments != null ? retObjectConstructorArguments.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ConstructorInfo getConstructor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

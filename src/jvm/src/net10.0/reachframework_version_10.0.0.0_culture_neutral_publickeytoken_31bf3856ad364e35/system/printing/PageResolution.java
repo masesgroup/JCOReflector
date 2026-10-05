@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.printing.PageQualitativeResolution;
+import system.Nullable_1;
 
 
 /**
@@ -188,6 +189,51 @@ public class PageResolution extends NetObject  {
     
     // Properties section
     
+    public Nullable_1 getX() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
+        try {
+            retObjectX = classInstance.Get("X");
+            JCObject val = (JCObject)retObjectX;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectX != null ? retObjectX.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getY() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
+        try {
+            retObjectY = classInstance.Get("Y");
+            JCObject val = (JCObject)retObjectY;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectY != null ? retObjectY.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getQualitativeResolution() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQualitativeResolution = null;
+        try {
+            retObjectQualitativeResolution = classInstance.Get("QualitativeResolution");
+            JCObject val = (JCObject)retObjectQualitativeResolution;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQualitativeResolution != null ? retObjectQualitativeResolution.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

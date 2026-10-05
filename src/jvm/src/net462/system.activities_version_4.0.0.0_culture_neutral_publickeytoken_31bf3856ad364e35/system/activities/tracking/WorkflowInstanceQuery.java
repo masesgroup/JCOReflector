@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.tracking.TrackingQuery;
+import system.collections.objectmodel.Collection_1;
 
 
 /**
@@ -53,7 +54,7 @@ import system.activities.tracking.TrackingQuery;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class WorkflowInstanceQuery extends TrackingQuery  {
+public class WorkflowInstanceQuery extends system.activities.tracking.TrackingQuery  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +165,21 @@ public class WorkflowInstanceQuery extends TrackingQuery  {
     
     // Properties section
     
+    public Collection_1 getStates() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStates = null;
+        try {
+            retObjectStates = classInstance.Get("States");
+            JCObject val = (JCObject)retObjectStates;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStates != null ? retObjectStates.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

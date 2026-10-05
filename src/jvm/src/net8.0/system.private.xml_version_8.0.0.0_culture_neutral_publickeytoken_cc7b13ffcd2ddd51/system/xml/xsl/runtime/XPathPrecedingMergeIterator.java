@@ -56,7 +56,7 @@ import system.xml.xsl.runtime.XmlNavigatorFilter;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XPathPrecedingMergeIterator extends ValueType  {
+public class XPathPrecedingMergeIterator extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

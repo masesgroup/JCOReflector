@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.security.ScopedMessagePartSpecification;
 import system.servicemodel.security.MessagePartSpecification;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -242,6 +244,21 @@ public class ScopedMessagePartSpecification extends NetObject  {
             return (boolean)retObjectIsReadOnly;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ICollection_1 getActions() throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActions = null;
+        try {
+            retObjectActions = classInstance.Get("Actions");
+            JCObject val = (JCObject)retObjectActions;
+            return new ICollection_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActions != null ? retObjectActions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,7 +37,10 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.collections.generic.List_1;
 import system.activities.presentation.model.ModelItem;
+import system.windows.Point;
+import system.activities.presentation.WorkflowViewElement;
 import system.activities.presentation.view.TypeResolvingOptions;
 
 
@@ -117,7 +120,17 @@ public interface ICompositeView extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean CanPasteItems(List_1 itemsToPaste) throws Throwable;
+
+    public NetObject OnItemsCopied(List_1 itemsToCopy) throws Throwable;
+
+    public NetObject OnItemsCut(List_1 itemsToCut) throws Throwable;
+
     public void OnItemMoved(ModelItem modelItem) throws Throwable;
+
+    public void OnItemsDelete(List_1 itemsToDelete) throws Throwable;
+
+    public void OnItemsPasted(List_1 itemsToPaste, List_1 metadata, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable;
 
 
     

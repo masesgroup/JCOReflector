@@ -63,6 +63,8 @@ import system.Decimal;
 import system.Guid;
 import system.io.Stream;
 import system.io.TextReader;
+import system.threading.tasks.Task_1;
+import system.threading.CancellationToken;
 import system.TimeSpan;
 import system.xml.XmlReader;
 
@@ -79,7 +81,7 @@ import system.xml.XmlReader;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlDataReader extends DbDataReader  {
+public class SqlDataReader extends system.data.common.DbDataReader  {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -1212,6 +1214,66 @@ public class SqlDataReader extends DbDataReader  {
             return (java.lang.String)retObjectGetString;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 IsDBNullAsync(int i, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDBNullAsync = null;
+        try {
+            retObjectIsDBNullAsync = classInstance.Invoke("IsDBNullAsync", i, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objIsDBNullAsync = (JCObject)retObjectIsDBNullAsync;
+            return new Task_1(objIsDBNullAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsDBNullAsync != null ? retObjectIsDBNullAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 NextResultAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextResultAsync = null;
+        try {
+            retObjectNextResultAsync = classInstance.Invoke("NextResultAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objNextResultAsync = (JCObject)retObjectNextResultAsync;
+            return new Task_1(objNextResultAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextResultAsync != null ? retObjectNextResultAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 ReadAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.AbandonedMutexException, system.threading.tasks.TaskSchedulerException, system.data.sqlclient.SqlException, system.FormatException, system.AggregateException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, microsoft.sqlserver.server.InvalidUdtException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAsync = null;
+        try {
+            retObjectReadAsync = classInstance.Invoke("ReadAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objReadAsync = (JCObject)retObjectReadAsync;
+            return new Task_1(objReadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAsync != null ? retObjectReadAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> Task_1 GetFieldValueAsync(int i, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.io.FileNotFoundException, system.TypeLoadException, system.AccessViolationException, microsoft.sqlserver.server.InvalidUdtException, system.AggregateException, system.NullReferenceException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFieldValueAsync = null;
+        try {
+            retObjectGetFieldValueAsync = classInstance.Invoke("GetFieldValueAsync", i, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objGetFieldValueAsync = (JCObject)retObjectGetFieldValueAsync;
+            return new Task_1(objGetFieldValueAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldValueAsync != null ? retObjectGetFieldValueAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

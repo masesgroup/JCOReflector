@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.FileStream;
+import system.ReadOnlyMemory_1;
+import system.Nullable_1;
 
 
 /**
@@ -204,6 +206,26 @@ public class SendPacketsElement extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileStream == null ? null : fileStream.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SendPacketsElement(ReadOnlyMemory_1 buffer, boolean endOfPacket) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(buffer == null ? null : buffer.getJCOInstance(), endOfPacket));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SendPacketsElement(ReadOnlyMemory_1 buffer) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(buffer == null ? null : buffer.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,6 +507,31 @@ public class SendPacketsElement extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileStream", FileStream == null ? null : FileStream.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getMemoryBuffer() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemoryBuffer = null;
+        try {
+            retObjectMemoryBuffer = classInstance.Get("MemoryBuffer");
+            JCObject val = (JCObject)retObjectMemoryBuffer;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemoryBuffer != null ? retObjectMemoryBuffer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setMemoryBuffer(Nullable_1 MemoryBuffer) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("MemoryBuffer", MemoryBuffer == null ? null : MemoryBuffer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

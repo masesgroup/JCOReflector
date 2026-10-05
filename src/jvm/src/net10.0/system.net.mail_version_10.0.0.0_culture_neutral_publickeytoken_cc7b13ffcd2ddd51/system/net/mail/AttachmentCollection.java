@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.objectmodel.Collection_1;
+import system.net.mail.Attachment;
 
 
 /**
@@ -52,7 +54,7 @@ import java.util.ArrayList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AttachmentCollection extends NetObjectEnumerable implements AutoCloseable {
+public class AttachmentCollection extends system.collections.objectmodel.Collection_1<Attachment> implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

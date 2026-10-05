@@ -61,7 +61,7 @@ import system.UInt64;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseable {
+public class IsolatedStorageFile extends system.io.isolatedstorage.IsolatedStorage implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.IO.IsolatedStorage, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

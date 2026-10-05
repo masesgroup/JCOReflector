@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.Point;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.windows.input.StylusPointCollection;
 
 
@@ -158,6 +160,16 @@ public class IncrementalHitTester extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPoint", point == null ? null : point.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddPoints(IEnumerable_1 points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddPoints", points == null ? null : points.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -58,7 +58,7 @@ import system.web.ui.design.DesignerAutoFormatCollection;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataGridDesigner extends BaseDataListDesigner  {
+public class DataGridDesigner extends system.web.ui.design.webcontrols.BaseDataListDesigner  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.buffers.MemoryPool_1;
 
 
 /**
@@ -148,6 +149,16 @@ public class StreamPipeWriterOptions extends NetObject  {
     public StreamPipeWriterOptions() throws Throwable {
     }
 
+    public StreamPipeWriterOptions(MemoryPool_1 pool, int minimumBufferSize, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(pool == null ? null : pool.getJCOInstance(), minimumBufferSize, leaveOpen));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -206,6 +217,21 @@ public class StreamPipeWriterOptions extends NetObject  {
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MemoryPool_1 getPool() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPool = null;
+        try {
+            retObjectPool = classInstance.Get("Pool");
+            JCObject val = (JCObject)retObjectPool;
+            return new MemoryPool_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPool != null ? retObjectPool.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

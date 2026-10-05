@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.durableinstancing.InstanceStoreQueryResult;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.Guid;
 
 
@@ -54,7 +56,7 @@ import system.Guid;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class InstanceOwnerQueryResult extends InstanceStoreQueryResult  {
+public class InstanceOwnerQueryResult extends system.runtime.durableinstancing.InstanceStoreQueryResult  {
     /**
      * Fully assembly qualified name: System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -157,6 +159,26 @@ public class InstanceOwnerQueryResult extends InstanceStoreQueryResult  {
         }
     }
 
+    public InstanceOwnerQueryResult(IDictionary_2 instanceOwners) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(instanceOwners == null ? null : instanceOwners.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceOwnerQueryResult(Guid instanceOwnerId, IDictionary_2 metadata) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(instanceOwnerId == null ? null : instanceOwnerId.getJCOInstance(), metadata == null ? null : metadata.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
@@ -165,6 +187,31 @@ public class InstanceOwnerQueryResult extends InstanceStoreQueryResult  {
     
     // Properties section
     
+    public IDictionary_2 getInstanceOwners() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceOwners = null;
+        try {
+            retObjectInstanceOwners = classInstance.Get("InstanceOwners");
+            JCObject val = (JCObject)retObjectInstanceOwners;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceOwners != null ? retObjectInstanceOwners.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setInstanceOwners(IDictionary_2 InstanceOwners) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("InstanceOwners", InstanceOwners == null ? null : InstanceOwners.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

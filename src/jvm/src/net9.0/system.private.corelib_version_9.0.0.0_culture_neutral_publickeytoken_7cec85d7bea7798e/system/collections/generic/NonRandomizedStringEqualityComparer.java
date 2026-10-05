@@ -38,10 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -56,7 +56,7 @@ import system.runtime.serialization.ISerializableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class NonRandomizedStringEqualityComparer extends NetObject implements ISerializable {
+public class NonRandomizedStringEqualityComparer extends NetObject  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -206,6 +206,36 @@ public class NonRandomizedStringEqualityComparer extends NetObject implements IS
                     java.lang.System.err.println("Output returned from a fallback solution.");
                 }
             }
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static IEqualityComparer_1 GetStringComparer(NetObject comparer) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStringComparer = null;
+        try {
+            retObjectGetStringComparer = classType.Invoke("GetStringComparer", comparer == null ? null : comparer.getJCOInstance());
+            JCObject objGetStringComparer = (JCObject)retObjectGetStringComparer;
+            return new IEqualityComparer_1Implementation(objGetStringComparer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStringComparer != null ? retObjectGetStringComparer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEqualityComparer_1 GetUnderlyingEqualityComparer() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUnderlyingEqualityComparer = null;
+        try {
+            retObjectGetUnderlyingEqualityComparer = classInstance.Invoke("GetUnderlyingEqualityComparer");
+            JCObject objGetUnderlyingEqualityComparer = (JCObject)retObjectGetUnderlyingEqualityComparer;
+            return new IEqualityComparer_1Implementation(objGetUnderlyingEqualityComparer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnderlyingEqualityComparer != null ? retObjectGetUnderlyingEqualityComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

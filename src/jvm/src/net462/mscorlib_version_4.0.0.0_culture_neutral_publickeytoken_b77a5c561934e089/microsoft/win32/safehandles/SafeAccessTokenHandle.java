@@ -54,7 +54,7 @@ import microsoft.win32.safehandles.SafeAccessTokenHandle;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SafeAccessTokenHandle extends SafeHandle  {
+public class SafeAccessTokenHandle extends system.runtime.interopservices.SafeHandle  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

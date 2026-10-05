@@ -39,14 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.data.BindingBase;
+import system.collections.objectmodel.Collection_1;
 import system.globalization.CultureInfo;
 import system.windows.data.BindingMode;
 import system.windows.data.IMultiValueConverter;
 import system.windows.data.IMultiValueConverterImplementation;
 import system.windows.data.UpdateSourceExceptionFilterCallback;
 import system.windows.data.UpdateSourceTrigger;
-import system.windows.markup.IAddChild;
-import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -61,7 +60,7 @@ import system.windows.markup.IAddChildImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MultiBinding extends BindingBase implements IAddChild {
+public class MultiBinding extends system.windows.data.BindingBase  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -357,6 +356,36 @@ public class MultiBinding extends BindingBase implements IAddChild {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidatesOnNotifyDataErrors", ValidatesOnNotifyDataErrors);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getValidationRules() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationRules = null;
+        try {
+            retObjectValidationRules = classInstance.Get("ValidationRules");
+            JCObject val = (JCObject)retObjectValidationRules;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationRules != null ? retObjectValidationRules.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Collection_1 getBindings() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindings = null;
+        try {
+            retObjectBindings = classInstance.Get("Bindings");
+            JCObject val = (JCObject)retObjectBindings;
+            return new Collection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindings != null ? retObjectBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

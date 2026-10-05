@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.IssuerNameRegistry;
 import system.identitymodel.tokens.SecurityToken;
 import system.xml.XmlNodeList;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.xml.XmlNodeList;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ConfigurationBasedIssuerNameRegistry extends IssuerNameRegistry  {
+public class ConfigurationBasedIssuerNameRegistry extends system.identitymodel.tokens.IssuerNameRegistry  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -200,6 +202,21 @@ public class ConfigurationBasedIssuerNameRegistry extends IssuerNameRegistry  {
     
     // Properties section
     
+    public IDictionary_2 getConfiguredTrustedIssuers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfiguredTrustedIssuers = null;
+        try {
+            retObjectConfiguredTrustedIssuers = classInstance.Get("ConfiguredTrustedIssuers");
+            JCObject val = (JCObject)retObjectConfiguredTrustedIssuers;
+            return new IDictionary_2Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfiguredTrustedIssuers != null ? retObjectConfiguredTrustedIssuers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

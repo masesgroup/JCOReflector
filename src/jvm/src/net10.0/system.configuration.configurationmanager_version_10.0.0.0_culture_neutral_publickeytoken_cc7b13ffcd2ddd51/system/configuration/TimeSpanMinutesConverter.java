@@ -56,7 +56,7 @@ import system.globalization.CultureInfo;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TimeSpanMinutesConverter extends ConfigurationConverterBase  {
+public class TimeSpanMinutesConverter extends system.configuration.ConfigurationConverterBase  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

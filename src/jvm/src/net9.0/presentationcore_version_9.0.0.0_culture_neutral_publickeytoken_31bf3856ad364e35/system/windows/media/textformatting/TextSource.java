@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.media.textformatting.TextRun;
+import system.windows.media.textformatting.TextSpan_1;
 
 
 /**
@@ -202,6 +203,21 @@ public class TextSource extends NetObject  {
             return new TextRun(objGetTextRun);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextRun != null ? retObjectGetTextRun.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextSpan_1 GetPrecedingText(int textSourceCharacterIndexLimit) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPrecedingText = null;
+        try {
+            retObjectGetPrecedingText = classInstance.Invoke("GetPrecedingText", textSourceCharacterIndexLimit);
+            JCObject objGetPrecedingText = (JCObject)retObjectGetPrecedingText;
+            return new TextSpan_1(objGetPrecedingText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPrecedingText != null ? retObjectGetPrecedingText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

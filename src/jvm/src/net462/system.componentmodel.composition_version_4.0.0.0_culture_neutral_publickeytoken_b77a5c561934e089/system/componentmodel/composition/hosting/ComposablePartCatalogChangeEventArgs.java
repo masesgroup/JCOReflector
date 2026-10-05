@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.EventArgs;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.componentmodel.composition.hosting.AtomicComposition;
 
 
@@ -54,7 +56,7 @@ import system.componentmodel.composition.hosting.AtomicComposition;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class ComposablePartCatalogChangeEventArgs extends EventArgs  {
+public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -150,6 +152,16 @@ public class ComposablePartCatalogChangeEventArgs extends EventArgs  {
     public ComposablePartCatalogChangeEventArgs() throws Throwable {
     }
 
+    public ComposablePartCatalogChangeEventArgs(IEnumerable_1 addedDefinitions, IEnumerable_1 removedDefinitions, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(addedDefinitions == null ? null : addedDefinitions.getJCOInstance(), removedDefinitions == null ? null : removedDefinitions.getJCOInstance(), atomicComposition == null ? null : atomicComposition.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -159,6 +171,36 @@ public class ComposablePartCatalogChangeEventArgs extends EventArgs  {
     
     // Properties section
     
+    public IEnumerable_1 getAddedDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddedDefinitions = null;
+        try {
+            retObjectAddedDefinitions = classInstance.Get("AddedDefinitions");
+            JCObject val = (JCObject)retObjectAddedDefinitions;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddedDefinitions != null ? retObjectAddedDefinitions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getRemovedDefinitions() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovedDefinitions = null;
+        try {
+            retObjectRemovedDefinitions = classInstance.Get("RemovedDefinitions");
+            JCObject val = (JCObject)retObjectRemovedDefinitions;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemovedDefinitions != null ? retObjectRemovedDefinitions.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AtomicComposition getAtomicComposition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -41,8 +41,7 @@ import java.util.ArrayList;
 import system.DateTimeOffset;
 import system.TimeSpan;
 import system.net.http.headers.RetryConditionHeaderValue;
-import system.ICloneable;
-import system.ICloneableImplementation;
+import system.Nullable_1;
 
 
 /**
@@ -57,7 +56,7 @@ import system.ICloneableImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class RetryConditionHeaderValue extends NetObject implements ICloneable {
+public class RetryConditionHeaderValue extends NetObject  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -220,6 +219,36 @@ public class RetryConditionHeaderValue extends NetObject implements ICloneable {
     
     // Properties section
     
+    public Nullable_1 getDate() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDate = null;
+        try {
+            retObjectDate = classInstance.Get("Date");
+            JCObject val = (JCObject)retObjectDate;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDate != null ? retObjectDate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getDelta() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelta = null;
+        try {
+            retObjectDelta = classInstance.Get("Delta");
+            JCObject val = (JCObject)retObjectDelta;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelta != null ? retObjectDelta.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

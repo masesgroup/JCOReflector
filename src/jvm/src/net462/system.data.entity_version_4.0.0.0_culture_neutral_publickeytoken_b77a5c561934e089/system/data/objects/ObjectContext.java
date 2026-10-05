@@ -42,14 +42,22 @@ import system.data.entityclient.EntityConnection;
 import system.data.EntityKey;
 import system.data.objects.ObjectParameter;
 import system.data.objects.SaveOptions;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.data.objects.ObjectQuery_1;
+import system.data.objects.ObjectResult_1;
+import system.data.objects.MergeOption;
+import system.data.common.DbDataReader;
+import system.data.objects.ObjectSet_1;
 import system.data.objects.dataclasses.IEntityWithKey;
 import system.data.objects.dataclasses.IEntityWithKeyImplementation;
-import system.data.objects.MergeOption;
+import system.linq.expressions.Expression_1;
 import system.data.objects.RefreshMode;
 import system.data.common.DbConnection;
 import system.data.metadata.edm.MetadataWorkspace;
 import system.data.objects.ObjectContextOptions;
 import system.data.objects.ObjectStateManager;
+import system.Nullable_1;
 import system.data.objects.ObjectMaterializedEventHandler;
 import system.EventHandler;
 
@@ -415,6 +423,21 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    public static IEnumerable_1 GetKnownProxyTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetKnownProxyTypes = null;
+        try {
+            retObjectGetKnownProxyTypes = classType.Invoke("GetKnownProxyTypes");
+            JCObject objGetKnownProxyTypes = (JCObject)retObjectGetKnownProxyTypes;
+            return new IEnumerable_1Implementation(objGetKnownProxyTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetKnownProxyTypes != null ? retObjectGetKnownProxyTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EntityKey CreateEntityKey(java.lang.String entitySetName, NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -425,6 +448,126 @@ public class ObjectContext extends NetObject implements AutoCloseable {
             return new EntityKey(objCreateEntityKey);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEntityKey != null ? retObjectCreateEntityKey.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <T extends IJCOBridgeReflected> ObjectQuery_1 CreateQuery(java.lang.String queryString, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotImplementedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateQuery = null;
+        try {
+            retObjectCreateQuery = classInstance.Invoke("CreateQuery", queryString, toObjectFromArray(parameters));
+            JCObject objCreateQuery = (JCObject)retObjectCreateQuery;
+            return new ObjectQuery_1(objCreateQuery);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateQuery != null ? retObjectCreateQuery.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TElement extends IJCOBridgeReflected> ObjectResult_1 ExecuteFunction(java.lang.String functionName, MergeOption mergeOption, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException, system.MulticastNotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.data.EntitySqlException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteFunction = null;
+        try {
+            retObjectExecuteFunction = classInstance.Invoke("ExecuteFunction", functionName, mergeOption == null ? null : mergeOption.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objExecuteFunction = (JCObject)retObjectExecuteFunction;
+            return new ObjectResult_1(objExecuteFunction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteFunction != null ? retObjectExecuteFunction.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TElement extends IJCOBridgeReflected> ObjectResult_1 ExecuteStoreQuery(java.lang.String commandText, NetObject... parameters) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.data.MappingException, system.data.MetadataException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.ArgumentException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.data.EntityCommandExecutionException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteStoreQuery = null;
+        try {
+            retObjectExecuteStoreQuery = classInstance.Invoke("ExecuteStoreQuery", commandText, toObjectFromArray(parameters));
+            JCObject objExecuteStoreQuery = (JCObject)retObjectExecuteStoreQuery;
+            return new ObjectResult_1(objExecuteStoreQuery);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteStoreQuery != null ? retObjectExecuteStoreQuery.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TElement extends IJCOBridgeReflected> ObjectResult_1 Translate(DbDataReader reader) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotImplementedException, system.NotSupportedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.collections.generic.KeyNotFoundException, system.data.EntityCommandExecutionException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTranslate = null;
+        try {
+            retObjectTranslate = classInstance.Invoke("Translate", reader == null ? null : reader.getJCOInstance());
+            JCObject objTranslate = (JCObject)retObjectTranslate;
+            return new ObjectResult_1(objTranslate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTranslate != null ? retObjectTranslate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TEntity extends IJCOBridgeReflected> ObjectResult_1 ExecuteStoreQuery(java.lang.String commandText, java.lang.String entitySetName, MergeOption mergeOption, NetObject... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.data.EntityCommandExecutionException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteStoreQuery = null;
+        try {
+            retObjectExecuteStoreQuery = classInstance.Invoke("ExecuteStoreQuery", commandText, entitySetName, mergeOption == null ? null : mergeOption.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objExecuteStoreQuery = (JCObject)retObjectExecuteStoreQuery;
+            return new ObjectResult_1(objExecuteStoreQuery);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteStoreQuery != null ? retObjectExecuteStoreQuery.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TEntity extends IJCOBridgeReflected> ObjectResult_1 Translate(DbDataReader reader, java.lang.String entitySetName, MergeOption mergeOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotSupportedException, system.io.FileNotFoundException, system.collections.generic.KeyNotFoundException, system.data.EntityCommandExecutionException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.data.ProviderIncompatibleException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTranslate = null;
+        try {
+            retObjectTranslate = classInstance.Invoke("Translate", reader == null ? null : reader.getJCOInstance(), entitySetName, mergeOption == null ? null : mergeOption.getJCOInstance());
+            JCObject objTranslate = (JCObject)retObjectTranslate;
+            return new ObjectResult_1(objTranslate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTranslate != null ? retObjectTranslate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TEntity extends IJCOBridgeReflected> ObjectSet_1 CreateObjectSet() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.data.MappingException, system.InvalidOperationException, system.data.MetadataException, system.NotSupportedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObjectSet = null;
+        try {
+            retObjectCreateObjectSet = classInstance.Invoke("CreateObjectSet");
+            JCObject objCreateObjectSet = (JCObject)retObjectCreateObjectSet;
+            return new ObjectSet_1(objCreateObjectSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObjectSet != null ? retObjectCreateObjectSet.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TEntity extends IJCOBridgeReflected> ObjectSet_1 CreateObjectSet(java.lang.String entitySetName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotImplementedException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObjectSet = null;
+        try {
+            retObjectCreateObjectSet = classInstance.Invoke("CreateObjectSet", entitySetName);
+            JCObject objCreateObjectSet = (JCObject)retObjectCreateObjectSet;
+            return new ObjectSet_1(objCreateObjectSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObjectSet != null ? retObjectCreateObjectSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,6 +677,16 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    public void CreateProxyTypes(IEnumerable_1 types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.data.MappingException, system.OutOfMemoryException, system.InvalidOperationException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CreateProxyTypes", types == null ? null : types.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DeleteDatabase() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.threading.LockRecursionException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -599,6 +752,26 @@ public class ObjectContext extends NetObject implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadProperty", entity == null ? null : entity.getJCOInstance(), navigationProperty, mergeOption == null ? null : mergeOption.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TEntity extends IJCOBridgeReflected> void LoadProperty(TEntity entity, Expression_1 selector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadProperty", entity == null ? null : ((IJCOBridgeReflected)entity).getJCOInstance(), selector == null ? null : selector.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TEntity extends IJCOBridgeReflected> void LoadProperty(TEntity entity, Expression_1 selector, MergeOption mergeOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("LoadProperty", entity == null ? null : ((IJCOBridgeReflected)entity).getJCOInstance(), selector == null ? null : selector.getJCOInstance(), mergeOption == null ? null : mergeOption.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -696,6 +869,31 @@ public class ObjectContext extends NetObject implements AutoCloseable {
             return new ObjectStateManager(val);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectStateManager != null ? retObjectObjectStateManager.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getCommandTimeout() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTimeout = null;
+        try {
+            retObjectCommandTimeout = classInstance.Get("CommandTimeout");
+            JCObject val = (JCObject)retObjectCommandTimeout;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandTimeout != null ? retObjectCommandTimeout.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCommandTimeout(Nullable_1 CommandTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("CommandTimeout", CommandTimeout == null ? null : CommandTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

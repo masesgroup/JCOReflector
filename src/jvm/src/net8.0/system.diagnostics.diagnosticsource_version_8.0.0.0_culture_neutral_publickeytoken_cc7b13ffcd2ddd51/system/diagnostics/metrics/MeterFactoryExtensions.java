@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.diagnostics.metrics.Meter;
 import system.diagnostics.metrics.IMeterFactory;
 import system.diagnostics.metrics.IMeterFactoryImplementation;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -154,6 +156,21 @@ public class MeterFactoryExtensions extends NetObject  {
     
     // Methods section
     
+    public static Meter Create(IMeterFactory meterFactory, java.lang.String name, java.lang.String version, IEnumerable_1 tags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
+        try {
+            retObjectCreate = classType.Invoke("Create", meterFactory == null ? null : meterFactory.getJCOInstance(), name, version, tags == null ? null : tags.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
+            return new Meter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

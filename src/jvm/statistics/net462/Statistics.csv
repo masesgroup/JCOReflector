@@ -1,2 +1,2 @@
 parsedAssemblies;analyzedTypes;discardedTypes;discardedNonPublicTypes;discardedGenericTypes;discardedInternalTypes;implementedEnum ;implementedEnumsFlags;analyzedEnumerators;implementedEnumerators;analyzedDelegates;implementedDelegates;implementedInterfaces;implementedClasses;implementedExceptions;analyzedCtors;implementedCtors ;analyzedMethods;implementedMethods;analyzedProperties;implementedProperties;analyzedEvents;implementedEvents;loadedAssemblies;
-68;43419;31102;30646;354;52;1663;314;26;25;557;557;847;9224;396;11701;10194;35798;30477;31917;29775;2391;2185;72;
+68;43419;30749;30646;1;52;1663;314;26;25;601;601;878;9502;397;12114;10916;36666;33232;32912;31957;2396;2188;72;

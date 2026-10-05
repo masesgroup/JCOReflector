@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Nullable_1;
 import system.security.cryptography.CngKeyCreationOptions;
 import system.security.cryptography.CngPropertyCollection;
 import system.security.cryptography.CngProvider;
@@ -167,6 +168,56 @@ public class CngKeyCreationParameters extends NetObject  {
     
     // Properties section
     
+    public Nullable_1 getExportPolicy() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportPolicy = null;
+        try {
+            retObjectExportPolicy = classInstance.Get("ExportPolicy");
+            JCObject val = (JCObject)retObjectExportPolicy;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportPolicy != null ? retObjectExportPolicy.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExportPolicy(Nullable_1 ExportPolicy) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("ExportPolicy", ExportPolicy == null ? null : ExportPolicy.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getKeyUsage() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyUsage = null;
+        try {
+            retObjectKeyUsage = classInstance.Get("KeyUsage");
+            JCObject val = (JCObject)retObjectKeyUsage;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyUsage != null ? retObjectKeyUsage.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setKeyUsage(Nullable_1 KeyUsage) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("KeyUsage", KeyUsage == null ? null : KeyUsage.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CngKeyCreationOptions getKeyCreationOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.xaml.AttachableMemberIdentifier;
+import system.collections.generic.KeyValuePair_2;
 
 
 /**
@@ -164,6 +165,16 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
             return (boolean)retObjectTryGetProperty;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetProperty != null ? retObjectTryGetProperty.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CopyPropertiesTo(KeyValuePair_2[] array, int index) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CopyPropertiesTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

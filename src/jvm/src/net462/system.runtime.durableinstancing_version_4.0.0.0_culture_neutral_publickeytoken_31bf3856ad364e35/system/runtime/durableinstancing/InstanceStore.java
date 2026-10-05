@@ -38,11 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.List_1;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.runtime.durableinstancing.InstanceHandle;
-import system.runtime.durableinstancing.InstancePersistenceCommand;
 import system.TimeSpan;
+import system.runtime.durableinstancing.InstancePersistenceCommand;
 import system.AsyncCallback;
 import system.Guid;
 import system.runtime.durableinstancing.InstanceOwner;
@@ -160,6 +161,36 @@ public class InstanceStore extends NetObject  {
     
     // Methods section
     
+    public List_1 EndWaitForEvents(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndWaitForEvents = null;
+        try {
+            retObjectEndWaitForEvents = classInstance.Invoke("EndWaitForEvents", result == null ? null : result.getJCOInstance());
+            JCObject objEndWaitForEvents = (JCObject)retObjectEndWaitForEvents;
+            return new List_1(objEndWaitForEvents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndWaitForEvents != null ? retObjectEndWaitForEvents.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public List_1 WaitForEvents(InstanceHandle handle, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.TimeoutException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForEvents = null;
+        try {
+            retObjectWaitForEvents = classInstance.Invoke("WaitForEvents", handle == null ? null : handle.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            JCObject objWaitForEvents = (JCObject)retObjectWaitForEvents;
+            return new List_1(objWaitForEvents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForEvents != null ? retObjectWaitForEvents.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginExecute(InstanceHandle handle, InstancePersistenceCommand command, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.NotSupportedException, system.transactions.TransactionManagerCommunicationException, system.OverflowException, system.OperationCanceledException, system.TimeoutException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

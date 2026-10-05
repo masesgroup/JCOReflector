@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.codedom.compiler.CodeDomProvider;
+import system.collections.generic.IDictionary_2;
+import system.collections.generic.IDictionary_2Implementation;
 import system.codedom.compiler.CompilerParameters;
 
 
@@ -161,6 +163,21 @@ public class CompilerInfo extends NetObject  {
         java.lang.Object retObjectCreateProvider = null;
         try {
             retObjectCreateProvider = classInstance.Invoke("CreateProvider");
+            JCObject objCreateProvider = (JCObject)retObjectCreateProvider;
+            return new CodeDomProvider(objCreateProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateProvider != null ? retObjectCreateProvider.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeDomProvider CreateProvider(IDictionary_2 providerOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.TypeLoadException, system.IndexOutOfRangeException, system.FormatException, system.io.FileLoadException, system.io.FileNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateProvider = null;
+        try {
+            retObjectCreateProvider = classInstance.Invoke("CreateProvider", providerOptions == null ? null : providerOptions.getJCOInstance());
             JCObject objCreateProvider = (JCObject)retObjectCreateProvider;
             return new CodeDomProvider(objCreateProvider);
         } catch (java.lang.ClassCastException cce) {

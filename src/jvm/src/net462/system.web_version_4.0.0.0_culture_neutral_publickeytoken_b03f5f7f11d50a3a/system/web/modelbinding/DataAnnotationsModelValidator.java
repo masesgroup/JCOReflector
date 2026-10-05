@@ -42,6 +42,8 @@ import system.web.modelbinding.ModelValidator;
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.ModelBindingExecutionContext;
 import system.componentmodel.dataannotations.ValidationAttribute;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -56,7 +58,7 @@ import system.componentmodel.dataannotations.ValidationAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class DataAnnotationsModelValidator extends ModelValidator  {
+public class DataAnnotationsModelValidator extends system.web.modelbinding.ModelValidator  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -167,6 +169,21 @@ public class DataAnnotationsModelValidator extends ModelValidator  {
     
     // Methods section
     
+    public IEnumerable_1 Validate(NetObject container) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
+        try {
+            retObjectValidate = classInstance.Invoke("Validate", container == null ? null : container.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
+            return new IEnumerable_1Implementation(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

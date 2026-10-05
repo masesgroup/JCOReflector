@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.metadata.edm.TypeUsage;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
 /**
@@ -149,6 +152,16 @@ public class DataRecordInfo extends NetObject  {
     public DataRecordInfo() throws Throwable {
     }
 
+    public DataRecordInfo(TypeUsage metadata, IEnumerable_1 memberInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(metadata == null ? null : metadata.getJCOInstance(), memberInfo == null ? null : memberInfo.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -158,6 +171,21 @@ public class DataRecordInfo extends NetObject  {
     
     // Properties section
     
+    public ReadOnlyCollection_1 getFieldMetadata() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldMetadata = null;
+        try {
+            retObjectFieldMetadata = classInstance.Get("FieldMetadata");
+            JCObject val = (JCObject)retObjectFieldMetadata;
+            return new ReadOnlyCollection_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFieldMetadata != null ? retObjectFieldMetadata.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TypeUsage getRecordType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

@@ -38,8 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.xml.xsl.runtime.XmlQuerySequence_1;
 import system.xml.xpath.XPathNavigator;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.xml.xsl.runtime.XmlQueryNodeSequence;
+import system.collections.generic.IComparer_1;
+import system.collections.generic.IComparer_1Implementation;
+import system.xml.xpath.XPathItem;
 
 
 /**
@@ -54,7 +60,7 @@ import system.xml.xsl.runtime.XmlQueryNodeSequence;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class XmlQueryNodeSequence extends NetObjectEnumerable  {
+public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequence_1<XPathNavigator>  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -167,6 +173,16 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
         }
     }
 
+    public XmlQueryNodeSequence(IList_1 list) throws Throwable, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(list == null ? null : list.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlQueryNodeSequence(XPathNavigator navigator) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -221,6 +237,21 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
         }
     }
 
+    public XmlQueryNodeSequence DocOrderDistinct(IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocOrderDistinct = null;
+        try {
+            retObjectDocOrderDistinct = classInstance.Invoke("DocOrderDistinct", comparer == null ? null : comparer.getJCOInstance());
+            JCObject objDocOrderDistinct = (JCObject)retObjectDocOrderDistinct;
+            return new XmlQueryNodeSequence(objDocOrderDistinct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocOrderDistinct != null ? retObjectDocOrderDistinct.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddClone(XPathNavigator navigator) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -229,6 +260,78 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList_1 method available in IList_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int IndexOf(XPathItem item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList_1 method available in IList_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Insert(int index, XPathItem item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList_1 method available in IList_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveAt(int index) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(XPathItem item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Remove(XPathItem item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Add(XPathItem item) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Clear() throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection_1 method available in ICollection_1 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(XPathItem[] array, int arrayIndex) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection_1 to obtain the full interface.");
     }
 
 

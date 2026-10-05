@@ -39,12 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.TypeInfo;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.EventInfo;
 import system.reflection.FieldInfo;
 import system.reflection.MethodInfo;
 import system.reflection.PropertyInfo;
-import system.reflection.IReflectableType;
-import system.reflection.IReflectableTypeImplementation;
 
 
 /**
@@ -59,7 +59,7 @@ import system.reflection.IReflectableTypeImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TypeInfo extends NetObject implements IReflectableType {
+public class TypeInfo extends NetObject  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -172,6 +172,21 @@ public class TypeInfo extends NetObject implements IReflectableType {
         }
     }
 
+    public IEnumerable_1 GetDeclaredMethods(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeclaredMethods = null;
+        try {
+            retObjectGetDeclaredMethods = classInstance.Invoke("GetDeclaredMethods", name);
+            JCObject objGetDeclaredMethods = (JCObject)retObjectGetDeclaredMethods;
+            return new IEnumerable_1Implementation(objGetDeclaredMethods);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeclaredMethods != null ? retObjectGetDeclaredMethods.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EventInfo GetDeclaredEvent(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -275,6 +290,126 @@ public class TypeInfo extends NetObject implements IReflectableType {
     
     // Properties section
     
+    public IEnumerable_1 getDeclaredConstructors() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaredConstructors = null;
+        try {
+            retObjectDeclaredConstructors = classInstance.Get("DeclaredConstructors");
+            JCObject val = (JCObject)retObjectDeclaredConstructors;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaredConstructors != null ? retObjectDeclaredConstructors.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getDeclaredEvents() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaredEvents = null;
+        try {
+            retObjectDeclaredEvents = classInstance.Get("DeclaredEvents");
+            JCObject val = (JCObject)retObjectDeclaredEvents;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaredEvents != null ? retObjectDeclaredEvents.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getDeclaredFields() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaredFields = null;
+        try {
+            retObjectDeclaredFields = classInstance.Get("DeclaredFields");
+            JCObject val = (JCObject)retObjectDeclaredFields;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaredFields != null ? retObjectDeclaredFields.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getDeclaredMembers() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaredMembers = null;
+        try {
+            retObjectDeclaredMembers = classInstance.Get("DeclaredMembers");
+            JCObject val = (JCObject)retObjectDeclaredMembers;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaredMembers != null ? retObjectDeclaredMembers.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getDeclaredMethods() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaredMethods = null;
+        try {
+            retObjectDeclaredMethods = classInstance.Get("DeclaredMethods");
+            JCObject val = (JCObject)retObjectDeclaredMethods;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaredMethods != null ? retObjectDeclaredMethods.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getDeclaredProperties() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaredProperties = null;
+        try {
+            retObjectDeclaredProperties = classInstance.Get("DeclaredProperties");
+            JCObject val = (JCObject)retObjectDeclaredProperties;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaredProperties != null ? retObjectDeclaredProperties.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getDeclaredNestedTypes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaredNestedTypes = null;
+        try {
+            retObjectDeclaredNestedTypes = classInstance.Get("DeclaredNestedTypes");
+            JCObject val = (JCObject)retObjectDeclaredNestedTypes;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaredNestedTypes != null ? retObjectDeclaredNestedTypes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IEnumerable_1 getImplementedInterfaces() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementedInterfaces = null;
+        try {
+            retObjectImplementedInterfaces = classInstance.Get("ImplementedInterfaces");
+            JCObject val = (JCObject)retObjectImplementedInterfaces;
+            return new IEnumerable_1Implementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementedInterfaces != null ? retObjectImplementedInterfaces.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public final NetType[] getGenericTypeParameters() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

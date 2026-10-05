@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.activities.dynamicupdate.DynamicUpdateMap;
 import system.activities.Activity;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
 import system.activities.ActivityBuilder;
 
 
@@ -169,12 +173,72 @@ public class DynamicUpdateServices extends NetObject  {
         }
     }
 
+    public static DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition, IEnumerable_1 disallowUpdateInsideActivities) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUpdateMap = null;
+        try {
+            retObjectCreateUpdateMap = classType.Invoke("CreateUpdateMap", updatedWorkflowDefinition == null ? null : updatedWorkflowDefinition.getJCOInstance(), disallowUpdateInsideActivities == null ? null : disallowUpdateInsideActivities.getJCOInstance());
+            JCObject objCreateUpdateMap = (JCObject)retObjectCreateUpdateMap;
+            return new DynamicUpdateMap(objCreateUpdateMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpdateMap != null ? retObjectCreateUpdateMap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition, IEnumerable_1 disallowUpdateInsideActivities, JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUpdateMap = null;
+        try {
+            retObjectCreateUpdateMap = classType.Invoke("CreateUpdateMap", updatedWorkflowDefinition == null ? null : updatedWorkflowDefinition.getJCOInstance(), disallowUpdateInsideActivities == null ? null : disallowUpdateInsideActivities.getJCOInstance(), activitiesBlockingUpdate.getJCRefOut());
+            JCObject objCreateUpdateMap = (JCObject)retObjectCreateUpdateMap;
+            return new DynamicUpdateMap(objCreateUpdateMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpdateMap != null ? retObjectCreateUpdateMap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateUpdateMap = null;
         try {
             retObjectCreateUpdateMap = classType.Invoke("CreateUpdateMap", updatedActivityDefinition == null ? null : updatedActivityDefinition.getJCOInstance());
+            JCObject objCreateUpdateMap = (JCObject)retObjectCreateUpdateMap;
+            return new DynamicUpdateMap(objCreateUpdateMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpdateMap != null ? retObjectCreateUpdateMap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition, IEnumerable_1 disallowUpdateInsideActivities) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUpdateMap = null;
+        try {
+            retObjectCreateUpdateMap = classType.Invoke("CreateUpdateMap", updatedActivityDefinition == null ? null : updatedActivityDefinition.getJCOInstance(), disallowUpdateInsideActivities == null ? null : disallowUpdateInsideActivities.getJCOInstance());
+            JCObject objCreateUpdateMap = (JCObject)retObjectCreateUpdateMap;
+            return new DynamicUpdateMap(objCreateUpdateMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpdateMap != null ? retObjectCreateUpdateMap.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition, IEnumerable_1 disallowUpdateInsideActivities, JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUpdateMap = null;
+        try {
+            retObjectCreateUpdateMap = classType.Invoke("CreateUpdateMap", updatedActivityDefinition == null ? null : updatedActivityDefinition.getJCOInstance(), disallowUpdateInsideActivities == null ? null : disallowUpdateInsideActivities.getJCOInstance(), activitiesBlockingUpdate.getJCRefOut());
             JCObject objCreateUpdateMap = (JCObject)retObjectCreateUpdateMap;
             return new DynamicUpdateMap(objCreateUpdateMap);
         } catch (java.lang.ClassCastException cce) {

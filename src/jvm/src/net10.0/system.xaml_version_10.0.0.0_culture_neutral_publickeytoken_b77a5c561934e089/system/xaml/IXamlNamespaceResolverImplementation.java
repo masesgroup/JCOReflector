@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -140,6 +142,21 @@ public class IXamlNamespaceResolverImplementation extends NetObject implements I
 
     // Methods section
     
+    public IEnumerable_1 GetNamespacePrefixes() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespacePrefixes = null;
+        try {
+            retObjectGetNamespacePrefixes = classInstance.Invoke("GetNamespacePrefixes");
+            JCObject objGetNamespacePrefixes = (JCObject)retObjectGetNamespacePrefixes;
+            return new IEnumerable_1Implementation(objGetNamespacePrefixes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamespacePrefixes != null ? retObjectGetNamespacePrefixes.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");

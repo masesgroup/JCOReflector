@@ -52,7 +52,7 @@ import system.identitymodel.tokens.SecurityTokenValidationException;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class AudienceUriValidationFailedException extends SecurityTokenValidationException {
+public class AudienceUriValidationFailedException extends system.identitymodel.tokens.SecurityTokenValidationException {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

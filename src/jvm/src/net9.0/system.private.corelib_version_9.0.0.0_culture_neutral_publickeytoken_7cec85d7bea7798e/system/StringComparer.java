@@ -38,9 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.generic.IEqualityComparer_1;
+import system.collections.generic.IEqualityComparer_1Implementation;
+import system.globalization.CompareInfo;
+import system.globalization.CompareOptions;
 import system.StringComparer;
 import system.globalization.CultureInfo;
-import system.globalization.CompareOptions;
 import system.StringComparison;
 
 
@@ -178,6 +181,34 @@ public class StringComparer extends NetObject  {
             return (boolean)retObjectEquals;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsWellKnownCultureAwareComparer(IEqualityComparer_1 comparer, JCORefOut<CompareInfo> compareInfo, JCORefOut<CompareOptions> compareOptions) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWellKnownCultureAwareComparer = null;
+        try {
+            retObjectIsWellKnownCultureAwareComparer = classType.Invoke("IsWellKnownCultureAwareComparer", comparer == null ? null : comparer.getJCOInstance(), compareInfo.getJCRefOut(), compareOptions.getJCRefOut());
+            return (boolean)retObjectIsWellKnownCultureAwareComparer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWellKnownCultureAwareComparer != null ? retObjectIsWellKnownCultureAwareComparer.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsWellKnownOrdinalComparer(IEqualityComparer_1 comparer, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> ignoreCase) throws Throwable {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWellKnownOrdinalComparer = null;
+        try {
+            retObjectIsWellKnownOrdinalComparer = classType.Invoke("IsWellKnownOrdinalComparer", comparer == null ? null : comparer.getJCOInstance(), ignoreCase.getJCRefOut());
+            return (boolean)retObjectIsWellKnownOrdinalComparer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWellKnownOrdinalComparer != null ? retObjectIsWellKnownOrdinalComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

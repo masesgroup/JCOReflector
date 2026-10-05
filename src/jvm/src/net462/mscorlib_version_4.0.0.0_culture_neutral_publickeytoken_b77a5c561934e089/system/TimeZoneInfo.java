@@ -41,13 +41,10 @@ import java.util.ArrayList;
 import system.TimeZoneInfo;
 import system.DateTime;
 import system.DateTimeOffset;
+import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.TimeSpan;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.runtime.serialization.ISerializable;
-import system.runtime.serialization.ISerializableImplementation;
-import system.runtime.serialization.IDeserializationCallback;
-import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -62,7 +59,7 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class TimeZoneInfo extends NetObject implements ISerializable, IDeserializationCallback {
+public class TimeZoneInfo extends NetObject  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -256,6 +253,21 @@ public class TimeZoneInfo extends NetObject implements ISerializable, IDeseriali
             return (boolean)retObjectIsInvalidTime;
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInvalidTime != null ? retObjectIsInvalidTime.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ReadOnlyCollection_1 GetSystemTimeZones() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidTimeZoneException, system.OverflowException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSystemTimeZones = null;
+        try {
+            retObjectGetSystemTimeZones = classType.Invoke("GetSystemTimeZones");
+            JCObject objGetSystemTimeZones = (JCObject)retObjectGetSystemTimeZones;
+            return new ReadOnlyCollection_1(objGetSystemTimeZones);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSystemTimeZones != null ? retObjectGetSystemTimeZones.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -54,7 +54,7 @@ import system.net.http.headers.HeaderStringValues;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class HttpHeadersNonValidated extends ValueType  {
+public class HttpHeadersNonValidated extends system.ValueType  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -181,6 +181,24 @@ public class HttpHeadersNonValidated extends ValueType  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReadOnlyDictionary_2 method available in IReadOnlyDictionary_2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ContainsKey(java.lang.String key) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReadOnlyDictionary_2 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReadOnlyDictionary_2 method available in IReadOnlyDictionary_2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean TryGetValue(java.lang.String key, JCORefOut<HeaderStringValues> value) throws Throwable {
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReadOnlyDictionary_2 to obtain the full interface.");
     }
 
 

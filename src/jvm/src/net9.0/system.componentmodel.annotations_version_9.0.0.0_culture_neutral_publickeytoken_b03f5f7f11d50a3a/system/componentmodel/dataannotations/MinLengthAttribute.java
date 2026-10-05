@@ -53,7 +53,7 @@ import system.componentmodel.dataannotations.ValidationAttribute;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class MinLengthAttribute extends ValidationAttribute  {
+public class MinLengthAttribute extends system.componentmodel.dataannotations.ValidationAttribute  {
     /**
      * Fully assembly qualified name: System.ComponentModel.Annotations, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

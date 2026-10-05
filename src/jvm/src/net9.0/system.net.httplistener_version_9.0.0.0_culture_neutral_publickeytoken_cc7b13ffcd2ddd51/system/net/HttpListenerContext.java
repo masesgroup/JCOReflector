@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.threading.tasks.Task_1;
+import system.TimeSpan;
+import system.ArraySegment_1;
 import system.net.HttpListenerRequest;
 import system.net.HttpListenerResponse;
 import system.security.principal.IPrincipal;
@@ -157,6 +160,66 @@ public class HttpListenerContext extends NetObject  {
     
     // Methods section
     
+    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval, ArraySegment_1 internalBuffer) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptWebSocketAsync = null;
+        try {
+            retObjectAcceptWebSocketAsync = classInstance.Invoke("AcceptWebSocketAsync", subProtocol, receiveBufferSize, keepAliveInterval == null ? null : keepAliveInterval.getJCOInstance(), internalBuffer == null ? null : internalBuffer.getJCOInstance());
+            JCObject objAcceptWebSocketAsync = (JCObject)retObjectAcceptWebSocketAsync;
+            return new Task_1(objAcceptWebSocketAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptWebSocketAsync != null ? retObjectAcceptWebSocketAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptWebSocketAsync = null;
+        try {
+            retObjectAcceptWebSocketAsync = classInstance.Invoke("AcceptWebSocketAsync", subProtocol, receiveBufferSize, keepAliveInterval == null ? null : keepAliveInterval.getJCOInstance());
+            JCObject objAcceptWebSocketAsync = (JCObject)retObjectAcceptWebSocketAsync;
+            return new Task_1(objAcceptWebSocketAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptWebSocketAsync != null ? retObjectAcceptWebSocketAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptWebSocketAsync = null;
+        try {
+            retObjectAcceptWebSocketAsync = classInstance.Invoke("AcceptWebSocketAsync", subProtocol, keepAliveInterval == null ? null : keepAliveInterval.getJCOInstance());
+            JCObject objAcceptWebSocketAsync = (JCObject)retObjectAcceptWebSocketAsync;
+            return new Task_1(objAcceptWebSocketAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptWebSocketAsync != null ? retObjectAcceptWebSocketAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptWebSocketAsync = null;
+        try {
+            retObjectAcceptWebSocketAsync = classInstance.Invoke("AcceptWebSocketAsync", subProtocol);
+            JCObject objAcceptWebSocketAsync = (JCObject)retObjectAcceptWebSocketAsync;
+            return new Task_1(objAcceptWebSocketAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptWebSocketAsync != null ? retObjectAcceptWebSocketAsync.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -38,8 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.io.Stream;
+import system.buffers.IBufferWriter_1;
+import system.buffers.IBufferWriter_1Implementation;
 import system.text.json.JsonWriterOptions;
+import system.io.Stream;
 import system.threading.tasks.Task;
 import system.threading.CancellationToken;
 import system.threading.tasks.ValueTask;
@@ -48,6 +50,7 @@ import system.Single;
 import system.Decimal;
 import system.UInt32;
 import system.UInt64;
+import system.buffers.ReadOnlySequence_1;
 import system.DateTime;
 import system.DateTimeOffset;
 import system.Guid;
@@ -161,6 +164,16 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
     public Utf8JsonWriter() throws Throwable {
     }
 
+    public Utf8JsonWriter(IBufferWriter_1 bufferWriter, JsonWriterOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(bufferWriter == null ? null : bufferWriter.getJCOInstance(), options == null ? null : options.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Utf8JsonWriter(Stream utf8Json, JsonWriterOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -231,6 +244,16 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Reset(IBufferWriter_1 bufferWriter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reset", bufferWriter == null ? null : bufferWriter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,6 +584,16 @@ public class Utf8JsonWriter extends NetObject implements AutoCloseable {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WritePropertyName", propertyName == null ? null : propertyName.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteRawValue(ReadOnlySequence_1 utf8Json, boolean skipInputValidation) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.text.json.JsonException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteRawValue", utf8Json == null ? null : utf8Json.getJCOInstance(), skipInputValidation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

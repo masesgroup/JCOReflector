@@ -38,7 +38,14 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.BindingParameterCollection;
 import system.servicemodel.channels.BindingElementCollection;
+import system.servicemodel.channels.IChannelFactory_1;
+import system.servicemodel.channels.IChannelFactory_1Implementation;
+import system.servicemodel.channels.IChannelListener_1;
+import system.servicemodel.channels.IChannelListener_1Implementation;
+import system.Uri;
+import system.servicemodel.description.ListenUriMode;
 import system.servicemodel.channels.MessageVersion;
 import system.TimeSpan;
 
@@ -154,6 +161,62 @@ public class Binding extends NetObject  {
     
     // Methods section
     
+    public <TChannel extends IJCOBridgeReflected> boolean CanBuildChannelFactory(NetObject... parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBuildChannelFactory = null;
+        try {
+            retObjectCanBuildChannelFactory = classInstance.Invoke("CanBuildChannelFactory", (java.lang.Object)toObjectFromArray(parameters));
+            return (boolean)retObjectCanBuildChannelFactory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanBuildChannelFactory != null ? retObjectCanBuildChannelFactory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> boolean CanBuildChannelFactory(BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBuildChannelFactory = null;
+        try {
+            retObjectCanBuildChannelFactory = classInstance.Invoke("CanBuildChannelFactory", parameters == null ? null : parameters.getJCOInstance());
+            return (boolean)retObjectCanBuildChannelFactory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanBuildChannelFactory != null ? retObjectCanBuildChannelFactory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> boolean CanBuildChannelListener(NetObject... parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBuildChannelListener = null;
+        try {
+            retObjectCanBuildChannelListener = classInstance.Invoke("CanBuildChannelListener", (java.lang.Object)toObjectFromArray(parameters));
+            return (boolean)retObjectCanBuildChannelListener;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanBuildChannelListener != null ? retObjectCanBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> boolean CanBuildChannelListener(BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBuildChannelListener = null;
+        try {
+            retObjectCanBuildChannelListener = classInstance.Invoke("CanBuildChannelListener", parameters == null ? null : parameters.getJCOInstance());
+            return (boolean)retObjectCanBuildChannelListener;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanBuildChannelListener != null ? retObjectCanBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean ShouldSerializeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
@@ -192,6 +255,156 @@ public class Binding extends NetObject  {
             return new BindingElementCollection(objCreateBindingElements);
         } catch (java.lang.ClassCastException cce) {
             throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindingElements != null ? retObjectCreateBindingElements.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelFactory_1 BuildChannelFactory(NetObject... parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelFactory = null;
+        try {
+            retObjectBuildChannelFactory = classInstance.Invoke("BuildChannelFactory", (java.lang.Object)toObjectFromArray(parameters));
+            JCObject objBuildChannelFactory = (JCObject)retObjectBuildChannelFactory;
+            return new IChannelFactory_1Implementation(objBuildChannelFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelFactory != null ? retObjectBuildChannelFactory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelFactory_1 BuildChannelFactory(BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelFactory = null;
+        try {
+            retObjectBuildChannelFactory = classInstance.Invoke("BuildChannelFactory", parameters == null ? null : parameters.getJCOInstance());
+            JCObject objBuildChannelFactory = (JCObject)retObjectBuildChannelFactory;
+            return new IChannelFactory_1Implementation(objBuildChannelFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelFactory != null ? retObjectBuildChannelFactory.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(NetObject... parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.net.sockets.SocketException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.SecurityException, system.UriFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelListener = null;
+        try {
+            retObjectBuildChannelListener = classInstance.Invoke("BuildChannelListener", (java.lang.Object)toObjectFromArray(parameters));
+            JCObject objBuildChannelListener = (JCObject)retObjectBuildChannelListener;
+            return new IChannelListener_1Implementation(objBuildChannelListener);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelListener != null ? retObjectBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.net.sockets.SocketException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.AccessViolationException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelListener = null;
+        try {
+            retObjectBuildChannelListener = classInstance.Invoke("BuildChannelListener", parameters == null ? null : parameters.getJCOInstance());
+            JCObject objBuildChannelListener = (JCObject)retObjectBuildChannelListener;
+            return new IChannelListener_1Implementation(objBuildChannelListener);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelListener != null ? retObjectBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(Uri listenUriBaseAddress, NetObject... parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelListener = null;
+        try {
+            retObjectBuildChannelListener = classInstance.Invoke("BuildChannelListener", listenUriBaseAddress == null ? null : listenUriBaseAddress.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objBuildChannelListener = (JCObject)retObjectBuildChannelListener;
+            return new IChannelListener_1Implementation(objBuildChannelListener);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelListener != null ? retObjectBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(Uri listenUriBaseAddress, BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelListener = null;
+        try {
+            retObjectBuildChannelListener = classInstance.Invoke("BuildChannelListener", listenUriBaseAddress == null ? null : listenUriBaseAddress.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance());
+            JCObject objBuildChannelListener = (JCObject)retObjectBuildChannelListener;
+            return new IChannelListener_1Implementation(objBuildChannelListener);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelListener != null ? retObjectBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(Uri listenUriBaseAddress, java.lang.String listenUriRelativeAddress, NetObject... parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelListener = null;
+        try {
+            retObjectBuildChannelListener = classInstance.Invoke("BuildChannelListener", listenUriBaseAddress == null ? null : listenUriBaseAddress.getJCOInstance(), listenUriRelativeAddress, toObjectFromArray(parameters));
+            JCObject objBuildChannelListener = (JCObject)retObjectBuildChannelListener;
+            return new IChannelListener_1Implementation(objBuildChannelListener);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelListener != null ? retObjectBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(Uri listenUriBaseAddress, java.lang.String listenUriRelativeAddress, BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelListener = null;
+        try {
+            retObjectBuildChannelListener = classInstance.Invoke("BuildChannelListener", listenUriBaseAddress == null ? null : listenUriBaseAddress.getJCOInstance(), listenUriRelativeAddress, parameters == null ? null : parameters.getJCOInstance());
+            JCObject objBuildChannelListener = (JCObject)retObjectBuildChannelListener;
+            return new IChannelListener_1Implementation(objBuildChannelListener);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelListener != null ? retObjectBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(Uri listenUriBaseAddress, java.lang.String listenUriRelativeAddress, ListenUriMode listenUriMode, NetObject... parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelListener = null;
+        try {
+            retObjectBuildChannelListener = classInstance.Invoke("BuildChannelListener", listenUriBaseAddress == null ? null : listenUriBaseAddress.getJCOInstance(), listenUriRelativeAddress, listenUriMode == null ? null : listenUriMode.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objBuildChannelListener = (JCObject)retObjectBuildChannelListener;
+            return new IChannelListener_1Implementation(objBuildChannelListener);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelListener != null ? retObjectBuildChannelListener.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public <TChannel extends IJCOBridgeReflected> IChannelListener_1 BuildChannelListener(Uri listenUriBaseAddress, java.lang.String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildChannelListener = null;
+        try {
+            retObjectBuildChannelListener = classInstance.Invoke("BuildChannelListener", listenUriBaseAddress == null ? null : listenUriBaseAddress.getJCOInstance(), listenUriRelativeAddress, listenUriMode == null ? null : listenUriMode.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance());
+            JCObject objBuildChannelListener = (JCObject)retObjectBuildChannelListener;
+            return new IChannelListener_1Implementation(objBuildChannelListener);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildChannelListener != null ? retObjectBuildChannelListener.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

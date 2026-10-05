@@ -57,7 +57,7 @@ import system.data.KeyRestrictionBehavior;
  * @author  MASES s.r.l https://masesgroup.com
  * @version 1.16.2.0
  */
-public class SqlClientPermission extends DBDataPermission  {
+public class SqlClientPermission extends system.data.common.DBDataPermission  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.DateTime;
+import system.Nullable_1;
 
 
 /**
@@ -159,6 +160,16 @@ public class Lifetime extends NetObject  {
         }
     }
 
+    public Lifetime(Nullable_1 created, Nullable_1 expires) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(created == null ? null : created.getJCOInstance(), expires == null ? null : expires.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
@@ -168,6 +179,56 @@ public class Lifetime extends NetObject  {
     
     // Properties section
     
+    public Nullable_1 getCreated() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreated = null;
+        try {
+            retObjectCreated = classInstance.Get("Created");
+            JCObject val = (JCObject)retObjectCreated;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreated != null ? retObjectCreated.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setCreated(Nullable_1 Created) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Created", Created == null ? null : Created.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Nullable_1 getExpires() throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpires = null;
+        try {
+            retObjectExpires = classInstance.Get("Expires");
+            JCObject val = (JCObject)retObjectExpires;
+            return new Nullable_1(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpires != null ? retObjectExpires.getClass() : "null"), cce);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void setExpires(Nullable_1 Expires) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Set("Expires", Expires == null ? null : Expires.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     // Instance Events section

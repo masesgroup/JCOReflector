@@ -39,7 +39,9 @@ Several categories of .NET generic APIs are excluded on purpose, because there i
 
 Every type parameter is declared as `<T extends IJCOBridgeReflected>`. This is necessary for the generated code to marshal `T` across the bridge, but it means a type parameter **cannot** be filled with:
 
-- a native-mapped .NET type (`System.String`, or any primitive: `int`, `bool`, and so on), since these map onto plain Java types (`java.lang.String`, `int`, `boolean`, ...) that do not implement `IJCOBridgeReflected`.
+- a plain Java type: `java.lang.String`, or a Java primitive (`int`, `boolean`, ...). These are the types onto which `System.String` and the native-mapped .NET primitives are mapped, and none of them implements `IJCOBridgeReflected`, so using one as a type argument is a compile-time error.
+
+A reflected class is always a valid type argument, so the native-mapped .NET primitives can be used through their wrapper classes. The wrappers of the primitives mapped onto Java types are hand-written classes (`system.Boolean`, `system.Byte`, `system.Double`, `system.Float`, `system.Int16`, `system.Int32` and `system.Int64`), and a .NET value type that has no Java equivalent, such as `UInt32`, is generated like any other class. For example `List_1<system.Int32>` and `Dictionary_2<UInt32, UInt32>` are valid, and the CLR compares the keys by value, not by wrapper (see the [native types example](#example-native-types-with-generics) below). `System.String` is mapped onto `java.lang.String` and has no wrapper class, so it cannot be a type argument.
 
 When a .NET type fixes one of its own base type's parameters to such a type — the most common real-world case is `KeyedCollection<string, TItem>`, i.e. any "keyed by name" collection — the affected `extends`/`implements` reference is generated **raw** (unparameterized) instead of failing to compile. This is the same trade-off already accepted elsewhere (see below): the class remains usable, but loses compile-time type-safety on that specific reference.
 
@@ -181,3 +183,38 @@ if (calls.get() == 0) throw new AssertionError("Java comparison never invoked");
 ```
 
 Note that, exactly as for `List_1<T>` itself, the delegate is constructed with the trailing `{}` and only `Invoke` needs to be overridden — the generated `Comparison_1` class resolves its own closed CLR delegate type (`System.Comparison\`1[System.Object]`) lazily, via the same anonymous-subclass capture used everywhere else, instead of requiring the caller to build that name by hand.
+
+## Example: native types with generics
+
+The same test class, `tests/jvm/java/src/generics/GenericComparisonDelegateSortsAList.java`, also checks how native types behave with generics. It covers the cases below.
+
+**Native values in the members of a generic class.** A native `int` can be a constructor argument, and `boolean` and `int` values come back from the members of a generic class as plain Java values:
+
+```java
+Dictionary_2<system.Object, system.Object> dict = new Dictionary_2<system.Object, system.Object>(16) {};
+dict.Add(key, value);
+
+boolean found = dict.ContainsKey(key);   // boolean result
+int count = dict.getCount();             // int property
+```
+
+**Wrapper classes of value types as type arguments.** `UInt32` is a reflected class, so it can fill a type parameter, and so can the hand-written wrappers of the primitives such as `system.Int32` (the test uses `UInt32`). The CLR works on the values, and an `out` parameter of a type-argument type returns its result through the instance supplied, as described in [`ref` and `out` parameters](#ref-and-out-parameters):
+
+```java
+Dictionary_2<UInt32, UInt32> dict = new Dictionary_2<UInt32, UInt32>() {};
+dict.Add(UInt32.Parse("1"), UInt32.Parse("10"));
+
+// a different wrapper holding the same number is the same key
+boolean found = dict.ContainsKey(UInt32.Parse("1"));   // true
+
+// the out value comes back through the instance supplied
+UInt32 value = UInt32.Parse("0");
+dict.TryGetValue(UInt32.Parse("1"), JCORefOut.Create(value));   // value now holds 10
+```
+
+A `Comparison_1<UInt32>` delegate can also be passed to `List_1<UInt32>.Sort`, exactly as in the `system.Object` example above.
+
+**Plain Java types.** A plain Java type cannot be a type argument. The test checks the bound of the type parameter by reflection, because using such a type is a compile-time error: `List_1`'s type parameter is bounded by `IJCOBridgeReflected`, and `String`, `Integer` and `Boolean` do not implement it.
+
+> [!NOTE]
+> The members of a reflected class mirror the framework the artifact was generated from. `Dictionary<TKey,TValue>.TryAdd` and `EnsureCapacity` do not exist on .NET Framework, so the `net462` artifact does not offer them. The test works on every framework because it uses `Add` and catches the `ArgumentException` thrown for a duplicate key.

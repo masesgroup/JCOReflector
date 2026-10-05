@@ -3783,6 +3783,19 @@ references:
   isSpec: "True"
   fullName: MASES.JCOReflector.Engine.ReflectorEventArgs.EnableDuplicateMethodNativeArrayWithJCRefOut
   nameWithType: ReflectorEventArgs.EnableDuplicateMethodNativeArrayWithJCRefOut
+- uid: MASES.JCOReflector.Engine.ReflectorEventArgs.EnableGenerics
+  name: EnableGenerics
+  href: api/MASES.JCOReflector.Engine.ReflectorEventArgs.html#MASES_JCOReflector_Engine_ReflectorEventArgs_EnableGenerics
+  commentId: P:MASES.JCOReflector.Engine.ReflectorEventArgs.EnableGenerics
+  fullName: MASES.JCOReflector.Engine.ReflectorEventArgs.EnableGenerics
+  nameWithType: ReflectorEventArgs.EnableGenerics
+- uid: MASES.JCOReflector.Engine.ReflectorEventArgs.EnableGenerics*
+  name: EnableGenerics
+  href: api/MASES.JCOReflector.Engine.ReflectorEventArgs.html#MASES_JCOReflector_Engine_ReflectorEventArgs_EnableGenerics_
+  commentId: Overload:MASES.JCOReflector.Engine.ReflectorEventArgs.EnableGenerics
+  isSpec: "True"
+  fullName: MASES.JCOReflector.Engine.ReflectorEventArgs.EnableGenerics
+  nameWithType: ReflectorEventArgs.EnableGenerics
 - uid: MASES.JCOReflector.Engine.ReflectorEventArgs.EnableInheritance
   name: EnableInheritance
   href: api/MASES.JCOReflector.Engine.ReflectorEventArgs.html#MASES_JCOReflector_Engine_ReflectorEventArgs_EnableInheritance
@@ -4044,6 +4057,25 @@ references:
   commentId: F:MASES.JCOReflector.GUI.MainWindow.EnableAbstractProperty
   fullName: MASES.JCOReflector.GUI.MainWindow.EnableAbstractProperty
   nameWithType: MainWindow.EnableAbstractProperty
+- uid: MASES.JCOReflector.GUI.MainWindow.EnableGenerics
+  name: EnableGenerics
+  href: api/MASES.JCOReflector.GUI.MainWindow.html#MASES_JCOReflector_GUI_MainWindow_EnableGenerics
+  commentId: P:MASES.JCOReflector.GUI.MainWindow.EnableGenerics
+  fullName: MASES.JCOReflector.GUI.MainWindow.EnableGenerics
+  nameWithType: MainWindow.EnableGenerics
+- uid: MASES.JCOReflector.GUI.MainWindow.EnableGenerics*
+  name: EnableGenerics
+  href: api/MASES.JCOReflector.GUI.MainWindow.html#MASES_JCOReflector_GUI_MainWindow_EnableGenerics_
+  commentId: Overload:MASES.JCOReflector.GUI.MainWindow.EnableGenerics
+  isSpec: "True"
+  fullName: MASES.JCOReflector.GUI.MainWindow.EnableGenerics
+  nameWithType: MainWindow.EnableGenerics
+- uid: MASES.JCOReflector.GUI.MainWindow.EnableGenericsProperty
+  name: EnableGenericsProperty
+  href: api/MASES.JCOReflector.GUI.MainWindow.html#MASES_JCOReflector_GUI_MainWindow_EnableGenericsProperty
+  commentId: F:MASES.JCOReflector.GUI.MainWindow.EnableGenericsProperty
+  fullName: MASES.JCOReflector.GUI.MainWindow.EnableGenericsProperty
+  nameWithType: MainWindow.EnableGenericsProperty
 - uid: MASES.JCOReflector.GUI.MainWindow.EnableInheritance
   name: EnableInheritance
   href: api/MASES.JCOReflector.GUI.MainWindow.html#MASES_JCOReflector_GUI_MainWindow_EnableInheritance

@@ -54,6 +54,18 @@ Where two members would otherwise collide only because of erasure — not becaus
 
 Java forbids a generic class from extending `java.lang.Throwable`, without exception (JLS §8.1.2) — this is not something JCOReflector can work around. A .NET generic exception type (e.g. `FaultException<TDetail>`) is therefore always generated as a **plain, non-generic** Java class. Its class-level type parameter is exposed everywhere as its bound, `IJCOBridgeReflected`, instead of a real type variable — for example `FaultException_1.getDetail()` returns `IJCOBridgeReflected`, not `TDetail`. This is the one case where the generic parameter is always erased to its bound in the public API, by necessity rather than by choice.
 
+## `ref` and `out` parameters
+
+Parameters declared as `ref` or `out` in .NET are passed through `JCORefOut<T>`. Generics do not change how it works, and no type-argument information is needed to use it: for a reflected instance, `JCORefOut` passes the underlying .NET instance to the bridge, and the result of the call comes back through the instance supplied by the caller, exactly as in the non-generic `UInt32.TryParse(valueStr, JCORefOut.Create(i))` example. As a consequence, the caller must supply an existing, non-null instance.
+
+An instance member that has a `ref` or `out` parameter of a class-level type parameter is therefore reflected normally. For example, `Dictionary<TKey,TValue>.TryGetValue` is generated as `TryGetValue(TKey key, JCORefOut<TValue> value)`.
+
+Generics affect `ref` and `out` parameters only through the general limits described above:
+
+- A **static** member that uses a class-level type parameter, including as a `ref` or `out` parameter, is not reflected.
+- A method whose return type is a **method-level** type parameter is not reflected, even if it has `ref` parameters. For example, the generic `Interlocked.CompareExchange<T>(ref T, T, T)` and `Interlocked.Exchange<T>(ref T, T)` are skipped, and only the `object` overloads, taking a `JCORefOut<NetObject>`, are generated.
+- Two overloads that differ only by what is inside a `JCORefOut<...>` have the same signature after Java erasure, because `JCORefOut<T>` and `JCORefOut<NetObject>` both erase to `JCORefOut`. Only the first one is generated.
+
 ## Using generics from Clojure
 
 The anonymous-subclass idiom described above (`new List_1<Foo>(){}`) cannot be written in Clojure. `proxy`, `reify` and `gen-class` generate classes, but none of them writes the generic `Signature` attribute of the superclass, which is exactly what JCOReflector reads to recover the type arguments. A subclass produced by those forms looks, to the reflection code, like a raw `List_1`, so the type argument is lost and instantiating a generic class fails the same way it does in Java when the trailing `{}` is omitted.
@@ -126,17 +138,24 @@ Whole types:
 Members:
 
 - `SyndicationElementExtensionCollection.Add`
-- `ICollection<T>.Add` and `ICollection<T>.Remove`
+- `ICollection<T>.Add` and `ICollection<T>.Remove` — they affect `IDictionary<TKey,TValue>`, `ISet<T>`, `IMessageFilterTable<T>` and their `Implementation` classes, and depend on the first open root cause listed below.
 - `ImmutableArray<T>.AddRange`
 - `Sse41.Extract`
 - `TryFormat` on `Guid`, `Version`, `Rune`, `IPAddress` and `IPNetwork`
 - `GetPinnableReference` on `Span<T>` and `ReadOnlySpan<T>` — probably redundant, since both are `ref struct` types and are already excluded as whole types (see [What is intentionally not reflected](#what-is-intentionally-not-reflected)); the entries are to be reviewed.
 
+`SyndicationElementExtensionCollection.Add`, `ImmutableArray<T>.AddRange`, `Sse41.Extract` and `TryFormat` are genuine Java erasure collisions between distinct .NET overloads or members (an array next to a `params T[]`, or an inherited explicit-interface member next to a real public one). They cannot be fixed without misrepresenting the .NET API and are expected to stay, unless a better approach turns up.
+
 A whole-type entry (one without a member list) also stops the type itself from being exported as its own file. Skipping only its members would leave the type's `Implementation` class generated anyway, still missing members inherited from non-excluded interfaces such as `IComparable` or `IFormattable`.
+
+### Root causes still open
+
+- **Constructed type arguments.** The recursive generic-type-name resolver does not handle a type argument that is itself a constructed generic type, for example `KeyValuePair<TKey,TValue>` inside `IDictionary<TKey,TValue> : ICollection<KeyValuePair<TKey,TValue>>`. It falls back to a raw reference instead of resolving it, and this is what forces most of the `ICollection<T>` family into the avoidance map.
+- **Transitive interface closure.** The generated `Implementation` class of an interface only collects the methods declared directly on that interface, not the full transitive interface closure. This causes the `INameScopeDictionary` `Implementation` class to miss members it inherits through `IDictionary<TKey,TValue>`.
 
 ## Impact on non-generic output
 
-Regenerating with `EnableGenerics` disabled is intended to reproduce the pre-generics output exactly. As of this writing that guarantee does **not** yet fully hold: some fully-qualified class names appear where a simple name used to be (cosmetic), and — more importantly — some classes have been observed to lose an `implements` clause they should still have even with the switch off. This is an active, unresolved issue; do not rely on `EnableGenerics=false` output being byte-for-byte identical to a pre-generics build until this note is updated.
+Regenerating with `EnableGenerics` disabled reproduces the pre-generics output, with one cosmetic difference: some references are written with their fully-qualified class name where a simple name used to be. This has no effect on the behavior of the generated code, but it means the output is not byte-for-byte identical to a pre-generics build.
 
 ## Example: sorting a list with a generic `Comparison` delegate
 

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Using JCOReflector | MASES Group website - JCOReflector </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Using JCOReflector | MASES Group website - JCOReflector ">
+      <meta name="description" content="How to add the JCOReflector artifacts to a project, how the runtime starts, and how to run the reflection tool with job files.">
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/blob/master/src/documentation/articles/usage.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="using-jcoreflector">Using JCOReflector</h1>
+
+<p>This article covers the three things needed to work with JCOReflector: using the artifacts already published on Maven Central, what happens when the runtime starts, and how to generate the artifacts yourself with the reflection tool.</p>
+<h2 id="using-the-artifacts-published-on-maven-central">Using the artifacts published on Maven Central</h2>
+<p>JCOReflector publishes one artifact for each .NET flavor, all in the <code>com.masesgroup</code> group. They differ only in the artifact id:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">.NET flavor</th>
+<th style="text-align: left;">Artifact id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">.NET Framework (Windows only)</td>
+<td style="text-align: left;"><a href="https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net462"><code>jcoreflector_net462</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;">.NET 8</td>
+<td style="text-align: left;"><a href="https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net8.0"><code>jcoreflector_net8.0</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;">.NET 9</td>
+<td style="text-align: left;"><a href="https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net9.0"><code>jcoreflector_net9.0</code></a></td>
+</tr>
+<tr>
+<td style="text-align: left;">.NET 10</td>
+<td style="text-align: left;"><a href="https://central.sonatype.com/artifact/com.masesgroup/jcoreflector_net10.0"><code>jcoreflector_net10.0</code></a></td>
+</tr>
+</tbody>
+</table>
+<p>With Maven, add the dependency for the flavor you want to use:</p>
+<pre><code class="lang-xml">&lt;dependency&gt;
+    &lt;groupId&gt;com.masesgroup&lt;/groupId&gt;
+    &lt;artifactId&gt;jcoreflector_net462&lt;/artifactId&gt;
+    &lt;version&gt;1.16.2.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>and with Gradle:</p>
+<pre><code class="lang-groovy">implementation 'com.masesgroup:jcoreflector_net462:1.16.2.0'
+</code></pre>
+<p>To work with another framework, change only the artifact id, for example to <code>jcoreflector_net8.0</code>. The Java code does not change, as long as the classes it uses exist in the framework you selected.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The version shown above is the one published when this article was written. Check the Maven Central page of the artifact for the latest one.</p>
+</div>
+<p>A few things to know:</p>
+<ul>
+<li>The artifacts embed the JCOBridge runtime, so JCOBridge does not have to be added as a separate dependency.</li>
+<li>The minimum Java version is Java 8, and a .NET runtime matching the artifact must be available on the machine. See the project README for the full list of supported versions.</li>
+<li>JCOBridge has its own licensing, independent of the MIT license of JCOReflector: <a href="https://www.jcobridge.com">JCOBridge 2.6.*</a> can be used for free without any obligations. A commercial license must be purchased — or the software uninstalled — if you derive direct or indirect income from its usage.</li>
+</ul>
+<h2 id="initializing-the-runtime">Initializing the runtime</h2>
+<p>All the examples of the project start with the same call:</p>
+<pre><code class="lang-java">import org.mases.jcobridge.netreflection.JCOReflector;
+import system.Console;
+
+public class Hello {
+    public static void main(String[] args) throws Throwable {
+        JCOReflector.setCommandLineArgs(args);
+        Console.WriteLine(&quot;Hello from .NET&quot;);
+    }
+}
+</code></pre>
+<p>No explicit initialization of the runtime is needed. JCOReflector starts everything the first time a reflected class is used: at that moment it initializes JCOBridge, which loads the CLR in the same process, and then serves every following request.</p>
+<p><code>setCommandLineArgs</code> only stores the command-line arguments of the application. They are handed to JCOBridge when the runtime initializes, so the call must come before the first use of a reflected class; once the runtime is initialized, the call is silently ignored. The call is optional: without it JCOBridge receives no arguments.</p>
+<p>The same call is used in the other JVM languages:</p>
+<pre><code class="lang-scala">JCOReflector.setCommandLineArgs(args)
+</code></pre>
+<pre><code class="lang-kotlin">JCOReflector.setCommandLineArgs(args)
+</code></pre>
+<pre><code class="lang-clojure">(JCOReflector/setCommandLineArgs (into-array String args))
+</code></pre>
+<h3 id="other-settings">Other settings</h3>
+<p><code>JCOReflector</code> offers a few more static settings. Some of them can be applied only before the runtime initializes, and are silently ignored afterwards:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>setCommandLineArgs(String[])</code></td>
+<td style="text-align: left;">Command-line arguments handed to JCOBridge</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>registerPath(String)</code></td>
+<td style="text-align: left;">Registers a search path within the engine</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>setInstanceByAssembly(boolean)</code></td>
+<td style="text-align: left;">Uses one JCOBridge instance per assembly instead of a single global one</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>setUseFullAssemblyName(boolean)</code></td>
+<td style="text-align: left;">Uses the full assembly name, instead of the short one, when creating .NET types</td>
+</tr>
+</tbody>
+</table>
+<p>The following ones can be changed at any time:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Setting</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>setDebug(boolean)</code></td>
+<td style="text-align: left;">Enables debug messages</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>setLogging(boolean)</code></td>
+<td style="text-align: left;">Enables the logging of the JCOBridge events (to <code>JCOBridge.log</code> by default)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>setConsoleLog(boolean)</code></td>
+<td style="text-align: left;">Writes the JCOReflector log messages also to the console</td>
+</tr>
+</tbody>
+</table>
+<p>JCOReflector writes its own messages to a <code>JCOReflector.log</code> file, created in the working directory of the application.</p>
+<h2 id="reflecting-assemblies-with-the-jcoreflector-tool">Reflecting assemblies with the JCOReflector tool</h2>
+<p>The published artifacts are produced by the reflection tool, and the same tool can reflect other assemblies or other framework versions.</p>
+<h3 id="getting-the-tool">Getting the tool</h3>
+<p>In the root folder of the repository execute:</p>
+<blockquote>
+<p>dotnet build JCOReflector\JCOReflector.sln</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>dotnet build JCOReflector\JCOReflectorCLI.sln</p>
+</blockquote>
+<p>Within the folder bin you will find four subfolders:</p>
+<ul>
+<li><strong>net462</strong> (available only on Windows platform)</li>
+<li><strong>net8.0</strong> (available on .NET 8 supported platforms)</li>
+<li><strong>net9.0</strong> (available on .NET 9 supported platforms)</li>
+<li><strong>net10.0</strong> (available on .NET 10 supported platforms)</li>
+</ul>
+<p>in each subfolder will be available two executables:</p>
+<ul>
+<li><strong>JCOReflectorCLI</strong> the CLI tool;</li>
+<li><strong>JCOReflectorGUI</strong> the GUI tool, below some screenshot:</li>
+</ul>
+<p><img src="../images/jcoreflector.png" alt="JCOReflector" title="JCOReflector screenshot">
+<img src="../images/jcoreflector2.png" alt="JCOReflector" title="JCOReflector screenshot"></p>
+<p>The CLI is also available as a .NET tool:</p>
+<blockquote>
+<p>dotnet tool install --global MASES.JCOReflectorCLI</p>
+</blockquote>
+<h3 id="job-files">Job files</h3>
+<p>The work of the tool is described by XML job files, one for each stage of the process. The <code>.github/workflows</code> folder of the repository contains the ones used by its own pipelines, one per stage and per framework:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stage</th>
+<th style="text-align: left;">Root element</th>
+<th style="text-align: left;">Job files</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Reflect</td>
+<td style="text-align: left;"><code>ReflectorEventArgs</code></td>
+<td style="text-align: left;"><code>reflect_net462.job</code>, <code>reflect_net8_0.job</code>, <code>reflect_net9_0.job</code>, <code>reflect_net10_0.job</code></td>
+<td style="text-align: left;">Generates the Java sources from the .NET assemblies</td>
+</tr>
+<tr>
+<td style="text-align: left;">Build</td>
+<td style="text-align: left;"><code>JavaBuilderEventArgs</code></td>
+<td style="text-align: left;"><code>build_linux.job</code>, <code>build_win19.job</code></td>
+<td style="text-align: left;">Compiles the generated sources with a JDK</td>
+</tr>
+<tr>
+<td style="text-align: left;">Create JARs</td>
+<td style="text-align: left;"><code>JARBuilderEventArgs</code></td>
+<td style="text-align: left;"><code>createjars_&lt;framework&gt;_&lt;os&gt;.job</code></td>
+<td style="text-align: left;">Packages the compiled classes into JARs, one for each assembly</td>
+</tr>
+<tr>
+<td style="text-align: left;">Create POM</td>
+<td style="text-align: left;"><code>POMBuilderEventArgs</code></td>
+<td style="text-align: left;"><code>createpom_win19.job</code></td>
+<td style="text-align: left;">Generates the Maven POM used to publish the artifacts</td>
+</tr>
+</tbody>
+</table>
+<p>The stages work on the same source folder (<code>src/jvm</code>), so the output of one is the input of the next. The <code>win19</code> files are the Windows variants, with backslash paths and the location of the JDK on the CI runner; the <code>linux</code> ones use forward slashes and a relative <code>jdk</code> folder. When running a job on your machine, adapt these paths to your environment.</p>
+<h4 id="reflect">Reflect</h4>
+<p>The reflect job lists the assemblies to start from and the generator options. This is the one for .NET 8 (the .NET 9 and .NET 10 ones differ only in the assembly version):</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;ReflectorEventArgs xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;LogLevel&gt;Error&lt;/LogLevel&gt;
+  &lt;AssemblyNames&gt;
+    &lt;string&gt;PresentationFramework, Version=8.0.0.0&lt;/string&gt;
+  &lt;/AssemblyNames&gt;
+  &lt;SourceFolder&gt;src/jvm&lt;/SourceFolder&gt;
+  &lt;SplitFolderByAssembly&gt;true&lt;/SplitFolderByAssembly&gt;
+  &lt;ForceRebuild&gt;true&lt;/ForceRebuild&gt;
+  &lt;UseParallelBuild&gt;true&lt;/UseParallelBuild&gt;
+  &lt;CreateExceptionThrownClause&gt;true&lt;/CreateExceptionThrownClause&gt;
+  &lt;ExceptionThrownClauseDepth&gt;10&lt;/ExceptionThrownClauseDepth&gt;
+  &lt;EnableAbstract&gt;true&lt;/EnableAbstract&gt;
+  &lt;EnableArray&gt;true&lt;/EnableArray&gt;
+  &lt;EnableDuplicateMethodNativeArrayWithJCRefOut&gt;true&lt;/EnableDuplicateMethodNativeArrayWithJCRefOut&gt;
+  &lt;EnableInheritance&gt;true&lt;/EnableInheritance&gt;
+  &lt;EnableInterfaceInheritance&gt;true&lt;/EnableInterfaceInheritance&gt;
+  &lt;EnableRefOutParameters&gt;true&lt;/EnableRefOutParameters&gt;
+  &lt;EnableGenerics&gt;true&lt;/EnableGenerics&gt;
+  &lt;DryRun&gt;false&lt;/DryRun&gt;
+&lt;/ReflectorEventArgs&gt;
+</code></pre>
+<ul>
+<li><strong><code>AssemblyNames</code></strong> is the list of assemblies to reflect. The .NET Framework job uses full assembly names, including culture and public key token, for six assemblies. The published <code>net462</code> artifact contains many more assemblies than the ones named in the job, so the assemblies referenced by the listed ones are reflected too.</li>
+<li><strong><code>SourceFolder</code></strong> is the folder where the Java sources are written, and <strong><code>SplitFolderByAssembly</code></strong> puts the sources of each assembly in its own folder.</li>
+<li>The <strong><code>Enable*</code></strong> options switch the corresponding features of the generator on (see &quot;Implemented in the reflector&quot; in the README). <code>EnableGenerics</code> activates the <a href="generics.html">experimental generics support</a>.</li>
+<li><strong><code>CreateExceptionThrownClause</code></strong> and <strong><code>ExceptionThrownClauseDepth</code></strong> control the <code>throws</code> declarations added to the generated methods.</li>
+</ul>
+<h4 id="build">Build</h4>
+<p>The build job compiles the generated sources:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;JavaBuilderEventArgs xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;LogLevel&gt;Info&lt;/LogLevel&gt;
+  &lt;SourceFolder&gt;src/jvm&lt;/SourceFolder&gt;
+  &lt;SplitFolderByAssembly&gt;true&lt;/SplitFolderByAssembly&gt;
+  &lt;JDKFolder&gt;jdk&lt;/JDKFolder&gt;
+  &lt;JDKTarget&gt;Version8&lt;/JDKTarget&gt;
+  &lt;JDKToolExtraOptions&gt;&lt;/JDKToolExtraOptions&gt;
+&lt;/JavaBuilderEventArgs&gt;
+</code></pre>
+<p><code>JDKFolder</code> is the JDK to use and must be changed to point to the JDK installed on your machine; it can also be supplied with the <code>-JDKFolder</code> switch of the CLI, as the project pipelines do. <code>JDKTarget</code> is the Java version targeted by the compilation: all the project jobs use <code>Version8</code>, matching the Java 8 baseline of the artifacts. <code>JDKToolExtraOptions</code> can carry extra options for the JDK tools.</p>
+<h4 id="create-jars">Create JARs</h4>
+<p>The JAR job packages the compiled classes, and there is one for each framework and operating system (<code>createjars_net462_win19.job</code> is the only .NET Framework one, because that framework is available only on Windows):</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;JARBuilderEventArgs xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CancellationToken /&gt;
+  &lt;LogLevel&gt;Error&lt;/LogLevel&gt;
+  &lt;SourceFolder&gt;src/jvm&lt;/SourceFolder&gt;
+  &lt;SplitFolderByAssembly&gt;true&lt;/SplitFolderByAssembly&gt;
+  &lt;JDKFolder&gt;jdk&lt;/JDKFolder&gt;
+  &lt;JDKTarget&gt;Version8&lt;/JDKTarget&gt;
+  &lt;JDKToolExtraOptions&gt;&lt;/JDKToolExtraOptions&gt;
+  &lt;JarDestinationFolder&gt;bin/net8.0&lt;/JarDestinationFolder&gt;
+  &lt;WithJARSource&gt;false&lt;/WithJARSource&gt;
+  &lt;EmbeddingJCOBridge&gt;true&lt;/EmbeddingJCOBridge&gt;
+&lt;/JARBuilderEventArgs&gt;
+</code></pre>
+<p>The jobs of the different frameworks differ only in the platform paths and in <code>JarDestinationFolder</code>, which is <code>bin/net462</code>, <code>bin/net8.0</code>, <code>bin/net9.0</code> or <code>bin/net10.0</code>. <code>EmbeddingJCOBridge</code> embeds the JCOBridge runtime in the JARs, which is why the published artifacts do not need a separate JCOBridge dependency. <code>WithJARSource</code> controls whether the sources are included in the JARs.</p>
+<h4 id="create-pom">Create POM</h4>
+<p>The POM job is the one used by the <code>maven.yaml</code> and <code>release.yaml</code> pipelines to publish the artifacts on Maven Central:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;POMBuilderEventArgs xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CancellationToken /&gt;
+  &lt;LogLevel&gt;Error&lt;/LogLevel&gt;
+  &lt;SourceFolder&gt;src\jvm&lt;/SourceFolder&gt;
+  &lt;SplitFolderByAssembly&gt;true&lt;/SplitFolderByAssembly&gt;
+  &lt;JDKTarget&gt;Version8&lt;/JDKTarget&gt;
+&lt;/POMBuilderEventArgs&gt;
+</code></pre>
+<p>The POM it generates is the one published with each artifact on Maven Central. It adds the source folder of every reflected assembly to the build, takes the JCOBridge runtime files from the <code>bin/&lt;framework&gt;</code> folder, attaches sources and Javadoc, signs the artifacts with GPG and publishes them with the Central Publishing plugin.</p>
+<h3 id="running-the-jobs">Running the jobs</h3>
+<p>A job is run with the CLI tool: the <code>-JobType</code> switch selects the stage, <code>-JobFile</code> the job file, and <code>-JDKFolder</code> the JDK to use. This is how the project pipelines run the build, JAR and POM stages on Windows, here for .NET 8:</p>
+<pre><code>bin\net8.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder &lt;path to a JDK&gt;
+bin\net8.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net8_0_win19.job -JDKFolder &lt;path to a JDK&gt;
+bin\net8.0\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+</code></pre>
+<p>On .NET 8 or later the tool can also be started through the <code>dotnet</code> host:</p>
+<pre><code>dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder &lt;path to a JDK&gt;
+</code></pre>
+<p>On Linux the build and JAR stages have their own <code>linux</code> job files, while the POM stage has only the <code>win19</code> one.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src/documentation/articles/usage.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2020 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

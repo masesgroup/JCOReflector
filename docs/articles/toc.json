@@ -1,2 +1,2 @@
 
-{"items":[{"name":"Introduction","href":"intro.html","topicHref":"intro.html"}]}
+{"items":[{"name":"Introduction","href":"intro.html","topicHref":"intro.html"},{"name":"Usage","href":"usage.html","topicHref":"usage.html"},{"name":"Generics support (experimental)","href":"generics.html","topicHref":"generics.html"}]}

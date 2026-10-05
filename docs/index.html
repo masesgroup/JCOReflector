@@ -115,6 +115,23 @@
 <p>The repository code and releases may contain bugs, the release cycle depends from critical discovered issues and/or enhancement requested from this or other projects.</p>
 <p>Looking for the help of experts? MASES Group can help you design, build, deploy, and manage applications mixing .NET and JVM™ enabled languages.</p>
 <hr>
+<h2 id="summary">Summary</h2>
+<ul>
+<li><a href="#the-project">The project</a>: what JCOReflector is and how it relies on the JCOBridge engine.</li>
+<li><a href="#why-jcoreflector">Why JCOReflector?</a>: calling .NET libraries from any Java version, Java 8 included.</li>
+<li><a href="#history-of-the-project">History of the project</a>: how the project started and evolved.</li>
+<li><a href="#simple-example">Simple example</a>: a basic example in Java, Scala and Kotlin.</li>
+<li><a href="#current-state">Current state</a>: what the reflector implements and its limitations, including the experimental <a href="#generics-support-experimental">generics support</a> with a worked example.</li>
+<li><a href="#java-8-integration-use-cases">Java 8 Integration Use Cases</a>: machine learning, Azure and PDF processing from legacy Java.</li>
+<li><a href="#how-to-use-the-generator-tool-jcoreflector">How to use the generator tool</a>: building the reflection tool.</li>
+<li><a href="#reflected-assemblies">Reflected Assemblies</a>: the reflected classes and their coverage statistics.</li>
+<li><a href="#runtime-engine">Runtime engine</a>: JCOBridge features, supported Java and .NET versions and resources.</li>
+</ul>
+<p>Articles:</p>
+<ul>
+<li><a href="articles/usage.html">Using JCOReflector</a>: the artifacts published on Maven Central, how the runtime is initialized, and how to run the reflection tool with job files.</li>
+<li><a href="articles/generics.html">Generics support</a>: how .NET generics are reflected, what is intentionally skipped, the known gaps, and how to use them from Java and Clojure.</li>
+</ul>
 <h2 id="the-project">The project</h2>
 <p>JCOReflectorEngine produces a set of <strong>.NET wrapper for Java™</strong> as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java™ projects like exposed in the example section.</p>
 <p>The core of the project is the innovative JCOReflector, a reflection engine which automatically writes Java™ classes using .NET class reflection.
@@ -149,82 +166,6 @@ public class LegacyApp {
 <blockquote>
 <p><strong>Use Case:</strong> Call modern .NET libraries (ML.NET, Azure SDK, etc.) from existing Java 8 applications without upgrading Java runtime.</p>
 </blockquote>
-<h2 id="runtime-engine">Runtime engine</h2>
-<p>JCOReflector uses <a href="https://www.jcobridge.com">JCOBridge</a>, and its <a href="https://www.jcobridge.com/features/">features</a>, to obtain many benefits:</p>
-<ul>
-<li><strong>Cyber-security</strong>:
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine">JVM™</a> and <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">CLR, or CoreCLR,</a> runs in the same process, but are insulated from each other;</li>
-<li>JCOBridge does not make any code injection into CLR or JVM™;</li>
-<li>JCOBridge does not use any other communication mechanism than JNI;</li>
-<li>JVM™ inherently inherits the cyber-security levels of running .NET (CLR);</li>
-</ul>
-</li>
-<li><strong>Direct access the CLR from any JVM™ application</strong>:
-<ul>
-<li>No need to learn new APIs: we try to expose the same .NET APIs in Java™ style;</li>
-<li>No extra validation cycle: bug fix, improvements, new features are immediately available;</li>
-<li>Documentation is shared.</li>
-</ul>
-</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p><a href="https://www.jcobridge.com">JCOBridge 2.6.*</a> can be used for free without any obligations. A commercial license must be purchased — or the software uninstalled — if you derive direct or indirect income from its usage.</p>
-</div>
-<h3 id="supported-versions">Supported Versions</h3>
-<p><strong>Java:</strong></p>
-<ul>
-<li>✅ Java 8 (JRE 1.8.0_161 or later)</li>
-<li>✅ Java 11 (LTS)</li>
-<li>✅ Java 17 (LTS)</li>
-<li>✅ Java 21 (LTS)</li>
-<li>✅ Java 25 (LTS)</li>
-</ul>
-<p><strong>Note:</strong> Works with Oracle JDK, OpenJDK, Amazon Corretto, Azul Zulu, and other compatible distributions.</p>
-<p><strong>.NET:</strong></p>
-<ul>
-<li>.NET Framework 4.6.2+</li>
-<li>.NET 6, 8, 9, 10</li>
-</ul>
-<p><strong>Note for Java 8 Users:</strong>
-JCOReflector enables modernization of Java 8 applications by providing access
-to cutting-edge .NET libraries without requiring Java runtime upgrades. Oracle
-Extended Support for Java 8 runs until December 2030.</p>
-<h3 id="jcobridge-resources">JCOBridge resources</h3>
-<p>Have a look at the following JCOBridge resources:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">JCOBridge</th>
-<th style="text-align: center;">2.5.* series</th>
-<th style="text-align: center;">2.6.* series</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">JCOReflector</td>
-<td style="text-align: center;">&gt; 1.12.* series</td>
-<td style="text-align: center;">&gt; 1.16.* series</td>
-</tr>
-<tr>
-<td style="text-align: center;">Release notes</td>
-<td style="text-align: center;"><a href="https://www.jcobridge.com/release-notes/">Link</a></td>
-<td style="text-align: center;"><a href="https://www.jcobridge.com/release-notes/">Link</a></td>
-</tr>
-<tr>
-<td style="text-align: center;">Community Edition</td>
-<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-25/">Conditions</a></td>
-<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-25/">Conditions</a></td>
-</tr>
-<tr>
-<td style="text-align: center;">Commercial Edition</td>
-<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-26/">Information</a></td>
-<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-26/">Information</a></td>
-</tr>
-</tbody>
-</table>
-<p>Latest release: <a href="https://www.nuget.org/packages/MASES.JCOBridge"><img src="https://img.shields.io/nuget/v/MASES.JCOBridge" alt="JCOBridge nuget"></a></p>
 <h2 id="history-of-the-project">History of the project</h2>
 <p>This project started in 2019 with the aims to create a set of Java™ (JVM™) classes which mimic .NET (Framework/8/9) conterparts, in May 2020 the first commit in GitHub.
 Using this project it is possible to use .NET API in Java™ and all JVM™ enabled languages (Scala, Kotlin, and so on).
@@ -338,11 +279,52 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 </ul>
 <h3 id="not-implemented-in-reflector">Not implemented in reflector:</h3>
 <ul>
-<li>Generic types</li>
 <li>Method decoration (Attributes)</li>
 <li>Unsafe methods</li>
 <li>Fields</li>
 </ul>
+<h3 id="generics-support-experimental">Generics support (experimental)</h3>
+<p>.NET generic types and members (classes, interfaces, delegates) can optionally be reflected into parameterized Java generics, instead of being discarded as before. The feature is opt-in and has known limitations driven by real differences between .NET's reified generics and Java's type erasure (some .NET generic APIs — <code>ref struct</code>s, &quot;generic math&quot; interfaces, method-level type parameters — have no representable Java equivalent and are intentionally skipped). See <a href="articles/generics.html">Generics support</a> for the full picture.</p>
+<p>A generic class is created with the anonymous subclass syntax, note the trailing <code>{}</code>: this is how the type arguments are recovered at runtime despite Java type erasure. The following example does two things with generics: it creates a <code>List&lt;T&gt;</code> and it passes a generic delegate, <code>Comparison&lt;T&gt;</code>, to <code>List&lt;T&gt;.Sort</code>. The full code is in the project test folder (<code>tests/jvm/java/src/generics/GenericComparisonDelegateSortsAList.java</code>).</p>
+<pre><code class="lang-java">List_1&lt;system.Object&gt; list = new List_1&lt;system.Object&gt;() {};
+list.Add(new system.Object());
+list.Add(new system.Object());
+
+final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
+
+Comparison_1&lt;system.Object&gt; comparison = new Comparison_1&lt;system.Object&gt;() {
+    @Override
+    public int Invoke(system.Object x, system.Object y) {
+        calls.incrementAndGet();
+        return 0;
+    }
+};
+list.Sort(comparison);
+
+if (calls.get() == 0) throw new AssertionError(&quot;Java comparison never invoked&quot;);
+</code></pre>
+<p>The same example written in Scala is the following one:</p>
+<pre><code class="lang-scala">val list = new List_1[system.Object]() {}
+list.Add(new system.Object())
+list.Add(new system.Object())
+
+val calls = new java.util.concurrent.atomic.AtomicInteger()
+
+val comparison = new Comparison_1[system.Object]() {
+  override def Invoke(x: system.Object, y: system.Object): Int = {
+    calls.incrementAndGet()
+    0
+  }
+}
+list.Sort(comparison)
+
+if (calls.get() == 0) throw new AssertionError(&quot;Scala comparison never invoked&quot;)
+</code></pre>
+<p>In Clojure, where the anonymous subclass cannot be declared, a small helper generates it at runtime: see <a href="articles/generics.html#using-generics-from-clojure">Using generics from Clojure</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Some generic scenarios, such as passing a <code>Comparison&lt;T&gt;</code> delegate to <code>List&lt;T&gt;.Sort</code> like in this example, require JCOBridge 2.6.10 preview 4 or later.</p>
+</div>
 <h3 id="limitations">Limitations</h3>
 <p>C# and Java™ are different languages. The reflection process cannot reflects into Java™ some features available on C#: an example are properties where get/set is automatically choosed from C# compiler
 Other limitations comes from some differences between the two engines (CLR and JVM™).
@@ -408,7 +390,7 @@ Eventually migrate Java when ready
 <blockquote>
 <p>dotnet build JCOReflector\JCOReflectorCLI.sln</p>
 </blockquote>
-<p>Within the folder bin you will find three subfolders:</p>
+<p>Within the folder bin you will find four subfolders:</p>
 <ul>
 <li><strong>net462</strong> (available only on Windows platform)</li>
 <li><strong>net8.0</strong> (available on .NET 8 supported platforms)</li>
@@ -422,6 +404,7 @@ Eventually migrate Java when ready
 </ul>
 <p><img src="images/jcoreflector.png" alt="JCOReflector" title="JCOReflector screenshot">
 <img src="images/jcoreflector2.png" alt="JCOReflector" title="JCOReflector screenshot"></p>
+<p>The reflection can also be driven by job files, one for each stage (reflect, build, JAR creation and POM creation): see <a href="articles/usage.html#job-files">Job files</a> and <a href="articles/usage.html#running-the-jobs">Running the jobs</a> in the usage article for the details and the command lines.</p>
 <h2 id="reflected-assemblies">Reflected Assemblies</h2>
 <p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>8</strong> (<em>net8.0</em>), <strong>9</strong> (<em>net9.0</em>) and <strong>10</strong> (<em>net10.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
 <h3 id="statistics">Statistics</h3>
@@ -443,6 +426,82 @@ Eventually migrate Java when ready
 </tr>
 </tbody>
 </table>
+<h2 id="runtime-engine">Runtime engine</h2>
+<p>JCOReflector uses <a href="https://www.jcobridge.com">JCOBridge</a>, and its <a href="https://www.jcobridge.com/features/">features</a>, to obtain many benefits:</p>
+<ul>
+<li><strong>Cyber-security</strong>:
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine">JVM™</a> and <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">CLR, or CoreCLR,</a> runs in the same process, but are insulated from each other;</li>
+<li>JCOBridge does not make any code injection into CLR or JVM™;</li>
+<li>JCOBridge does not use any other communication mechanism than JNI;</li>
+<li>JVM™ inherently inherits the cyber-security levels of running .NET (CLR);</li>
+</ul>
+</li>
+<li><strong>Direct access the CLR from any JVM™ application</strong>:
+<ul>
+<li>No need to learn new APIs: we try to expose the same .NET APIs in Java™ style;</li>
+<li>No extra validation cycle: bug fix, improvements, new features are immediately available;</li>
+<li>Documentation is shared.</li>
+</ul>
+</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p><a href="https://www.jcobridge.com">JCOBridge 2.6.*</a> can be used for free without any obligations. A commercial license must be purchased — or the software uninstalled — if you derive direct or indirect income from its usage.</p>
+</div>
+<h3 id="supported-versions">Supported Versions</h3>
+<p><strong>Java:</strong></p>
+<ul>
+<li>✅ Java 8 (JRE 1.8.0_161 or later)</li>
+<li>✅ Java 11 (LTS)</li>
+<li>✅ Java 17 (LTS)</li>
+<li>✅ Java 21 (LTS)</li>
+<li>✅ Java 25 (LTS)</li>
+</ul>
+<p><strong>Note:</strong> Works with Oracle JDK, OpenJDK, Amazon Corretto, Azul Zulu, and other compatible distributions.</p>
+<p><strong>.NET:</strong></p>
+<ul>
+<li>.NET Framework 4.6.2+</li>
+<li>.NET 6, 8, 9, 10</li>
+</ul>
+<p><strong>Note for Java 8 Users:</strong>
+JCOReflector enables modernization of Java 8 applications by providing access
+to cutting-edge .NET libraries without requiring Java runtime upgrades. Oracle
+Extended Support for Java 8 runs until December 2030.</p>
+<h3 id="jcobridge-resources">JCOBridge resources</h3>
+<p>Have a look at the following JCOBridge resources:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">JCOBridge</th>
+<th style="text-align: center;">2.5.* series</th>
+<th style="text-align: center;">2.6.* series</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">JCOReflector</td>
+<td style="text-align: center;">&gt; 1.12.* series</td>
+<td style="text-align: center;">&gt; 1.16.* series</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release notes</td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/release-notes/">Link</a></td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/release-notes/">Link</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">Community Edition</td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-25/">Conditions</a></td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-25/">Conditions</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">Commercial Edition</td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-26/">Information</a></td>
+<td style="text-align: center;"><a href="https://www.jcobridge.com/pricing-26/">Information</a></td>
+</tr>
+</tbody>
+</table>
+<p>Latest release: <a href="https://www.nuget.org/packages/MASES.JCOBridge"><img src="https://img.shields.io/nuget/v/MASES.JCOBridge" alt="JCOBridge nuget"></a></p>
 
 </article>
 

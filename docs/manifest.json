@@ -844,6 +844,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/generics.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/generics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
@@ -861,6 +871,16 @@
         },
         ".json": {
           "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/usage.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/usage.html"
         }
       },
       "version": ""

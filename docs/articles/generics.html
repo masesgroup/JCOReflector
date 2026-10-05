@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Generics support (experimental) | MASES Group website - JCOReflector </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Generics support (experimental) | MASES Group website - JCOReflector ">
+      <meta name="description" content="Current state of .NET generics support in JCOReflector — what is reflected, what is intentionally skipped, and the Java-language limits behind those choices.">
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/blob/master/src/documentation/articles/generics.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="generics-support-experimental">Generics support (experimental)</h1>
+
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Support for .NET generic types and members is <strong>experimental</strong>. It is controlled by an engine-level <code>EnableGenerics</code> switch. Enabling it changes the shape of the generated Java code (see <a href="#impact-on-non-generic-output">Impact on non-generic output</a> below) and is not yet recommended for production reflection runs. This page documents the current state as of this writing and will be updated as the feature matures.</p>
+</div>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Some generic scenarios depend on the JCOBridge runtime version. For example, passing a <code>Comparison&lt;T&gt;</code> delegate to <code>List&lt;T&gt;.Sort</code> requires JCOBridge 2.6.10 preview 4 or later.</p>
+</div>
+<h2 id="why-generics-needed-dedicated-work">Why generics needed dedicated work</h2>
+<p>Before this feature, JCOReflector discarded every .NET generic type and member during reflection: a generic class, interface, delegate, or method was simply not reflected. This kept the generated Java code simple, but excluded a large and important part of the .NET surface — collections (<code>List&lt;T&gt;</code>, <code>Dictionary&lt;TKey,TValue&gt;</code>), <code>Task&lt;TResult&gt;</code>, LINQ, and most modern .NET APIs are generic.</p>
+<p>The core difficulty is that <strong>.NET generics and Java generics work differently at runtime</strong>. .NET generics are <em>reified</em>: <code>List&lt;int&gt;</code> and <code>List&lt;string&gt;</code> are distinct types at runtime, each with its own compiled code and static state. Java generics are implemented via <em>type erasure</em>: <code>List&lt;Integer&gt;</code> and <code>List&lt;String&gt;</code> share a single compiled class, and all type-parameter information is erased by the time the code runs. Mapping the former onto the latter means working around erasure everywhere it would otherwise cause a compile error, and accepting that some .NET APIs simply have no equivalent Java representation.</p>
+<h2 id="how-reflected-generic-types-work">How reflected generic types work</h2>
+<ul>
+<li>A reflected generic .NET type (e.g. <code>List&lt;T&gt;</code>) becomes a parameterized Java class or interface (<code>List_1&lt;T extends IJCOBridgeReflected&gt;</code>), following the naming convention <code>&lt;Name&gt;_&lt;arity&gt;</code> (arity-based suffix) to avoid collisions between same-named types of different arity (<code>Lazy_1&lt;T&gt;</code>, <code>Lazy_2&lt;T,TMetadata&gt;</code>, and so on).</li>
+<li>Every type parameter is bounded by <code>IJCOBridgeReflected</code>, the marker interface implemented by every JCOReflector-generated class. This is what lets the generated code marshal a type argument back and forth across the bridge — and it is also the source of the most common limitation (see <a href="#bound-limitations">Bound limitations</a> below).</li>
+<li>Creating an instance of a generated generic class requires the Java &quot;anonymous subclass&quot; idiom, e.g. <code>new List_1&lt;Foo&gt;(nativeHandle){}</code> (note the trailing <code>{}</code>). This is a deliberate, well-established Java pattern (the same &quot;super type token&quot; trick used by libraries such as Gson and Guava) for recovering a type argument's <code>Class&lt;?&gt;</code> at runtime despite erasure: the JVM retains generic information on an anonymous subclass's supertype, even though it discards it everywhere else. Constructing an instance without the trailing <code>{}</code> throws a clear <code>IllegalArgumentException</code> explaining the required syntax.</li>
+<li>The <code>Class&lt;?&gt;</code> recovered this way is cached on the instance (<code>genericArgumentClasses</code> in the shared <code>NetObject</code> base class) and reused whenever the generated code needs to build a new instance of a type parameter — for example when marshalling a returned array of <code>T</code>, or a <code>ref T</code> return value from newer .NET APIs — via a helper method (<code>instantiateGenericArgument</code>) that builds the instance reflectively instead of writing <code>new T(...)</code>, which Java forbids outright.</li>
+<li>Generic <strong>delegates</strong> (<code>Comparison&lt;T&gt;</code>, <code>Func&lt;T&gt;</code>, and similar) work the same way from the caller's point of view, even though they extend <code>JCDelegate</code> rather than <code>NetObject</code>: a shared helper (<code>NetGenericHelper</code>) recovers the type argument from the anonymous subclass and lazily resolves the closed CLR delegate type the first time it's needed, instead of requiring the caller to build the closed type name by hand. See the <a href="#example-sorting-a-list-with-a-generic-comparison-delegate">example</a> below.</li>
+</ul>
+<h2 id="what-is-intentionally-not-reflected">What is intentionally not reflected</h2>
+<p>Several categories of .NET generic APIs are excluded on purpose, because there is no correct way to represent them in Java — not because of a missing feature, but because of a hard language or runtime limit:</p>
+<ul>
+<li><strong><code>ref struct</code> types</strong> (<code>Span&lt;T&gt;</code>, <code>ReadOnlySpan&lt;T&gt;</code>, and similar). These wrap a native pointer or stack reference that cannot be boxed, cannot cross the bridge as an object, and have no JVM equivalent. The type itself, and any member that uses it as a parameter or return type, is skipped entirely.</li>
+<li><strong>&quot;Generic math&quot; interfaces</strong> (<code>System.Numerics.INumber&lt;TSelf&gt;</code> and the whole family: <code>IBinaryInteger</code>, <code>IFloatingPointIeee754</code>, the <code>I*Operators</code> interfaces, plus <code>IParsable</code>/<code>ISpanParsable</code>/<code>IUtf8SpanParsable</code>). These rely on C# <strong>static abstract interface members</strong>, a language feature with no Java counterpart at all — a Java interface can never declare a static abstract member. Their operator interfaces are also bound to <code>TResult = bool</code>, which can never satisfy the <code>IJCOBridgeReflected</code> bound. The whole family is excluded: in practice every generic interface of <code>System.Numerics</code>, plus <code>IParsable</code>, <code>ISpanParsable</code> and <code>IUtf8SpanParsable</code>, is matched by pattern.</li>
+<li><strong>Method-level type parameters with no construction point.</strong> A class-level type parameter (e.g. the <code>T</code> in <code>List&lt;T&gt;</code>) can be resolved at runtime because the anonymous-subclass trick captures its <code>Class&lt;?&gt;</code> when the instance is built. A type parameter that belongs to a single <strong>method</strong> instead (e.g. <code>Array.Empty&lt;T&gt;()</code>, <code>MemoryMarshal.GetArrayDataReference&lt;T&gt;(T[])</code>) has no such capture point — there is no moment where the caller supplies a <code>Class&lt;T&gt;</code> — so these members are skipped rather than emitting code that cannot compile.</li>
+<li><strong>A generic class-level parameter used from a <code>static</code> member.</strong> In .NET, each closed generic instantiation (<code>Foo&lt;int&gt;</code>, <code>Foo&lt;string&gt;</code>) has its own independent static state, so a static member can reference the class's own type parameter. In Java there is exactly one shared class per raw type regardless of how many parameterizations exist, so a static context can never see a class-level type parameter. Such members are skipped.</li>
+<li><strong>Genuine erasure collisions.</strong> Some pairs of distinct .NET members become identical once Java erasure removes their type arguments — two overloads (<code>Task.WhenAny(IEnumerable&lt;Task&gt;)</code> vs <code>WhenAny&lt;TResult&gt;(IEnumerable&lt;Task&lt;TResult&gt;&gt;)</code>), an array parameter next to a <code>params T[]</code> (<code>ImmutableArray&lt;T&gt;.AddRange</code>), or an inherited member whose erased signature collides with one from a base type or interface. Where a rename keeps both members usable (see <a href="#renaming-to-avoid-erasure-collisions">Renaming</a> below) that is preferred; where no rename is possible without misrepresenting the API (e.g. two overloads whose only difference disappears entirely under erasure), the losing member is skipped.</li>
+</ul>
+<h2 id="bound-limitations">Bound limitations</h2>
+<p>Every type parameter is declared as <code>&lt;T extends IJCOBridgeReflected&gt;</code>. This is necessary for the generated code to marshal <code>T</code> across the bridge, but it means a type parameter <strong>cannot</strong> be filled with:</p>
+<ul>
+<li>a plain Java type: <code>java.lang.String</code>, or a Java primitive (<code>int</code>, <code>boolean</code>, ...). These are the types onto which <code>System.String</code> and the native-mapped .NET primitives are mapped, and none of them implements <code>IJCOBridgeReflected</code>, so using one as a type argument is a compile-time error.</li>
+</ul>
+<p>A reflected class is always a valid type argument, so the native-mapped .NET primitives can be used through their wrapper classes. The wrappers of the primitives mapped onto Java types are hand-written classes (<code>system.Boolean</code>, <code>system.Byte</code>, <code>system.Double</code>, <code>system.Float</code>, <code>system.Int16</code>, <code>system.Int32</code> and <code>system.Int64</code>), and a .NET value type that has no Java equivalent, such as <code>UInt32</code>, is generated like any other class. For example <code>List_1&lt;system.Int32&gt;</code> and <code>Dictionary_2&lt;UInt32, UInt32&gt;</code> are valid, and the CLR compares the keys by value, not by wrapper (see the <a href="#example-native-types-with-generics">native types example</a> below). <code>System.String</code> is mapped onto <code>java.lang.String</code> and has no wrapper class, so it cannot be a type argument.</p>
+<p>When a .NET type fixes one of its own base type's parameters to such a type — the most common real-world case is <code>KeyedCollection&lt;string, TItem&gt;</code>, i.e. any &quot;keyed by name&quot; collection — the affected <code>extends</code>/<code>implements</code> reference is generated <strong>raw</strong> (unparameterized) instead of failing to compile. This is the same trade-off already accepted elsewhere (see below): the class remains usable, but loses compile-time type-safety on that specific reference.</p>
+<h2 id="renaming-to-avoid-erasure-collisions">Renaming to avoid erasure collisions</h2>
+<p>Where two members would otherwise collide only because of erasure — not because they are truly the same member — the generated one is renamed with a descriptive suffix rather than dropped, so both remain available:</p>
+<ul>
+<li><code>Equals(T)</code> / <code>Equals(T, T)</code> on <code>IEquatable&lt;T&gt;</code> / <code>IEqualityComparer&lt;T&gt;</code> implementations, which would otherwise erase to the same signature as <code>NetObject.Equals(IJCOBridgeReflected[, IJCOBridgeReflected])</code>, are generated as <code>EqualsGeneric(...)</code>.</li>
+<li><code>Remove(TKey)</code> / <code>Contains(TKey)</code> on <code>KeyedCollection&lt;TKey,TItem&gt;</code> and similar types, which would otherwise erase to the same signature as the inherited <code>Collection&lt;TItem&gt;.Remove(TItem)</code> / <code>Contains(TItem)</code>, are generated as <code>RemoveByKey(...)</code> / <code>ContainsByKey(...)</code>.</li>
+</ul>
+<h2 id="exceptions-cannot-be-generic-classes">Exceptions cannot be generic classes</h2>
+<p>Java forbids a generic class from extending <code>java.lang.Throwable</code>, without exception (JLS §8.1.2) — this is not something JCOReflector can work around. A .NET generic exception type (e.g. <code>FaultException&lt;TDetail&gt;</code>) is therefore always generated as a <strong>plain, non-generic</strong> Java class. Its class-level type parameter is exposed everywhere as its bound, <code>IJCOBridgeReflected</code>, instead of a real type variable — for example <code>FaultException_1.getDetail()</code> returns <code>IJCOBridgeReflected</code>, not <code>TDetail</code>. This is the one case where the generic parameter is always erased to its bound in the public API, by necessity rather than by choice.</p>
+<h2 id="ref-and-out-parameters"><code>ref</code> and <code>out</code> parameters</h2>
+<p>Parameters declared as <code>ref</code> or <code>out</code> in .NET are passed through <code>JCORefOut&lt;T&gt;</code>. Generics do not change how it works, and no type-argument information is needed to use it: for a reflected instance, <code>JCORefOut</code> passes the underlying .NET instance to the bridge, and the result of the call comes back through the instance supplied by the caller, exactly as in the non-generic <code>UInt32.TryParse(valueStr, JCORefOut.Create(i))</code> example. As a consequence, the caller must supply an existing, non-null instance.</p>
+<p>An instance member that has a <code>ref</code> or <code>out</code> parameter of a class-level type parameter is therefore reflected normally. For example, <code>Dictionary&lt;TKey,TValue&gt;.TryGetValue</code> is generated as <code>TryGetValue(TKey key, JCORefOut&lt;TValue&gt; value)</code>.</p>
+<p>Generics affect <code>ref</code> and <code>out</code> parameters only through the general limits described above:</p>
+<ul>
+<li>A <strong>static</strong> member that uses a class-level type parameter, including as a <code>ref</code> or <code>out</code> parameter, is not reflected.</li>
+<li>A method whose return type is a <strong>method-level</strong> type parameter is not reflected, even if it has <code>ref</code> parameters. For example, the generic <code>Interlocked.CompareExchange&lt;T&gt;(ref T, T, T)</code> and <code>Interlocked.Exchange&lt;T&gt;(ref T, T)</code> are skipped, and only the <code>object</code> overloads, taking a <code>JCORefOut&lt;NetObject&gt;</code>, are generated.</li>
+<li>Two overloads that differ only by what is inside a <code>JCORefOut&lt;...&gt;</code> have the same signature after Java erasure, because <code>JCORefOut&lt;T&gt;</code> and <code>JCORefOut&lt;NetObject&gt;</code> both erase to <code>JCORefOut</code>. Only the first one is generated.</li>
+</ul>
+<h2 id="using-generics-from-clojure">Using generics from Clojure</h2>
+<p>The anonymous-subclass idiom described above (<code>new List_1&lt;Foo&gt;(){}</code>) cannot be written in Clojure. <code>proxy</code>, <code>reify</code> and <code>gen-class</code> generate classes, but none of them writes the generic <code>Signature</code> attribute of the superclass, which is exactly what JCOReflector reads to recover the type arguments. A subclass produced by those forms looks, to the reflection code, like a raw <code>List_1</code>, so the type argument is lost and instantiating a generic class fails the same way it does in Java when the trailing <code>{}</code> is omitted.</p>
+<p>To fill that gap, the Clojure tests ship a small helper namespace, <code>generics.GenericSupport</code> (currently in <code>tests/jvm/clojure/src/main/clojure/generics/GenericSupport.clj</code>). It generates, at runtime, the same kind of class <code>javac</code> emits for an anonymous generic subclass.</p>
+<h3 id="the-new-generic-function">The <code>new-generic</code> function</h3>
+<pre><code class="lang-clojure">(gs/new-generic super type-args)
+(gs/new-generic super type-args impls)
+</code></pre>
+<ul>
+<li><code>super</code> is the generated generic class to instantiate (for example <code>List_1</code> or <code>Comparison_1</code>).</li>
+<li><code>type-args</code> is a vector of classes, one per type parameter (for example <code>[system.Object]</code>). Each one must satisfy the <code>IJCOBridgeReflected</code> bound, so the <a href="#bound-limitations">bound limitations</a> apply unchanged.</li>
+<li><code>impls</code> is an optional map from a method name to the Clojure function that implements it, for example <code>{&quot;Invoke&quot; (fn [x y] 0)}</code>. It is meant for delegates and for classes whose virtual methods must be overridden from Clojure.</li>
+</ul>
+<p>The return value is an instance of a public, no-argument subclass of <code>super</code>, whose <code>Signature</code> attribute is <code>Super&lt;TypeArg1, ...&gt;</code>.</p>
+<h3 id="how-it-works">How it works</h3>
+<p>The helper builds the subclass bytecode with the ASM copy that ships inside Clojure (<code>clojure.asm</code>), so no extra dependency is needed:</p>
+<ul>
+<li>The class has a public no-argument constructor that calls the superclass constructor, and a public field <code>impl</code> that holds a Clojure function.</li>
+<li>For every method named in <code>impls</code>, the helper looks up the overridable method in the superclass hierarchy (public or protected, not static, not final, bridge and synthetic methods skipped) and overrides it. The override boxes the arguments, calls <code>impl</code> with the method name and the argument array, and converts the result back to the declared return type: <code>void</code> discards it, <code>boolean</code> and <code>char</code> are unboxed, the other primitives go through <code>java.lang.Number</code>, and reference types are cast.</li>
+<li>The Clojure function receives the <strong>boxed</strong> arguments of the method, so a <code>Comparison&lt;T&gt;</code> delegate receives two objects and must return a number that is converted to <code>int</code>.</li>
+<li>Generated classes are cached per combination of superclass, type arguments and overridden method names, so repeated calls with the same shape reuse one class.</li>
+<li><strong>Generic classes and generic delegates need nothing different.</strong> <code>NetObject</code> (generic classes) and <code>NetGenericHelper</code> (generic delegates, which extend <code>JCDelegate</code> instead) both read the type arguments from <code>getGenericSuperclass()</code> of the instance's class. The generated <code>Signature</code> is therefore all they require, whichever base class is involved.</li>
+<li><strong>The generated class is defined in the same package and class loader as the superclass</strong>, and is named <code>&lt;package of super&gt;.DynamicGeneratedN</code> (for example <code>system.collections.generic.DynamicGenerated1</code>). This is required: when an instance crosses the bridge, JCOBridge resolves the class by name to read its generic signature and decide which .NET type to allocate. A class that lives only in a private class loader cannot be resolved and the call fails with an exception whose message is just the generated class name. On Java 9 and later the class is defined with <code>MethodHandles.Lookup.defineClass</code>; a reflective fallback on <code>ClassLoader.defineClass</code> exists for Java 8.</li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="lang-clojure">(ns example
+  (:require [generics.GenericSupport :as gs])
+  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected]
+           [system Comparison_1]
+           [system.collections.generic List_1]))
+
+;; a List&lt;System.Object&gt;
+(let [^List_1 lst (gs/new-generic List_1 [system.Object])
+      a (system.Object.)]
+  ;; see &quot;Overload resolution&quot; below for the type hint
+  (.Add lst ^IJCOBridgeReflected a))
+
+;; a Comparison&lt;System.Object&gt; delegate implemented by a Clojure function
+(def comparison
+  (gs/new-generic Comparison_1 [system.Object]
+                  {&quot;Invoke&quot; (fn [x y] 0)}))
+</code></pre>
+<h3 id="limits-of-the-helper">Limits of the helper</h3>
+<ul>
+<li><strong>Plain type arguments only.</strong> The generated <code>Signature</code> lists each type argument as a simple class, so a type argument that is itself parameterized (<code>List&lt;List&lt;Foo&gt;&gt;</code>) cannot be expressed. The runtime side agrees: <code>NetGenericHelper</code> throws an <code>IllegalArgumentException</code> (&quot;unsupported generic argument&quot;) for anything that is not a plain class.</li>
+<li><strong>Overrides are selected by name.</strong> If several overridable methods share the same name, the helper picks the first non-bridge one it finds in the hierarchy. A single entry in <code>impls</code> cannot target a specific overload.</li>
+<li><strong>Overload resolution is done by Clojure, not by <code>javac</code>.</strong> Clojure sees only the erased signatures, so a call that <code>javac</code> resolves through the generic parameter (<code>Add(T)</code>) can be bound by Clojure to a more specific overload, for example an explicit-interface <code>Add(...)</code>, which throws <code>UnsupportedOperationException</code>. Hinting the arguments as <code>IJCOBridgeReflected</code>, as in the example above, forces the intended overload. When no hint is enough (for example <code>List_1.Sort</code> with a <code>Comparison_1</code>), select the method by reflection.</li>
+<li><strong>Instances only.</strong> The helper does not make static members or method-level type parameters reachable; the <a href="#what-is-intentionally-not-reflected">exclusions listed above</a> are the same for every language.</li>
+<li><strong>Java versions.</strong> The Clojure generics tests pass on Java 8, 11, 17, 21 and 25.</li>
+<li><strong>Experimental.</strong> Like the feature it supports, the helper lives in the test sources and may change.</li>
+</ul>
+<h2 id="known-gaps">Known gaps</h2>
+<p>A number of types and members are currently excluded through the exporting avoidance map, pending further investigation. The entries are temporary: each is either a genuine Java erasure limit (two .NET members that cannot coexist once type arguments are erased) or a bug not yet root-caused, and they are expected to be revisited in a future iteration.</p>
+<p>Whole types:</p>
+<ul>
+<li><code>System.Collections.Generic.IAlternateEqualityComparer&lt;TAlternate,T&gt;</code> (.NET 9+) — its <code>Equals(TAlternate, T)</code> collides with <code>NetObject.Equals</code> similarly to the cases above, but on two <em>different</em> type parameters, which the current renaming logic does not yet detect.</li>
+<li><code>System.Windows.Markup.INameScopeDictionary</code> — its <code>Implementation</code> class is missing members it inherits transitively through <code>IDictionary&lt;TKey,TValue&gt;</code>; the class-generation step currently only collects members declared directly on the interface being processed, not the full transitive interface closure.</li>
+</ul>
+<p>Members:</p>
+<ul>
+<li><code>SyndicationElementExtensionCollection.Add</code></li>
+<li><code>ICollection&lt;T&gt;.Add</code> and <code>ICollection&lt;T&gt;.Remove</code> — they affect <code>IDictionary&lt;TKey,TValue&gt;</code>, <code>ISet&lt;T&gt;</code>, <code>IMessageFilterTable&lt;T&gt;</code> and their <code>Implementation</code> classes, and depend on the first open root cause listed below.</li>
+<li><code>ImmutableArray&lt;T&gt;.AddRange</code></li>
+<li><code>Sse41.Extract</code></li>
+<li><code>TryFormat</code> on <code>Guid</code>, <code>Version</code>, <code>Rune</code>, <code>IPAddress</code> and <code>IPNetwork</code></li>
+<li><code>GetPinnableReference</code> on <code>Span&lt;T&gt;</code> and <code>ReadOnlySpan&lt;T&gt;</code> — probably redundant, since both are <code>ref struct</code> types and are already excluded as whole types (see <a href="#what-is-intentionally-not-reflected">What is intentionally not reflected</a>); the entries are to be reviewed.</li>
+</ul>
+<p><code>SyndicationElementExtensionCollection.Add</code>, <code>ImmutableArray&lt;T&gt;.AddRange</code>, <code>Sse41.Extract</code> and <code>TryFormat</code> are genuine Java erasure collisions between distinct .NET overloads or members (an array next to a <code>params T[]</code>, or an inherited explicit-interface member next to a real public one). They cannot be fixed without misrepresenting the .NET API and are expected to stay, unless a better approach turns up.</p>
+<p>A whole-type entry (one without a member list) also stops the type itself from being exported as its own file. Skipping only its members would leave the type's <code>Implementation</code> class generated anyway, still missing members inherited from non-excluded interfaces such as <code>IComparable</code> or <code>IFormattable</code>.</p>
+<h3 id="root-causes-still-open">Root causes still open</h3>
+<ul>
+<li><strong>Constructed type arguments.</strong> The recursive generic-type-name resolver does not handle a type argument that is itself a constructed generic type, for example <code>KeyValuePair&lt;TKey,TValue&gt;</code> inside <code>IDictionary&lt;TKey,TValue&gt; : ICollection&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;</code>. It falls back to a raw reference instead of resolving it, and this is what forces most of the <code>ICollection&lt;T&gt;</code> family into the avoidance map.</li>
+<li><strong>Transitive interface closure.</strong> The generated <code>Implementation</code> class of an interface only collects the methods declared directly on that interface, not the full transitive interface closure. This causes the <code>INameScopeDictionary</code> <code>Implementation</code> class to miss members it inherits through <code>IDictionary&lt;TKey,TValue&gt;</code>.</li>
+</ul>
+<h2 id="impact-on-non-generic-output">Impact on non-generic output</h2>
+<p>Regenerating with <code>EnableGenerics</code> disabled reproduces the pre-generics output, with one cosmetic difference: some references are written with their fully-qualified class name where a simple name used to be. This has no effect on the behavior of the generated code, but it means the output is not byte-for-byte identical to a pre-generics build.</p>
+<h2 id="example-sorting-a-list-with-a-generic-comparison-delegate">Example: sorting a list with a generic <code>Comparison</code> delegate</h2>
+<p>This example exercises three mechanisms described above together: constructing a generic class (<code>List&lt;T&gt;</code>), passing a generic <strong>delegate</strong> as a synchronous, value-returning callback (<code>Comparison&lt;T&gt;</code>), and the anonymous-subclass idiom used for both. The full source lives at <code>tests/jvm/java/src/generics/GenericComparisonDelegateSortsAList.java</code>.</p>
+<pre><code class="lang-java">List_1&lt;system.Object&gt; list = new List_1&lt;system.Object&gt;() {};
+list.Add(new system.Object());
+list.Add(new system.Object());
+
+final java.util.concurrent.atomic.AtomicInteger calls = new java.util.concurrent.atomic.AtomicInteger();
+
+Comparison_1&lt;system.Object&gt; comparison = new Comparison_1&lt;system.Object&gt;() {
+    @Override
+    public int Invoke(system.Object x, system.Object y) {
+        calls.incrementAndGet();
+        return 0;
+    }
+};
+list.Sort(comparison);
+
+if (calls.get() == 0) throw new AssertionError(&quot;Java comparison never invoked&quot;);
+</code></pre>
+<p>Note that, exactly as for <code>List_1&lt;T&gt;</code> itself, the delegate is constructed with the trailing <code>{}</code> and only <code>Invoke</code> needs to be overridden — the generated <code>Comparison_1</code> class resolves its own closed CLR delegate type (<code>System.Comparison\</code>1[System.Object]`) lazily, via the same anonymous-subclass capture used everywhere else, instead of requiring the caller to build that name by hand.</p>
+<h2 id="example-native-types-with-generics">Example: native types with generics</h2>
+<p>The same test class, <code>tests/jvm/java/src/generics/GenericComparisonDelegateSortsAList.java</code>, also checks how native types behave with generics. It covers the cases below.</p>
+<p><strong>Native values in the members of a generic class.</strong> A native <code>int</code> can be a constructor argument, and <code>boolean</code> and <code>int</code> values come back from the members of a generic class as plain Java values:</p>
+<pre><code class="lang-java">Dictionary_2&lt;system.Object, system.Object&gt; dict = new Dictionary_2&lt;system.Object, system.Object&gt;(16) {};
+dict.Add(key, value);
+
+boolean found = dict.ContainsKey(key);   // boolean result
+int count = dict.getCount();             // int property
+</code></pre>
+<p><strong>Wrapper classes of value types as type arguments.</strong> <code>UInt32</code> is a reflected class, so it can fill a type parameter, and so can the hand-written wrappers of the primitives such as <code>system.Int32</code> (the test uses <code>UInt32</code>). The CLR works on the values, and an <code>out</code> parameter of a type-argument type returns its result through the instance supplied, as described in <a href="#ref-and-out-parameters"><code>ref</code> and <code>out</code> parameters</a>:</p>
+<pre><code class="lang-java">Dictionary_2&lt;UInt32, UInt32&gt; dict = new Dictionary_2&lt;UInt32, UInt32&gt;() {};
+dict.Add(UInt32.Parse(&quot;1&quot;), UInt32.Parse(&quot;10&quot;));
+
+// a different wrapper holding the same number is the same key
+boolean found = dict.ContainsKey(UInt32.Parse(&quot;1&quot;));   // true
+
+// the out value comes back through the instance supplied
+UInt32 value = UInt32.Parse(&quot;0&quot;);
+dict.TryGetValue(UInt32.Parse(&quot;1&quot;), JCORefOut.Create(value));   // value now holds 10
+</code></pre>
+<p>A <code>Comparison_1&lt;UInt32&gt;</code> delegate can also be passed to <code>List_1&lt;UInt32&gt;.Sort</code>, exactly as in the <code>system.Object</code> example above.</p>
+<p><strong>Plain Java types.</strong> A plain Java type cannot be a type argument. The test checks the bound of the type parameter by reflection, because using such a type is a compile-time error: <code>List_1</code>'s type parameter is bounded by <code>IJCOBridgeReflected</code>, and <code>String</code>, <code>Integer</code> and <code>Boolean</code> do not implement it.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The members of a reflected class mirror the framework the artifact was generated from. <code>Dictionary&lt;TKey,TValue&gt;.TryAdd</code> and <code>EnsureCapacity</code> do not exist on .NET Framework, so the <code>net462</code> artifact does not offer them. The test works on every framework because it uses <code>Add</code> and catches the <code>ArgumentException</code> thrown for a duplicate key.</p>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src/documentation/articles/generics.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2020 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

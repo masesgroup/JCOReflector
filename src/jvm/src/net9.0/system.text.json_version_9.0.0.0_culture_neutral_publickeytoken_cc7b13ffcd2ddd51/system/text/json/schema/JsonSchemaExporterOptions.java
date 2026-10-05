@@ -46,7 +46,7 @@ import system.text.json.schema.JsonSchemaExporterOptions;
  * The base .NET class managing System.Text.Json.Schema.JsonSchemaExporterOptions, System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions" target="_top">https://learn.microsoft.com/dotnet/api/System.Text.Json.Schema.JsonSchemaExporterOptions</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

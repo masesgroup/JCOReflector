@@ -47,7 +47,7 @@ import system.security.cryptography.xml.EncryptedXml;
  * The base .NET class managing System.Security.Cryptography.Xml.XmlDecryptionTransform, System.Security.Cryptography.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.XmlDecryptionTransform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.XmlDecryptionTransform</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDecryptionTransform" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.XmlDecryptionTransform</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

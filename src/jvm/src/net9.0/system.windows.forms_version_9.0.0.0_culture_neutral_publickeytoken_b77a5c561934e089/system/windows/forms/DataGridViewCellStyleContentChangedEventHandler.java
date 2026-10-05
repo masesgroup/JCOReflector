@@ -44,7 +44,7 @@ import system.windows.forms.IDataGridViewCellStyleContentChangedEventHandler;
  * The base .NET class managing System.Windows.Forms.DataGridViewCellStyleContentChangedEventHandler, System.Windows.Forms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellStyleContentChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellStyleContentChangedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellStyleContentChangedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Forms.DataGridViewCellStyleContentChangedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -49,7 +49,7 @@ import system.security.cryptography.xml.ReferenceList;
  * The base .NET class managing System.Security.Cryptography.Xml.EncryptedKey, System.Security.Cryptography.Xml, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedKey</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedKey" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.EncryptedKey</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

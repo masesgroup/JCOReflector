@@ -51,7 +51,7 @@ import system.reflection.metadata.ecma335.CustomAttributeArrayTypeEncoder;
  * The base .NET class managing System.Reflection.Metadata.Ecma335.LiteralEncoder, System.Reflection.Metadata, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.LiteralEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.LiteralEncoder</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.LiteralEncoder" target="_top">https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.LiteralEncoder</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -58,7 +58,7 @@ import system.EventHandler;
  * The base .NET class managing System.Windows.Media.Imaging.BitmapDecoder, PresentationCore, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.BitmapDecoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.BitmapDecoder</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapDecoder" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapDecoder</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

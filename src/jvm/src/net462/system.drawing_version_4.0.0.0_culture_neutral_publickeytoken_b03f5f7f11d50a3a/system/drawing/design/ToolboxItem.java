@@ -58,7 +58,7 @@ import system.drawing.design.ToolboxComponentsCreatingEventHandler;
  * The base .NET class managing System.Drawing.Design.ToolboxItem, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItem</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxItem" target="_top">https://learn.microsoft.com/dotnet/api/System.Drawing.Design.ToolboxItem</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -70,7 +70,7 @@ import system.codedom.compiler.LanguageOptions;
  * The base .NET class managing System.CodeDom.Compiler.CodeDomProvider, System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeDomProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeDomProvider</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeDomProvider" target="_top">https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.CodeDomProvider</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

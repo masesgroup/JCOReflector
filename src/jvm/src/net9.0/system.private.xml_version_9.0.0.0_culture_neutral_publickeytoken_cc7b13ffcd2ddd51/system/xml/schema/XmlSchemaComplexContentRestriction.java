@@ -49,7 +49,7 @@ import system.xml.XmlQualifiedName;
  * The base .NET class managing System.Xml.Schema.XmlSchemaComplexContentRestriction, System.Private.Xml, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentRestriction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentRestriction</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentRestriction" target="_top">https://learn.microsoft.com/dotnet/api/System.Xml.Schema.XmlSchemaComplexContentRestriction</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

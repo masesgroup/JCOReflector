@@ -47,7 +47,7 @@ import system.windows.media.animation.DoubleKeyFrameCollection;
  * The base .NET class managing System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames, PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

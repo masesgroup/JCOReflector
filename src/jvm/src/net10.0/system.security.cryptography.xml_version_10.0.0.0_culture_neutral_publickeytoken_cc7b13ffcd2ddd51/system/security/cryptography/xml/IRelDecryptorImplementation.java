@@ -47,7 +47,7 @@ import system.security.cryptography.xml.KeyInfo;
  * The base .NET class managing System.Security.Cryptography.Xml.IRelDecryptor, System.Security.Cryptography.Xml, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor" target="_top">https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Xml.IRelDecryptor</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

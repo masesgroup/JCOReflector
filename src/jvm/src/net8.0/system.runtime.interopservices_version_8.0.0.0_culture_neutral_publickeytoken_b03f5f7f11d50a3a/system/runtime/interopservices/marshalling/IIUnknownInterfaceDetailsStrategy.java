@@ -48,7 +48,7 @@ import system.runtime.interopservices.marshalling.IIUnknownDerivedDetailsImpleme
  * The base .NET class managing System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceDetailsStrategy, System.Runtime.InteropServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceDetailsStrategy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceDetailsStrategy</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceDetailsStrategy" target="_top">https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceDetailsStrategy</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

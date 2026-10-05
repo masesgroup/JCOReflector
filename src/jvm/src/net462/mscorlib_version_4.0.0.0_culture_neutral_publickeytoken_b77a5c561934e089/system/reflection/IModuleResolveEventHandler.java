@@ -44,7 +44,7 @@ import system.ResolveEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ModuleResolveEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleResolveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleResolveEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ModuleResolveEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Reflection.ModuleResolveEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

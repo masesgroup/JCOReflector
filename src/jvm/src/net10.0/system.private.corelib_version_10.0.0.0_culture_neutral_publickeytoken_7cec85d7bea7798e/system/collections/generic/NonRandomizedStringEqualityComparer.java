@@ -48,7 +48,7 @@ import system.runtime.serialization.StreamingContext;
  * The base .NET class managing System.Collections.Generic.NonRandomizedStringEqualityComparer, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.NonRandomizedStringEqualityComparer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.NonRandomizedStringEqualityComparer</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.NonRandomizedStringEqualityComparer" target="_top">https://learn.microsoft.com/dotnet/api/System.Collections.Generic.NonRandomizedStringEqualityComparer</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

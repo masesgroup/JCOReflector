@@ -50,7 +50,7 @@ import system.windows.TextDecorationCollection;
  * The base .NET class managing System.Windows.Documents.Inline, PresentationFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Inline" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Inline</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Inline" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Inline</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

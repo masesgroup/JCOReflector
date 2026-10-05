@@ -43,7 +43,7 @@ import system.data.MergeFailedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link MergeFailedEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.MergeFailedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.MergeFailedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Data.MergeFailedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Data.MergeFailedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

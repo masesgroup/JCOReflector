@@ -46,7 +46,7 @@ import system.Nullable_1;
  * The base .NET class managing System.Net.Quic.QuicException, System.Net.Quic, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Quic.QuicException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Quic.QuicException</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicException" target="_top">https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicException</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

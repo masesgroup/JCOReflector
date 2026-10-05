@@ -45,7 +45,7 @@ import system.formats.nrbf.SerializationRecord;
  * The base .NET class managing System.Formats.Nrbf.PrimitiveTypeRecord, System.Formats.Nrbf, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Nrbf.PrimitiveTypeRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Nrbf.PrimitiveTypeRecord</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.PrimitiveTypeRecord" target="_top">https://learn.microsoft.com/dotnet/api/System.Formats.Nrbf.PrimitiveTypeRecord</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

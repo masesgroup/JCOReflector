@@ -43,7 +43,7 @@ import system.web.ui.webcontrols.webparts.WebPartDisplayModeEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link WebPartDisplayModeEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartDisplayModeEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

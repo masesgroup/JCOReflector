@@ -46,7 +46,7 @@ import system.runtime.remoting.metadata.w3cxsd2001.SoapYearMonth;
  * The base .NET class managing System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth" target="_top">https://learn.microsoft.com/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapYearMonth</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

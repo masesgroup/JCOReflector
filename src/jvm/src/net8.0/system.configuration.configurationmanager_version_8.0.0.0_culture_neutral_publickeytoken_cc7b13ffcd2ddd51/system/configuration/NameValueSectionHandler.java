@@ -45,7 +45,7 @@ import system.xml.XmlNode;
  * The base .NET class managing System.Configuration.NameValueSectionHandler, System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.NameValueSectionHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.NameValueSectionHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Configuration.NameValueSectionHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Configuration.NameValueSectionHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

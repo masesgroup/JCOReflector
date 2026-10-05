@@ -43,7 +43,7 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.EnterpriseServices.PropertyReleaseMode, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.PropertyReleaseMode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.PropertyReleaseMode</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.PropertyReleaseMode" target="_top">https://learn.microsoft.com/dotnet/api/System.EnterpriseServices.PropertyReleaseMode</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -47,7 +47,7 @@ import system.threading.LazyThreadSafetyMode;
  * The base .NET class managing System.Lazy`2, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Lazy`2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Lazy`2</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2" target="_top">https://learn.microsoft.com/dotnet/api/System.Lazy-2</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

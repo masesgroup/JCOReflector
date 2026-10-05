@@ -44,7 +44,7 @@ import system.io.IErrorEventHandler;
  * The base .NET class managing System.IO.ErrorEventHandler, System.IO.FileSystem.Watcher, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.ErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.ErrorEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.IO.ErrorEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.IO.ErrorEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

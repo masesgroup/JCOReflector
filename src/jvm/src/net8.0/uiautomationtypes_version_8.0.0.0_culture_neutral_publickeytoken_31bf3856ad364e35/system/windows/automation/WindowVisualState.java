@@ -43,7 +43,7 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Windows.Automation.WindowVisualState, UIAutomationTypes, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.WindowVisualState" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.WindowVisualState</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.WindowVisualState" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Automation.WindowVisualState</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -46,7 +46,7 @@ import system.buffers.ReadOnlySequence_1;
  * The base .NET class managing System.IO.Pipelines.ReadResult, System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipelines.ReadResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipelines.ReadResult</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.ReadResult" target="_top">https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.ReadResult</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

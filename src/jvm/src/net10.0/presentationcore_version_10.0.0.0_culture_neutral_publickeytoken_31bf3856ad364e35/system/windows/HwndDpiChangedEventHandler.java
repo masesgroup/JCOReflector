@@ -44,7 +44,7 @@ import system.windows.IHwndDpiChangedEventHandler;
  * The base .NET class managing System.Windows.HwndDpiChangedEventHandler, PresentationCore, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.HwndDpiChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.HwndDpiChangedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.HwndDpiChangedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.HwndDpiChangedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

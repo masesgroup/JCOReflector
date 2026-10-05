@@ -48,7 +48,7 @@ import system.linq.expressions.ExpressionType;
  * The base .NET class managing System.Linq.Expressions.LabelExpression, System.Linq.Expressions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.LabelExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.LabelExpression</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.LabelExpression" target="_top">https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.LabelExpression</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

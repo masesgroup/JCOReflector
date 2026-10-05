@@ -48,7 +48,7 @@ import system.web.compilation.AssemblyBuilder;
  * The base .NET class managing System.Xaml.Hosting.XamlBuildProvider, System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Hosting.XamlBuildProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Hosting.XamlBuildProvider</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Hosting.XamlBuildProvider" target="_top">https://learn.microsoft.com/dotnet/api/System.Xaml.Hosting.XamlBuildProvider</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

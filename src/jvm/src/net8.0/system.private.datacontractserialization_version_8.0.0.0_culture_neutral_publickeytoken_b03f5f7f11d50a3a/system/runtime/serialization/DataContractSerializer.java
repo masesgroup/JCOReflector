@@ -55,7 +55,7 @@ import system.collections.objectmodel.ReadOnlyCollection_1;
  * The base .NET class managing System.Runtime.Serialization.DataContractSerializer, System.Private.DataContractSerialization, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.DataContractSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.DataContractSerializer</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializer" target="_top">https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializer</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

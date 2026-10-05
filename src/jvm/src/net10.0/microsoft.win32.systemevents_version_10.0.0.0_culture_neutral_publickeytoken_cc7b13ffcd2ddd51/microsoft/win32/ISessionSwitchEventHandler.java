@@ -43,7 +43,7 @@ import microsoft.win32.SessionSwitchEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SessionSwitchEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionSwitchEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionSwitchEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SessionSwitchEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/Microsoft.Win32.SessionSwitchEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

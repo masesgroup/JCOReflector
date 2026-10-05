@@ -45,7 +45,7 @@ import system.buffers.OperationStatus;
  * The base .NET class managing System.Buffers.Text.Base64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.Text.Base64" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.Text.Base64</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.Text.Base64" target="_top">https://learn.microsoft.com/dotnet/api/System.Buffers.Text.Base64</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

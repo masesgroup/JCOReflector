@@ -45,7 +45,7 @@ import system.codedom.compiler.TempFileCollection;
  * The base .NET class managing System.CodeDom.Compiler.Executor, System.CodeDom, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.Executor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.Executor</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.Executor" target="_top">https://learn.microsoft.com/dotnet/api/System.CodeDom.Compiler.Executor</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

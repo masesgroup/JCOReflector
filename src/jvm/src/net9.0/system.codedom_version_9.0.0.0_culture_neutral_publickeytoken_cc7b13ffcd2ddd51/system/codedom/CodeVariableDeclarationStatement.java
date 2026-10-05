@@ -47,7 +47,7 @@ import system.codedom.CodeExpression;
  * The base .NET class managing System.CodeDom.CodeVariableDeclarationStatement, System.CodeDom, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeVariableDeclarationStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeVariableDeclarationStatement</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeVariableDeclarationStatement" target="_top">https://learn.microsoft.com/dotnet/api/System.CodeDom.CodeVariableDeclarationStatement</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

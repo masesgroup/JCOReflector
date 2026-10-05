@@ -47,7 +47,7 @@ import system.windows.forms.design.behavior.SnapLine;
  * The base .NET class managing System.Windows.Forms.Design.Behavior.SnapLine, System.Windows.Forms.Design, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Design.Behavior.SnapLine</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -53,7 +53,7 @@ import system.identitymodel.tokens.X509NTAuthChainTrustValidator;
  * The base .NET class managing System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509SecurityTokenHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509SecurityTokenHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.X509SecurityTokenHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.X509SecurityTokenHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

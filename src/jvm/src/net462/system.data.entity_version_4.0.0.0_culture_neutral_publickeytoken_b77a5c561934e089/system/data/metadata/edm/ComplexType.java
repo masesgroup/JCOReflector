@@ -47,7 +47,7 @@ import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
  * The base .NET class managing System.Data.Metadata.Edm.ComplexType, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.ComplexType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.ComplexType</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ComplexType" target="_top">https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ComplexType</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

@@ -43,7 +43,7 @@ import system.messaging.PeekCompletedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PeekCompletedEventHandler}.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.PeekCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.PeekCompletedEventHandler</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Messaging.PeekCompletedEventHandler" target="_top">https://learn.microsoft.com/dotnet/api/System.Messaging.PeekCompletedEventHandler</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

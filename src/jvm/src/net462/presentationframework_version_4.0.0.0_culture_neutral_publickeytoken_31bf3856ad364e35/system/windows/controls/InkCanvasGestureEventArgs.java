@@ -49,7 +49,7 @@ import system.collections.objectmodel.ReadOnlyCollection_1;
  * The base .NET class managing System.Windows.Controls.InkCanvasGestureEventArgs, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs" target="_top">https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

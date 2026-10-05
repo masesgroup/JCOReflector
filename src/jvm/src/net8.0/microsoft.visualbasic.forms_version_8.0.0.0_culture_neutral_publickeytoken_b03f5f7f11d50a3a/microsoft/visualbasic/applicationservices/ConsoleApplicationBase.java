@@ -46,7 +46,7 @@ import system.collections.objectmodel.ReadOnlyCollection_1;
  * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase, Microsoft.VisualBasic.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase</a>
+ * .NET documentation at <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase" target="_top">https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase</a>
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>

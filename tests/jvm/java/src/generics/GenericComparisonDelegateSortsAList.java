@@ -163,7 +163,7 @@ public class GenericComparisonDelegateSortsAList {
      * type parameter: every type parameter is bounded by IJCOBridgeReflected, which none of them
      * implements. Using one is a compile-time error, so the check is made on the bound itself.
      */
-    static void testNativeJavaTypesCannotBeTypeArguments() {
+    static void testNativeJavaTypesCannotBeTypeArguments() throws Throwable {
 		Console.WriteLine("testNativeJavaTypesCannotBeTypeArguments");
         java.lang.reflect.Type[] bounds = List_1.class.getTypeParameters()[0].getBounds();
         if (bounds.length != 1 || bounds[0] != IJCOBridgeReflected.class)

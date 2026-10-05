@@ -137,10 +137,12 @@ jobs:
       UseSpecialSettings: ${{ inputs.UseSpecialSettings || false }}
       SpecialSettingsSource: ${{ inputs.SpecialSettingsSource || 'source.zip' }}
       ExecuteOnMoreOSes: ${{ inputs.ExecuteOnMoreOSes || github.event_name == 'schedule' }}
-      ExecuteOnLargerJDKVendorSet: ${{ inputs.ExecuteOnLargerJDKVendorSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
-      ExecuteOnLargerJDKVersionSet: ${{ inputs.ExecuteOnLargerJDKVersionSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
+      # On workflow_dispatch the inputs have the final word, even on master: disabling them there disables the sets.
+      # On push and schedule the defaults apply: always on master, and on schedule.
+      ExecuteOnLargerJDKVendorSet: ${{ (github.event_name == 'workflow_dispatch' && inputs.ExecuteOnLargerJDKVendorSet) || (github.event_name != 'workflow_dispatch' && (github.ref_name == 'master' || github.event_name == 'schedule')) }}
+      ExecuteOnLargerJDKVersionSet: ${{ (github.event_name == 'workflow_dispatch' && inputs.ExecuteOnLargerJDKVersionSet) || (github.event_name != 'workflow_dispatch' && (github.ref_name == 'master' || github.event_name == 'schedule')) }}
       EnableLinuxTests: ${{ github.event_name != 'workflow_dispatch' || inputs.EnableLinuxTests }}
-      EnableWindowsTests: ${{ inputs.EnableWindowsTests || github.ref_name == 'master' || github.event_name == 'schedule' }}
+      EnableWindowsTests: ${{ (github.event_name == 'workflow_dispatch' && inputs.EnableWindowsTests) || (github.event_name != 'workflow_dispatch' && (github.ref_name == 'master' || github.event_name == 'schedule')) }}
       EnableMacOSTests: ${{ inputs.EnableMacOSTests || github.event_name == 'schedule' }}
       ForceExecution: ${{ inputs.ForceExecution || false }}
       GeneratePR: ${{ inputs.GeneratePR || false }}

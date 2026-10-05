@@ -197,13 +197,9 @@ jobs:
   build_windows_prepare_scala:
     if: ${{ inputs.EnableWindowsTests }}
     needs: build_windows
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ 'windows-2022' ]
-
+    
     # The type of runner that the job will run on
-    runs-on: ${{ matrix.os }}
+    runs-on: 'windows-2022'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -219,6 +215,29 @@ jobs:
           enableCrossOsArchive: true
           path: ./bin/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_scala_${{ env.SCALARELEASE }}_${{ github.sha }}
+
+  build_prepare_clojure:
+    if: ${{ inputs.EnableWindowsTests || inputs.EnableLinuxTests || inputs.EnableMacOSTests }}
+    needs: build_windows
+
+    # The type of runner that the job will run on
+    runs-on: 'ubuntu-latest'
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v7
+        with: 
+          fetch-depth: '1'
+    
+      - name: Download Clojure
+        run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+
+      - name: Save Clojure bin in cache
+        uses: actions/cache/save@v6
+        with:
+          enableCrossOsArchive: true
+          path: ./tests/jvm/clojure/target/dependency
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_bin_clojure_${{ github.sha }}
 
   # This workflow contains a single job called "build"
   build_linux:
@@ -917,7 +936,7 @@ jobs:
 
   clojure_tests_windows:
     if: ${{ inputs.EnableWindowsTests }}
-    needs: [ prepare_matrix_data, build_windows ]
+    needs: [ prepare_matrix_data, build_windows, build_prepare_clojure ]
     strategy:
       fail-fast: false
       matrix:
@@ -1016,8 +1035,13 @@ jobs:
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
-      - name: Download Clojure
-        run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+      - name: Restore Clojure bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./tests/jvm/clojure/target/dependency
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_bin_clojure_${{ github.sha }}
         
       - name: Build Clojure test source files
         shell: pwsh
@@ -1562,7 +1586,7 @@ jobs:
 
   clojure_tests_linux:
     if: ${{ inputs.EnableLinuxTests }}
-    needs: [ prepare_matrix_data, build_linux ]
+    needs: [ prepare_matrix_data, build_linux, build_prepare_clojure ]
     strategy:
       fail-fast: false
       matrix:
@@ -1635,8 +1659,13 @@ jobs:
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
-      - name: Download Clojure
-        run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+      - name: Restore Clojure bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./tests/jvm/clojure/target/dependency
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_bin_clojure_${{ github.sha }}
       
       - name: Build Clojure test source files
         continue-on-error: ${{ inputs.ForceExecution == true }}
@@ -2196,7 +2225,7 @@ jobs:
 
   clojure_tests_mac:
     if: ${{ inputs.EnableMacOSTests }}
-    needs: [ prepare_matrix_data, build_linux ]
+    needs: [ prepare_matrix_data, build_linux, build_prepare_clojure ]
     strategy:
       fail-fast: false
       matrix:
@@ -2269,8 +2298,13 @@ jobs:
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=10" >> $GITHUB_ENV
 
-      - name: Download Clojure
-        run: mvn -B -f tests/jvm/clojure/pom.xml dependency:copy-dependencies
+      - name: Restore Clojure bin from cache
+        uses: actions/cache/restore@v6
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./tests/jvm/clojure/target/dependency
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_bin_clojure_${{ github.sha }}
      
       - name: Build Clojure test source files
         continue-on-error: ${{ inputs.ForceExecution == true }}

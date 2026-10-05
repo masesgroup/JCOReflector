@@ -33,7 +33,7 @@ public final class NetGenericHelper {
 
     private NetGenericHelper() {}
 
-    /** Type arguments captured by the anonymous subclass: new Foo<Bar>() {} */
+    /* Type arguments captured by the anonymous subclass: new Foo<Bar>() {} */
     public static Class<?>[] resolveTypeArguments(Class<?> instanceClass) {
         Class<?>[] resolved = cache.get(instanceClass);
         if (resolved != null) return resolved;

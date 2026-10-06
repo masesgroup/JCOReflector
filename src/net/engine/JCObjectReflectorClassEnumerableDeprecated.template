@@ -3,7 +3,6 @@
      *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
      */
     @Deprecated
-    @SuppressWarnings("doclint:missing")
     public METHOD_RETURN_TYPE METHOD_ENUMERATOR_NAME() throws Throwable {
         return new METHOD_IMPLEMENTATION_RETURN_TYPE(classInstance);
     }

@@ -127,10 +127,10 @@ jobs:
         if: matrix.framework != 'net462'
         run: Copy-Item .github\workflows\JCOReflectorCLI_${{ matrix.framework }}.runtimeconfig.json -Destination bin\${{ matrix.framework }}\MASES.JCOReflectorCLI.runtimeconfig.json -Force
 
-      - name: Remove Java files
+      - name: Remove ${{ matrix.framework }} Java files
         run: Remove-Item .\src\jvm\src\${{ matrix.framework }} -Recurse -Force
           
-      - name: Reflect Java files
+      - name: Reflect ${{ matrix.framework }} Java files
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_${{ matrix.framework }}.job
 
       - name: Compress source files
@@ -142,11 +142,11 @@ jobs:
           path: .\source_${{ matrix.framework }}.zip
           retention-days: 1
 
-      - name: Build Java files
+      - name: Build ${{ matrix.framework }} Java files
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
 
-      - name: Build JAR files .NET
+      - name: Build ${{ matrix.framework }} JAR files .NET
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_${{ matrix.framework }}_win19.job -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd
 
@@ -155,6 +155,10 @@ jobs:
           name: ${{ matrix.framework }}
           path: .\bin\${{ matrix.framework }}\*.*
           retention-days: 1
+
+      - name: Build ${{ matrix.framework }} Java Help files
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_8_X64%
+        shell: cmd
 
       - uses: actions/setup-java@v6
         with:

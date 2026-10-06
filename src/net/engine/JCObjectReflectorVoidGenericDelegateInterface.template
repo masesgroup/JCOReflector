@@ -51,5 +51,10 @@ PACKAGE_IMPORT_SECTION
  * @version JCOREFLECTOR_VERSION
  */
 public interface IPACKAGE_CLASS_NAME<GENERIC_CLASS_PARAMETERS> {
+    /**
+     * Methods invoked in JVM when an event is raised in CLR
+     *
+     * DELEGATE_JAVADOC_PARAMS
+     */
     public void Invoke(DELEGATE_PARAMETERS);
 }

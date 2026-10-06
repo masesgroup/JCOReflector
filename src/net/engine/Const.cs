@@ -651,6 +651,7 @@ namespace MASES.JCOReflector.Engine
             public const string DELEGATE_NAME = "DELEGATE_NAME";
             public const string DELEGATE_RETURN_TYPE = "DELEGATE_RETURN_TYPE";
             public const string DELEGATE_PARAMETERS = "DELEGATE_PARAMETERS";
+            public const string DELEGATE_JAVADOC_PARAMS = "DELEGATE_JAVADOC_PARAMS";
             public const string DELEGATE_INVOKE_PARAMETERS = "DELEGATE_INVOKE_PARAMETERS";
             public const string DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK = "DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK";
             public const string DELEGATE_PRIMITIVE_DEFAULT_VALUE = "DELEGATE_PRIMITIVE_DEFAULT_VALUE";

@@ -3450,6 +3450,7 @@ namespace MASES.JCOReflector.Engine
             // expression token (no leading/trailing comma), and the single Join below owns all
             // separators. This removes the mismatch that produced "Invoke(sender, , e)".
             List<string> execParamTokens = new List<string>();
+            List<string> javadocParams = new List<string>();
             foreach (var parameter in parameters)
             {
                 string paramType = string.Empty;
@@ -3475,6 +3476,7 @@ namespace MASES.JCOReflector.Engine
                 if (!isManaged) break;
 
                 var paramName = ReplaceSinglekeyword(parameter.Name);
+                javadocParams.Add(string.Format("@param {0} the .NET argument of type {{@code {1}}}", paramName, parameter.ParameterType));
 
                 if (isArray)
                 {
@@ -3547,6 +3549,8 @@ namespace MASES.JCOReflector.Engine
             }
 
             string execParamStr = string.Join(", ", execParamTokens);
+            var javadocEol = interfaceTemplateToUse.Contains("\r\n") ? "\r\n" : "\n";
+            string javadocParamsStr = string.Join(javadocEol + "     * ", javadocParams);
 
             var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
             var importsStr = imports.ExportImports();
@@ -3578,6 +3582,7 @@ namespace MASES.JCOReflector.Engine
                                                      .Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters) // Resolves placeholder inside the <...> block
                                                      .Replace(Const.Delegates.DELEGATE_RETURN_TYPE, (isRetValArray) ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                      .Replace(Const.Delegates.DELEGATE_PARAMETERS, inputParamStr)
+                                                     .Replace(Const.Delegates.DELEGATE_JAVADOC_PARAMS, javadocParamsStr)
                                                      .Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
             var pathToSaveTo = packageName.Replace('.', '\\');
         
@@ -3609,6 +3614,7 @@ namespace MASES.JCOReflector.Engine
                                                 .Replace(Const.Delegates.DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK, converterBlockStr)
                                                 .Replace(Const.Delegates.DELEGATE_INVOKE_PARAMETERS, execParamStr)
                                                 .Replace(Const.Delegates.DELEGATE_PARAMETERS, inputParamStr)
+                                                .Replace(Const.Delegates.DELEGATE_JAVADOC_PARAMS, javadocParamsStr)
                                                 .Replace(Const.Delegates.DELEGATE_RETURN_STATEMENT, strReturnStatement)
                                                 .Replace(Const.Delegates.DELEGATE_RETURN_TYPE, (isRetValArray) ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
                                                 .Replace(Const.Delegates.DELEGATE_PRIMITIVE_DEFAULT_VALUE, defaultPrimitiveReturnValue)

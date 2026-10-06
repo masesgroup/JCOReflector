@@ -156,6 +156,11 @@ jobs:
           path: .\bin\${{ matrix.framework }}\*.*
           retention-days: 1
 
+      - name: Extract commit SHA
+        run: |
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+        shell: bash
+
       - name: Build ${{ matrix.framework }} Java Help files
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_8_X64%
         shell: cmd

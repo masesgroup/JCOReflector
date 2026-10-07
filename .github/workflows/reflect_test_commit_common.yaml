@@ -2526,18 +2526,19 @@ jobs:
         if: ${{ inputs.GeneratePR == true }}
         uses: peter-evans/create-pull-request@v8
         with:
-          branch-suffix: short-commit-hash
+          branch: jvm-source-latest-update-${{ github.run_number }}
           add-paths: |
             .\src\jvm\statistics\*.*
             .\src\jvm\net*.md
             .\src\jvm\src\*.list
             .\src\jvm\src\*.java
           commit-message: Update JVM after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-          title: Update JVM after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          title: Update JVM folder after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
           assignees: masesdevelopers
           labels: enhancement, java, .NET Framework, .NET 8, .NET 9, .NET 10
+          delete-branch: true
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI

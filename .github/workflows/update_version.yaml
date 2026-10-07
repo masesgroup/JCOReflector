@@ -43,7 +43,7 @@ jobs:
       - name: Request a PR to commit changes
         uses: peter-evans/create-pull-request@v8
         with:
-          branch-suffix: short-commit-hash
+          branch: update-version-${{ github.run_number }}
           add-paths: src/*.*
           commit-message: Update version from ${{ inputs.CurrentVersion }} to ${{ inputs.NewVersion }}
           title: Update version from ${{ inputs.CurrentVersion }} to ${{ inputs.NewVersion }}
@@ -52,3 +52,4 @@ jobs:
           reviewers: masesdevelopers
           assignees: masesdevelopers
           labels: enhancement, Docker, java, JCOReflector
+          delete-branch: true

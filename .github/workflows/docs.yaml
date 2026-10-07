@@ -261,7 +261,7 @@ jobs:
         if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo
         uses: peter-evans/create-pull-request@v8
         with:
-          branch-suffix: short-commit-hash
+          branch: docs-latest-update-${{ github.run_number }}
           add-paths: |
             docs
             docs/net8.0
@@ -274,6 +274,7 @@ jobs:
           reviewers: masesdevelopers
           assignees: masesdevelopers
           labels: documentation, java, enhancement, .NET Framework, .NET 8, .NET 9, .NET 10
+          delete-branch: true
 
      # - name: Commit changes to JCOReflector
      #   run: |

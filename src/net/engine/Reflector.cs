@@ -453,6 +453,9 @@ namespace MASES.JCOReflector.Engine
         // and the link of its class follow the same rule.
         static string GetDocumentationName(Type type)
         {
+            // the FullName of a constructed generic type, like ICollection<KeyValuePair<string, JsonNode>>, lists the
+            // assembly qualified names of its arguments: the documentation page is the one of the generic definition
+            if (type.IsGenericType && !type.IsGenericTypeDefinition) type = type.GetGenericTypeDefinition();
             return (type.FullName ?? type.Name).ConvertGenericForMicrosoftDocumentation();
         }
 
@@ -515,18 +518,30 @@ namespace MASES.JCOReflector.Engine
                 string name = signature.Groups["name"].Value;
                 string modifiers = Regex.Replace(signature.Groups["modifiers"].Value.Trim(),
                                                  @"^(?:(?:static|final|synchronized|abstract)\s+)*", string.Empty);
-                modifiers = Regex.Replace(modifiers, @"^<[^>]*>\s*", string.Empty); // type parameters of the method
+
+                // type parameters of a generic method: "<T extends IJCOBridgeReflected, U extends IJCOBridgeReflected> ..."
+                var typeParameterTags = new List<string>();
+                var typeParameters = Regex.Match(modifiers, @"^<(?<list>[^>]*)>\s*");
+                if (typeParameters.Success)
+                {
+                    typeParameterTags = typeParameters.Groups["list"].Value.Split(',')
+                        .Select(t => t.Trim().Split(' ')[0])
+                        .Where(t => t.Length > 0)
+                        .Select(t => "@param <" + t + "> the type of the generic argument " + t)
+                        .ToList();
+                    modifiers = modifiers.Substring(typeParameters.Length);
+                }
                 bool isConstructor = modifiers.Length == 0;
                 bool isVoid = modifiers == "void";
 
-                var paramTags = SplitJavaParameters(signature.Groups["parameters"].Value)
+                var paramTags = typeParameterTags.Concat(SplitJavaParameters(signature.Groups["parameters"].Value)
                     .Select(p => p.Trim())
                     .Where(p => p.LastIndexOf(' ') > 0)
                     .Select(p =>
                     {
                         int space = p.LastIndexOf(' ');
                         return "@param " + p.Substring(space + 1) + " the argument of type {@code " + p.Substring(0, space).Trim() + "}";
-                    })
+                    }))
                     .ToList();
 
                 var returnTags = new List<string>();
@@ -553,13 +568,15 @@ namespace MASES.JCOReflector.Engine
                 block = ReplaceJavadocLine(block, Const.CTor.CTOR_JAVADOC_PARAMS, paramTags, eol);
                 block = ReplaceJavadocLine(block, Const.Methods.METHOD_JAVADOC_RETURN, returnTags, eol);
                 block = ReplaceJavadocLine(block, Const.Exceptions.THROWABLE_JAVADOC, throwTags, eol);
-                if (declaringType == null)
+                string documentationName = declaringType == null ? null : GetDocumentationName(declaringType) + "." + member;
+                // a name with characters that are not valid in the URL would make the Javadoc fail: no link is better than a broken one
+                if (documentationName == null || documentationName.IndexOfAny(new[] { '[', ']', ',', ' ' }) >= 0)
                 {
                     block = Regex.Replace(block, @"^[^\r\n]*DOCUMENTATION_MEMBER_NAME[^\r\n]*\r?\n", string.Empty, RegexOptions.Multiline);
                 }
                 else
                 {
-                    block = block.Replace("DOCUMENTATION_MEMBER_NAME", GetDocumentationName(declaringType) + "." + member);
+                    block = block.Replace("DOCUMENTATION_MEMBER_NAME", documentationName);
                 }
 
                 return block + match.Value.Substring(match.Groups["block"].Length);
@@ -3743,6 +3760,7 @@ namespace MASES.JCOReflector.Engine
                                                              .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, string.Empty)
                                                              .Replace(Const.Methods.METHOD_OBJECT, Const.Class.INSTANCE_CLASS_NAME)
                                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
+            dynamicInvokeStr = CompleteMemberJavadoc(dynamicInvokeStr, typeof(Delegate));
             var delegateStr = classTemplateToUse.Replace(Const.Delegates.PACKAGE_NAME, packageName)
                                                 .Replace(Const.Delegates.PACKAGE_IMPORT_SECTION, importsStr)
                                                 .Replace(Const.Class.PACKAGE_CLASS_NAME, javaClassName) // Pure name replacement, does not corrupt interface substring
